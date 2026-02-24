@@ -45,8 +45,8 @@ export const useTheme = () => {
 };
 
 function App() {
-  const [lang, setLang] = useState<Language>('de');
-  const [theme, setTheme] = useState<Theme>('dark');
+  const [lang, setLang] = useState<Language>('cz');
+  const [theme, setTheme] = useState<Theme>('light');
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
