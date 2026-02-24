@@ -222,9 +222,9 @@ const Home = () => {
 
         <div className="absolute inset-0 grid-pattern opacity-50" />
 
-        <div className="relative z-10 w-full container-wide pt-32 sm:pt-28 md:pt-32 pb-14 sm:pb-20">
+        <div className="relative z-10 w-full container-wide pt-32 sm:pt-32 md:pt-32 pb-14 sm:pb-20">
           <div className="max-w-5xl">
-            <h1 className="mt-8 sm:mt-10 md:mt-10 lg:mt-8 mb-6 sm:mb-8">
+            <h1 className="mt-16 sm:mt-14 md:mt-10 lg:mt-8 mb-6 sm:mb-8">
               <span className="hero-title-line block text-hero font-display font-light text-white">
                 {heroLines[0]}
               </span>
