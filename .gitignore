@@ -31,4 +31,4 @@ dist/
 .vscode/
 
 # Vercel local metadata
-.vercel/
+.vercel
