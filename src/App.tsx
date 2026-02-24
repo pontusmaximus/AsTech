@@ -32,6 +32,32 @@ interface ThemeContextType {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
+const getInitialLanguage = (): Language => {
+  if (typeof window === 'undefined') {
+    return 'cz';
+  }
+
+  const savedLang = localStorage.getItem('asamer-lang') as Language | null;
+  if (savedLang && translations[savedLang]) {
+    return savedLang;
+  }
+
+  return 'cz';
+};
+
+const getInitialTheme = (): Theme => {
+  if (typeof window === 'undefined') {
+    return 'light';
+  }
+
+  const savedTheme = localStorage.getItem('asamer-theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    return savedTheme;
+  }
+
+  return 'light';
+};
+
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (!context) {
@@ -49,23 +75,11 @@ export const useTheme = () => {
 };
 
 function App() {
-  const [lang, setLang] = useState<Language>('cz');
-  const [theme, setTheme] = useState<Theme>('light');
+  const [lang, setLang] = useState<Language>(getInitialLanguage);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('asamer-lang') as Language;
-    if (savedLang && translations[savedLang]) {
-      setLang(savedLang);
-    }
-
-    const savedTheme = localStorage.getItem('asamer-theme');
-    if (savedTheme === 'light' || savedTheme === 'dark') {
-      setTheme(savedTheme);
-    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      setTheme('light');
-    }
-
     setTimeout(() => setIsLoaded(true), 100);
   }, []);
 
