@@ -1,14 +1,23 @@
 import { useLanguage } from '../App';
 import { ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { translatePageText } from '../i18n/pageTextTranslations';
 
 const Footer = () => {
   const { lang, t } = useLanguage();
 
-  const locale = lang === 'de' || lang === 'en' || lang === 'cz' ? lang : 'en';
-  const tr = (de: string, en: string, cz: string) => (
-    locale === 'de' ? de : locale === 'cz' ? cz : en
-  );
+  const locale =
+    lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
+      ? lang
+      : 'en';
+  const tr = (de: string, en: string, cz: string) => {
+    if (locale === 'de') return de;
+    if (locale === 'cz') return cz;
+    if (locale === 'sk' || locale === 'hu') {
+      return translatePageText(locale, en, cz);
+    }
+    return en;
+  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -97,19 +106,19 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="/#solutions" className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to="/loesungen" className="text-white/40 text-sm hover:text-white transition-colors">
                   {t.nav.solutions}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#service" className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to="/service" className="text-white/40 text-sm hover:text-white transition-colors">
                   {t.nav.service}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#contact" className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to="/kontakt" className="text-white/40 text-sm hover:text-white transition-colors">
                   {t.nav.contact}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -121,12 +130,12 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <a
-              href="#"
+            <Link
+              to="/impressum"
               className="text-white/30 text-sm hover:text-white transition-colors"
             >
               {t.footer.imprint}
-            </a>
+            </Link>
             <a
               href="#"
               className="text-white/30 text-sm hover:text-white transition-colors"

@@ -3,15 +3,32 @@ import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
+import { translatePageText } from '../i18n/pageTextTranslations';
 
 gsap.registerPlugin(ScrollTrigger);
 
+type MachineProduct = {
+  name: string;
+  desc: string;
+  specs: string[];
+  image: string;
+  url?: string;
+};
+
 const MayerPage = () => {
   const { lang } = useLanguage();
-  const locale = lang === 'de' || lang === 'en' || lang === 'cz' ? lang : 'en';
-  const tr = (de: string, en: string, cz: string) => (
-    locale === 'de' ? de : locale === 'cz' ? cz : en
-  );
+  const locale =
+    lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
+      ? lang
+      : 'en';
+  const tr = (de: string, en: string, cz: string) => {
+    if (locale === 'de') return de;
+    if (locale === 'cz') return cz;
+    if (locale === 'sk' || locale === 'hu') {
+      return translatePageText(locale, en, cz);
+    }
+    return en;
+  };
   const inquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
     tr('Anfrage Mayer', 'Inquiry Mayer', 'Poptávka Mayer')
   )}`;
@@ -47,9 +64,25 @@ const MayerPage = () => {
     return () => ctx.revert();
   }, []);
 
-  const kappaProducts = [
+  const kappaProducts: MachineProduct[] = [
+    {
+      name: 'Kappa Automatic 80',
+      url: 'https://www.mayersaws.com/de/produkte/druckbalkensaege__plattenaufteilsaege_horizontal_kappa_automatic_80_m583845',
+      image: 'https://www.mayersaws.com/WEB/FelderGroup/Machines/Machines/image-thumb__64214__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/plattensaege-kappaautomatic80-mayer-feldergroup.png',
+      desc: tr(
+        'Kompakte Einstiegslösung für professionellen Plattenzuschnitt',
+        'Compact entry-level solution for professional panel cutting',
+        'Kompaktní vstupní řešení pro profesionální řezání desek'
+      ),
+      specs: [
+        tr('Schnittlänge: 3.200 mm', 'Cutting length: 3,200 mm', 'Délka řezu: 3 200 mm'),
+        tr('Schnitthöhe: 80 mm', 'Cutting height: 80 mm', 'Výška řezu: 80 mm'),
+        tr('Vorschubgeschwindigkeit: bis 100 m/min', 'Feed speed: up to 100 m/min', 'Rychlost posuvu: až 100 m/min'),
+      ],
+    },
     {
       name: 'Kappa Automatic 100',
+      image: 'https://www.mayersaws.com/WEB/FelderGroup/Machines/Machines/image-thumb__64216__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/plattensaege-kappaautomatic100-mayer-feldergroup.png',
       desc: tr(
         'Kompakte Einstiegslösung für professionellen Plattenzuschnitt',
         'Compact entry-level solution for professional panel cutting',
@@ -63,6 +96,7 @@ const MayerPage = () => {
     },
     {
       name: 'Kappa Automatic 120',
+      image: 'https://www.mayersaws.com/WEB/FelderGroup/Machines/Machines/image-thumb__64217__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/plattensaege-kappaautomatic120-mayer-feldergroup.png',
       desc: tr(
         'Erweiterte Kapazität für mittlere Produktionsvolumen',
         'Extended capacity for medium production volumes',
@@ -76,6 +110,7 @@ const MayerPage = () => {
     },
     {
       name: 'Kappa Automatic 140',
+      image: 'https://www.mayersaws.com/WEB/FelderGroup/Machines/Machines/image-thumb__64218__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/plattensaege-kappaautomatic140-mayer-feldergroup.png',
       desc: tr(
         'Höchste Präzision für industrielle Serienfertigung',
         'Maximum precision for industrial series production',
@@ -89,9 +124,10 @@ const MayerPage = () => {
     },
   ];
 
-  const advancedLineProducts = [
+  const advancedLineProducts: MachineProduct[] = [
     {
       name: 'Advanced Line 100',
+      image: 'https://www.mayersaws.com/_default_upload_bucket/image-thumb__65802__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/65801_plattensaege-advanced-line-100-mayer-feldergroup.png',
       desc: tr('Präzisionssäge für Aluminium und NE-Metalle', 'Precision saw for aluminum and non-ferrous metals', 'Přesná pila pro hliník a neželezné kovy'),
       specs: [
         tr('Schnittlänge: 3.200 mm', 'Cutting length: 3,200 mm', 'Délka řezu: 3 200 mm'),
@@ -101,6 +137,7 @@ const MayerPage = () => {
     },
     {
       name: 'Advanced Line 130',
+      image: 'https://www.mayersaws.com/WEB/FelderGroup/Machines/Machines/image-thumb__49294__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/64926-plattensaege-al130-mayer-feldergroup.png',
       desc: tr('Vielseitige Lösung für Kunststoffbearbeitung', 'Versatile solution for plastic processing', 'Univerzální řešení pro zpracování plastů'),
       specs: [
         tr('Schnittlänge: 3.800 mm', 'Cutting length: 3,800 mm', 'Délka řezu: 3 800 mm'),
@@ -110,6 +147,7 @@ const MayerPage = () => {
     },
     {
       name: 'Advanced Line 160',
+      image: 'https://www.mayersaws.com/WEB/FelderGroup/Machines/Machines/image-thumb__65807__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/plattensaege-advanced-line-160-mayer-feldergroup-01.png',
       desc: tr('Hochleistungssäge für industrielle Anwendungen', 'High-performance saw for industrial applications', 'Výkonná pila pro průmyslové aplikace'),
       specs: [
         tr('Schnittlänge: 4.300 mm', 'Cutting length: 4,300 mm', 'Délka řezu: 4 300 mm'),
@@ -119,6 +157,7 @@ const MayerPage = () => {
     },
     {
       name: 'Advanced Line 160 Turn',
+      image: 'https://www.mayersaws.com/WEB/FelderGroup/Machines/Machines/image-thumb__49296__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/122778-plattensaege-al160turn-mayer-feldergroup.png',
       desc: tr('Mit automatischer Wendeinheit für beidseitige Bearbeitung', 'With automatic turning unit for double-sided processing', 'S automatickou otočnou jednotkou pro oboustranné zpracování'),
       specs: [
         tr('Schnittlänge: 4.300 mm', 'Cutting length: 4,300 mm', 'Délka řezu: 4 300 mm'),
@@ -128,6 +167,7 @@ const MayerPage = () => {
     },
     {
       name: 'Advanced Line 200',
+      image: 'https://www.mayersaws.com/WEB/FelderGroup/Machines/Machines/image-thumb__49297__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/53826-plattensaege-al200-mayer-feldergroup.png',
       desc: tr('Maximale Leistung für Großformate', 'Maximum performance for large formats', 'Maximální výkon pro velké formáty'),
       specs: [
         tr('Schnittlänge: 5.600 mm', 'Cutting length: 5,600 mm', 'Délka řezu: 5 600 mm'),
@@ -137,6 +177,7 @@ const MayerPage = () => {
     },
     {
       name: 'Advanced Line 250',
+      image: 'https://www.mayersaws.com/WEB/FelderGroup/Machines/Machines/image-thumb__49298__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/53827-plattensaege-al250-mayer-feldergroup.png',
       desc: tr('Das Flaggschiff für höchste Anforderungen', 'Flagship model for top-level requirements', 'Vlajkový model pro nejnáročnější požadavky'),
       specs: [
         tr('Schnittlänge: 7.200 mm', 'Cutting length: 7,200 mm', 'Délka řezu: 7 200 mm'),
@@ -218,9 +259,24 @@ const MayerPage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {kappaProducts.map((product, index) => (
               <div key={index} className="product-item product-card-dark p-6">
+                <div className="mb-4 rounded-xl overflow-hidden border border-white/10 bg-dark-elevated">
+                  <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                </div>
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
-                  <ArrowUpRight className="w-5 h-5 text-white/30" />
+                  {product.url ? (
+                    <a
+                      href={product.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-white/30 hover:text-primary transition-colors"
+                      aria-label={tr('Produkt öffnen', 'Open product', 'Otevřít produkt')}
+                    >
+                      <ArrowUpRight className="w-5 h-5" />
+                    </a>
+                  ) : (
+                    <ArrowUpRight className="w-5 h-5 text-white/30" />
+                  )}
                 </div>
                 <p className="text-white/50 text-sm mb-4">{product.desc}</p>
                 <ul className="space-y-2">
@@ -252,6 +308,9 @@ const MayerPage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {advancedLineProducts.map((product, index) => (
               <div key={index} className="product-item product-card-dark p-6">
+                <div className="mb-4 rounded-xl overflow-hidden border border-white/10 bg-dark-elevated">
+                  <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                </div>
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
                   <ArrowUpRight className="w-5 h-5 text-white/30" />

@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../App';
+import { translatePageText } from '../i18n/pageTextTranslations';
 
 type FundingSection = {
   id: string;
@@ -14,10 +15,18 @@ type FundingSection = {
 
 const FinancingPage = () => {
   const { lang } = useLanguage();
-  const locale = lang === 'de' || lang === 'en' || lang === 'cz' ? lang : 'en';
-  const tr = (de: string, en: string, cz: string) => (
-    locale === 'de' ? de : locale === 'cz' ? cz : en
-  );
+  const locale =
+    lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
+      ? lang
+      : 'en';
+  const tr = (de: string, en: string, cz: string) => {
+    if (locale === 'de') return de;
+    if (locale === 'cz') return cz;
+    if (locale === 'sk' || locale === 'hu') {
+      return translatePageText(locale, en, cz);
+    }
+    return en;
+  };
   const fundingImage = 'https://www.zabala.eu/wp-content/uploads/2024/11/EU-budget-1200x821.jpeg';
 
   const qaLabels = {

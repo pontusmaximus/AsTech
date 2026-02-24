@@ -3,15 +3,32 @@ import { ArrowLeft, ArrowUpRight, Flame, Droplets } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
+import { translatePageText } from '../i18n/pageTextTranslations';
 
 gsap.registerPlugin(ScrollTrigger);
 
+type OttProduct = {
+  name: string;
+  desc: string;
+  type: string;
+  specs: string[];
+  image: string;
+};
+
 const OttPage = () => {
   const { lang } = useLanguage();
-  const locale = lang === 'de' || lang === 'en' || lang === 'cz' ? lang : 'en';
-  const tr = (de: string, en: string, cz: string) => (
-    locale === 'de' ? de : locale === 'cz' ? cz : en
-  );
+  const locale =
+    lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
+      ? lang
+      : 'en';
+  const tr = (de: string, en: string, cz: string) => {
+    if (locale === 'de') return de;
+    if (locale === 'cz') return cz;
+    if (locale === 'sk' || locale === 'hu') {
+      return translatePageText(locale, en, cz);
+    }
+    return en;
+  };
   const inquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
     tr('Anfrage OTT', 'Inquiry OTT', 'Poptávka OTT')
   )}`;
@@ -47,9 +64,10 @@ const OttPage = () => {
     return () => ctx.revert();
   }, []);
 
-  const edgebanders = [
+  const edgebanders: OttProduct[] = [
     {
-      name: 'Pacific',
+      name: 'Pacific+',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/c/7/csm_pacific-plus_4a95031bd4.png',
       desc: tr('Kompakte Kantenanleimmaschine für Handwerk und Tischlerei', 'Compact edgebander for craft and carpentry shops', 'Kompaktní olepovačka hran pro řemeslo a truhlářství'),
       type: 'EVA',
       specs: [
@@ -59,7 +77,8 @@ const OttPage = () => {
       ],
     },
     {
-      name: 'Tornado',
+      name: 'Tornado+',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/b/a/csm_tornado-plus-ansicht-re_207e512b4f.png',
       desc: tr('Leistungsstarke Lösung für mittlere Betriebe', 'Powerful solution for medium-sized operations', 'Výkonné řešení pro střední provozy'),
       type: 'EVA/PUR',
       specs: [
@@ -69,7 +88,8 @@ const OttPage = () => {
       ],
     },
     {
-      name: 'FlexEdge',
+      name: 'Flexedge',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/b/e/csm_flex-edge-01-spiegel_f344a91e0b.png',
       desc: tr('Flexible Kantenbearbeitung mit modularer Ausstattung', 'Flexible edgebanding with modular equipment', 'Flexibilní olepování hran s modulární výbavou'),
       type: 'EVA/PUR',
       specs: [
@@ -79,7 +99,8 @@ const OttPage = () => {
       ],
     },
     {
-      name: 'Storm',
+      name: 'Storm+',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/2/9/csm_storm2020-spiegel-001_4baf02d446.png',
       desc: tr('Hochleistungsmaschine für industrielle Anforderungen', 'High-performance machine for industrial requirements', 'Vysokovýkonný stroj pro průmyslové požadavky'),
       type: 'PUR',
       specs: [
@@ -89,7 +110,8 @@ const OttPage = () => {
       ],
     },
     {
-      name: 'StrongEdge',
+      name: 'Strongedge',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/1/0/csm_strongedge_a4f3c0a00e.png',
       desc: tr('Maximale Stabilität für schwere Kanten', 'Maximum stability for heavy edges', 'Maximální stabilita pro silné hrany'),
       type: 'PUR',
       specs: [
@@ -99,7 +121,8 @@ const OttPage = () => {
       ],
     },
     {
-      name: 'TopEdge',
+      name: 'Topedge',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/e/5/csm_topedge_4c89d6967e.jpg',
       desc: tr('Premium-Lösung mit höchster Präzision', 'Premium solution with highest precision', 'Prémiové řešení s nejvyšší přesností'),
       type: 'PUR/LASER',
       specs: [
@@ -110,6 +133,7 @@ const OttPage = () => {
     },
     {
       name: 'DoorEdition',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/6/0/csm_Titelseite_Door_MINI__78df2f3ba3.jpg',
       desc: tr('Spezialisiert auf Tür- und Möbelkanten', 'Specialized for door and furniture edges', 'Specializováno na dveřní a nábytkové hrany'),
       type: 'PUR',
       specs: [
@@ -120,6 +144,7 @@ const OttPage = () => {
     },
     {
       name: 'CombiMelt',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/5/6/csm_ott-130319-0628-2_f3762079d4.jpg',
       desc: tr('Kombiniert EVA und PUR in einem System', 'Combines EVA and PUR in one system', 'Kombinuje EVA a PUR v jednom systému'),
       type: 'EVA/PUR',
       specs: [
@@ -129,7 +154,8 @@ const OttPage = () => {
       ],
     },
     {
-      name: 'BlueEdge',
+      name: 'bluEdge',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/9/7/csm_blu_edge_hyfuse_on_pacific_in_showroom__1__a1a1e7262f.jpg',
       desc: tr('Einstiegsmodell mit professioneller Ausstattung', 'Entry-level model with professional equipment', 'Vstupní model s profesionální výbavou'),
       type: 'EVA',
       specs: [
@@ -256,6 +282,9 @@ const OttPage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {edgebanders.map((product, index) => (
               <div key={index} className="product-item product-card-dark p-6">
+                <div className="mb-4 rounded-xl overflow-hidden border border-white/10 bg-dark-elevated">
+                  <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                </div>
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>

@@ -8,6 +8,10 @@ import MayerPage from './pages/MayerPage';
 import OttPage from './pages/OttPage';
 import BarbaricPage from './pages/BarbaricPage';
 import FinancingPage from './pages/FinancingPage';
+import SolutionsPage from './pages/SolutionsPage';
+import ServicePage from './pages/ServicePage';
+import ContactPage from './pages/ContactPage';
+import ImprintPage from './pages/ImprintPage';
 import Footer from './sections/Footer';
 import './App.css';
 
@@ -100,6 +104,10 @@ function App() {
                 <Route path="/ott" element={<OttPage />} />
                 <Route path="/barbaric" element={<BarbaricPage />} />
                 <Route path="/finanzierung" element={<FinancingPage />} />
+                <Route path="/loesungen" element={<SolutionsPage />} />
+                <Route path="/service" element={<ServicePage />} />
+                <Route path="/kontakt" element={<ContactPage />} />
+                <Route path="/impressum" element={<ImprintPage />} />
               </Routes>
             </main>
             <Footer />

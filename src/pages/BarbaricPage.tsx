@@ -3,15 +3,24 @@ import { ArrowLeft, ArrowUpRight, Boxes, GripVertical } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
+import { translatePageText } from '../i18n/pageTextTranslations';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BarbaricPage = () => {
   const { lang } = useLanguage();
-  const locale = lang === 'de' || lang === 'en' || lang === 'cz' ? lang : 'en';
-  const tr = (de: string, en: string, cz: string) => (
-    locale === 'de' ? de : locale === 'cz' ? cz : en
-  );
+  const locale =
+    lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
+      ? lang
+      : 'en';
+  const tr = (de: string, en: string, cz: string) => {
+    if (locale === 'de') return de;
+    if (locale === 'cz') return cz;
+    if (locale === 'sk' || locale === 'hu') {
+      return translatePageText(locale, en, cz);
+    }
+    return en;
+  };
   const inquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
     tr('Anfrage BARBARIC', 'Inquiry BARBARIC', 'Poptávka BARBARIC')
   )}`;

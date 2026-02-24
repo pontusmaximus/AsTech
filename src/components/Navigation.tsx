@@ -35,14 +35,6 @@ const Navigation = () => {
     { code: 'hu', label: 'HU' },
   ];
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMobileMenuOpen(false);
-  };
-
   // Determine background based on scroll and page
   const navBgClass = isScrolled
     ? 'nav-surface-scrolled'
@@ -53,6 +45,8 @@ const Navigation = () => {
   const manufacturerLabel =
     lang === 'de' ? 'Hersteller' :
     lang === 'cz' ? 'Výrobci' :
+    lang === 'sk' ? 'Výrobcovia' :
+    lang === 'hu' ? 'Gyártók' :
     'Manufacturers';
 
   return (
@@ -122,15 +116,12 @@ const Navigation = () => {
               </Link>
             </div>
 
-            {/* Home Page Sections */}
-            {isHomePage && (
-              <button
-                onClick={() => scrollToSection('solutions')}
-                className="text-sm text-white/60 hover:text-white transition-colors"
-              >
-                {t.nav.solutions}
-              </button>
-            )}
+            <Link
+              to="/loesungen"
+              className={`text-sm transition-colors ${location.pathname === '/loesungen' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+            >
+              {t.nav.solutions}
+            </Link>
 
             <Link
               to="/finanzierung"
@@ -139,19 +130,19 @@ const Navigation = () => {
               {t.nav.automation}
             </Link>
 
-            <button
-              onClick={() => scrollToSection('service')}
-              className="text-sm text-white/60 hover:text-white transition-colors"
+            <Link
+              to="/service"
+              className={`text-sm transition-colors ${location.pathname === '/service' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.service}
-            </button>
+            </Link>
 
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-sm text-white/60 hover:text-white transition-colors"
+            <Link
+              to="/kontakt"
+              className={`text-sm transition-colors ${location.pathname === '/kontakt' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.contact}
-            </button>
+            </Link>
 
             <button
               onClick={toggleTheme}
@@ -232,30 +223,30 @@ const Navigation = () => {
 
               {/* Page Links */}
               <div className="px-6 flex flex-col gap-3">
-                <button
-                  onClick={() => scrollToSection('solutions')}
-                  className="text-left text-white/70 hover:text-white"
+                <Link
+                  to="/loesungen"
+                  className={`text-left ${location.pathname === '/loesungen' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.solutions}
-                </button>
+                </Link>
                 <Link
                   to="/finanzierung"
                   className={`text-left ${location.pathname === '/finanzierung' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.automation}
                 </Link>
-                <button
-                  onClick={() => scrollToSection('service')}
-                  className="text-left text-white/70 hover:text-white"
+                <Link
+                  to="/service"
+                  className={`text-left ${location.pathname === '/service' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.service}
-                </button>
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="text-left text-white/70 hover:text-white"
+                </Link>
+                <Link
+                  to="/kontakt"
+                  className={`text-left ${location.pathname === '/kontakt' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.contact}
-                </button>
+                </Link>
               </div>
 
               {/* Language Selector */}

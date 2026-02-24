@@ -3,16 +3,25 @@ import { useLanguage } from '../App';
 import { ArrowRight, ArrowUpRight, Cpu, Database, Layers, TrendingDown } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { translatePageText } from '../i18n/pageTextTranslations';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const { t, lang } = useLanguage();
   const heroRef = useRef<HTMLDivElement>(null);
-  const locale = lang === 'de' || lang === 'en' || lang === 'cz' ? lang : 'en';
-  const tr = (de: string, en: string, cz: string) => (
-    locale === 'de' ? de : locale === 'cz' ? cz : en
-  );
+  const locale =
+    lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
+      ? lang
+      : 'en';
+  const tr = (de: string, en: string, cz: string) => {
+    if (locale === 'de') return de;
+    if (locale === 'cz') return cz;
+    if (locale === 'sk' || locale === 'hu') {
+      return translatePageText(locale, en, cz);
+    }
+    return en;
+  };
   const generalInquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
     tr(
       'Projektanfrage Asamer Website',
@@ -75,7 +84,7 @@ const Home = () => {
   ];
 
   const heroFeatures = [
-    { icon: Cpu, text: tr('Schelling Anlagenbau (fi, fxh, fh4, fh5, fh6, LS1)', 'Schelling plant engineering (fi, fxh, fh4, fh5, fh6, LS1)', 'Schelling výrobní technologie (fi, fxh, fh4, fh5, fh6, LS1)') },
+    { icon: Cpu, text: tr('OTT die führende Kantenanleimmaschine', 'OTT the leading edge banding machine', 'OTT přední olepovačka hran') },
     { icon: Layers, text: tr('Neue Sägetechnologien von MAYER', 'New sawing technologies from MAYER', 'Nové technologie řezání od MAYER') },
     { icon: Database, text: tr('Service & Wartung Holz + Metall', 'Service & maintenance for wood + metal', 'Servis a údržba pro dřevo + kov') },
     { icon: TrendingDown, text: tr('Reduktion von Lagerkosten', 'Reduction of storage costs', 'Snížení skladovacích nákladů') },
@@ -215,7 +224,7 @@ const Home = () => {
 
         <div className="relative z-10 w-full container-wide pt-32 pb-20">
           <div className="max-w-5xl">
-            <h1 className="mb-8">
+            <h1 className="mt-12 md:mt-10 lg:mt-8 mb-8">
               <span className="hero-title-line block text-hero font-display font-light text-white">
                 {heroLines[0]}
               </span>
@@ -432,7 +441,7 @@ const Home = () => {
               <div className="relative aspect-video rounded-2xl overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: 'url(https://www.barbaric.at/fileadmin/_processed_/b/8/csm_CSF___NST_Hueser-7954_web_e4cac310e1.png)' }}
+                  style={{ backgroundImage: 'url(https://www.barbaric.at/fileadmin/_processed_/1/1/csm_CSF_Multilevel-Wegerer-7837_web_9285d8be71.png)' }}
                 />
                 <div className="cost-image-overlay absolute inset-0" />
               </div>
