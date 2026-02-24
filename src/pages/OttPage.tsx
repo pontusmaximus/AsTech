@@ -1,0 +1,335 @@
+import { useEffect } from 'react';
+import { ArrowLeft, ArrowUpRight, Flame, Droplets } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLanguage } from '../App';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const OttPage = () => {
+  const { lang } = useLanguage();
+  const locale = lang === 'de' || lang === 'en' || lang === 'cz' ? lang : 'en';
+  const tr = (de: string, en: string, cz: string) => (
+    locale === 'de' ? de : locale === 'cz' ? cz : en
+  );
+  const inquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
+    tr('Anfrage OTT', 'Inquiry OTT', 'Poptávka OTT')
+  )}`;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo('.page-header',
+        { y: 60, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }
+      );
+
+      gsap.utils.toArray<HTMLElement>('.product-item').forEach((item, i) => {
+        gsap.fromTo(item,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            delay: i * 0.1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: item,
+              start: 'top 85%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        );
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
+  const edgebanders = [
+    {
+      name: 'Pacific',
+      desc: tr('Kompakte Kantenanleimmaschine für Handwerk und Tischlerei', 'Compact edgebander for craft and carpentry shops', 'Kompaktní olepovačka hran pro řemeslo a truhlářství'),
+      type: 'EVA',
+      specs: [
+        tr('Kantenstärke: 0,4 - 3 mm', 'Edge thickness: 0.4 - 3 mm', 'Tloušťka hrany: 0,4 - 3 mm'),
+        tr('Vorschub: 12 m/min', 'Feed speed: 12 m/min', 'Posuv: 12 m/min'),
+        tr('Schmelzbehälter: 1,5 kg', 'Melting tank: 1.5 kg', 'Tavná nádoba: 1,5 kg'),
+      ],
+    },
+    {
+      name: 'Tornado',
+      desc: tr('Leistungsstarke Lösung für mittlere Betriebe', 'Powerful solution for medium-sized operations', 'Výkonné řešení pro střední provozy'),
+      type: 'EVA/PUR',
+      specs: [
+        tr('Kantenstärke: 0,4 - 5 mm', 'Edge thickness: 0.4 - 5 mm', 'Tloušťka hrany: 0,4 - 5 mm'),
+        tr('Vorschub: 15 m/min', 'Feed speed: 15 m/min', 'Posuv: 15 m/min'),
+        tr('Schmelzbehälter: 2,5 kg', 'Melting tank: 2.5 kg', 'Tavná nádoba: 2,5 kg'),
+      ],
+    },
+    {
+      name: 'FlexEdge',
+      desc: tr('Flexible Kantenbearbeitung mit modularer Ausstattung', 'Flexible edgebanding with modular equipment', 'Flexibilní olepování hran s modulární výbavou'),
+      type: 'EVA/PUR',
+      specs: [
+        tr('Kantenstärke: 0,4 - 8 mm', 'Edge thickness: 0.4 - 8 mm', 'Tloušťka hrany: 0,4 - 8 mm'),
+        tr('Vorschub: 18 m/min', 'Feed speed: 18 m/min', 'Posuv: 18 m/min'),
+        tr('Werkzeugwechsler: 6-fach', 'Tool changer: 6-fold', 'Měnič nástrojů: 6násobný'),
+      ],
+    },
+    {
+      name: 'Storm',
+      desc: tr('Hochleistungsmaschine für industrielle Anforderungen', 'High-performance machine for industrial requirements', 'Vysokovýkonný stroj pro průmyslové požadavky'),
+      type: 'PUR',
+      specs: [
+        tr('Kantenstärke: 0,4 - 12 mm', 'Edge thickness: 0.4 - 12 mm', 'Tloušťka hrany: 0,4 - 12 mm'),
+        tr('Vorschub: 22 m/min', 'Feed speed: 22 m/min', 'Posuv: 22 m/min'),
+        tr('Nullfuge-Technologie', 'Zero-joint technology', 'Technologie nulové spáry'),
+      ],
+    },
+    {
+      name: 'StrongEdge',
+      desc: tr('Maximale Stabilität für schwere Kanten', 'Maximum stability for heavy edges', 'Maximální stabilita pro silné hrany'),
+      type: 'PUR',
+      specs: [
+        tr('Kantenstärke: 1 - 20 mm', 'Edge thickness: 1 - 20 mm', 'Tloušťka hrany: 1 - 20 mm'),
+        tr('Vorschub: 20 m/min', 'Feed speed: 20 m/min', 'Posuv: 20 m/min'),
+        tr('Doppelvorschub', 'Dual feed', 'Dvojitý posuv'),
+      ],
+    },
+    {
+      name: 'TopEdge',
+      desc: tr('Premium-Lösung mit höchster Präzision', 'Premium solution with highest precision', 'Prémiové řešení s nejvyšší přesností'),
+      type: 'PUR/LASER',
+      specs: [
+        tr('Kantenstärke: 0,4 - 20 mm', 'Edge thickness: 0.4 - 20 mm', 'Tloušťka hrany: 0,4 - 20 mm'),
+        tr('Vorschub: 25 m/min', 'Feed speed: 25 m/min', 'Posuv: 25 m/min'),
+        tr('Hydrofuse-Technologie', 'Hydrofuse technology', 'Technologie Hydrofuse'),
+      ],
+    },
+    {
+      name: 'DoorEdition',
+      desc: tr('Spezialisiert auf Tür- und Möbelkanten', 'Specialized for door and furniture edges', 'Specializováno na dveřní a nábytkové hrany'),
+      type: 'PUR',
+      specs: [
+        tr('Kantenstärke: 0,4 - 15 mm', 'Edge thickness: 0.4 - 15 mm', 'Tloušťka hrany: 0,4 - 15 mm'),
+        tr('Vorschub: 18 m/min', 'Feed speed: 18 m/min', 'Posuv: 18 m/min'),
+        tr('3D-Kantenbearbeitung', '3D edge processing', '3D opracování hran'),
+      ],
+    },
+    {
+      name: 'CombiMelt',
+      desc: tr('Kombiniert EVA und PUR in einem System', 'Combines EVA and PUR in one system', 'Kombinuje EVA a PUR v jednom systému'),
+      type: 'EVA/PUR',
+      specs: [
+        tr('Kantenstärke: 0,4 - 8 mm', 'Edge thickness: 0.4 - 8 mm', 'Tloušťka hrany: 0,4 - 8 mm'),
+        tr('Vorschub: 15 m/min', 'Feed speed: 15 m/min', 'Posuv: 15 m/min'),
+        tr('Schnellwechselsystem', 'Quick-change system', 'Systém rychlé výměny'),
+      ],
+    },
+    {
+      name: 'BlueEdge',
+      desc: tr('Einstiegsmodell mit professioneller Ausstattung', 'Entry-level model with professional equipment', 'Vstupní model s profesionální výbavou'),
+      type: 'EVA',
+      specs: [
+        tr('Kantenstärke: 0,4 - 3 mm', 'Edge thickness: 0.4 - 3 mm', 'Tloušťka hrany: 0,4 - 3 mm'),
+        tr('Vorschub: 12 m/min', 'Feed speed: 12 m/min', 'Posuv: 12 m/min'),
+        tr('Intuitive Bedienung', 'Intuitive operation', 'Intuitivní ovládání'),
+      ],
+    },
+  ];
+
+  const systemSolutions = [
+    {
+      name: 'TransCompact',
+      desc: tr('Kompaktes Transportsystem für kleine bis mittlere Betriebe', 'Compact transport system for small to medium operations', 'Kompaktní transportní systém pro malé až střední provozy'),
+      specs: [
+        tr('Traglast: 150 kg', 'Payload: 150 kg', 'Nosnost: 150 kg'),
+        tr('Geschwindigkeit: 15 m/min', 'Speed: 15 m/min', 'Rychlost: 15 m/min'),
+        'Plug & Play Installation',
+      ],
+    },
+    {
+      name: 'TransLift',
+      desc: tr('Automatisches Hebe- und Transportsystem', 'Automatic lifting and transport system', 'Automatický zvedací a transportní systém'),
+      specs: [
+        tr('Hubhöhe: 2.000 mm', 'Lifting height: 2,000 mm', 'Výška zdvihu: 2 000 mm'),
+        tr('Traglast: 300 kg', 'Payload: 300 kg', 'Nosnost: 300 kg'),
+        tr('Integrierte Sicherheitssensoren', 'Integrated safety sensors', 'Integrované bezpečnostní senzory'),
+      ],
+    },
+    {
+      name: 'TransEdge',
+      desc: tr('Vollautomatische Kantenrückführung', 'Fully automatic edge return system', 'Plně automatické vracení hran'),
+      specs: [
+        tr('Rückführgeschwindigkeit: 20 m/min', 'Return speed: 20 m/min', 'Rychlost vrácení: 20 m/min'),
+        tr('Automatische Kantenzufuhr', 'Automatic edge feeding', 'Automatické podávání hran'),
+        'ERP integration',
+      ],
+    },
+  ];
+
+  return (
+    <div className="bg-dark min-h-screen pt-32 pb-20">
+      <div className="container-wide">
+        <a href="/" className="page-header inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-12">
+          <ArrowLeft className="w-4 h-4" />
+          {tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
+        </a>
+
+        <div className="page-header mb-16">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-red-600/20 rounded-xl flex items-center justify-center">
+              <span className="text-red-500 font-display font-bold text-xl">O</span>
+            </div>
+            <div>
+              <span className="text-xs uppercase tracking-widest text-red-500">{tr('Hersteller', 'Manufacturer', 'Výrobce')}</span>
+              <h1 className="text-4xl md:text-5xl font-display font-light text-white">OTT</h1>
+            </div>
+          </div>
+          <p className="text-xl text-white/50 max-w-2xl">
+            {tr(
+              'OTT steht für innovative Kantenleimtechnologie. Mit PUR-Anleimsystemen und LASER Hydrofuse Technologie werden fugenlose, übergangslose Kantenverbindungen realisiert.',
+              'OTT stands for innovative edgebanding technology. PUR gluing systems and LASER Hydrofuse technology create seamless, jointless edge connections.',
+              'OTT je synonymem inovativní technologie olepování hran. Systémy PUR a technologie LASER Hydrofuse umožňují bezešvé a plynulé spojení hran.'
+            )}
+          </p>
+        </div>
+
+        <section className="mb-20">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="product-item p-8 bg-gradient-to-br from-orange-500/10 to-transparent rounded-2xl border border-orange-500/20">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                  <Flame className="w-5 h-5 text-orange-500" />
+                </div>
+                <h3 className="text-xl font-display font-medium text-white">
+                  {tr('PUR-Technologie', 'PUR Technology', 'PUR technologie')}
+                </h3>
+              </div>
+              <p className="text-white/50 mb-4">
+                {tr(
+                  'Polyurethan-Klebstoffe bieten höchste Festigkeit und Temperaturbeständigkeit. Ideal für anspruchsvolle Anwendungen in Küchen- und Möbelbau.',
+                  'Polyurethane adhesives provide maximum strength and temperature resistance. Ideal for demanding applications in kitchen and furniture manufacturing.',
+                  'Polyuretanová lepidla nabízejí nejvyšší pevnost a tepelnou odolnost. Ideální pro náročné použití v kuchyňském a nábytkářském průmyslu.'
+                )}
+              </p>
+              <ul className="space-y-2 text-sm text-white/40">
+                <li>• {tr('Wasser- und hitzebeständig', 'Water and heat resistant', 'Odolné vůči vodě a teplu')}</li>
+                <li>• {tr('Extrem hohe Klebekraft', 'Extremely high adhesive strength', 'Extrémně vysoká pevnost lepení')}</li>
+                <li>• {tr('Nahezu unsichtbare Klebefuge', 'Almost invisible glue joint', 'Téměř neviditelná lepicí spára')}</li>
+              </ul>
+            </div>
+
+            <div className="product-item p-8 bg-gradient-to-br from-blue-500/10 to-transparent rounded-2xl border border-blue-500/20">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                  <Droplets className="w-5 h-5 text-blue-500" />
+                </div>
+                <h3 className="text-xl font-display font-medium text-white">
+                  {tr('LASER Hydrofuse', 'LASER Hydrofuse', 'LASER Hydrofuse')}
+                </h3>
+              </div>
+              <p className="text-white/50 mb-4">
+                {tr(
+                  'Die revolutionäre LASER-Technologie aktiviert die Funktionsschicht der Kante direkt – ohne sichtbare Klebefuge, für perfekte Ästhetik.',
+                  'The revolutionary LASER technology activates the functional edge layer directly without a visible glue joint for perfect aesthetics.',
+                  'Revoluční technologie LASER aktivuje funkční vrstvu hrany přímo bez viditelné lepicí spáry pro perfektní vzhled.'
+                )}
+              </p>
+              <ul className="space-y-2 text-sm text-white/40">
+                <li>• {tr('Völlig unsichtbare Fuge', 'Completely invisible joint', 'Zcela neviditelná spára')}</li>
+                <li>• {tr('Kein Klebstoff erforderlich', 'No adhesive required', 'Není potřeba lepidlo')}</li>
+                <li>• {tr('Premium-Optik für hochwertige Möbel', 'Premium look for high-end furniture', 'Prémiový vzhled pro kvalitní nábytek')}</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-20">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="accent-line" />
+            <h2 className="text-2xl font-display font-light text-white">{tr('Kantenleimmaschinen', 'Edgebanding Machines', 'Olepovačky hran')}</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {edgebanders.map((product, index) => (
+              <div key={index} className="product-item product-card-dark p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
+                    <span className="text-xs text-primary">{product.type}</span>
+                  </div>
+                  <ArrowUpRight className="w-5 h-5 text-white/30" />
+                </div>
+                <p className="text-white/50 text-sm mb-4">{product.desc}</p>
+                <ul className="space-y-2">
+                  {product.specs.map((spec, i) => (
+                    <li key={i} className="text-xs text-white/40 flex items-center gap-2">
+                      <span className="w-1 h-1 bg-primary rounded-full" />
+                      {spec}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-20">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="accent-line" />
+            <h2 className="text-2xl font-display font-light text-white">{tr('Systemlösungen & Manipulation', 'System Solutions & Handling', 'Systémová řešení a manipulace')}</h2>
+          </div>
+          <p className="text-white/50 mb-8 max-w-3xl">
+            {tr(
+              'Automatisierte Transportsysteme für nahtlose Integration in Ihre Produktionslinie.',
+              'Automated transport systems for seamless integration into your production line.',
+              'Automatizované transportní systémy pro bezproblémovou integraci do vaší výrobní linky.'
+            )}
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {systemSolutions.map((product, index) => (
+              <div key={index} className="product-item product-card-dark p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
+                  <ArrowUpRight className="w-5 h-5 text-white/30" />
+                </div>
+                <p className="text-white/50 text-sm mb-4">{product.desc}</p>
+                <ul className="space-y-2">
+                  {product.specs.map((spec, i) => (
+                    <li key={i} className="text-xs text-white/40 flex items-center gap-2">
+                      <span className="w-1 h-1 bg-primary rounded-full" />
+                      {spec}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div className="product-item p-8 bg-gradient-to-r from-red-600/20 to-transparent rounded-2xl border border-red-500/30">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-display font-medium text-white mb-2">
+                {tr('Interesse an OTT Produkten?', 'Interested in OTT products?', 'Máte zájem o produkty OTT?')}
+              </h3>
+              <p className="text-white/50">
+                {tr('Wir beraten Sie gerne zu PUR- und LASER-Technologie.', 'We are happy to advise you on PUR and LASER technology.', 'Rádi vám poradíme s technologií PUR a LASER.')}
+              </p>
+            </div>
+            <a href={inquiryMail} className="btn-primary-dark whitespace-nowrap">
+              {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}
+              <ArrowUpRight className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OttPage;

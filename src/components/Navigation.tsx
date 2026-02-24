@@ -1,0 +1,308 @@
+import { useState, useEffect } from 'react';
+import { useLanguage, useTheme } from '../App';
+import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import type { Language } from '../i18n';
+
+const Navigation = () => {
+  const { lang, t, setLang } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const isHomePage = location.pathname === '/';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  const languages: { code: Language; label: string }[] = [
+    { code: 'de', label: 'DE' },
+    { code: 'en', label: 'EN' },
+    { code: 'cz', label: 'CZ' },
+    { code: 'sk', label: 'SK' },
+    { code: 'hu', label: 'HU' },
+  ];
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  // Determine background based on scroll and page
+  const navBgClass = isScrolled
+    ? 'nav-surface-scrolled'
+    : isHomePage
+      ? 'nav-surface-home'
+      : 'nav-surface-inner';
+  const themeLabel = theme === 'dark' ? t.nav.activateThemeDay : t.nav.activateThemeNight;
+  const manufacturerLabel =
+    lang === 'de' ? 'Hersteller' :
+    lang === 'cz' ? 'Výrobci' :
+    'Manufacturers';
+
+  return (
+    <nav
+      className={`nav-readable fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBgClass} py-5`}
+    >
+      <div className="container-wide">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="relative">
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 40 40"
+                fill="none"
+                className="transition-transform duration-300 group-hover:scale-105"
+              >
+                <path
+                  d="M8 12L16 20L8 28"
+                  stroke="#004899"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M18 12L26 20L18 28"
+                  stroke="#004899"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  opacity="0.5"
+                />
+              </svg>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-base font-medium tracking-tight text-white">
+                asamer
+              </span>
+              <span className="text-[10px] tracking-widest uppercase text-white/40">
+                technologie
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-8">
+            {/* Manufacturer Links */}
+            <div className="flex items-center gap-6 mr-4 pr-4 border-r border-white/10">
+              <Link 
+                to="/mayer" 
+                className={`text-sm transition-colors ${location.pathname === '/mayer' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              >
+                Mayer
+              </Link>
+              <Link 
+                to="/ott" 
+                className={`text-sm transition-colors ${location.pathname === '/ott' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              >
+                OTT
+              </Link>
+              <Link 
+                to="/barbaric" 
+                className={`text-sm transition-colors ${location.pathname === '/barbaric' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              >
+                BARBARIC
+              </Link>
+            </div>
+
+            {/* Home Page Sections */}
+            {isHomePage && (
+              <button
+                onClick={() => scrollToSection('solutions')}
+                className="text-sm text-white/60 hover:text-white transition-colors"
+              >
+                {t.nav.solutions}
+              </button>
+            )}
+
+            <Link
+              to="/finanzierung"
+              className={`text-sm transition-colors ${location.pathname === '/finanzierung' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+            >
+              {t.nav.automation}
+            </Link>
+
+            <button
+              onClick={() => scrollToSection('service')}
+              className="text-sm text-white/60 hover:text-white transition-colors"
+            >
+              {t.nav.service}
+            </button>
+
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="text-sm text-white/60 hover:text-white transition-colors"
+            >
+              {t.nav.contact}
+            </button>
+
+            <button
+              onClick={toggleTheme}
+              className="theme-toggle-btn"
+              aria-label={themeLabel}
+              title={themeLabel}
+            >
+              {theme === 'dark' ? (
+                <Sun className="w-4 h-4" />
+              ) : (
+                <Moon className="w-4 h-4" />
+              )}
+            </button>
+
+            {/* Language Selector */}
+            <div className="relative">
+              <button
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                className="flex items-center gap-1 text-sm text-white/60 hover:text-white transition-colors"
+              >
+                {languages.find((l) => l.code === lang)?.label}
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${
+                    isLangMenuOpen ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+
+              {isLangMenuOpen && (
+                <div className="absolute top-full right-0 mt-2 nav-dropdown-panel rounded-lg shadow-xl py-2 min-w-[80px] border border-white/5">
+                  {languages.map((l) => (
+                    <button
+                      key={l.code}
+                      onClick={() => {
+                        setLang(l.code);
+                        setIsLangMenuOpen(false);
+                      }}
+                      className={`w-full px-4 py-2 text-sm text-left transition-colors hover:bg-white/5 ${
+                        lang === l.code
+                          ? 'text-primary font-medium'
+                          : 'text-white/70'
+                      }`}
+                    >
+                      {l.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 text-white/60 hover:text-white transition-colors"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden absolute top-full left-0 right-0 nav-mobile-panel py-6">
+            <div className="flex flex-col gap-4">
+              {/* Manufacturer Links */}
+              <div className="px-6 pb-4 border-b border-white/5">
+                <span className="text-xs uppercase tracking-widest text-white/30 mb-3 block">{manufacturerLabel}</span>
+                <div className="flex flex-col gap-3">
+                  <Link to="/mayer" className="text-white/70 hover:text-white">Mayer</Link>
+                  <Link to="/ott" className="text-white/70 hover:text-white">OTT</Link>
+                  <Link to="/barbaric" className="text-white/70 hover:text-white">BARBARIC</Link>
+                </div>
+              </div>
+
+              {/* Page Links */}
+              <div className="px-6 flex flex-col gap-3">
+                <button
+                  onClick={() => scrollToSection('solutions')}
+                  className="text-left text-white/70 hover:text-white"
+                >
+                  {t.nav.solutions}
+                </button>
+                <Link
+                  to="/finanzierung"
+                  className={`text-left ${location.pathname === '/finanzierung' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                >
+                  {t.nav.automation}
+                </Link>
+                <button
+                  onClick={() => scrollToSection('service')}
+                  className="text-left text-white/70 hover:text-white"
+                >
+                  {t.nav.service}
+                </button>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="text-left text-white/70 hover:text-white"
+                >
+                  {t.nav.contact}
+                </button>
+              </div>
+
+              {/* Language Selector */}
+              <div className="px-6 pt-4 border-t border-white/5 space-y-4">
+                <button
+                  onClick={toggleTheme}
+                  className="theme-toggle-btn w-full justify-center gap-2 py-2"
+                  aria-label={themeLabel}
+                >
+                  {theme === 'dark' ? (
+                    <>
+                      <Sun className="w-4 h-4" />
+                      <span className="text-sm">{t.nav.themeDay}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Moon className="w-4 h-4" />
+                      <span className="text-sm">{t.nav.themeNight}</span>
+                    </>
+                  )}
+                </button>
+
+                <div className="flex gap-2">
+                  {languages.map((l) => (
+                    <button
+                      key={l.code}
+                      onClick={() => {
+                        setLang(l.code);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`px-3 py-1 text-sm rounded transition-colors ${
+                        lang === l.code
+                          ? 'bg-primary text-white'
+                          : 'bg-white/5 text-white/70'
+                      }`}
+                    >
+                      {l.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
