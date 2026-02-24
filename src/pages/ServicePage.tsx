@@ -69,7 +69,7 @@ const ServicePage = () => {
 
   return (
     <div className="bg-dark min-h-screen">
-      <section className="pt-36 pb-16">
+      <section className="pt-28 md:pt-36 pb-16">
         <div className="container-wide">
           <div className="max-w-5xl">
             <div className="accent-line mb-6" />

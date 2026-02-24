@@ -217,7 +217,7 @@ const MayerPage = () => {
   ];
 
   return (
-    <div className="bg-dark min-h-screen pt-32 pb-20">
+    <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
       <div className="container-wide">
         <a href="/" className="page-header inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-12">
           <ArrowLeft className="w-4 h-4" />
@@ -377,7 +377,7 @@ const MayerPage = () => {
                 )}
               </p>
             </div>
-            <a href={inquiryMail} className="btn-primary-dark whitespace-nowrap">
+            <a href={inquiryMail} className="btn-primary-dark sm:whitespace-nowrap">
               {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}
               <ArrowUpRight className="w-5 h-5" />
             </a>

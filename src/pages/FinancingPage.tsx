@@ -135,7 +135,7 @@ const FinancingPage = () => {
 
   return (
     <div className="bg-dark min-h-screen">
-      <section className="pt-36 pb-10 financing-hero">
+      <section className="pt-28 md:pt-36 pb-10 financing-hero">
         <div className="container-wide">
           <div className="relative rounded-3xl overflow-hidden border border-white/10 min-h-[320px]">
             <img
@@ -266,7 +266,7 @@ const FinancingPage = () => {
                       )}
                     </p>
                   </div>
-                  <a href={fundingInquiryMail} className="btn-primary-dark whitespace-nowrap justify-center">
+                  <a href={fundingInquiryMail} className="btn-primary-dark sm:whitespace-nowrap justify-center">
                     {tr(
                       'Prüfen Sie Ihre Förderfähigkeit mit Asamer',
                       'Check your funding eligibility with Asamer',

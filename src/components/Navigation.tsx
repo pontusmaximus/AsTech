@@ -27,6 +27,17 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMobileMenuOpen]);
+
   const languages: { code: Language; label: string }[] = [
     { code: 'de', label: 'DE' },
     { code: 'en', label: 'EN' },
@@ -51,12 +62,12 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`nav-readable fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBgClass} py-5`}
+      className={`nav-readable fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBgClass} py-3 md:py-5`}
     >
       <div className="container-wide">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
             <div className="relative">
               <svg
                 width="36"
@@ -198,6 +209,7 @@ const Navigation = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 text-white/60 hover:text-white transition-colors"
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -209,7 +221,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 nav-mobile-panel py-6">
+          <div className="lg:hidden absolute top-full left-0 right-0 nav-mobile-panel py-5">
             <div className="flex flex-col gap-4">
               {/* Manufacturer Links */}
               <div className="px-6 pb-4 border-b border-white/5">
@@ -269,7 +281,7 @@ const Navigation = () => {
                   )}
                 </button>
 
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                   {languages.map((l) => (
                     <button
                       key={l.code}

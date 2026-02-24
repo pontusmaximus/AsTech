@@ -76,7 +76,7 @@ const SolutionsPage = () => {
 
   return (
     <div className="bg-dark min-h-screen">
-      <section className="pt-36 pb-16">
+      <section className="pt-28 md:pt-36 pb-16">
         <div className="container-wide">
           <div className="max-w-5xl">
             <div className="accent-line mb-6" />
@@ -156,7 +156,7 @@ const SolutionsPage = () => {
                 )}
               </p>
             </div>
-            <a href={inquiryMail} className="btn-primary-dark whitespace-nowrap justify-center">
+            <a href={inquiryMail} className="btn-primary-dark sm:whitespace-nowrap justify-center">
               {tr('Projektgespräch starten', 'Start project call', 'Zahájit projektovou konzultaci')}
               <ArrowRight className="w-5 h-5" />
             </a>

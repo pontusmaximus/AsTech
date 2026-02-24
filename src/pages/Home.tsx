@@ -210,7 +210,7 @@ const Home = () => {
 
   return (
     <div ref={heroRef} className="bg-dark">
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-[100svh] md:min-h-screen flex items-start md:items-center overflow-hidden">
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center scale-105"
@@ -222,9 +222,9 @@ const Home = () => {
 
         <div className="absolute inset-0 grid-pattern opacity-50" />
 
-        <div className="relative z-10 w-full container-wide pt-32 pb-20">
+        <div className="relative z-10 w-full container-wide pt-32 sm:pt-28 md:pt-32 pb-14 sm:pb-20">
           <div className="max-w-5xl">
-            <h1 className="mt-12 md:mt-10 lg:mt-8 mb-8">
+            <h1 className="mt-8 sm:mt-10 md:mt-10 lg:mt-8 mb-6 sm:mb-8">
               <span className="hero-title-line block text-hero font-display font-light text-white">
                 {heroLines[0]}
               </span>
@@ -239,11 +239,11 @@ const Home = () => {
               </span>
             </h1>
 
-            <p className="hero-subtitle text-xl md:text-2xl text-white/60 max-w-2xl mb-10 leading-relaxed">
+            <p className="hero-subtitle text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
               {t.hero.subheadline}
             </p>
 
-            <div className="hero-cta flex flex-wrap gap-4 mb-16">
+            <div className="hero-cta flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 mb-12 sm:mb-16">
               <a href={generalInquiryMail} className="btn-primary-dark">
                 {t.hero.cta}
                 <ArrowRight className="w-5 h-5" />
@@ -254,7 +254,7 @@ const Home = () => {
               </a>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
               {heroFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
@@ -391,11 +391,11 @@ const Home = () => {
                 />
                 <div className="automation-image-overlay absolute inset-0" />
 
-                <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10">
-                  <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-3 sm:p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-center">
                     {fundingStats.map((stat) => (
                       <div key={stat.value}>
-                        <div className="text-2xl font-display font-bold text-white">{stat.value}</div>
+                        <div className="text-xl sm:text-2xl font-display font-bold text-white">{stat.value}</div>
                         <div className="text-xs text-white/50">{stat.label}</div>
                       </div>
                     ))}
@@ -419,9 +419,9 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {digitalProductionItems.map((item, index) => (
-              <div key={index} className="section-animate text-center p-8 bg-dark-card rounded-2xl border border-white/5">
+              <div key={index} className="section-animate text-center p-6 sm:p-8 bg-dark-card rounded-2xl border border-white/5">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
                   <Database className="w-8 h-8 text-primary" />
                 </div>
@@ -462,7 +462,7 @@ const Home = () => {
 
               <div className="space-y-4">
                 {costStats.map((stat, index) => (
-                  <div key={index} className="flex items-center gap-4 p-4 bg-dark-card rounded-xl">
+                  <div key={index} className="flex items-start sm:items-center gap-4 p-4 bg-dark-card rounded-xl">
                     <span className="text-2xl font-display font-bold text-primary">{stat.value}</span>
                     <span className="text-white/70">{stat.label}</span>
                   </div>

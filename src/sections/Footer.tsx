@@ -24,9 +24,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="site-footer relative py-16 border-t border-white/5">
+    <footer className="site-footer relative py-12 md:py-16 border-t border-white/5">
       <div className="container-wide">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6">
               <svg
@@ -68,7 +68,7 @@ const Footer = () => {
                 'Již více než 30 let váš partner pro průmyslová řešení ve zpracování dřeva, plastů a kovů.'
               )}
             </p>
-            <div className="flex items-center gap-3 text-white/30 text-sm">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-white/30 text-sm">
               <span>{tr('Tschechien', 'Czech Republic', 'Česká republika')}</span>
               <span className="w-1 h-1 bg-white/20 rounded-full" />
               <span>{tr('Slowakei', 'Slovakia', 'Slovensko')}</span>
@@ -124,12 +124,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-white/30 text-sm">
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="text-white/30 text-sm leading-relaxed">
             {t.footer.copyright}
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <Link
               to="/impressum"
               className="text-white/30 text-sm hover:text-white transition-colors"
