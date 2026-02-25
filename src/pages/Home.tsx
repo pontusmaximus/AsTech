@@ -92,17 +92,6 @@ const Home = () => {
 
   const solutions = [
     {
-      title: tr('Schneiden', 'Cutting', 'Řezání'),
-      subtitle: tr('Sägetechnologie', 'Sawing technology', 'Technologie řezání'),
-      description: tr(
-        'Mayer Kappa Automatic & Advanced Line. Präzise Plattenaufteilsägen für Holz, Kunststoff und Metall.',
-        'Mayer Kappa Automatic & Advanced Line. Precise panel saws for wood, plastic, and metal.',
-        'Mayer Kappa Automatic & Advanced Line. Přesné pily na desky pro dřevo, plast a kov.'
-      ),
-      image: 'https://www.mayersaws.com/WEB/Details/Plattenaufteilsaegen/image-thumb__1115__auto_98b2870f1f48c3375f41b72d638dee59/0191eee43889bec1aa0fd51bb6b943e6cc18d659.jpg',
-      link: '/mayer',
-    },
-    {
       title: tr('Kantenbearbeitung', 'Edgebanding', 'Olepování hran'),
       subtitle: 'PUR & LASER',
       description: tr(
@@ -112,6 +101,17 @@ const Home = () => {
       ),
       image: 'https://www.ottpaul.com/fileadmin/_processed_/8/d/csm_entnahme-werkstueck-tornado_2ecb9d3d9c.jpg',
       link: '/ott',
+    },
+    {
+      title: tr('Schneiden', 'Cutting', 'Řezání'),
+      subtitle: tr('Sägetechnologie', 'Sawing technology', 'Technologie řezání'),
+      description: tr(
+        'Mayer Kappa Automatic & Advanced Line. Präzise Plattenaufteilsägen für Holz, Kunststoff und Metall.',
+        'Mayer Kappa Automatic & Advanced Line. Precise panel saws for wood, plastic, and metal.',
+        'Mayer Kappa Automatic & Advanced Line. Přesné pily na desky pro dřevo, plast a kov.'
+      ),
+      image: 'https://www.mayersaws.com/WEB/Details/Plattenaufteilsaegen/image-thumb__1115__auto_98b2870f1f48c3375f41b72d638dee59/0191eee43889bec1aa0fd51bb6b943e6cc18d659.jpg',
+      link: '/mayer',
     },
     {
       title: tr('Manipulation & Lager', 'Handling & Storage', 'Manipulace a skladování'),
@@ -214,7 +214,7 @@ const Home = () => {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center scale-105"
-            style={{ backgroundImage: 'url(/images/hero-bg.jpg)' }}
+            style={{ backgroundImage: 'url(https://www.ottpaul.com/fileadmin/_processed_/b/d/csm_maschine-tornado_98c5612081.jpg)' }}
           />
           <div className="hero-overlay-vertical absolute inset-0" />
           <div className="hero-overlay-horizontal absolute inset-0" />

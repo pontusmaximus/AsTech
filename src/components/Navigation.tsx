@@ -108,16 +108,16 @@ const Navigation = () => {
             {/* Manufacturer Links */}
             <div className="flex items-center gap-6 mr-4 pr-4 border-r border-white/10">
               <Link 
-                to="/mayer" 
-                className={`text-sm transition-colors ${location.pathname === '/mayer' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
-              >
-                Mayer
-              </Link>
-              <Link 
                 to="/ott" 
                 className={`text-sm transition-colors ${location.pathname === '/ott' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
               >
                 OTT
+              </Link>
+              <Link 
+                to="/mayer" 
+                className={`text-sm transition-colors ${location.pathname === '/mayer' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              >
+                Mayer
               </Link>
               <Link 
                 to="/barbaric" 
@@ -227,8 +227,8 @@ const Navigation = () => {
               <div className="px-6 pb-4 border-b border-white/5">
                 <span className="text-xs uppercase tracking-widest text-white/30 mb-3 block">{manufacturerLabel}</span>
                 <div className="flex flex-col gap-3">
-                  <Link to="/mayer" className="text-white/70 hover:text-white">Mayer</Link>
                   <Link to="/ott" className="text-white/70 hover:text-white">OTT</Link>
+                  <Link to="/mayer" className="text-white/70 hover:text-white">Mayer</Link>
                   <Link to="/barbaric" className="text-white/70 hover:text-white">BARBARIC</Link>
                 </div>
               </div>
