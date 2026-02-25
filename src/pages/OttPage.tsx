@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
-import { ArrowLeft, ArrowUpRight, Flame, Droplets } from 'lucide-react';
+import { ArrowUpRight, Flame, Droplets } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -199,29 +200,18 @@ const OttPage = () => {
   return (
     <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
       <div className="container-wide">
-        <a href="/" className="page-header inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-12">
-          <ArrowLeft className="w-4 h-4" />
-          {tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
-        </a>
-
-        <div className="page-header mb-16">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-red-600/20 rounded-xl flex items-center justify-center">
-              <span className="text-red-500 font-display font-bold text-xl">O</span>
-            </div>
-            <div>
-              <span className="text-xs uppercase tracking-widest text-red-500">{tr('Hersteller', 'Manufacturer', 'Výrobce')}</span>
-              <h1 className="text-4xl md:text-5xl font-display font-light text-white">OTT</h1>
-            </div>
-          </div>
-          <p className="text-xl text-white/50 max-w-2xl">
-            {tr(
-              'OTT steht für innovative Kantenleimtechnologie. Mit PUR-Anleimsystemen und LASER Hydrofuse Technologie werden fugenlose, übergangslose Kantenverbindungen realisiert.',
-              'OTT stands for innovative edgebanding technology. PUR gluing systems and LASER Hydrofuse technology create seamless, jointless edge connections.',
-              'OTT je synonymem inovativní technologie olepování hran. Systémy PUR a technologie LASER Hydrofuse umožňují bezešvé a plynulé spojení hran.'
-            )}
-          </p>
-        </div>
+        <ManufacturerHeader
+          backLabel={tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
+          brandNameForSrOnly="OTT"
+          logoSrc="https://stadtkarte.at/wp-content/uploads/2023/10/firmen-Lambach-stadt-OTT.jpg"
+          logoAlt="OTT logo"
+          logoClassName="h-16 sm:h-20 md:h-24 w-auto object-contain rounded-md"
+          introText={tr(
+            'Innovative Kantenleimtechnologie mit PUR-Anleimsystemen und LASER Hydrofuse für fugenlose, übergangslose Kantenverbindungen.',
+            'Innovative edgebanding technology with PUR gluing systems and LASER Hydrofuse for seamless, jointless edge connections.',
+            'Inovativní technologie olepování hran se systémy PUR a LASER Hydrofuse pro bezešvé a plynulé spojení hran.'
+          )}
+        />
 
         <section className="mb-20">
           <div className="grid md:grid-cols-2 gap-8">

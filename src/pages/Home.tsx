@@ -77,10 +77,8 @@ const Home = () => {
   }, []);
 
   const heroLines = [
-    tr('Automatisierung', 'Automation', 'Automatizace'),
-    tr('Ihrer Produktion', 'of your production', 'vaší výroby'),
-    tr('durch Robotik', 'through robotics', 'pomocí robotiky'),
-    tr('und Industrie 4.0', 'and Industry 4.0', 'a Průmyslu 4.0'),
+    tr('Technologie mit Erfahrung.', 'Technology with experience.', 'Technologie se zkušeností.'),
+    tr('Lösungen mit Zukunft.', 'Solutions with a future.', 'Řešení s budoucností.'),
   ];
 
   const heroFeatures = [
@@ -213,7 +211,7 @@ const Home = () => {
       <section className="relative min-h-[100svh] md:min-h-screen flex items-start md:items-center overflow-hidden">
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 bg-cover bg-center scale-105"
+            className="absolute inset-0 bg-cover bg-center scale-100"
             style={{ backgroundImage: 'url(https://www.ottpaul.com/fileadmin/_processed_/b/d/csm_maschine-tornado_98c5612081.jpg)' }}
           />
           <div className="hero-overlay-vertical absolute inset-0" />
@@ -225,17 +223,11 @@ const Home = () => {
         <div className="relative z-10 w-full container-wide pt-32 sm:pt-32 md:pt-32 pb-14 sm:pb-20">
           <div className="max-w-5xl">
             <h1 className="mt-16 sm:mt-14 md:mt-10 lg:mt-8 mb-6 sm:mb-8">
-              <span className="hero-title-line block text-hero font-display font-light text-white">
+              <span className="hero-title-line block font-display font-bold text-[clamp(2.5rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-white">
                 {heroLines[0]}
               </span>
-              <span className="hero-title-line block text-hero font-display font-light text-white">
+              <span className="hero-title-line block font-display font-bold text-[clamp(2.5rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-primary mt-2">
                 {heroLines[1]}
-              </span>
-              <span className="hero-title-line block text-hero font-display font-light text-white/60">
-                {heroLines[2]}
-              </span>
-              <span className="hero-title-line block text-hero font-display font-light text-primary mt-2">
-                {heroLines[3]}
               </span>
             </h1>
 

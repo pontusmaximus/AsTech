@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
-import { ArrowLeft, ArrowUpRight, Boxes, GripVertical } from 'lucide-react';
+import { ArrowUpRight, Boxes, GripVertical } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -178,29 +179,17 @@ const BarbaricPage = () => {
   return (
     <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
       <div className="container-wide">
-        <a href="/" className="page-header inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-12">
-          <ArrowLeft className="w-4 h-4" />
-          {tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
-        </a>
-
-        <div className="page-header mb-16">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-              <span className="text-orange-500 font-display font-bold text-xl">B</span>
-            </div>
-            <div>
-              <span className="text-xs uppercase tracking-widest text-orange-500">{tr('Hersteller', 'Manufacturer', 'Výrobce')}</span>
-              <h1 className="text-4xl md:text-5xl font-display font-light text-white">BARBARIC</h1>
-            </div>
-          </div>
-          <p className="text-xl text-white/50 max-w-2xl">
-            {tr(
-              'Made in Austria – BARBARIC bietet Automatisierungs- und Handlinglösungen vom manuellen Vakuumheber bis zum vollautomatischen Flächenlager.',
-              'Made in Austria - BARBARIC offers automation and handling solutions from manual vacuum lifters to fully automatic panel storage systems.',
-              'Made in Austria - BARBARIC nabízí automatizační a manipulační řešení od ručních vakuových zvedáků až po plně automatické plošné sklady.'
-            )}
-          </p>
-        </div>
+        <ManufacturerHeader
+          backLabel={tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
+          brandNameForSrOnly="BARBARIC"
+          logoSrc="https://www.barbaric.at/fileadmin/user_upload/Bilder_Barbaric/Logos/Logo_Barbaric_withSlogan.png"
+          logoAlt="BARBARIC logo"
+          introText={tr(
+            'Made in Austria – Automatisierungs- und Handlinglösungen vom manuellen Vakuumheber bis zum vollautomatischen Flächenlager.',
+            'Made in Austria - Automation and handling solutions from manual vacuum lifters to fully automatic panel storage systems.',
+            'Made in Austria - Automatizační a manipulační řešení od ručních vakuových zvedáků až po plně automatické plošné sklady.'
+          )}
+        />
 
         <div className="product-item mb-16 flex items-center gap-4 p-6 bg-gradient-to-r from-orange-500/10 to-transparent rounded-xl border border-orange-500/20">
           <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">

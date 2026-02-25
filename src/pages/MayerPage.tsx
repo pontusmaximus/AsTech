@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -219,29 +220,17 @@ const MayerPage = () => {
   return (
     <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
       <div className="container-wide">
-        <a href="/" className="page-header inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-12">
-          <ArrowLeft className="w-4 h-4" />
-          {tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
-        </a>
-
-        <div className="page-header mb-16">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-              <span className="text-primary font-display font-bold text-xl">M</span>
-            </div>
-            <div>
-              <span className="text-xs uppercase tracking-widest text-primary">{tr('Hersteller', 'Manufacturer', 'Výrobce')}</span>
-              <h1 className="text-4xl md:text-5xl font-display font-light text-white">Mayer</h1>
-            </div>
-          </div>
-          <p className="text-xl text-white/50 max-w-2xl">
-            {tr(
-              'Seit über 70 Jahren steht Mayer für höchste Qualität und Präzision im Plattenzuschnitt. Die Kappa Automatic und Advanced Line Serien setzen Maßstäbe in der Industrie.',
-              'For more than 70 years, Mayer has stood for top quality and precision in panel cutting. The Kappa Automatic and Advanced Line series set standards in the industry.',
-              'Již více než 70 let je Mayer synonymem nejvyšší kvality a přesnosti při řezání desek. Řady Kappa Automatic a Advanced Line určují průmyslové standardy.'
-            )}
-          </p>
-        </div>
+        <ManufacturerHeader
+          backLabel={tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
+          brandNameForSrOnly="Mayer"
+          logoSrc="https://www.mayersaws.com/mayer/images/mayer_saws_4c.svg"
+          logoAlt="Mayer logo"
+          introText={tr(
+            'Seit über 70 Jahren stehen höchste Qualität und Präzision im Plattenzuschnitt im Fokus. Die Kappa Automatic und Advanced Line Serien setzen Maßstäbe in der Industrie.',
+            'For more than 70 years, top quality and precision in panel cutting have been the focus. The Kappa Automatic and Advanced Line series set standards in the industry.',
+            'Již více než 70 let jsou středem pozornosti nejvyšší kvalita a přesnost při řezání desek. Řady Kappa Automatic a Advanced Line určují průmyslové standardy.'
+          )}
+        />
 
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
