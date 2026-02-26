@@ -379,7 +379,7 @@ const Home = () => {
               <div className="relative aspect-square rounded-2xl overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: 'url(https://www.zabala.eu/wp-content/uploads/2024/11/EU-budget-1200x821.jpeg)' }}
+                  style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1400&q=80)' }}
                 />
                 <div className="automation-image-overlay absolute inset-0" />
 

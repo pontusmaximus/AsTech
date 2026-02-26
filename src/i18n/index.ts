@@ -55,6 +55,70 @@ export interface Translations {
       };
     };
   };
+  financingWizard: {
+    title: string;
+    subtitle: string;
+    stepProgressLabel: string;
+    stepLabels: {
+      companyType: string;
+      goal: string;
+      budget: string;
+    };
+    questions: {
+      companyType: string;
+      goal: string;
+      budget: string;
+    };
+    options: {
+      companyType: {
+        woodSecondary: string;
+        primaryWood: string;
+        otherIndustry: string;
+      };
+      goal: {
+        digitalization: string;
+        innovation: string;
+        primaryUpgrade: string;
+      };
+      budget: {
+        lt2_5: string;
+        btw2_5And20: string;
+        btw20And100: string;
+        gt100: string;
+      };
+    };
+    buttons: {
+      showResults: string;
+      reset: string;
+    };
+    result: {
+      title: string;
+      subtitle: string;
+      topRecommendation: string;
+      alternative: string;
+      whyFit: string;
+      fundingRange: string;
+      importantCheck: string;
+      cta: string;
+      reasonLabels: {
+        goalMatch: string;
+        companyTypeMatch: string;
+        budgetMatch: string;
+      };
+    };
+    emptyState: {
+      title: string;
+      description: string;
+      cta: string;
+    };
+    detailsToggle: {
+      title: string;
+      subtitle: string;
+      show: string;
+      hide: string;
+      comparisonTitle: string;
+    };
+  };
   manufacturers: {
     title: string;
     subtitle: string;
@@ -160,6 +224,70 @@ const translations: Record<Language, Translations> = {
         },
       },
     },
+    financingWizard: {
+      title: 'Förder-Check in 3 Schritten',
+      subtitle: 'Wählen Sie Unternehmensart, Ziel und Budget. Wir zeigen Ihnen die relevantesten Programme.',
+      stepProgressLabel: 'Schritt',
+      stepLabels: {
+        companyType: 'Unternehmensart',
+        goal: 'Investitionsziel',
+        budget: 'Budgetrahmen',
+      },
+      questions: {
+        companyType: 'Welche Art von Betrieb trifft auf Sie zu?',
+        goal: 'Was ist das Hauptziel Ihrer Investition?',
+        budget: 'Welches Gesamtbudget planen Sie?',
+      },
+      options: {
+        companyType: {
+          woodSecondary: 'Tischlerei / Möbel / Plattenverarbeitung',
+          primaryWood: 'Sägewerk / Primärverarbeitung / Forst',
+          otherIndustry: 'Sonstige Produktion',
+        },
+        goal: {
+          digitalization: 'Digitalisierung und Automatisierung',
+          innovation: 'Neue Produkte oder Prozessinnovation',
+          primaryUpgrade: 'Modernisierung der Primärverarbeitung',
+        },
+        budget: {
+          lt2_5: '< 2,5 Mio. CZK',
+          btw2_5And20: '2,5 bis 20 Mio. CZK',
+          btw20And100: '20 bis 100 Mio. CZK',
+          gt100: '> 100 Mio. CZK',
+        },
+      },
+      buttons: {
+        showResults: 'Passende Förderungen anzeigen',
+        reset: 'Zurücksetzen',
+      },
+      result: {
+        title: 'Ihre Förder-Empfehlungen',
+        subtitle: 'Top-Empfehlung und eine sinnvolle Alternative auf Basis Ihrer Angaben.',
+        topRecommendation: 'Top-Empfehlung',
+        alternative: 'Alternative',
+        whyFit: 'Warum passt das?',
+        fundingRange: 'Förderbereich',
+        importantCheck: 'Wichtig zu prüfen',
+        cta: 'Förderfähigkeit mit Asamer prüfen',
+        reasonLabels: {
+          goalMatch: 'Passt zu Ihrem Investitionsziel',
+          companyTypeMatch: 'Passt zu Ihrer Betriebsart',
+          budgetMatch: 'Passt zu Ihrem Budgetrahmen',
+        },
+      },
+      emptyState: {
+        title: 'Keine eindeutige Zuordnung',
+        description: 'Für diese Kombination empfehlen wir einen kurzen manuellen Eligibility-Check mit Asamer.',
+        cta: 'Manuellen Check starten',
+      },
+      detailsToggle: {
+        title: 'Alle Programme im Detail',
+        subtitle: 'Vollständiger Vergleich und Detailinhalte nur bei Bedarf einblenden.',
+        show: 'Details anzeigen',
+        hide: 'Details ausblenden',
+        comparisonTitle: 'Schnellvergleich',
+      },
+    },
     manufacturers: {
       title: 'Starke Partner',
       subtitle: 'Innovative Technologien',
@@ -261,6 +389,70 @@ const translations: Record<Language, Translations> = {
           title: 'Intelligent Stacking',
           description: 'Optimal storage and organization of your products through smart stacking systems.',
         },
+      },
+    },
+    financingWizard: {
+      title: 'Funding check in 3 steps',
+      subtitle: 'Select company type, goal, and budget. We show the most relevant programs.',
+      stepProgressLabel: 'Step',
+      stepLabels: {
+        companyType: 'Company type',
+        goal: 'Investment goal',
+        budget: 'Budget range',
+      },
+      questions: {
+        companyType: 'Which type of business best matches you?',
+        goal: 'What is the main objective of your investment?',
+        budget: 'What total budget are you planning?',
+      },
+      options: {
+        companyType: {
+          woodSecondary: 'Joinery / furniture / panel processing',
+          primaryWood: 'Sawmill / primary processing / forestry',
+          otherIndustry: 'Other production business',
+        },
+        goal: {
+          digitalization: 'Digitalization and automation',
+          innovation: 'New products or process innovation',
+          primaryUpgrade: 'Upgrade of primary processing',
+        },
+        budget: {
+          lt2_5: '< CZK 2.5 million',
+          btw2_5And20: 'CZK 2.5 to 20 million',
+          btw20And100: 'CZK 20 to 100 million',
+          gt100: '> CZK 100 million',
+        },
+      },
+      buttons: {
+        showResults: 'Show matching programs',
+        reset: 'Reset',
+      },
+      result: {
+        title: 'Your funding recommendations',
+        subtitle: 'Top recommendation and one meaningful alternative based on your inputs.',
+        topRecommendation: 'Top recommendation',
+        alternative: 'Alternative',
+        whyFit: 'Why it fits',
+        fundingRange: 'Funding range',
+        importantCheck: 'Important to verify',
+        cta: 'Check eligibility with Asamer',
+        reasonLabels: {
+          goalMatch: 'Matches your investment goal',
+          companyTypeMatch: 'Matches your business profile',
+          budgetMatch: 'Matches your budget range',
+        },
+      },
+      emptyState: {
+        title: 'No clear match',
+        description: 'For this combination, we recommend a short manual eligibility check with Asamer.',
+        cta: 'Start manual check',
+      },
+      detailsToggle: {
+        title: 'All programs in detail',
+        subtitle: 'Show full comparison and detailed content only when needed.',
+        show: 'Show details',
+        hide: 'Hide details',
+        comparisonTitle: 'Quick comparison',
       },
     },
     manufacturers: {
@@ -366,6 +558,70 @@ const translations: Record<Language, Translations> = {
         },
       },
     },
+    financingWizard: {
+      title: 'Dotační kontrola ve 3 krocích',
+      subtitle: 'Zvolte typ podniku, cíl a rozpočet. Zobrazíme nejrelevantnější programy.',
+      stepProgressLabel: 'Krok',
+      stepLabels: {
+        companyType: 'Typ podniku',
+        goal: 'Cíl investice',
+        budget: 'Rozpočtový rámec',
+      },
+      questions: {
+        companyType: 'Který typ podniku vás nejlépe vystihuje?',
+        goal: 'Jaký je hlavní cíl investice?',
+        budget: 'Jaký celkový rozpočet plánujete?',
+      },
+      options: {
+        companyType: {
+          woodSecondary: 'Truhlářství / nábytek / zpracování desek',
+          primaryWood: 'Pila / prvotní zpracování / lesnictví',
+          otherIndustry: 'Jiný výrobní podnik',
+        },
+        goal: {
+          digitalization: 'Digitalizace a automatizace',
+          innovation: 'Nové produkty nebo inovace procesů',
+          primaryUpgrade: 'Modernizace prvotního zpracování',
+        },
+        budget: {
+          lt2_5: '< 2,5 mil. CZK',
+          btw2_5And20: '2,5 až 20 mil. CZK',
+          btw20And100: '20 až 100 mil. CZK',
+          gt100: '> 100 mil. CZK',
+        },
+      },
+      buttons: {
+        showResults: 'Zobrazit vhodné programy',
+        reset: 'Resetovat',
+      },
+      result: {
+        title: 'Vaše dotační doporučení',
+        subtitle: 'Hlavní doporučení a jedna smysluplná alternativa podle vašich údajů.',
+        topRecommendation: 'Hlavní doporučení',
+        alternative: 'Alternativa',
+        whyFit: 'Proč to sedí',
+        fundingRange: 'Rozsah podpory',
+        importantCheck: 'Důležité ověřit',
+        cta: 'Ověřit způsobilost s Asamer',
+        reasonLabels: {
+          goalMatch: 'Odpovídá cíli investice',
+          companyTypeMatch: 'Odpovídá typu podniku',
+          budgetMatch: 'Odpovídá rozpočtovému rámci',
+        },
+      },
+      emptyState: {
+        title: 'Žádná jednoznačná shoda',
+        description: 'Pro tuto kombinaci doporučujeme krátké manuální posouzení způsobilosti s Asamer.',
+        cta: 'Spustit manuální posouzení',
+      },
+      detailsToggle: {
+        title: 'Všechny programy v detailu',
+        subtitle: 'Kompletní srovnání a podrobnosti zobrazíme jen na vyžádání.',
+        show: 'Zobrazit detaily',
+        hide: 'Skrýt detaily',
+        comparisonTitle: 'Rychlé srovnání',
+      },
+    },
     manufacturers: {
       title: 'Silní partneři',
       subtitle: 'Inovativní technologie',
@@ -469,6 +725,70 @@ const translations: Record<Language, Translations> = {
         },
       },
     },
+    financingWizard: {
+      title: 'Támogatási ellenőrzés 3 lépésben',
+      subtitle: 'Válassza ki a vállalattípust, célt és költségkeretet. Megmutatjuk a legrelevánsabb programokat.',
+      stepProgressLabel: 'Lépés',
+      stepLabels: {
+        companyType: 'Vállalattípus',
+        goal: 'Beruházási cél',
+        budget: 'Költségkeret',
+      },
+      questions: {
+        companyType: 'Melyik vállalattípus illik Önre leginkább?',
+        goal: 'Mi a beruházás fő célja?',
+        budget: 'Mekkora teljes költségvetést tervez?',
+      },
+      options: {
+        companyType: {
+          woodSecondary: 'Asztalos / bútor / táblafeldolgozás',
+          primaryWood: 'Fűrészüzem / elsődleges feldolgozás / erdészet',
+          otherIndustry: 'Egyéb termelő vállalat',
+        },
+        goal: {
+          digitalization: 'Digitalizáció és automatizálás',
+          innovation: 'Új termékek vagy folyamatinnováció',
+          primaryUpgrade: 'Elsődleges feldolgozás korszerűsítése',
+        },
+        budget: {
+          lt2_5: '< 2,5 millió CZK',
+          btw2_5And20: '2,5–20 millió CZK',
+          btw20And100: '20–100 millió CZK',
+          gt100: '> 100 millió CZK',
+        },
+      },
+      buttons: {
+        showResults: 'Megfelelő programok megjelenítése',
+        reset: 'Visszaállítás',
+      },
+      result: {
+        title: 'Az Ön támogatási javaslatai',
+        subtitle: 'Egy fő javaslat és egy releváns alternatíva az adatai alapján.',
+        topRecommendation: 'Fő javaslat',
+        alternative: 'Alternatíva',
+        whyFit: 'Miért illik',
+        fundingRange: 'Támogatási tartomány',
+        importantCheck: 'Fontos ellenőrizni',
+        cta: 'Támogatási jogosultság ellenőrzése az Asamerrel',
+        reasonLabels: {
+          goalMatch: 'Illeszkedik a beruházási célhoz',
+          companyTypeMatch: 'Illeszkedik a vállalati profilhoz',
+          budgetMatch: 'Illeszkedik a költségkerethez',
+        },
+      },
+      emptyState: {
+        title: 'Nincs egyértelmű találat',
+        description: 'Ehhez a kombinációhoz rövid, manuális jogosultsági ellenőrzést javaslunk az Asamerrel.',
+        cta: 'Manuális ellenőrzés indítása',
+      },
+      detailsToggle: {
+        title: 'Minden program részletesen',
+        subtitle: 'A teljes összehasonlítás és részletek csak igény esetén jelennek meg.',
+        show: 'Részletek megjelenítése',
+        hide: 'Részletek elrejtése',
+        comparisonTitle: 'Gyors összehasonlítás',
+      },
+    },
     manufacturers: {
       title: 'Erős partnerek',
       subtitle: 'Innovatív technológiák',
@@ -570,6 +890,70 @@ const translations: Record<Language, Translations> = {
           title: 'Inteligentné skladanie',
           description: 'Optimálne skladovanie a organizácia vašich produktov pomocou inteligentných skladacích systémov.',
         },
+      },
+    },
+    financingWizard: {
+      title: 'Dotačný check v 3 krokoch',
+      subtitle: 'Vyberte typ firmy, cieľ a rozpočet. Zobrazíme najrelevantnejšie programy.',
+      stepProgressLabel: 'Krok',
+      stepLabels: {
+        companyType: 'Typ firmy',
+        goal: 'Cieľ investície',
+        budget: 'Rozpočtový rámec',
+      },
+      questions: {
+        companyType: 'Ktorý typ firmy vás najlepšie vystihuje?',
+        goal: 'Aký je hlavný cieľ investície?',
+        budget: 'Aký celkový rozpočet plánujete?',
+      },
+      options: {
+        companyType: {
+          woodSecondary: 'Stolárstvo / nábytok / spracovanie dosiek',
+          primaryWood: 'Píla / primárne spracovanie / lesníctvo',
+          otherIndustry: 'Iný výrobný podnik',
+        },
+        goal: {
+          digitalization: 'Digitalizácia a automatizácia',
+          innovation: 'Nové produkty alebo inovácia procesov',
+          primaryUpgrade: 'Modernizácia primárneho spracovania',
+        },
+        budget: {
+          lt2_5: '< 2,5 mil. CZK',
+          btw2_5And20: '2,5 až 20 mil. CZK',
+          btw20And100: '20 až 100 mil. CZK',
+          gt100: '> 100 mil. CZK',
+        },
+      },
+      buttons: {
+        showResults: 'Zobraziť vhodné programy',
+        reset: 'Resetovať',
+      },
+      result: {
+        title: 'Vaše dotačné odporúčania',
+        subtitle: 'Top odporúčanie a jedna zmysluplná alternatíva na základe vašich údajov.',
+        topRecommendation: 'Top odporúčanie',
+        alternative: 'Alternatíva',
+        whyFit: 'Prečo to sedí',
+        fundingRange: 'Rozsah podpory',
+        importantCheck: 'Dôležité overiť',
+        cta: 'Overiť oprávnenosť s Asamer',
+        reasonLabels: {
+          goalMatch: 'Zodpovedá cieľu investície',
+          companyTypeMatch: 'Zodpovedá typu firmy',
+          budgetMatch: 'Zodpovedá rozpočtovému rámcu',
+        },
+      },
+      emptyState: {
+        title: 'Žiadna jednoznačná zhoda',
+        description: 'Pre túto kombináciu odporúčame krátky manuálny eligibility check s Asamer.',
+        cta: 'Spustiť manuálny check',
+      },
+      detailsToggle: {
+        title: 'Všetky programy v detaile',
+        subtitle: 'Kompletné porovnanie a detailný obsah zobrazíme len na požiadanie.',
+        show: 'Zobraziť detaily',
+        hide: 'Skryť detaily',
+        comparisonTitle: 'Rýchle porovnanie',
       },
     },
     manufacturers: {

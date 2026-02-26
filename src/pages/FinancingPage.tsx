@@ -1,24 +1,56 @@
-import { ArrowRight } from 'lucide-react';
+import { useMemo, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import EligibilityResult from '../features/financing/EligibilityResult';
+import EligibilityWizard from '../features/financing/EligibilityWizard';
+import FinancingDetailsAccordion from '../features/financing/FinancingDetailsAccordion';
+import { rankPrograms } from '../features/financing/eligibility';
+import type {
+  BudgetRange,
+  CompanyType,
+  EligibilityCriteria,
+  FundingProgramDefinition,
+  InvestmentGoal,
+  ProgramMatchResult,
+} from '../features/financing/types';
+import { isCriteriaComplete } from '../features/financing/types';
 
-type FundingSection = {
-  id: string;
-  title: string;
-  program: string;
-  savingsHighlight: string;
-  criteria: string;
-  funding: string;
-  savings: string;
-  advantage: string;
+const companyTypeValues: CompanyType[] = ['wood_secondary', 'primary_wood', 'other_industry'];
+const goalValues: InvestmentGoal[] = ['digitalization', 'innovation', 'primary_upgrade'];
+const budgetValues: BudgetRange[] = ['lt_2_5', 'btw_2_5_20', 'btw_20_100', 'gt_100'];
+
+const isCompanyType = (value: string | null): value is CompanyType =>
+  value !== null && companyTypeValues.includes(value as CompanyType);
+
+const isInvestmentGoal = (value: string | null): value is InvestmentGoal =>
+  value !== null && goalValues.includes(value as InvestmentGoal);
+
+const isBudgetRange = (value: string | null): value is BudgetRange =>
+  value !== null && budgetValues.includes(value as BudgetRange);
+
+const parseCriteriaFromParams = (searchParams: URLSearchParams): EligibilityCriteria => {
+  const companyTypeParam = searchParams.get('companyType');
+  const goalParam = searchParams.get('goal');
+  const budgetParam = searchParams.get('budget');
+
+  return {
+    companyType: isCompanyType(companyTypeParam) ? companyTypeParam : null,
+    goal: isInvestmentGoal(goalParam) ? goalParam : null,
+    budget: isBudgetRange(budgetParam) ? budgetParam : null,
+  };
 };
 
 const FinancingPage = () => {
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const resultRef = useRef<HTMLDivElement>(null);
+
   const locale =
     lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
       ? lang
       : 'en';
+
   const tr = (de: string, en: string, cz: string) => {
     if (locale === 'de') return de;
     if (locale === 'cz') return cz;
@@ -27,7 +59,16 @@ const FinancingPage = () => {
     }
     return en;
   };
-  const fundingImage = 'https://www.zabala.eu/wp-content/uploads/2024/11/EU-budget-1200x821.jpeg';
+
+  const criteria = useMemo(() => parseCriteriaFromParams(searchParams), [searchParams]);
+  const detailsOpen = searchParams.get('details') === 'open';
+  const [hasSubmitted, setHasSubmitted] = useState<boolean>(() => isCriteriaComplete(criteria));
+
+  const currentStep = !criteria.companyType ? 1 : !criteria.goal ? 2 : 3;
+  const canSubmit = isCriteriaComplete(criteria);
+
+  const fundingImage = 'https://cdn.pixabay.com/photo/2019/03/22/21/27/saw-4074239_1280.jpg';
+  const fundingInquiryPrefix = tr('Förderungsanfrage', 'Funding inquiry', 'Dotační poptávka');
 
   const qaLabels = {
     criteria: tr('Was sind die Kriterien?', 'What are the criteria?', 'Jaká jsou kritéria?'),
@@ -35,11 +76,10 @@ const FinancingPage = () => {
     savings: tr('Wie viel Geld spare ich?', 'How much can I save?', 'Kolik mohu ušetřit?'),
     advantage: tr('Der Asamer-Vorteil', 'The Asamer advantage', 'Výhoda Asamer'),
   };
-  const fundingInquiryPrefix = tr('Förderungsanfrage', 'Funding inquiry', 'Dotační poptávka');
 
-  const sections: FundingSection[] = [
+  const sections: FundingProgramDefinition[] = [
     {
-      id: 'digitales-unternehmen',
+      id: 'digital_enterprise_op_tak',
       title: tr(
         'Digitales Unternehmen (OP TAK)',
         'Digital Enterprise (OP TAK)',
@@ -67,9 +107,17 @@ const FinancingPage = () => {
         'Our systems are Industry 4.0 ready. Asamer provides the required interfaces and data protocols so your investment is recognized as digital transformation.',
         'Naše zařízení jsou připravena na Industry 4.0. Asamer dodává potřebná rozhraní a datové protokoly, aby byla investice uznána jako digitální transformace.'
       ),
+      importantCheck: tr(
+        'Projektstandort außerhalb Prags und klarer Digitalisierungsnachweis erforderlich.',
+        'Project location outside Prague and clear digitalization evidence are required.',
+        'Nutné je umístění projektu mimo Prahu a jasný důkaz digitalizace.'
+      ),
+      companyTypes: ['wood_secondary', 'primary_wood', 'other_industry'],
+      goals: ['digitalization'],
+      budgetRanges: ['btw_2_5_20', 'btw_20_100'],
     },
     {
-      id: 'innovation',
+      id: 'innovation_op_tak',
       title: tr('Innovation (OP TAK)', 'Innovation (OP TAK)', 'Inovace (OP TAK)'),
       program: 'OP TAK',
       savingsHighlight: tr('Bis zu 45 %', 'Up to 45%', 'Až 45 %'),
@@ -93,9 +141,17 @@ const FinancingPage = () => {
         'Asamer provides cutting-edge technology partners for leaps beyond market standards. This level of innovation is a core criterion for strong applications.',
         'Asamer nabízí špičkové technologické partnery pro technologické skoky nad rámec tržního standardu. Právě tato míra inovace je klíčovým kritériem silné žádosti.'
       ),
+      importantCheck: tr(
+        'Der Innovationssprung muss im Antrag konkret und messbar belegt werden.',
+        'The innovation leap must be described concretely and measurably in the application.',
+        'Inovační posun musí být v žádosti konkrétně a měřitelně doložen.'
+      ),
+      companyTypes: ['wood_secondary', 'primary_wood', 'other_industry'],
+      goals: ['innovation'],
+      budgetRanges: ['lt_2_5', 'btw_2_5_20', 'btw_20_100', 'gt_100'],
     },
     {
-      id: 'technologische-investitionen',
+      id: 'mze_szp',
       title: tr(
         'Technologische Investitionen (MZe)',
         'Technological Investments (MZe)',
@@ -123,6 +179,14 @@ const FinancingPage = () => {
         'Asamer understands the harsh conditions of primary processing and delivers robust, high-efficiency system solutions that match Ministry of Agriculture guidelines.',
         'Asamer rozumí náročným podmínkám prvotního zpracování a dodává robustní, vysoce efektivní systémová řešení, která přesně odpovídají pravidlům ministerstva zemědělství.'
       ),
+      importantCheck: tr(
+        'Regeln und Fördersätze richten sich nach aktueller SZP-Richtlinie für Primärverarbeitung.',
+        'Rules and funding rates follow the current SZP guideline for primary processing.',
+        'Pravidla a sazby podpory se řídí aktuálními pravidly SZP pro prvotní zpracování.'
+      ),
+      companyTypes: ['primary_wood'],
+      goals: ['primary_upgrade'],
+      budgetRanges: ['lt_2_5', 'btw_2_5_20', 'btw_20_100', 'gt_100'],
     },
   ];
 
@@ -133,11 +197,85 @@ const FinancingPage = () => {
     { label: qaLabels.advantage, values: sections.map((section) => section.advantage) },
   ];
 
+  const matches = useMemo(() => rankPrograms(criteria, sections), [criteria, sections]);
+  const showResults = hasSubmitted && isCriteriaComplete(criteria);
+
+  const updateSearchParams = (updater: (next: URLSearchParams) => void) => {
+    const next = new URLSearchParams(searchParams);
+    updater(next);
+    setSearchParams(next, { replace: true });
+  };
+
+  const setCompanyType = (value: CompanyType) => {
+    updateSearchParams((next) => {
+      next.set('companyType', value);
+    });
+  };
+
+  const setGoal = (value: InvestmentGoal) => {
+    updateSearchParams((next) => {
+      next.set('goal', value);
+    });
+  };
+
+  const setBudget = (value: BudgetRange) => {
+    updateSearchParams((next) => {
+      next.set('budget', value);
+    });
+  };
+
+  const toggleDetails = () => {
+    updateSearchParams((next) => {
+      if (detailsOpen) {
+        next.delete('details');
+      } else {
+        next.set('details', 'open');
+      }
+    });
+  };
+
+  const resetWizard = () => {
+    updateSearchParams((next) => {
+      next.delete('companyType');
+      next.delete('goal');
+      next.delete('budget');
+    });
+    setHasSubmitted(false);
+  };
+
+  const handleShowResults = () => {
+    if (!canSubmit) return;
+    setHasSubmitted(true);
+    requestAnimationFrame(() => {
+      resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  };
+
+  const buildInquiryHref = (subjectSuffix: string) =>
+    `mailto:max@asamer.net?subject=${encodeURIComponent(`${fundingInquiryPrefix}: ${subjectSuffix}`)}`;
+
+  const fallbackInquiryHref = buildInquiryHref(
+    tr('Manueller Eligibility-Check', 'Manual eligibility check', 'Manuální kontrola způsobilosti')
+  );
+
+  const getMatchInquiryHref = (match: ProgramMatchResult) => buildInquiryHref(match.program.title);
+
+  const eligibilityCtaLabel = tr(
+    'Prüfen Sie Ihre Förderfähigkeit mit Asamer',
+    'Check your funding eligibility with Asamer',
+    'Ověřte svou způsobilost k dotaci s Asamer'
+  );
+  const eligibilityCtaHint = tr(
+    'Kurzer Eligibility-Check für Ihr Projekt inkl. nächster Schritte.',
+    'Short eligibility check for your project including next steps.',
+    'Rychlá kontrola způsobilosti vašeho projektu včetně dalších kroků.'
+  );
+
   return (
     <div className="bg-dark min-h-screen">
-      <section className="pt-28 md:pt-36 pb-10 financing-hero">
+      <section className="pt-28 md:pt-36 pb-8 financing-hero">
         <div className="container-wide">
-          <div className="relative rounded-3xl overflow-hidden border border-white/10 min-h-[320px]">
+          <div className="relative rounded-3xl overflow-hidden border border-white/10 min-h-[280px]">
             <img
               src={fundingImage}
               alt={tr('EU-Förderbudget', 'EU funding budget', 'Rozpočet EU na dotace')}
@@ -155,9 +293,9 @@ const FinancingPage = () => {
               </h1>
               <p className="text-white/75 text-lg leading-relaxed">
                 {tr(
-                  'Schneller Vergleich der wichtigsten Förderprogramme und konkrete Orientierung für Ihre nächste Maschineninvestition mit Asamer.',
-                  'Quick comparison of key funding programs and concrete guidance for your next machinery investment with Asamer.',
-                  'Rychlé srovnání hlavních dotačních programů a konkrétní orientace pro vaši další investici do strojů s Asamer.'
+                  'Starten Sie mit einem geführten 3‑Schritt‑Check und sehen Sie zuerst die wirklich relevanten Programme.',
+                  'Start with a guided 3-step check and see only the truly relevant programs first.',
+                  'Začněte vedeným 3krokovým checkem a nejprve uvidíte jen skutečně relevantní programy.'
                 )}
               </p>
             </div>
@@ -165,122 +303,42 @@ const FinancingPage = () => {
         </div>
       </section>
 
-      <section className="pb-12">
-        <div className="container-wide">
-          <div className="rounded-3xl border border-white/10 bg-dark-elevated overflow-hidden">
-            <div className="px-6 md:px-8 py-5 border-b border-white/10">
-              <h2 className="text-2xl md:text-3xl font-display font-light text-white">
-                {tr('Schnellvergleich', 'Quick comparison', 'Rychlé srovnání')}
-              </h2>
-            </div>
+      <EligibilityWizard
+        criteria={criteria}
+        currentStep={currentStep}
+        canSubmit={canSubmit}
+        texts={t.financingWizard}
+        onSelectCompanyType={setCompanyType}
+        onSelectGoal={setGoal}
+        onSelectBudget={setBudget}
+        onSubmit={handleShowResults}
+        onReset={resetWizard}
+      />
 
-            <div className="overflow-x-auto">
-              <table className="min-w-[920px] w-full">
-                <thead>
-                  <tr className="border-b border-white/10">
-                    <th className="text-left px-6 md:px-8 py-4 text-white/50 text-sm font-medium w-[260px]">
-                      {tr('Frage', 'Question', 'Otázka')}
-                    </th>
-                    {sections.map((section, index) => (
-                      <th key={section.id} className="text-left px-6 py-4 text-white font-medium">
-                        <div className="text-xs uppercase tracking-widest text-primary mb-1">
-                          {tr('Förderung', 'Funding', 'Dotace')} 0{index + 1}
-                        </div>
-                        <div className="text-sm leading-snug">{section.title}</div>
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {matrixRows.map((row) => (
-                    <tr key={row.label} className="align-top border-b border-white/10 last:border-b-0">
-                      <th className="text-left px-6 md:px-8 py-5 text-sm text-primary font-medium uppercase tracking-wide">
-                        {row.label}
-                      </th>
-                      {row.values.map((value, index) => (
-                        <td key={`${row.label}-${index}`} className="px-6 py-5 text-white/75 text-sm leading-relaxed">
-                          {value}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+      {showResults && (
+        <div ref={resultRef}>
+          <EligibilityResult
+            matches={matches}
+            texts={t.financingWizard}
+            fallbackCtaHref={fallbackInquiryHref}
+            getCtaHref={getMatchInquiryHref}
+          />
         </div>
-      </section>
+      )}
 
-      <section className="pb-24">
-        <div className="container-wide space-y-8">
-          {sections.map((section, sectionIndex) => {
-            const fundingInquiryMail = `mailto:max@asamer.net?subject=${encodeURIComponent(
-              `${fundingInquiryPrefix}: ${section.title}`
-            )}`;
-
-            return (
-            <article id={section.id} key={section.id} className="rounded-3xl border border-white/10 overflow-hidden bg-dark-elevated">
-              <div className="px-6 md:px-8 py-6 border-b border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-primary mb-2">
-                    {tr('Förderung', 'Funding', 'Dotace')} 0{sectionIndex + 1}
-                  </div>
-                  <h2 className="text-2xl md:text-3xl font-display font-light text-white">
-                    {section.title}
-                  </h2>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1.5 rounded-full border border-white/15 bg-dark-card text-white/80 text-sm">
-                    {section.program}
-                  </span>
-                  <span className="px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm">
-                    {section.savingsHighlight}
-                  </span>
-                </div>
-              </div>
-
-              <div className="px-6 md:px-8 py-6">
-                <dl className="divide-y divide-white/10 border border-white/10 rounded-2xl overflow-hidden">
-                  {[
-                    { label: qaLabels.criteria, value: section.criteria },
-                    { label: qaLabels.funding, value: section.funding },
-                    { label: qaLabels.savings, value: section.savings },
-                    { label: qaLabels.advantage, value: section.advantage },
-                  ].map((item) => (
-                    <div key={item.label} className="grid lg:grid-cols-[260px,1fr]">
-                      <dt className="px-5 py-4 text-primary text-xs uppercase tracking-[0.16em] bg-dark-card border-b lg:border-b-0 lg:border-r border-white/10">
-                        {item.label}
-                      </dt>
-                      <dd className="px-5 py-4 text-white/75 leading-relaxed">{item.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-
-                <div className="mt-5 rounded-2xl border border-white/10 bg-dark-card px-5 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
-                    <p className="text-white/65 text-sm">
-                      {tr(
-                        'Kurzer Eligibility-Check für Ihr Projekt inkl. nächster Schritte.',
-                        'Short eligibility check for your project including next steps.',
-                        'Rychlá kontrola způsobilosti vašeho projektu včetně dalších kroků.'
-                      )}
-                    </p>
-                  </div>
-                  <a href={fundingInquiryMail} className="btn-primary-dark sm:whitespace-nowrap justify-center">
-                    {tr(
-                      'Prüfen Sie Ihre Förderfähigkeit mit Asamer',
-                      'Check your funding eligibility with Asamer',
-                      'Ověřte svou způsobilost k dotaci s Asamer'
-                    )}
-                    <ArrowRight className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-            </article>
-            );
-          })}
-        </div>
-      </section>
+      <FinancingDetailsAccordion
+        sections={sections}
+        matrixRows={matrixRows}
+        qaLabels={qaLabels}
+        detailsOpen={detailsOpen}
+        onToggleDetails={toggleDetails}
+        texts={t.financingWizard.detailsToggle}
+        fundingInquiryPrefix={fundingInquiryPrefix}
+        eligibilityCtaLabel={eligibilityCtaLabel}
+        eligibilityCtaHint={eligibilityCtaHint}
+        fundingLabel={tr('Förderung', 'Funding', 'Dotace')}
+        questionLabel={tr('Frage', 'Question', 'Otázka')}
+      />
     </div>
   );
 };
