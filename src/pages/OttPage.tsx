@@ -70,7 +70,7 @@ const OttPage = () => {
       name: 'Pacific+',
       image: 'https://www.ottpaul.com/fileadmin/_processed_/c/7/csm_pacific-plus_4a95031bd4.png',
       desc: tr('Kompakte Kantenanleimmaschine für Handwerk und Tischlerei', 'Compact edgebander for craft and carpentry shops', 'Kompaktní olepovačka hran pro řemeslo a truhlářství'),
-      type: 'EVA',
+      type: 'PUR/EVA',
       specs: [
         tr('Kantenstärke: 0,4 - 3 mm', 'Edge thickness: 0.4 - 3 mm', 'Tloušťka hrany: 0,4 - 3 mm'),
         tr('Vorschub: 12 m/min', 'Feed speed: 12 m/min', 'Posuv: 12 m/min'),
@@ -81,7 +81,7 @@ const OttPage = () => {
       name: 'Tornado+',
       image: 'https://www.ottpaul.com/fileadmin/_processed_/b/a/csm_tornado-plus-ansicht-re_207e512b4f.png',
       desc: tr('Leistungsstarke Lösung für mittlere Betriebe', 'Powerful solution for medium-sized operations', 'Výkonné řešení pro střední provozy'),
-      type: 'EVA/PUR',
+      type: 'PUR/EVA',
       specs: [
         tr('Kantenstärke: 0,4 - 5 mm', 'Edge thickness: 0.4 - 5 mm', 'Tloušťka hrany: 0,4 - 5 mm'),
         tr('Vorschub: 15 m/min', 'Feed speed: 15 m/min', 'Posuv: 15 m/min'),
@@ -92,7 +92,7 @@ const OttPage = () => {
       name: 'Flexedge',
       image: 'https://www.ottpaul.com/fileadmin/_processed_/b/e/csm_flex-edge-01-spiegel_f344a91e0b.png',
       desc: tr('Flexible Kantenbearbeitung mit modularer Ausstattung', 'Flexible edgebanding with modular equipment', 'Flexibilní olepování hran s modulární výbavou'),
-      type: 'EVA/PUR',
+      type: 'PUR/EVA',
       specs: [
         tr('Kantenstärke: 0,4 - 8 mm', 'Edge thickness: 0.4 - 8 mm', 'Tloušťka hrany: 0,4 - 8 mm'),
         tr('Vorschub: 18 m/min', 'Feed speed: 18 m/min', 'Posuv: 18 m/min'),
@@ -103,7 +103,7 @@ const OttPage = () => {
       name: 'Storm+',
       image: 'https://www.ottpaul.com/fileadmin/_processed_/2/9/csm_storm2020-spiegel-001_4baf02d446.png',
       desc: tr('Hochleistungsmaschine für industrielle Anforderungen', 'High-performance machine for industrial requirements', 'Vysokovýkonný stroj pro průmyslové požadavky'),
-      type: 'PUR',
+      type: 'PUR/EVA',
       specs: [
         tr('Kantenstärke: 0,4 - 12 mm', 'Edge thickness: 0.4 - 12 mm', 'Tloušťka hrany: 0,4 - 12 mm'),
         tr('Vorschub: 22 m/min', 'Feed speed: 22 m/min', 'Posuv: 22 m/min'),
@@ -114,7 +114,7 @@ const OttPage = () => {
       name: 'Strongedge',
       image: 'https://www.ottpaul.com/fileadmin/_processed_/1/0/csm_strongedge_a4f3c0a00e.png',
       desc: tr('Maximale Stabilität für schwere Kanten', 'Maximum stability for heavy edges', 'Maximální stabilita pro silné hrany'),
-      type: 'PUR',
+      type: 'PUR/EVA',
       specs: [
         tr('Kantenstärke: 1 - 20 mm', 'Edge thickness: 1 - 20 mm', 'Tloušťka hrany: 1 - 20 mm'),
         tr('Vorschub: 20 m/min', 'Feed speed: 20 m/min', 'Posuv: 20 m/min'),
@@ -125,7 +125,7 @@ const OttPage = () => {
       name: 'Topedge',
       image: 'https://www.ottpaul.com/fileadmin/_processed_/e/5/csm_topedge_4c89d6967e.jpg',
       desc: tr('Premium-Lösung mit höchster Präzision', 'Premium solution with highest precision', 'Prémiové řešení s nejvyšší přesností'),
-      type: 'PUR/LASER',
+      type: 'PUR/EVA',
       specs: [
         tr('Kantenstärke: 0,4 - 20 mm', 'Edge thickness: 0.4 - 20 mm', 'Tloušťka hrany: 0,4 - 20 mm'),
         tr('Vorschub: 25 m/min', 'Feed speed: 25 m/min', 'Posuv: 25 m/min'),
@@ -136,7 +136,7 @@ const OttPage = () => {
       name: 'DoorEdition',
       image: 'https://www.ottpaul.com/fileadmin/_processed_/6/0/csm_Titelseite_Door_MINI__78df2f3ba3.jpg',
       desc: tr('Spezialisiert auf Tür- und Möbelkanten', 'Specialized for door and furniture edges', 'Specializováno na dveřní a nábytkové hrany'),
-      type: 'PUR',
+      type: 'PUR/EVA',
       specs: [
         tr('Kantenstärke: 0,4 - 15 mm', 'Edge thickness: 0.4 - 15 mm', 'Tloušťka hrany: 0,4 - 15 mm'),
         tr('Vorschub: 18 m/min', 'Feed speed: 18 m/min', 'Posuv: 18 m/min'),
@@ -146,8 +146,8 @@ const OttPage = () => {
     {
       name: 'CombiMelt',
       image: 'https://www.ottpaul.com/fileadmin/_processed_/5/6/csm_ott-130319-0628-2_f3762079d4.jpg',
-      desc: tr('Kombiniert EVA und PUR in einem System', 'Combines EVA and PUR in one system', 'Kombinuje EVA a PUR v jednom systému'),
-      type: 'EVA/PUR',
+      desc: tr('Servicestation inkl zwei PUR Behälter', 'servicestation incl. two PUR containers', 'servisní stanice s dvěma PUR nádoby'),
+      type: 'PUR',
       specs: [
         tr('Kantenstärke: 0,4 - 8 mm', 'Edge thickness: 0.4 - 8 mm', 'Tloušťka hrany: 0,4 - 8 mm'),
         tr('Vorschub: 15 m/min', 'Feed speed: 15 m/min', 'Posuv: 15 m/min'),
@@ -157,8 +157,8 @@ const OttPage = () => {
     {
       name: 'bluEdge',
       image: 'https://www.ottpaul.com/fileadmin/_processed_/9/7/csm_blu_edge_hyfuse_on_pacific_in_showroom__1__a1a1e7262f.jpg',
-      desc: tr('Einstiegsmodell mit professioneller Ausstattung', 'Entry-level model with professional equipment', 'Vstupní model s profesionální výbavou'),
-      type: 'EVA',
+      desc: tr('Nachrüstbar für alle Modelle', 'Upgradable for all models', 'Možnost dodatečné montáže pro všechny modely'),
+      type: 'LASER',
       specs: [
         tr('Kantenstärke: 0,4 - 3 mm', 'Edge thickness: 0.4 - 3 mm', 'Tloušťka hrany: 0,4 - 3 mm'),
         tr('Vorschub: 12 m/min', 'Feed speed: 12 m/min', 'Posuv: 12 m/min'),
@@ -209,7 +209,7 @@ const OttPage = () => {
           introText={tr(
             'Innovative Kantenleimtechnologie mit PUR-Anleimsystemen und LASER Hydrofuse für fugenlose, übergangslose Kantenverbindungen.',
             'Innovative edgebanding technology with PUR gluing systems and LASER Hydrofuse for seamless, jointless edge connections.',
-            'Inovativní technologie olepování hran se systémy PUR a LASER Hydrofuse pro bezešvé a plynulé spojení hran.'
+            'Inovativní technologie olepování hran se systémy PUR a LASER Hydrofuse pro bezspárové spojení hran.'
           )}
         />
 
