@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
@@ -6,6 +6,7 @@ import EligibilityResult from '../features/financing/EligibilityResult';
 import EligibilityWizard from '../features/financing/EligibilityWizard';
 import FinancingDetailsAccordion from '../features/financing/FinancingDetailsAccordion';
 import { rankPrograms } from '../features/financing/eligibility';
+import { getFlowSessionId, trackEvent } from '../lib/analytics';
 import type {
   BudgetRange,
   CompanyType,
@@ -29,6 +30,8 @@ const isInvestmentGoal = (value: string | null): value is InvestmentGoal =>
 const isBudgetRange = (value: string | null): value is BudgetRange =>
   value !== null && budgetValues.includes(value as BudgetRange);
 
+const FINANCING_FLOW_NAME = 'financing_compass';
+
 const parseCriteriaFromParams = (searchParams: URLSearchParams): EligibilityCriteria => {
   const companyTypeParam = searchParams.get('companyType');
   const goalParam = searchParams.get('goal');
@@ -45,6 +48,7 @@ const FinancingPage = () => {
   const { lang, t } = useLanguage();
   const [searchParams, setSearchParams] = useSearchParams();
   const resultRef = useRef<HTMLDivElement>(null);
+  const resultsVisibleRef = useRef(false);
 
   const locale =
     lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
@@ -63,6 +67,7 @@ const FinancingPage = () => {
   const criteria = useMemo(() => parseCriteriaFromParams(searchParams), [searchParams]);
   const detailsOpen = searchParams.get('details') === 'open';
   const [hasSubmitted, setHasSubmitted] = useState<boolean>(() => isCriteriaComplete(criteria));
+  const flowSessionId = useMemo(() => getFlowSessionId(FINANCING_FLOW_NAME), []);
 
   const currentStep = !criteria.companyType ? 1 : !criteria.goal ? 2 : 3;
   const canSubmit = isCriteriaComplete(criteria);
@@ -200,6 +205,30 @@ const FinancingPage = () => {
   const matches = useMemo(() => rankPrograms(criteria, sections), [criteria, sections]);
   const showResults = hasSubmitted && isCriteriaComplete(criteria);
 
+  useEffect(() => {
+    trackEvent('flow_start', {
+      flow_name: FINANCING_FLOW_NAME,
+      flow_session_id: flowSessionId,
+      flow_step: 'landing',
+      page_path: '/finanzierung',
+    });
+  }, [flowSessionId]);
+
+  useEffect(() => {
+    if (showResults && !resultsVisibleRef.current) {
+      trackEvent('flow_result_view', {
+        flow_name: FINANCING_FLOW_NAME,
+        flow_session_id: flowSessionId,
+        matches_count: matches.length,
+        top_program_id: matches[0]?.program.id ?? 'none',
+        company_type: criteria.companyType ?? 'none',
+        goal: criteria.goal ?? 'none',
+        budget: criteria.budget ?? 'none',
+      });
+    }
+    resultsVisibleRef.current = showResults;
+  }, [showResults, flowSessionId, matches, criteria.companyType, criteria.goal, criteria.budget]);
+
   const updateSearchParams = (updater: (next: URLSearchParams) => void) => {
     const next = new URLSearchParams(searchParams);
     updater(next);
@@ -207,24 +236,50 @@ const FinancingPage = () => {
   };
 
   const setCompanyType = (value: CompanyType) => {
+    trackEvent('flow_step', {
+      flow_name: FINANCING_FLOW_NAME,
+      flow_session_id: flowSessionId,
+      step_name: 'company_type',
+      step_index: 1,
+      value,
+    });
     updateSearchParams((next) => {
       next.set('companyType', value);
     });
   };
 
   const setGoal = (value: InvestmentGoal) => {
+    trackEvent('flow_step', {
+      flow_name: FINANCING_FLOW_NAME,
+      flow_session_id: flowSessionId,
+      step_name: 'goal',
+      step_index: 2,
+      value,
+    });
     updateSearchParams((next) => {
       next.set('goal', value);
     });
   };
 
   const setBudget = (value: BudgetRange) => {
+    trackEvent('flow_step', {
+      flow_name: FINANCING_FLOW_NAME,
+      flow_session_id: flowSessionId,
+      step_name: 'budget',
+      step_index: 3,
+      value,
+    });
     updateSearchParams((next) => {
       next.set('budget', value);
     });
   };
 
   const toggleDetails = () => {
+    trackEvent('financing_details_toggle', {
+      flow_name: FINANCING_FLOW_NAME,
+      flow_session_id: flowSessionId,
+      open: !detailsOpen,
+    });
     updateSearchParams((next) => {
       if (detailsOpen) {
         next.delete('details');
@@ -235,6 +290,10 @@ const FinancingPage = () => {
   };
 
   const resetWizard = () => {
+    trackEvent('flow_reset', {
+      flow_name: FINANCING_FLOW_NAME,
+      flow_session_id: flowSessionId,
+    });
     updateSearchParams((next) => {
       next.delete('companyType');
       next.delete('goal');
@@ -245,6 +304,14 @@ const FinancingPage = () => {
 
   const handleShowResults = () => {
     if (!canSubmit) return;
+    trackEvent('flow_submit', {
+      flow_name: FINANCING_FLOW_NAME,
+      flow_session_id: flowSessionId,
+      company_type: criteria.companyType ?? 'none',
+      goal: criteria.goal ?? 'none',
+      budget: criteria.budget ?? 'none',
+      predicted_top_program_id: matches[0]?.program.id ?? 'none',
+    });
     setHasSubmitted(true);
     requestAnimationFrame(() => {
       resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -259,6 +326,23 @@ const FinancingPage = () => {
   );
 
   const getMatchInquiryHref = (match: ProgramMatchResult) => buildInquiryHref(match.program.title);
+  const handleFallbackCtaClick = () => {
+    trackEvent('flow_cta_click', {
+      flow_name: FINANCING_FLOW_NAME,
+      flow_session_id: flowSessionId,
+      cta_type: 'fallback',
+    });
+  };
+
+  const handleMatchCtaClick = (match: ProgramMatchResult, position: 'top' | 'alternative') => {
+    trackEvent('flow_cta_click', {
+      flow_name: FINANCING_FLOW_NAME,
+      flow_session_id: flowSessionId,
+      cta_type: 'program',
+      program_id: match.program.id,
+      position,
+    });
+  };
 
   const eligibilityCtaLabel = tr(
     'Prüfen Sie Ihre Förderfähigkeit mit Asamer',
@@ -322,6 +406,8 @@ const FinancingPage = () => {
             texts={t.financingWizard}
             fallbackCtaHref={fallbackInquiryHref}
             getCtaHref={getMatchInquiryHref}
+            onFallbackCtaClick={handleFallbackCtaClick}
+            onMatchCtaClick={handleMatchCtaClick}
           />
         </div>
       )}
@@ -368,6 +454,13 @@ const FinancingPage = () => {
               href={`mailto:max@asamer.net?subject=${encodeURIComponent(
                 tr('Leasinganfrage', 'Leasing inquiry', 'Poptávka leasingu')
               )}`}
+              onClick={() =>
+                trackEvent('financing_leasing_cta_click', {
+                  flow_name: FINANCING_FLOW_NAME,
+                  flow_session_id: flowSessionId,
+                  cta_type: 'leasing_mailto',
+                })
+              }
               className="btn-primary-dark inline-flex"
             >
               {tr('Leasing anfragen', 'Request leasing', 'Poptat leasing')}

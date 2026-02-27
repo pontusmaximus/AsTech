@@ -97,6 +97,11 @@ const Footer = () => {
                   {tr('BARBARIC Lager', 'BARBARIC Storage', 'Sklady BARBARIC')}
                 </Link>
               </li>
+              <li>
+                <Link to="/gebrauchtmaschinen" className="text-white/40 text-sm hover:text-white transition-colors">
+                  {tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje')}
+                </Link>
+              </li>
             </ul>
           </div>
 

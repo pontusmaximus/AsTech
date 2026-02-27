@@ -154,7 +154,7 @@ const Home = () => {
 
   return (
     <div ref={heroRef} className="bg-dark">
-      <section className="relative min-h-[100svh] md:min-h-screen flex items-start md:items-center overflow-hidden">
+      <section className="relative min-h-[86svh] md:min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center scale-100"
@@ -166,9 +166,9 @@ const Home = () => {
 
         <div className="absolute inset-0 grid-pattern opacity-50" />
 
-        <div className="relative z-10 w-full container-wide pt-32 sm:pt-32 md:pt-32 pb-14 sm:pb-20">
+        <div className="relative z-10 w-full container-wide pt-28 sm:pt-28 md:pt-32 pb-8 sm:pb-10 md:pb-12">
           <div className="max-w-5xl">
-            <h1 className="mt-16 sm:mt-14 md:mt-10 lg:mt-8 mb-6 sm:mb-8">
+            <h1 className="mt-10 sm:mt-10 md:mt-8 lg:mt-6 mb-6 sm:mb-8">
               <span className="hero-title-line block font-display font-bold text-[clamp(2.5rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-white">
                 {heroLines[0]}
               </span>
@@ -181,7 +181,7 @@ const Home = () => {
               {t.hero.subheadline}
             </p>
 
-            <div className="hero-cta flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 mb-12 sm:mb-16">
+            <div className="hero-cta flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 mb-2 sm:mb-0">
               <a href={generalInquiryMail} className="btn-primary-dark">
                 {t.hero.cta}
                 <ArrowRight className="w-5 h-5" />

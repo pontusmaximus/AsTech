@@ -9,6 +9,8 @@ type EligibilityResultProps = {
   texts: WizardTexts;
   fallbackCtaHref: string;
   getCtaHref: (match: ProgramMatchResult) => string;
+  onFallbackCtaClick?: () => void;
+  onMatchCtaClick?: (match: ProgramMatchResult, position: 'top' | 'alternative') => void;
 };
 
 const reasonLabel = (
@@ -25,6 +27,8 @@ const EligibilityResult = ({
   texts,
   fallbackCtaHref,
   getCtaHref,
+  onFallbackCtaClick,
+  onMatchCtaClick,
 }: EligibilityResultProps) => {
   const topMatches = matches.slice(0, 2);
 
@@ -43,7 +47,7 @@ const EligibilityResult = ({
                 {texts.emptyState.title}
               </h3>
               <p className="text-white/65 mb-4">{texts.emptyState.description}</p>
-              <a href={fallbackCtaHref} className="btn-primary-dark inline-flex">
+              <a href={fallbackCtaHref} onClick={onFallbackCtaClick} className="btn-primary-dark inline-flex">
                 {texts.emptyState.cta}
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -53,6 +57,7 @@ const EligibilityResult = ({
               {topMatches.map((match, index) => {
                 const levelLabel =
                   index === 0 ? texts.result.topRecommendation : texts.result.alternative;
+                const position: 'top' | 'alternative' = index === 0 ? 'top' : 'alternative';
                 const levelClass =
                   index === 0
                     ? 'border-primary/30 bg-primary/10 text-primary'
@@ -107,7 +112,11 @@ const EligibilityResult = ({
                       <p className="text-white/75 text-sm leading-relaxed">{match.program.importantCheck}</p>
                     </div>
 
-                    <a href={getCtaHref(match)} className="btn-primary-dark inline-flex w-full justify-center">
+                    <a
+                      href={getCtaHref(match)}
+                      onClick={() => onMatchCtaClick?.(match, position)}
+                      className="btn-primary-dark inline-flex w-full justify-center"
+                    >
                       {texts.result.cta}
                       <ArrowRight className="w-5 h-5" />
                     </a>

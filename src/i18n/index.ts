@@ -8,6 +8,7 @@ export interface Translations {
     handling: string;
     automation: string;
     service: string;
+    usedMachines: string;
     company: string;
     contact: string;
     themeDay: string;
@@ -177,8 +178,9 @@ const translations: Record<Language, Translations> = {
       handling: 'Manipulation & Lager',
       automation: 'Finanzierung',
       service: 'Service',
+      usedMachines: 'Gebrauchtmaschinen',
       company: 'Unternehmen',
-      contact: 'Kontakt',
+      contact: 'Über uns',
       themeDay: 'Tagmodus',
       themeNight: 'Nachtmodus',
       activateThemeDay: 'Tagmodus aktivieren',
@@ -344,8 +346,9 @@ const translations: Record<Language, Translations> = {
       handling: 'Handling & Storage',
       automation: 'Funding',
       service: 'Service',
+      usedMachines: 'Used machines',
       company: 'Company',
-      contact: 'Contact',
+      contact: 'About us',
       themeDay: 'Day mode',
       themeNight: 'Night mode',
       activateThemeDay: 'Enable day mode',
@@ -511,8 +514,9 @@ const translations: Record<Language, Translations> = {
       handling: 'Manipulace a skladování',
       automation: 'Financování',
       service: 'Servis',
+      usedMachines: 'Použité stroje',
       company: 'Společnost',
-      contact: 'Kontakt',
+      contact: 'O nás',
       themeDay: 'Denní režim',
       themeNight: 'Noční režim',
       activateThemeDay: 'Zapnout denní režim',
@@ -678,8 +682,9 @@ const translations: Record<Language, Translations> = {
       handling: 'Kezelés és raktározás',
       automation: 'Finanszírozás',
       service: 'Szerviz',
+      usedMachines: 'Hasznalt gepek',
       company: 'Vállalat',
-      contact: 'Kapcsolat',
+      contact: 'Rólunk',
       themeDay: 'Nappali mód',
       themeNight: 'Éjszakai mód',
       activateThemeDay: 'Nappali mód bekapcsolása',
@@ -845,8 +850,9 @@ const translations: Record<Language, Translations> = {
       handling: 'Manipulácia a skladovanie',
       automation: 'Financovanie',
       service: 'Servis',
+      usedMachines: 'Pouzite stroje',
       company: 'Spoločnosť',
-      contact: 'Kontakt',
+      contact: 'O nás',
       themeDay: 'Denný režim',
       themeNight: 'Nočný režim',
       activateThemeDay: 'Zapnúť denný režim',

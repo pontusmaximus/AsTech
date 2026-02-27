@@ -149,6 +149,13 @@ const Navigation = () => {
             </Link>
 
             <Link
+              to="/gebrauchtmaschinen"
+              className={`text-sm transition-colors ${location.pathname === '/gebrauchtmaschinen' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+            >
+              {t.nav.usedMachines}
+            </Link>
+
+            <Link
               to="/kontakt"
               className={`text-sm transition-colors ${location.pathname === '/kontakt' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
@@ -252,6 +259,12 @@ const Navigation = () => {
                   className={`text-left ${location.pathname === '/service' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.service}
+                </Link>
+                <Link
+                  to="/gebrauchtmaschinen"
+                  className={`text-left ${location.pathname === '/gebrauchtmaschinen' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                >
+                  {t.nav.usedMachines}
                 </Link>
                 <Link
                   to="/kontakt"

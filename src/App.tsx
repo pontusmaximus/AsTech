@@ -12,7 +12,11 @@ import SolutionsPage from './pages/SolutionsPage';
 import ServicePage from './pages/ServicePage';
 import ContactPage from './pages/ContactPage';
 import ImprintPage from './pages/ImprintPage';
+import UsedMachinesPage from './pages/UsedMachinesPage';
 import Footer from './sections/Footer';
+import CookieConsent from './components/CookieConsent';
+import AnalyticsTracker from './components/AnalyticsTracker';
+import Ga4Loader from './components/Ga4Loader';
 import './App.css';
 
 interface LanguageContextType {
@@ -109,6 +113,8 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
       <LanguageContext.Provider value={{ lang, t, setLang }}>
         <BrowserRouter>
+          <Ga4Loader />
+          <AnalyticsTracker />
           <div className={`app ${isLoaded ? 'loaded' : ''}`}>
             <Navigation />
             <main>
@@ -120,11 +126,13 @@ function App() {
                 <Route path="/finanzierung" element={<FinancingPage />} />
                 <Route path="/loesungen" element={<SolutionsPage />} />
                 <Route path="/service" element={<ServicePage />} />
+                <Route path="/gebrauchtmaschinen" element={<UsedMachinesPage />} />
                 <Route path="/kontakt" element={<ContactPage />} />
                 <Route path="/impressum" element={<ImprintPage />} />
               </Routes>
             </main>
             <Footer />
+            <CookieConsent />
           </div>
         </BrowserRouter>
       </LanguageContext.Provider>
