@@ -170,6 +170,7 @@ const OttPage = () => {
   const systemSolutions = [
     {
       name: 'TransCompact',
+      image: 'https://www.ottpaul.com/fileadmin/content/images/maschinen/transcompact.jpg',
       desc: tr('Kompaktes Transportsystem für kleine bis mittlere Betriebe', 'Compact transport system for small to medium operations', 'Kompaktní transportní systém pro malé až střední provozy'),
       specs: [
         tr('Traglast: 150 kg', 'Payload: 150 kg', 'Nosnost: 150 kg'),
@@ -179,6 +180,7 @@ const OttPage = () => {
     },
     {
       name: 'TransLift',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/9/9/csm_translift1_8ef261da52.jpg',
       desc: tr('Automatisches Hebe- und Transportsystem', 'Automatic lifting and transport system', 'Automatický zvedací a transportní systém'),
       specs: [
         tr('Hubhöhe: 2.000 mm', 'Lifting height: 2,000 mm', 'Výška zdvihu: 2 000 mm'),
@@ -188,6 +190,7 @@ const OttPage = () => {
     },
     {
       name: 'TransEdge',
+      image: 'https://www.ottpaul.com/fileadmin/_processed_/2/4/csm_3D_TRANSedge_02_5c1f6f1fd8.jpg',
       desc: tr('Vollautomatische Kantenrückführung', 'Fully automatic edge return system', 'Plně automatické vracení hran'),
       specs: [
         tr('Rückführgeschwindigkeit: 20 m/min', 'Return speed: 20 m/min', 'Rychlost vrácení: 20 m/min'),
@@ -205,7 +208,7 @@ const OttPage = () => {
           brandNameForSrOnly="OTT"
           logoSrc="https://stadtkarte.at/wp-content/uploads/2023/10/firmen-Lambach-stadt-OTT.jpg"
           logoAlt="OTT logo"
-          logoClassName="h-16 sm:h-20 md:h-24 w-auto object-contain rounded-md"
+          logoClassName="h-32 sm:h-40 md:h-48 w-auto object-contain rounded-md"
           introText={tr(
             'Innovative Kantenleimtechnologie mit PUR-Anleimsystemen und LASER Hydrofuse für fugenlose, übergangslose Kantenverbindungen.',
             'Innovative edgebanding technology with PUR gluing systems and LASER Hydrofuse for seamless, jointless edge connections.',
@@ -312,6 +315,9 @@ const OttPage = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {systemSolutions.map((product, index) => (
               <div key={index} className="product-item product-card-dark p-6">
+                <div className="mb-4 rounded-xl overflow-hidden border border-white/10 bg-dark-elevated">
+                  <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                </div>
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
                   <ArrowUpRight className="w-5 h-5 text-white/30" />

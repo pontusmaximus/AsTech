@@ -1,4 +1,4 @@
-import { AlertTriangle, ArrowRight, Phone, ShieldCheck, Wrench } from 'lucide-react';
+import { AlertTriangle, ArrowRight, Award, ShieldCheck, Wrench } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 
@@ -38,12 +38,12 @@ const ServicePage = () => {
       ),
     },
     {
-      icon: Phone,
-      title: tr('24/7 telefonische Erreichbarkeit', '24/7 phone availability', 'Telefonická dostupnost 24/7'),
+      icon: Award,
+      title: tr('30 Jahre Erfahrung mit führenden Herstellern', '30 years of experience with leading manufacturers', '30 let zkušeností s předními výrobci'),
       description: tr(
-        'Rund um die Uhr erreichbar: direkte Abstimmung mit Technikern für Remote-Diagnose, Anleitung vor Ort und Einsatzplanung.',
-        'Available around the clock: direct coordination with technicians for remote diagnostics, on-site guidance, and deployment planning.',
-        'Dostupnost nepřetržitě: přímá koordinace s techniky pro vzdálenou diagnostiku, vedení na místě a plánování zásahu.'
+        'Praxis aus Projekten mit OTT, IMA Schelling, Mühlböck und weiteren Partnern.',
+        'Hands-on project experience with OTT, IMA Schelling, Muehlboeck, and other partners.',
+        'Praktické zkušenosti z projektů s OTT, IMA Schelling, Muehlboeck a dalšími partnery.'
       ),
     },
     {
@@ -82,9 +82,9 @@ const ServicePage = () => {
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-4xl">
               {tr(
-                'Unser Montage- und Serviceteam sorgt dafür, dass Ihre Produktion läuft. Bei Stillstand reagieren wir mit Notfallservice, Expresslösungen und 24/7 telefonischer Erreichbarkeit.',
-                'Our assembly and service team keeps your production running. In case of downtime, we respond with emergency service, express solutions, and 24/7 phone availability.',
-                'Náš montážní a servisní tým zajišťuje plynulý chod vaší výroby. Při odstávce reagujeme nouzovým servisem, expresními řešeními a telefonickou dostupností 24/7.'
+                'Unser Montage- und Serviceteam sorgt dafür, dass Ihre Produktion läuft. Mit 30 Jahren Erfahrung mit OTT, IMA Schelling, Mühlböck und weiteren Herstellern reagieren wir bei Stillstand mit Notfallservice und Expresslösungen.',
+                'Our assembly and service team keeps your production running. With 30 years of experience with OTT, IMA Schelling, Muehlboeck, and other manufacturers, we respond to downtime with emergency service and express solutions.',
+                'Náš montážní a servisní tým zajišťuje plynulý chod vaší výroby. S 30 lety zkušeností s OTT, IMA Schelling, Muehlboeck a dalšími výrobci reagujeme při odstávce nouzovým servisem a expresními řešeními.'
               )}
             </p>
           </div>
@@ -142,16 +142,13 @@ const ServicePage = () => {
               </h3>
               <p className="text-white/70 text-sm">
                 {tr(
-                  'Telefonisch 24/7 erreichbar oder per Serviceanfrage für geplante Einsätze.',
-                  'Reach us by phone 24/7 or via service inquiry for planned interventions.',
-                  'Jsme dostupní telefonicky 24/7 nebo přes servisní poptávku pro plánované zásahy.'
+                  'Serviceanfrage für geplante Einsätze oder schnelle Unterstützung im Störungsfall.',
+                  'Service inquiry for planned interventions or fast support in case of incidents.',
+                  'Servisní poptávka pro plánované zásahy nebo rychlá podpora při poruše.'
                 )}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:+420123456789" className="btn-outline-dark justify-center">
-                {tr('24/7 anrufen', 'Call 24/7', 'Volat 24/7')}
-              </a>
               <a href={serviceInquiryMail} className="btn-primary-dark justify-center">
                 {tr('Serviceanfrage senden', 'Send service inquiry', 'Odeslat servisní poptávku')}
                 <ArrowRight className="w-5 h-5" />

@@ -191,19 +191,21 @@ const MayerPage = () => {
   const automationProducts = [
     {
       name: 'Vakuumbeschickung mit Linienportal',
+      url: 'https://www.barbaric.at/beschickung/',
       desc: tr(
-        'Automatisierte Materialzufuhr für kontinuierliche Produktion',
-        'Automated material feed for continuous production',
-        'Automatizované podávání materiálu pro kontinuální výrobu'
+        'Automatisierte Materialzufuhr für Plattenaufteilsägen – auch für Hersteller außerhalb von MAYER.',
+        'Automated material feed for panel saws - also for manufacturers beyond MAYER.',
+        'Automatizované podávání materiálu pro pily na desky - také pro výrobce mimo MAYER.'
       ),
       specs: [
-        tr('Traglast: bis 500 kg', 'Payload: up to 500 kg', 'Nosnost: až 500 kg'),
-        tr('Positioniergenauigkeit: ±0,1 mm', 'Positioning accuracy: ±0.1 mm', 'Přesnost polohování: ±0,1 mm'),
-        tr('Integration in bestehende Sägen', 'Integration into existing saws', 'Integrace do stávajících pil'),
+        tr('Schnittstellen zu gängigen Sägetypen', 'Interfaces to common saw types', 'Rozhraní pro běžné typy pil'),
+        tr('Passend für Plattenaufteilsägen vieler Hersteller', 'Suitable for panel saws from many manufacturers', 'Vhodné pro pily na desky mnoha výrobců'),
+        tr('Präzise Positionierung und stabiler Materialfluss', 'Precise positioning and stable material flow', 'Přesné polohování a stabilní tok materiálu'),
       ],
     },
     {
       name: 'Vollautomatische Flächenlager',
+      url: 'https://www.barbaric.at/flaechenlager/',
       desc: tr(
         'Intelligente Lagerung und Kommissionierung von Plattenware',
         'Intelligent storage and picking of panel material',
@@ -336,7 +338,19 @@ const MayerPage = () => {
               <div key={index} className="product-item product-card-dark p-6">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
-                  <ArrowUpRight className="w-5 h-5 text-white/30" />
+                  {product.url ? (
+                    <a
+                      href={product.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-white/30 hover:text-primary transition-colors"
+                      aria-label={tr('Produkt öffnen', 'Open product', 'Otevřít produkt')}
+                    >
+                      <ArrowUpRight className="w-5 h-5" />
+                    </a>
+                  ) : (
+                    <ArrowUpRight className="w-5 h-5 text-white/30" />
+                  )}
                 </div>
                 <p className="text-white/50 text-sm mb-4">{product.desc}</p>
                 <ul className="space-y-2">
@@ -347,6 +361,16 @@ const MayerPage = () => {
                     </li>
                   ))}
                 </ul>
+                {product.url ? (
+                  <a
+                    href={product.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex mt-4 text-sm text-primary hover:text-primary/80 transition-colors"
+                  >
+                    {tr('Zur BARBARIC Lösung', 'Go to BARBARIC solution', 'Přejít na řešení BARBARIC')}
+                  </a>
+                ) : null}
               </div>
             ))}
           </div>

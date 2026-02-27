@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useLanguage } from '../App';
-import { ArrowRight, ArrowUpRight, Cpu, Database, Layers, TrendingDown } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Database } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { translatePageText } from '../i18n/pageTextTranslations';
@@ -50,11 +50,6 @@ const Home = () => {
         { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 1 }
       );
 
-      gsap.fromTo('.hero-feature',
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out', delay: 1.2 }
-      );
-
       gsap.utils.toArray<HTMLElement>('.section-animate').forEach((section) => {
         gsap.fromTo(section,
           { y: 60, opacity: 0 },
@@ -79,13 +74,6 @@ const Home = () => {
   const heroLines = [
     tr('Technologie mit Erfahrung.', 'Technology with experience.', 'Technologie se zkušeností.'),
     tr('Lösungen mit Zukunft.', 'Solutions with a future.', 'Řešení s budoucností.'),
-  ];
-
-  const heroFeatures = [
-    { icon: Cpu, text: tr('OTT die führende Kantenanleimmaschine', 'OTT the leading edge banding machine', 'OTT přední olepovačka hran') },
-    { icon: Layers, text: tr('Neue Sägetechnologien von MAYER', 'New sawing technologies from MAYER', 'Nové technologie řezání od MAYER') },
-    { icon: Database, text: tr('Service & Wartung Holz + Metall', 'Service & maintenance for wood + metal', 'Servis a údržba pro dřevo + kov') },
-    { icon: TrendingDown, text: tr('Reduktion von Lagerkosten', 'Reduction of storage costs', 'Snížení skladovacích nákladů') },
   ];
 
   const solutions = [
@@ -145,65 +133,23 @@ const Home = () => {
     { value: '99.9%', label: tr('Bestandsgenauigkeit', 'inventory accuracy', 'přesnost zásob') },
   ];
 
-  const fundingPrograms = [
+  const financingOptions = [
     {
-      title: tr('OP TAK - Digitales Unternehmen', 'OP TAK - Digital Enterprise', 'OP TAK - Digitální podnik'),
-      description: tr(
-        'Fördert die digitale Transformation von KMU mit ERP-Systemen, Robotik und KI-gestützten Fertigungsprozessen.',
-        'Supports SME digital transformation with ERP systems, robotics, and AI-assisted production processes.',
-        'Podporuje digitální transformaci MSP pomocí ERP systémů, robotiky a výrobních procesů řízených AI.'
-      ),
-      details: tr(
-        'Antragszeitraum: 20.10.2025 bis 17.04.2026. Zuschuss: bis zu 45 % der Kosten.',
-        'Application window: 20.10.2025 to 17.04.2026. Grant: up to 45% of costs.',
-        'Termín podání: 20.10.2025 až 17.04.2026. Dotace: až 45 % nákladů.'
-      ),
+      title: tr('Finanzierung durch Förderung', 'Funding via grants', 'Financování prostřednictvím dotací'),
+      description: tr('Nutzen Sie unseren Förderkompass.', 'Use our funding compass.', 'Využijte náš dotační kompas.'),
+      linkLabel: tr('Zum Förderkompass', 'Go to funding compass', 'Přejít na dotační kompas'),
+      link: '/finanzierung',
     },
     {
-      title: tr('OP TAK - Innovation & Design', 'OP TAK - Innovation & Design', 'OP TAK - Inovace a design'),
+      title: tr('Finanzierung durch Leasing', 'Funding via leasing', 'Financování prostřednictvím leasingu'),
       description: tr(
-        'Unterstützt die Markteinführung neuer Produkte, ökologischer Materialien und modernes Möbeldesign.',
-        'Supports the market launch of new products, ecological materials, and modern furniture design.',
-        'Podporuje uvedení nových produktů, ekologických materiálů a moderního nábytkového designu na trh.'
+        'Durch unseren Partner Raiffeisen Leasing garantieren wir Ihnen eine faire Finanzierung.',
+        'Through our partner Raiffeisen Leasing, we ensure fair financing for your project.',
+        'Díky našemu partnerovi Raiffeisen Leasing vám zajistíme férové financování.'
       ),
-      details: tr(
-        'Inklusive Innovationsgutscheine für externes Know-how und Designförderung, z. B. Design pro praxi.',
-        'Includes innovation vouchers for external know-how and design support, e.g. Design pro praxi.',
-        'Zahrnuje inovační vouchery na externí know-how a podporu designu, např. Design pro praxi.'
-      ),
+      linkLabel: tr('Mehr zu Leasing', 'More about leasing', 'Více o leasingu'),
+      link: '/finanzierung',
     },
-    {
-      title: tr('MZe - Forstwirtschaft & Sägewerke', 'MZe - Forestry & Sawmills', 'MZe - Lesnictví a pily'),
-      description: tr(
-        'Spezielle Investitionshilfen des Landwirtschaftsministeriums für die Primärverarbeitung von Holz.',
-        'Dedicated investment support from the Ministry of Agriculture for primary wood processing.',
-        'Speciální investiční podpora ministerstva zemědělství pro prvotní zpracování dřeva.'
-      ),
-      details: tr(
-        'Relevant für technologische Modernisierung in Sägewerken und vorgelagerten Holzprozessen.',
-        'Relevant for technological modernization in sawmills and upstream wood-processing operations.',
-        'Vhodné pro technologickou modernizaci pil a navazujících dřevozpracujících provozů.'
-      ),
-    },
-    {
-      title: tr('Energieeffizienz & Nachhaltigkeit', 'Energy Efficiency & Sustainability', 'Energetická účinnost a udržitelnost'),
-      description: tr(
-        'Förderfähig sind Photovoltaik, energetische Gebäudesanierung und Kreislaufwirtschaft.',
-        'Eligible measures include photovoltaics, energy-efficient building renovation, and circular economy projects.',
-        'Podporovaná opatření zahrnují fotovoltaiku, energetické renovace budov a projekty oběhového hospodářství.'
-      ),
-      details: tr(
-        'Auch Maßnahmen zur Abfallverwertung können in die Förderung einbezogen werden.',
-        'Waste recovery measures can also be included in the funding scope.',
-        'Do podpory lze zahrnout i opatření na využití odpadu.'
-      ),
-    },
-  ];
-
-  const fundingStats = [
-    { value: '2025-2027', label: tr('Förderfenster', 'Funding period', 'Období podpory') },
-    { value: '45%', label: tr('max. Zuschuss', 'max grant', 'max. dotace') },
-    { value: 'EFRE', label: tr('EU-Kofinanzierung', 'EU co-financing', 'spolufinancování EU') },
   ];
 
   return (
@@ -212,7 +158,7 @@ const Home = () => {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center scale-100"
-            style={{ backgroundImage: 'url(https://www.ottpaul.com/fileadmin/_processed_/b/d/csm_maschine-tornado_98c5612081.jpg)' }}
+            style={{ backgroundImage: 'url(https://www.ottpaul.com/fileadmin/_processed_/d/7/csm_translift_storm_system_4f9149b8e4.jpg)' }}
           />
           <div className="hero-overlay-vertical absolute inset-0" />
           <div className="hero-overlay-horizontal absolute inset-0" />
@@ -240,25 +186,12 @@ const Home = () => {
                 {t.hero.cta}
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="/mayer" className="btn-outline-dark">
+              <a href="/ott" className="btn-outline-dark">
                 {tr('Produkte entdecken', 'Discover products', 'Objevit produkty')}
                 <ArrowUpRight className="w-5 h-5" />
               </a>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-              {heroFeatures.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <div key={index} className="hero-feature flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <span className="text-sm text-white/50 leading-tight">{feature.text}</span>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </section>
@@ -320,18 +253,18 @@ const Home = () => {
             <div className="section-animate">
               <div className="accent-line mb-6" />
               <h2 className="text-section font-display font-light text-white mb-6">
-                {t.automation.title}
+                {tr('Finanzierung', 'Financing', 'Financování')}
               </h2>
               <p className="text-subsection text-white/50 mb-10 leading-relaxed">
                 {tr(
-                  'Die tschechische Holzbearbeitung transformiert sich von traditionellen Strukturen zur digitalen und ressourceneffizienten Produktion. Für 2025 bis 2027 stehen attraktive Förderprogramme bereit.',
-                  'The Czech woodworking industry is shifting from traditional structures to digital and resource-efficient production. Attractive funding programs are available from 2025 to 2027.',
-                  'České dřevozpracující odvětví se mění od tradičních struktur k digitální a zdrojově efektivní výrobě. Pro roky 2025 až 2027 jsou k dispozici atraktivní dotační programy.'
+                  'Zwei klare Wege zur Investition in Ihre Produktion: Förderung oder Leasing.',
+                  'Two clear ways to finance your production investment: grants or leasing.',
+                  'Dvě jasné cesty pro investici do výroby: dotace nebo leasing.'
                 )}
               </p>
 
-              <div className="space-y-4">
-                {fundingPrograms.slice(0, 2).map((item, index) => (
+              <div className="space-y-4 mb-6">
+                {financingOptions.map((item, index) => (
                   <div key={item.title} className="p-5 bg-dark-card rounded-xl border border-white/10">
                     <div className="flex items-start gap-4">
                       <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
@@ -340,57 +273,41 @@ const Home = () => {
                       <div>
                         <h4 className="text-white font-medium mb-2">{item.title}</h4>
                         <p className="text-white/60 text-sm leading-relaxed mb-2">{item.description}</p>
-                        <p className="text-primary/90 text-xs leading-relaxed">{item.details}</p>
+                        <a href={item.link} className="text-primary/90 text-xs hover:text-primary transition-colors">
+                          {item.linkLabel}
+                        </a>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-8 p-5 bg-dark-card rounded-xl border border-primary/30">
-                <h4 className="text-white font-medium mb-2">{tr('Ihr Vorteil', 'Your advantage', 'Vaše výhoda')}</h4>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  {tr(
-                    'Nutzen Sie staatliche Zuschüsse und EFRE-Mittel, um Ihre Wettbewerbsfähigkeit mit moderner CNC-Technik, Automatisierung und nachhaltiger Produktion gezielt auszubauen.',
-                    'Use state grants and ERDF funds to strengthen your competitiveness with modern CNC technology, automation, and sustainable production.',
-                    'Využijte státní dotace a prostředky EFRR pro posílení konkurenceschopnosti pomocí moderních CNC technologií, automatizace a udržitelné výroby.'
-                  )}
-                </p>
-              </div>
-
-              <div className="mt-4 p-5 bg-dark-card rounded-xl border border-white/15">
-                <h4 className="text-white font-medium mb-2">{tr('Wichtig', 'Important', 'Důležité')}</h4>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  {tr(
-                    'Reine Ersatzinvestitionen ohne Innovations- oder Digitalisierungsschritt sind meist nicht förderfähig. Entscheidend ist der technologische Sprung.',
-                    'Pure replacement investments without an innovation or digitalization step are usually not eligible. The key is a real technology leap.',
-                    'Pouhé náhradní investice bez kroku inovace nebo digitalizace obvykle nejsou způsobilé. Klíčový je skutečný technologický posun.'
-                  )}
-                </p>
-              </div>
-
-              <a href="/finanzierung" className="btn-outline-dark mt-6 inline-flex">
+              <a href="/finanzierung" className="btn-outline-dark inline-flex">
                 {tr('Zur Finanzierungsseite', 'Go to funding page', 'Přejít na stránku financování')}
                 <ArrowUpRight className="w-5 h-5" />
               </a>
             </div>
 
             <div className="section-animate">
-              <div className="relative aspect-square rounded-2xl overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1400&q=80)' }}
-                />
-                <div className="automation-image-overlay absolute inset-0" />
-
-                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-3 sm:p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10">
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-center">
-                    {fundingStats.map((stat) => (
-                      <div key={stat.value}>
-                        <div className="text-xl sm:text-2xl font-display font-bold text-white">{stat.value}</div>
-                        <div className="text-xs text-white/50">{stat.label}</div>
-                      </div>
-                    ))}
+              <div className="relative aspect-square rounded-2xl overflow-hidden bg-white border border-black/5">
+                <div className="w-full h-full flex items-center justify-center p-6 sm:p-8 md:p-10">
+                  <img
+                    src="https://www.raiffeisen-leasing.at/de/ueber-uns/_jcr_content/root/responsivegrid/contentcontainer_1102821433/contentbox/downloadlist.download.html/1/Raiffeisen-Leasing%20Logo%20_1faerbig_%20schwarz_weiss_.png"
+                    alt="Raiffeisen Leasing Logo"
+                    className="max-w-full max-h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-3 sm:p-4 bg-black/55 backdrop-blur-md rounded-xl border border-white/20">
+                  <div className="text-center">
+                    <div className="text-xl sm:text-2xl font-display font-bold text-white">Förderung + Leasing</div>
+                    <div className="text-xs text-white/80">
+                      {tr(
+                        'Ein Ziel: faire Finanzierung Ihrer Investition',
+                        'One goal: fair financing for your investment',
+                        'Jeden cíl: férové financování vaší investice'
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -491,6 +408,11 @@ const Home = () => {
               </div>
             ))}
           </div>
+
+          <a href="/service" className="btn-outline-dark mt-6 inline-flex">
+            {tr('Zur Service-Seite', 'Go to service page', 'Přejít na stránku servisu')}
+            <ArrowUpRight className="w-5 h-5" />
+          </a>
         </div>
       </section>
 

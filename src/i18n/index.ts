@@ -297,8 +297,8 @@ const translations: Record<Language, Translations> = {
       subtitle: 'Wir sind für Sie da – vor, während und nach dem Kauf',
       items: {
         phone: {
-          title: 'Telefonische Soforthilfe',
-          description: 'Direkter Kontakt zu unseren Technikern für schnelle Lösungen.',
+          title: '30 Jahre Erfahrung mit führenden Herstellern',
+          description: 'Erfahrung mit OTT, IMA Schelling, Mühlböck und weiteren Partnern für verlässliche Lösungen.',
         },
         remote: {
           title: 'Online Fernwartung',
@@ -464,8 +464,8 @@ const translations: Record<Language, Translations> = {
       subtitle: 'We are here for you – before, during and after the purchase',
       items: {
         phone: {
-          title: 'Phone Support',
-          description: 'Direct contact with our technicians for quick solutions.',
+          title: '30 years of experience with leading manufacturers',
+          description: 'Experience with OTT, IMA Schelling, Muehlboeck, and other partners for reliable solutions.',
         },
         remote: {
           title: 'Online Remote Maintenance',
@@ -631,8 +631,8 @@ const translations: Record<Language, Translations> = {
       subtitle: 'Jsme tu pro vás – před, během i po nákupu',
       items: {
         phone: {
-          title: 'Telefonická okamžitá pomoc',
-          description: 'Přímý kontakt s našimi techniky pro rychlá řešení.',
+          title: '30 let zkušeností s předními výrobci',
+          description: 'Zkušenosti s OTT, IMA Schelling, Muehlboeck a dalšími partnery pro spolehlivá řešení.',
         },
         remote: {
           title: 'Online vzdálená údržba',
@@ -798,8 +798,8 @@ const translations: Record<Language, Translations> = {
       subtitle: 'Itt vagyunk Önnek – vásárlás előtt, alatt és után',
       items: {
         phone: {
-          title: 'Telefonos azonnali segítség',
-          description: 'Közvetlen kapcsolat technikusainkkal gyors megoldásokért.',
+          title: '30 év tapasztalat vezető gyártókkal',
+          description: 'Tapasztalat OTT, IMA Schelling, Muehlboeck és további partnerekkel a megbízható megoldásokért.',
         },
         remote: {
           title: 'Online távkarbantartás',
@@ -965,8 +965,8 @@ const translations: Record<Language, Translations> = {
       subtitle: 'Sme tu pre vás – pred, počas aj po nákupe',
       items: {
         phone: {
-          title: 'Telefonická okamžitá pomoc',
-          description: 'Priamy kontakt s našimi technikmi pre rýchle riešenia.',
+          title: '30 rokov skúseností s poprednými výrobcami',
+          description: 'Skúsenosti s OTT, IMA Schelling, Muehlboeck a ďalšími partnermi pre spoľahlivé riešenia.',
         },
         remote: {
           title: 'Online vzdialená údržba',

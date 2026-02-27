@@ -339,6 +339,42 @@ const FinancingPage = () => {
         fundingLabel={tr('Förderung', 'Funding', 'Dotace')}
         questionLabel={tr('Frage', 'Question', 'Otázka')}
       />
+
+      <section className="pb-24">
+        <div className="container-wide">
+          <div className="rounded-2xl border border-white/10 bg-dark-elevated p-6 md:p-8">
+            <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-4">
+              {tr('Finanzierung durch Leasing', 'Financing through leasing', 'Financování prostřednictvím leasingu')}
+            </h2>
+            <p className="text-white/70 leading-relaxed mb-6">
+              {tr(
+                'Durch unseren Partner Raiffeisen Leasing garantieren wir Ihnen eine faire Finanzierung für Ihre Maschineninvestition.',
+                'Through our partner Raiffeisen Leasing, we provide fair financing for your machine investment.',
+                'Díky našemu partnerovi Raiffeisen Leasing vám zajistíme férové financování vaší investice do strojů.'
+              )}
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 mb-6">
+              {[
+                tr('Planbare Monatsraten', 'Predictable monthly rates', 'Předvídatelné měsíční splátky'),
+                tr('Schonung Ihrer Liquidität', 'Preserves your liquidity', 'Šetří vaši likviditu'),
+                tr('Schnelle und transparente Abwicklung', 'Fast and transparent processing', 'Rychlé a transparentní vyřízení'),
+              ].map((item) => (
+                <div key={item} className="rounded-xl border border-white/10 bg-dark-card px-4 py-3 text-sm text-white/75">
+                  {item}
+                </div>
+              ))}
+            </div>
+            <a
+              href={`mailto:max@asamer.net?subject=${encodeURIComponent(
+                tr('Leasinganfrage', 'Leasing inquiry', 'Poptávka leasingu')
+              )}`}
+              className="btn-primary-dark inline-flex"
+            >
+              {tr('Leasing anfragen', 'Request leasing', 'Poptat leasing')}
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

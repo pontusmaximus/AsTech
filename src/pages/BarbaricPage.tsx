@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ArrowUpRight, Boxes, GripVertical } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
@@ -7,6 +7,18 @@ import { translatePageText } from '../i18n/pageTextTranslations';
 import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
 
 gsap.registerPlugin(ScrollTrigger);
+
+type BarbaricProduct = {
+  name: string;
+  image: string;
+  url: string;
+  desc: string;
+  specs: string[];
+  extraLink?: {
+    href: string;
+    label: string;
+  };
+};
 
 const BarbaricPage = () => {
   const { lang } = useLanguage();
@@ -57,122 +69,121 @@ const BarbaricPage = () => {
     return () => ctx.revert();
   }, []);
 
-  const storageSystems = [
+  const automationProducts: BarbaricProduct[] = [
     {
-      name: 'Flächenlager Standard',
-      desc: tr('Automatische Lagerung und Bereitstellung von Plattenware', 'Automatic storage and retrieval of panel material', 'Automatické skladování a vyskladnění deskového materiálu'),
+      name: 'Flächenlager',
+      image: 'https://www.barbaric.at/fileadmin/_processed_/2/e/csm_CSF_Prof_Akkordeon_51f9e20cc9.png',
+      url: 'https://www.barbaric.at/flaechenlager/',
+      desc: tr(
+        'Vollautomatische Lagerung und Kommissionierung von Platten mit hoher Transparenz im Materialfluss.',
+        'Fully automatic storage and picking of panels with high material-flow transparency.',
+        'Plně automatické skladování a kompletace desek s vysokou transparentností toku materiálu.'
+      ),
       specs: [
-        tr('Kapazität: bis 500 Platten', 'Capacity: up to 500 panels', 'Kapacita: až 500 desek'),
-        tr('Plattenformat: bis 4.000 x 2.000 mm', 'Panel format: up to 4,000 x 2,000 mm', 'Formát desek: až 4 000 x 2 000 mm'),
-        tr('Umlaufzeit: < 2 Minuten', 'Cycle time: < 2 minutes', 'Doba cyklu: < 2 minuty'),
-        tr('Chaotische oder definierte Lagerung', 'Chaotic or fixed storage logic', 'Chaotické nebo definované skladování'),
+        tr('Ein Lagerplatz pro Platte für klare Bestandsführung', 'One storage position per panel for clear stock control', 'Jedna skladová pozice na desku pro přehledné řízení zásob'),
+        tr('Optimale Flächennutzung und hohe Prozesssicherheit', 'Optimized space usage and high process reliability', 'Optimální využití plochy a vysoká spolehlivost procesů'),
+        tr('ERP-Schnittstelle für laufenden Bestandsüberblick', 'ERP interface for continuous inventory visibility', 'ERP rozhraní pro průběžný přehled o zásobách'),
       ],
     },
     {
-      name: 'Flächenlager XL',
-      desc: tr('Großvolumige Lösung für industrielle Produktion', 'High-volume solution for industrial production', 'Velkokapacitní řešení pro průmyslovou výrobu'),
+      name: 'Nesting Picker',
+      image: 'https://www.barbaric.at/fileadmin/_processed_/9/3/csm_Nesting-Picker_web01_0adfb35b3b.png',
+      url: 'https://www.barbaric.at/nesting-picker/',
+      desc: tr(
+        'Automatisches Abstapeln von Nesting-Teilen mit weniger Fehlern und schonender Teilehandhabung.',
+        'Automated stacking of nesting parts with fewer errors and gentle part handling.',
+        'Automatické stohování nesting dílů s menším počtem chyb a šetrnou manipulací.'
+      ),
       specs: [
-        tr('Kapazität: bis 2.000 Platten', 'Capacity: up to 2,000 panels', 'Kapacita: až 2 000 desek'),
-        tr('Plattenformat: bis 7.000 x 2.500 mm', 'Panel format: up to 7,000 x 2,500 mm', 'Formát desek: až 7 000 x 2 500 mm'),
-        tr('Mehrfachentnahme möglich', 'Multiple retrieval possible', 'Možný vícenásobný odběr'),
-        tr('Vollautomatische Kommissionierung', 'Fully automatic picking', 'Plně automatická kompletace'),
+        tr('Reduziert Beschädigungen und manuelle Fehlerquellen', 'Reduces damage and manual error sources', 'Snižuje poškození a manuální chybovost'),
+        tr('Sortiert Bauteile und markiert Leimflächen softwaregestützt', 'Classifies parts and marks glue areas through software', 'Softwarově třídí díly a označuje lepicí plochy'),
+        tr('Transportschutz durch Folierung möglich', 'Transport protection via foil application possible', 'Možná ochrana při transportu pomocí fólie'),
       ],
     },
     {
-      name: 'Chaotisches Lagersystem',
-      desc: tr('Optimale Flächennutzung durch intelligente Software', 'Optimal space usage through intelligent software', 'Optimální využití plochy pomocí inteligentního softwaru'),
+      name: tr('Beschickung für Plattenaufteilsägen', 'Feeding for panel saws', 'Podávání pro pily na desky'),
+      image: 'https://www.barbaric.at/fileadmin/_processed_/e/b/csm_Barbaric_LCV_Performance_Layout01_c1dad1eb46.jpg',
+      url: 'https://www.barbaric.at/beschickung/',
+      desc: tr(
+        'Automatische Beschickung für Plattenaufteilsägen mit präziser Positionierung und hoher Taktstabilität.',
+        'Automatic feeding for panel saws with precise positioning and stable cycle performance.',
+        'Automatické podávání pro pily na desky s přesným polohováním a stabilním taktem.'
+      ),
       specs: [
-        tr('Dynamische Plattenzuordnung', 'Dynamic panel allocation', 'Dynamické přiřazování desek'),
-        'ERP integration',
-        tr('Bestandsmanagement in Echtzeit', 'Real-time inventory management', 'Správa zásob v reálném čase'),
-        tr('Bis zu 40% mehr Kapazität', 'Up to 40% more capacity', 'Až o 40 % vyšší kapacita'),
+        tr('Passend für Sägen aller gängigen Hersteller', 'Suitable for saws from all common manufacturers', 'Vhodné pro pily všech běžných výrobců'),
+        tr('Schnittstellen zu allen gängigen Sägetypen', 'Interfaces to all common saw types', 'Rozhraní pro všechny běžné typy pil'),
+        tr('Reibungsloses Handling bei hoher Prozesssicherheit', 'Smooth handling with high process reliability', 'Plynulá manipulace při vysoké spolehlivosti procesu'),
+      ],
+      extraLink: {
+        href: '/mayer',
+        label: tr('Zu MAYER Plattenaufteilsägen', 'Go to MAYER panel saws', 'Přejít na pily MAYER'),
+      },
+    },
+  ];
+
+  const specialHandlingProducts: BarbaricProduct[] = [
+    {
+      name: 'Massivholzhandling',
+      image: 'https://www.barbaric.at/fileadmin/_processed_/c/5/csm_IMG_3563_web_47ef084d58.png',
+      url: 'https://www.barbaric.at/massivholzhandling/',
+      desc: tr(
+        'Automatisierte und manuelle Handlinglösungen für Massivholz, KVH, BSH und Stangenware.',
+        'Automated and manual handling solutions for solid wood, KVH, glulam, and long goods.',
+        'Automatizovaná i manuální manipulační řešení pro masivní dřevo, KVH, BSH a dlouhé profily.'
+      ),
+      specs: [
+        tr('Standard- und kundenspezifische Anlagenkonzepte', 'Standard and custom plant concepts', 'Standardní i zákaznické koncepce zařízení'),
+        tr('Materialschonende Handhabung schwerer Holzbauteile', 'Material-friendly handling of heavy timber parts', 'Šetrná manipulace s těžkými dřevěnými prvky'),
+        tr('Ausgelegt für robuste Produktionsumgebungen', 'Designed for robust production environments', 'Navrženo pro náročné výrobní prostředí'),
+      ],
+    },
+    {
+      name: 'Türenhandling',
+      image: 'https://www.barbaric.at/fileadmin/_processed_/f/b/csm_TMP_Akk_a3b6a50a7e.jpg',
+      url: 'https://www.barbaric.at/tuerenhandling/',
+      desc: tr(
+        'Schnelle, kompakte Systeme für Beschickung, Handling und Stapelung von Türen in der Fertigung.',
+        'Fast and compact systems for feeding, handling, and stacking doors in production.',
+        'Rychlé a kompaktní systémy pro podávání, manipulaci a stohování dveří ve výrobě.'
+      ),
+      specs: [
+        tr('Optimierte Produktionsabläufe und höhere Produktivität', 'Optimized production flows and higher productivity', 'Optimalizované výrobní toky a vyšší produktivita'),
+        tr('Entlastung der Mitarbeiter durch automatisierte Schritte', 'Reduced operator workload through automation steps', 'Odlehčení pracovníků díky automatizovaným krokům'),
+        tr('Lager- und Handlingkonzepte je nach Automatisierungsgrad', 'Storage and handling concepts by automation level', 'Skladové a manipulační koncepty dle úrovně automatizace'),
       ],
     },
   ];
 
-  const vacuumSystems = [
+  const vacuumProducts: BarbaricProduct[] = [
     {
-      name: 'Vakuumheber Basic',
-      desc: tr('Manuelle Handhabung für Werkstatt und Tischlerei', 'Manual handling for workshop and carpentry', 'Ruční manipulace pro dílnu a truhlářství'),
+      name: tr('Säulenschwenkkran SSK', 'Pillar jib crane SSK', 'Sloupový otočný jeřáb SSK'),
+      image: 'https://www.barbaric.at/fileadmin/_processed_/e/0/csm_UWL3_SSK_Akk_web_defb4e939b.png',
+      url: 'https://www.barbaric.at/vakuumhandling-holz/',
+      desc: tr(
+        'Kompakter Kran für ergonomisches Vakuumhandling im täglichen Holzplatten-Handling.',
+        'Compact crane for ergonomic vacuum handling in daily wood panel operations.',
+        'Kompaktní jeřáb pro ergonomickou vakuovou manipulaci při každodenní práci s deskami.'
+      ),
       specs: [
-        tr('Traglast: bis 200 kg', 'Payload: up to 200 kg', 'Nosnost: až 200 kg'),
-        tr('Saugscheiben: 4-8 Stück', 'Suction pads: 4-8 units', 'Přísavky: 4-8 ks'),
-        tr('Drehbar: 360°', 'Rotatable: 360°', 'Otáčení: 360°'),
-        tr('Neigbar: 90°', 'Tiltable: 90°', 'Naklápění: 90°'),
+        tr('Traglast bis 100 kg', 'Load capacity up to 100 kg', 'Nosnost až 100 kg'),
+        tr('Schwenkbereich 360°', '360° swivel range', 'Rozsah otočení 360°'),
+        tr('Kippbereich 90°', '90° tilting range', 'Rozsah naklopení 90°'),
       ],
     },
     {
-      name: 'Vakuumheber Pro',
-      desc: tr('Professionelle Lösung mit erweiterten Funktionen', 'Professional solution with advanced features', 'Profesionální řešení s rozšířenými funkcemi'),
+      name: 'UniWood UWL 3',
+      image: 'https://www.barbaric.at/fileadmin/_processed_/9/8/csm_UWL3_Akkordeon_9a5c0310b5.png',
+      url: 'https://www.barbaric.at/vakuumhandling-holz/',
+      desc: tr(
+        'Der Standardheber für das Holzhandling mit 90° Kippwerk für stehende und liegende Manipulation.',
+        'The standard lifter for wood handling with 90° tilting for vertical and horizontal manipulation.',
+        'Standardní zvedák pro manipulaci se dřevem s náklonem 90° pro svislé i vodorovné operace.'
+      ),
       specs: [
-        tr('Traglast: bis 500 kg', 'Payload: up to 500 kg', 'Nosnost: až 500 kg'),
-        tr('Saugscheiben: 6-12 Stück', 'Suction pads: 6-12 units', 'Přísavky: 6-12 ks'),
-        tr('Elektrische Neigung', 'Electric tilting', 'Elektrické naklápění'),
-        tr('Sicherheitswarnsystem', 'Safety warning system', 'Bezpečnostní výstražný systém'),
+        tr('Traglast bis 250 kg', 'Load capacity up to 250 kg', 'Nosnost až 250 kg'),
+        tr('Geeignet für OSB, Spanplatten und MDF ab 8 mm', 'Suitable for OSB, chipboard, and MDF from 8 mm', 'Vhodné pro OSB, dřevotřísku a MDF od 8 mm'),
+        tr('Leichte Bauweise mit einfacher Bedienung', 'Lightweight design with easy operation', 'Lehká konstrukce a jednoduché ovládání'),
       ],
-    },
-    {
-      name: 'Vakuum-Portalsystem',
-      desc: tr('Vollautomatische Beschickung mit Linienportal', 'Fully automatic feeding with gantry system', 'Plně automatické podávání s portálovým systémem'),
-      specs: [
-        tr('Traglast: bis 800 kg', 'Payload: up to 800 kg', 'Nosnost: až 800 kg'),
-        tr('Positioniergenauigkeit: ±0,5 mm', 'Positioning accuracy: ±0.5 mm', 'Přesnost polohování: ±0,5 mm'),
-        tr('Geschwindigkeit: bis 120 m/min', 'Speed: up to 120 m/min', 'Rychlost: až 120 m/min'),
-        tr('Integration in Sägen', 'Integration into saws', 'Integrace do pil'),
-      ],
-    },
-  ];
-
-  const handlingSystems = [
-    {
-      name: 'Pufferspeicher',
-      desc: tr('Zwischenpuffer für kontinuierliche Produktion', 'Buffer storage for continuous production', 'Mezisklad pro kontinuální výrobu'),
-      specs: [
-        tr('Kapazität: 10-50 Platten', 'Capacity: 10-50 panels', 'Kapacita: 10-50 desek'),
-        tr('Automatische Zuführung', 'Automatic feeding', 'Automatické podávání'),
-        'FIFO control',
-      ],
-    },
-    {
-      name: 'Rückführanlage',
-      desc: tr('Automatische Rückführung von Restplatten', 'Automatic return of residual panels', 'Automatické vracení zbytkových desek'),
-      specs: [
-        tr('Restplattenmanagement', 'Residual panel management', 'Správa zbytkových desek'),
-        tr('Automatische Sortierung', 'Automatic sorting', 'Automatické třídění'),
-        'ERP integration',
-      ],
-    },
-    {
-      name: 'Krananlagen',
-      desc: tr('Brückenkrane für schwere Lasten', 'Bridge cranes for heavy loads', 'Mostové jeřáby pro těžká břemena'),
-      specs: [
-        tr('Traglast: bis 5.000 kg', 'Payload: up to 5,000 kg', 'Nosnost: až 5 000 kg'),
-        tr('Steuerung: Funk oder Kabel', 'Control: radio or cable', 'Ovládání: rádiové nebo kabelové'),
-        tr('Sicherheitssysteme', 'Safety systems', 'Bezpečnostní systémy'),
-      ],
-    },
-  ];
-
-  const benefits = [
-    {
-      value: '40%',
-      label: tr('mehr Lagerkapazität', 'more storage capacity', 'vyšší skladovací kapacita'),
-      desc: tr('Durch chaotische Lagerung', 'Through chaotic storage', 'Díky chaotickému skladování'),
-    },
-    {
-      value: '2x',
-      label: tr('schneller', 'faster', 'rychlejší'),
-      desc: tr('Kommissionierung vs. manuell', 'Picking vs. manual handling', 'Kompletace vs. ruční práce'),
-    },
-    {
-      value: '99.9%',
-      label: tr('Genauigkeit', 'accuracy', 'přesnost'),
-      desc: tr('Bestandsverwaltung', 'inventory management', 'správa zásob'),
-    },
-    {
-      value: '1',
-      label: tr('Mitarbeiter', 'operator', 'pracovník'),
-      desc: tr('Statt 3 für Manipulation', 'instead of 3 for handling', 'místo 3 pro manipulaci'),
     },
   ];
 
@@ -185,59 +196,62 @@ const BarbaricPage = () => {
           logoSrc="https://www.barbaric.at/fileadmin/user_upload/Bilder_Barbaric/Logos/Logo_Barbaric_withSlogan.png"
           logoAlt="BARBARIC logo"
           introText={tr(
-            'Made in Austria – Automatisierungs- und Handlinglösungen vom manuellen Vakuumheber bis zum vollautomatischen Flächenlager.',
-            'Made in Austria - Automation and handling solutions from manual vacuum lifters to fully automatic panel storage systems.',
-            'Made in Austria - Automatizační a manipulační řešení od ručních vakuových zvedáků až po plně automatické plošné sklady.'
+            'Automatisierungs- und Handlinglösungen vom manuellen Vakuumheber bis zum vollautomatischen Flächenlager.',
+            'Automation and handling solutions from manual vacuum lifters to fully automatic panel storage systems.',
+            'Automatizační a manipulační řešení od ručních vakuových zvedáků až po plně automatické plošné sklady.'
           )}
         />
 
-        <div className="product-item mb-16 flex items-center gap-4 p-6 bg-gradient-to-r from-orange-500/10 to-transparent rounded-xl border border-orange-500/20">
-          <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
-            <span className="text-2xl">🇦🇹</span>
-          </div>
-          <div>
-            <h3 className="text-white font-medium">{tr('Made in Austria', 'Made in Austria', 'Vyrobeno v Rakousku')}</h3>
-            <p className="text-white/50 text-sm">
-              {tr(
-                'Höchste Qualität und Präzision – entwickelt und gefertigt in Österreich',
-                'Highest quality and precision - developed and manufactured in Austria',
-                'Nejvyšší kvalita a přesnost - vyvinuto a vyrobeno v Rakousku'
-              )}
-            </p>
-          </div>
-        </div>
-
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <div className="accent-line" />
-            <Boxes className="w-5 h-5 text-primary" />
-            <h2 className="text-2xl font-display font-light text-white">{tr('Flächenlager', 'Panel Storage Systems', 'Plošné sklady')}</h2>
+            <h2 className="text-2xl font-display font-light text-white">
+              {tr('BARBARIC Produktübersicht', 'BARBARIC Product Overview', 'Přehled produktů BARBARIC')}
+            </h2>
           </div>
           <p className="text-white/50 mb-8 max-w-3xl">
             {tr(
-              'Vollautomatische Lagersysteme für effiziente Materialflüsse. Von der Einlagerung bis zur Kommissionierung – alles automatisiert.',
-              'Fully automatic storage systems for efficient material flow. From storage to picking - everything is automated.',
-              'Plně automatické skladové systémy pro efektivní tok materiálu. Od naskladnění po kompletaci - vše automatizováno.'
+              'Aktualisierte Lösungen für Plattenaufteilsägen, Lager, Türen- und Massivholzprozesse.',
+              'Updated solutions for panel saws, storage, door handling, and solid wood processes.',
+              'Aktualizovaná řešení pro pily na desky, sklady, dveřní a masivní dřevěné procesy.'
             )}
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {storageSystems.map((product, index) => (
-              <div key={index} className="product-item product-card-dark p-6">
-                <div className="flex items-start justify-between mb-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {automationProducts.map((product) => (
+              <article key={product.name} className="product-item product-card-dark p-6">
+                <div className="mb-4 rounded-xl overflow-hidden border border-white/10 bg-dark-elevated">
+                  <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                </div>
+                <div className="flex items-start justify-between gap-3 mb-4">
                   <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
-                  <ArrowUpRight className="w-5 h-5 text-white/30" />
+                  <a
+                    href={product.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white/30 hover:text-primary transition-colors"
+                    aria-label={tr('Produkt öffnen', 'Open product', 'Otevřít produkt')}
+                  >
+                    <ArrowUpRight className="w-5 h-5" />
+                  </a>
                 </div>
                 <p className="text-white/50 text-sm mb-4">{product.desc}</p>
-                <ul className="space-y-2">
-                  {product.specs.map((spec, i) => (
-                    <li key={i} className="text-xs text-white/40 flex items-center gap-2">
+                <ul className="space-y-2 mb-4">
+                  {product.specs.map((spec) => (
+                    <li key={spec} className="text-xs text-white/40 flex items-center gap-2">
                       <span className="w-1 h-1 bg-primary rounded-full" />
                       {spec}
                     </li>
                   ))}
                 </ul>
-              </div>
+                <div className="flex flex-wrap gap-3">
+                  {product.extraLink ? (
+                    <a href={product.extraLink.href} className="text-sm text-white/70 hover:text-white transition-colors">
+                      {product.extraLink.label}
+                    </a>
+                  ) : null}
+                </div>
+              </article>
             ))}
           </div>
         </section>
@@ -245,73 +259,86 @@ const BarbaricPage = () => {
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <div className="accent-line" />
-            <GripVertical className="w-5 h-5 text-primary" />
-            <h2 className="text-2xl font-display font-light text-white">{tr('Vakuumhandling', 'Vacuum Handling', 'Vakuová manipulace')}</h2>
+            <h2 className="text-2xl font-display font-light text-white">
+              {tr('Speziallösungen', 'Special Solutions', 'Speciální řešení')}
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {specialHandlingProducts.map((product) => (
+              <article key={product.name} className="product-item product-card-dark p-6">
+                <div className="mb-4 rounded-xl overflow-hidden border border-white/10 bg-dark-elevated">
+                  <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                </div>
+                <div className="flex items-start justify-between gap-3 mb-4">
+                  <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
+                  <a
+                    href={product.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white/30 hover:text-primary transition-colors"
+                    aria-label={tr('Produkt öffnen', 'Open product', 'Otevřít produkt')}
+                  >
+                    <ArrowUpRight className="w-5 h-5" />
+                  </a>
+                </div>
+                <p className="text-white/50 text-sm mb-4">{product.desc}</p>
+                <ul className="space-y-2 mb-4">
+                  {product.specs.map((spec) => (
+                    <li key={spec} className="text-xs text-white/40 flex items-center gap-2">
+                      <span className="w-1 h-1 bg-primary rounded-full" />
+                      {spec}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-20">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="accent-line" />
+            <h2 className="text-2xl font-display font-light text-white">
+              {tr('Vakuumhandling Holz', 'Vacuum Handling Wood', 'Vakuová manipulace dřevo')}
+            </h2>
           </div>
           <p className="text-white/50 mb-8 max-w-3xl">
             {tr(
-              'Effiziente Handhabung von schweren Platten – mit höchster Ergonomie und ohne körperliche Anstrengung.',
-              'Efficient handling of heavy panels with excellent ergonomics and minimal physical effort.',
-              'Efektivní manipulace s těžkými deskami s maximální ergonomií a bez fyzické námahy.'
+              'Säulenschwenkkran SSK und UniWood UWL 3 sind zwei starke Standardlösungen. Weitere Produkte aus dem BARBARIC Holz-Vakuumhandling bieten wir auf Anfrage an.',
+              'Pillar jib crane SSK and UniWood UWL 3 are two strong standard solutions. Additional BARBARIC wood vacuum handling products are available on request.',
+              'Sloupový jeřáb SSK a UniWood UWL 3 jsou dvě silná standardní řešení. Další produkty BARBARIC pro vakuovou manipulaci se dřevem nabízíme na vyžádání.'
             )}
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {vacuumSystems.map((product, index) => (
-              <div key={index} className="product-item product-card-dark p-6">
-                <div className="flex items-start justify-between mb-4">
+          <div className="grid md:grid-cols-2 gap-6">
+            {vacuumProducts.map((product) => (
+              <article key={product.name} className="product-item product-card-dark p-6">
+                <div className="mb-4 rounded-xl overflow-hidden border border-white/10 bg-dark-elevated">
+                  <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                </div>
+                <div className="flex items-start justify-between gap-3 mb-4">
                   <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
-                  <ArrowUpRight className="w-5 h-5 text-white/30" />
+                  <a
+                    href={product.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white/30 hover:text-primary transition-colors"
+                    aria-label={tr('Produkt öffnen', 'Open product', 'Otevřít produkt')}
+                  >
+                    <ArrowUpRight className="w-5 h-5" />
+                  </a>
                 </div>
                 <p className="text-white/50 text-sm mb-4">{product.desc}</p>
-                <ul className="space-y-2">
-                  {product.specs.map((spec, i) => (
-                    <li key={i} className="text-xs text-white/40 flex items-center gap-2">
+                <ul className="space-y-2 mb-4">
+                  {product.specs.map((spec) => (
+                    <li key={spec} className="text-xs text-white/40 flex items-center gap-2">
                       <span className="w-1 h-1 bg-primary rounded-full" />
                       {spec}
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-20">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="accent-line" />
-            <h2 className="text-2xl font-display font-light text-white">{tr('Zusätzliche Handlinglösungen', 'Additional Handling Solutions', 'Další manipulační řešení')}</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {handlingSystems.map((product, index) => (
-              <div key={index} className="product-item product-card-dark p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
-                  <ArrowUpRight className="w-5 h-5 text-white/30" />
-                </div>
-                <p className="text-white/50 text-sm mb-4">{product.desc}</p>
-                <ul className="space-y-2">
-                  {product.specs.map((spec, i) => (
-                    <li key={i} className="text-xs text-white/40 flex items-center gap-2">
-                      <span className="w-1 h-1 bg-primary rounded-full" />
-                      {spec}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-20">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((stat, index) => (
-              <div key={index} className="product-item text-center p-6 bg-dark-card rounded-2xl border border-white/5">
-                <div className="text-4xl font-display font-bold text-orange-500 mb-2">{stat.value}</div>
-                <div className="text-white font-medium mb-1">{stat.label}</div>
-                <div className="text-white/40 text-sm">{stat.desc}</div>
-              </div>
+              </article>
             ))}
           </div>
         </section>
