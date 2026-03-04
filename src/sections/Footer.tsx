@@ -2,9 +2,10 @@ import { useLanguage } from '../App';
 import { ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import { trackEvent } from '../lib/analytics';
 
 const Footer = () => {
-  const { lang, t } = useLanguage();
+  const { lang, t, buildPath } = useLanguage();
 
   const locale =
     lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
@@ -19,8 +20,16 @@ const Footer = () => {
     return en;
   };
 
+  const handleFooterLinkClick = (target: string) => {
+    trackEvent('footer_cta_click', {
+      target,
+      lang,
+    });
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    trackEvent('footer_scroll_top_click', { lang });
   };
 
   return (
@@ -28,7 +37,7 @@ const Footer = () => {
       <div className="container-wide">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-6">
+            <Link to={buildPath('/')} className="flex items-center gap-3 mb-6">
               <svg
                 width="36"
                 height="36"
@@ -83,22 +92,22 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/mayer" className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to={buildPath('/mayer')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {tr('Mayer Sägen', 'Mayer Saws', 'Pily Mayer')}
                 </Link>
               </li>
               <li>
-                <Link to="/ott" className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to={buildPath('/ott')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {tr('OTT Kantenleimer', 'OTT Edgebanders', 'Olepovačky hran OTT')}
                 </Link>
               </li>
               <li>
-                <Link to="/barbaric" className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to={buildPath('/barbaric')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {tr('BARBARIC Lager', 'BARBARIC Storage', 'Sklady BARBARIC')}
                 </Link>
               </li>
               <li>
-                <Link to="/gebrauchtmaschinen" className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to={buildPath('/gebrauchtmaschinen')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje')}
                 </Link>
               </li>
@@ -111,17 +120,17 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/loesungen" className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to={buildPath('/loesungen')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {t.nav.solutions}
                 </Link>
               </li>
               <li>
-                <Link to="/service" className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to={buildPath('/service')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {t.nav.service}
                 </Link>
               </li>
               <li>
-                <Link to="/kontakt" className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to={buildPath('/kontakt')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {t.nav.contact}
                 </Link>
               </li>
@@ -136,13 +145,15 @@ const Footer = () => {
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <Link
-              to="/impressum"
+              to={buildPath('/impressum')}
+              onClick={() => handleFooterLinkClick('impressum')}
               className="text-white/30 text-sm hover:text-white transition-colors"
             >
               {t.footer.imprint}
             </Link>
             <a
               href="#"
+              onClick={() => handleFooterLinkClick('privacy')}
               className="text-white/30 text-sm hover:text-white transition-colors"
             >
               {t.footer.privacy}

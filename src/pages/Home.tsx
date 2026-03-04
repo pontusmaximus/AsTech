@@ -1,14 +1,17 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { useLanguage } from '../App';
 import { ArrowRight, ArrowUpRight, Database } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import SeoHead from '../seo/SeoHead';
+import { organizationSchema, localBusinessSchemas, websiteSchema } from '../seo/structuredData';
+import { trackEvent } from '../lib/analytics';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-  const { t, lang } = useLanguage();
+  const { t, lang, buildPath } = useLanguage();
   const heroRef = useRef<HTMLDivElement>(null);
   const locale =
     lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
@@ -75,6 +78,26 @@ const Home = () => {
     tr('Technologie mit Erfahrung.', 'Technology with experience.', 'Technologie se zkušeností.'),
     tr('Lösungen mit Zukunft.', 'Solutions with a future.', 'Řešení s budoucností.'),
   ];
+  const structuredData = useMemo(() => {
+    const businesses = localBusinessSchemas();
+    return [organizationSchema(), ...businesses, websiteSchema()];
+  }, []);
+
+  const handleHeroContactClick = () => {
+    trackEvent('hero_contact_click', {
+      placement: 'home_hero',
+      lang,
+      target: 'office@asamer.net',
+    });
+  };
+
+  const handleHomeContactClick = (placement: string, target: string = 'office@asamer.net') => {
+    trackEvent('home_contact_click', {
+      placement,
+      lang,
+      target,
+    });
+  };
 
   const solutions = [
     {
@@ -153,7 +176,9 @@ const Home = () => {
   ];
 
   return (
-    <div ref={heroRef} className="bg-dark">
+    <>
+      <SeoHead routeKey="home" structuredData={structuredData} />
+      <div ref={heroRef} className="bg-dark">
       <section className="relative min-h-[86svh] md:min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <div
@@ -182,11 +207,11 @@ const Home = () => {
             </p>
 
             <div className="hero-cta flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 mb-2 sm:mb-0">
-              <a href={generalInquiryMail} className="btn-primary-dark">
+              <a href={generalInquiryMail} className="btn-primary-dark" onClick={handleHeroContactClick}>
                 {t.hero.cta}
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="/ott" className="btn-outline-dark">
+              <a href={buildPath('/ott')} className="btn-outline-dark">
                 {tr('Produkte entdecken', 'Discover products', 'Objevit produkty')}
                 <ArrowUpRight className="w-5 h-5" />
               </a>
@@ -213,15 +238,17 @@ const Home = () => {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-6">
-            {solutions.map((solution, index) => (
-              <a
-                key={index}
-                href={solution.link}
-                className="section-animate product-card-dark group"
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <div
-                    className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+            {solutions.map((solution, index) => {
+              const href = solution.link.startsWith('http') ? solution.link : buildPath(solution.link);
+              return (
+                <a
+                  key={index}
+                  href={href}
+                  className="section-animate product-card-dark group"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <div
+                      className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                     style={{ backgroundImage: `url(${solution.image})` }}
                   />
                 </div>
@@ -240,8 +267,9 @@ const Home = () => {
                     <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </span>
                 </div>
-              </a>
-            ))}
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -273,7 +301,10 @@ const Home = () => {
                       <div>
                         <h4 className="text-white font-medium mb-2">{item.title}</h4>
                         <p className="text-white/60 text-sm leading-relaxed mb-2">{item.description}</p>
-                        <a href={item.link} className="text-primary/90 text-xs hover:text-primary transition-colors">
+                        <a
+                          href={item.link.startsWith('http') ? item.link : buildPath(item.link)}
+                          className="text-primary/90 text-xs hover:text-primary transition-colors"
+                        >
                           {item.linkLabel}
                         </a>
                       </div>
@@ -282,7 +313,7 @@ const Home = () => {
                 ))}
               </div>
 
-              <a href="/finanzierung" className="btn-outline-dark inline-flex">
+              <a href={buildPath('/finanzierung')} className="btn-outline-dark inline-flex">
                 {tr('Zur Finanzierungsseite', 'Go to funding page', 'Přejít na stránku financování')}
                 <ArrowUpRight className="w-5 h-5" />
               </a>
@@ -409,7 +440,7 @@ const Home = () => {
             ))}
           </div>
 
-          <a href="/service" className="btn-outline-dark mt-6 inline-flex">
+          <a href={buildPath('/service')} className="btn-outline-dark mt-6 inline-flex">
             {tr('Zur Service-Seite', 'Go to service page', 'Přejít na stránku servisu')}
             <ArrowUpRight className="w-5 h-5" />
           </a>
@@ -428,18 +459,27 @@ const Home = () => {
               {t.contact.subtitle}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={contactInquiryMail} className="btn-primary-dark">
+              <a
+                href={contactInquiryMail}
+                className="btn-primary-dark"
+                onClick={() => handleHomeContactClick('contact_section')}
+              >
                 {tr('E-Mail senden', 'Send email', 'Poslat e-mail')}
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="tel:+420123456789" className="btn-outline-dark">
+              <a
+                href="tel:+420123456789"
+                className="btn-outline-dark"
+                onClick={() => handleHomeContactClick('contact_section_phone', 'tel:+420123456789')}
+              >
                 {tr('Anrufen', 'Call', 'Zavolat')}
               </a>
             </div>
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

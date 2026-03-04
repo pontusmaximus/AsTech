@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, Factory, Layers3, ScissorsSquare } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import SeoHead from '../seo/SeoHead';
 
 const SolutionsPage = () => {
   const { lang } = useLanguage();
@@ -75,7 +76,9 @@ const SolutionsPage = () => {
   )}`;
 
   return (
-    <div className="bg-dark min-h-screen">
+    <>
+      <SeoHead routeKey="solutions" />
+      <div className="bg-dark min-h-screen">
       <section className="pt-28 md:pt-36 pb-16">
         <div className="container-wide">
           <div className="max-w-5xl">
@@ -163,7 +166,8 @@ const SolutionsPage = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

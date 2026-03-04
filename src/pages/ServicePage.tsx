@@ -1,6 +1,7 @@
 import { AlertTriangle, ArrowRight, Award, ShieldCheck, Wrench } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import SeoHead from '../seo/SeoHead';
 
 const ServicePage = () => {
   const { lang } = useLanguage();
@@ -68,7 +69,9 @@ const ServicePage = () => {
   )}`;
 
   return (
-    <div className="bg-dark min-h-screen">
+    <>
+      <SeoHead routeKey="service" />
+      <div className="bg-dark min-h-screen">
       <section className="pt-28 md:pt-36 pb-16">
         <div className="container-wide">
           <div className="max-w-5xl">
@@ -157,7 +160,8 @@ const ServicePage = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

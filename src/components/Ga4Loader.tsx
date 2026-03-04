@@ -12,7 +12,13 @@ const SCRIPT_ID = 'asamer-ga4-script';
 const Ga4Loader = () => {
   useEffect(() => {
     const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID as string | undefined;
-    if (!measurementId) return;
+    if (!measurementId) {
+      if (import.meta.env.DEV) {
+        // eslint-disable-next-line no-console
+        console.warn('[GA4] VITE_GA_MEASUREMENT_ID is missing; analytics is disabled.');
+      }
+      return;
+    }
 
     if (!window.dataLayer) {
       window.dataLayer = [];
@@ -54,4 +60,3 @@ const Ga4Loader = () => {
 };
 
 export default Ga4Loader;
-

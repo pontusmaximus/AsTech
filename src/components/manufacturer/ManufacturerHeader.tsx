@@ -1,4 +1,5 @@
 import { ArrowLeft } from 'lucide-react';
+import { useLanguage } from '../../App';
 
 export interface ManufacturerHeaderProps {
   backLabel: string;
@@ -17,9 +18,14 @@ const ManufacturerHeader = ({
   introText,
   logoClassName,
 }: ManufacturerHeaderProps) => {
+  const { buildPath } = useLanguage();
+
   return (
     <>
-      <a href="/" className="page-header inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-12">
+      <a
+        href={buildPath('/')}
+        className="page-header inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-12"
+      >
         <ArrowLeft className="w-4 h-4" />
         {backLabel}
       </a>

@@ -1,6 +1,8 @@
 import { ArrowRight, CheckCircle2, Mail, Tag } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import SeoHead from '../seo/SeoHead';
+import { trackEvent } from '../lib/analytics';
 
 type UsedMachine = {
   name: string;
@@ -72,8 +74,19 @@ const UsedMachinesPage = () => {
     tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptavka na pouzity stroj')
   )}`;
 
+  const handleMachineInquiryClick = (machine: UsedMachine, placement: string) => {
+    trackEvent('used_machine_inquiry_click', {
+      product_name: machine.name,
+      manufacturer: machine.manufacturer,
+      placement,
+      lang,
+    });
+  };
+
   return (
-    <div className="bg-dark min-h-screen">
+    <>
+      <SeoHead routeKey="usedMachines" />
+      <div className="bg-dark min-h-screen">
       <section className="pt-28 md:pt-36 pb-16">
         <div className="container-wide">
           <div className="max-w-5xl">
@@ -134,7 +147,11 @@ const UsedMachinesPage = () => {
                     <span>{tr('Zustand', 'Condition', 'Stav')}: {machine.condition}</span>
                   </div>
                 </div>
-                <a href={inquiryMail} className="btn-outline-dark w-full justify-center">
+                <a
+                  href={inquiryMail}
+                  className="btn-outline-dark w-full justify-center"
+                  onClick={() => handleMachineInquiryClick(machine, 'card')}
+                >
                   <Mail className="w-4 h-4" />
                   {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptavku')}
                 </a>
@@ -159,14 +176,26 @@ const UsedMachinesPage = () => {
                 )}
               </p>
             </div>
-            <a href={generalInquiryMail} className="btn-primary-dark sm:whitespace-nowrap justify-center">
+            <a
+              href={generalInquiryMail}
+              className="btn-primary-dark sm:whitespace-nowrap justify-center"
+              onClick={() =>
+                trackEvent('used_machine_inquiry_click', {
+                  product_name: 'general',
+                  manufacturer: 'general',
+                  placement: 'general_cta',
+                  lang,
+                })
+              }
+            >
               {tr('Anfrage starten', 'Start inquiry', 'Zahajit poptavku')}
               <ArrowRight className="w-5 h-5" />
             </a>
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

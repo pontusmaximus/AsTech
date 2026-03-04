@@ -1,6 +1,10 @@
+import { useMemo } from 'react';
 import { Building2, Mail, Phone, UserRound } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import SeoHead from '../seo/SeoHead';
+import { organizationSchema, localBusinessSchemas } from '../seo/structuredData';
+import { trackEvent } from '../lib/analytics';
 
 const ContactPage = () => {
   const { lang } = useLanguage();
@@ -18,8 +22,24 @@ const ContactPage = () => {
     return en;
   };
 
+  const structuredData = useMemo(() => {
+    const businesses = localBusinessSchemas();
+    return [organizationSchema(), ...businesses];
+  }, []);
+
+  const handleContactAction = (type: 'phone' | 'email', person: string, placement: string) => {
+    trackEvent('contact_action', {
+      type,
+      person,
+      placement,
+      lang,
+    });
+  };
+
   return (
-    <div className="bg-dark min-h-screen">
+    <>
+      <SeoHead routeKey="contact" structuredData={structuredData} />
+      <div className="bg-dark min-h-screen">
       <section className="pt-28 md:pt-36 pb-12">
         <div className="container-wide">
           <div className="max-w-4xl">
@@ -84,11 +104,19 @@ const ContactPage = () => {
               <h3 className="text-xl font-display font-medium text-white mb-1">Asamer Technologie GmbH</h3>
               <p className="text-white/60 text-sm mb-4">{tr('für Maschinen', 'for machinery', 'pro stroje')}</p>
               <div className="space-y-3 text-white/75">
-                <a href="tel:+436642633132" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                <a
+                  href="tel:+436642633132"
+                  onClick={() => handleContactAction('phone', 'asamer_gmbh', 'contact_card')}
+                  className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                >
                   <Phone className="w-4 h-4 text-primary" />
                   <span>+43 664 26 33 132</span>
                 </a>
-                <a href="mailto:eli@asamer.net" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                <a
+                  href="mailto:eli@asamer.net"
+                  onClick={() => handleContactAction('email', 'eli@asamer.net', 'contact_card')}
+                  className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                >
                   <Mail className="w-4 h-4 text-primary" />
                   <span>eli@asamer.net</span>
                 </a>
@@ -102,11 +130,19 @@ const ContactPage = () => {
               <h3 className="text-xl font-display font-medium text-white mb-1">Asamer s.r.o.</h3>
               <p className="text-white/60 text-sm mb-4">{tr('für Servicefragen', 'for service inquiries', 'pro servisní dotazy')}</p>
               <div className="space-y-3 text-white/75">
-                <a href="tel:+420724056965" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                <a
+                  href="tel:+420724056965"
+                  onClick={() => handleContactAction('phone', 'asamer_sro', 'contact_card')}
+                  className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                >
                   <Phone className="w-4 h-4 text-primary" />
                   <span>Herr Petras: +420 724 056 965</span>
                 </a>
-                <a href="mailto:office@asamer.net" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                <a
+                  href="mailto:office@asamer.net"
+                  onClick={() => handleContactAction('email', 'office@asamer.net', 'contact_card')}
+                  className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                >
                   <Mail className="w-4 h-4 text-primary" />
                   <span>office@asamer.net</span>
                 </a>
@@ -115,7 +151,8 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
 import { trackEvent } from '../lib/analytics';
+import SeoHead from '../seo/SeoHead';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +20,7 @@ type MachineProduct = {
 };
 
 const MayerPage = () => {
-  const { lang } = useLanguage();
+  const { lang, buildPath } = useLanguage();
   const locale =
     lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
       ? lang
@@ -231,8 +232,10 @@ const MayerPage = () => {
   ];
 
   return (
-    <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
-      <div className="container-wide">
+    <>
+      <SeoHead routeKey="mayer" />
+      <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
+        <div className="container-wide">
         <ManufacturerHeader
           backLabel={tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
           brandNameForSrOnly="Mayer"
@@ -264,8 +267,8 @@ const MayerPage = () => {
                   )}
                 </p>
               </div>
-              <Link
-                to="/barbaric"
+                <Link
+                  to={buildPath('/barbaric')}
                 className="btn-outline-dark sm:whitespace-nowrap"
                 onClick={() => trackBarbaricNavigation('complete_solution_cta')}
               >
@@ -434,8 +437,8 @@ const MayerPage = () => {
               </p>
             </div>
             <div className="flex flex-col items-start gap-3">
-              <Link
-                to="/barbaric"
+                <Link
+                  to={buildPath('/barbaric')}
                 className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors"
                 onClick={() => trackBarbaricNavigation('footer_cta')}
               >
@@ -450,7 +453,8 @@ const MayerPage = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

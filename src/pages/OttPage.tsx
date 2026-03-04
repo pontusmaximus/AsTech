@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
+import SeoHead from '../seo/SeoHead';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -201,8 +202,10 @@ const OttPage = () => {
   ];
 
   return (
-    <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
-      <div className="container-wide">
+    <>
+      <SeoHead routeKey="ott" />
+      <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
+        <div className="container-wide">
         <ManufacturerHeader
           backLabel={tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
           brandNameForSrOnly="OTT"
@@ -353,7 +356,8 @@ const OttPage = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

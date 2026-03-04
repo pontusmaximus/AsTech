@@ -48,7 +48,7 @@ const ConsentToggle = ({ title, description, checked, disabled, onChange }: Cons
 );
 
 const CookieConsent = () => {
-  const { lang } = useLanguage();
+  const { lang, buildPath } = useLanguage();
   const locale =
     lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
       ? lang
@@ -131,7 +131,7 @@ const CookieConsent = () => {
                       'We use cookies to run the website securely and activate optional features like analytics and marketing only with your consent.',
                       'Používáme cookies pro bezpečný provoz webu a volitelné funkce jako analytika a marketing aktivujeme pouze s vaším souhlasem.'
                     )}{' '}
-                    <Link to="/impressum" className="text-primary hover:text-primary/80 transition-colors">
+                    <Link to={buildPath('/impressum')} className="text-primary hover:text-primary/80 transition-colors">
                       {tr('Mehr erfahren', 'Learn more', 'Zjistit více')}
                     </Link>
                   </p>

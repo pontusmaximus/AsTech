@@ -7,6 +7,7 @@ import EligibilityWizard from '../features/financing/EligibilityWizard';
 import FinancingDetailsAccordion from '../features/financing/FinancingDetailsAccordion';
 import { rankPrograms } from '../features/financing/eligibility';
 import { getFlowSessionId, trackEvent } from '../lib/analytics';
+import SeoHead from '../seo/SeoHead';
 import type {
   BudgetRange,
   CompanyType,
@@ -356,7 +357,9 @@ const FinancingPage = () => {
   );
 
   return (
-    <div className="bg-dark min-h-screen">
+    <>
+      <SeoHead routeKey="financing" />
+      <div className="bg-dark min-h-screen">
       <section className="pt-28 md:pt-36 pb-8 financing-hero">
         <div className="container-wide">
           <div className="relative rounded-3xl overflow-hidden border border-white/10 min-h-[280px]">
@@ -468,7 +471,8 @@ const FinancingPage = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

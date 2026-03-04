@@ -1,6 +1,7 @@
 import { Building2 } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import SeoHead from '../seo/SeoHead';
 
 const ImprintPage = () => {
   const { lang } = useLanguage();
@@ -19,7 +20,9 @@ const ImprintPage = () => {
   };
 
   return (
-    <div className="bg-dark min-h-screen">
+    <>
+      <SeoHead routeKey="imprint" />
+      <div className="bg-dark min-h-screen">
       <section className="pt-28 md:pt-36 pb-16">
         <div className="container-wide">
           <div className="max-w-4xl">
@@ -57,7 +60,8 @@ const ImprintPage = () => {
           </article>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

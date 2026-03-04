@@ -3,15 +3,17 @@ import { useLanguage, useTheme } from '../App';
 import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import type { Language } from '../i18n';
+import { trackEvent } from '../lib/analytics';
+import { stripLanguageFromPath } from '../lib/language';
 
 const Navigation = () => {
-  const { lang, t, setLang } = useLanguage();
+  const { lang, t, setLang, buildPath } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.pathname === buildPath('/');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,6 +48,38 @@ const Navigation = () => {
     { code: 'hu', label: 'HU' },
   ];
 
+  const getCurrentPageSlug = () => {
+    const withoutLang = stripLanguageFromPath(location.pathname);
+    const parts = withoutLang.split('/').filter(Boolean);
+    return parts[0] ?? 'home';
+  };
+
+  const handleManufacturerClick = (target: string, placement: 'desktop' | 'mobile') => {
+    trackEvent('manufacturer_cross_navigation_click', {
+      from_page: getCurrentPageSlug(),
+      to_page: target,
+      placement: `nav_${placement}`,
+    });
+  };
+
+  const handleNavigationCta = (target: string, placement: string) => {
+    trackEvent('navigation_cta_click', {
+      target,
+      placement,
+      lang,
+    });
+  };
+
+  const changeLanguage = (nextLang: Language, placement: 'desktop' | 'mobile') => {
+    trackEvent('navigation_cta_click', {
+      target: 'language_selector',
+      placement: `language_${placement}`,
+      from_lang: lang,
+      target_lang: nextLang,
+    });
+    setLang(nextLang);
+  };
+
   // Determine background based on scroll and page
   const navBgClass = isScrolled
     ? 'nav-surface-scrolled'
@@ -67,7 +101,7 @@ const Navigation = () => {
       <div className="container-wide">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
+          <Link to={buildPath('/')} className="flex items-center gap-2 sm:gap-3 group">
             <div className="relative">
               <svg
                 width="36"
@@ -107,57 +141,61 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center gap-8">
             {/* Manufacturer Links */}
             <div className="flex items-center gap-6 mr-4 pr-4 border-r border-white/10">
-              <Link 
-                to="/ott" 
-                className={`text-sm transition-colors ${location.pathname === '/ott' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              <Link
+                to={buildPath('/ott')}
+                onClick={() => handleManufacturerClick('ott', 'desktop')}
+                className={`text-sm transition-colors ${location.pathname === buildPath('/ott') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
               >
                 OTT
               </Link>
-              <Link 
-                to="/mayer" 
-                className={`text-sm transition-colors ${location.pathname === '/mayer' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              <Link
+                to={buildPath('/mayer')}
+                onClick={() => handleManufacturerClick('mayer', 'desktop')}
+                className={`text-sm transition-colors ${location.pathname === buildPath('/mayer') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
               >
                 Mayer
               </Link>
-              <Link 
-                to="/barbaric" 
-                className={`text-sm transition-colors ${location.pathname === '/barbaric' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              <Link
+                to={buildPath('/barbaric')}
+                onClick={() => handleManufacturerClick('barbaric', 'desktop')}
+                className={`text-sm transition-colors ${location.pathname === buildPath('/barbaric') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
               >
                 BARBARIC
               </Link>
             </div>
 
             <Link
-              to="/loesungen"
-              className={`text-sm transition-colors ${location.pathname === '/loesungen' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              to={buildPath('/loesungen')}
+              className={`text-sm transition-colors ${location.pathname === buildPath('/loesungen') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.solutions}
             </Link>
 
             <Link
-              to="/finanzierung"
-              className={`text-sm transition-colors ${location.pathname === '/finanzierung' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              to={buildPath('/finanzierung')}
+              className={`text-sm transition-colors ${location.pathname === buildPath('/finanzierung') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.automation}
             </Link>
 
             <Link
-              to="/service"
-              className={`text-sm transition-colors ${location.pathname === '/service' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              to={buildPath('/service')}
+              className={`text-sm transition-colors ${location.pathname === buildPath('/service') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.service}
             </Link>
 
             <Link
-              to="/gebrauchtmaschinen"
-              className={`text-sm transition-colors ${location.pathname === '/gebrauchtmaschinen' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              to={buildPath('/gebrauchtmaschinen')}
+              className={`text-sm transition-colors ${location.pathname === buildPath('/gebrauchtmaschinen') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.usedMachines}
             </Link>
 
             <Link
-              to="/kontakt"
-              className={`text-sm transition-colors ${location.pathname === '/kontakt' ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              to={buildPath('/kontakt')}
+              onClick={() => handleNavigationCta('contact', 'nav_desktop')}
+              className={`text-sm transition-colors ${location.pathname === buildPath('/kontakt') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.contact}
             </Link>
@@ -195,7 +233,7 @@ const Navigation = () => {
                     <button
                       key={l.code}
                       onClick={() => {
-                        setLang(l.code);
+                        changeLanguage(l.code, 'desktop');
                         setIsLangMenuOpen(false);
                       }}
                       className={`w-full px-4 py-2 text-sm text-left transition-colors hover:bg-white/5 ${
@@ -234,41 +272,60 @@ const Navigation = () => {
               <div className="px-6 pb-4 border-b border-white/5">
                 <span className="text-xs uppercase tracking-widest text-white/30 mb-3 block">{manufacturerLabel}</span>
                 <div className="flex flex-col gap-3">
-                  <Link to="/ott" className="text-white/70 hover:text-white">OTT</Link>
-                  <Link to="/mayer" className="text-white/70 hover:text-white">Mayer</Link>
-                  <Link to="/barbaric" className="text-white/70 hover:text-white">BARBARIC</Link>
+                  <Link
+                    to={buildPath('/ott')}
+                    className="text-white/70 hover:text-white"
+                    onClick={() => handleManufacturerClick('ott', 'mobile')}
+                  >
+                    OTT
+                  </Link>
+                  <Link
+                    to={buildPath('/mayer')}
+                    className="text-white/70 hover:text-white"
+                    onClick={() => handleManufacturerClick('mayer', 'mobile')}
+                  >
+                    Mayer
+                  </Link>
+                  <Link
+                    to={buildPath('/barbaric')}
+                    className="text-white/70 hover:text-white"
+                    onClick={() => handleManufacturerClick('barbaric', 'mobile')}
+                  >
+                    BARBARIC
+                  </Link>
                 </div>
               </div>
 
               {/* Page Links */}
               <div className="px-6 flex flex-col gap-3">
                 <Link
-                  to="/loesungen"
-                  className={`text-left ${location.pathname === '/loesungen' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                  to={buildPath('/loesungen')}
+                  className={`text-left ${location.pathname === buildPath('/loesungen') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.solutions}
                 </Link>
                 <Link
-                  to="/finanzierung"
-                  className={`text-left ${location.pathname === '/finanzierung' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                  to={buildPath('/finanzierung')}
+                  className={`text-left ${location.pathname === buildPath('/finanzierung') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.automation}
                 </Link>
                 <Link
-                  to="/service"
-                  className={`text-left ${location.pathname === '/service' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                  to={buildPath('/service')}
+                  className={`text-left ${location.pathname === buildPath('/service') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.service}
                 </Link>
                 <Link
-                  to="/gebrauchtmaschinen"
-                  className={`text-left ${location.pathname === '/gebrauchtmaschinen' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                  to={buildPath('/gebrauchtmaschinen')}
+                  className={`text-left ${location.pathname === buildPath('/gebrauchtmaschinen') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.usedMachines}
                 </Link>
                 <Link
-                  to="/kontakt"
-                  className={`text-left ${location.pathname === '/kontakt' ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                  to={buildPath('/kontakt')}
+                  onClick={() => handleNavigationCta('contact', 'nav_mobile')}
+                  className={`text-left ${location.pathname === buildPath('/kontakt') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.contact}
                 </Link>
@@ -299,7 +356,7 @@ const Navigation = () => {
                     <button
                       key={l.code}
                       onClick={() => {
-                        setLang(l.code);
+                        changeLanguage(l.code, 'mobile');
                         setIsMobileMenuOpen(false);
                       }}
                       className={`px-3 py-1 text-sm rounded transition-colors ${
