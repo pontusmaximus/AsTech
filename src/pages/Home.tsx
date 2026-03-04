@@ -119,7 +119,8 @@ const Home = () => {
         'Mayer Kappa Automatic & Advanced Line. Precise panel saws for wood, plastic, and metal.',
         'Mayer Kappa Automatic & Advanced Line. Přesné pily na desky pro dřevo, plast a kov.'
       ),
-      image: 'https://www.mayersaws.com/WEB/Details/Plattenaufteilsaegen/image-thumb__1115__auto_98b2870f1f48c3375f41b72d638dee59/0191eee43889bec1aa0fd51bb6b943e6cc18d659.jpg',
+      image:
+        'https://www.felder-group.com/WEB/FelderGroup/M9-FullMedia/image-thumb__52693__fgroup-M9-bg/plattensaege-mayer-feldergroup-holzbearbeitung-1~-~media--6810e2a4--query@2x.jpg',
       link: '/mayer',
     },
     {
