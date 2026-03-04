@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>404 Seite nicht gefunden</title>
+		<meta name="robots" content="noindex" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+		var doNotTrack = function() {
+			if (document.cookie.indexOf('tracking=accepted') > -1) { return false; } else if (document.cookie.indexOf('tracking=declined') > -1) { return true; }
+			if(navigator.doNotTrack == 1 || navigator.msDoNotTrack == 1 || window.doNotTrack == 1 ) { return true; }
+			return false;
+		}
+		if(!doNotTrack()) {
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-6571633-1', 'auto');
+			ga('set',  'dimension1', '404');
+			ga('set',  'anonymizeIp', true);
+			ga('send', 'pageview');
+		}
+		</script>
+		<style>
+			body {
+				font-size: 16px;
+				font-family:'Segoe UI', Arial, sans-serif;
+				background: #f5f5f5;
+				color: #595959;
+			}
+			
+			p {
+				font-weight: bold;
+			}
+			
+			h1 {
+				font-size: 22px;
+				font-weight: bold;
+				margin: 0 0 30px;
+				color: #3872a4;
+			}
+			
+			h1 span {
+				display: block;
+				font-size: 100px;
+			}
+			
+			h2 {
+				font-size: 18px;
+				font-weight: bold;
+				color: #3872a4;
+				max-width:70%;
+				margin: 0 auto;
+			}
+			
+			#brand, #box {
+				max-width: 360px;
+				position: relative;
+			}
+			
+			#brand {
+				position: relative;
+				text-align: center;
+				height: auto;
+				margin: 40px auto;
+                max-width: 150px;
+			}
+            
+            #brand img {
+                width: 100%;
+                height: auto;
+            }
+			
+			#box {
+				background: #ffffff;
+				height: auto;
+				padding: 20px;
+				text-align: center;
+				margin: 0 auto;
+				border:1px solid #3872a4;
+			}
+			
+			form {
+				position: relative;
+				width: 80%;
+				margin: 40px auto 0;
+				max-width: 330px;
+			}
+			
+			form .submit, .button {
+				width: 80%;
+				max-width: 330px;
+			}
+			
+			form input[type="text"] {
+				background: #ffffff;
+				border: 0;
+				padding: 0 10px;
+				line-height: 40px;
+				height: 40px;
+				font-size: 15px;
+				font-style: italic;
+				width: 100%;
+				border: 1px solid #3872a4;
+			}
+			
+			form .submit {
+				display:inline-block;
+				position: absolute;
+				top:0; 
+				right:0;
+			}
+			
+			
+			form .submit:after {
+				content: "\1F50D";
+				position: absolute;
+				top: 0;
+				right: -5px;
+				cursor: pointer;
+				font-size: 26px;
+				color: #3872a4;
+				pointer-events: none;
+				cursor: pointer;
+			}
+			
+			form .submit button {
+				display: inline-block;
+				text-indent: -999rem;
+				width: 40px;
+				height: 40px;
+				border: 0;
+				background: none;
+				position: absolute;
+				top: 0;
+				right: -10px;
+				cursor: pointer;
+			}
+			
+			.button {
+				background: #3872a4;
+				color: #fff;
+				display: inline-block;
+				text-decoration: none;
+				line-height: 40px;
+				height: 40px;
+				margin: 15px 0 20px 20px;
+				padding: 0 10px;
+				text-transform: uppercase;
+				font-size: 13px;
+				font-weight: bold;
+				letter-spacing: 2px;
+			}
+			
+			@media (min-width: 992px) {
+				* {
+					font-size: 17px;
+				}
+				
+				h1 {
+					font-size: 30px;
+				}
+				
+				h1 span {
+					font-size: 200px;
+				}
+				
+				h2 {
+					font-size: 24px;
+					line-height: 28px;
+				}
+				
+				#box {
+					width: 70%;
+					height: auto;
+					max-width: 1280px;
+				}
+				
+				#brand {
+					text-align: left;
+				}
+				
+				#content {
+					border: 1px solid #3872a4;
+					padding: 5%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="brand"><img src="/typo3conf/ext/zz_gowest_theme_ottpaul/Resources/Public/Images/brand.svg" width="360" /></div>
+		<div id="box">
+			<div id="content">
+				<h1><span>404</span> Seite nicht gefunden</h1>
+				<h2>Es tut uns sehr leid, die von Ihnen aufgerufene Seite konnte nicht gefunden werden.</h2>
+				<p>Die Seite wurde unter Umständen verlegt oder ist nicht länger verfügbar.</p>
+				<a class="button" href="/">zur Startseite</a>
+			</div>
+		</div>
+	</body>
+</html>

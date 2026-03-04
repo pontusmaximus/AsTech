@@ -8,6 +8,7 @@ export interface ManufacturerHeaderProps {
   logoAlt: string;
   introText: string;
   logoClassName?: string;
+  logoWrapperClassName?: string;
 }
 
 const ManufacturerHeader = ({
@@ -17,6 +18,7 @@ const ManufacturerHeader = ({
   logoAlt,
   introText,
   logoClassName,
+  logoWrapperClassName,
 }: ManufacturerHeaderProps) => {
   const { buildPath } = useLanguage();
 
@@ -33,7 +35,11 @@ const ManufacturerHeader = ({
       <div className="page-header mb-16">
         <h1 className="sr-only">{brandNameForSrOnly}</h1>
         <div className="mb-8 flex justify-center">
-          <div className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/[0.04] px-6 sm:px-8 py-5 backdrop-blur-sm shadow-[0_12px_32px_rgba(0,0,0,0.25)]">
+          <div
+            className={`inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/[0.04] px-6 sm:px-8 py-5 backdrop-blur-sm shadow-[0_12px_32px_rgba(0,0,0,0.25)] ${
+              logoWrapperClassName ?? ''
+            }`}
+          >
             <img
               src={logoSrc}
               alt={logoAlt}

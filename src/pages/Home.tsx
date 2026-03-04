@@ -99,7 +99,21 @@ const Home = () => {
     });
   };
 
-  const solutions = [
+  interface SolutionCard {
+    title: string;
+    subtitle: string;
+    description: string;
+    image: string;
+    link: string;
+    logo?: {
+      src: string;
+      alt: string;
+      className?: string;
+      wrapperClassName?: string;
+    };
+  }
+
+  const solutions: SolutionCard[] = [
     {
       title: tr('Kantenbearbeitung', 'Edgebanding', 'Olepování hran'),
       subtitle: 'PUR & LASER',
@@ -110,6 +124,12 @@ const Home = () => {
       ),
       image: 'https://www.ottpaul.com/fileadmin/_processed_/8/d/csm_entnahme-werkstueck-tornado_2ecb9d3d9c.jpg',
       link: '/ott',
+      logo: {
+        src: '/logos/ott.jpg',
+        alt: 'OTT logo',
+        className: 'h-12',
+        wrapperClassName: 'bg-white',
+      },
     },
     {
       title: tr('Schneiden', 'Cutting', 'Řezání'),
@@ -122,6 +142,12 @@ const Home = () => {
       image:
         'https://www.felder-group.com/WEB/FelderGroup/M9-FullMedia/image-thumb__52693__fgroup-M9-bg/plattensaege-mayer-feldergroup-holzbearbeitung-1~-~media--6810e2a4--query@2x.jpg',
       link: '/mayer',
+      logo: {
+        src: '/logos/mayer.svg',
+        alt: 'Mayer logo',
+        className: 'h-8',
+        wrapperClassName: 'bg-white',
+      },
     },
     {
       title: tr('Manipulation & Lager', 'Handling & Storage', 'Manipulace a skladování'),
@@ -133,6 +159,12 @@ const Home = () => {
       ),
       image: 'https://www.barbaric.at/fileadmin/_processed_/d/2/csm_UEbersichtCSF_1b60448c7a.png',
       link: '/barbaric',
+      logo: {
+        src: '/logos/barbaric.png',
+        alt: 'Barbaric logo',
+        className: 'h-10',
+        wrapperClassName: 'bg-white',
+      },
     },
   ];
 
@@ -242,19 +274,29 @@ const Home = () => {
             {solutions.map((solution, index) => {
               const href = solution.link.startsWith('http') ? solution.link : buildPath(solution.link);
               return (
-                <a
-                  key={index}
-                  href={href}
-                  className="section-animate product-card-dark group"
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
+                <a key={index} href={href} className="section-animate product-card-dark group">
+                  <div className="aspect-[4/3] overflow-hidden relative">
                     <div
                       className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                    style={{ backgroundImage: `url(${solution.image})` }}
-                  />
-                </div>
-                <div className="p-6">
-                  <span className="text-xs uppercase tracking-widest text-primary mb-2 block">
+                      style={{ backgroundImage: `url(${solution.image})` }}
+                    />
+                    {solution.logo && (
+                      <div
+                        className={`absolute top-3 left-3 inline-flex h-12 min-w-[56px] items-center justify-center rounded-full px-3 py-1 shadow-lg backdrop-blur ${
+                          solution.logo.wrapperClassName ?? 'bg-white/80'
+                        }`}
+                      >
+                        <img
+                          src={solution.logo.src}
+                          alt={solution.logo.alt}
+                          className={`w-auto object-contain ${solution.logo.className ?? 'h-6'}`}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-6">
+                    <span className="text-xs uppercase tracking-widest text-primary mb-2 block">
                     {solution.subtitle}
                   </span>
                   <h3 className="text-xl font-display font-medium text-white mb-3 group-hover:text-primary transition-colors">

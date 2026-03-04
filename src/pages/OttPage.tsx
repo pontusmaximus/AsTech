@@ -209,9 +209,10 @@ const OttPage = () => {
         <ManufacturerHeader
           backLabel={tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
           brandNameForSrOnly="OTT"
-          logoSrc="https://stadtkarte.at/wp-content/uploads/2023/10/firmen-Lambach-stadt-OTT.jpg"
+          logoSrc="/logos/ott.jpg"
           logoAlt="OTT logo"
           logoClassName="h-32 sm:h-40 md:h-48 w-auto object-contain rounded-md"
+          logoWrapperClassName="bg-white border-transparent"
           introText={tr(
             'Innovative Kantenleimtechnologie mit PUR-Anleimsystemen und LASER Hydrofuse für fugenlose, übergangslose Kantenverbindungen.',
             'Innovative edgebanding technology with PUR gluing systems and LASER Hydrofuse for seamless, jointless edge connections.',

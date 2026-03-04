@@ -241,6 +241,8 @@ const MayerPage = () => {
           brandNameForSrOnly="Mayer"
           logoSrc="https://www.mayersaws.com/mayer/images/mayer_saws_4c.svg"
           logoAlt="Mayer logo"
+          logoClassName="h-16 md:h-20 w-auto object-contain"
+          logoWrapperClassName="bg-white text-dark border-transparent"
           introText={tr(
             'Seit über 70 Jahren stehen höchste Qualität und Präzision im Plattenzuschnitt im Fokus. Die Kappa Automatic und Advanced Line Serien setzen Maßstäbe in der Industrie.',
             'For more than 70 years, top quality and precision in panel cutting have been the focus. The Kappa Automatic and Advanced Line series set standards in the industry.',
