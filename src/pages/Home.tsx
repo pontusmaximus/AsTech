@@ -127,8 +127,8 @@ const Home = () => {
       logo: {
         src: '/logos/ott.jpg',
         alt: 'OTT logo',
-        className: 'h-12',
-        wrapperClassName: 'bg-white',
+        className: 'h-9',
+        wrapperClassName: 'bg-white px-4 py-2',
       },
     },
     {
