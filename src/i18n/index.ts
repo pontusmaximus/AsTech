@@ -188,7 +188,7 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       headline: 'Automatisierung Ihrer Produktion durch Robotik und Industrie 4.0',
-      subheadline: 'Seit über 30 Jahren realisiert die Asamer Technologie GmbH industrielle Lösungen für die Holz-, Kunststoff- und Metallbearbeitung in Tschechien, der Slowakei und Ungarn.',
+      subheadline: 'Seit über 30 Jahren realisiert die Firma Asamer industrielle Lösungen für die Holz-, Kunststoff- und Metallbearbeitung in Tschechien, der Slowakei und Ungarn.',
       cta: 'Projektanfrage',
       scroll: 'Scrollen',
     },
@@ -356,7 +356,7 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       headline: 'Automation of Your Production through Robotics and Industry 4.0',
-      subheadline: 'For over 30 years, Asamer Technologie GmbH has been implementing industrial solutions for wood, plastic and metal processing in the Czech Republic, Slovakia and Hungary.',
+      subheadline: 'For over 30 years, Asamer has been implementing industrial solutions for wood, plastic and metal processing in the Czech Republic, Slovakia and Hungary.',
       cta: 'Project Inquiry',
       scroll: 'Scroll',
     },
@@ -524,7 +524,7 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       headline: 'Automatizace vaší výroby pomocí robotiky a Průmyslu 4.0',
-      subheadline: 'Společnost Asamer Technologie GmbH realizuje průmyslová řešení pro zpracování dřeva, plastů a kovů v České republice, na Slovensku a v Maďarsku již více než 30 let.',
+      subheadline: 'Společnost Asamer realizuje průmyslová řešení pro zpracování dřeva, plastů a kovů v České republice, na Slovensku a v Maďarsku již více než 30 let.',
       cta: 'Poptávka projektu',
       scroll: 'Posunout',
     },

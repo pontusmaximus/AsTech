@@ -1,12 +1,10 @@
 import { useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
-import { trackEvent } from '../lib/analytics';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,18 +34,9 @@ const BarbaricPage = () => {
     }
     return en;
   };
-  const isExternalUrl = (url: string) => url.startsWith('http');
   const inquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
     tr('Anfrage BARBARIC', 'Inquiry BARBARIC', 'Poptávka BARBARIC')
   )}`;
-  const trackMayerNavigation = (placement: string, productName?: string) => {
-    trackEvent('manufacturer_cross_navigation_click', {
-      from_page: 'barbaric',
-      to_page: 'mayer',
-      placement,
-      product_name: productName,
-    });
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -114,7 +103,7 @@ const BarbaricPage = () => {
     {
       name: tr('Beschickung für Plattenaufteilsägen', 'Feeding for panel saws', 'Podávání pro pily na desky'),
       image: 'https://www.barbaric.at/fileadmin/_processed_/e/b/csm_Barbaric_LCV_Performance_Layout01_c1dad1eb46.jpg',
-      url: '/mayer',
+      url: 'https://www.barbaric.at/beschickung/',
       desc: tr(
         'Automatische Beschickung für Plattenaufteilsägen mit präziser Positionierung und hoher Taktstabilität.',
         'Automatic feeding for panel saws with precise positioning and stable cycle performance.',
@@ -213,37 +202,6 @@ const BarbaricPage = () => {
           )}
         />
 
-        <section className="mb-14">
-          <div className="product-item rounded-2xl border border-primary/30 bg-primary/10 p-6 md:p-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
-              <div>
-                <h2 className="text-2xl font-display font-light text-white mb-2">
-                  {tr(
-                    'Optimal kombiniert mit MAYER Plattenaufteilsägen',
-                    'Optimally combined with MAYER panel saws',
-                    'Optimálně kombinovatelné s pilami MAYER na desky'
-                  )}
-                </h2>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  {tr(
-                    'Die BARBARIC Beschickung ist für Plattenaufteilsägen vieler Hersteller geeignet. Für komplette Linienplanung wechseln Sie direkt zur MAYER Seite.',
-                    'BARBARIC feeding solutions fit panel saws from many manufacturers. For complete line planning, jump directly to the MAYER page.',
-                    'Řešení BARBARIC pro podávání je vhodné pro pily na desky mnoha výrobců. Pro kompletní návrh linky přejděte přímo na stránku MAYER.'
-                  )}
-                </p>
-              </div>
-              <Link
-                to="/mayer"
-                className="btn-outline-dark sm:whitespace-nowrap"
-                onClick={() => trackMayerNavigation('complete_solution_cta')}
-              >
-                {tr('Zu MAYER', 'Go to MAYER', 'Přejít na MAYER')}
-                <ArrowUpRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <div className="accent-line" />
@@ -267,26 +225,15 @@ const BarbaricPage = () => {
                 </div>
                 <div className="flex items-start justify-between gap-3 mb-4">
                   <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
-                  {isExternalUrl(product.url) ? (
-                    <a
-                      href={product.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-white/30 hover:text-primary transition-colors"
-                      aria-label={tr('Produkt öffnen', 'Open product', 'Otevřít produkt')}
-                    >
-                      <ArrowUpRight className="w-5 h-5" />
-                    </a>
-                  ) : (
-                    <Link
-                      to={product.url}
-                      className="text-white/30 hover:text-primary transition-colors"
-                      aria-label={tr('Produkt öffnen', 'Open product', 'Otevřít produkt')}
-                      onClick={() => trackMayerNavigation('automation_product_icon', product.name)}
-                    >
-                      <ArrowUpRight className="w-5 h-5" />
-                    </Link>
-                  )}
+                  <a
+                    href={product.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white/30 hover:text-primary transition-colors"
+                    aria-label={tr('Produkt öffnen', 'Open product', 'Otevřít produkt')}
+                  >
+                    <ArrowUpRight className="w-5 h-5" />
+                  </a>
                 </div>
                 <p className="text-white/50 text-sm mb-4">{product.desc}</p>
                 <ul className="space-y-2 mb-4">
@@ -299,13 +246,9 @@ const BarbaricPage = () => {
                 </ul>
                 <div className="flex flex-wrap gap-3">
                   {product.extraLink ? (
-                    <Link
-                      to={product.extraLink.href}
-                      className="text-sm text-white/70 hover:text-white transition-colors"
-                      onClick={() => trackMayerNavigation('automation_product_link', product.name)}
-                    >
+                    <a href={product.extraLink.href} className="text-sm text-white/70 hover:text-white transition-colors">
                       {product.extraLink.label}
-                    </Link>
+                    </a>
                   ) : null}
                 </div>
               </article>
@@ -414,20 +357,10 @@ const BarbaricPage = () => {
                 )}
               </p>
             </div>
-            <div className="flex flex-col items-start gap-3">
-              <Link
-                to="/mayer"
-                className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors"
-                onClick={() => trackMayerNavigation('footer_cta')}
-              >
-                {tr('MAYER Sägen ansehen', 'View MAYER saws', 'Zobrazit pily MAYER')}
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
-              <a href={inquiryMail} className="btn-primary-dark sm:whitespace-nowrap">
-                {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}
-                <ArrowUpRight className="w-5 h-5" />
-              </a>
-            </div>
+            <a href={inquiryMail} className="btn-primary-dark sm:whitespace-nowrap">
+              {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}
+              <ArrowUpRight className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>
