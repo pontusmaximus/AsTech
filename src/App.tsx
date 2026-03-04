@@ -10,6 +10,7 @@ import {
   useParams,
 } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { Analytics } from '@vercel/analytics/react';
 import type { Language, Translations } from './i18n';
 import translations from './i18n';
 import Navigation from './components/Navigation';
@@ -85,9 +86,12 @@ export const useTheme = () => {
 function App() {
   return (
     <HelmetProvider>
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
+      <>
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+        <Analytics />
+      </>
     </HelmetProvider>
   );
 }

@@ -1,6 +1,6 @@
 import { CANONICAL_DOMAIN } from '../lib/language';
 
-const LOGO_URL = `${CANONICAL_DOMAIN}/images/hero-bg.jpg`;
+const LOGO_URL = `${CANONICAL_DOMAIN}/asamer-logo.png`;
 
 export const organizationSchema = () => ({
   '@context': 'https://schema.org',
