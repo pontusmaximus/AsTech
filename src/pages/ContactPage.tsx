@@ -5,6 +5,7 @@ import { translatePageText } from '../i18n/pageTextTranslations';
 import SeoHead from '../seo/SeoHead';
 import { organizationSchema, localBusinessSchemas } from '../seo/structuredData';
 import { trackEvent } from '../lib/analytics';
+import { buildMailto } from '../lib/email';
 
 const ContactPage = () => {
   const { lang } = useLanguage();
@@ -113,7 +114,7 @@ const ContactPage = () => {
                   <span>+43 664 26 33 132</span>
                 </a>
                 <a
-                  href="mailto:eli@asamer.net"
+                  href={buildMailto('eli@asamer.net')}
                   onClick={() => handleContactAction('email', 'eli@asamer.net', 'contact_card')}
                   className="inline-flex items-center gap-2 hover:text-white transition-colors"
                 >
@@ -139,7 +140,7 @@ const ContactPage = () => {
                   <span>Herr Petras: +420 724 056 965</span>
                 </a>
                 <a
-                  href="mailto:office@asamer.net"
+                  href={buildMailto('office@asamer.net')}
                   onClick={() => handleContactAction('email', 'office@asamer.net', 'contact_card')}
                   className="inline-flex items-center gap-2 hover:text-white transition-colors"
                 >

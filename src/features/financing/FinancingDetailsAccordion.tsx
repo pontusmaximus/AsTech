@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import type { Translations } from '../../i18n';
 import type { FundingProgramDefinition } from './types';
+import { buildMailto } from '../../lib/email';
 
 type WizardTexts = Translations['financingWizard'];
 
@@ -104,9 +105,10 @@ const FinancingDetailsAccordion = ({
 
             <div className="space-y-8">
               {sections.map((section, sectionIndex) => {
-                const fundingInquiryMail = `mailto:max@asamer.net?subject=${encodeURIComponent(
+                const fundingInquiryMail = buildMailto(
+                  'max@asamer.net',
                   `${fundingInquiryPrefix}: ${section.title}`
-                )}`;
+                );
 
                 return (
                   <article

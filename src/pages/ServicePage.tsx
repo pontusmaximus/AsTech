@@ -1,6 +1,7 @@
 import { AlertTriangle, ArrowRight, Award, ShieldCheck, Wrench } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 
 const ServicePage = () => {
@@ -64,9 +65,10 @@ const ServicePage = () => {
     tr('Schnelle Vor-Ort-Lösung durch Serviceeinsatz', 'Fast on-site resolution through service deployment', 'Rychlé řešení na místě prostřednictvím servisního zásahu'),
   ];
 
-  const serviceInquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
+  const serviceInquiryMail = buildMailto(
+    'office@asamer.net',
     tr('Serviceanfrage Asamer', 'Service inquiry Asamer', 'Servisní poptávka Asamer')
-  )}`;
+  );
 
   return (
     <>

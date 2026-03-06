@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, Database } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { organizationSchema, localBusinessSchemas, websiteSchema } from '../seo/structuredData';
 import { trackEvent } from '../lib/analytics';
@@ -25,16 +26,18 @@ const Home = () => {
     }
     return en;
   };
-  const generalInquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
+  const generalInquiryMail = buildMailto(
+    'office@asamer.net',
     tr(
       'Projektanfrage Asamer Website',
       'Project inquiry Asamer website',
       'Projektová poptávka Asamer web'
     )
-  )}`;
-  const contactInquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
+  );
+  const contactInquiryMail = buildMailto(
+    'office@asamer.net',
     tr('Allgemeine Anfrage', 'General inquiry', 'Obecná poptávka')
-  )}`;
+  );
 
   useEffect(() => {
     const ctx = gsap.context(() => {

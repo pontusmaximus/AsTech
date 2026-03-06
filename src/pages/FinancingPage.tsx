@@ -7,6 +7,7 @@ import EligibilityWizard from '../features/financing/EligibilityWizard';
 import FinancingDetailsAccordion from '../features/financing/FinancingDetailsAccordion';
 import { rankPrograms } from '../features/financing/eligibility';
 import { getFlowSessionId, trackEvent } from '../lib/analytics';
+import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import type {
   BudgetRange,
@@ -320,7 +321,7 @@ const FinancingPage = () => {
   };
 
   const buildInquiryHref = (subjectSuffix: string) =>
-    `mailto:max@asamer.net?subject=${encodeURIComponent(`${fundingInquiryPrefix}: ${subjectSuffix}`)}`;
+    buildMailto('max@asamer.net', `${fundingInquiryPrefix}: ${subjectSuffix}`);
 
   const fallbackInquiryHref = buildInquiryHref(
     tr('Manueller Eligibility-Check', 'Manual eligibility check', 'Manuální kontrola způsobilosti')
@@ -454,9 +455,7 @@ const FinancingPage = () => {
               ))}
             </div>
             <a
-              href={`mailto:max@asamer.net?subject=${encodeURIComponent(
-                tr('Leasinganfrage', 'Leasing inquiry', 'Poptávka leasingu')
-              )}`}
+              href={buildMailto('max@asamer.net', tr('Leasinganfrage', 'Leasing inquiry', 'Poptávka leasingu'))}
               onClick={() =>
                 trackEvent('financing_leasing_cta_click', {
                   flow_name: FINANCING_FLOW_NAME,

@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
+import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -35,9 +36,10 @@ const BarbaricPage = () => {
     }
     return en;
   };
-  const inquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
+  const inquiryMail = buildMailto(
+    'office@asamer.net',
     tr('Anfrage BARBARIC', 'Inquiry BARBARIC', 'Poptávka BARBARIC')
-  )}`;
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);

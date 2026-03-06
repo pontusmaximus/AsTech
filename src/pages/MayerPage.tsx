@@ -7,6 +7,7 @@ import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
 import { trackEvent } from '../lib/analytics';
+import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -34,9 +35,10 @@ const MayerPage = () => {
     return en;
   };
   const isExternalUrl = (url: string) => url.startsWith('http');
-  const inquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
+  const inquiryMail = buildMailto(
+    'office@asamer.net',
     tr('Anfrage Mayer', 'Inquiry Mayer', 'Poptávka Mayer')
-  )}`;
+  );
   const trackBarbaricNavigation = (placement: string, productName?: string) => {
     trackEvent('manufacturer_cross_navigation_click', {
       from_page: 'mayer',

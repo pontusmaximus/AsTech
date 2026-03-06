@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, Factory, Layers3, ScissorsSquare } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 
 const SolutionsPage = () => {
@@ -71,9 +72,10 @@ const SolutionsPage = () => {
     tr('Begleitung im Betrieb mit Service und Optimierung', 'Operational support with service and optimization', 'Podpora během provozu se servisem a optimalizací'),
   ];
 
-  const inquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
+  const inquiryMail = buildMailto(
+    'office@asamer.net',
     tr('Projektanfrage Lösungen', 'Project inquiry solutions', 'Projektová poptávka řešení')
-  )}`;
+  );
 
   return (
     <>

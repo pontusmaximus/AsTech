@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, Mail, Tag } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
+import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { trackEvent } from '../lib/analytics';
 
@@ -70,9 +71,10 @@ const UsedMachinesPage = () => {
     },
   ];
 
-  const generalInquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
+  const generalInquiryMail = buildMailto(
+    'office@asamer.net',
     tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptavka na pouzity stroj')
-  )}`;
+  );
 
   const handleMachineInquiryClick = (machine: UsedMachine, placement: string) => {
     trackEvent('used_machine_inquiry_click', {
@@ -108,9 +110,10 @@ const UsedMachinesPage = () => {
       <section className="pb-16">
         <div className="container-wide grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {machines.map((machine) => {
-            const inquiryMail = `mailto:office@asamer.net?subject=${encodeURIComponent(
+            const inquiryMail = buildMailto(
+              'office@asamer.net',
               `${tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptavka na pouzity stroj')}: ${machine.manufacturer} ${machine.name}`
-            )}`;
+            );
             return (
               <article key={`${machine.manufacturer}-${machine.name}`} className="bg-dark-card rounded-2xl border border-white/10 p-6">
                 {machine.image ? (
