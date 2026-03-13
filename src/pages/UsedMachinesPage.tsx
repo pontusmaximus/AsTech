@@ -8,11 +8,11 @@ import { trackEvent } from '../lib/analytics';
 type UsedMachine = {
   name: string;
   manufacturer: string;
-  year: number;
+  year?: number;
   condition: string;
   status?: string;
   shortDescription: string;
-  image?: string;
+  images?: string[];
 };
 
 const UsedMachinesPage = () => {
@@ -33,40 +33,44 @@ const UsedMachinesPage = () => {
 
   const machines: UsedMachine[] = [
     {
-      name: 'Kappa 80',
-      manufacturer: 'Mayer',
-      year: 2018,
+      name: '1308XL Power',
+      manufacturer: 'HOLZ-HER',
       condition: tr('sehr gut', 'very good', 'velmi dobry'),
       status: tr('verfugbar', 'available', 'k dispozici'),
+      images: ['/images/used-machines/holz-her-1308xl-power.jpg'],
       shortDescription: tr(
-        'Kompakter Einstieg in den professionellen Plattenzuschnitt.',
-        'Compact entry into professional panel cutting.',
-        'Kompaktni vstup do profesionalniho rezani desek.'
+        'Kantenleimmaschine fur prazise Kantenbearbeitung.',
+        'Edgebanding machine for precise edge finishing.',
+        'Olepovacka hran pro presne dokonceni hran.'
       ),
     },
     {
-      name: 'Tornado+',
-      manufacturer: 'OTT',
-      year: 2017,
-      condition: tr('gut', 'good', 'dobry'),
+      name: 'FH 4 330 220 automatic',
+      manufacturer: 'SCHELLING',
+      year: 2015,
+      condition: tr('sehr gut', 'very good', 'velmi dobry'),
       status: tr('verfugbar', 'available', 'k dispozici'),
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/b/a/csm_tornado-plus-ansicht-re_207e512b4f.png',
+      images: [
+        '/images/used-machines/schelling-fh4-330-220-automatic-1.jpg',
+        '/images/used-machines/schelling-fh4-330-220-automatic-2.jpg',
+      ],
       shortDescription: tr(
-        'Bewahrte Kantenleimtechnologie fur robuste Serienfertigung.',
-        'Proven edgebanding technology for reliable serial production.',
-        'Overena olepovaci technologie pro spolehlivou seriovou vyrobu.'
+        'Automatisches Plattensagezentrum fur effizienten Zuschnitt.',
+        'Automatic panel saw for efficient cutting.',
+        'Automaticka panelova pila pro efektivni rezani.'
       ),
     },
     {
-      name: 'CSF 2.0',
-      manufacturer: 'BARBARIC',
-      year: 2019,
+      name: 'S 200',
+      manufacturer: 'HOMAG',
+      year: 2022,
       condition: tr('sehr gut', 'very good', 'velmi dobry'),
-      status: tr('auf Anfrage', 'on request', 'na dotaz'),
+      status: tr('verfugbar', 'available', 'k dispozici'),
+      images: ['/images/used-machines/homag-s-200-1.jpg', '/images/used-machines/homag-s-200-2.jpg'],
       shortDescription: tr(
-        'Effizientes Flachenlager fur stabilen Materialfluss.',
-        'Efficient panel storage for stable material flow.',
-        'Efektivni plosny sklad pro stabilni tok materialu.'
+        'Kantenleimmaschine mit 93.000 lfm Laufleistung.',
+        'Edgebanding machine with 93,000 lfm of usage.',
+        'Olepovacka hran s najezdem 93 000 lfm.'
       ),
     },
   ];
@@ -116,14 +120,20 @@ const UsedMachinesPage = () => {
             );
             return (
               <article key={`${machine.manufacturer}-${machine.name}`} className="bg-dark-card rounded-2xl border border-white/10 p-6">
-                {machine.image ? (
-                  <div className="mb-5 rounded-xl overflow-hidden border border-white/10 bg-black/20">
-                    <img
-                      src={machine.image}
-                      alt={`${machine.manufacturer} ${machine.name}`}
-                      className="w-full aspect-[4/3] object-contain bg-black/10"
-                      loading="lazy"
-                    />
+                {machine.images && machine.images.length > 0 ? (
+                  <div
+                    className={`mb-5 grid gap-3 ${machine.images.length > 1 ? 'sm:grid-cols-2' : 'grid-cols-1'}`}
+                  >
+                    {machine.images.map((src, index) => (
+                      <div key={`${machine.manufacturer}-${machine.name}-${index}`} className="rounded-xl overflow-hidden border border-white/10 bg-black/20">
+                        <img
+                          src={src}
+                          alt={`${machine.manufacturer} ${machine.name} ${index + 1}`}
+                          className="w-full aspect-[4/3] object-contain bg-black/10"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
                   </div>
                 ) : (
                   <div className="w-11 h-11 rounded-xl bg-primary/15 flex items-center justify-center mb-5">
@@ -135,7 +145,11 @@ const UsedMachinesPage = () => {
                     <h2 className="text-2xl font-display font-light text-white">
                       {machine.manufacturer} {machine.name}
                     </h2>
-                    <p className="text-white/50 text-sm">{tr('Baujahr', 'Year', 'Rok')}: {machine.year}</p>
+                    {typeof machine.year === 'number' ? (
+                      <p className="text-white/50 text-sm">
+                        {tr('Baujahr', 'Year', 'Rok')}: {machine.year}
+                      </p>
+                    ) : null}
                   </div>
                   {machine.status ? (
                     <span className="text-xs uppercase tracking-widest text-primary">
