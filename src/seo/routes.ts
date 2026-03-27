@@ -220,6 +220,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
   },
   usedMachines: {
     slug: '/gebrauchtmaschinen',
+    image: '/images/used-machines/holz-her-1308xl-power.jpg',
     meta: createMeta({
       de: {
         title: 'Gebrauchtmaschinen & Refurbishment | Asamer',

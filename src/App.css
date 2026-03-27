@@ -467,6 +467,39 @@ html.theme-light .nav-readable .hover\:text-white:hover {
   );
 }
 
+/* Used Machines Image Enhancements */
+.used-machine-photo {
+  filter: contrast(1.04) saturate(1.04);
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.used-machine-slideshow .used-machine-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation-name: usedMachineFade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes usedMachineFade {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  46% {
+    opacity: 1;
+  }
+  56% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 html.theme-light .hero-overlay-vertical {
   background: linear-gradient(
     180deg,

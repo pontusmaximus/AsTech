@@ -2,6 +2,7 @@ import { ArrowRight, CheckCircle2, Mail, Tag } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
+import { buildCanonicalUrl, CANONICAL_DOMAIN } from '../lib/language';
 import SeoHead from '../seo/SeoHead';
 import { trackEvent } from '../lib/analytics';
 
@@ -13,6 +14,50 @@ type UsedMachine = {
   status?: string;
   shortDescription: string;
   images?: string[];
+};
+
+const slugify = (value: string) =>
+  value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+
+const toAbsoluteUrl = (path: string) => {
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+  return `${CANONICAL_DOMAIN}${path.startsWith('/') ? path : `/${path}`}`;
+};
+
+const getImageSources = (src: string) => {
+  const normalized = src.replace(/\.(jpe?g|png)$/i, '');
+  return {
+    avif: `${normalized}.avif`,
+    webp: `${normalized}.webp`,
+    fallback: src,
+  };
+};
+
+const getAvailability = (status?: string) => {
+  if (!status) return 'https://schema.org/InStock';
+  const normalized = status.toLowerCase();
+  if (normalized.includes('verkauft') || normalized.includes('sold') || normalized.includes('ausverkauft')) {
+    return 'https://schema.org/OutOfStock';
+  }
+  if (normalized.includes('verf') || normalized.includes('avail') || normalized.includes('k dispozici')) {
+    return 'https://schema.org/InStock';
+  }
+  return 'https://schema.org/InStock';
+};
+
+const getItemCondition = (condition: string) => {
+  const normalized = condition.toLowerCase();
+  if (normalized.includes('neu') || normalized.includes('new')) {
+    return 'https://schema.org/NewCondition';
+  }
+  return 'https://schema.org/UsedCondition';
 };
 
 const UsedMachinesPage = () => {
@@ -80,6 +125,48 @@ const UsedMachinesPage = () => {
     tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptavka na pouzity stroj')
   );
 
+  const baseUrl = buildCanonicalUrl(lang, '/gebrauchtmaschinen');
+  const category = tr('Gebrauchtmaschinen', 'Used machines', 'Pouzite stroje');
+  const slideDurationSec = 5;
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: machines.map((machine, index) => {
+      const slug = slugify(`${machine.manufacturer} ${machine.name}`);
+      const anchorUrl = `${baseUrl}#${slug}`;
+      const images = (machine.images ?? []).map((src) => toAbsoluteUrl(src));
+      const itemCondition = getItemCondition(machine.condition);
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        url: anchorUrl,
+        item: {
+          '@type': 'Product',
+          name: `${machine.manufacturer} ${machine.name}`,
+          description: machine.shortDescription,
+          ...(images.length ? { image: images } : {}),
+          brand: {
+            '@type': 'Brand',
+            name: machine.manufacturer,
+          },
+          manufacturer: {
+            '@type': 'Organization',
+            name: machine.manufacturer,
+          },
+          category,
+          ...(typeof machine.year === 'number' ? { productionDate: String(machine.year) } : {}),
+          itemCondition,
+          offers: {
+            '@type': 'Offer',
+            url: anchorUrl,
+            availability: getAvailability(machine.status),
+            itemCondition,
+          },
+        },
+      };
+    }),
+  };
+
   const handleMachineInquiryClick = (machine: UsedMachine, placement: string) => {
     trackEvent('used_machine_inquiry_click', {
       product_name: machine.name,
@@ -91,7 +178,10 @@ const UsedMachinesPage = () => {
 
   return (
     <>
-      <SeoHead routeKey="usedMachines" />
+      <SeoHead
+        routeKey="usedMachines"
+        structuredData={[itemListSchema]}
+      />
       <div className="bg-dark min-h-screen">
       <section className="pt-28 md:pt-36 pb-16">
         <div className="container-wide">
@@ -118,22 +208,49 @@ const UsedMachinesPage = () => {
               'office@asamer.net',
               `${tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptavka na pouzity stroj')}: ${machine.manufacturer} ${machine.name}`
             );
+            const slug = slugify(`${machine.manufacturer} ${machine.name}`);
+            const images = machine.images ?? [];
+            const hasMultipleImages = images.length > 1;
+            const totalDuration = Math.max(images.length, 1) * slideDurationSec;
             return (
-              <article key={`${machine.manufacturer}-${machine.name}`} className="bg-dark-card rounded-2xl border border-white/10 p-6">
-                {machine.images && machine.images.length > 0 ? (
-                  <div
-                    className={`mb-5 grid gap-3 ${machine.images.length > 1 ? 'sm:grid-cols-2' : 'grid-cols-1'}`}
-                  >
-                    {machine.images.map((src, index) => (
-                      <div key={`${machine.manufacturer}-${machine.name}-${index}`} className="rounded-xl overflow-hidden border border-white/10 bg-black/20">
-                        <img
-                          src={src}
-                          alt={`${machine.manufacturer} ${machine.name} ${index + 1}`}
-                          className="w-full aspect-[4/3] object-contain bg-black/10"
-                          loading="lazy"
-                        />
-                      </div>
-                    ))}
+              <article
+                id={slug}
+                key={`${machine.manufacturer}-${machine.name}`}
+                className="group bg-dark-card rounded-2xl border border-white/10 p-6"
+              >
+                {images.length > 0 ? (
+                  <div className="mb-5 rounded-xl border border-white/10 bg-white/10 p-2">
+                    <div
+                      className={`relative aspect-[4/3] overflow-hidden rounded-lg ${hasMultipleImages ? 'used-machine-slideshow' : ''}`}
+                    >
+                      {images.map((src, index) => {
+                        const sources = getImageSources(src);
+                        return (
+                          <picture
+                            key={`${machine.manufacturer}-${machine.name}-${index}`}
+                            className={`${hasMultipleImages ? 'used-machine-slide' : 'block'} block`}
+                            style={
+                              hasMultipleImages
+                                ? {
+                                    animationDelay: `${index * slideDurationSec}s`,
+                                    animationDuration: `${totalDuration}s`,
+                                  }
+                                : undefined
+                            }
+                          >
+                            <source type="image/avif" srcSet={sources.avif} />
+                            <source type="image/webp" srcSet={sources.webp} />
+                            <img
+                              src={sources.fallback}
+                              alt={`${machine.manufacturer} ${machine.name} ${index + 1}`}
+                              className="used-machine-photo w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </picture>
+                        );
+                      })}
+                    </div>
                   </div>
                 ) : (
                   <div className="w-11 h-11 rounded-xl bg-primary/15 flex items-center justify-center mb-5">
