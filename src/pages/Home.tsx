@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useLanguage } from '../App';
-import { ArrowRight, ArrowUpRight, Database } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { translatePageText } from '../i18n/pageTextTranslations';
@@ -171,21 +171,6 @@ const Home = () => {
     },
   ];
 
-  const digitalProductionItems = [
-    {
-      title: 'ERP',
-      desc: tr('SAP, Microsoft Dynamics, abas und mehr', 'SAP, Microsoft Dynamics, abas and more', 'SAP, Microsoft Dynamics, abas a další'),
-    },
-    {
-      title: 'MES',
-      desc: tr('Produktionssteuerung in Echtzeit', 'Real-time production control', 'Řízení výroby v reálném čase'),
-    },
-    {
-      title: tr('Produktionssoftware', 'Production Software', 'Výrobní software'),
-      desc: tr('Verbindung aller Prozessdaten', 'Connection of all process data', 'Propojení všech procesních dat'),
-    },
-  ];
-
   const costStats = [
     { value: tr('bis -40%', 'up to -40%', 'až -40 %'), label: tr('Lagerkostenreduktion', 'storage cost reduction', 'snížení skladových nákladů') },
     { value: '2x', label: tr('schnellere Kommissionierung', 'faster picking', 'rychlejší kompletace') },
@@ -214,8 +199,8 @@ const Home = () => {
   return (
     <>
       <SeoHead routeKey="home" structuredData={structuredData} />
-      <div ref={heroRef} className="bg-dark">
-      <section className="relative min-h-[86svh] md:min-h-[92vh] flex items-center overflow-hidden">
+      <div ref={heroRef} className="bg-dark home-sections">
+      <section className="relative min-h-[100svh] md:min-h-[100vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center scale-100"
@@ -227,18 +212,18 @@ const Home = () => {
 
         <div className="absolute inset-0 grid-pattern opacity-50" />
 
-        <div className="relative z-10 w-full container-wide pt-28 sm:pt-28 md:pt-32 pb-8 sm:pb-10 md:pb-12">
+        <div className="relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12">
           <div className="max-w-5xl">
-            <h1 className="mt-10 sm:mt-10 md:mt-8 lg:mt-6 mb-6 sm:mb-8">
-              <span className="hero-title-line block font-display font-bold text-[clamp(2.5rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-white">
+            <h1 className="mt-6 sm:mt-10 md:mt-8 lg:mt-6 mb-5 sm:mb-8">
+              <span className="hero-title-line block font-display font-bold text-[clamp(2.25rem,8vw,6rem)] sm:text-[clamp(2.5rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-white">
                 {heroLines[0]}
               </span>
-              <span className="hero-title-line block font-display font-bold text-[clamp(2.5rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-primary mt-2">
+              <span className="hero-title-line block font-display font-bold text-[clamp(2.25rem,8vw,6rem)] sm:text-[clamp(2.5rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-primary mt-2">
                 {heroLines[1]}
               </span>
             </h1>
 
-            <p className="hero-subtitle text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
+            <p className="hero-subtitle text-base sm:text-lg md:text-2xl text-white/60 max-w-2xl mb-6 sm:mb-10 leading-relaxed">
               {t.hero.subheadline}
             </p>
 
@@ -389,32 +374,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-large relative">
-        <div className="container-wide">
-          <div className="section-animate text-center mb-16">
-            <div className="accent-line mx-auto mb-6" />
-            <h2 className="text-section font-display font-light text-white mb-4">
-              {tr('Digitale Produktion', 'Digital Production', 'Digitální výroba')}
-            </h2>
-            <p className="text-subsection text-white/50 max-w-2xl mx-auto">
-              {tr('Nahtlose Integration in Ihre bestehenden Systeme', 'Seamless integration into your existing systems', 'Bezproblémová integrace do vašich stávajících systémů')}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {digitalProductionItems.map((item, index) => (
-              <div key={index} className="section-animate text-center p-6 sm:p-8 bg-dark-card rounded-2xl border border-white/5">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Database className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-display font-medium text-white mb-3">{item.title}</h3>
-                <p className="text-white/50">{item.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

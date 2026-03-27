@@ -1,6 +1,6 @@
 /* Asamer Technologie GmbH - Themeable Design */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
   --site-bg-rgb: 10, 10, 15;
@@ -67,7 +67,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--site-bg);
@@ -89,7 +89,7 @@ body {
 
 /* Typography */
 .font-display {
-  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 /* Selection */
@@ -318,6 +318,11 @@ body {
 
 .section-medium {
   padding: 5rem 0;
+}
+
+/* Home Page Spacing */
+.home-sections .section-large {
+  padding: 7rem 0;
 }
 
 /* Container */
@@ -726,6 +731,10 @@ html.theme-light .bg-primary .text-white {
 
   .section-large {
     padding: 5.5rem 0;
+  }
+
+  .home-sections .section-large {
+    padding: 5rem 0;
   }
 
   .section-medium {
