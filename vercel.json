@@ -12,7 +12,29 @@
     { "source": "/loesungen", "destination": "/cz/reseni", "permanent": true },
     { "source": "/service", "destination": "/cz/servis", "permanent": true },
     { "source": "/gebrauchtmaschinen", "destination": "/cz/pouzite-stroje", "permanent": true },
-    { "source": "/impressum", "destination": "/cz/imprint", "permanent": true }
+    { "source": "/impressum", "destination": "/cz/imprint", "permanent": true },
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "asamer.net"
+        }
+      ],
+      "destination": "https://www.asamer.cz/:path",
+      "permanent": true
+    },
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.asamer.net"
+        }
+      ],
+      "destination": "https://www.asamer.cz/:path",
+      "permanent": true
+    }
   ],
   "rewrites": [
     {

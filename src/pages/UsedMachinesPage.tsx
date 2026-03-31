@@ -80,53 +80,53 @@ const UsedMachinesPage = () => {
     {
       name: '1308XL Power',
       manufacturer: 'HOLZ-HER',
-      condition: tr('sehr gut', 'very good', 'velmi dobry'),
-      status: tr('verfugbar', 'available', 'k dispozici'),
+      condition: tr('sehr gut', 'very good', 'velmi dobrý'),
+      status: tr('verfügbar', 'available', 'k dispozici'),
       images: ['/images/used-machines/holz-her-1308xl-power.jpg'],
       shortDescription: tr(
-        'Kantenleimmaschine fur prazise Kantenbearbeitung.',
+        'Kantenleimmaschine für präzise Kantenbearbeitung.',
         'Edgebanding machine for precise edge finishing.',
-        'Olepovacka hran pro presne dokonceni hran.'
+        'Olepovačka hran pro přesné dokončení hran.'
       ),
     },
     {
       name: 'FH 4 330 220 automatic',
       manufacturer: 'SCHELLING',
       year: 2015,
-      condition: tr('sehr gut', 'very good', 'velmi dobry'),
-      status: tr('verfugbar', 'available', 'k dispozici'),
+      condition: tr('sehr gut', 'very good', 'velmi dobrý'),
+      status: tr('verfügbar', 'available', 'k dispozici'),
       images: [
         '/images/used-machines/schelling-fh4-330-220-automatic-1.jpg',
         '/images/used-machines/schelling-fh4-330-220-automatic-2.jpg',
       ],
       shortDescription: tr(
-        'Automatisches Plattensagezentrum fur effizienten Zuschnitt.',
+        'Automatisches Plattensägezentrum für effizienten Zuschnitt.',
         'Automatic panel saw for efficient cutting.',
-        'Automaticka panelova pila pro efektivni rezani.'
+        'Automatická panelová pila pro efektivní řezání.'
       ),
     },
     {
       name: 'S 200',
       manufacturer: 'HOMAG',
       year: 2022,
-      condition: tr('sehr gut', 'very good', 'velmi dobry'),
-      status: tr('verfugbar', 'available', 'k dispozici'),
+      condition: tr('sehr gut', 'very good', 'velmi dobrý'),
+      status: tr('verfügbar', 'available', 'k dispozici'),
       images: ['/images/used-machines/homag-s-200-1.jpg', '/images/used-machines/homag-s-200-2.jpg'],
       shortDescription: tr(
         'Kantenleimmaschine mit 93.000 lfm Laufleistung.',
         'Edgebanding machine with 93,000 lfm of usage.',
-        'Olepovacka hran s najezdem 93 000 lfm.'
+        'Olepovačka hran s nájezdem 93 000 lfm.'
       ),
     },
   ];
 
   const generalInquiryMail = buildMailto(
     'office@asamer.net',
-    tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptavka na pouzity stroj')
+    tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptávka na použitý stroj')
   );
 
   const baseUrl = buildCanonicalUrl(lang, '/pouzite-stroje');
-  const category = tr('Gebrauchtmaschinen', 'Used machines', 'Pouzite stroje');
+  const category = tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje');
   const slideDurationSec = 5;
   const itemListSchema = {
     '@context': 'https://schema.org',
@@ -188,13 +188,13 @@ const UsedMachinesPage = () => {
           <div className="max-w-5xl">
             <div className="accent-line mb-6" />
             <h1 className="text-section font-display font-light text-white mb-6">
-              {tr('Gebrauchtmaschinen', 'Used machines', 'Pouzite stroje')}
+              {tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje')}
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-4xl">
               {tr(
-                'Ausgewahlte Maschinen aus dem Bestand. Jedes Angebot wird technisch gepruft und mit klarem Zustand gelistet.',
+                'Ausgewählte Maschinen aus dem Bestand. Jedes Angebot wird technisch geprüft und mit klarem Zustand gelistet.',
                 'Selected machines from stock. Each offer is technically checked and listed with a clear condition.',
-                'Vybrane stroje ze skladu. Kazda nabidka je technicky overena a ma jasne uvedeny stav.'
+                'Vybrané stroje ze skladu. Každá nabídka je technicky ověřena a má jasně uvedený stav.'
               )}
             </p>
           </div>
@@ -206,7 +206,7 @@ const UsedMachinesPage = () => {
           {machines.map((machine) => {
             const inquiryMail = buildMailto(
               'office@asamer.net',
-              `${tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptavka na pouzity stroj')}: ${machine.manufacturer} ${machine.name}`
+              `${tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptávka na použitý stroj')}: ${machine.manufacturer} ${machine.name}`
             );
             const slug = slugify(`${machine.manufacturer} ${machine.name}`);
             const images = machine.images ?? [];
@@ -287,7 +287,7 @@ const UsedMachinesPage = () => {
                   onClick={() => handleMachineInquiryClick(machine, 'card')}
                 >
                   <Mail className="w-4 h-4" />
-                  {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptavku')}
+                  {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}
                 </a>
               </article>
             );
@@ -300,13 +300,13 @@ const UsedMachinesPage = () => {
           <div className="rounded-2xl border border-primary/30 bg-primary/10 p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
             <div>
               <h3 className="text-2xl font-display font-light text-white mb-2">
-                {tr('Gebrauchtmaschine anfragen', 'Request a used machine', 'Poptat pouzity stroj')}
+                {tr('Gebrauchtmaschine anfragen', 'Request a used machine', 'Poptat použitý stroj')}
               </h3>
               <p className="text-white/75 text-sm leading-relaxed">
                 {tr(
-                  'Sagen Sie uns, welche Maschine Sie suchen. Wir melden uns mit verfugbaren Optionen.',
+                  'Sagen Sie uns, welche Maschine Sie suchen. Wir melden uns mit verfügbaren Optionen.',
                   'Tell us which machine you are looking for. We will respond with available options.',
-                  'Rekněte nam, jaky stroj hledate. Ozveme se s dostupnymi moznostmi.'
+                  'Řekněte nám, jaký stroj hledáte. Ozveme se s dostupnými možnostmi.'
                 )}
               </p>
             </div>
@@ -322,7 +322,7 @@ const UsedMachinesPage = () => {
                 })
               }
             >
-              {tr('Anfrage starten', 'Start inquiry', 'Zahajit poptavku')}
+              {tr('Anfrage starten', 'Start inquiry', 'Zahájit poptávku')}
               <ArrowRight className="w-5 h-5" />
             </a>
           </div>

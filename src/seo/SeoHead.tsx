@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../App';
-import { buildCanonicalUrl, DEFAULT_LANGUAGE, languageToHreflang, SUPPORTED_LANGUAGES } from '../lib/language';
+import { buildCanonicalUrl, DEFAULT_LANGUAGE, HREFLANG_DEFAULT, languageToHreflang, SUPPORTED_LANGUAGES } from '../lib/language';
 import { DEFAULT_OG_IMAGE, getFallbackMeta, SEO_ROUTES } from './routes';
 import type { SeoRouteKey } from './routes';
 
@@ -44,7 +44,7 @@ const SeoHead = ({ routeKey, overrides = {}, structuredData = [], robots = 'inde
           href={buildCanonicalUrl(supportedLang, slug)}
         />
       ))}
-      <link rel="alternate" hrefLang="x-default" href={buildCanonicalUrl(DEFAULT_LANGUAGE, slug)} />
+      <link rel="alternate" hrefLang="x-default" href={buildCanonicalUrl(HREFLANG_DEFAULT, slug)} />
 
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Asamer Technologie" />

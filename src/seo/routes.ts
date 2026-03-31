@@ -1,5 +1,4 @@
 import type { Language } from '../i18n';
-import { translatePageText } from '../i18n/pageTextTranslations';
 import { DEFAULT_LANGUAGE } from '../lib/language';
 
 export const DEFAULT_OG_IMAGE = '/images/automation-robot.jpg';
@@ -28,28 +27,20 @@ export interface SeoRouteConfig {
   meta: Record<Language, RouteMeta>;
 }
 
-type BaseMetaInput = {
+type FullMetaInput = {
   de: RouteMeta;
   en: RouteMeta;
   cz: RouteMeta;
+  sk: RouteMeta;
+  hu: RouteMeta;
 };
 
-const duplicateKeywords = (source?: string[]) => (source ? [...source] : undefined);
-
-const createMeta = ({ de, en, cz }: BaseMetaInput): Record<Language, RouteMeta> => ({
+const createMeta = ({ de, en, cz, sk, hu }: FullMetaInput): Record<Language, RouteMeta> => ({
   de,
   en,
   cz,
-  sk: {
-    title: translatePageText('sk', en.title, cz.title),
-    description: translatePageText('sk', en.description, cz.description),
-    keywords: duplicateKeywords(en.keywords ?? cz.keywords),
-  },
-  hu: {
-    title: translatePageText('hu', en.title, cz.title),
-    description: translatePageText('hu', en.description, cz.description),
-    keywords: duplicateKeywords(en.keywords ?? cz.keywords),
-  },
+  sk,
+  hu,
 });
 
 export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
@@ -60,20 +51,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'Asamer Technologie | Maschinen, Automation & Service',
         description:
-          'Asamer Technologie GmbH liefert Maschinen, Automatisierung und Service für Holz-, Kunststoff- und Metallbearbeitung in Mitteleuropa.',
+          'Asamer Technologie – Maschinen, Automatisierung und Service für Holz-, Kunststoff- und Metallbetriebe in Mitteleuropa. Über 30 Jahre Erfahrung.',
         keywords: ['Asamer', 'Technologie', 'Automation', 'Holzbearbeitung', 'Maschinen'],
       },
       en: {
         title: 'Asamer Technology | Machinery, Automation & Service',
         description:
-          'Asamer Technology delivers industrial machinery, automation projects and service for wood, plastic and metal manufacturing across Central Europe.',
+          'Asamer Technologie – machines, automation and service for wood, plastic and metal industries in Central Europe. 30+ years of experience.',
         keywords: ['Asamer', 'Technology', 'Automation', 'Machinery', 'Service'],
       },
       cz: {
         title: 'Asamer Technologie | Stroje, automatizace a servis',
         description:
-          'Asamer Technologie dodává stroje, automatizační řešení a servis pro zpracování dřeva, plastu i kovu ve střední Evropě.',
+          'Asamer Technologie – stroje, automatizace a servis pro zpracování dřeva, plastů a kovů ve střední Evropě. Přes 30 let zkušeností.',
         keywords: ['Asamer', 'Technologie', 'Automatizace', 'Stroje', 'Servis'],
+      },
+      sk: {
+        title: 'Asamer Technologie | Stroje, automatizácia a servis',
+        description:
+          'Asamer Technologie – stroje, automatizácia a servis pre spracovanie dreva, plastov a kovov v strednej Európe. Viac ako 30 rokov skúseností.',
+        keywords: ['Asamer', 'Technologie', 'Automatizácia', 'Stroje', 'Servis'],
+      },
+      hu: {
+        title: 'Asamer Technologie | Gépek, automatizálás és szerviz',
+        description:
+          'Asamer Technologie – gépek, automatizálás és szerviz fa-, műanyag- és fémipar számára Közép-Európában. Több mint 30 éves tapasztalat.',
+        keywords: ['Asamer', 'Technologie', 'Automatizálás', 'Gépek', 'Szerviz'],
       },
     }),
   },
@@ -84,20 +87,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'Mayer Plattenaufteiltechnik | Asamer Technologie',
         description:
-          'Kappa Automatic & Advanced Line Sägen von Mayer: Präzision, österreichische Fertigung und vollautomatische Zuschnittlinien für Industrie und Handwerk.',
+          'Mayer Plattenaufteilsägen – Kappa Automatic & Advanced Line für Holz, Kunststoff und Metall. Präzision für die Serienproduktion.',
         keywords: ['Mayer', 'Kappa Automatic', 'Plattensäge', 'CNC Sägen', 'Asamer'],
       },
       en: {
         title: 'Mayer Panel Cutting Technology | Asamer Technology',
         description:
-          'Discover Mayer Kappa Automatic and Advanced Line panel saws with Austrian engineering, automatic material handling and Industry 4.0 interfaces.',
+          'Mayer panel saws – Kappa Automatic & Advanced Line for wood, plastic and metal. Precision cutting for serial production.',
         keywords: ['Mayer', 'Panel saw', 'Kappa Automatic', 'Advanced Line', 'Automation'],
       },
       cz: {
         title: 'Mayer technologie dělení desek | Asamer Technologie',
         description:
-          'Pily Mayer Kappa Automatic a Advanced Line zajišťují přesné formátování, integraci do skladů i automatizované napojení na software.',
+          'Mayer pily na desky – řady Kappa Automatic & Advanced Line pro dřevo, plast a kov. Přesnost pro sériovou výrobu.',
         keywords: ['Mayer', 'Pily na desky', 'Kappa Automatic', 'Advanced Line', 'Automatizace'],
+      },
+      sk: {
+        title: 'Mayer technológia delenia dosiek | Asamer Technologie',
+        description:
+          'Mayer pily na dosky – rady Kappa Automatic & Advanced Line pre drevo, plast a kov. Presnosť pre sériovú výrobu.',
+        keywords: ['Mayer', 'Píly na dosky', 'Kappa Automatic', 'Advanced Line', 'Automatizácia'],
+      },
+      hu: {
+        title: 'Mayer lapszabász technológia | Asamer Technologie',
+        description:
+          'Mayer lapszabász gépek – Kappa Automatic & Advanced Line fához, műanyaghoz és fémhez. Precizitás sorozatgyártáshoz.',
+        keywords: ['Mayer', 'Lapszabász', 'Kappa Automatic', 'Advanced Line', 'Automatizálás'],
       },
     }),
   },
@@ -108,20 +123,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'OTT Kantenleimer & LASER Hydrofuse | Asamer',
         description:
-          'OTT Edgebander mit PUR, EVA und LASER Hydrofuse für fugenlose Kanten, flexible Fertigung und Premium-Möbelproduktion.',
+          'OTT Kantenleimmaschinen mit PUR und LASER Hydrofuse Technologie – fugenlose Kantenverbindungen für die Möbelindustrie. Jetzt anfragen.',
         keywords: ['OTT', 'Kantenleimer', 'PUR', 'Laser', 'Hydrofuse'],
       },
       en: {
         title: 'OTT Edgebanders & LASER Hydrofuse | Asamer',
         description:
-          'OTT edgebanding technology with PUR, EVA and LASER Hydrofuse delivers seamless edges and automated return systems for premium furniture.',
+          'OTT edge banding machines with PUR and LASER Hydrofuse technology – seamless edges for furniture manufacturers. Request a quote.',
         keywords: ['OTT', 'Edgebander', 'PUR', 'Laser', 'Furniture'],
       },
       cz: {
         title: 'OTT olepovačky hran & LASER Hydrofuse | Asamer',
         description:
-          'Technologie OTT s PUR, EVA a LASER Hydrofuse zajišťuje bezešvé hrany, automatické vracení a flexibilní výrobu nábytku.',
+          'OTT olepovačky hran s technologií PUR a LASER Hydrofuse – bezešvé spoje pro nábytkářský průmysl. Kontaktujte nás.',
         keywords: ['OTT', 'Olepovačka hran', 'PUR', 'Laser', 'Nábytek'],
+      },
+      sk: {
+        title: 'OTT olepovačky hrán & LASER Hydrofuse | Asamer',
+        description:
+          'OTT olepovačky hrán s technológiou PUR a LASER Hydrofuse – bezšvíkové spoje pre nábytkársky priemysel.',
+        keywords: ['OTT', 'Olepovačka hrán', 'PUR', 'Laser', 'Nábytok'],
+      },
+      hu: {
+        title: 'OTT élzárógépek & LASER Hydrofuse | Asamer',
+        description:
+          'OTT élzárógépek PUR és LASER Hydrofuse technológiával – varratnélküli élek a bútoripar számára.',
+        keywords: ['OTT', 'Élzárógép', 'PUR', 'Laser', 'Bútor'],
       },
     }),
   },
@@ -132,20 +159,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'BARBARIC Handling & Lagertechnik | Asamer',
         description:
-          'BARBARIC Kransysteme, Flächenlager und Manipulationstechnik automatisieren den Plattenfluss von der Wareneingabe bis zum Zuschnitt.',
+          'BARBARIC Handlingsysteme – von Vakuumhebern bis zu vollautomatischen Flächenlagern für die Plattenverarbeitung.',
         keywords: ['BARBARIC', 'Handling', 'Lagersystem', 'Automation', 'Kran'],
       },
       en: {
         title: 'BARBARIC Handling & Storage Systems | Asamer',
         description:
-          'BARBARIC vacuum lifters, crane systems and chaotic storage automate panel logistics between warehouses, saws and edgebanders.',
+          'BARBARIC handling systems – from vacuum lifters to fully automated flat storage systems for panel processing.',
         keywords: ['BARBARIC', 'Handling', 'Storage system', 'Vacuum lifter', 'Automation'],
       },
       cz: {
         title: 'BARBARIC manipulace a skladování | Asamer',
         description:
-          'BARBARIC dodává vakuové manipulátory, mostové jeřáby a inteligentní sklady s chaotickým řízením pro desky a lamely.',
+          'BARBARIC manipulační systémy – od vakuových zdviháků po plně automatické plošné sklady pro zpracování desek.',
         keywords: ['BARBARIC', 'Manipulace', 'Sklad', 'Vakuový manipulátor', 'Automatizace'],
+      },
+      sk: {
+        title: 'BARBARIC manipulácia a skladovanie | Asamer',
+        description:
+          'BARBARIC manipulačné systémy – od vákuových zdvíhačov po plne automatické plošné sklady pre spracovanie dosiek.',
+        keywords: ['BARBARIC', 'Manipulácia', 'Sklad', 'Vákuový zdvíhač', 'Automatizácia'],
+      },
+      hu: {
+        title: 'BARBARIC kezelés és raktározás | Asamer',
+        description:
+          'BARBARIC kezelőrendszerek – vákuumos emelőktől a teljesen automatizált síktárakig lapfeldolgozáshoz.',
+        keywords: ['BARBARIC', 'Kezelés', 'Raktár', 'Vákuumos emelő', 'Automatizálás'],
       },
     }),
   },
@@ -155,20 +194,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'Finanzierung & Förderkompass | Asamer Technologie',
         description:
-          'Guided Funnel für Förderprogramme, Leasing und Finanzierung von Automatisierung, Maschinen und Digitalisierung in Mitteleuropa.',
+          'Finanzierung, Leasing und Förderprogramme für Maschinen und Automatisierung in Mitteleuropa – interaktiver Förderkompass von Asamer.',
         keywords: ['Finanzierung', 'Förderung', 'Leasing', 'Automation', 'Maschinen'],
       },
       en: {
         title: 'Financing & Funding Compass | Asamer Technology',
         description:
-          'Interactive funding wizard covering grants, leasing and financing options for automation, robotics and machinery projects.',
+          'Financing, leasing and grant programs for machines and automation in Central Europe – interactive funding compass by Asamer.',
         keywords: ['Financing', 'Funding', 'Leasing', 'Automation', 'Machinery'],
       },
       cz: {
         title: 'Financování a dotační kompas | Asamer Technologie',
         description:
-          'Interaktivní průvodce dotacemi, leasingem a financováním investic do automatizace, robotiky a strojů v regionu CEE.',
+          'Financování, leasing a dotační programy pro stroje a automatizaci ve střední Evropě – interaktivní průvodce od Asamer.',
         keywords: ['Financování', 'Dotace', 'Leasing', 'Automatizace', 'Stroje'],
+      },
+      sk: {
+        title: 'Financovanie a dotačný kompas | Asamer Technologie',
+        description:
+          'Financovanie, leasing a dotačné programy pre stroje a automatizáciu v strednej Európe – interaktívny sprievodca od Asamer.',
+        keywords: ['Financovanie', 'Dotácie', 'Leasing', 'Automatizácia', 'Stroje'],
+      },
+      hu: {
+        title: 'Finanszírozás és pályázati iránytű | Asamer Technologie',
+        description:
+          'Finanszírozás, lízing és pályázati programok gépekhez és automatizáláshoz Közép-Európában – interaktív útmutató az Asamertől.',
+        keywords: ['Finanszírozás', 'Pályázat', 'Lízing', 'Automatizálás', 'Gépek'],
       },
     }),
   },
@@ -178,20 +229,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'Lösungen für Digitalisierung & Produktionssoftware | Asamer',
         description:
-          'Integrationen von ERP, MES und Produktionssoftware verbinden Maschinen, Lager und Datenströme für Smart Factory Konzepte.',
+          'Maßgeschneiderte Lösungen für Holz-, Kunststoff- und Metallverarbeitung – Automatisierung, Software-Integration und Industrie 4.0 von Asamer.',
         keywords: ['Lösungen', 'Digitalisierung', 'ERP', 'MES', 'Smart Factory'],
       },
       en: {
         title: 'Solutions for Digital Production & Software | Asamer',
         description:
-          'ERP, MES and production software integrations that connect machines, storage and analytics for smart manufacturing.',
+          'Custom solutions for wood, plastic and metal processing – automation, software integration and Industry 4.0 by Asamer.',
         keywords: ['Solutions', 'Digitalization', 'ERP', 'MES', 'Smart Factory'],
       },
       cz: {
         title: 'Řešení pro digitální výrobu a software | Asamer',
         description:
-          'Propojujeme ERP, MES a výrobní software so stroji i sklady pro chytré továrny a sledování výroby v reálném čase.',
+          'Řešení na míru pro zpracování dřeva, plastů a kovů – automatizace, integrace softwaru a Průmysl 4.0 od Asamer.',
         keywords: ['Řešení', 'Digitalizace', 'ERP', 'MES', 'Chytrá výroba'],
+      },
+      sk: {
+        title: 'Riešenia pre digitálnu výrobu a softvér | Asamer',
+        description:
+          'Riešenia na mieru pre spracovanie dreva, plastov a kovov – automatizácia, integrácia softvéru a Priemysel 4.0 od Asamer.',
+        keywords: ['Riešenia', 'Digitalizácia', 'ERP', 'MES', 'Chytrá výroba'],
+      },
+      hu: {
+        title: 'Megoldások digitális gyártáshoz és szoftverhez | Asamer',
+        description:
+          'Testreszabott megoldások fa-, műanyag- és fémfeldolgozáshoz – automatizálás, szoftverintegráció és Ipar 4.0 az Asamertől.',
+        keywords: ['Megoldások', 'Digitalizáció', 'ERP', 'MES', 'Ipar 4.0'],
       },
     }),
   },
@@ -201,20 +264,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'Service & Lifecycle Support | Asamer Technologie',
         description:
-          'Servicenetzwerke, Ersatzteile, Schulungen und 24/7 Support sorgen für hohe Verfügbarkeit von Maschinen und Automationslinien.',
+          'Asamer Service – Montage, Notfallservice und Ersatzteillieferung für OTT, Mayer, BARBARIC und weitere Hersteller in CZ, SK, HU.',
         keywords: ['Service', 'Support', 'Ersatzteile', 'Training', 'Automation'],
       },
       en: {
         title: 'Service & Lifecycle Support | Asamer Technology',
         description:
-          'Spare parts, maintenance, training and lifecycle services keep machinery and automation cells productive.',
+          'Asamer Service – installation, emergency service and spare parts for OTT, Mayer, BARBARIC and other manufacturers in CZ, SK, HU.',
         keywords: ['Service', 'Support', 'Spare parts', 'Training', 'Automation'],
       },
       cz: {
         title: 'Servis a lifecycle podpora | Asamer Technologie',
         description:
-          'Servisní síť, náhradní díly, školení i vzdálená podpora udržují stroje a automatizaci v maximální produktivitě.',
+          'Servis Asamer – montáž, nouzový servis a dodávka náhradních dílů pro OTT, Mayer, BARBARIC a další výrobce v CZ, SK, HU.',
         keywords: ['Servis', 'Podpora', 'Náhradní díly', 'Školení', 'Automatizace'],
+      },
+      sk: {
+        title: 'Servis a podpora | Asamer Technologie',
+        description:
+          'Servis Asamer – montáž, núdzový servis a dodávka náhradných dielov pre OTT, Mayer, BARBARIC a ďalších výrobcov.',
+        keywords: ['Servis', 'Podpora', 'Náhradné diely', 'Školenie', 'Automatizácia'],
+      },
+      hu: {
+        title: 'Szerviz és támogatás | Asamer Technologie',
+        description:
+          'Asamer Szerviz – szerelés, sürgősségi szerviz és alkatrész-szállítás OTT, Mayer, BARBARIC és más gyártókhoz.',
+        keywords: ['Szerviz', 'Támogatás', 'Alkatrészek', 'Képzés', 'Automatizálás'],
       },
     }),
   },
@@ -225,20 +300,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'Gebrauchtmaschinen & Refurbishment | Asamer',
         description:
-          'Ausgewählte gebrauchte Holz- und Kunststoffmaschinen inklusive Beratung, Zustandsgutachten und Inbetriebnahme.',
+          'Gebrauchtmaschinen für die Holz- und Plattenverarbeitung – technisch geprüfte Angebote von Asamer. Jetzt anfragen.',
         keywords: ['Gebrauchtmaschinen', 'Refurbished', 'Holzbearbeitung', 'Asamer'],
       },
       en: {
         title: 'Used Machines & Refurbishment | Asamer',
         description:
-          'Handpicked used wood- and plastic-processing machines with consulting, inspection and commissioning.',
+          'Used machines for wood and panel processing – technically verified offers from Asamer. Request now.',
         keywords: ['Used machines', 'Refurbished', 'Woodworking', 'Asamer'],
       },
       cz: {
         title: 'Použité stroje a repase | Asamer',
         description:
-          'Vybrané použité stroje pro zpracování dřeva a plastu včetně poradenství, inspekce a uvedení do provozu.',
+          'Použité stroje pro zpracování dřeva a desek – technicky ověřené nabídky od Asamer. Poptejte nyní.',
         keywords: ['Použité stroje', 'Repase', 'Dřevoobrábění', 'Asamer'],
+      },
+      sk: {
+        title: 'Použité stroje a repasovanie | Asamer',
+        description:
+          'Použité stroje pre spracovanie dreva a dosiek – technicky overené ponuky od Asamer.',
+        keywords: ['Použité stroje', 'Repasovanie', 'Drevoobrábacie', 'Asamer'],
+      },
+      hu: {
+        title: 'Használt gépek és felújítás | Asamer',
+        description:
+          'Használt gépek fa- és lapfeldolgozáshoz – műszakilag ellenőrzött ajánlatok az Asamertől.',
+        keywords: ['Használt gépek', 'Felújított', 'Famegmunkálás', 'Asamer'],
       },
     }),
   },
@@ -248,20 +335,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'Kontakt & Standorte | Asamer Technologie',
         description:
-          'Kontaktdaten, Ansprechpartner und Standorte der Asamer Technologie GmbH in Österreich und Tschechien.',
+          'Kontaktieren Sie Asamer Technologie GmbH in Lambach (AT) oder ASAMER s.r.o. in Brno (CZ) für Maschinen und Service.',
         keywords: ['Kontakt', 'Standort', 'Asamer', 'Service', 'Österreich'],
       },
       en: {
         title: 'Contact & Locations | Asamer Technology',
         description:
-          'Contact information, offices and key people at Asamer Technology in Austria and Czech Republic.',
+          'Contact Asamer Technologie GmbH in Lambach (AT) or ASAMER s.r.o. in Brno (CZ) for machines and service.',
         keywords: ['Contact', 'Locations', 'Asamer', 'Austria', 'Czech Republic'],
       },
       cz: {
         title: 'Kontakt a pobočky | Asamer Technologie',
         description:
-          'Kontakty, odpovědné osoby a adresy společnosti Asamer Technologie v Rakousku a České republice.',
+          'Kontaktujte Asamer Technologie GmbH v Lambachu (AT) nebo ASAMER s.r.o. v Brně (CZ) pro stroje a servis.',
         keywords: ['Kontakt', 'Pobočka', 'Asamer', 'Rakousko', 'Česká republika'],
+      },
+      sk: {
+        title: 'Kontakt a pobočky | Asamer Technologie',
+        description:
+          'Kontaktujte Asamer Technologie GmbH v Lambachu (AT) alebo ASAMER s.r.o. v Brne (CZ) pre stroje a servis.',
+        keywords: ['Kontakt', 'Pobočka', 'Asamer', 'Rakúsko', 'Česká republika'],
+      },
+      hu: {
+        title: 'Kapcsolat és telephelyek | Asamer Technologie',
+        description:
+          'Vegye fel a kapcsolatot az Asamer Technologie GmbH-val (Lambach, AT) vagy az ASAMER s.r.o.-val (Brno, CZ) gépekért és szervizért.',
+        keywords: ['Kapcsolat', 'Telephely', 'Asamer', 'Ausztria', 'Csehország'],
       },
     }),
   },
@@ -271,20 +370,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'Impressum & Rechtliches | Asamer Technologie',
         description:
-          'Firmenbuchdaten, UID und rechtliche Hinweise der Asamer Technologie GmbH.',
+          'Impressum, Firmenbuchdaten und rechtliche Hinweise der Asamer Technologie GmbH und ASAMER s.r.o.',
         keywords: ['Impressum', 'UID', 'Asamer', 'Rechtliche Hinweise'],
       },
       en: {
         title: 'Imprint & Legal | Asamer Technology',
         description:
-          'Company registration, VAT ID and legal disclosure for Asamer Technology GmbH.',
+          'Imprint, company registration and legal information for Asamer Technologie GmbH and ASAMER s.r.o.',
         keywords: ['Imprint', 'Legal', 'VAT', 'Asamer'],
       },
       cz: {
         title: 'Impressum a právní informace | Asamer Technologie',
         description:
-          'Firemní údaje, IČ a právní informace společnosti Asamer Technologie GmbH.',
+          'Impressum, firemní údaje a právní informace společností Asamer Technologie GmbH a ASAMER s.r.o.',
         keywords: ['Impressum', 'Právní informace', 'Asamer'],
+      },
+      sk: {
+        title: 'Impressum a právne informácie | Asamer Technologie',
+        description:
+          'Impressum, firemné údaje a právne informácie spoločností Asamer Technologie GmbH a ASAMER s.r.o.',
+        keywords: ['Impressum', 'Právne informácie', 'Asamer'],
+      },
+      hu: {
+        title: 'Impresszum és jogi információk | Asamer Technologie',
+        description:
+          'Impresszum, cégjegyzékadatok és jogi információk az Asamer Technologie GmbH és ASAMER s.r.o. vállalatokról.',
+        keywords: ['Impresszum', 'Jogi információk', 'Asamer'],
       },
     }),
   },
