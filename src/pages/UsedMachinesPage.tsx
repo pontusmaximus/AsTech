@@ -118,6 +118,22 @@ const UsedMachinesPage = () => {
         'Olepovačka hran s nájezdem 93 000 lfm.'
       ),
     },
+    {
+      name: 'Tornado Top',
+      manufacturer: 'OTT',
+      year: 2011,
+      condition: tr('gut', 'good', 'dobrý'),
+      status: tr('verfügbar', 'available', 'k dispozici'),
+      images: [
+        '/images/used-machines/ott-tornado-top-1.jpg',
+        '/images/used-machines/ott-tornado-top-2.jpg',
+      ],
+      shortDescription: tr(
+        'Kantenleimmaschine mit 330.000 lfm Laufleistung.',
+        'Edgebanding machine with 330,000 lfm of usage.',
+        'Olepovačka hran s nájezdem 330 000 lfm.'
+      ),
+    },
   ];
 
   const generalInquiryMail = buildMailto(

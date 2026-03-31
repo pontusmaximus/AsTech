@@ -34,6 +34,7 @@ import {
   isSupportedLanguage,
   stripLanguageFromPath,
 } from './lib/language';
+import type { Language } from './i18n';
 import './App.css';
 
 interface LanguageContextType {

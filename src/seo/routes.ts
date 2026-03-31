@@ -23,9 +23,13 @@ export interface RouteMeta {
 
 export interface SeoRouteConfig {
   slug: string;
+  slugByLang?: Partial<Record<Language, string>>;
   image?: string;
   meta: Record<Language, RouteMeta>;
 }
+
+export const getSlugForLang = (config: SeoRouteConfig, lang: Language): string =>
+  config.slugByLang?.[lang] ?? config.slug;
 
 type FullMetaInput = {
   de: RouteMeta;
@@ -295,6 +299,13 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
   },
   usedMachines: {
     slug: '/pouzite-stroje',
+    slugByLang: {
+      de: '/gebrauchtmaschinen',
+      en: '/used-machines',
+      cz: '/pouzite-stroje',
+      sk: '/pouzite-stroje',
+      hu: '/hasznalt-gepek',
+    },
     image: '/images/used-machines/holz-her-1308xl-power.jpg',
     meta: createMeta({
       de: {
