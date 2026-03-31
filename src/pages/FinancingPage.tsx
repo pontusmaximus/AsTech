@@ -9,6 +9,7 @@ import { rankPrograms } from '../features/financing/eligibility';
 import { getFlowSessionId, trackEvent } from '../lib/analytics';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
+import { faqPageSchema } from '../seo/structuredData';
 import type {
   BudgetRange,
   CompanyType,
@@ -197,6 +198,37 @@ const FinancingPage = () => {
     },
   ];
 
+  const faqEntries = [
+    {
+      question: tr(
+        'Was sind die Fördervoraussetzungen für OP TAK Digitální podnik?',
+        'What are the grant criteria for OP TAK Digital Enterprise?',
+        'Jaká jsou kritéria pro dotaci OP TAK Digitální podnik?'
+      ),
+      answer: sections[0].criteria,
+    },
+    {
+      question: tr(
+        'Was wird über OP TAK Inovace gefördert?',
+        'What is funded under OP TAK Innovation?',
+        'Co je podporováno v rámci OP TAK Inovace?'
+      ),
+      answer: sections[1].funding,
+    },
+    {
+      question: tr(
+        'Kann ich Maschinenfinanzierung per Leasing abwickeln?',
+        'Can I finance machinery through leasing?',
+        'Lze stroje financovat prostřednictvím leasingu?'
+      ),
+      answer: tr(
+        'Durch unseren Partner Raiffeisen Leasing garantieren wir faire Finanzierung mit planbaren Monatsraten.',
+        'Through our partner Raiffeisen Leasing, we provide fair financing with predictable monthly payments.',
+        'Díky partnerovi Raiffeisen Leasing zajistíme férové financování s předvídatelnými měsíčními splátkami.'
+      ),
+    },
+  ];
+
   const matrixRows = [
     { label: qaLabels.criteria, values: sections.map((section) => section.criteria) },
     { label: qaLabels.funding, values: sections.map((section) => section.funding) },
@@ -212,7 +244,7 @@ const FinancingPage = () => {
       flow_name: FINANCING_FLOW_NAME,
       flow_session_id: flowSessionId,
       flow_step: 'landing',
-      page_path: '/finanzierung',
+      page_path: '/financovani',
     });
   }, [flowSessionId]);
 
@@ -359,7 +391,7 @@ const FinancingPage = () => {
 
   return (
     <>
-      <SeoHead routeKey="financing" />
+      <SeoHead routeKey="financing" structuredData={[faqPageSchema(faqEntries)]} />
       <div className="bg-dark min-h-screen">
       <section className="pt-28 md:pt-36 pb-8 financing-hero">
         <div className="container-wide">

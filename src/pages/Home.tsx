@@ -182,7 +182,7 @@ const Home = () => {
       title: tr('Finanzierung durch Förderung', 'Funding via grants', 'Financování prostřednictvím dotací'),
       description: tr('Nutzen Sie unseren Förderkompass.', 'Use our funding compass.', 'Využijte náš dotační kompas.'),
       linkLabel: tr('Zum Förderkompass', 'Go to funding compass', 'Přejít na dotační kompas'),
-      link: '/finanzierung',
+      link: '/financovani',
     },
     {
       title: tr('Finanzierung durch Leasing', 'Funding via leasing', 'Financování prostřednictvím leasingu'),
@@ -192,7 +192,7 @@ const Home = () => {
         'Díky našemu partnerovi Raiffeisen Leasing vám zajistíme férové financování.'
       ),
       linkLabel: tr('Mehr zu Leasing', 'More about leasing', 'Více o leasingu'),
-      link: '/finanzierung',
+      link: '/financovani',
     },
   ];
 
@@ -344,7 +344,7 @@ const Home = () => {
                 ))}
               </div>
 
-              <a href={buildPath('/finanzierung')} className="btn-outline-dark inline-flex">
+              <a href={buildPath('/financovani')} className="btn-outline-dark inline-flex">
                 {tr('Zur Finanzierungsseite', 'Go to funding page', 'Přejít na stránku financování')}
                 <ArrowUpRight className="w-5 h-5" />
               </a>
@@ -445,7 +445,7 @@ const Home = () => {
             ))}
           </div>
 
-          <a href={buildPath('/service')} className="btn-outline-dark mt-6 inline-flex">
+          <a href={buildPath('/servis')} className="btn-outline-dark mt-6 inline-flex">
             {tr('Zur Service-Seite', 'Go to service page', 'Přejít na stránku servisu')}
             <ArrowUpRight className="w-5 h-5" />
           </a>

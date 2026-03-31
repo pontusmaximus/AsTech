@@ -2,6 +2,18 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/:lang/finanzierung", "destination": "/:lang/financovani", "permanent": true },
+    { "source": "/:lang/loesungen", "destination": "/:lang/reseni", "permanent": true },
+    { "source": "/:lang/service", "destination": "/:lang/servis", "permanent": true },
+    { "source": "/:lang/gebrauchtmaschinen", "destination": "/:lang/pouzite-stroje", "permanent": true },
+    { "source": "/:lang/impressum", "destination": "/:lang/imprint", "permanent": true },
+    { "source": "/finanzierung", "destination": "/cz/financovani", "permanent": true },
+    { "source": "/loesungen", "destination": "/cz/reseni", "permanent": true },
+    { "source": "/service", "destination": "/cz/servis", "permanent": true },
+    { "source": "/gebrauchtmaschinen", "destination": "/cz/pouzite-stroje", "permanent": true },
+    { "source": "/impressum", "destination": "/cz/imprint", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

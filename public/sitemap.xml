@@ -1,258 +1,604 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.asamer.cz</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.asamer.cz/cz</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/cz/barbaric</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/barbaric"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/cz/finanzierung</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <loc>https://www.asamer.cz/cz/financovani</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/financovani"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/financovani"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/financovani"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/financovani"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/financovani"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/financovani"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/cz/gebrauchtmaschinen</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asamer.cz/cz/impressum</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <loc>https://www.asamer.cz/cz/imprint</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/imprint"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/imprint"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/imprint"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/imprint"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/cz/kontakt</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asamer.cz/cz/loesungen</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/kontakt"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/cz/mayer</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/mayer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/mayer"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/mayer"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/mayer"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/mayer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/mayer"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/cz/ott</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/ott"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/ott"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/ott"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/ott"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/ott"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/ott"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/cz/service</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <loc>https://www.asamer.cz/cz/pouzite-stroje</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/pouzite-stroje"/>
+  </url>
+  <url>
+    <loc>https://www.asamer.cz/cz/reseni</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/reseni"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/reseni"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/reseni"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/reseni"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/reseni"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/reseni"/>
+  </url>
+  <url>
+    <loc>https://www.asamer.cz/cz/servis</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/servis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/servis"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/servis"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/servis"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/servis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/servis"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/de</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/de/barbaric</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/barbaric"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/de/finanzierung</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <loc>https://www.asamer.cz/de/financovani</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/financovani"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/financovani"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/financovani"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/financovani"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/financovani"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/financovani"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/de/gebrauchtmaschinen</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asamer.cz/de/impressum</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <loc>https://www.asamer.cz/de/imprint</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/imprint"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/imprint"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/imprint"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/imprint"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/de/kontakt</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asamer.cz/de/loesungen</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/kontakt"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/de/mayer</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/mayer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/mayer"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/mayer"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/mayer"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/mayer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/mayer"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/de/ott</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/ott"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/ott"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/ott"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/ott"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/ott"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/ott"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/de/service</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <loc>https://www.asamer.cz/de/pouzite-stroje</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/pouzite-stroje"/>
+  </url>
+  <url>
+    <loc>https://www.asamer.cz/de/reseni</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/reseni"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/reseni"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/reseni"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/reseni"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/reseni"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/reseni"/>
+  </url>
+  <url>
+    <loc>https://www.asamer.cz/de/servis</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/servis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/servis"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/servis"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/servis"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/servis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/servis"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/en</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/en/barbaric</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/barbaric"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/en/finanzierung</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <loc>https://www.asamer.cz/en/financovani</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/financovani"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/financovani"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/financovani"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/financovani"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/financovani"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/financovani"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/en/gebrauchtmaschinen</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asamer.cz/en/impressum</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <loc>https://www.asamer.cz/en/imprint</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/imprint"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/imprint"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/imprint"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/imprint"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/en/kontakt</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asamer.cz/en/loesungen</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/kontakt"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/en/mayer</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/mayer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/mayer"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/mayer"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/mayer"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/mayer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/mayer"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/en/ott</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/ott"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/ott"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/ott"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/ott"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/ott"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/ott"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/en/service</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <loc>https://www.asamer.cz/en/pouzite-stroje</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/pouzite-stroje"/>
+  </url>
+  <url>
+    <loc>https://www.asamer.cz/en/reseni</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/reseni"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/reseni"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/reseni"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/reseni"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/reseni"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/reseni"/>
+  </url>
+  <url>
+    <loc>https://www.asamer.cz/en/servis</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/servis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/servis"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/servis"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/servis"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/servis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/servis"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/hu</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/hu/barbaric</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/barbaric"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/hu/finanzierung</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <loc>https://www.asamer.cz/hu/financovani</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/financovani"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/financovani"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/financovani"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/financovani"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/financovani"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/financovani"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/hu/gebrauchtmaschinen</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asamer.cz/hu/impressum</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <loc>https://www.asamer.cz/hu/imprint</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/imprint"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/imprint"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/imprint"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/imprint"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/hu/kontakt</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asamer.cz/hu/loesungen</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/kontakt"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/hu/mayer</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/mayer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/mayer"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/mayer"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/mayer"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/mayer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/mayer"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/hu/ott</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/ott"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/ott"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/ott"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/ott"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/ott"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/ott"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/hu/service</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <loc>https://www.asamer.cz/hu/pouzite-stroje</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/pouzite-stroje"/>
+  </url>
+  <url>
+    <loc>https://www.asamer.cz/hu/reseni</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/reseni"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/reseni"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/reseni"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/reseni"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/reseni"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/reseni"/>
+  </url>
+  <url>
+    <loc>https://www.asamer.cz/hu/servis</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/servis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/servis"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/servis"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/servis"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/servis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/servis"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/sk</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/sk/barbaric</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/barbaric"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/barbaric"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/sk/finanzierung</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <loc>https://www.asamer.cz/sk/financovani</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/financovani"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/financovani"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/financovani"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/financovani"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/financovani"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/financovani"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/sk/gebrauchtmaschinen</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asamer.cz/sk/impressum</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <loc>https://www.asamer.cz/sk/imprint</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/imprint"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/imprint"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/imprint"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/imprint"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/sk/kontakt</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asamer.cz/sk/loesungen</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/kontakt"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/sk/mayer</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/mayer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/mayer"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/mayer"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/mayer"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/mayer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/mayer"/>
   </url>
   <url>
     <loc>https://www.asamer.cz/sk/ott</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/ott"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/ott"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/ott"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/ott"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/ott"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/ott"/>
   </url>
   <url>
-    <loc>https://www.asamer.cz/sk/service</loc>
-    <lastmod>2026-03-04T15:42:04.607Z</lastmod>
+    <loc>https://www.asamer.cz/sk/pouzite-stroje</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/pouzite-stroje"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/pouzite-stroje"/>
+  </url>
+  <url>
+    <loc>https://www.asamer.cz/sk/reseni</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/reseni"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/reseni"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/reseni"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/reseni"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/reseni"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/reseni"/>
+  </url>
+  <url>
+    <loc>https://www.asamer.cz/sk/servis</loc>
+    <lastmod>2026-03-31T00:10:00.212Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.asamer.cz/de/servis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.asamer.cz/en/servis"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.asamer.cz/cz/servis"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.asamer.cz/sk/servis"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.asamer.cz/hu/servis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.asamer.cz/cz/servis"/>
   </url>
 </urlset>

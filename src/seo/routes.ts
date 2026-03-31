@@ -150,7 +150,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     }),
   },
   financing: {
-    slug: '/finanzierung',
+    slug: '/financovani',
     meta: createMeta({
       de: {
         title: 'Finanzierung & Förderkompass | Asamer Technologie',
@@ -173,7 +173,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     }),
   },
   solutions: {
-    slug: '/loesungen',
+    slug: '/reseni',
     meta: createMeta({
       de: {
         title: 'Lösungen für Digitalisierung & Produktionssoftware | Asamer',
@@ -196,7 +196,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     }),
   },
   service: {
-    slug: '/service',
+    slug: '/servis',
     meta: createMeta({
       de: {
         title: 'Service & Lifecycle Support | Asamer Technologie',
@@ -219,7 +219,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     }),
   },
   usedMachines: {
-    slug: '/gebrauchtmaschinen',
+    slug: '/pouzite-stroje',
     image: '/images/used-machines/holz-her-1308xl-power.jpg',
     meta: createMeta({
       de: {
@@ -266,7 +266,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     }),
   },
   imprint: {
-    slug: '/impressum',
+    slug: '/imprint',
     meta: createMeta({
       de: {
         title: 'Impressum & Rechtliches | Asamer Technologie',

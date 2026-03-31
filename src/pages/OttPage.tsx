@@ -7,6 +7,8 @@ import { translatePageText } from '../i18n/pageTextTranslations';
 import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
+import { breadcrumbSchema } from '../seo/structuredData';
+import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,6 +34,12 @@ const OttPage = () => {
     }
     return en;
   };
+  const breadcrumbs = breadcrumbSchema([
+    { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+    { name: tr('Hersteller', 'Manufacturers', 'Výrobci'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+    { name: 'OTT', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/ott')}` },
+  ]);
+
   const inquiryMail = buildMailto(
     'office@asamer.net',
     tr('Anfrage OTT', 'Inquiry OTT', 'Poptávka OTT')
@@ -205,7 +213,7 @@ const OttPage = () => {
 
   return (
     <>
-      <SeoHead routeKey="ott" />
+      <SeoHead routeKey="ott" structuredData={[breadcrumbs]} />
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
         <div className="container-wide">
         <ManufacturerHeader

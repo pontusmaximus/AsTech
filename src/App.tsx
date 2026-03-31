@@ -100,12 +100,12 @@ const LEGACY_SLUGS = [
   'mayer',
   'ott',
   'barbaric',
-  'finanzierung',
-  'loesungen',
-  'service',
-  'gebrauchtmaschinen',
+  'financovani',
+  'reseni',
+  'servis',
+  'pouzite-stroje',
   'kontakt',
-  'impressum',
+  'imprint',
 ];
 
 const AppRoutes = () => {
@@ -126,12 +126,18 @@ const AppRoutes = () => {
         <Route path="mayer" element={<MayerPage />} />
         <Route path="ott" element={<OttPage />} />
         <Route path="barbaric" element={<BarbaricPage />} />
-        <Route path="finanzierung" element={<FinancingPage />} />
-        <Route path="loesungen" element={<SolutionsPage />} />
-        <Route path="service" element={<ServicePage />} />
-        <Route path="gebrauchtmaschinen" element={<UsedMachinesPage />} />
+        <Route path="financovani" element={<FinancingPage />} />
+        <Route path="reseni" element={<SolutionsPage />} />
+        <Route path="servis" element={<ServicePage />} />
+        <Route path="pouzite-stroje" element={<UsedMachinesPage />} />
         <Route path="kontakt" element={<ContactPage />} />
-        <Route path="impressum" element={<ImprintPage />} />
+        <Route path="imprint" element={<ImprintPage />} />
+        {/* Redirects for old German slugs */}
+        <Route path="finanzierung" element={<SlugRedirect newSlug="/financovani" />} />
+        <Route path="loesungen" element={<SlugRedirect newSlug="/reseni" />} />
+        <Route path="service" element={<SlugRedirect newSlug="/servis" />} />
+        <Route path="gebrauchtmaschinen" element={<SlugRedirect newSlug="/pouzite-stroje" />} />
+        <Route path="impressum" element={<SlugRedirect newSlug="/imprint" />} />
         <Route path="*" element={<LanguageFallbackRedirect />} />
       </Route>
       <Route path="*" element={<Navigate to={`/${DEFAULT_LANGUAGE}`} replace />} />
@@ -219,6 +225,11 @@ const LanguageAppLayout = () => {
 const LanguageFallbackRedirect = () => {
   const { buildPath } = useLanguage();
   return <Navigate to={buildPath('/')} replace />;
+};
+
+const SlugRedirect = ({ newSlug }: { newSlug: string }) => {
+  const { buildPath } = useLanguage();
+  return <Navigate to={buildPath(newSlug)} replace />;
 };
 
 export default App;

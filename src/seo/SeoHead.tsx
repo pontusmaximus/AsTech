@@ -53,6 +53,8 @@ const SeoHead = ({ routeKey, overrides = {}, structuredData = [], robots = 'inde
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={image} />
       <meta property="og:image:alt" content={title} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:locale" content={languageToHreflang(lang)} />
 
       <meta name="twitter:card" content="summary_large_image" />

@@ -7,6 +7,8 @@ import { translatePageText } from '../i18n/pageTextTranslations';
 import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
+import { breadcrumbSchema } from '../seo/structuredData';
+import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +38,12 @@ const BarbaricPage = () => {
     }
     return en;
   };
+  const breadcrumbs = breadcrumbSchema([
+    { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+    { name: tr('Hersteller', 'Manufacturers', 'Výrobci'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+    { name: 'BARBARIC', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/barbaric')}` },
+  ]);
+
   const inquiryMail = buildMailto(
     'office@asamer.net',
     tr('Anfrage BARBARIC', 'Inquiry BARBARIC', 'Poptávka BARBARIC')
@@ -192,7 +200,7 @@ const BarbaricPage = () => {
 
   return (
     <>
-      <SeoHead routeKey="barbaric" />
+      <SeoHead routeKey="barbaric" structuredData={[breadcrumbs]} />
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
         <div className="container-wide">
         <ManufacturerHeader

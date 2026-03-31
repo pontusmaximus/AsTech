@@ -125,7 +125,7 @@ const UsedMachinesPage = () => {
     tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptavka na pouzity stroj')
   );
 
-  const baseUrl = buildCanonicalUrl(lang, '/gebrauchtmaschinen');
+  const baseUrl = buildCanonicalUrl(lang, '/pouzite-stroje');
   const category = tr('Gebrauchtmaschinen', 'Used machines', 'Pouzite stroje');
   const slideDurationSec = 5;
   const itemListSchema = {

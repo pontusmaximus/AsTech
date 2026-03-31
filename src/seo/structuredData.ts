@@ -56,6 +56,27 @@ export const localBusinessSchemas = () => [
   },
 ];
 
+export const faqPageSchema = (entries: Array<{ question: string; answer: string }>) => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: entries.map(({ question, answer }) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+});
+
+export const breadcrumbSchema = (items: Array<{ name: string; url: string }>) => ({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map(({ name, url }, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name,
+    item: url,
+  })),
+});
+
 export const websiteSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'WebSite',

@@ -165,29 +165,29 @@ const Navigation = () => {
             </div>
 
             <Link
-              to={buildPath('/loesungen')}
-              className={`text-sm transition-colors ${location.pathname === buildPath('/loesungen') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              to={buildPath('/reseni')}
+              className={`text-sm transition-colors ${location.pathname === buildPath('/reseni') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.solutions}
             </Link>
 
             <Link
-              to={buildPath('/finanzierung')}
-              className={`text-sm transition-colors ${location.pathname === buildPath('/finanzierung') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              to={buildPath('/financovani')}
+              className={`text-sm transition-colors ${location.pathname === buildPath('/financovani') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.automation}
             </Link>
 
             <Link
-              to={buildPath('/service')}
-              className={`text-sm transition-colors ${location.pathname === buildPath('/service') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              to={buildPath('/servis')}
+              className={`text-sm transition-colors ${location.pathname === buildPath('/servis') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.service}
             </Link>
 
             <Link
-              to={buildPath('/gebrauchtmaschinen')}
-              className={`text-sm transition-colors ${location.pathname === buildPath('/gebrauchtmaschinen') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              to={buildPath('/pouzite-stroje')}
+              className={`text-sm transition-colors ${location.pathname === buildPath('/pouzite-stroje') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
               {t.nav.usedMachines}
             </Link>
@@ -299,26 +299,26 @@ const Navigation = () => {
               {/* Page Links */}
               <div className="px-6 flex flex-col gap-3">
                 <Link
-                  to={buildPath('/loesungen')}
-                  className={`text-left ${location.pathname === buildPath('/loesungen') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                  to={buildPath('/reseni')}
+                  className={`text-left ${location.pathname === buildPath('/reseni') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.solutions}
                 </Link>
                 <Link
-                  to={buildPath('/finanzierung')}
-                  className={`text-left ${location.pathname === buildPath('/finanzierung') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                  to={buildPath('/financovani')}
+                  className={`text-left ${location.pathname === buildPath('/financovani') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.automation}
                 </Link>
                 <Link
-                  to={buildPath('/service')}
-                  className={`text-left ${location.pathname === buildPath('/service') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                  to={buildPath('/servis')}
+                  className={`text-left ${location.pathname === buildPath('/servis') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.service}
                 </Link>
                 <Link
-                  to={buildPath('/gebrauchtmaschinen')}
-                  className={`text-left ${location.pathname === buildPath('/gebrauchtmaschinen') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                  to={buildPath('/pouzite-stroje')}
+                  className={`text-left ${location.pathname === buildPath('/pouzite-stroje') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.usedMachines}
                 </Link>

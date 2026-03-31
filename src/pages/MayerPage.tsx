@@ -9,6 +9,8 @@ import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
 import { trackEvent } from '../lib/analytics';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
+import { breadcrumbSchema } from '../seo/structuredData';
+import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,6 +36,12 @@ const MayerPage = () => {
     }
     return en;
   };
+  const breadcrumbs = breadcrumbSchema([
+    { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+    { name: tr('Hersteller', 'Manufacturers', 'Výrobci'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+    { name: 'Mayer', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/mayer')}` },
+  ]);
+
   const isExternalUrl = (url: string) => url.startsWith('http');
   const inquiryMail = buildMailto(
     'office@asamer.net',
@@ -235,7 +243,7 @@ const MayerPage = () => {
 
   return (
     <>
-      <SeoHead routeKey="mayer" />
+      <SeoHead routeKey="mayer" structuredData={[breadcrumbs]} />
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
         <div className="container-wide">
         <ManufacturerHeader

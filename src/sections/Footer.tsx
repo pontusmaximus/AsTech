@@ -107,7 +107,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={buildPath('/gebrauchtmaschinen')} className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to={buildPath('/pouzite-stroje')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje')}
                 </Link>
               </li>
@@ -120,12 +120,12 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link to={buildPath('/loesungen')} className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to={buildPath('/reseni')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {t.nav.solutions}
                 </Link>
               </li>
               <li>
-                <Link to={buildPath('/service')} className="text-white/40 text-sm hover:text-white transition-colors">
+                <Link to={buildPath('/servis')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {t.nav.service}
                 </Link>
               </li>
@@ -145,8 +145,8 @@ const Footer = () => {
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <Link
-              to={buildPath('/impressum')}
-              onClick={() => handleFooterLinkClick('impressum')}
+              to={buildPath('/imprint')}
+              onClick={() => handleFooterLinkClick('imprint')}
               className="text-white/30 text-sm hover:text-white transition-colors"
             >
               {t.footer.imprint}
