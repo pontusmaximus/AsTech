@@ -1,372 +1,196 @@
 import { useEffect } from 'react';
-import { ArrowUpRight, Flame, Droplets } from 'lucide-react';
+import { ArrowUpRight, Flame, Droplets, Monitor, Wrench, Flag, Check, X, AlertTriangle, MapPin } from 'lucide-react';
+import ProductCard from '../components/manufacturer/ProductCard';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
-import ManufacturerHeader from '../components/manufacturer/ManufacturerHeader';
+import HeroSection from '../components/manufacturer/HeroSection';
+import CategorySidebar from '../components/manufacturer/CategorySidebar';
+import CategorySection from '../components/manufacturer/CategorySection';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
-
-gsap.registerPlugin(ScrollTrigger);
-
-type OttProduct = {
-  name: string;
-  desc: string;
-  type: string;
-  specs: string[];
-  image: string;
-};
+import { getOttProductsByCategory, buildOttProductPath, OTT_CATEGORY_LABELS } from '../data/ottProducts';
+import type { OttCategory } from '../data/ottProducts';
 
 const OttPage = () => {
-  const { lang } = useLanguage();
-  const locale =
-    lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
-      ? lang
-      : 'en';
+  const { lang, buildPath } = useLanguage();
+  const locale = lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu' ? lang : 'en';
   const tr = (de: string, en: string, cz: string) => {
     if (locale === 'de') return de;
     if (locale === 'cz') return cz;
-    if (locale === 'sk' || locale === 'hu') {
-      return translatePageText(locale, en, cz);
-    }
+    if (locale === 'sk' || locale === 'hu') return translatePageText(locale, en, cz);
     return en;
   };
+
   const breadcrumbs = breadcrumbSchema([
     { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
-    { name: tr('Hersteller', 'Manufacturers', 'Výrobci'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
     { name: 'OTT', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/ott')}` },
   ]);
-
-  const inquiryMail = buildMailto(
-    'office@asamer.net',
-    tr('Anfrage OTT', 'Inquiry OTT', 'Poptávka OTT')
-  );
+  const inquiryMail = buildMailto('office@asamer.net', tr('Anfrage OTT', 'Inquiry OTT', 'Poptávka OTT'));
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
     const ctx = gsap.context(() => {
-      gsap.fromTo('.page-header',
-        { y: 60, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }
-      );
-
-      gsap.utils.toArray<HTMLElement>('.product-item').forEach((item, i) => {
-        gsap.fromTo(item,
-          { y: 50, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            delay: i * 0.1,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: item,
-              start: 'top 85%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      });
+      gsap.fromTo('.page-header', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' });
     });
-
     return () => ctx.revert();
   }, []);
 
-  const edgebanders: OttProduct[] = [
-    {
-      name: 'Pacific+',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/c/7/csm_pacific-plus_4a95031bd4.png',
-      desc: tr('Kompakte Kantenanleimmaschine für Handwerk und Tischlerei', 'Compact edgebander for craft and carpentry shops', 'Kompaktní olepovačka hran pro řemeslo a truhlářství'),
-      type: 'PUR/EVA',
-      specs: [
-        tr('Kantenstärke: 0,4 - 3 mm', 'Edge thickness: 0.4 - 3 mm', 'Tloušťka hrany: 0,4 - 3 mm'),
-        tr('Vorschub: 12 m/min', 'Feed speed: 12 m/min', 'Posuv: 12 m/min'),
-        tr('Schmelzbehälter: 1,5 kg', 'Melting tank: 1.5 kg', 'Tavná nádoba: 1,5 kg'),
-      ],
-    },
-    {
-      name: 'Tornado+',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/b/a/csm_tornado-plus-ansicht-re_207e512b4f.png',
-      desc: tr('Leistungsstarke Lösung für mittlere Betriebe', 'Powerful solution for medium-sized operations', 'Výkonné řešení pro střední provozy'),
-      type: 'PUR/EVA',
-      specs: [
-        tr('Kantenstärke: 0,4 - 5 mm', 'Edge thickness: 0.4 - 5 mm', 'Tloušťka hrany: 0,4 - 5 mm'),
-        tr('Vorschub: 15 m/min', 'Feed speed: 15 m/min', 'Posuv: 15 m/min'),
-        tr('Schmelzbehälter: 2,5 kg', 'Melting tank: 2.5 kg', 'Tavná nádoba: 2,5 kg'),
-      ],
-    },
-    {
-      name: 'Flexedge',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/b/e/csm_flex-edge-01-spiegel_f344a91e0b.png',
-      desc: tr('Flexible Kantenbearbeitung mit modularer Ausstattung', 'Flexible edgebanding with modular equipment', 'Flexibilní olepování hran s modulární výbavou'),
-      type: 'PUR/EVA',
-      specs: [
-        tr('Kantenstärke: 0,4 - 8 mm', 'Edge thickness: 0.4 - 8 mm', 'Tloušťka hrany: 0,4 - 8 mm'),
-        tr('Vorschub: 18 m/min', 'Feed speed: 18 m/min', 'Posuv: 18 m/min'),
-        tr('Werkzeugwechsler: 6-fach', 'Tool changer: 6-fold', 'Měnič nástrojů: 6násobný'),
-      ],
-    },
-    {
-      name: 'Storm+',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/2/9/csm_storm2020-spiegel-001_4baf02d446.png',
-      desc: tr('Hochleistungsmaschine für industrielle Anforderungen', 'High-performance machine for industrial requirements', 'Vysokovýkonný stroj pro průmyslové požadavky'),
-      type: 'PUR/EVA',
-      specs: [
-        tr('Kantenstärke: 0,4 - 12 mm', 'Edge thickness: 0.4 - 12 mm', 'Tloušťka hrany: 0,4 - 12 mm'),
-        tr('Vorschub: 22 m/min', 'Feed speed: 22 m/min', 'Posuv: 22 m/min'),
-        tr('Nullfuge-Technologie', 'Zero-joint technology', 'Technologie nulové spáry'),
-      ],
-    },
-    {
-      name: 'Strongedge',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/1/0/csm_strongedge_a4f3c0a00e.png',
-      desc: tr('Maximale Stabilität für schwere Kanten', 'Maximum stability for heavy edges', 'Maximální stabilita pro silné hrany'),
-      type: 'PUR/EVA',
-      specs: [
-        tr('Kantenstärke: 1 - 20 mm', 'Edge thickness: 1 - 20 mm', 'Tloušťka hrany: 1 - 20 mm'),
-        tr('Vorschub: 20 m/min', 'Feed speed: 20 m/min', 'Posuv: 20 m/min'),
-        tr('Doppelvorschub', 'Dual feed', 'Dvojitý posuv'),
-      ],
-    },
-    {
-      name: 'Topedge',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/e/5/csm_topedge_4c89d6967e.jpg',
-      desc: tr('Premium-Lösung mit höchster Präzision', 'Premium solution with highest precision', 'Prémiové řešení s nejvyšší přesností'),
-      type: 'PUR/EVA',
-      specs: [
-        tr('Kantenstärke: 0,4 - 20 mm', 'Edge thickness: 0.4 - 20 mm', 'Tloušťka hrany: 0,4 - 20 mm'),
-        tr('Vorschub: 25 m/min', 'Feed speed: 25 m/min', 'Posuv: 25 m/min'),
-        tr('Hydrofuse-Technologie', 'Hydrofuse technology', 'Technologie Hydrofuse'),
-      ],
-    },
-    {
-      name: 'DoorEdition',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/6/0/csm_Titelseite_Door_MINI__78df2f3ba3.jpg',
-      desc: tr('Spezialisiert auf Tür- und Möbelkanten', 'Specialized for door and furniture edges', 'Specializováno na dveřní a nábytkové hrany'),
-      type: 'PUR/EVA',
-      specs: [
-        tr('Kantenstärke: 0,4 - 15 mm', 'Edge thickness: 0.4 - 15 mm', 'Tloušťka hrany: 0,4 - 15 mm'),
-        tr('Vorschub: 18 m/min', 'Feed speed: 18 m/min', 'Posuv: 18 m/min'),
-        tr('3D-Kantenbearbeitung', '3D edge processing', '3D opracování hran'),
-      ],
-    },
-    {
-      name: 'CombiMelt',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/5/6/csm_ott-130319-0628-2_f3762079d4.jpg',
-      desc: tr('Servicestation inkl zwei PUR Behälter', 'servicestation incl. two PUR containers', 'servisní stanice s dvěma PUR nádoby'),
-      type: 'PUR',
-      specs: [
-        tr('Kantenstärke: 0,4 - 8 mm', 'Edge thickness: 0.4 - 8 mm', 'Tloušťka hrany: 0,4 - 8 mm'),
-        tr('Vorschub: 15 m/min', 'Feed speed: 15 m/min', 'Posuv: 15 m/min'),
-        tr('Schnellwechselsystem', 'Quick-change system', 'Systém rychlé výměny'),
-      ],
-    },
-    {
-      name: 'bluEdge',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/9/7/csm_blu_edge_hyfuse_on_pacific_in_showroom__1__a1a1e7262f.jpg',
-      desc: tr('Nachrüstbar für alle Modelle', 'Upgradable for all models', 'Možnost dodatečné montáže pro všechny modely'),
-      type: 'LASER',
-      specs: [
-        tr('Kantenstärke: 0,4 - 3 mm', 'Edge thickness: 0.4 - 3 mm', 'Tloušťka hrany: 0,4 - 3 mm'),
-        tr('Vorschub: 12 m/min', 'Feed speed: 12 m/min', 'Posuv: 12 m/min'),
-        tr('Intuitive Bedienung', 'Intuitive operation', 'Intuitivní ovládání'),
-      ],
-    },
-  ];
-
-  const systemSolutions = [
-    {
-      name: 'TransCompact',
-      image: 'https://www.ottpaul.com/fileadmin/content/images/maschinen/transcompact.jpg',
-      desc: tr('Kompaktes Transportsystem für kleine bis mittlere Betriebe', 'Compact transport system for small to medium operations', 'Kompaktní transportní systém pro malé až střední provozy'),
-      specs: [
-        tr('Traglast: 150 kg', 'Payload: 150 kg', 'Nosnost: 150 kg'),
-        tr('Geschwindigkeit: 15 m/min', 'Speed: 15 m/min', 'Rychlost: 15 m/min'),
-        'Plug & Play Installation',
-      ],
-    },
-    {
-      name: 'TransLift',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/9/9/csm_translift1_8ef261da52.jpg',
-      desc: tr('Automatisches Hebe- und Transportsystem', 'Automatic lifting and transport system', 'Automatický zvedací a transportní systém'),
-      specs: [
-        tr('Hubhöhe: 2.000 mm', 'Lifting height: 2,000 mm', 'Výška zdvihu: 2 000 mm'),
-        tr('Traglast: 300 kg', 'Payload: 300 kg', 'Nosnost: 300 kg'),
-        tr('Integrierte Sicherheitssensoren', 'Integrated safety sensors', 'Integrované bezpečnostní senzory'),
-      ],
-    },
-    {
-      name: 'TransEdge',
-      image: 'https://www.ottpaul.com/fileadmin/_processed_/2/4/csm_3D_TRANSedge_02_5c1f6f1fd8.jpg',
-      desc: tr('Vollautomatische Kantenrückführung', 'Fully automatic edge return system', 'Plně automatické vracení hran'),
-      specs: [
-        tr('Rückführgeschwindigkeit: 20 m/min', 'Return speed: 20 m/min', 'Rychlost vrácení: 20 m/min'),
-        tr('Automatische Kantenzufuhr', 'Automatic edge feeding', 'Automatické podávání hran'),
-        'ERP integration',
-      ],
-    },
-  ];
+  const categories: OttCategory[] = ['edgebanding', 'gluing', 'return'];
+  const categoryData = categories.map((cat) => ({ cat, products: getOttProductsByCategory(cat) })).filter((c) => c.products.length > 0);
+  const sidebarItems = categoryData.map((c) => ({ id: c.cat, label: OTT_CATEGORY_LABELS[c.cat][lang], productCount: c.products.length }));
 
   return (
     <>
       <SeoHead routeKey="ott" structuredData={[breadcrumbs]} />
-      <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
-        <div className="container-wide">
-        <ManufacturerHeader
-          backLabel={tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
-          brandNameForSrOnly="OTT"
+      <div className="bg-dark min-h-screen">
+
+        {/* ====== 1. HERO ====== */}
+        <HeroSection
           logoSrc="/logos/ott.jpg"
           logoAlt="OTT logo"
-          logoClassName="h-32 sm:h-40 md:h-48 w-auto object-contain rounded-md"
-          logoWrapperClassName="bg-white border-transparent"
-          introText={tr(
-            'Innovative Kantenleimtechnologie mit PUR-Anleimsystemen und LASER Hydrofuse für fugenlose, übergangslose Kantenverbindungen.',
-            'Innovative edgebanding technology with PUR gluing systems and LASER Hydrofuse for seamless, jointless edge connections.',
-            'Inovativní technologie olepování hran se systémy PUR a LASER Hydrofuse pro bezspárové spojení hran.'
-          )}
+          logoClassName="rounded-md"
+          bgVideo="/videos/ott.mp4"
+          bgVideoStart={31}
+          bgVideoEnd={40}
         />
 
-        <section className="mb-20">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="product-item p-8 bg-gradient-to-br from-orange-500/10 to-transparent rounded-2xl border border-orange-500/20">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
-                  <Flame className="w-5 h-5 text-orange-500" />
-                </div>
-                <h3 className="text-xl font-display font-medium text-white">
-                  {tr('PUR-Technologie', 'PUR Technology', 'PUR technologie')}
-                </h3>
+        {/* ====== 2. SIDEBAR + PRODUCT GRID ====== */}
+        <div className="container-wide py-12">
+          <div className="flex gap-10">
+            {/* Left sidebar */}
+            <CategorySidebar categories={sidebarItems} brandColor="primary" />
+
+            {/* Right main content */}
+            <div className="flex-1 min-w-0">
+              {/* Mobile category pills (visible below lg) */}
+              <div className="lg:hidden flex gap-2 overflow-x-auto pb-4 mb-6 scrollbar-hide">
+                {sidebarItems.map((cat) => (
+                  <button key={cat.id} type="button" onClick={() => document.getElementById(`cat-${cat.id}`)?.scrollIntoView({ behavior: 'smooth' })} className="whitespace-nowrap px-3 py-1.5 rounded-full text-sm border border-white/10 bg-white/[0.04] text-white/50 hover:text-white transition-colors shrink-0">
+                    {cat.label} <span className="text-xs opacity-50">{cat.productCount}</span>
+                  </button>
+                ))}
               </div>
-              <p className="text-white/50 mb-4">
-                {tr(
-                  'Polyurethan-Klebstoffe bieten höchste Festigkeit und Temperaturbeständigkeit. Ideal für anspruchsvolle Anwendungen in Küchen- und Möbelbau.',
-                  'Polyurethane adhesives provide maximum strength and temperature resistance. Ideal for demanding applications in kitchen and furniture manufacturing.',
-                  'Polyuretanová lepidla nabízejí nejvyšší pevnost a tepelnou odolnost. Ideální pro náročné použití v kuchyňském a nábytkářském průmyslu.'
-                )}
-              </p>
-              <ul className="space-y-2 text-sm text-white/40">
-                <li>• {tr('Wasser- und hitzebeständig', 'Water and heat resistant', 'Odolné vůči vodě a teplu')}</li>
-                <li>• {tr('Extrem hohe Klebekraft', 'Extremely high adhesive strength', 'Extrémně vysoká pevnost lepení')}</li>
-                <li>• {tr('Nahezu unsichtbare Klebefuge', 'Almost invisible glue joint', 'Téměř neviditelná lepicí spára')}</li>
-              </ul>
-            </div>
 
-            <div className="product-item p-8 bg-gradient-to-br from-blue-500/10 to-transparent rounded-2xl border border-blue-500/20">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                  <Droplets className="w-5 h-5 text-blue-500" />
-                </div>
-                <h3 className="text-xl font-display font-medium text-white">
-                  {tr('LASER Hydrofuse', 'LASER Hydrofuse', 'LASER Hydrofuse')}
-                </h3>
-              </div>
-              <p className="text-white/50 mb-4">
-                {tr(
-                  'Die revolutionäre LASER-Technologie aktiviert die Funktionsschicht der Kante direkt – ohne sichtbare Klebefuge, für perfekte Ästhetik.',
-                  'The revolutionary LASER technology activates the functional edge layer directly without a visible glue joint for perfect aesthetics.',
-                  'Revoluční technologie LASER aktivuje funkční vrstvu hrany přímo bez viditelné lepicí spáry pro perfektní vzhled.'
-                )}
-              </p>
-              <ul className="space-y-2 text-sm text-white/40">
-                <li>• {tr('Völlig unsichtbare Fuge', 'Completely invisible joint', 'Zcela neviditelná spára')}</li>
-                <li>• {tr('Kein Klebstoff erforderlich', 'No adhesive required', 'Není potřeba lepidlo')}</li>
-                <li>• {tr('Premium-Optik für hochwertige Möbel', 'Premium look for high-end furniture', 'Prémiový vzhled pro kvalitní nábytek')}</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-20">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="accent-line" />
-            <h2 className="text-2xl font-display font-light text-white">{tr('Kantenleimmaschinen', 'Edgebanding Machines', 'Olepovačky hran')}</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {edgebanders.map((product, index) => (
-              <div key={index} className="product-item product-card-dark p-6">
-                <div className="mb-4 rounded-xl overflow-hidden border border-white/10 bg-dark-elevated">
-                  <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" loading="lazy" />
-                </div>
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
-                    <span className="text-xs text-primary">{product.type}</span>
+              {/* Product categories */}
+              {categoryData.map((c) => (
+                <CategorySection key={c.cat} id={c.cat} label={OTT_CATEGORY_LABELS[c.cat][lang]} productCount={c.products.length}>
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {c.products.map((product) => (
+                      <ProductCard
+                        key={product.slug}
+                        to={buildPath(buildOttProductPath(lang, product))}
+                        image={product.image}
+                        imageAlt={`OTT ${product.name}`}
+                        badge={product.badge}
+                        categoryLabel={OTT_CATEGORY_LABELS[c.cat][lang]}
+                        name={`OTT ${product.name}`}
+                        bullets={product.usp ? [product.usp[lang], product.tagline[lang]] : undefined}
+                        detailLabel={tr('Details ansehen', 'View details', 'Zobrazit detail')}
+                      />
+                    ))}
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-white/30" />
-                </div>
-                <p className="text-white/50 text-sm mb-4">{product.desc}</p>
-                <ul className="space-y-2">
-                  {product.specs.map((spec, i) => (
-                    <li key={i} className="text-xs text-white/40 flex items-center gap-2">
-                      <span className="w-1 h-1 bg-primary rounded-full" />
-                      {spec}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-20">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="accent-line" />
-            <h2 className="text-2xl font-display font-light text-white">{tr('Systemlösungen & Manipulation', 'System Solutions & Handling', 'Systémová řešení a manipulace')}</h2>
-          </div>
-          <p className="text-white/50 mb-8 max-w-3xl">
-            {tr(
-              'Automatisierte Transportsysteme für nahtlose Integration in Ihre Produktionslinie.',
-              'Automated transport systems for seamless integration into your production line.',
-              'Automatizované transportní systémy pro bezproblémovou integraci do vaší výrobní linky.'
-            )}
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {systemSolutions.map((product, index) => (
-              <div key={index} className="product-item product-card-dark p-6">
-                <div className="mb-4 rounded-xl overflow-hidden border border-white/10 bg-dark-elevated">
-                  <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" loading="lazy" />
-                </div>
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-lg font-display font-medium text-white">{product.name}</h3>
-                  <ArrowUpRight className="w-5 h-5 text-white/30" />
-                </div>
-                <p className="text-white/50 text-sm mb-4">{product.desc}</p>
-                <ul className="space-y-2">
-                  {product.specs.map((spec, i) => (
-                    <li key={i} className="text-xs text-white/40 flex items-center gap-2">
-                      <span className="w-1 h-1 bg-primary rounded-full" />
-                      {spec}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <div className="product-item p-8 bg-gradient-to-r from-red-600/20 to-transparent rounded-2xl border border-red-500/30">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div>
-              <h3 className="text-xl font-display font-medium text-white mb-2">
-                {tr('Interesse an OTT Produkten?', 'Interested in OTT products?', 'Máte zájem o produkty OTT?')}
-              </h3>
-              <p className="text-white/50">
-                {tr('Wir beraten Sie gerne zu PUR- und LASER-Technologie.', 'We are happy to advise you on PUR and LASER technology.', 'Rádi vám poradíme s technologií PUR a LASER.')}
-              </p>
+                </CategorySection>
+              ))}
             </div>
-            <a href={inquiryMail} className="btn-primary-dark sm:whitespace-nowrap">
-              {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}
-              <ArrowUpRight className="w-5 h-5" />
-            </a>
           </div>
         </div>
-      </div>
+
+        {/* ====== 3. SECONDARY INFO ====== */}
+        <div className="border-t border-white/5">
+          <div className="container-wide py-12">
+
+            {/* OTT vs HOMAG Comparison */}
+            <section className="mb-10">
+              <h2 className="text-sm font-display text-white/40 mb-4">{tr('Warum OTT über Asamer?', 'Why OTT via Asamer?', 'Proč OTT přes Asamer?')}</h2>
+              <div className="rounded-xl border border-white/10 overflow-hidden max-w-2xl">
+                <div className="grid grid-cols-3 text-xs">
+                  <div className="p-3 border-b border-r border-white/5 text-white/25">{tr('Merkmal', 'Feature', 'Vlastnost')}</div>
+                  <div className="p-3 border-b border-r border-white/5 text-primary font-medium text-center">OTT / Asamer</div>
+                  <div className="p-3 border-b border-white/5 text-white/25 text-center">HOMAG</div>
+                  {[
+                    ['OPC-UA Interface', <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, tr('Standard', 'Standard', 'Standard'), <X key="x" className="w-3.5 h-3.5 text-red-400/50 inline" />, tr('Aufpreis', 'Extra cost', 'Příplatek')],
+                    [tr('PUR-Spezialisierung', 'PUR specialization', 'PUR'), <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, 'CombiMelt', <AlertTriangle key="a" className="w-3.5 h-3.5 text-amber-400/50 inline" />, tr('Optional', 'Optional', 'Volitelně')],
+                    [tr('ERP-Integration', 'ERP integration', 'ERP'), <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, 'Asamer-Team', <AlertTriangle key="a" className="w-3.5 h-3.5 text-amber-400/50 inline" />, tr('kostenpflichtig', 'paid', 'placená')],
+                    [tr('Service CZ/SK/HU', 'Service CZ/SK/HU', 'Servis CZ/SK/HU'), <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, tr('vor Ort', 'on-site', 'na místě'), <AlertTriangle key="a" className="w-3.5 h-3.5 text-amber-400/50 inline" />, tr('zentral DE', 'central DE', 'centrální DE')],
+                  ].map(([label, icon1, val1, icon2, val2], i) => (
+                    <div key={i} className="contents">
+                      <div className={`p-3 border-r border-white/5 text-white/40 ${i < 3 ? 'border-b border-white/5' : ''}`}>{label}</div>
+                      <div className={`p-3 border-r border-white/5 text-center ${i < 3 ? 'border-b border-white/5' : ''}`}>{icon1} <span className="text-white/50 ml-1">{val1}</span></div>
+                      <div className={`p-3 text-center ${i < 3 ? 'border-b border-white/5' : ''}`}>{icon2} <span className="text-white/25 ml-1">{val2}</span></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Technology cards */}
+            <section className="mb-10">
+              <h2 className="text-sm font-display text-white/40 mb-4">{tr('Technologie', 'Technology', 'Technologie')}</h2>
+              <div className="grid md:grid-cols-2 gap-3 max-w-2xl">
+                <div className="p-4 rounded-xl border border-orange-500/15 bg-orange-500/5">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Flame className="w-4 h-4 text-orange-500" />
+                    <span className="text-sm font-medium text-white">CombiMelt PUR</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-orange-500/15 text-orange-400">{tr('Patentiert', 'Patented', 'Patent')}</span>
+                  </div>
+                  <p className="text-white/35 text-xs">{tr('Top-Driven-Roller · EVA + PUR · weniger Verschwendung · Servicestation', 'Top-driven roller · EVA + PUR · less waste · service station', 'Top-driven roller · EVA + PUR · méně odpadu · servisní stanice')}</p>
+                </div>
+                <div className="p-4 rounded-xl border border-blue-500/15 bg-blue-500/5">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Droplets className="w-4 h-4 text-blue-500" />
+                    <span className="text-sm font-medium text-white">bluEdge HyFuse</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-400">Zero-Gap</span>
+                  </div>
+                  <p className="text-white/35 text-xs">{tr('Laser-Aktivierung · keine Klebefuge · nachrüstbar', 'Laser activation · no glue joint · retrofittable', 'Laser · bez spáry · montovatelná')}</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Why buy from Asamer */}
+            <section className="mb-10">
+              <h2 className="text-sm font-display text-white/40 mb-4">{tr('Warum bei Asamer kaufen?', 'Why buy from Asamer?', 'Proč koupit u Asamer?')}</h2>
+              <div className="grid sm:grid-cols-2 gap-3 max-w-2xl">
+                {[
+                  { icon: <Monitor className="w-4 h-4 text-blue-400" />, t: tr('Software-Integration', 'Software integration', 'Softwarová integrace'), d: tr('OPC-UA direkt in Ihr ERP/MES – kein Vendor-Lock-in', 'OPC-UA directly into your ERP/MES – no vendor lock-in', 'OPC-UA přímo do vašeho ERP/MES – bez vendor lock-in') },
+                  { icon: <MapPin className="w-4 h-4 text-primary" />, t: tr('Exklusivhändler CZ/SK/HU', 'Exclusive dealer CZ/SK/HU', 'Exkluzivní prodejce CZ/SK/HU'), d: tr('Direkter Kontakt – kein Konzern-Umweg', 'Direct contact – no corporate detour', 'Přímý kontakt – bez koncernových oklik') },
+                  { icon: <Wrench className="w-4 h-4 text-white/40" />, t: tr('Service & Montage', 'Service & installation', 'Servis a montáž'), d: tr('Techniker vor Ort in CZ/SK/HU', 'Technicians on-site in CZ/SK/HU', 'Technici na místě v CZ/SK/HU') },
+                  { icon: <Flag className="w-4 h-4 text-red-400" />, t: tr('Made in Austria', 'Made in Austria', 'Made in Austria'), d: tr('Familienbetrieb seit 1963 in Lambach', 'Family business since 1963 in Lambach', 'Rodinný podnik od roku 1963 v Lambachu') },
+                ].map((item) => (
+                  <div key={item.t} className="flex items-start gap-3 p-3 rounded-lg border border-white/5 bg-white/[0.01]">
+                    <div className="mt-0.5 shrink-0">{item.icon}</div>
+                    <div>
+                      <div className="text-xs font-medium text-white">{item.t}</div>
+                      <div className="text-xs text-white/30">{item.d}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Video */}
+            <section className="mb-10">
+              <h2 className="text-sm font-display text-white/40 mb-3">{tr('OTT in Aktion', 'OTT in Action', 'OTT v akci')}</h2>
+              <div className="relative rounded-xl overflow-hidden border border-white/10 aspect-video max-w-2xl">
+                <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UUZXwpHi0AR1dFN3h-K0-QIA" title="OTT YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="absolute inset-0 w-full h-full" loading="lazy" />
+              </div>
+            </section>
+
+            {/* Footer CTA */}
+            <div className="text-center mb-6">
+              <p className="text-white/20 text-xs">{tr('Produkte und Spezifikationen', 'Products and specifications', 'Produkty a specifikace')} · <a href="https://www.ottpaul.com" target="_blank" rel="noreferrer" className="text-primary/40 hover:text-primary transition-colors">ottpaul.com<ArrowUpRight className="w-3 h-3 inline ml-0.5" /></a></p>
+            </div>
+            <div className="p-4 bg-gradient-to-r from-red-600/8 to-transparent rounded-xl border border-red-500/10 max-w-2xl">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <p className="text-white/40 text-sm">{tr('Beratung zu OTT Kantenleimtechnologie?', 'Advice on OTT edgebanding?', 'Poradenství k OTT?')}</p>
+                <a href={inquiryMail} className="btn-primary-dark text-sm sm:whitespace-nowrap">{tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}<ArrowUpRight className="w-4 h-4" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </>
   );

@@ -162,6 +162,13 @@ const Navigation = () => {
               >
                 BARBARIC
               </Link>
+              <Link
+                to={buildPath('/gannomat')}
+                onClick={() => handleManufacturerClick('gannomat', 'desktop')}
+                className={`text-sm transition-colors ${location.pathname === buildPath('/gannomat') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              >
+                Gannomat
+              </Link>
             </div>
 
             <Link
@@ -292,6 +299,13 @@ const Navigation = () => {
                     onClick={() => handleManufacturerClick('barbaric', 'mobile')}
                   >
                     BARBARIC
+                  </Link>
+                  <Link
+                    to={buildPath('/gannomat')}
+                    className="text-white/70 hover:text-white"
+                    onClick={() => handleManufacturerClick('gannomat', 'mobile')}
+                  >
+                    Gannomat
                   </Link>
                 </div>
               </div>

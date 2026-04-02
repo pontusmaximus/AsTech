@@ -3,6 +3,7 @@ import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
 import { buildCanonicalUrl, CANONICAL_DOMAIN } from '../lib/language';
+import { localizeSlug } from '../lib/slugs';
 import SeoHead from '../seo/SeoHead';
 import { trackEvent } from '../lib/analytics';
 
@@ -12,8 +13,11 @@ type UsedMachine = {
   year?: number;
   condition: string;
   status?: string;
+  statusKey?: 'available' | 'sold';
   shortDescription: string;
   images?: string[];
+  imageFit?: 'cover' | 'contain';
+  imageDisplay?: 'slideshow' | 'grid';
 };
 
 const slugify = (value: string) =>
@@ -40,7 +44,9 @@ const getImageSources = (src: string) => {
   };
 };
 
-const getAvailability = (status?: string) => {
+const getAvailability = (status?: string, statusKey?: 'available' | 'sold') => {
+  if (statusKey === 'sold') return 'https://schema.org/OutOfStock';
+  if (statusKey === 'available') return 'https://schema.org/InStock';
   if (!status) return 'https://schema.org/InStock';
   const normalized = status.toLowerCase();
   if (normalized.includes('verkauft') || normalized.includes('sold') || normalized.includes('ausverkauft')) {
@@ -50,6 +56,14 @@ const getAvailability = (status?: string) => {
     return 'https://schema.org/InStock';
   }
   return 'https://schema.org/InStock';
+};
+
+const isSoldStatus = (status?: string, statusKey?: 'available' | 'sold') => {
+  if (statusKey === 'sold') return true;
+  if (statusKey === 'available') return false;
+  if (!status) return false;
+  const normalized = status.toLowerCase();
+  return normalized.includes('verkauft') || normalized.includes('sold') || normalized.includes('ausverkauft');
 };
 
 const getItemCondition = (condition: string) => {
@@ -81,7 +95,8 @@ const UsedMachinesPage = () => {
       name: '1308XL Power',
       manufacturer: 'HOLZ-HER',
       condition: tr('sehr gut', 'very good', 'velmi dobrý'),
-      status: tr('verfügbar', 'available', 'k dispozici'),
+      status: tr('verkauft', 'sold', 'prodáno'),
+      statusKey: 'sold',
       images: ['/images/used-machines/holz-her-1308xl-power.jpg'],
       shortDescription: tr(
         'Kantenleimmaschine für präzise Kantenbearbeitung.',
@@ -95,6 +110,7 @@ const UsedMachinesPage = () => {
       year: 2015,
       condition: tr('sehr gut', 'very good', 'velmi dobrý'),
       status: tr('verfügbar', 'available', 'k dispozici'),
+      statusKey: 'available',
       images: [
         '/images/used-machines/schelling-fh4-330-220-automatic-1.jpg',
         '/images/used-machines/schelling-fh4-330-220-automatic-2.jpg',
@@ -111,6 +127,7 @@ const UsedMachinesPage = () => {
       year: 2022,
       condition: tr('sehr gut', 'very good', 'velmi dobrý'),
       status: tr('verfügbar', 'available', 'k dispozici'),
+      statusKey: 'available',
       images: ['/images/used-machines/homag-s-200-1.jpg', '/images/used-machines/homag-s-200-2.jpg'],
       shortDescription: tr(
         'Kantenleimmaschine mit 93.000 lfm Laufleistung.',
@@ -119,11 +136,44 @@ const UsedMachinesPage = () => {
       ),
     },
     {
+      name: 'PT',
+      manufacturer: 'Gabbiani',
+      year: 2021,
+      condition: tr('gut', 'good', 'dobrý'),
+      status: tr('verfügbar', 'available', 'k dispozici'),
+      statusKey: 'available',
+      images: ['/images/used-machines/gabbiani-pt-1.jpg', '/images/used-machines/gabbiani-pt-2.jpg'],
+      shortDescription: tr(
+        'Plattenaufteilsäge mit automatischer Beschickung.',
+        'Panel saw with automatic feeding.',
+        'Formátovací pila s automatickým podáváním.',
+      ),
+    },
+    {
+      name: 'Solution MD',
+      manufacturer: 'SCM Stefani',
+      year: 2016,
+      condition: tr('gut', 'good', 'dobrý'),
+      status: tr('verfügbar', 'available', 'k dispozici'),
+      statusKey: 'available',
+      imageFit: 'cover',
+      images: [
+        '/images/used-machines/scm-stefani-solution-md-1.jpg',
+        '/images/used-machines/scm-stefani-solution-md-2.jpg',
+      ],
+      shortDescription: tr(
+        'Kantenleimmaschine, automatische Beschickung, 450.000 lfm.',
+        'Edgebanding machine, automatic feeding, 450,000 lfm.',
+        'Olepovačka hran, automatické podávání, 450 000 lfm.',
+      ),
+    },
+    {
       name: 'Tornado Top',
       manufacturer: 'OTT',
       year: 2011,
       condition: tr('gut', 'good', 'dobrý'),
       status: tr('verfügbar', 'available', 'k dispozici'),
+      statusKey: 'available',
       images: [
         '/images/used-machines/ott-tornado-top-1.jpg',
         '/images/used-machines/ott-tornado-top-2.jpg',
@@ -136,18 +186,22 @@ const UsedMachinesPage = () => {
     },
   ];
 
+  const sortedMachines = [...machines].sort(
+    (a, b) => Number(isSoldStatus(a.status, a.statusKey)) - Number(isSoldStatus(b.status, b.statusKey)),
+  );
+
   const generalInquiryMail = buildMailto(
     'office@asamer.net',
     tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptávka na použitý stroj')
   );
 
-  const baseUrl = buildCanonicalUrl(lang, '/pouzite-stroje');
+  const baseUrl = buildCanonicalUrl(lang, localizeSlug('/pouzite-stroje', lang));
   const category = tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje');
   const slideDurationSec = 5;
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: machines.map((machine, index) => {
+    itemListElement: sortedMachines.map((machine, index) => {
       const slug = slugify(`${machine.manufacturer} ${machine.name}`);
       const anchorUrl = `${baseUrl}#${slug}`;
       const images = (machine.images ?? []).map((src) => toAbsoluteUrl(src));
@@ -175,7 +229,7 @@ const UsedMachinesPage = () => {
           offers: {
             '@type': 'Offer',
             url: anchorUrl,
-            availability: getAvailability(machine.status),
+            availability: getAvailability(machine.status, machine.statusKey),
             itemCondition,
           },
         },
@@ -219,7 +273,7 @@ const UsedMachinesPage = () => {
 
       <section className="pb-16">
         <div className="container-wide grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {machines.map((machine) => {
+          {sortedMachines.map((machine) => {
             const inquiryMail = buildMailto(
               'office@asamer.net',
               `${tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptávka na použitý stroj')}: ${machine.manufacturer} ${machine.name}`
@@ -228,6 +282,11 @@ const UsedMachinesPage = () => {
             const images = machine.images ?? [];
             const hasMultipleImages = images.length > 1;
             const totalDuration = Math.max(images.length, 1) * slideDurationSec;
+            const isSold = isSoldStatus(machine.status, machine.statusKey);
+            const imageFit = machine.imageFit ?? 'cover';
+            const imageFitClass = imageFit === 'contain' ? 'object-contain' : 'object-cover';
+            const imageHoverClass = imageFit === 'contain' ? '' : 'group-hover:scale-[1.03]';
+            const imageDisplay = machine.imageDisplay ?? 'slideshow';
             return (
               <article
                 id={slug}
@@ -236,37 +295,72 @@ const UsedMachinesPage = () => {
               >
                 {images.length > 0 ? (
                   <div className="mb-5 rounded-xl border border-white/10 bg-white/10 p-2">
-                    <div
-                      className={`relative aspect-[4/3] overflow-hidden rounded-lg ${hasMultipleImages ? 'used-machine-slideshow' : ''}`}
-                    >
-                      {images.map((src, index) => {
-                        const sources = getImageSources(src);
-                        return (
-                          <picture
-                            key={`${machine.manufacturer}-${machine.name}-${index}`}
-                            className={`${hasMultipleImages ? 'used-machine-slide' : 'block'} block`}
-                            style={
-                              hasMultipleImages
-                                ? {
-                                    animationDelay: `${index * slideDurationSec}s`,
-                                    animationDuration: `${totalDuration}s`,
-                                  }
-                                : undefined
-                            }
+                    {imageDisplay === 'grid' ? (
+                      <div className="grid gap-2 sm:grid-cols-2">
+                        {images.map((src, index) => {
+                          const sources = getImageSources(src);
+                          return (
+                            <picture
+                              key={`${machine.manufacturer}-${machine.name}-${index}`}
+                              className="block overflow-hidden rounded-lg bg-dark-elevated border border-white/10"
+                            >
+                              <source type="image/avif" srcSet={sources.avif} />
+                              <source type="image/webp" srcSet={sources.webp} />
+                              <img
+                                src={sources.fallback}
+                                alt={`${machine.manufacturer} ${machine.name} ${index + 1}`}
+                                className={`used-machine-photo w-full aspect-[4/3] ${imageFitClass} transition-transform duration-700 ease-out ${imageHoverClass}`}
+                                loading="lazy"
+                                decoding="async"
+                              />
+                            </picture>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div
+                        className={`relative aspect-[4/3] overflow-hidden rounded-lg ${hasMultipleImages ? 'used-machine-slideshow' : ''}`}
+                      >
+                        {machine.status ? (
+                          <span
+                            className={`absolute top-3 right-3 z-10 text-[10px] uppercase tracking-widest px-3 py-1 rounded-full border ${
+                              isSold
+                                ? 'bg-red-500/20 text-red-100 border-red-400/40'
+                                : 'bg-emerald-500/20 text-emerald-100 border-emerald-400/40'
+                            }`}
                           >
-                            <source type="image/avif" srcSet={sources.avif} />
-                            <source type="image/webp" srcSet={sources.webp} />
-                            <img
-                              src={sources.fallback}
-                              alt={`${machine.manufacturer} ${machine.name} ${index + 1}`}
-                              className="used-machine-photo w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                              loading="lazy"
-                              decoding="async"
-                            />
-                          </picture>
-                        );
-                      })}
-                    </div>
+                            {machine.status}
+                          </span>
+                        ) : null}
+                        {images.map((src, index) => {
+                          const sources = getImageSources(src);
+                          return (
+                            <picture
+                              key={`${machine.manufacturer}-${machine.name}-${index}`}
+                              className={`${hasMultipleImages ? 'used-machine-slide' : 'block'} block`}
+                              style={
+                                hasMultipleImages
+                                  ? {
+                                      animationDelay: `${index * slideDurationSec}s`,
+                                      animationDuration: `${totalDuration}s`,
+                                    }
+                                  : undefined
+                              }
+                            >
+                              <source type="image/avif" srcSet={sources.avif} />
+                              <source type="image/webp" srcSet={sources.webp} />
+                              <img
+                                src={sources.fallback}
+                                alt={`${machine.manufacturer} ${machine.name} ${index + 1}`}
+                                className={`used-machine-photo w-full h-full ${imageFitClass} transition-transform duration-700 ease-out ${imageHoverClass}`}
+                                loading="lazy"
+                                decoding="async"
+                              />
+                            </picture>
+                          );
+                        })}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <div className="w-11 h-11 rounded-xl bg-primary/15 flex items-center justify-center mb-5">

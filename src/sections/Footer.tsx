@@ -107,6 +107,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to={buildPath('/gannomat')} className="text-white/40 text-sm hover:text-white transition-colors">
+                  {tr('Gannomat Dübel', 'Gannomat Dowel', 'Gannomat kolkování')}
+                </Link>
+              </li>
+              <li>
                 <Link to={buildPath('/pouzite-stroje')} className="text-white/40 text-sm hover:text-white transition-colors">
                   {tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje')}
                 </Link>

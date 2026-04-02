@@ -1,5 +1,6 @@
 import type { Language } from '../i18n';
 import { DEFAULT_LANGUAGE } from '../lib/language';
+import { SLUG_TRANSLATIONS } from '../lib/slugs';
 
 export const DEFAULT_OG_IMAGE = '/images/automation-robot.jpg';
 
@@ -8,6 +9,7 @@ export type SeoRouteKey =
   | 'mayer'
   | 'ott'
   | 'barbaric'
+  | 'gannomat'
   | 'financing'
   | 'solutions'
   | 'service'
@@ -55,31 +57,31 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'Asamer Technologie | Maschinen, Automation & Service',
         description:
-          'Asamer Technologie – Maschinen, Automatisierung und Service für Holz-, Kunststoff- und Metallbetriebe in Mitteleuropa. Über 30 Jahre Erfahrung.',
+          'Asamer Technologie – Ihr Händler für OTT, Mayer, Barbaric & Gannomat in CZ, SK und HU. Maschinen, Automatisierung & Service aus einer Hand.',
         keywords: ['Asamer', 'Technologie', 'Automation', 'Holzbearbeitung', 'Maschinen'],
       },
       en: {
         title: 'Asamer Technology | Machinery, Automation & Service',
         description:
-          'Asamer Technologie – machines, automation and service for wood, plastic and metal industries in Central Europe. 30+ years of experience.',
+          'Asamer Technologie – Authorized dealer for OTT, Mayer, Barbaric & Gannomat in CZ, SK and HU. Machines, automation & service.',
         keywords: ['Asamer', 'Technology', 'Automation', 'Machinery', 'Service'],
       },
       cz: {
         title: 'Asamer Technologie | Stroje, automatizace a servis',
         description:
-          'Asamer Technologie – stroje, automatizace a servis pro zpracování dřeva, plastů a kovů ve střední Evropě. Přes 30 let zkušeností.',
+          'Asamer Technologie – prodejce OTT, Mayer, Barbaric a Gannomat pro CZ, SK a HU. Stroje, automatizace a servis.',
         keywords: ['Asamer', 'Technologie', 'Automatizace', 'Stroje', 'Servis'],
       },
       sk: {
         title: 'Asamer Technologie | Stroje, automatizácia a servis',
         description:
-          'Asamer Technologie – stroje, automatizácia a servis pre spracovanie dreva, plastov a kovov v strednej Európe. Viac ako 30 rokov skúseností.',
+          'Asamer Technologie – predajca OTT, Mayer, Barbaric a Gannomat pre CZ, SK a HU. Stroje, automatizácia a servis.',
         keywords: ['Asamer', 'Technologie', 'Automatizácia', 'Stroje', 'Servis'],
       },
       hu: {
         title: 'Asamer Technologie | Gépek, automatizálás és szerviz',
         description:
-          'Asamer Technologie – gépek, automatizálás és szerviz fa-, műanyag- és fémipar számára Közép-Európában. Több mint 30 éves tapasztalat.',
+          'Asamer Technologie – az OTT, Mayer, Barbaric és Gannomat forgalmazója CZ, SK és HU területén. Gépek, automatizálás és szerviz.',
         keywords: ['Asamer', 'Technologie', 'Automatizálás', 'Gépek', 'Szerviz'],
       },
     }),
@@ -89,34 +91,34 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     image: 'https://www.mayersaws.com/WEB/FelderGroup/Machines/Machines/image-thumb__64214__auto_82ff642b6ec54a4dbb4bb21c4d8547d8/plattensaege-kappaautomatic80-mayer-feldergroup.png',
     meta: createMeta({
       de: {
-        title: 'Mayer Plattenaufteiltechnik | Asamer Technologie',
+        title: 'Mayer Plattensägen – Händler für CZ, SK, HU | Asamer',
         description:
-          'Mayer Plattenaufteilsägen – Kappa Automatic & Advanced Line für Holz, Kunststoff und Metall. Präzision für die Serienproduktion.',
-        keywords: ['Mayer', 'Kappa Automatic', 'Plattensäge', 'CNC Sägen', 'Asamer'],
+          'Mayer Plattenaufteilsägen – Asamer Händler für CZ, SK & HU. Kappa Automatic für Holz, Advanced Line für Alu & Kunststoff. Service inklusive.',
+        keywords: ['Mayer', 'Plattensäge', 'kappa automatic', 'advanced line', 'Felder Group', 'Asamer', 'Aufteilzentrum'],
       },
       en: {
-        title: 'Mayer Panel Cutting Technology | Asamer Technology',
+        title: 'Mayer Panel Saws – Dealer for CZ, SK, HU | Asamer',
         description:
-          'Mayer panel saws – Kappa Automatic & Advanced Line for wood, plastic and metal. Precision cutting for serial production.',
-        keywords: ['Mayer', 'Panel saw', 'Kappa Automatic', 'Advanced Line', 'Automation'],
+          'Mayer panel saws – Asamer authorized dealer for CZ, SK & HU. Kappa Automatic for wood, Advanced Line for aluminium & plastics. Service included.',
+        keywords: ['Mayer', 'Panel saw', 'kappa automatic', 'advanced line', 'Felder Group', 'Asamer', 'cutting center'],
       },
       cz: {
-        title: 'Mayer technologie dělení desek | Asamer Technologie',
+        title: 'Mayer formátovací pily – autorizovaný prodejce CZ, SK, HU | Asamer',
         description:
-          'Mayer pily na desky – řady Kappa Automatic & Advanced Line pro dřevo, plast a kov. Přesnost pro sériovou výrobu.',
-        keywords: ['Mayer', 'Pily na desky', 'Kappa Automatic', 'Advanced Line', 'Automatizace'],
+          'Mayer formátovací pily – Asamer autorizovaný prodejce pro CZ, SK a HU. Kappa Automatic pro dřevo, Advanced Line pro hliník a plasty.',
+        keywords: ['Mayer', 'Formátovací pila', 'kappa automatic', 'advanced line', 'Felder Group', 'Asamer', 'nářezové centrum'],
       },
       sk: {
-        title: 'Mayer technológia delenia dosiek | Asamer Technologie',
+        title: 'Mayer formátovacie píly – autorizovaný predajca | Asamer',
         description:
-          'Mayer pily na dosky – rady Kappa Automatic & Advanced Line pre drevo, plast a kov. Presnosť pre sériovú výrobu.',
-        keywords: ['Mayer', 'Píly na dosky', 'Kappa Automatic', 'Advanced Line', 'Automatizácia'],
+          'Mayer formátovacie píly – Asamer autorizovaný predajca pre CZ, SK a HU. Kappa Automatic pre drevo, Advanced Line pre hliník a plasty.',
+        keywords: ['Mayer', 'Formátovacia píla', 'kappa automatic', 'advanced line', 'Felder Group', 'Asamer', 'nářezové centrum'],
       },
       hu: {
-        title: 'Mayer lapszabász technológia | Asamer Technologie',
+        title: 'Mayer lapszabó fűrészek – hivatalos viszonteladó | Asamer',
         description:
-          'Mayer lapszabász gépek – Kappa Automatic & Advanced Line fához, műanyaghoz és fémhez. Precizitás sorozatgyártáshoz.',
-        keywords: ['Mayer', 'Lapszabász', 'Kappa Automatic', 'Advanced Line', 'Automatizálás'],
+          'Mayer lapszabó fűrészek – Asamer hivatalos viszonteladó CZ, SK és HU területén. Kappa Automatic fához, Advanced Line alumíniumhoz és műanyaghoz.',
+        keywords: ['Mayer', 'Lapszabó fűrész', 'kappa automatic', 'advanced line', 'Felder Group', 'Asamer', 'vágóközpont'],
       },
     }),
   },
@@ -125,34 +127,34 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     image: 'https://www.ottpaul.com/fileadmin/_processed_/c/7/csm_pacific-plus_4a95031bd4.png',
     meta: createMeta({
       de: {
-        title: 'OTT Kantenleimer & LASER Hydrofuse | Asamer',
+        title: 'OTT Kantenanleimmaschinen – Händler für CZ, SK, HU | Asamer',
         description:
-          'OTT Kantenleimmaschinen mit PUR und LASER Hydrofuse Technologie – fugenlose Kantenverbindungen für die Möbelindustrie. Jetzt anfragen.',
-        keywords: ['OTT', 'Kantenleimer', 'PUR', 'Laser', 'Hydrofuse'],
+          'OTT Kantenanleimmaschinen – Asamer autorisierter Händler für CZ, SK & HU. PUR & LASER Hydrofuse. Beckhoff OPC-UA Schnittstelle für Software-Integration.',
+        keywords: ['OTT', 'Kantenanleimmaschine', 'PUR', 'Laser', 'Hydrofuse', 'Beckhoff', 'OPC-UA'],
       },
       en: {
-        title: 'OTT Edgebanders & LASER Hydrofuse | Asamer',
+        title: 'OTT Edgebanding Machines – Dealer CZ, SK, HU | Asamer',
         description:
-          'OTT edge banding machines with PUR and LASER Hydrofuse technology – seamless edges for furniture manufacturers. Request a quote.',
-        keywords: ['OTT', 'Edgebander', 'PUR', 'Laser', 'Furniture'],
+          'OTT edgebanding machines – Asamer authorized dealer for CZ, SK & HU. PUR & LASER Hydrofuse technology. Open Beckhoff OPC-UA interface for integration.',
+        keywords: ['OTT', 'Edgebander', 'PUR', 'Laser', 'Hydrofuse', 'Beckhoff', 'OPC-UA'],
       },
       cz: {
-        title: 'OTT olepovačky hran & LASER Hydrofuse | Asamer',
+        title: 'OTT olepovačky hran – autorizovaný prodejce | Asamer',
         description:
-          'OTT olepovačky hran s technologií PUR a LASER Hydrofuse – bezešvé spoje pro nábytkářský průmysl. Kontaktujte nás.',
-        keywords: ['OTT', 'Olepovačka hran', 'PUR', 'Laser', 'Nábytek'],
+          'OTT olepovačky hran – Asamer autorizovaný prodejce pro CZ, SK a HU. Technologie PUR a LASER Hydrofuse. Otevřené rozhraní Beckhoff OPC-UA.',
+        keywords: ['OTT', 'Olepovačka hran', 'PUR', 'Laser', 'Hydrofuse', 'Beckhoff', 'OPC-UA'],
       },
       sk: {
-        title: 'OTT olepovačky hrán & LASER Hydrofuse | Asamer',
+        title: 'OTT olepovačky hrán – autorizovaný predajca | Asamer',
         description:
-          'OTT olepovačky hrán s technológiou PUR a LASER Hydrofuse – bezšvíkové spoje pre nábytkársky priemysel.',
-        keywords: ['OTT', 'Olepovačka hrán', 'PUR', 'Laser', 'Nábytok'],
+          'OTT olepovačky hrán – Asamer autorizovaný predajca pre CZ, SK a HU. Technológia PUR a LASER Hydrofuse. Otvorené rozhranie Beckhoff OPC-UA.',
+        keywords: ['OTT', 'Olepovačka hrán', 'PUR', 'Laser', 'Hydrofuse', 'Beckhoff', 'OPC-UA'],
       },
       hu: {
-        title: 'OTT élzárógépek & LASER Hydrofuse | Asamer',
+        title: 'OTT élzárógépek – hivatalos viszonteladó | Asamer',
         description:
-          'OTT élzárógépek PUR és LASER Hydrofuse technológiával – varratnélküli élek a bútoripar számára.',
-        keywords: ['OTT', 'Élzárógép', 'PUR', 'Laser', 'Bútor'],
+          'OTT élzárógépek – Asamer hivatalos viszonteladó CZ, SK és HU területén. PUR és LASER Hydrofuse technológia. Nyílt Beckhoff OPC-UA interfész.',
+        keywords: ['OTT', 'Élzárógép', 'PUR', 'Laser', 'Hydrofuse', 'Beckhoff', 'OPC-UA'],
       },
     }),
   },
@@ -161,39 +163,76 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     image: 'https://www.barbaric.at/fileadmin/_processed_/1/1/csm_CSF_Multilevel-Wegerer-7837_web_9285d8be71.png',
     meta: createMeta({
       de: {
-        title: 'BARBARIC Handling & Lagertechnik | Asamer',
+        title: 'Barbaric Automatisierung & Plattenhandling – Händler CZ, SK, HU | Asamer',
         description:
-          'BARBARIC Handlingsysteme – von Vakuumhebern bis zu vollautomatischen Flächenlagern für die Plattenverarbeitung.',
-        keywords: ['BARBARIC', 'Handling', 'Lagersystem', 'Automation', 'Kran'],
+          'Barbaric Plattenhandling & Automatisierung – Asamer Händler für CZ, SK & HU. Flächenlager, LCV Beschickung, Nesting Picker, Returnsysteme.',
+        keywords: ['BARBARIC', 'Flächenlager', 'Beschickung', 'Nesting', 'Returnsystem', 'Automatisierung', 'Asamer'],
       },
       en: {
-        title: 'BARBARIC Handling & Storage Systems | Asamer',
+        title: 'Barbaric Automation & Panel Handling – Dealer CZ, SK, HU | Asamer',
         description:
-          'BARBARIC handling systems – from vacuum lifters to fully automated flat storage systems for panel processing.',
-        keywords: ['BARBARIC', 'Handling', 'Storage system', 'Vacuum lifter', 'Automation'],
+          'Barbaric panel handling & automation – Asamer authorized dealer for CZ, SK & HU. Panel storage, LCV feeding, nesting picker, return systems.',
+        keywords: ['BARBARIC', 'Panel storage', 'Feeding', 'Nesting', 'Return system', 'Automation', 'Asamer'],
       },
       cz: {
-        title: 'BARBARIC manipulace a skladování | Asamer',
+        title: 'Barbaric automatizace a manipulace s deskami – prodejce | Asamer',
         description:
-          'BARBARIC manipulační systémy – od vakuových zdviháků po plně automatické plošné sklady pro zpracování desek.',
-        keywords: ['BARBARIC', 'Manipulace', 'Sklad', 'Vakuový manipulátor', 'Automatizace'],
+          'Barbaric manipulace s deskami a automatizace – Asamer autorizovaný prodejce pro CZ, SK a HU. Sklady, podávání, nesting picker, návratové systémy.',
+        keywords: ['BARBARIC', 'Sklad desek', 'Podávání', 'Nesting', 'Návratový systém', 'Automatizace', 'Asamer'],
       },
       sk: {
-        title: 'BARBARIC manipulácia a skladovanie | Asamer',
+        title: 'Barbaric automatizácia a manipulácia s doskami – predajca | Asamer',
         description:
-          'BARBARIC manipulačné systémy – od vákuových zdvíhačov po plne automatické plošné sklady pre spracovanie dosiek.',
-        keywords: ['BARBARIC', 'Manipulácia', 'Sklad', 'Vákuový zdvíhač', 'Automatizácia'],
+          'Barbaric manipulácia s doskami a automatizácia – Asamer autorizovaný predajca pre CZ, SK a HU. Sklady, podávanie, nesting picker, návratové systémy.',
+        keywords: ['BARBARIC', 'Sklad dosiek', 'Podávanie', 'Nesting', 'Návratový systém', 'Automatizácia', 'Asamer'],
       },
       hu: {
-        title: 'BARBARIC kezelés és raktározás | Asamer',
+        title: 'Barbaric automatizálás és lapkezelés – viszonteladó | Asamer',
         description:
-          'BARBARIC kezelőrendszerek – vákuumos emelőktől a teljesen automatizált síktárakig lapfeldolgozáshoz.',
-        keywords: ['BARBARIC', 'Kezelés', 'Raktár', 'Vákuumos emelő', 'Automatizálás'],
+          'Barbaric lapkezelés és automatizálás – Asamer hivatalos viszonteladó CZ, SK és HU területén. Lapraktár, adagolás, nesting picker, visszafutók.',
+        keywords: ['BARBARIC', 'Lapraktározás', 'Adagolás', 'Nesting', 'Visszafutó rendszer', 'Automatizálás', 'Asamer'],
+      },
+    }),
+  },
+  gannomat: {
+    slug: '/gannomat',
+    image: '/images/gannomat/selekta.jpg',
+    meta: createMeta({
+      de: {
+        title: 'Gannomat Dübeleintreibmaschinen – Händler CZ, SK, HU | Asamer',
+        description:
+          'Gannomat Bohr- und Dübeleintreibmaschinen – Asamer Händler für CZ, SK & HU. Selekta und Index als Flaggschiff-Modelle für die Möbelindustrie.',
+        keywords: ['Gannomat', 'Dübeleintreibmaschine', 'Selekta', 'Index CNC', 'Dübelbohrmaschine', 'Asamer'],
+      },
+      en: {
+        title: 'Gannomat Dowel Inserting Machines – Dealer CZ, SK, HU | Asamer',
+        description:
+          'Gannomat drilling & dowel insertion machines – Asamer authorized dealer for CZ, SK & HU. Selekta and Index as flagship models for furniture industry.',
+        keywords: ['Gannomat', 'Dowel inserter', 'Selekta', 'Index CNC', 'Dowel boring', 'Asamer'],
+      },
+      cz: {
+        title: 'Gannomat kolkovací stroje – autorizovaný prodejce | Asamer',
+        description:
+          'Gannomat vrtací a kolkovací stroje – Asamer autorizovaný prodejce pro CZ, SK a HU. Selekta a Index jako vlajkové modely pro nábytkářský průmysl.',
+        keywords: ['Gannomat', 'Kolkovací stroj', 'Selekta', 'Index CNC', 'Kolkovací vrtačka', 'Asamer'],
+      },
+      sk: {
+        title: 'Gannomat kolkovacie stroje – autorizovaný predajca | Asamer',
+        description:
+          'Gannomat vŕtacie a kolkovacie stroje – Asamer autorizovaný predajca pre CZ, SK a HU. Selekta a Index ako vlajkové modely pre nábytkársky priemysel.',
+        keywords: ['Gannomat', 'Kolkovací stroj', 'Selekta', 'Index CNC', 'Kolkovacia vŕtačka', 'Asamer'],
+      },
+      hu: {
+        title: 'Gannomat csapoznyomó gépek – hivatalos viszonteladó | Asamer',
+        description:
+          'Gannomat fúró- és csapozógépek – Asamer hivatalos viszonteladó CZ, SK és HU területén. Selekta és Index zászlóshajó modellek a bútoripar számára.',
+        keywords: ['Gannomat', 'Csapozógép', 'Selekta', 'Index CNC', 'Csapfúró', 'Asamer'],
       },
     }),
   },
   financing: {
     slug: '/financovani',
+    slugByLang: SLUG_TRANSLATIONS['/financovani'],
     meta: createMeta({
       de: {
         title: 'Finanzierung & Förderkompass | Asamer Technologie',
@@ -229,6 +268,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
   },
   solutions: {
     slug: '/reseni',
+    slugByLang: SLUG_TRANSLATIONS['/reseni'],
     meta: createMeta({
       de: {
         title: 'Lösungen für Digitalisierung & Produktionssoftware | Asamer',
@@ -264,48 +304,43 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
   },
   service: {
     slug: '/servis',
+    slugByLang: SLUG_TRANSLATIONS['/servis'],
     meta: createMeta({
       de: {
         title: 'Service & Lifecycle Support | Asamer Technologie',
         description:
-          'Asamer Service – Montage, Notfallservice und Ersatzteillieferung für OTT, Mayer, BARBARIC und weitere Hersteller in CZ, SK, HU.',
+          'Asamer Service – Montage, Notfallservice und Ersatzteillieferung für OTT, Mayer, BARBARIC, Gannomat und weitere Hersteller in CZ, SK, HU.',
         keywords: ['Service', 'Support', 'Ersatzteile', 'Training', 'Automation'],
       },
       en: {
         title: 'Service & Lifecycle Support | Asamer Technology',
         description:
-          'Asamer Service – installation, emergency service and spare parts for OTT, Mayer, BARBARIC and other manufacturers in CZ, SK, HU.',
+          'Asamer Service – installation, emergency service and spare parts for OTT, Mayer, BARBARIC, Gannomat and other manufacturers in CZ, SK, HU.',
         keywords: ['Service', 'Support', 'Spare parts', 'Training', 'Automation'],
       },
       cz: {
         title: 'Servis a lifecycle podpora | Asamer Technologie',
         description:
-          'Servis Asamer – montáž, nouzový servis a dodávka náhradních dílů pro OTT, Mayer, BARBARIC a další výrobce v CZ, SK, HU.',
+          'Servis Asamer – montáž, nouzový servis a dodávka náhradních dílů pro OTT, Mayer, BARBARIC, Gannomat a další výrobce v CZ, SK, HU.',
         keywords: ['Servis', 'Podpora', 'Náhradní díly', 'Školení', 'Automatizace'],
       },
       sk: {
         title: 'Servis a podpora | Asamer Technologie',
         description:
-          'Servis Asamer – montáž, núdzový servis a dodávka náhradných dielov pre OTT, Mayer, BARBARIC a ďalších výrobcov.',
+          'Servis Asamer – montáž, núdzový servis a dodávka náhradných dielov pre OTT, Mayer, BARBARIC, Gannomat a ďalších výrobcov.',
         keywords: ['Servis', 'Podpora', 'Náhradné diely', 'Školenie', 'Automatizácia'],
       },
       hu: {
         title: 'Szerviz és támogatás | Asamer Technologie',
         description:
-          'Asamer Szerviz – szerelés, sürgősségi szerviz és alkatrész-szállítás OTT, Mayer, BARBARIC és más gyártókhoz.',
+          'Asamer Szerviz – szerelés, sürgősségi szerviz és alkatrész-szállítás OTT, Mayer, BARBARIC, Gannomat és más gyártókhoz.',
         keywords: ['Szerviz', 'Támogatás', 'Alkatrészek', 'Képzés', 'Automatizálás'],
       },
     }),
   },
   usedMachines: {
     slug: '/pouzite-stroje',
-    slugByLang: {
-      de: '/gebrauchtmaschinen',
-      en: '/used-machines',
-      cz: '/pouzite-stroje',
-      sk: '/pouzite-stroje',
-      hu: '/hasznalt-gepek',
-    },
+    slugByLang: SLUG_TRANSLATIONS['/pouzite-stroje'],
     image: '/images/used-machines/holz-her-1308xl-power.jpg',
     meta: createMeta({
       de: {
@@ -342,6 +377,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
   },
   contact: {
     slug: '/kontakt',
+    slugByLang: SLUG_TRANSLATIONS['/kontakt'],
     meta: createMeta({
       de: {
         title: 'Kontakt & Standorte | Asamer Technologie',
@@ -377,6 +413,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
   },
   imprint: {
     slug: '/imprint',
+    slugByLang: SLUG_TRANSLATIONS['/imprint'],
     meta: createMeta({
       de: {
         title: 'Impressum & Rechtliches | Asamer Technologie',

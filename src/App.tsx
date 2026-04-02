@@ -24,6 +24,11 @@ import ServicePage from './pages/ServicePage';
 import ContactPage from './pages/ContactPage';
 import ImprintPage from './pages/ImprintPage';
 import UsedMachinesPage from './pages/UsedMachinesPage';
+import OttProductPage from './pages/OttProductPage';
+import MayerProductPage from './pages/MayerProductPage';
+import BarbaricProductPage from './pages/BarbaricProductPage';
+import GannomatPage from './pages/GannomatPage';
+import GannomatProductPage from './pages/GannomatProductPage';
 import Footer from './sections/Footer';
 import CookieConsent from './components/CookieConsent';
 import AnalyticsTracker from './components/AnalyticsTracker';
@@ -34,7 +39,23 @@ import {
   isSupportedLanguage,
   stripLanguageFromPath,
 } from './lib/language';
-import type { Language } from './i18n';
+import { localizeSlug, translateSlug, getAllSlugVariants } from './lib/slugs';
+import { findOttCategoryBySlug, getOttCategorySlug, OTT_CATEGORY_SLUG_VARIANTS } from './data/ottProducts';
+import {
+  findMayerCategoryBySlug,
+  getMayerCategorySlug,
+  MAYER_CATEGORY_SLUG_VARIANTS,
+} from './data/mayerProducts';
+import {
+  findBarbaricCategoryBySlug,
+  getBarbaricCategorySlug,
+  BARBARIC_CATEGORY_SLUG_VARIANTS,
+} from './data/barbaricProducts';
+import {
+  findGannomatCategoryBySlug,
+  getGannomatCategorySlug,
+  GANNOMAT_CATEGORY_SLUG_VARIANTS,
+} from './data/gannomatProducts';
 import './App.css';
 
 interface LanguageContextType {
@@ -101,12 +122,30 @@ const LEGACY_SLUGS = [
   'mayer',
   'ott',
   'barbaric',
+  'gannomat',
   'financovani',
   'reseni',
   'servis',
   'pouzite-stroje',
+  'gebrauchtmaschinen',
+  'used-machines',
+  'hasznalt-gepek',
   'kontakt',
+  'contact',
+  'kapcsolat',
   'imprint',
+  'impressum',
+  'impresszum',
+  'finanzierung',
+  'financing',
+  'financovanie',
+  'finanszirozas',
+  'loesungen',
+  'solutions',
+  'riesenia',
+  'megoldasok',
+  'service',
+  'szerviz',
 ];
 
 const AppRoutes = () => {
@@ -125,20 +164,31 @@ const AppRoutes = () => {
       <Route path="/:lang/*" element={<LanguageAppLayout />}>
         <Route index element={<Home />} />
         <Route path="mayer" element={<MayerPage />} />
+        <Route path="mayer/:category/:model" element={<LocalizedMayerProductRoute />} />
         <Route path="ott" element={<OttPage />} />
+        <Route path="ott/:category/:model" element={<LocalizedOttProductRoute />} />
         <Route path="barbaric" element={<BarbaricPage />} />
-        <Route path="financovani" element={<FinancingPage />} />
-        <Route path="reseni" element={<SolutionsPage />} />
-        <Route path="servis" element={<ServicePage />} />
-        <Route path="pouzite-stroje" element={<UsedMachinesPage />} />
-        <Route path="kontakt" element={<ContactPage />} />
-        <Route path="imprint" element={<ImprintPage />} />
-        {/* Redirects for old German slugs */}
-        <Route path="finanzierung" element={<SlugRedirect newSlug="/financovani" />} />
-        <Route path="loesungen" element={<SlugRedirect newSlug="/reseni" />} />
-        <Route path="service" element={<SlugRedirect newSlug="/servis" />} />
-        <Route path="gebrauchtmaschinen" element={<SlugRedirect newSlug="/pouzite-stroje" />} />
-        <Route path="impressum" element={<SlugRedirect newSlug="/imprint" />} />
+        <Route path="barbaric/:category/:model" element={<LocalizedBarbaricProductRoute />} />
+        <Route path="gannomat" element={<GannomatPage />} />
+        <Route path="gannomat/:category/:model" element={<LocalizedGannomatProductRoute />} />
+        {getAllSlugVariants('/financovani').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<FinancingPage />} czSlug="/financovani" />} />
+        ))}
+        {getAllSlugVariants('/reseni').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<SolutionsPage />} czSlug="/reseni" />} />
+        ))}
+        {getAllSlugVariants('/servis').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<ServicePage />} czSlug="/servis" />} />
+        ))}
+        {getAllSlugVariants('/pouzite-stroje').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<UsedMachinesPage />} czSlug="/pouzite-stroje" />} />
+        ))}
+        {getAllSlugVariants('/kontakt').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<ContactPage />} czSlug="/kontakt" />} />
+        ))}
+        {getAllSlugVariants('/imprint').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<ImprintPage />} czSlug="/imprint" />} />
+        ))}
         <Route path="*" element={<LanguageFallbackRedirect />} />
       </Route>
       <Route path="*" element={<Navigate to={`/${DEFAULT_LANGUAGE}`} replace />} />
@@ -180,15 +230,45 @@ const LanguageAppLayout = () => {
   const handleSetLang = useCallback(
     (nextLang: Language) => {
       if (nextLang === lang) return;
-      const slug = stripLanguageFromPath(location.pathname);
-      const nextPath = `${buildLocalizedPath(nextLang, slug)}${location.search}`;
-      navigate(nextPath, { replace: false });
+      const rawPath = stripLanguageFromPath(location.pathname);
+
+      let translatedPath: string;
+      const ottMatch = rawPath.match(/^\/ott\/([^/]+)\/(.+)$/);
+      const mayerMatch = rawPath.match(/^\/mayer\/([^/]+)\/(.+)$/);
+      const barbaricMatch = rawPath.match(/^\/barbaric\/([^/]+)\/(.+)$/);
+      const gannomatMatch = rawPath.match(/^\/gannomat\/([^/]+)\/(.+)$/);
+      if (ottMatch && OTT_CATEGORY_SLUG_VARIANTS.includes(ottMatch[1])) {
+        const cat = findOttCategoryBySlug(ottMatch[1]);
+        translatedPath = cat
+          ? `/ott/${getOttCategorySlug(cat, nextLang)}/${ottMatch[2]}`
+          : rawPath;
+      } else if (mayerMatch && MAYER_CATEGORY_SLUG_VARIANTS.includes(mayerMatch[1])) {
+        const cat = findMayerCategoryBySlug(mayerMatch[1]);
+        translatedPath = cat
+          ? `/mayer/${getMayerCategorySlug(cat, nextLang)}/${mayerMatch[2]}`
+          : rawPath;
+      } else if (barbaricMatch && BARBARIC_CATEGORY_SLUG_VARIANTS.includes(barbaricMatch[1])) {
+        const cat = findBarbaricCategoryBySlug(barbaricMatch[1]);
+        translatedPath = cat
+          ? `/barbaric/${getBarbaricCategorySlug(cat, nextLang)}/${barbaricMatch[2]}`
+          : rawPath;
+      } else if (gannomatMatch && GANNOMAT_CATEGORY_SLUG_VARIANTS.includes(gannomatMatch[1])) {
+        const cat = findGannomatCategoryBySlug(gannomatMatch[1]);
+        translatedPath = cat
+          ? `/gannomat/${getGannomatCategorySlug(cat, nextLang)}/${gannomatMatch[2]}`
+          : rawPath;
+      } else {
+        translatedPath = translateSlug(rawPath, lang, nextLang);
+      }
+
+      const nextUrl = `${buildLocalizedPath(nextLang, translatedPath)}${location.search}`;
+      navigate(nextUrl, { replace: false });
     },
     [lang, location.pathname, location.search, navigate]
   );
 
   const buildPath = useCallback(
-    (slug: string = '/') => buildLocalizedPath(lang, slug),
+    (slug: string = '/') => buildLocalizedPath(lang, localizeSlug(slug, lang)),
     [lang]
   );
 
@@ -228,9 +308,96 @@ const LanguageFallbackRedirect = () => {
   return <Navigate to={buildPath('/')} replace />;
 };
 
-const SlugRedirect = ({ newSlug }: { newSlug: string }) => {
-  const { buildPath } = useLanguage();
-  return <Navigate to={buildPath(newSlug)} replace />;
+const LocalizedOttProductRoute = () => {
+  const { lang } = useLanguage();
+  const { category, model } = useParams<{ category: string; model: string }>();
+  const ottCat = category ? findOttCategoryBySlug(category) : undefined;
+  const correctCategory = ottCat ? getOttCategorySlug(ottCat, lang) : undefined;
+
+  if (!correctCategory || category !== correctCategory) {
+    if (correctCategory && model) {
+      return (
+        <Navigate
+          to={buildLocalizedPath(lang, `/ott/${correctCategory}/${model}`)}
+          replace
+        />
+      );
+    }
+    return <Navigate to={buildLocalizedPath(lang, '/ott')} replace />;
+  }
+
+  return <OttProductPage />;
+};
+
+const LocalizedMayerProductRoute = () => {
+  const { lang } = useLanguage();
+  const { category, model } = useParams<{ category: string; model: string }>();
+  const mayerCat = category ? findMayerCategoryBySlug(category) : undefined;
+  const correctCategory = mayerCat ? getMayerCategorySlug(mayerCat, lang) : undefined;
+
+  if (!correctCategory || category !== correctCategory) {
+    if (correctCategory && model) {
+      return (
+        <Navigate
+          to={buildLocalizedPath(lang, `/mayer/${correctCategory}/${model}`)}
+          replace
+        />
+      );
+    }
+    return <Navigate to={buildLocalizedPath(lang, '/mayer')} replace />;
+  }
+
+  return <MayerProductPage />;
+};
+
+const LocalizedBarbaricProductRoute = () => {
+  const { lang } = useLanguage();
+  const { category, model } = useParams<{ category: string; model: string }>();
+  const barbaricCat = category ? findBarbaricCategoryBySlug(category) : undefined;
+  const correctCategory = barbaricCat ? getBarbaricCategorySlug(barbaricCat, lang) : undefined;
+
+  if (!correctCategory || category !== correctCategory) {
+    if (correctCategory && model) {
+      return (
+        <Navigate
+          to={buildLocalizedPath(lang, `/barbaric/${correctCategory}/${model}`)}
+          replace
+        />
+      );
+    }
+    return <Navigate to={buildLocalizedPath(lang, '/barbaric')} replace />;
+  }
+
+  return <BarbaricProductPage />;
+};
+
+const LocalizedGannomatProductRoute = () => {
+  const { lang } = useLanguage();
+  const { category, model } = useParams<{ category: string; model: string }>();
+  const gannomatCat = category ? findGannomatCategoryBySlug(category) : undefined;
+  const correctCategory = gannomatCat ? getGannomatCategorySlug(gannomatCat, lang) : undefined;
+
+  if (!correctCategory || category !== correctCategory) {
+    if (correctCategory && model) {
+      return <Navigate to={buildLocalizedPath(lang, `/gannomat/${correctCategory}/${model}`)} replace />;
+    }
+    return <Navigate to={buildLocalizedPath(lang, '/gannomat')} replace />;
+  }
+
+  return <GannomatProductPage />;
+};
+
+const LocalizedRoute = ({ page, czSlug }: { page: React.ReactNode; czSlug: string }) => {
+  const { lang, buildPath } = useLanguage();
+  const location = useLocation();
+  const currentSlug = '/' + stripLanguageFromPath(location.pathname).replace(/^\//, '');
+  const correctSlug = localizeSlug(czSlug, lang);
+
+  if (currentSlug !== correctSlug) {
+    return <Navigate to={buildPath(czSlug)} replace />;
+  }
+
+  return <>{page}</>;
 };
 
 export default App;

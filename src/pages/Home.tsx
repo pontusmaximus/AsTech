@@ -116,6 +116,12 @@ const Home = () => {
     };
   }
 
+  const getOptionalWebp = (src: string) => {
+    if (!src.startsWith('/')) return null;
+    if (!/\.(jpe?g|png)$/i.test(src)) return null;
+    return src.replace(/\.(jpe?g|png)$/i, '.webp');
+  };
+
   const solutions: SolutionCard[] = [
     {
       title: tr('Kantenbearbeitung', 'Edgebanding', 'Olepování hran'),
@@ -143,7 +149,7 @@ const Home = () => {
         'Mayer Kappa Automatic & Advanced Line. Přesné pily na desky pro dřevo, plast a kov.'
       ),
       image:
-        'https://www.felder-group.com/WEB/FelderGroup/M9-FullMedia/image-thumb__52693__fgroup-M9-bg/plattensaege-mayer-feldergroup-holzbearbeitung-1~-~media--6810e2a4--query@2x.jpg',
+        'https://www.mayersaws.com/WEB/Details/Plattenaufteilsaegen/image-thumb__1115__auto_fc62367104dd002b13630a858c3d0ea0/0191eee43889bec1aa0fd51bb6b943e6cc18d659.jpg',
       link: '/mayer',
       logo: {
         src: '/logos/mayer.svg',
@@ -166,6 +172,23 @@ const Home = () => {
         src: '/logos/barbaric.png',
         alt: 'Barbaric logo',
         className: 'h-10',
+        wrapperClassName: 'bg-white',
+      },
+    },
+    {
+      title: tr('Dübelbearbeitung', 'Dowel Processing', 'Kolkování'),
+      subtitle: tr('Bohren & Beleimen', 'Drilling & Gluing', 'Vrtání a lepení'),
+      description: tr(
+        'Gannomat: Fräsen, Bohren, Dübeln, CNC, Vakuumpresse uvm.',
+        'Gannomat: milling, drilling, doweling, CNC, vacuum press and more.',
+        'Gannomat: frézování, vrtání, kolíkování, CNC, vakuový lis a další.'
+      ),
+      image: 'https://www.gannomat.at/Bilder_0571/Gannomat_Bearbeitungszentrum_ProTec_pic01%20(mouseover).jpg',
+      link: '/gannomat',
+      logo: {
+        src: '/images/logo/gannomat-logo.png',
+        alt: 'Gannomat logo',
+        className: 'h-8',
         wrapperClassName: 'bg-white',
       },
     },
@@ -258,16 +281,22 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {solutions.map((solution, index) => {
               const href = solution.link.startsWith('http') ? solution.link : buildPath(solution.link);
+              const webp = getOptionalWebp(solution.image);
               return (
                 <a key={index} href={href} className="section-animate product-card-dark group">
                   <div className="aspect-[4/3] overflow-hidden relative">
-                    <div
-                      className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                      style={{ backgroundImage: `url(${solution.image})` }}
-                    />
+                    <picture className="absolute inset-0">
+                      {webp && <source type="image/webp" srcSet={webp} />}
+                      <img
+                        src={solution.image}
+                        alt=""
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                    </picture>
                     {solution.logo && (
                       <div
                         className={`absolute top-3 left-3 inline-flex h-12 min-w-[56px] items-center justify-center rounded-full px-3 py-1 shadow-lg backdrop-blur ${
@@ -386,7 +415,7 @@ const Home = () => {
               <div className="relative aspect-video rounded-2xl overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: 'url(https://www.barbaric.at/fileadmin/_processed_/1/1/csm_CSF_Multilevel-Wegerer-7837_web_9285d8be71.png)' }}
+                  style={{ backgroundImage: 'url(/images/barbaric/csf-multilevel.jpg)' }}
                 />
                 <div className="cost-image-overlay absolute inset-0" />
               </div>

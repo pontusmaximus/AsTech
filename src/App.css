@@ -635,6 +635,7 @@ html.theme-light .cost-image-overlay {
   background: linear-gradient(135deg, rgba(0, 72, 153, 0.1) 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.5s ease;
+  pointer-events: none;
 }
 
 .product-card-dark:hover::before {
