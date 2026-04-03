@@ -36,11 +36,11 @@ const ProductCard = ({
     className="group flex flex-col bg-white/[0.04] border border-white/10 rounded-sm hover:border-primary/40 hover:bg-white/[0.06] transition-all"
   >
     {/* Image area */}
-    <div className="relative aspect-[4/3] bg-dark-elevated border-b border-white/8 overflow-hidden">
+    <div className="relative aspect-[4/3] border-b border-white/8 overflow-hidden" style={{ backgroundColor: '#f0f1f3' }}>
       <img
         src={image}
         alt={imageAlt}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+        className="w-full h-full object-contain p-3 transition-transform duration-500 group-hover:scale-[1.03]"
         loading="lazy"
       />
       {badge && (

@@ -53,12 +53,13 @@ const MayerPage = () => {
       <div className="bg-dark min-h-screen">
 
         <HeroSection
-          headline={tr('Die schwerste Säge', 'The heaviest saw', 'Nejtěžší pila')}
+          headline={tr('Die schwere Säge', 'The heavy saw', 'Těžká pila')}
           headlineColor="#000000"
           logoSrc="https://www.mayersaws.com/mayer/images/mayer_saws_4c.svg"
           logoAlt="Mayer logo"
           logoWrapperClassName="text-dark"
           bgImage="/images/mayer/hero-mayer-asamer.jpg"
+          bgContainMobile
         />
 
         <div className="container-wide py-12">

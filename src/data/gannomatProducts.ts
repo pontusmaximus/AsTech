@@ -215,39 +215,41 @@ export interface GannomatProduct {
 /*  Helper: generate seoTitle/seoDescription from product name         */
 /* ------------------------------------------------------------------ */
 
-const IMG_SELEKTA = 'https://www.gannomat.at/Bilder_0253/Gannomat_Duebeleintreibgeraet_Selekta_pic01.jpg';
-const IMG_INDEX = 'https://www.gannomat.at/Bilder_0471/Gannomat_Bohr-Leim-Duebeleintreib-Maschine_Index_pic01.jpg';
-const IMG_ELITE = 'https://www.gannomat.at/Bilder_0410/Gannomat_Bohr-Leim-Duebeleintreib-Maschine_Elite_pic01.jpg';
-const IMG_SPECTRUM = 'https://www.gannomat.at/Bilder_0430/Gannomat_Durchlauf-Bohr-Leim-Duebeleintreib-Maschine_Spectrum_pic01.jpg';
-const IMG_SELEKTA_HD = 'https://www.gannomat.at/Bilder_0253HD/Gannomat_Duebeleintreibgeraet_Selekta_HD_pic01.jpg';
-const IMG_INJECTA_HD = 'https://www.gannomat.at/Bilder_1511HD/Gannomat_Leimauftraggeraet_Injecta_HD_pic01.jpg';
-const IMG_INDEX_DW = 'https://www.gannomat.at/Bilder_0471DW/Gannomat_Fenster-Bohr-Leim-Duebeleintreib-Maschine_Index_DW2_pic01.jpg';
-const IMG_PROTEC = 'https://www.gannomat.at/Bilder_0571/Gannomat_Bearbeitungszentrum_ProTec_pic01.jpg';
-const IMG_RED_BARON = 'https://www.gannomat.at/Bilder_0204/Gannomat_Beschlaege-Bohr-Einpress-Maschine_Red_Baron_P_pic01.jpg';
-const IMG_BASICA = 'https://www.gannomat.at/Bilder_0194/Gannomat_Beschlaege-Bohr-Einpress-Maschine_Basica_Variabel_pic01.jpg';
-const IMG_EXPRESS_S1 = 'https://www.gannomat.at/Bilder_0801/Gannomat_Beschlaege-Bohr-Einpress-Maschine_Express_S1_pic01.jpg';
-const IMG_EXPRESS_S2 = 'https://www.gannomat.at/Bilder_0802/Gannomat_Beschlaege-Bohr-Einpress-Maschine_Express_S2_pic01.jpg';
-const IMG_EXPRESS_S1_CNC = 'https://www.gannomat.at/Bilder_0820/Gannomat_CNC_Beschlaege-Bohr-Einpress-Maschine_Express_S1_CNC_pic01.jpg';
-const IMG_EXPRESS_807 = 'https://www.gannomat.at/Bilder_0807/Gannomat_Beschlaege-Bohr-Einpress-Maschine_Express_807_pic01.jpg';
-const IMG_VECTOR = 'https://www.gannomat.at/Bilder_0810/Gannomat_Fronten-CNC-Bearbeitungszentrum_Vector_pic01.jpg';
-const IMG_EXPRESS_S1_RTA = 'https://www.gannomat.at/Bilder_0801rta/Gannomat_Verbinder-Bohr-Einpress-Maschine_Express_S1_RTA_pic01.jpg';
-const IMG_EXPRESS_S2_RTA = 'https://www.gannomat.at/Bilder_0802rta/Gannomat_Verbinder-Bohr-Einpress-Maschine_Express_S2_RTA_pic01.jpg';
-const IMG_CONCEPT_EASY = 'https://www.gannomat.at/Bilder_0750/Gannomat_Korpuspresse_Schubkastenpresse_Concept-Easy_pic01.jpg';
-const IMG_CONCEPT_ECO = 'https://www.gannomat.at/Bilder_0730/Gannomat_Korpuspresse_Concept_Eco_pic01.jpg';
-const IMG_CONCEPT_PRIMUS = 'https://www.gannomat.at/Bilder_0721/Gannomat_Korpuspresse_Concept_Primus_pic01.jpg';
-const IMG_LIFT_JUMPER = 'https://www.gannomat.at/Bilder_0700_LJ/Gannomat_Hubtisch_Lift-Jumper_pic01_X2.jpg';
-const IMG_LIFT = 'https://www.gannomat.at/Bilder_0700_L/Gannomat_Hubtisch_Lift_pic01.jpg';
-const IMG_DB21 = 'https://www.gannomat.at/Bilder_0530/Gannomat_Duebelbohrmaschine_DB21_pic01.jpg';
-const IMG_DB27WA = 'https://www.gannomat.at/Bilder_0530/Gannomat_Duebelbohrmaschine_DB27WA_pic01.jpg';
-const IMG_PROLINE = 'https://www.gannomat.at/Bilder_0600/Gannomat_Lochreihenbohrmaschine_ProLine_pic01.jpg';
-const IMG_VANTAGE = 'https://www.gannomat.at/Bilder_0610/Gannomat_Lochreihenbohrmaschine_Vantage_pic01.jpg';
-const IMG_LEIMFIX = 'https://www.gannomat.at/Bilder_1500/Gannomat_Leimauftraggeraet_Leimfix_pic01.jpg';
-const IMG_INJECTA = 'https://www.gannomat.at/Bilder_1511/Gannomat_Leimauftraggeraet_Injecta_pic01.jpg';
-const IMG_JUNIOR = 'https://www.gannomat.at/Bilder_0323/Gannomat_Rahmenduebelbohrmaschine_Junior_pic01.jpg';
-const IMG_MASTER = 'https://www.gannomat.at/Bilder_0325/Gannomat_Treppenbohrmaschine_Master_pic01.jpg';
-const IMG_MOD160 = 'https://www.gannomat.at/Bilder_0160/Gannomat_Rahmenduebelbohrmaschine_Mod160_pic01.jpg';
-const IMG_EXPERT = 'https://www.gannomat.at/Bilder_0194f/Gannomat_Ecklager_Olivenbohrmaschine_Expert_pic01.jpg';
-const IMG_TWIN = 'https://www.gannomat.at/Bilder_0380/Gannomat_Ecklager_Olivenbohrmaschine_Twin_pic01.jpg';
+// Local images where available, placeholder for rest (gannomat.at has hotlink protection)
+const G = '/images/gannomat';
+const IMG_SELEKTA = `${G}/selekta.jpg`;
+const IMG_INDEX = `${G}/index-reihe-cnc.jpg`;
+const IMG_ELITE = `${G}/elite.jpg`;
+const IMG_SPECTRUM = `${G}/spectrum.jpg`;
+const IMG_SELEKTA_HD = `${G}/selekta-hd.jpg`;
+const IMG_INJECTA_HD = `${G}/injecta-hd.jpg`;
+const IMG_INDEX_DW = `${G}/index-dw.jpg`;
+const IMG_PROTEC = `${G}/protec-profit.jpg`;
+const IMG_RED_BARON = `${G}/red-baron-p.jpg`;
+const IMG_BASICA = `${G}/basica.jpg`;
+const IMG_EXPRESS_S1 = `${G}/express-s1.jpg`;
+const IMG_EXPRESS_S2 = `${G}/express-s2.jpg`;
+const IMG_EXPRESS_S1_CNC = `${G}/express-s1-cnc.jpg`;
+const IMG_EXPRESS_807 = `${G}/express-807.jpg`;
+const IMG_VECTOR = `${G}/vector-cnc.jpg`;
+const IMG_EXPRESS_S1_RTA = `${G}/express-s1-rta.jpg`;
+const IMG_EXPRESS_S2_RTA = `${G}/express-s2-rta.jpg`;
+const IMG_CONCEPT_EASY = 'https://www.gannomat.at/Bilder_0750/Gannomat_Korpuspresse_Concept_Easy_pic01%20(mouseover).jpg';
+const IMG_CONCEPT_ECO = `${G}/concept-eco.jpg`;
+const IMG_CONCEPT_PRIMUS = `${G}/concept-primus.jpg`;
+const IMG_LIFT_JUMPER = `${G}/lift-jumper.jpg`;
+const IMG_LIFT = `${G}/lift.jpg`;
+const IMG_DB21 = `${G}/db-21-27-35.jpg`;
+const IMG_DB27WA = `${G}/db-21-27-35-wa.jpg`;
+const IMG_PROLINE = `${G}/proline-50.jpg`;
+const IMG_VANTAGE = `${G}/vantage-76-152.jpg`;
+const IMG_LEIMFIX = `${G}/leimfix.jpg`;
+const IMG_INJECTA = `${G}/injecta.jpg`;
+const IMG_JUNIOR = `${G}/junior-323.jpg`;
+const IMG_MASTER = `${G}/master-325.jpg`;
+const IMG_MOD160 = `${G}/mod-160.jpg`;
+const IMG_EXPERT = `${G}/expert.jpg`;
+const IMG_TWIN = `${G}/twin.jpg`;
 
 const seoT = (name: string): Record<Language, string> => ({
   de: `Gannomat ${name} – Asamer Händler CZ/SK/HU`,
@@ -471,6 +473,14 @@ export const GANNOMAT_PRODUCTS: GannomatProduct[] = [
     description: { de: 'Der Lift Jumper ist ein ergonomisches Handlingsystem, das den Korpus während der Montage automatisch positioniert und wendet – für effizienten Workflow in der Möbelmontage.', en: 'The Lift Jumper is an ergonomic handling system that automatically positions and turns the carcass during assembly – for efficient workflow in furniture assembly.', cz: 'Lift Jumper je ergonomický manipulační systém, který automaticky polohuje a otáčí korpus během montáže.', sk: 'Lift Jumper je ergonomický manipulačný systém, ktorý automaticky polohuje a otáča korpus počas montáže.', hu: 'A Lift Jumper ergonómikus kezelőrendszer, amely automatikusan pozicionálja és fordítja a korpuszt szerelés közben.' },
     highlights: ['Ergonomic handling — automatic positioning and turning during assembly', 'Efficient workflow for furniture carcass assembly'],
     seoTitle: seoT('Lift Jumper'), seoDescription: seoD('Lift Jumper', 'ergonomisches Handlingsystem für Korpusmontage.', 'ergonomic handling system for carcass assembly.', 'ergonomický manipulační systém pro montáž korpusů.'),
+  },
+  {
+    slug: 'korpus-montagelinie', name: 'Durchlauf-Korpuspresse', category: 'carcass', image: `${G}/concept-primus.jpg`,
+    tagline: { de: 'Selbstrüstende Korpuspresse mit Montagelinien-Optionen', en: 'Self-adjusting carcass press with assembly line options', cz: 'Samonastavovací korpusový lis s možnostmi montážní linky', sk: 'Samonastavovací korpusový lis s možnosťami montážnej linky', hu: 'Önbeállító korpuszprés szerelősor opciókkal' },
+    description: { de: 'Die Gannomat Durchlauf-Korpuspresse ist eine vollkommen selbstrüstende Korpuspresse, die die jeweilige Korpusgröße automatisch erkennt. Keine Programmierung erforderlich. Die Zusammenstellung zur manuellen, halb- oder vollautomatischen Korpus-Montagelinie erfolgt nach Kundenanforderung – mit Optionen wie Hubtisch, Einschubplattform, AirJet-Tisch, Winkelübergabe und mehr.', en: 'The Gannomat throughfeed carcass press is a fully self-adjusting carcass press that automatically recognizes each cabinet size. No programming required. Configuration as manual, semi- or fully automatic assembly line is customized to requirements – with options like lifting tables, push-in platforms, AirJet tables, angle transfers and more.', cz: 'Průchozí korpusový lis Gannomat je plně samonastavovací lis, který automaticky rozpozná velikost korpusu. Bez programování. Sestavení jako manuální, poloautomatická nebo plně automatická montážní linka dle požadavků zákazníka.', sk: 'Priechodzí korpusový lis Gannomat je plne samonastavovací lis, ktorý automaticky rozpozná veľkosť korpusu. Bez programovania.', hu: 'A Gannomat átmenő korpuszprés teljesen önbeállító, automatikusan felismeri a szekrény méretét. Programozás nélkül.' },
+    highlights: ['Fully self-adjusting — recognizes cabinet size automatically', 'No programming required', 'Manual, semi- or fully automatic assembly line configurations', 'Reduces setup times and labor costs', 'Options: lifting table, push-in platform, AirJet table, angle transfer, assembly station, glue applicator'],
+    seoTitle: seoT('Durchlauf-Korpuspresse'),
+    seoDescription: seoD('Durchlauf-Korpuspresse', 'selbstrüstende Korpuspresse mit Montagelinien-Optionen.', 'self-adjusting carcass press with assembly line options.', 'samonastavovací korpusový lis s možnostmi montážní linky.'),
   },
   {
     slug: 'lift', name: 'Lift', category: 'carcass', image: IMG_LIFT,

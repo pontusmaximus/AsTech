@@ -68,18 +68,18 @@ export const buildMayerProductPathRaw = (
 
 export const MAYER_CATEGORY_LABELS: Record<MayerCategory, Record<Language, string>> = {
   kappa: {
-    de: 'Horizontale Plattensägen – kappa automatic',
-    en: 'Horizontal Panel Saws – kappa automatic',
-    cz: 'Velkoplošné formátovací pily',
-    sk: 'Horizontálne formátovacie píly – kappa automatic',
-    hu: 'Horizontális lapszabó fűrészek – kappa automatic',
+    de: 'Holz',
+    en: 'Wood',
+    cz: 'Dřevo',
+    sk: 'Drevo',
+    hu: 'Fa',
   },
   advanced: {
-    de: 'Plattensägen für Aluminium & Kunststoff – advanced line',
-    en: 'Panel Saws for Aluminium & Plastics – advanced line',
-    cz: 'Formátovací pily pro hliník a plasty – advanced line',
-    sk: 'Formátovacie píly pre hliník a plasty – advanced line',
-    hu: 'Lapszabó fűrészek alumíniumhoz és műanyaghoz – advanced line',
+    de: 'Aluminium und Kunststoff',
+    en: 'Aluminium and Plastics',
+    cz: 'Hliník a plasty',
+    sk: 'Hliník a plasty',
+    hu: 'Alumínium és műanyag',
   },
   industrial: {
     de: 'Industrielösungen',

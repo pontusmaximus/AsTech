@@ -46,9 +46,12 @@ const BarbaricPage = () => {
       <div className="bg-dark min-h-screen">
 
         <HeroSection
+          headline={tr('Automatisierung\nfür jeden', 'Automation\nfor everyone', 'Automatizace\npro každého')}
+          headlineColor="#ff0000"
+          headlineAlign="right"
           logoSrc="https://www.barbaric.at/fileadmin/user_upload/Bilder_Barbaric/Logos/Logo_Barbaric_withSlogan.png"
           logoAlt="BARBARIC logo"
-          bgImage="https://www.barbaric.at/fileadmin/_processed_/2/c/csm_Barbaric_PBX_Pufferspeicher_Foto01_bc2fa8d895.jpg"
+          bgImage="https://www.barbaric.at/fileadmin/_processed_/4/d/csm_Header_UEberblick_02_06af4bb331.png"
         />
 
         <div className="container-wide py-12">
