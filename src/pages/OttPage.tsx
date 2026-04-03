@@ -49,6 +49,7 @@ const OttPage = () => {
 
         {/* ====== 1. HERO ====== */}
         <HeroSection
+          headline={tr('Neue Standards für PUR/EVA', 'New standards for PUR/EVA', 'Nové standardy pro PUR/EVA')}
           logoSrc="/logos/ott.jpg"
           logoAlt="OTT logo"
           logoClassName="rounded-md"

@@ -85,6 +85,8 @@ export interface OttProduct {
   equipment?: string[];
   /** Recommended companion product slugs */
   recommended?: string[];
+  /** 3 short highlight bullets for detail page hero */
+  highlights?: Record<Language, string[]>;
   seoTitle: Record<Language, string>;
   seoDescription: Record<Language, string>;
 }
@@ -146,10 +148,18 @@ export const OTT_PRODUCTS: OttProduct[] = [
     usp: { de: '18 m/min inkl. Eckenbearbeitung', en: '18 m/min incl. corner processing', cz: '18 m/min vč. zpracování rohů', sk: '18 m/min vrátane spracovania rohov', hu: '18 m/perc sarokmegmunkálással' },
     equipment: ['Fügebearbeitung', 'Kantenmagazin', 'CombiMelt', 'Kappgerät K12', 'Fräsaggregat', 'Radiusziehklinge', 'Eckenrunden AKF'],
     recommended: ['transcompact'],
+    highlights: {
+      de: ['Kompakte 5,7 m Bauform für Handwerk', 'Eckenbearbeitung bis 18 m/min', 'CombiMelt PUR nachrüstbar'],
+      en: ['Compact 5.7 m footprint for workshops', 'Corner processing at 18 m/min', 'CombiMelt PUR retrofittable'],
+      cz: ['Kompaktní 5,7 m pro řemeslníky', 'Zpracování rohů do 18 m/min', 'CombiMelt PUR dodatečně montovatelný'],
+      sk: ['Kompaktná 5,7 m pre remeselníkov', 'Spracovanie rohov do 18 m/min', 'CombiMelt PUR dodatočne montovateľný'],
+      hu: ['Kompakt 5,7 m kézműveseknek', 'Sarokmegmunkálás 18 m/perc', 'CombiMelt PUR utólag felszerelhető'],
+    },
     specs: {
       length: '5.7 m',
       edgeThickness: '0.3–15 mm',
       boardThickness: '60 mm',
+      feedSpeed: '18 m/min',
       notes: {
         de: 'Einstiegsmodell für Handwerksbetriebe',
         en: 'Entry-level for craft workshops',
@@ -196,10 +206,18 @@ export const OTT_PRODUCTS: OttProduct[] = [
     usp: { de: 'Bewährtestes Modell der OTT-Serie', en: 'Most proven model in the OTT range', cz: 'Nejověřenější model řady OTT', sk: 'Najoveriteľnejší model radu OTT', hu: 'Az OTT sorozat legbevált modellje' },
     equipment: ['Fügebearbeitung', 'Kantenmagazin', 'CombiMelt', 'Kappgerät', 'Fräsaggregat', 'Ziehklinge'],
     recommended: ['transcompact'],
+    highlights: {
+      de: ['Bewährtestes Modell der OTT-Reihe', 'Vielseitige Ausstattung für variantenreiche Fertigung', 'Kantenstärke 0,3–15 mm'],
+      en: ['Most proven model in the OTT range', 'Versatile setup for mixed production', 'Edge thickness 0.3–15 mm'],
+      cz: ['Nejprověřenější model řady OTT', 'Všestranné vybavení pro různorodou výrobu', 'Tloušťka hrany 0,3–15 mm'],
+      sk: ['Najoveriteľnejší model radu OTT', 'Všestranné vybavenie pre rôznorodú výrobu', 'Hrúbka hrany 0,3–15 mm'],
+      hu: ['Az OTT sorozat legbevált modellje', 'Sokoldalú felszerelés vegyes gyártáshoz', 'Élvastagság 0,3–15 mm'],
+    },
     specs: {
       length: '6.2 m',
       edgeThickness: '0.3–15 mm',
       boardThickness: '60 mm',
+      feedSpeed: '12–18 m/min',
     },
     seoTitle: {
       de: 'OTT Tornado+ Kantenanleimmaschine kaufen – Asamer Händler CZ/SK/HU',
@@ -239,6 +257,13 @@ export const OTT_PRODUCTS: OttProduct[] = [
     usp: { de: 'Neueste Maschine – schließt Lücke zwischen Tornado+ und Storm+', en: 'Newest machine – bridges gap between Tornado+ and Storm+', cz: 'Nejnovější stroj – překlenuje mezeru mezi Tornado+ a Storm+', sk: 'Najnovší stroj – preklenuje medzeru medzi Tornado+ a Storm+', hu: 'Legújabb gép – áthidalja a Tornado+ és Storm+ közötti rést' },
     equipment: ['Beckhoff 18,5" Steuerung', 'Fügebearbeitung', 'CombiMelt', 'Fräsaggregat', 'Ziehklinge', 'Eckenrunden'],
     recommended: ['transcompact', 'translift'],
+    highlights: {
+      de: ['Beckhoff 18,5" OPC-UA Steuerung serienmäßig', 'Schließt Lücke zwischen Tornado+ und Storm+', 'NEU: Vorschub 12–20 m/min'],
+      en: ['Beckhoff 18.5" OPC-UA control as standard', 'Bridges gap between Tornado+ and Storm+', 'NEW: Feed speed 12–20 m/min'],
+      cz: ['Beckhoff 18,5" OPC-UA řízení standardně', 'Překlenuje mezeru Tornado+ a Storm+', 'NOVÝ: posuv 12–20 m/min'],
+      sk: ['Beckhoff 18,5" OPC-UA riadenie štandardne', 'Preklenuje medzeru Tornado+ a Storm+', 'NOVÝ: posuv 12–20 m/min'],
+      hu: ['Beckhoff 18,5" OPC-UA vezérlés alapfelszerelés', 'Tornado+ és Storm+ közötti rés áthidalása', 'ÚJ: előtolás 12–20 m/perc'],
+    },
     specs: {
       length: '7.1 m',
       edgeThickness: '0.3–15 mm',
@@ -289,10 +314,18 @@ export const OTT_PRODUCTS: OttProduct[] = [
     usp: { de: 'Plattenstärke bis 60 mm – industrieller Dauerbetrieb', en: 'Board thickness up to 60 mm – continuous industrial operation', cz: 'Tloušťka desek do 60 mm – průmyslový nepřetržitý provoz', sk: 'Hrúbka dosiek do 60 mm – priemyselná nepretržitá prevádzka', hu: 'Lapvastagság 60 mm-ig – folyamatos ipari üzem' },
     equipment: ['CombiMelt PUR', 'Fräsaggregat', 'Kappgerät', 'Ziehklinge', 'Eckenrunden AKF', 'Druckzone'],
     recommended: ['translift', 'transedge'],
+    highlights: {
+      de: ['Industrieller Dauerbetrieb bis 60 mm Platte', 'Robuste Bauweise für hohe Stückzahlen', 'Vorschub bis 22 m/min'],
+      en: ['Industrial continuous operation up to 60 mm', 'Robust build for high-volume production', 'Feed speed up to 22 m/min'],
+      cz: ['Průmyslový nepřetržitý provoz do 60 mm', 'Robustní konstrukce pro velké série', 'Posuv do 22 m/min'],
+      sk: ['Priemyselná nepretržitá prevádzka do 60 mm', 'Robustná konštrukcia pre veľké série', 'Posuv do 22 m/min'],
+      hu: ['Ipari folyamatos üzem 60 mm-ig', 'Robusztus kialakítás nagy sorozatokhoz', 'Előtolás 22 m/perc-ig'],
+    },
     specs: {
       length: '7.8 m',
       edgeThickness: '0.3–15 mm',
       boardThickness: '60 mm',
+      feedSpeed: '12–22 m/min',
     },
     seoTitle: {
       de: 'OTT Storm+ Kantenanleimmaschine kaufen – Asamer Händler CZ/SK/HU',
@@ -332,6 +365,13 @@ export const OTT_PRODUCTS: OttProduct[] = [
     usp: { de: 'Für Kanten bis 25 mm – ideal für Massivholzprodukte', en: 'For edges up to 25 mm – ideal for solid wood products', cz: 'Pro hrany do 25 mm – ideální pro masivní dřevo', sk: 'Pre hrany do 25 mm – ideálne pre masívne drevo', hu: 'Élekhez 25 mm-ig – ideális tömörfa termékekhez' },
     equipment: ['CombiMelt PUR', 'Schwere Fräsaggregate', 'Kappgerät', 'Ziehklinge', 'Eckenrunden', 'Druckzone'],
     recommended: ['translift', 'transedge'],
+    highlights: {
+      de: ['Einzige OTT-Maschine für Kanten bis 25 mm', 'Ideal für Massivholz und Türfronten', 'Vorschub 12–20 m/min'],
+      en: ['Only OTT machine for edges up to 25 mm', 'Ideal for solid wood and door fronts', 'Feed speed 12–20 m/min'],
+      cz: ['Jediný stroj OTT pro hrany do 25 mm', 'Ideální pro masiv a dveřní čela', 'Posuv 12–20 m/min'],
+      sk: ['Jediný stroj OTT pre hrany do 25 mm', 'Ideálne pre masív a dverné čelá', 'Posuv 12–20 m/min'],
+      hu: ['Az egyetlen OTT gép 25 mm-es élekhez', 'Ideális tömörfához és ajtófrontokhoz', 'Előtolás 12–20 m/perc'],
+    },
     specs: {
       length: '8.6 m',
       edgeThickness: '0.3–25 mm',
@@ -375,10 +415,18 @@ export const OTT_PRODUCTS: OttProduct[] = [
     usp: { de: 'S (9,2 m) oder L (10,2 m) – Plattenstärke bis 80 mm', en: 'S (9.2 m) or L (10.2 m) – board thickness up to 80 mm', cz: 'S (9,2 m) nebo L (10,2 m) – tloušťka desek do 80 mm', sk: 'S (9,2 m) alebo L (10,2 m) – hrúbka dosiek do 80 mm', hu: 'S (9,2 m) vagy L (10,2 m) – lapvastagság 80 mm-ig' },
     equipment: ['CombiMelt PUR', 'Beckhoff Steuerung', 'Fräsaggregat', 'Kappgerät', 'Ziehklinge', 'Eckenrunden AKF', 'Druckzone', 'Profilziehklinge'],
     recommended: ['translift', 'transedge'],
+    highlights: {
+      de: ['Flaggschiff — S (9,2 m) oder L (10,2 m)', 'Plattenstärke bis 80 mm, Kante bis 25 mm', 'Höchste Präzision für Industrie-Linienbetrieb'],
+      en: ['Flagship — S (9.2 m) or L (10.2 m)', 'Board thickness up to 80 mm, edge up to 25 mm', 'Highest precision for industrial line operation'],
+      cz: ['Vlajková loď — S (9,2 m) nebo L (10,2 m)', 'Tloušťka desky do 80 mm, hrana do 25 mm', 'Nejvyšší přesnost pro průmyslový provoz'],
+      sk: ['Vlajková loď — S (9,2 m) alebo L (10,2 m)', 'Hrúbka dosky do 80 mm, hrana do 25 mm', 'Najvyššia presnosť pre priemyselnú prevádzku'],
+      hu: ['Zászlóshajó — S (9,2 m) vagy L (10,2 m)', 'Lapvastagság 80 mm-ig, él 25 mm-ig', 'Legmagasabb precizitás ipari vonalüzemhez'],
+    },
     specs: {
       length: '9.2–10.2 m',
       edgeThickness: '0.3–20/25 mm',
       boardThickness: '60/80 mm',
+      feedSpeed: '12–22 m/min',
       notes: {
         de: 'S-Variante: bis 60 mm / 20 mm Kante · L-Variante: bis 80 mm / 25 mm Kante',
         en: 'S variant: up to 60 mm / 20 mm edge · L variant: up to 80 mm / 25 mm edge',
@@ -425,6 +473,13 @@ export const OTT_PRODUCTS: OttProduct[] = [
     usp: { de: 'Einzige OTT-Maschine für Türproduktion – kein HOMAG-Pendant in dieser Preisklasse', en: 'Only OTT machine for door production – no HOMAG equivalent at this price point', cz: 'Jediný stroj OTT pro výrobu dveří – bez ekvivalentu HOMAG v této cenové kategorii', sk: 'Jediný stroj OTT pre výrobu dverí – bez ekvivalentu HOMAG v tejto cenovej kategórii', hu: 'Az egyetlen OTT gép ajtógyártáshoz – nincs HOMAG megfelelője ebben az árkategóriában' },
     equipment: ['Tür-Faltleimtechnik', 'CombiMelt PUR', 'Spezial-Fräsaggregat', 'Individuelle Konfiguration'],
     recommended: ['translift'],
+    highlights: {
+      de: ['Einzige OTT-Lösung für Türenproduktion', 'Spezielle Türfalt- und Umleimtechnik', 'Kein HOMAG-Äquivalent in dieser Preisklasse'],
+      en: ['Only OTT solution for door manufacturing', 'Specialized door fold and edgebanding tech', 'No HOMAG equivalent at this price point'],
+      cz: ['Jediné řešení OTT pro výrobu dveří', 'Speciální technika lepení a olemování dveří', 'Bez ekvivalentu HOMAG v této cenové třídě'],
+      sk: ['Jediné riešenie OTT pre výrobu dverí', 'Špeciálna technika lepenia a olemovania dverí', 'Bez ekvivalentu HOMAG v tejto cenovej triede'],
+      hu: ['Az egyetlen OTT megoldás ajtógyártáshoz', 'Speciális ajtóhajtogató és élzáró technika', 'Nincs HOMAG megfelelő ebben az árkategóriában'],
+    },
     specs: {
       length: '8 m+',
       edgeThickness: 'door/fold glue',

@@ -724,8 +724,73 @@ html.theme-light .text-white\/10 {
   color: rgba(15, 23, 42, 0.12) !important;
 }
 
+html.theme-light .text-white\/20 {
+  color: rgba(15, 23, 42, 0.2) !important;
+}
+
+html.theme-light .text-white\/25 {
+  color: rgba(15, 23, 42, 0.28) !important;
+}
+
+html.theme-light .text-white\/35 {
+  color: rgba(15, 23, 42, 0.38) !important;
+}
+
+html.theme-light .text-white\/45 {
+  color: rgba(15, 23, 42, 0.48) !important;
+}
+
+html.theme-light .text-white\/55 {
+  color: rgba(15, 23, 42, 0.58) !important;
+}
+
+html.theme-light .text-white\/85 {
+  color: rgba(15, 23, 42, 0.88) !important;
+}
+
 html.theme-light .hover\:text-white:hover {
   color: #0f172a !important;
+}
+
+html.theme-light .hover\:text-white\/60:hover {
+  color: rgba(15, 23, 42, 0.65) !important;
+}
+
+html.theme-light .hover\:text-white\/55:hover {
+  color: rgba(15, 23, 42, 0.6) !important;
+}
+
+html.theme-light .hover\:text-white\/80:hover {
+  color: rgba(15, 23, 42, 0.85) !important;
+}
+
+/* Light mode backgrounds */
+html.theme-light .bg-dark {
+  background-color: #ffffff !important;
+}
+
+html.theme-light .bg-dark-elevated {
+  background-color: #f8fafc !important;
+}
+
+html.theme-light .bg-white\/\[0\.01\] {
+  background-color: rgba(15, 23, 42, 0.02) !important;
+}
+
+html.theme-light .bg-white\/\[0\.02\] {
+  background-color: rgba(15, 23, 42, 0.03) !important;
+}
+
+html.theme-light .bg-white\/\[0\.03\] {
+  background-color: rgba(15, 23, 42, 0.04) !important;
+}
+
+html.theme-light .bg-white\/\[0\.04\] {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+html.theme-light .bg-white\/\[0\.06\] {
+  background-color: rgba(15, 23, 42, 0.06) !important;
 }
 
 html.theme-light .bg-white\/5 {
@@ -740,20 +805,61 @@ html.theme-light .hover\:bg-white\/5:hover {
   background-color: rgba(15, 23, 42, 0.08) !important;
 }
 
+html.theme-light .hover\:bg-white\/\[0\.02\]:hover {
+  background-color: rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Light mode borders */
 html.theme-light .border-white\/5 {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+html.theme-light .border-white\/6 {
+  border-color: rgba(15, 23, 42, 0.09) !important;
+}
+
+html.theme-light .border-white\/8 {
   border-color: rgba(15, 23, 42, 0.1) !important;
 }
 
 html.theme-light .border-white\/10 {
-  border-color: rgba(15, 23, 42, 0.16) !important;
+  border-color: rgba(15, 23, 42, 0.14) !important;
 }
 
 html.theme-light .border-white\/15 {
-  border-color: rgba(15, 23, 42, 0.2) !important;
+  border-color: rgba(15, 23, 42, 0.18) !important;
+}
+
+/* Light mode dividers */
+html.theme-light .divide-white\/5 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+html.theme-light .divide-white\/6 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(15, 23, 42, 0.09) !important;
+}
+
+html.theme-light .divide-white\/8 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+html.theme-light .divide-white\/\[0\.06\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(15, 23, 42, 0.09) !important;
+}
+
+/* Light mode product cards */
+html.theme-light .product-card-dark {
+  background-color: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
 }
 
 html.theme-light .bg-primary.text-white,
 html.theme-light .bg-primary .text-white {
+  color: #ffffff !important;
+}
+
+/* Keep hero text white in light mode */
+html.theme-light .manufacturer-hero-bg ~ * .text-white {
   color: #ffffff !important;
 }
 

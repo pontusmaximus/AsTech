@@ -135,6 +135,8 @@ export interface MayerProduct {
     bladeDiameter?: string;
     notes?: Record<Language, string>;
   };
+  highlights?: string[];
+  badge?: Record<Language, string>;
   seoTitle: Record<Language, string>;
   seoDescription: Record<Language, string>;
 }
@@ -165,10 +167,17 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       sk: 'kappa automatic 80 je vstupný model radu kappa a stanovuje nové štandardy v kompaktnej triede. Ťažká oceľová konštrukcia, prítlačný trám a posuv materiálu z ocele umožňujú obsluhu jedným operátorom s najvyššou opakovateľnou presnosťou.',
       hu: 'A kappa automatic 80 a kappa sorozat belépő modellje, amely új mércét állít a kompakt kategóriában. Nehéz acélszerkezet, acél nyomógerenda és anyagtolóval egyszemélyes kezelést tesz lehetővé a legmagasabb ismétlési pontossággal.',
     },
+    highlights: [
+      'One of the heaviest beam saws in its class',
+      'New saw carriage — cutting direction against the fence',
+      'Ergonomic 24" control panel with Windows-based software',
+      'Feed speed up to 100 m/min, continuously variable 5–100 m/min',
+      'Double measuring system for maximum repeat accuracy',
+    ],
     specs: {
       cuttingLength: '3.200 mm',
       cuttingHeight: '80 mm',
-      feedSpeed: '100 m/min',
+      feedSpeed: '5–100 m/min',
     },
     seoTitle: {
       de: 'Mayer kappa automatic 80 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
@@ -205,10 +214,17 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       sk: 'kappa automatic 100 je formátovacia píla s vyššou výbavou: viac sily, viac výkonu, viac komfortu. S výškou rezu 100 mm a dĺžkou rezu 3 200 mm ponúka profesionálne rezanie dosiek s ťažkou oceľovou konštrukciou.',
       hu: 'A kappa automatic 100 az emelt felszereltségű lapszabó fűrész: több erő, több teljesítmény, több komfort. 100 mm-es vágási magassággal és 3 200 mm-es vágási hosszal professzionális lapvágást biztosít.',
     },
+    highlights: [
+      'Premium-equipped beam saw — more power, more comfort',
+      'Heavy steel construction for highest repeat accuracy',
+      'New saw carriage with cutting direction against the fence',
+      'Feed speed up to 100 m/min, continuously variable',
+      'Compatible with Ardis cut optimisation software',
+    ],
     specs: {
       cuttingLength: '3.200 mm',
       cuttingHeight: '100 mm',
-      feedSpeed: '100 m/min',
+      feedSpeed: '5–100 m/min',
     },
     seoTitle: {
       de: 'Mayer kappa automatic 100 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
@@ -245,10 +261,17 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       sk: 'kappa automatic 120 je ideálna formátovacia píla pre rýchle a rozmerovo presné rezanie jednotlivých dosiek aj balíkov. S výškou rezu 120 mm a dĺžkou rezu 3 800 mm ponúka rozšírenú kapacitu pre stredné objemy výroby.',
       hu: 'A kappa automatic 120 az ideális lapszabó fűrész egyedi lapok és lapkötegek gyors és méretpontos vágásához. 120 mm-es vágási magassággal és 3 800 mm-es vágási hosszal bővített kapacitást biztosít közepes gyártási volumenekhez.',
     },
+    highlights: [
+      'Ideal for fast, dimensionally accurate single panel and stack cutting',
+      'Extended capacity for medium production volumes',
+      'Feed speed up to 100 m/min, continuously variable',
+      'Heavy steel construction with pressure beam',
+      'Compatible with Ardis cut optimisation software',
+    ],
     specs: {
       cuttingLength: '3.800 mm',
       cuttingHeight: '120 mm',
-      feedSpeed: '120 m/min',
+      feedSpeed: '5–100 m/min',
     },
     seoTitle: {
       de: 'Mayer kappa automatic 120 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
@@ -279,16 +302,23 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       hu: 'Maximális teljesítmény – erő, sebesség, rugalmasság',
     },
     description: {
-      de: 'Die kappa automatic 140 ist das Flaggschiff der kappa-Serie und bietet maximale Leistung für schnelles und maßgenaues Zuschneiden. Mit 140 mm Schnitthöhe, 4.300 mm Schnittlänge und bis zu 150 m/min Vorschubgeschwindigkeit vereint sie maximale Kraft, Schnelligkeit und Flexibilität – die erste Wahl für die industrielle Serienfertigung.',
-      en: 'The kappa automatic 140 is the flagship of the kappa series, delivering maximum performance for fast and dimensionally accurate cutting. With 140 mm cutting height, 4,300 mm cutting length and up to 150 m/min feed speed, it combines maximum power, speed and flexibility – the first choice for industrial series production.',
-      cz: 'kappa automatic 140 je vlajkovou lodí řady kappa a nabízí maximální výkon pro rychlé a rozměrově přesné řezání. S výškou řezu 140 mm, délkou řezu 4 300 mm a rychlostí posuvu až 150 m/min spojuje maximální sílu, rychlost a flexibilitu – první volba pro průmyslovou sériovou výrobu.',
-      sk: 'kappa automatic 140 je vlajkovou loďou radu kappa a ponúka maximálny výkon pre rýchle a rozmerovo presné rezanie. S výškou rezu 140 mm, dĺžkou rezu 4 300 mm a rýchlosťou posuvu až 150 m/min spája maximálnu silu, rýchlosť a flexibilitu.',
-      hu: 'A kappa automatic 140 a kappa sorozat zászlóshajója, maximális teljesítményt nyújtva a gyors és méretpontos vágáshoz. 140 mm-es vágási magassággal, 4 300 mm-es vágási hosszal és akár 150 m/perc előtolási sebességgel az ipari sorozatgyártás első számú választása.',
+      de: 'Die kappa automatic 140 ist das Flaggschiff der kappa-Serie und bietet maximale Leistung für schnelles und maßgenaues Zuschneiden. Mit 140 mm Schnitthöhe, 4.300 mm Schnittlänge und bis zu 100 m/min Vorschubgeschwindigkeit vereint sie maximale Kraft, Schnelligkeit und Flexibilität – die erste Wahl für die industrielle Serienfertigung.',
+      en: 'The kappa automatic 140 is the flagship of the kappa series, delivering maximum performance for fast and dimensionally accurate cutting. With 140 mm cutting height, 4,300 mm cutting length and up to 100 m/min feed speed, it combines maximum power, speed and flexibility – the first choice for industrial series production.',
+      cz: 'kappa automatic 140 je vlajkovou lodí řady kappa a nabízí maximální výkon pro rychlé a rozměrově přesné řezání. S výškou řezu 140 mm, délkou řezu 4 300 mm a rychlostí posuvu až 100 m/min spojuje maximální sílu, rychlost a flexibilitu – první volba pro průmyslovou sériovou výrobu.',
+      sk: 'kappa automatic 140 je vlajkovou loďou radu kappa a ponúka maximálny výkon pre rýchle a rozmerovo presné rezanie. S výškou rezu 140 mm, dĺžkou rezu 4 300 mm a rýchlosťou posuvu až 100 m/min spája maximálnu silu, rýchlosť a flexibilitu.',
+      hu: 'A kappa automatic 140 a kappa sorozat zászlóshajója, maximális teljesítményt nyújtva a gyors és méretpontos vágáshoz. 140 mm-es vágási magassággal, 4 300 mm-es vágási hosszal és akár 100 m/perc előtolási sebességgel az ipari sorozatgyártás első számú választása.',
     },
+    highlights: [
+      'Flagship kappa model — maximum power, speed and flexibility',
+      'Feed speed up to 100 m/min — one of the fastest in its class',
+      '140 mm cutting height for industrial stack cutting',
+      'First choice for industrial series production',
+      'Compatible with Ardis cut optimisation software',
+    ],
     specs: {
       cuttingLength: '4.300 mm',
       cuttingHeight: '140 mm',
-      feedSpeed: '150 m/min',
+      feedSpeed: '5–100 m/min',
     },
     seoTitle: {
       de: 'Mayer kappa automatic 140 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
@@ -298,11 +328,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       hu: 'Mayer kappa automatic 140 lapszabó fűrész – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
-      de: 'kappa automatic 140 – Flaggschiff-Plattensäge. 140 mm, 4.300 mm, 150 m/min Vorschub. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
-      en: 'kappa automatic 140 – flagship panel saw. 140 mm, 4,300 mm length, 150 m/min feed speed. Asamer: authorized Mayer dealer for CZ, SK & HU.',
-      cz: 'kappa automatic 140 – vlajková formátovací pila. 140 mm, 4 300 mm, posuv 150 m/min. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
-      sk: 'kappa automatic 140 – vlajková formátovacia píla. 140 mm, 4 300 mm, posuv 150 m/min. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
-      hu: 'kappa automatic 140 – zászlóshajó lapszabó fűrész. 140 mm, 4 300 mm, 150 m/perc előtolás. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+      de: 'kappa automatic 140 – Flaggschiff-Plattensäge. 140 mm, 4.300 mm, bis zu 100 m/min. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
+      en: 'kappa automatic 140 – flagship panel saw. 140 mm, 4,300 mm, up to 100 m/min. Asamer: authorized Mayer dealer for CZ, SK & HU.',
+      cz: 'kappa automatic 140 – vlajková formátovací pila. 140 mm, 4 300 mm, do 100 m/min. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
+      sk: 'kappa automatic 140 – vlajková formátovacia píla. 140 mm, 4 300 mm, do 100 m/min. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
+      hu: 'kappa automatic 140 – zászlóshajó lapszabó fűrész. 140 mm, 4 300 mm, 100 m/perc-ig. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
     },
   },
 
@@ -327,8 +357,17 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       sk: 'advanced line 100 je klasika pre spracovanie hliníka, neželezných kovov a plastov. S motorom 18/24 kW a výškou rezu 100 mm ponúka presné rezy bez vibrácií.',
       hu: 'Az advanced line 100 a klasszikus megoldás alumínium, színesfémek és műanyagok megmunkálásához. 18/24 kW motorteljesítménnyel és 100 mm-es vágási magassággal rezgésmentes precíz vágásokat biztosít.',
     },
+    highlights: [
+      'Classic aluminium panel saw — proven in thousands of installations',
+      '18/24 kW motor for vibration-free precision cuts',
+      'Stable construction with excellent saw carriage guidance',
+      'Processes aluminium, non-ferrous metals and plastics up to 100 mm',
+      'Universal roller tables for one-man operation',
+    ],
     specs: {
+      cuttingLength: '3.200–4.200 mm',
       cuttingHeight: '100 mm',
+      feedSpeed: '0,2–60 m/min',
       motor: '18/24 kW',
     },
     seoTitle: {
@@ -366,8 +405,20 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       sk: 'advanced line 130 ponúka výšku rezu 130 mm a integrované odsávanie. Stabilná konštrukcia a bezvibrračné precízne ložiská zabezpečujú presné výsledky.',
       hu: 'Az advanced line 130 130 mm-es vágási magasságot és integrált elszívást kínál. Stabil szerkezet és rezgésmentes precíziós csapágyak biztosítják a pontos eredményeket.',
     },
+    highlights: [
+      'Tailored exactly to customer needs — combines extraordinary with useful',
+      'Double pressure beam with laser measurement for minimal trimming cuts',
+      'Dual Servo Drive — two independent servomotors for absolute precision',
+      'Patented riving knife for panels with high material tension',
+      'Front turntable — 90° repositioning for space-saving flexibility',
+    ],
     specs: {
+      cuttingLength: '3.200–4.200 mm',
       cuttingHeight: '130 mm',
+      feedSpeed: '0,2–60 m/min',
+      motor: '24 kW',
+      bladeDiameter: '500 mm',
+      bladeProjection: '142 mm',
     },
     seoTitle: {
       de: 'Mayer advanced line 130 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
@@ -404,8 +455,20 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       sk: 'advanced line 160 spája výšku rezu 160 mm s PC riadením cez dotykový displej – niekoľkonásobne ocenená za inovatívne riešenia a patenty. Je vhodná pre priemyselné aplikácie vyžadujúce vysokú priepustnosť.',
       hu: 'Az advanced line 160 160 mm-es vágási magasságot egyesít érintőképernyős PC-vezérléssel – többszörösen díjazott innovatív megoldásokért és szabadalmakért. Ipari alkalmazásokhoz alkalmas, ahol magas áteresztőképesség és maximális vágási pontosság szükséges.',
     },
+    highlights: [
+      'Multiple award-winning — innovative solutions and patents',
+      'True all-rounder for aluminium, non-ferrous metals and plastics',
+      '600 mm saw blade, 180 mm projection for 160 mm cutting height',
+      'Dual Servo Drive with programmable correction curves',
+      'Lamella Screen for optimal extraction performance',
+    ],
     specs: {
+      cuttingLength: '3.200–4.200 mm',
       cuttingHeight: '160 mm',
+      feedSpeed: '0,2–60 m/min',
+      motor: '35 kW',
+      bladeDiameter: '600 mm',
+      bladeProjection: '180 mm',
       notes: {
         de: 'PC-Steuerung mit Touchscreen',
         en: 'PC control with touchscreen',
@@ -449,8 +512,20 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       sk: 'advanced line 160 turn rozširuje platformu 160 o automatickú 90° otočnú jednotku pre obojstranné spracovanie. Komfortná obsluha umožňuje jednoduché zaobchádzanie s materiálom, aj s veľkoformátovými doskami.',
       hu: 'Az advanced line 160 turn a 160-as platformot automatikus 90°-os forgató egységgel bővíti. Kényelmes kezelhetőség könnyű anyagmozgatást tesz lehetővé, még nagyformátumú lapoknál is.',
     },
+    highlights: [
+      'Automatic 90° turning unit — longitudinal and cross cuts in one pass',
+      'Comfortable operation for easy handling of large-format panels',
+      'Double pressure beam with laser measurement',
+      '600 mm saw blade, 180 mm projection',
+      'Dual Servo Drive for maximum positioning precision',
+    ],
     specs: {
+      cuttingLength: '3.200–4.200 mm',
       cuttingHeight: '160 mm',
+      feedSpeed: '0,2–60 m/min',
+      motor: '35 kW',
+      bladeDiameter: '600 mm',
+      bladeProjection: '180 mm',
       notes: {
         de: 'Automatische 90°-Wendeinheit',
         en: 'Automatic 90° turning unit',
@@ -494,9 +569,20 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       sk: 'advanced line 200 ponúka výšku rezu 200 mm a dĺžku rezu 5 600 mm pre veľkoformátové obrobky.',
       hu: 'Az advanced line 200 200 mm-es vágási magasságot és 5 600 mm-es vágási hosszat kínál nagyformátumú munkadarabokhoz.',
     },
+    highlights: [
+      'Heavy machine body engineered for exceptional load capacity',
+      '670 mm saw blade, 215 mm projection — for demanding industrial work',
+      '43 kW motor — maximum throughput',
+      'Dual pressure beam with laser measurement',
+      'Dual Servo Drive with separate measuring systems',
+    ],
     specs: {
-      cuttingLength: '5.600 mm',
+      cuttingLength: '3.200–4.200 mm',
       cuttingHeight: '200 mm',
+      feedSpeed: '0,2–60 m/min',
+      motor: '43 kW',
+      bladeDiameter: '670 mm',
+      bladeProjection: '215 mm',
     },
     seoTitle: {
       de: 'Mayer advanced line 200 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
@@ -533,8 +619,17 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       sk: 'advanced line 250 je najsilnejšia formátovacia píla vo svojej triede: motor 55/75 kW, dĺžka rezu 3 200–4 200 mm, priemer kotúča 860 mm a projekcia 270 mm. Navrhnutá pre priemyselnú výrobu bez kompromisov.',
       hu: 'Az advanced line 250 a kategória legerősebb lapszabó fűrésze: 55/75 kW motor, 3 200–4 200 mm vágási hossz, 860 mm fűrészlap átmérő és 270 mm projekció. Kompromisszumok nélküli ipari gyártáshoz tervezve.',
     },
+    highlights: [
+      'The strongest panel dividing saw in its class',
+      '860 mm saw blade, 270 mm projection — unmatched cutting power',
+      '55–75 kW motor for maximum cutting performance',
+      'Outstanding precision and cutting quality at maximum throughput',
+      'Designed for industrial production without compromise',
+    ],
     specs: {
       cuttingLength: '3.200–4.200 mm',
+      cuttingHeight: '250 mm',
+      feedSpeed: '0,2–60 m/min',
       motor: '55/75 kW',
       bladeDiameter: '860 mm',
       bladeProjection: '270 mm',
@@ -576,6 +671,12 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       sk: 'Uhlové rezacie systémy Mayer sú zákazkové riešenia pre priemyselné výrobné linky. Automatizované pozdĺžne a priečne rezy v jednom systéme.',
       hu: 'A Mayer szögvágó rendszerek egyedi vágási megoldások ipari gyártósorokhoz. Automatizált hossz- és keresztvágások egy rendszerben – konfigurálható az Ön specifikus anyag-, formátum- és áteresztőképesség-igényeihez.',
     },
+    highlights: [
+      'Custom-configured angle cutting systems for industrial production lines',
+      'Automated longitudinal and cross cuts in a single system',
+      'Configurable for material type, format and throughput requirements',
+      'Integration with existing production and ERP systems',
+    ],
     specs: {
       notes: {
         de: 'Individuelle Konfiguration nach Kundenbedarf',
