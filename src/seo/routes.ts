@@ -235,34 +235,34 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     slugByLang: SLUG_TRANSLATIONS['/financovani'],
     meta: createMeta({
       de: {
-        title: 'Finanzierung & Förderkompass | Asamer Technologie',
+        title: 'Maschinenfinanzierung – Raiffeisen Leasing, Förderung & Ratenkauf | Asamer',
         description:
-          'Finanzierung, Leasing und Förderprogramme für Maschinen und Automatisierung in Mitteleuropa – interaktiver Förderkompass von Asamer.',
-        keywords: ['Finanzierung', 'Förderung', 'Leasing', 'Automation', 'Maschinen'],
+          'Maschinen finanzieren mit Raiffeisen Leasing: Finanzierungsleasing, Ratenkauf und EU-Förderung. Asamer Technologie – kostenlose Beratung für CZ, SK, HU.',
+        keywords: ['Finanzierung', 'Raiffeisen Leasing', 'Förderung', 'Leasing', 'Maschinen'],
       },
       en: {
-        title: 'Financing & Funding Compass | Asamer Technology',
+        title: 'Machine Financing – Raiffeisen Leasing, EU Grants & Installments | Asamer',
         description:
-          'Financing, leasing and grant programs for machines and automation in Central Europe – interactive funding compass by Asamer.',
-        keywords: ['Financing', 'Funding', 'Leasing', 'Automation', 'Machinery'],
+          'Finance new or used machines via Raiffeisen Leasing, installment purchase and EU grants. Asamer Technologie – free consultation for CZ, SK, HU.',
+        keywords: ['Financing', 'Raiffeisen Leasing', 'EU Grants', 'Leasing', 'Machinery'],
       },
       cz: {
-        title: 'Financování a dotační kompas | Asamer Technologie',
+        title: 'Financování strojů – Raiffeisen leasing, dotace a splátkový prodej | Asamer',
         description:
-          'Financování, leasing a dotační programy pro stroje a automatizaci ve střední Evropě – interaktivní průvodce od Asamer.',
-        keywords: ['Financování', 'Dotace', 'Leasing', 'Automatizace', 'Stroje'],
+          'Financujte nové nebo použité stroje přes Raiffeisen Leasing, splátkový prodej nebo dotace OP TAK. Asamer Technologie – poradenství zdarma pro CZ, SK a HU.',
+        keywords: ['Financování', 'Raiffeisen Leasing', 'Dotace', 'Leasing', 'Stroje'],
       },
       sk: {
-        title: 'Financovanie a dotačný kompas | Asamer Technologie',
+        title: 'Financovanie strojov – Tatra Leasing, dotácie a splátky | Asamer',
         description:
-          'Financovanie, leasing a dotačné programy pre stroje a automatizáciu v strednej Európe – interaktívny sprievodca od Asamer.',
-        keywords: ['Financovanie', 'Dotácie', 'Leasing', 'Automatizácia', 'Stroje'],
+          'Financujte stroje cez Tatra Leasing (Raiffeisen), splátky alebo dotácie z Programu Slovensko. Asamer – poradenstvo zdarma pre SK, CZ a HU.',
+        keywords: ['Financovanie', 'Tatra Leasing', 'Dotácie', 'Leasing', 'Stroje'],
       },
       hu: {
-        title: 'Finanszírozás és pályázati iránytű | Asamer Technologie',
+        title: 'Gépfinanszírozás – Raiffeisen Lízing, pályázatok és részletfizetés | Asamer',
         description:
-          'Finanszírozás, lízing és pályázati programok gépekhez és automatizáláshoz Közép-Európában – interaktív útmutató az Asamertől.',
-        keywords: ['Finanszírozás', 'Pályázat', 'Lízing', 'Automatizálás', 'Gépek'],
+          'Finanszírozzon gépeket Raiffeisen Lízinggel, részletfizetéssel vagy GINOP Plusz pályázattal. Asamer – ingyenes tanácsadás CZ, SK és HU területén.',
+        keywords: ['Finanszírozás', 'Raiffeisen Lízing', 'Pályázat', 'Lízing', 'Gépek'],
       },
     }),
   },
