@@ -171,35 +171,6 @@ const FinancingPage = () => {
     },
   ];
 
-  const raiffeisenEntities = [
-    {
-      country: tr('CZ / Tschechien', 'CZ / Czech Republic', 'CZ / Česká republika'),
-      name: 'Raiffeisen - Leasing, s.r.o.',
-      detail: tr(
-        'Seit 1994 · einer der größten Leasinggeber am CZ-Markt',
-        'Since 1994 · one of the largest lessors in the CZ market',
-        'Od roku 1994 · jeden z největších leasingových poskytovatelů na CZ trhu'
-      ),
-    },
-    {
-      country: tr('SK / Slowakei', 'SK / Slovakia', 'SK / Slovensko'),
-      name: 'Tatra Leasing s.r.o.',
-      detail: tr(
-        'Raiffeisen-Tochter · 7 Filialen · Top 3 in SK',
-        'Raiffeisen subsidiary · 7 branches · Top 3 in SK',
-        'Dceřiná společnost Raiffeisen · 7 poboček · Top 3 v SK'
-      ),
-    },
-    {
-      country: tr('HU / Ungarn', 'HU / Hungary', 'HU / Maďarsko'),
-      name: 'Raiffeisen Leasing Zrt.',
-      detail: tr(
-        'Seit 1993 · Budapest · Industrie + Landwirtschaft',
-        'Since 1993 · Budapest · Industry + Agriculture',
-        'Od roku 1993 · Budapešť · Průmysl + Zemědělství'
-      ),
-    },
-  ];
 
   const leasingModels = [
     {
@@ -348,19 +319,6 @@ const FinancingPage = () => {
               </div>
             </div>
 
-            {/* 4 Raiffeisen-Gesellschaften */}
-            <h3 className="text-lg font-display font-light text-white mb-4">
-              {tr('Raiffeisen Leasing in Mitteleuropa', 'Raiffeisen Leasing in Central Europe', 'Raiffeisen Leasing ve střední Evropě')}
-            </h3>
-            <div className="grid sm:grid-cols-3 gap-4">
-              {raiffeisenEntities.map((entity) => (
-                <div key={entity.name} className="rounded-xl border border-white/10 bg-dark-card px-4 py-3">
-                  <div className="text-primary text-xs uppercase tracking-widest mb-1">{entity.country}</div>
-                  <div className="text-white text-sm font-medium mb-1">{entity.name}</div>
-                  <div className="text-white/60 text-xs leading-relaxed">{entity.detail}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -397,199 +355,209 @@ const FinancingPage = () => {
               {tr('Förderungen & Zuschüsse', 'Grants & Subsidies', 'Dotace a podpory')}
             </h2>
 
-            {/* CZ */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center">
-                  <Flag className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <span className="text-primary text-xs uppercase tracking-widest block">CZ</span>
-                  <h3 className="text-xl font-display font-light text-white">{tr('Česká republika', 'Czech Republic', 'Česká republika')}</h3>
-                </div>
-              </div>
+            <div className="space-y-3">
 
-              <div className="space-y-4">
-                <div className="bg-dark-card rounded-2xl border border-primary/15 p-6">
-                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h4 className="text-white font-medium">OP TAK – Digitální podnik</h4>
-                    <span className="text-primary text-xs font-medium bg-primary/10 px-2 py-0.5 rounded">25–45 %</span>
+              {/* CZ */}
+              <details className="group rounded-xl border border-primary/15 bg-dark-card">
+                <summary className="flex items-center justify-between cursor-pointer list-none p-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center">
+                      <Flag className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <span className="text-primary text-xs uppercase tracking-widest block">CZ</span>
+                      <h3 className="text-lg font-display font-light text-white">{tr('Česká republika', 'Czech Republic', 'Česká republika')}</h3>
+                    </div>
                   </div>
-                  <p className="text-white/75 text-sm leading-relaxed">
-                    {tr(
-                      'Operační program Technologie a aplikace pro konkurenceschopnost. Fördert Produktionsmaschinen mit digitaler Anbindung (ERP/MES-Integration erforderlich). Projektbudget 2,5–100 Mio. CZK, max. Förderung 45 Mio. CZK. Kleine Betriebe erhalten bis 45 %.',
-                      'Operational Programme Technology and Application for Competitiveness. Supports production machinery with digital connectivity (ERP/MES integration required). Project budget CZK 2.5–100M, max. grant CZK 45M. Small enterprises receive up to 45%.',
-                      'Operační program Technologie a aplikace pro konkurenceschopnost. Podporuje výrobní stroje s digitálním propojením (nutná integrace ERP/MES). Rozpočet projektu 2,5–100 mil. Kč, max. dotace 45 mil. Kč. Malé podniky získají až 45 %.'
-                    )}
-                  </p>
-                </div>
-
-                <div className="bg-dark-card rounded-2xl border border-primary/15 p-6">
-                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h4 className="text-white font-medium">OP TAK – Inovace</h4>
-                    <span className="text-primary text-xs font-medium bg-primary/10 px-2 py-0.5 rounded">15–60 %</span>
+                  <ChevronDown className="w-5 h-5 text-white/40 shrink-0 ml-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="px-5 pb-5 space-y-4">
+                  <div className="rounded-xl border border-primary/10 bg-dark/50 p-5">
+                    <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                      <h4 className="text-white font-medium">OP TAK – Digitální podnik</h4>
+                      <span className="text-primary text-xs font-medium bg-primary/10 px-2 py-0.5 rounded">25–45 %</span>
+                    </div>
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {tr(
+                        'Operační program Technologie a aplikace pro konkurenceschopnost. Fördert Produktionsmaschinen mit digitaler Anbindung (ERP/MES-Integration erforderlich). Projektbudget 2,5–100 Mio. CZK, max. Förderung 45 Mio. CZK. Kleine Betriebe erhalten bis 45 %.',
+                        'Operational Programme Technology and Application for Competitiveness. Supports production machinery with digital connectivity (ERP/MES integration required). Project budget CZK 2.5–100M, max. grant CZK 45M. Small enterprises receive up to 45%.',
+                        'Operační program Technologie a aplikace pro konkurenceschopnost. Podporuje výrobní stroje s digitálním propojením (nutná integrace ERP/MES). Rozpočet projektu 2,5–100 mil. Kč, max. dotace 45 mil. Kč. Malé podniky získají až 45 %.'
+                      )}
+                    </p>
                   </div>
-                  <p className="text-white/75 text-sm leading-relaxed">
-                    {tr(
-                      'Fördert Einführung von Innovationen in die Produktion – neue Maschinen und Technologien auf Basis von F&E-Ergebnissen. Förderung 1–80 Mio. CZK. Voraussetzung: Innovationsnachweis.',
-                      'Supports introducing innovations into production – new machines and technologies based on R&D results. Grant CZK 1–80M. Requirement: proof of innovation.',
-                      'Podporuje zavádění inovací do výroby – nové stroje a technologie na základě výsledků VaV. Dotace 1–80 mil. Kč. Podmínka: průkaz inovace.'
-                    )}
-                  </p>
-                </div>
 
-                <div className="bg-dark-card rounded-2xl border border-primary/15 p-6">
-                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h4 className="text-white font-medium">NRB – Úvěr Expanze</h4>
-                    <span className="text-primary text-xs font-medium bg-primary/10 px-2 py-0.5 rounded">
-                      {tr('0 % Zinsen · bis 50 %', '0% interest · up to 50%', '0 % úrok · až 50 %')}
-                    </span>
+                  <div className="rounded-xl border border-primary/10 bg-dark/50 p-5">
+                    <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                      <h4 className="text-white font-medium">OP TAK – Inovace</h4>
+                      <span className="text-primary text-xs font-medium bg-primary/10 px-2 py-0.5 rounded">15–60 %</span>
+                    </div>
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {tr(
+                        'Fördert Einführung von Innovationen in die Produktion – neue Maschinen und Technologien auf Basis von F&E-Ergebnissen. Förderung 1–80 Mio. CZK. Voraussetzung: Innovationsnachweis.',
+                        'Supports introducing innovations into production – new machines and technologies based on R&D results. Grant CZK 1–80M. Requirement: proof of innovation.',
+                        'Podporuje zavádění inovací do výroby – nové stroje a technologie na základě výsledků VaV. Dotace 1–80 mil. Kč. Podmínka: průkaz inovace.'
+                      )}
+                    </p>
                   </div>
-                  <p className="text-white/75 text-sm leading-relaxed">
-                    {tr(
-                      'Zinsloser Investitionskredit der Národní rozvojová banka (ehem. ČMZRB). Laufzeit bis 15 Jahre, deckt bis 50 % der förderfähigen Ausgaben – Maschinen, Produktionslinien, Software, Betriebsräume. Für KMU in allen Branchen.',
-                      'Interest-free investment loan from the National Development Bank (formerly ČMZRB). Term up to 15 years, covers up to 50% of eligible expenses – machines, production lines, software, premises. For SMEs in all sectors.',
-                      'Bezúročný investiční úvěr od Národní rozvojové banky (dříve ČMZRB). Splatnost až 15 let, pokrývá až 50 % způsobilých výdajů – stroje, výrobní linky, software, provozní prostory. Pro MSP ve všech odvětvích.'
-                    )}
-                  </p>
-                </div>
 
-                <div className="border-l-2 border-primary/30 pl-4 py-2 bg-primary/5 rounded-r-lg">
-                  <p className="text-white/60 text-sm italic leading-relaxed">
-                    {tr(
-                      'Raiffeisen Leasing CZ bietet eigene Dotationsberatung an und kann Leasing direkt mit Förderprogrammen (OP TAK, NRB) kombinieren – z.B. 0 % Zins auf den geförderten Anteil.',
-                      'Raiffeisen Leasing CZ offers its own subsidy consulting and can combine leasing directly with grant programs (OP TAK, NRB) – e.g. 0% interest on the subsidized portion.',
-                      'Raiffeisen Leasing CZ nabízí vlastní dotační poradenství a může kombinovat leasing přímo s dotačními programy (OP TAK, NRB) – např. 0 % úrok na dotovanou část.'
-                    )}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* SK */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-emerald-500/15 flex items-center justify-center">
-                  <Flag className="w-5 h-5 text-emerald-400" />
-                </div>
-                <div>
-                  <span className="text-emerald-400 text-xs uppercase tracking-widest block">SK</span>
-                  <h3 className="text-xl font-display font-light text-white">{tr('Slowakei', 'Slovakia', 'Slovensko')}</h3>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="bg-dark-card rounded-2xl border border-emerald-500/15 p-6">
-                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h4 className="text-white font-medium">Program Slovensko 2021–2027</h4>
-                    <span className="text-emerald-400 text-xs font-medium bg-emerald-500/10 px-2 py-0.5 rounded">
-                      {tr('bis 50 %', 'up to 50%', 'až 50 %')}
-                    </span>
+                  <div className="rounded-xl border border-primary/10 bg-dark/50 p-5">
+                    <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                      <h4 className="text-white font-medium">NRB – Úvěr Expanze</h4>
+                      <span className="text-primary text-xs font-medium bg-primary/10 px-2 py-0.5 rounded">
+                        {tr('0 % Zinsen · bis 50 %', '0% interest · up to 50%', '0 % úrok · až 50 %')}
+                      </span>
+                    </div>
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {tr(
+                        'Zinsloser Investitionskredit der Národní rozvojová banka (ehem. ČMZRB). Laufzeit bis 15 Jahre, deckt bis 50 % der förderfähigen Ausgaben – Maschinen, Produktionslinien, Software, Betriebsräume. Für KMU in allen Branchen.',
+                        'Interest-free investment loan from the National Development Bank (formerly ČMZRB). Term up to 15 years, covers up to 50% of eligible expenses – machines, production lines, software, premises. For SMEs in all sectors.',
+                        'Bezúročný investiční úvěr od Národní rozvojové banky (dříve ČMZRB). Splatnost až 15 let, pokrývá až 50 % způsobilých výdajů – stroje, výrobní linky, software, provozní prostory. Pro MSP ve všech odvětvích.'
+                      )}
+                    </p>
                   </div>
-                  <p className="text-white/75 text-sm leading-relaxed">
-                    {tr(
-                      'Operačný program für Technologieinvestitionen und Maschinenkäufe. Max. 2 Mio. EUR pro Projekt. Förderfähig: Maschinen, Software, Patente, Personalkosten für neue Mitarbeiter.',
-                      'Operational programme for technology investment and machinery purchases. Max. EUR 2M per project. Eligible: machines, software, patents, personnel costs for new employees.',
-                      'Operačný program pre investície do technológií a nákup strojov. Max. 2 mil. EUR na projekt. Oprávnené výdaje: stroje, software, patenty, mzdové náklady na nových zamestnancov.'
-                    )}
-                  </p>
-                </div>
 
-                <div className="bg-dark-card rounded-2xl border border-emerald-500/15 p-6">
-                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h4 className="text-white font-medium">SIH – Záručný nástroj</h4>
-                    <span className="text-emerald-400 text-xs font-medium bg-emerald-500/10 px-2 py-0.5 rounded">
-                      {tr('80 % Garantie + 0–30 % Zuschuss', '80% guarantee + 0–30% grant', '80 % záruka + 0–30 % príspevok')}
-                    </span>
+                  <div className="border-l-2 border-primary/30 pl-4 py-2 bg-primary/5 rounded-r-lg">
+                    <p className="text-white/60 text-sm italic leading-relaxed">
+                      {tr(
+                        'Raiffeisen Leasing CZ bietet eigene Dotationsberatung an und kann Leasing direkt mit Förderprogrammen (OP TAK, NRB) kombinieren – z.B. 0 % Zins auf den geförderten Anteil.',
+                        'Raiffeisen Leasing CZ offers its own subsidy consulting and can combine leasing directly with grant programs (OP TAK, NRB) – e.g. 0% interest on the subsidized portion.',
+                        'Raiffeisen Leasing CZ nabízí vlastní dotační poradenství a může kombinovat leasing přímo s dotačními programy (OP TAK, NRB) – např. 0 % úrok na dotovanou část.'
+                      )}
+                    </p>
                   </div>
-                  <p className="text-white/75 text-sm leading-relaxed">
-                    {tr(
-                      'Slovak Investment Holding garantiert 80 % des Kreditrisikos bei Partnerbanken. Zusätzlich Zuschusskomponente 0–30 % des Kreditbetrags je nach Region. Max. Kredit 2,8 Mio. EUR, Laufzeit bis 10 Jahre. Ergebnis: niedrigere Zinsen, weniger Sicherheiten nötig.',
-                      'Slovak Investment Holding guarantees 80% of credit risk at partner banks. Additional grant component 0–30% of loan amount depending on region. Max. loan EUR 2.8M, term up to 10 years. Result: lower interest rates, fewer collateral requirements.',
-                      'Slovak Investment Holding ručí za 80 % úverového rizika u partnerských bank. Navyše grantová zložka 0–30 % výšky úveru podľa regiónu. Max. úver 2,8 mil. EUR, splatnosť do 10 rokov. Výsledok: nižšie úroky, menšie požiadavky na zabezpečenie.'
-                    )}
-                  </p>
                 </div>
+              </details>
 
-                <div className="bg-dark-card rounded-2xl border border-emerald-500/15 p-6">
-                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h4 className="text-white font-medium">Plán obnovy a odolnosti SR (RRF)</h4>
-                    <span className="text-emerald-400 text-xs font-medium bg-emerald-500/10 px-2 py-0.5 rounded">
-                      {tr('Frist: August 2026', 'Deadline: August 2026', 'Termín: august 2026')}
-                    </span>
+              {/* SK */}
+              <details className="group rounded-xl border border-emerald-500/15 bg-dark-card">
+                <summary className="flex items-center justify-between cursor-pointer list-none p-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-emerald-500/15 flex items-center justify-center">
+                      <Flag className="w-5 h-5 text-emerald-400" />
+                    </div>
+                    <div>
+                      <span className="text-emerald-400 text-xs uppercase tracking-widest block">SK</span>
+                      <h3 className="text-lg font-display font-light text-white">{tr('Slowakei', 'Slovakia', 'Slovensko')}</h3>
+                    </div>
                   </div>
-                  <p className="text-white/75 text-sm leading-relaxed">
-                    {tr(
-                      'Slowakischer Aufbauplan (6,4 Mrd. EUR). Investitionsförderung für Maschinen und Digitalisierung. Alle Maßnahmen müssen bis 31. August 2026 abgeschlossen sein.',
-                      'Slovak recovery plan (EUR 6.4B). Investment support for machinery and digitalization. All measures must be completed by 31 August 2026.',
-                      'Slovenský plán obnovy (6,4 mld. EUR). Investičná podpora pre stroje a digitalizáciu. Všetky opatrenia musia byť dokončené do 31. augusta 2026.'
-                    )}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* HU */}
-            <div className="mb-6">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-orange-500/15 flex items-center justify-center">
-                  <Flag className="w-5 h-5 text-orange-400" />
-                </div>
-                <div>
-                  <span className="text-orange-400 text-xs uppercase tracking-widest block">HU</span>
-                  <h3 className="text-xl font-display font-light text-white">{tr('Ungarn', 'Hungary', 'Maďarsko')}</h3>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="bg-dark-card rounded-2xl border border-orange-500/15 p-6">
-                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h4 className="text-white font-medium">GINOP Plusz-1.2.4</h4>
-                    <span className="text-orange-400 text-xs font-medium bg-orange-500/10 px-2 py-0.5 rounded">
-                      {tr('50 % nicht rückzahlbar', '50% non-repayable', '50 % nevratná')}
-                    </span>
+                  <ChevronDown className="w-5 h-5 text-white/40 shrink-0 ml-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="px-5 pb-5 space-y-4">
+                  <div className="rounded-xl border border-emerald-500/10 bg-dark/50 p-5">
+                    <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                      <h4 className="text-white font-medium">Program Slovensko 2021–2027</h4>
+                      <span className="text-emerald-400 text-xs font-medium bg-emerald-500/10 px-2 py-0.5 rounded">
+                        {tr('bis 50 %', 'up to 50%', 'až 50 %')}
+                      </span>
+                    </div>
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {tr(
+                        'Operačný program für Technologieinvestitionen und Maschinenkäufe. Max. 2 Mio. EUR pro Projekt. Förderfähig: Maschinen, Software, Patente, Personalkosten für neue Mitarbeiter.',
+                        'Operational programme for technology investment and machinery purchases. Max. EUR 2M per project. Eligible: machines, software, patents, personnel costs for new employees.',
+                        'Operačný program pre investície do technológií a nákup strojov. Max. 2 mil. EUR na projekt. Oprávnené výdaje: stroje, software, patenty, mzdové náklady na nových zamestnancov.'
+                      )}
+                    </p>
                   </div>
-                  <p className="text-white/75 text-sm leading-relaxed">
-                    {tr(
-                      'Investitionszuschuss für Mikro- und Kleinbetriebe in benachteiligten Regionen. 50 % nicht rückzahlbar, 5–120 Mio. HUF pro Antragsteller. Förderfähig: neue Maschinen (min. 10 % des Budgets), IT-Systeme, Betriebsräume. Antragsfrist: 30. April 2026.',
-                      'Investment grant for micro and small enterprises in disadvantaged regions. 50% non-repayable, HUF 5–120M per applicant. Eligible: new machinery (min. 10% of budget), IT systems, premises. Application deadline: 30 April 2026.',
-                      'Investiční příspěvek pro mikro a malé podniky v znevýhodněných regionech. 50 % nevratné, 5–120 mil. HUF na žadatele. Způsobilé: nové stroje (min. 10 % rozpočtu), IT systémy, prostory. Lhůta: 30. dubna 2026.'
-                    )}
-                  </p>
-                </div>
 
-                <div className="bg-dark-card rounded-2xl border border-orange-500/15 p-6">
-                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h4 className="text-white font-medium">Széchenyi Kártya Program</h4>
-                    <span className="text-orange-400 text-xs font-medium bg-orange-500/10 px-2 py-0.5 rounded">
-                      {tr('3 % Zins – staatlich gefördert', '3% interest – state-subsidized', '3 % úrok – státně dotovaný')}
-                    </span>
+                  <div className="rounded-xl border border-emerald-500/10 bg-dark/50 p-5">
+                    <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                      <h4 className="text-white font-medium">SIH – Záručný nástroj</h4>
+                      <span className="text-emerald-400 text-xs font-medium bg-emerald-500/10 px-2 py-0.5 rounded">
+                        {tr('80 % Garantie + 0–30 % Zuschuss', '80% guarantee + 0–30% grant', '80 % záruka + 0–30 % príspevok')}
+                      </span>
+                    </div>
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {tr(
+                        'Slovak Investment Holding garantiert 80 % des Kreditrisikos bei Partnerbanken. Zusätzlich Zuschusskomponente 0–30 % des Kreditbetrags je nach Region. Max. Kredit 2,8 Mio. EUR, Laufzeit bis 10 Jahre. Ergebnis: niedrigere Zinsen, weniger Sicherheiten nötig.',
+                        'Slovak Investment Holding guarantees 80% of credit risk at partner banks. Additional grant component 0–30% of loan amount depending on region. Max. loan EUR 2.8M, term up to 10 years. Result: lower interest rates, fewer collateral requirements.',
+                        'Slovak Investment Holding ručí za 80 % úverového rizika u partnerských bank. Navyše grantová zložka 0–30 % výšky úveru podľa regiónu. Max. úver 2,8 mil. EUR, splatnosť do 10 rokov. Výsledok: nižšie úroky, menšie požiadavky na zabezpečenie.'
+                      )}
+                    </p>
                   </div>
-                  <p className="text-white/75 text-sm leading-relaxed">
-                    {tr(
-                      'Staatlich subventionierter KMU-Kredit mit einheitlichem Kundenzins 3 % p.a. (Green-Bonus: 8 % Staatszuschuss). Budget 2026: 2.000 Mrd. HUF. Einsetzbar für Maschinenkauf, Fuhrpark, Betriebsimmobilien. Für Betriebe ab 1 Jahr Geschäftstätigkeit.',
-                      'State-subsidized SME credit at a uniform customer rate of 3% p.a. (green bonus: 8% state subsidy). Budget 2026: HUF 2,000B. Usable for machine purchase, fleet, business property. For businesses with at least 1 year of activity.',
-                      'Státně dotovaný úvěr pro MSP s jednotnou zákaznickou sazbou 3 % p.a. (zelený bonus: 8 % státní dotace). Rozpočet 2026: 2 000 mld. HUF. Použitelné na nákup strojů, vozový park, provozní nemovitosti. Pro podniky s min. 1 rokem činnosti.'
-                    )}
-                  </p>
-                </div>
 
-                <div className="bg-dark-card rounded-2xl border border-orange-500/15 p-6">
-                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h4 className="text-white font-medium">MFB – Magyar Fejlesztési Bank</h4>
-                    <span className="text-orange-400 text-xs font-medium bg-orange-500/10 px-2 py-0.5 rounded">
-                      {tr('Entwicklungsbank', 'Development bank', 'Rozvojová banka')}
-                    </span>
+                  <div className="rounded-xl border border-emerald-500/10 bg-dark/50 p-5">
+                    <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                      <h4 className="text-white font-medium">Plán obnovy a odolnosti SR (RRF)</h4>
+                      <span className="text-emerald-400 text-xs font-medium bg-emerald-500/10 px-2 py-0.5 rounded">
+                        {tr('Frist: August 2026', 'Deadline: August 2026', 'Termín: august 2026')}
+                      </span>
+                    </div>
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {tr(
+                        'Slowakischer Aufbauplan (6,4 Mrd. EUR). Investitionsförderung für Maschinen und Digitalisierung. Alle Maßnahmen müssen bis 31. August 2026 abgeschlossen sein.',
+                        'Slovak recovery plan (EUR 6.4B). Investment support for machinery and digitalization. All measures must be completed by 31 August 2026.',
+                        'Slovenský plán obnovy (6,4 mld. EUR). Investičná podpora pre stroje a digitalizáciu. Všetky opatrenia musia byť dokončené do 31. augusta 2026.'
+                      )}
+                    </p>
                   </div>
-                  <p className="text-white/75 text-sm leading-relaxed">
-                    {tr(
-                      'Die staatliche Entwicklungsbank bietet zinsgünstige Darlehen für Maschinen- und Technologieinvestitionen, besonders für Energieeffizienzprojekte. Ergänzend zu GINOP einsetzbar.',
-                      'The state development bank offers subsidized loans for machinery and technology investment, especially for energy efficiency projects. Can be combined with GINOP grants.',
-                      'Státní rozvojová banka poskytuje zvýhodněné úvěry na strojní a technologické investice, zvláště pro energeticky úsporné projekty. Lze kombinovat s dotacemi GINOP.'
-                    )}
-                  </p>
                 </div>
-              </div>
+              </details>
+
+              {/* HU */}
+              <details className="group rounded-xl border border-orange-500/15 bg-dark-card">
+                <summary className="flex items-center justify-between cursor-pointer list-none p-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-orange-500/15 flex items-center justify-center">
+                      <Flag className="w-5 h-5 text-orange-400" />
+                    </div>
+                    <div>
+                      <span className="text-orange-400 text-xs uppercase tracking-widest block">HU</span>
+                      <h3 className="text-lg font-display font-light text-white">{tr('Ungarn', 'Hungary', 'Maďarsko')}</h3>
+                    </div>
+                  </div>
+                  <ChevronDown className="w-5 h-5 text-white/40 shrink-0 ml-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="px-5 pb-5 space-y-4">
+                  <div className="rounded-xl border border-orange-500/10 bg-dark/50 p-5">
+                    <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                      <h4 className="text-white font-medium">GINOP Plusz-1.2.4</h4>
+                      <span className="text-orange-400 text-xs font-medium bg-orange-500/10 px-2 py-0.5 rounded">
+                        {tr('50 % nicht rückzahlbar', '50% non-repayable', '50 % nevratná')}
+                      </span>
+                    </div>
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {tr(
+                        'Investitionszuschuss für Mikro- und Kleinbetriebe in benachteiligten Regionen. 50 % nicht rückzahlbar, 5–120 Mio. HUF pro Antragsteller. Förderfähig: neue Maschinen (min. 10 % des Budgets), IT-Systeme, Betriebsräume. Antragsfrist: 30. April 2026.',
+                        'Investment grant for micro and small enterprises in disadvantaged regions. 50% non-repayable, HUF 5–120M per applicant. Eligible: new machinery (min. 10% of budget), IT systems, premises. Application deadline: 30 April 2026.',
+                        'Investiční příspěvek pro mikro a malé podniky v znevýhodněných regionech. 50 % nevratné, 5–120 mil. HUF na žadatele. Způsobilé: nové stroje (min. 10 % rozpočtu), IT systémy, prostory. Lhůta: 30. dubna 2026.'
+                      )}
+                    </p>
+                  </div>
+
+                  <div className="rounded-xl border border-orange-500/10 bg-dark/50 p-5">
+                    <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                      <h4 className="text-white font-medium">Széchenyi Kártya Program</h4>
+                      <span className="text-orange-400 text-xs font-medium bg-orange-500/10 px-2 py-0.5 rounded">
+                        {tr('3 % Zins – staatlich gefördert', '3% interest – state-subsidized', '3 % úrok – státně dotovaný')}
+                      </span>
+                    </div>
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {tr(
+                        'Staatlich subventionierter KMU-Kredit mit einheitlichem Kundenzins 3 % p.a. (Green-Bonus: 8 % Staatszuschuss). Budget 2026: 2.000 Mrd. HUF. Einsetzbar für Maschinenkauf, Fuhrpark, Betriebsimmobilien. Für Betriebe ab 1 Jahr Geschäftstätigkeit.',
+                        'State-subsidized SME credit at a uniform customer rate of 3% p.a. (green bonus: 8% state subsidy). Budget 2026: HUF 2,000B. Usable for machine purchase, fleet, business property. For businesses with at least 1 year of activity.',
+                        'Státně dotovaný úvěr pro MSP s jednotnou zákaznickou sazbou 3 % p.a. (zelený bonus: 8 % státní dotace). Rozpočet 2026: 2 000 mld. HUF. Použitelné na nákup strojů, vozový park, provozní nemovitosti. Pro podniky s min. 1 rokem činnosti.'
+                      )}
+                    </p>
+                  </div>
+
+                  <div className="rounded-xl border border-orange-500/10 bg-dark/50 p-5">
+                    <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                      <h4 className="text-white font-medium">MFB – Magyar Fejlesztési Bank</h4>
+                      <span className="text-orange-400 text-xs font-medium bg-orange-500/10 px-2 py-0.5 rounded">
+                        {tr('Entwicklungsbank', 'Development bank', 'Rozvojová banka')}
+                      </span>
+                    </div>
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {tr(
+                        'Die staatliche Entwicklungsbank bietet zinsgünstige Darlehen für Maschinen- und Technologieinvestitionen, besonders für Energieeffizienzprojekte. Ergänzend zu GINOP einsetzbar.',
+                        'The state development bank offers subsidized loans for machinery and technology investment, especially for energy efficiency projects. Can be combined with GINOP grants.',
+                        'Státní rozvojová banka poskytuje zvýhodněné úvěry na strojní a technologické investice, zvláště pro energeticky úsporné projekty. Lze kombinovat s dotacemi GINOP.'
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </details>
+
             </div>
           </div>
         </section>
