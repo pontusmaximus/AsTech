@@ -1,18 +1,23 @@
 /**
  * Build-time prerendering: generates static HTML files for each route
- * with correct meta tags so that Google sees real content without JS.
+ * with correct meta tags AND visible body content so that Google sees
+ * real content without executing JavaScript.
  *
  * Runs AFTER `vite build`. For each of the ~435 routes it:
  *  1. Reads the built dist/index.html as a template
- *  2. Injects the correct <title>, <meta description>, <link canonical>,
- *     <link hreflang>, and lang attribute
- *  3. Writes to dist/{route}/index.html
+ *  2. Injects correct <title>, <meta>, <link canonical>, <link hreflang>
+ *  3. Injects visible body content (h1, breadcrumbs, description)
+ *  4. Writes to dist/{route}/index.html
+ *
+ * The body content is hidden via CSS (display:none) when JS loads and
+ * React takes over the #root element, so users never see a flash.
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SEO_ROUTES, getSlugForLang } from '../src/seo/routes';
+import type { SeoRouteKey } from '../src/seo/routes';
 import {
   buildLocalizedPath,
   buildCanonicalUrl,
@@ -21,10 +26,10 @@ import {
   HREFLANG_DEFAULT,
   languageToHreflang,
 } from '../src/lib/language';
-import { OTT_PRODUCTS, buildOttProductPath } from '../src/data/ottProducts';
-import { MAYER_PRODUCTS, buildMayerProductPath } from '../src/data/mayerProducts';
-import { BARBARIC_PRODUCTS, buildBarbaricProductPath } from '../src/data/barbaricProducts';
-import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannomatProducts';
+import { OTT_PRODUCTS, buildOttProductPath, OTT_CATEGORY_LABELS } from '../src/data/ottProducts';
+import { MAYER_PRODUCTS, buildMayerProductPath, MAYER_CATEGORY_LABELS } from '../src/data/mayerProducts';
+import { BARBARIC_PRODUCTS, buildBarbaricProductPath, BARBARIC_CATEGORY_LABELS } from '../src/data/barbaricProducts';
+import { GANNOMAT_PRODUCTS, buildGannomatProductPath, GANNOMAT_CATEGORY_LABELS } from '../src/data/gannomatProducts';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -33,11 +38,21 @@ const distDir = join(__dirname, '..', 'dist');
 const template = readFileSync(join(distDir, 'index.html'), 'utf-8');
 
 /* ------------------------------------------------------------------ */
+/*  Translations for static labels                                     */
+/* ------------------------------------------------------------------ */
+
+const T = {
+  home: { de: 'Startseite', en: 'Home', cz: 'Domů', sk: 'Domov', hu: 'Főoldal' },
+  products: { de: 'Produkte', en: 'Products', cz: 'Produkty', sk: 'Produkty', hu: 'Termékek' },
+  contact: { de: 'Kontakt aufnehmen', en: 'Get in touch', cz: 'Kontaktujte nás', sk: 'Kontaktujte nás', hu: 'Lépjen kapcsolatba' },
+  dealer: { de: 'Autorisierter Händler für Zentraleuropa', en: 'Authorized dealer for Central Europe', cz: 'Autorizovaný prodejce pro střední Evropu', sk: 'Autorizovaný predajca pre strednú Európu', hu: 'Hivatalos viszonteladó Közép-Európában' },
+} as const;
+
+/* ------------------------------------------------------------------ */
 /*  Types                                                              */
 /* ------------------------------------------------------------------ */
 
 interface PageMeta {
-  /** URL path WITHOUT domain, e.g. /de/finanzierung */
   path: string;
   lang: Language;
   title: string;
@@ -45,6 +60,80 @@ interface PageMeta {
   canonical: string;
   alternates: { hreflang: string; href: string }[];
   xDefaultHref: string;
+  /** Visible body content for Google */
+  bodyContent: string;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Body content builders                                              */
+/* ------------------------------------------------------------------ */
+
+const escHtml = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+/** Build breadcrumb HTML: Home > Brand > Product */
+const breadcrumb = (items: { label: string; href: string }[]) =>
+  `<nav aria-label="Breadcrumb"><ol>${items.map((it, i) =>
+    `<li>${i < items.length - 1 ? `<a href="${it.href}">${escHtml(it.label)}</a>` : `<span>${escHtml(it.label)}</span>`}</li>`
+  ).join(' › ')}</ol></nav>`;
+
+/** Build static page body content */
+function staticPageBody(key: SeoRouteKey, lang: Language, title: string, description: string): string {
+  const homePath = buildLocalizedPath(lang, '/');
+  const homeLabel = T.home[lang];
+
+  const crumbs = [{ label: homeLabel, href: homePath }];
+  if (key !== 'home') {
+    crumbs.push({ label: title.split('|')[0].split('–')[0].trim(), href: '#' });
+  }
+
+  const parts: string[] = [];
+  if (key !== 'home') parts.push(breadcrumb(crumbs));
+  parts.push(`<h1>${escHtml(title)}</h1>`);
+  parts.push(`<p>${escHtml(description)}</p>`);
+
+  if (key === 'home') {
+    parts.push(`<p>${escHtml(T.dealer[lang])}</p>`);
+    // Link to all manufacturers
+    const brands = ['OTT', 'Mayer', 'Barbaric', 'Gannomat'];
+    const brandSlugs = ['/ott', '/mayer', '/barbaric', '/gannomat'];
+    parts.push(`<ul>${brands.map((b, i) =>
+      `<li><a href="${buildLocalizedPath(lang, brandSlugs[i])}">${b}</a></li>`
+    ).join('')}</ul>`);
+  }
+
+  return parts.join('\n');
+}
+
+/** Build product page body content */
+function productPageBody(
+  lang: Language,
+  brand: string,
+  productName: string,
+  categoryLabel: string,
+  description: string,
+  tagline: string,
+  brandSlug: string,
+): string {
+  const homePath = buildLocalizedPath(lang, '/');
+  const brandPath = buildLocalizedPath(lang, brandSlug);
+
+  const crumbs = [
+    { label: T.home[lang], href: homePath },
+    { label: brand, href: brandPath },
+    { label: categoryLabel, href: brandPath },
+    { label: productName, href: '#' },
+  ];
+
+  const parts: string[] = [
+    breadcrumb(crumbs),
+    `<h1>${escHtml(brand)} ${escHtml(productName)}</h1>`,
+    `<p><strong>${escHtml(tagline)}</strong></p>`,
+    `<p>${escHtml(description)}</p>`,
+    `<p><a href="mailto:office@asamer.net">${escHtml(T.contact[lang])}</a></p>`,
+  ];
+
+  return parts.join('\n');
 }
 
 /* ------------------------------------------------------------------ */
@@ -53,20 +142,22 @@ interface PageMeta {
 
 const pages: PageMeta[] = [];
 
+function makeAlternates(buildPath: (lang: Language) => string) {
+  return SUPPORTED_LANGUAGES.map((al) => ({
+    hreflang: languageToHreflang(al),
+    href: `${CANONICAL_DOMAIN}${buildPath(al)}`,
+  }));
+}
+
 // 1. Static pages from SEO_ROUTES
-for (const config of Object.values(SEO_ROUTES)) {
+for (const [key, config] of Object.entries(SEO_ROUTES)) {
   for (const lang of SUPPORTED_LANGUAGES) {
     const langSlug = getSlugForLang(config, lang);
     const path = buildLocalizedPath(lang, langSlug);
     const meta = config.meta[lang];
-    const alternates = SUPPORTED_LANGUAGES.map((al) => ({
-      hreflang: languageToHreflang(al),
-      href: buildCanonicalUrl(al, getSlugForLang(config, al)),
-    }));
-    const xDefaultHref = buildCanonicalUrl(
-      HREFLANG_DEFAULT,
-      getSlugForLang(config, HREFLANG_DEFAULT),
-    );
+    const alternates = makeAlternates((al) => buildLocalizedPath(al, getSlugForLang(config, al)));
+    const xDefaultHref = buildCanonicalUrl(HREFLANG_DEFAULT, getSlugForLang(config, HREFLANG_DEFAULT));
+
     pages.push({
       path,
       lang,
@@ -75,6 +166,7 @@ for (const config of Object.values(SEO_ROUTES)) {
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates,
       xDefaultHref,
+      bodyContent: staticPageBody(key as SeoRouteKey, lang, meta.title, meta.description),
     });
   }
 }
@@ -84,19 +176,17 @@ for (const product of OTT_PRODUCTS) {
   for (const lang of SUPPORTED_LANGUAGES) {
     const productPath = buildOttProductPath(lang, product);
     const path = buildLocalizedPath(lang, productPath);
-    const alternates = SUPPORTED_LANGUAGES.map((al) => ({
-      hreflang: languageToHreflang(al),
-      href: `${CANONICAL_DOMAIN}${buildLocalizedPath(al, buildOttProductPath(al, product))}`,
-    }));
+    const alternates = makeAlternates((al) => buildLocalizedPath(al, buildOttProductPath(al, product)));
     const xDefaultHref = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildOttProductPath(HREFLANG_DEFAULT, product))}`;
+    const categoryLabel = OTT_CATEGORY_LABELS[product.category][lang];
+
     pages.push({
-      path,
-      lang,
+      path, lang,
       title: product.seoTitle[lang],
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates,
-      xDefaultHref,
+      alternates, xDefaultHref,
+      bodyContent: productPageBody(lang, 'OTT', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/ott'),
     });
   }
 }
@@ -106,19 +196,17 @@ for (const product of MAYER_PRODUCTS) {
   for (const lang of SUPPORTED_LANGUAGES) {
     const productPath = buildMayerProductPath(lang, product);
     const path = buildLocalizedPath(lang, productPath);
-    const alternates = SUPPORTED_LANGUAGES.map((al) => ({
-      hreflang: languageToHreflang(al),
-      href: `${CANONICAL_DOMAIN}${buildLocalizedPath(al, buildMayerProductPath(al, product))}`,
-    }));
+    const alternates = makeAlternates((al) => buildLocalizedPath(al, buildMayerProductPath(al, product)));
     const xDefaultHref = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildMayerProductPath(HREFLANG_DEFAULT, product))}`;
+    const categoryLabel = MAYER_CATEGORY_LABELS[product.category][lang];
+
     pages.push({
-      path,
-      lang,
+      path, lang,
       title: product.seoTitle[lang],
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates,
-      xDefaultHref,
+      alternates, xDefaultHref,
+      bodyContent: productPageBody(lang, 'Mayer', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/mayer'),
     });
   }
 }
@@ -128,19 +216,17 @@ for (const product of BARBARIC_PRODUCTS) {
   for (const lang of SUPPORTED_LANGUAGES) {
     const productPath = buildBarbaricProductPath(lang, product);
     const path = buildLocalizedPath(lang, productPath);
-    const alternates = SUPPORTED_LANGUAGES.map((al) => ({
-      hreflang: languageToHreflang(al),
-      href: `${CANONICAL_DOMAIN}${buildLocalizedPath(al, buildBarbaricProductPath(al, product))}`,
-    }));
+    const alternates = makeAlternates((al) => buildLocalizedPath(al, buildBarbaricProductPath(al, product)));
     const xDefaultHref = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildBarbaricProductPath(HREFLANG_DEFAULT, product))}`;
+    const categoryLabel = BARBARIC_CATEGORY_LABELS[product.category][lang];
+
     pages.push({
-      path,
-      lang,
+      path, lang,
       title: product.seoTitle[lang],
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates,
-      xDefaultHref,
+      alternates, xDefaultHref,
+      bodyContent: productPageBody(lang, 'Barbaric', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/barbaric'),
     });
   }
 }
@@ -150,19 +236,17 @@ for (const product of GANNOMAT_PRODUCTS) {
   for (const lang of SUPPORTED_LANGUAGES) {
     const productPath = buildGannomatProductPath(lang, product);
     const path = buildLocalizedPath(lang, productPath);
-    const alternates = SUPPORTED_LANGUAGES.map((al) => ({
-      hreflang: languageToHreflang(al),
-      href: `${CANONICAL_DOMAIN}${buildLocalizedPath(al, buildGannomatProductPath(al, product))}`,
-    }));
+    const alternates = makeAlternates((al) => buildLocalizedPath(al, buildGannomatProductPath(al, product)));
     const xDefaultHref = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildGannomatProductPath(HREFLANG_DEFAULT, product))}`;
+    const categoryLabel = GANNOMAT_CATEGORY_LABELS[product.category][lang];
+
     pages.push({
-      path,
-      lang,
+      path, lang,
       title: product.seoTitle[lang],
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates,
-      xDefaultHref,
+      alternates, xDefaultHref,
+      bodyContent: productPageBody(lang, 'Gannomat', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/gannomat'),
     });
   }
 }
@@ -170,8 +254,6 @@ for (const product of GANNOMAT_PRODUCTS) {
 /* ------------------------------------------------------------------ */
 /*  Generate HTML files                                                */
 /* ------------------------------------------------------------------ */
-
-const escHtml = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 let count = 0;
 
@@ -199,13 +281,17 @@ for (const page of pages) {
   html = html.replace(/<title>Asamer Technologie GmbH<\/title>/, '');
 
   // Remove the generic meta description (handles both & and &amp;)
-  html = html.replace(
-    /<meta name="description" content="Asamer Technologie .+?" \/>/,
-    '',
-  );
+  html = html.replace(/<meta name="description" content="Asamer Technologie .+?" \/>/, '');
 
   // Inject SEO tags before </head>
   html = html.replace('</head>', `${seoHead}\n  </head>`);
+
+  // Inject visible body content inside #root
+  // This content is visible to Google crawlers but gets replaced when React mounts
+  html = html.replace(
+    '<div id="root"></div>',
+    `<div id="root">\n${page.bodyContent}\n</div>`,
+  );
 
   // Write to dist/{path}/index.html
   const filePath = join(distDir, page.path, 'index.html');
@@ -215,4 +301,4 @@ for (const page of pages) {
 }
 
 // eslint-disable-next-line no-console
-console.log(`Prerendered ${count} pages to ${distDir}`);
+console.log(`Prerendered ${count} pages (with body content) to ${distDir}`);
