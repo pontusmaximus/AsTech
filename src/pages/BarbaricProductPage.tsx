@@ -73,8 +73,8 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
   };
 
   const specRows: { label: string; value: string }[] = [];
-  if (product.specs) {
-    for (const [key, value] of Object.entries(product.specs)) {
+  if (product.specs?.[lang]) {
+    for (const [key, value] of Object.entries(product.specs[lang])) {
       specRows.push({ label: key, value });
     }
   }

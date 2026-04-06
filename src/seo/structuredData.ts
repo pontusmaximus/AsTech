@@ -83,9 +83,4 @@ export const websiteSchema = () => ({
   name: 'Asamer Technologie',
   url: CANONICAL_DOMAIN,
   inLanguage: ['de', 'en', 'cs', 'sk', 'hu'],
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: `${CANONICAL_DOMAIN}/?s={search_term_string}`,
-    'query-input': 'required name=search_term_string',
-  },
 });

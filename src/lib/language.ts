@@ -7,7 +7,7 @@ export interface LanguageRouteConfig {
 
 export const SUPPORTED_LANGUAGES: Language[] = ['de', 'en', 'cz', 'sk', 'hu'];
 export const DEFAULT_LANGUAGE: Language = 'cz';
-export const HREFLANG_DEFAULT: Language = 'de';
+export const HREFLANG_DEFAULT: Language = 'cz';
 export const CANONICAL_DOMAIN = 'https://www.asamer.cz';
 
 export const LANGUAGE_ROUTE_CONFIG: LanguageRouteConfig = {

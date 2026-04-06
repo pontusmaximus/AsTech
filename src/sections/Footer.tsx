@@ -156,13 +156,13 @@ const Footer = () => {
             >
               {t.footer.imprint}
             </Link>
-            <a
-              href="#"
+            <Link
+              to={buildPath('/imprint')}
               onClick={() => handleFooterLinkClick('privacy')}
               className="text-white/30 text-sm hover:text-white transition-colors"
             >
               {t.footer.privacy}
-            </a>
+            </Link>
           </div>
 
           <button

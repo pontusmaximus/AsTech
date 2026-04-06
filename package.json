@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:sitemap && tsc -b && vite build",
+    "build": "npm run generate:sitemap && tsc -b && vite build && npm run prerender",
+    "prerender": "tsx scripts/prerender.ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "vercel:preview": "vercel",
