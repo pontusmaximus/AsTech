@@ -92,16 +92,20 @@ const UsedMachinesPage = () => {
 
   const machines: UsedMachine[] = [
     {
-      name: '1308XL Power',
-      manufacturer: 'HOLZ-HER',
-      condition: tr('sehr gut', 'very good', 'velmi dobrý'),
-      status: tr('verkauft', 'sold', 'prodáno'),
-      statusKey: 'sold',
-      images: ['/images/used-machines/holz-her-1308xl-power.jpg'],
+      name: 'Tornado Top',
+      manufacturer: 'OTT',
+      year: 2011,
+      condition: tr('gut', 'good', 'dobrý'),
+      status: tr('verfügbar', 'available', 'k dispozici'),
+      statusKey: 'available',
+      images: [
+        '/images/used-machines/ott-tornado-top-1.jpg',
+        '/images/used-machines/ott-tornado-top-2.jpg',
+      ],
       shortDescription: tr(
-        'Kantenleimmaschine für präzise Kantenbearbeitung.',
-        'Edgebanding machine for precise edge finishing.',
-        'Olepovačka hran pro přesné dokončení hran.'
+        'Kantenleimmaschine mit 330.000 lfm Laufleistung.',
+        'Edgebanding machine with 330,000 lfm of usage.',
+        'Olepovačka hran s nájezdem 330 000 lfm.'
       ),
     },
     {
@@ -119,20 +123,6 @@ const UsedMachinesPage = () => {
         'Automatisches Plattensägezentrum für effizienten Zuschnitt.',
         'Automatic panel saw for efficient cutting.',
         'Automatická panelová pila pro efektivní řezání.'
-      ),
-    },
-    {
-      name: 'S 200',
-      manufacturer: 'HOMAG',
-      year: 2022,
-      condition: tr('sehr gut', 'very good', 'velmi dobrý'),
-      status: tr('verfügbar', 'available', 'k dispozici'),
-      statusKey: 'available',
-      images: ['/images/used-machines/homag-s-200-1.jpg', '/images/used-machines/homag-s-200-2.jpg'],
-      shortDescription: tr(
-        'Kantenleimmaschine mit 93.000 lfm Laufleistung.',
-        'Edgebanding machine with 93,000 lfm of usage.',
-        'Olepovačka hran s nájezdem 93 000 lfm.'
       ),
     },
     {
@@ -168,20 +158,30 @@ const UsedMachinesPage = () => {
       ),
     },
     {
-      name: 'Tornado Top',
-      manufacturer: 'OTT',
-      year: 2011,
-      condition: tr('gut', 'good', 'dobrý'),
+      name: 'S 200',
+      manufacturer: 'HOMAG',
+      year: 2022,
+      condition: tr('sehr gut', 'very good', 'velmi dobrý'),
       status: tr('verfügbar', 'available', 'k dispozici'),
       statusKey: 'available',
-      images: [
-        '/images/used-machines/ott-tornado-top-1.jpg',
-        '/images/used-machines/ott-tornado-top-2.jpg',
-      ],
+      images: ['/images/used-machines/homag-s-200-1.jpg', '/images/used-machines/homag-s-200-2.jpg'],
       shortDescription: tr(
-        'Kantenleimmaschine mit 330.000 lfm Laufleistung.',
-        'Edgebanding machine with 330,000 lfm of usage.',
-        'Olepovačka hran s nájezdem 330 000 lfm.'
+        'Kantenleimmaschine mit 93.000 lfm Laufleistung.',
+        'Edgebanding machine with 93,000 lfm of usage.',
+        'Olepovačka hran s nájezdem 93 000 lfm.'
+      ),
+    },
+    {
+      name: '1308XL Power',
+      manufacturer: 'HOLZ-HER',
+      condition: tr('sehr gut', 'very good', 'velmi dobrý'),
+      status: tr('verkauft', 'sold', 'prodáno'),
+      statusKey: 'sold',
+      images: ['/images/used-machines/holz-her-1308xl-power.jpg'],
+      shortDescription: tr(
+        'Kantenleimmaschine für präzise Kantenbearbeitung.',
+        'Edgebanding machine for precise edge finishing.',
+        'Olepovačka hran pro přesné dokončení hran.'
       ),
     },
   ];
