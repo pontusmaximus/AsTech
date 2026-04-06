@@ -3,9 +3,11 @@ import { useLanguage } from '../App';
 import { buildCanonicalUrl, DEFAULT_LANGUAGE, HREFLANG_DEFAULT, languageToHreflang, SUPPORTED_LANGUAGES } from '../lib/language';
 import { DEFAULT_OG_IMAGE, getFallbackMeta, getSlugForLang, SEO_ROUTES } from './routes';
 import type { SeoRouteKey } from './routes';
+import type { Language } from '../i18n';
 
 interface SeoHeadProps {
-  routeKey: SeoRouteKey;
+  /** Route key for static pages. Optional for product pages that supply all data via overrides. */
+  routeKey?: SeoRouteKey;
   overrides?: {
     title?: string;
     description?: string;
@@ -13,13 +15,17 @@ interface SeoHeadProps {
     keywords?: string[];
     slug?: string;
   };
+  /** Custom hreflang URL builder for product pages (receives language, returns full slug path). */
+  buildAlternateSlug?: (lang: Language) => string;
+  /** Open Graph type — defaults to "website", use "product" for product pages. */
+  ogType?: string;
   structuredData?: Array<Record<string, unknown>>;
   robots?: string;
 }
 
-const SeoHead = ({ routeKey, overrides = {}, structuredData = [], robots = 'index,follow' }: SeoHeadProps) => {
+const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'website', structuredData = [], robots = 'index,follow' }: SeoHeadProps) => {
   const { lang } = useLanguage();
-  const routeConfig = SEO_ROUTES[routeKey];
+  const routeConfig = routeKey ? SEO_ROUTES[routeKey] : undefined;
   const slug = overrides.slug ?? (routeConfig ? getSlugForLang(routeConfig, lang) : '/');
   const metaForLang = routeConfig?.meta[lang] ?? getFallbackMeta(lang) ?? getFallbackMeta(DEFAULT_LANGUAGE);
   const title = overrides.title ?? metaForLang.title;
@@ -37,19 +43,34 @@ const SeoHead = ({ routeKey, overrides = {}, structuredData = [], robots = 'inde
 
       <link rel="canonical" href={canonical} />
       {SUPPORTED_LANGUAGES.map((supportedLang) => {
-        const langSlug = routeConfig ? getSlugForLang(routeConfig, supportedLang) : slug;
+        const altSlug = buildAlternateSlug
+          ? buildAlternateSlug(supportedLang)
+          : routeConfig
+            ? getSlugForLang(routeConfig, supportedLang)
+            : slug;
         return (
           <link
             key={supportedLang}
             rel="alternate"
             hrefLang={languageToHreflang(supportedLang)}
-            href={buildCanonicalUrl(supportedLang, langSlug)}
+            href={buildCanonicalUrl(supportedLang, altSlug)}
           />
         );
       })}
-      <link rel="alternate" hrefLang="x-default" href={buildCanonicalUrl(HREFLANG_DEFAULT, routeConfig ? getSlugForLang(routeConfig, HREFLANG_DEFAULT) : slug)} />
+      <link
+        rel="alternate"
+        hrefLang="x-default"
+        href={buildCanonicalUrl(
+          HREFLANG_DEFAULT,
+          buildAlternateSlug
+            ? buildAlternateSlug(HREFLANG_DEFAULT)
+            : routeConfig
+              ? getSlugForLang(routeConfig, HREFLANG_DEFAULT)
+              : slug,
+        )}
+      />
 
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Asamer Technologie" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

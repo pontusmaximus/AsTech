@@ -1,16 +1,15 @@
 import { useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { ArrowUpRight, ArrowLeft, Monitor } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
 import { breadcrumbSchema } from '../seo/structuredData';
+import SeoHead from '../seo/SeoHead';
 import {
-  buildLocalizedPath, buildCanonicalUrl, CANONICAL_DOMAIN,
-  SUPPORTED_LANGUAGES, HREFLANG_DEFAULT, languageToHreflang,
+  buildLocalizedPath, CANONICAL_DOMAIN,
 } from '../lib/language';
 import { getMayerProductBySlug, buildMayerProductPath, MAYER_CATEGORY_SHORT } from '../data/mayerProducts';
 import type { MayerProduct } from '../data/mayerProducts';
@@ -64,8 +63,6 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
   const inquiryMail = buildMailto('office@asamer.net', tr(`Anfrage Mayer ${product.name}`, `Inquiry Mayer ${product.name}`, `Poptávka Mayer ${product.name}`));
   const categoryLabel = MAYER_CATEGORY_SHORT[product.category][lang];
   const productPath = buildMayerProductPath(lang, product);
-  const canonical = buildCanonicalUrl(lang, productPath);
-
   const breadcrumbs = breadcrumbSchema([
     { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
     { name: 'Mayer', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/mayer')}` },
@@ -90,29 +87,12 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
 
   return (
     <>
-      <Helmet prioritizeSeoTags>
-        <title>{product.seoTitle[lang]}</title>
-        <meta name="description" content={product.seoDescription[lang]} />
-        <meta name="robots" content="index,follow" />
-        <link rel="canonical" href={canonical} />
-        {SUPPORTED_LANGUAGES.map((sl) => (
-          <link key={sl} rel="alternate" hrefLang={languageToHreflang(sl)} href={buildCanonicalUrl(sl, buildMayerProductPath(sl, product))} />
-        ))}
-        <link rel="alternate" hrefLang="x-default" href={buildCanonicalUrl(HREFLANG_DEFAULT, buildMayerProductPath(HREFLANG_DEFAULT, product))} />
-        <meta property="og:type" content="product" />
-        <meta property="og:site_name" content="Asamer Technologie" />
-        <meta property="og:title" content={product.seoTitle[lang]} />
-        <meta property="og:description" content={product.seoDescription[lang]} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:image" content={product.image} />
-        <meta property="og:locale" content={languageToHreflang(lang)} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={product.seoTitle[lang]} />
-        <meta name="twitter:description" content={product.seoDescription[lang]} />
-        <meta name="twitter:image" content={product.image} />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbs)}</script>
-        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
-      </Helmet>
+      <SeoHead
+        overrides={{ title: product.seoTitle[lang], description: product.seoDescription[lang], image: product.image, slug: productPath }}
+        buildAlternateSlug={(al) => buildMayerProductPath(al, product)}
+        ogType="product"
+        structuredData={[breadcrumbs, productSchema]}
+      />
 
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
         <div className="container-wide">

@@ -29,6 +29,7 @@ import MayerProductPage from './pages/MayerProductPage';
 import BarbaricProductPage from './pages/BarbaricProductPage';
 import GannomatPage from './pages/GannomatPage';
 import GannomatProductPage from './pages/GannomatProductPage';
+import NotFoundPage from './pages/NotFoundPage';
 import Footer from './sections/Footer';
 import CookieConsent from './components/CookieConsent';
 import AnalyticsTracker from './components/AnalyticsTracker';
@@ -189,7 +190,7 @@ const AppRoutes = () => {
         {getAllSlugVariants('/imprint').map((s) => (
           <Route key={s} path={s} element={<LocalizedRoute page={<ImprintPage />} czSlug="/imprint" />} />
         ))}
-        <Route path="*" element={<LanguageFallbackRedirect />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
       <Route path="*" element={<Navigate to={`/${DEFAULT_LANGUAGE}`} replace />} />
     </Routes>
@@ -303,10 +304,6 @@ const LanguageAppLayout = () => {
   );
 };
 
-const LanguageFallbackRedirect = () => {
-  const { buildPath } = useLanguage();
-  return <Navigate to={buildPath('/')} replace />;
-};
 
 const LocalizedOttProductRoute = () => {
   const { lang } = useLanguage();
