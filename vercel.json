@@ -172,17 +172,6 @@
       "has": [
         {
           "type": "host",
-          "value": "www.asamer.cz"
-        }
-      ],
-      "destination": "https://asamer.cz/:path",
-      "permanent": true
-    },
-    {
-      "source": "/:path(.*)",
-      "has": [
-        {
-          "type": "host",
           "value": "asamer.net"
         }
       ],
