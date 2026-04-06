@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.asamer.cz/sitemap.xml
+Sitemap: https://asamer.cz/sitemap.xml

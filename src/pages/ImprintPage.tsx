@@ -84,9 +84,9 @@ const ImprintPage = () => {
                     <Mail className="w-4 h-4 text-primary" />
                     office@asamer.net
                   </a>
-                  <a href="https://www.asamer.cz" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                  <a href="https://asamer.cz" className="inline-flex items-center gap-2 hover:text-white transition-colors">
                     <Globe className="w-4 h-4 text-primary" />
-                    www.asamer.cz
+                    asamer.cz
                   </a>
                 </div>
               </div>
