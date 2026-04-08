@@ -273,9 +273,19 @@ const FinancingPage = () => {
             <div className="max-w-5xl">
               <div className="accent-line mb-6" />
               <h1 className="text-section font-display font-light text-white mb-6">
-                {tr('Maschinenfinanzierung', 'Machine Financing', 'Financování strojů')}
+                {tr('Maschinenfinanzierung & Förderung 2026', 'Machine Financing & Grants 2026', 'Financování strojů a dotace 2026')}
               </h1>
-              <p className="text-white/70 text-lg leading-relaxed max-w-4xl">
+
+              {/* Definition-Lead for AEO */}
+              <p className="text-white/80 text-lg leading-relaxed max-w-4xl mb-4 border-l-2 border-primary/40 pl-4">
+                {tr(
+                  'Asamer Technologie finanziert Holzbearbeitungsmaschinen (OTT, Mayer, BARBARIC, Gannomat) über Raiffeisen Leasing mit 36–72 Monaten Laufzeit und unterstützt bei EU-Förderanträgen in CZ, SK und HU. Dieser Ratgeber erklärt die verfügbaren Programme, den Antragsprozess und welche Maschinen förderfähig sind.',
+                  'Asamer Technology finances woodworking machines (OTT, Mayer, BARBARIC, Gannomat) through Raiffeisen Leasing with 36–72 month terms and supports EU grant applications in CZ, SK and HU. This guide explains the available programs, the application process and which machines are eligible.',
+                  'Asamer Technologie financuje dřevoobráběcí stroje (OTT, Mayer, BARBARIC, Gannomat) přes Raiffeisen Leasing s dobou trvání 36–72 měsíců a pomáhá s žádostmi o dotace EU v CZ, SK a HU. Tento průvodce vysvětluje dostupné programy, proces žádosti a které stroje jsou způsobilé.'
+                )}
+              </p>
+
+              <p className="text-white/60 text-base leading-relaxed max-w-4xl">
                 {tr(
                   'Neue oder gebrauchte Holzbearbeitungsmaschinen müssen keine Einmalausgabe sein. Gemeinsam mit unserem Partner Raiffeisen Leasing bieten wir Finanzierungslösungen für Betriebe in CZ, SK und HU – von Leasing über Ratenkauf bis zur Unterstützung bei EU-Förderanträgen.',
                   'New or used woodworking machines don\'t have to be a one-time expense. Together with our partner Raiffeisen Leasing, we offer financing solutions for businesses in CZ, SK and HU – from leasing to installment purchase to EU grant support.',
@@ -608,7 +618,66 @@ const FinancingPage = () => {
           </div>
         </section>
 
-        {/* ── 7. CTA ── */}
+        {/* ── 7. Förderfähige Maschinen ── */}
+        <section className="py-16">
+          <div className="container-wide">
+            <div className="accent-line mb-6" />
+            <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-4">
+              {tr('Welche Maschinen sind förderfähig?', 'Which machines are eligible for grants?', 'Které stroje jsou způsobilé pro dotace?')}
+            </h2>
+            <p className="text-white/60 text-sm leading-relaxed mb-8 max-w-3xl">
+              {tr(
+                'Grundsätzlich sind alle Maschinen aus dem Asamer-Portfolio förderfähig – entscheidend ist die Kombination aus Programm, Unternehmensform und digitaler Anbindung. OTT-Maschinen mit Beckhoff OPC-UA-Steuerung erfüllen die Anforderung der ERP/MES-Integration für OP TAK automatisch.',
+                'In principle all machines from the Asamer portfolio are eligible for grants – the decisive factor is the combination of program, company type and digital connectivity. OTT machines with Beckhoff OPC-UA controls automatically meet the ERP/MES integration requirement for OP TAK.',
+                'V zásadě jsou všechny stroje z portfolia Asamer způsobilé pro dotace – rozhodující je kombinace programu, typu podniku a digitálního propojení. Stroje OTT s řízením Beckhoff OPC-UA automaticky splňují požadavek integrace ERP/MES pro OP TAK.'
+              )}
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="rounded-xl border border-white/10 bg-dark-card p-5">
+                <h3 className="text-white font-medium text-sm mb-2">OTT</h3>
+                <p className="text-white/55 text-xs leading-relaxed">
+                  {tr(
+                    'Kantenanleimmaschinen: Pacific+, Tornado+, FlexEdge, Storm+, StrongEdge, TopEdge. Alle mit OPC-UA für Förderprogramme mit Digitalisierungsanforderung.',
+                    'Edgebanding machines: Pacific+, Tornado+, FlexEdge, Storm+, StrongEdge, TopEdge. All with OPC-UA for grant programs requiring digitalization.',
+                    'Olepovačky hran: Pacific+, Tornado+, FlexEdge, Storm+, StrongEdge, TopEdge. Všechny s OPC-UA pro dotační programy vyžadující digitalizaci.'
+                  )}
+                </p>
+              </div>
+              <div className="rounded-xl border border-white/10 bg-dark-card p-5">
+                <h3 className="text-white font-medium text-sm mb-2">Mayer</h3>
+                <p className="text-white/55 text-xs leading-relaxed">
+                  {tr(
+                    'Plattenaufteilsägen: Kappa Automatic 80–140 und Advanced Line 100–250. Für Holz, Kunststoff, Aluminium und NE-Metalle.',
+                    'Panel saws: Kappa Automatic 80–140 and Advanced Line 100–250. For wood, plastics, aluminium and non-ferrous metals.',
+                    'Formátovací pily: Kappa Automatic 80–140 a Advanced Line 100–250. Pro dřevo, plasty, hliník a neželezné kovy.'
+                  )}
+                </p>
+              </div>
+              <div className="rounded-xl border border-white/10 bg-dark-card p-5">
+                <h3 className="text-white font-medium text-sm mb-2">BARBARIC</h3>
+                <p className="text-white/55 text-xs leading-relaxed">
+                  {tr(
+                    'Lagersysteme und Handling: CSF Flächenlager, LCV Beschickung, NST Nesting, RTS Rücktransport. Besonders förderfähig durch Automatisierungskomponente.',
+                    'Storage and handling: CSF panel storage, LCV feeding, NST nesting, RTS return transport. Especially eligible due to automation component.',
+                    'Skladové systémy a manipulace: CSF plošné sklady, LCV podávání, NST nesting, RTS zpětný transport. Zvláště způsobilé díky automatizační složce.'
+                  )}
+                </p>
+              </div>
+              <div className="rounded-xl border border-white/10 bg-dark-card p-5">
+                <h3 className="text-white font-medium text-sm mb-2">Gannomat</h3>
+                <p className="text-white/55 text-xs leading-relaxed">
+                  {tr(
+                    'Bohr- und Dübelmaschinen: Selekta, Index, ProTec, Express-Serie. Für die automatisierte Möbelfertigung.',
+                    'Drilling and dowel machines: Selekta, Index, ProTec, Express series. For automated furniture manufacturing.',
+                    'Vrtací a kolkovací stroje: Selekta, Index, ProTec, řada Express. Pro automatizovanou výrobu nábytku.'
+                  )}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 8. CTA ── */}
         <section className="py-24">
           <div className="container-wide">
             <div className="rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent p-8 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">

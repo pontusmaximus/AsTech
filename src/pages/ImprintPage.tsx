@@ -2,6 +2,7 @@ import { Building2, Mail, Phone, Globe, Shield } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import SeoHead from '../seo/SeoHead';
+import { organizationSchema } from '../seo/structuredData';
 
 const ImprintPage = () => {
   const { lang } = useLanguage();
@@ -21,7 +22,7 @@ const ImprintPage = () => {
 
   return (
     <>
-      <SeoHead routeKey="imprint" />
+      <SeoHead routeKey="imprint" structuredData={[organizationSchema()]} />
       <div className="bg-dark min-h-screen">
         <section className="pt-28 md:pt-36 pb-12">
           <div className="container-wide">

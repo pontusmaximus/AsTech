@@ -3,6 +3,8 @@ import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
+import { breadcrumbSchema } from '../seo/structuredData';
+import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 
 const SolutionsPage = () => {
   const { lang } = useLanguage();
@@ -79,7 +81,10 @@ const SolutionsPage = () => {
 
   return (
     <>
-      <SeoHead routeKey="solutions" />
+      <SeoHead routeKey="solutions" structuredData={[breadcrumbSchema([
+        { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+        { name: tr('Lösungen', 'Solutions', 'Řešení'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/reseni')}` },
+      ])]} />
       <div className="bg-dark min-h-screen">
       <section className="pt-28 md:pt-36 pb-16">
         <div className="container-wide">

@@ -62,11 +62,17 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
     { name: product.name, url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}` },
   ]);
 
+  const productUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`;
   const productSchema = {
     '@context': 'https://schema.org', '@type': 'Product',
-    name: `Barbaric ${product.name}`, description: product.seoDescription[lang], image: product.image,
-    brand: { '@type': 'Brand', name: 'Barbaric' }, category: categoryLabel,
-    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
+    '@id': productUrl,
+    name: `BARBARIC ${product.name}`, description: product.seoDescription[lang], image: product.image,
+    url: productUrl,
+    brand: { '@type': 'Brand', name: 'BARBARIC' },
+    manufacturer: { '@type': 'Organization', name: 'BARBARIC GmbH', url: 'https://www.barbaric.at' },
+    model: product.name,
+    category: categoryLabel,
+    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'EUR', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
   };
 
   const specRows: { label: string; value: string }[] = [];
@@ -111,7 +117,17 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
             <div className="flex flex-col justify-center">
               <span className="text-[11px] uppercase tracking-widest text-white/40 mb-3">{categoryLabel}</span>
               <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-2">{product.name}</h1>
-              <p className="text-base text-white/55 mb-6">{product.tagline[lang]}</p>
+              <p className="text-base text-white/55 mb-3">{product.tagline[lang]}</p>
+
+              {/* Definition-Lead for AEO */}
+              <p className="text-sm text-white/70 leading-relaxed mb-5 border-l-2 border-primary/40 pl-3">
+                {tr(
+                  `BARBARIC ${product.name} ist ein ${categoryLabel}${product.category === 'storage' ? ', das Plattenmaterial chaotisch oder sortenrein lagert und Just-in-Time an Säge oder CNC liefert' : product.category === 'feeding' ? ', das Plattenaufteilsägen vollautomatisch mit dem richtigen Material beschickt' : product.category === 'return' ? ' für den automatischen Rücktransport von Rest- und Fertigteilen zwischen Maschinen und Lager' : product.category === 'nesting' ? ' für die automatische Entnahme und Sortierung von CNC-Fertigteilen' : ` für die automatisierte Plattenverarbeitung`}. Asamer liefert, installiert und wartet BARBARIC-Systeme in CZ, SK und HU.`,
+                  `BARBARIC ${product.name} is a ${categoryLabel.toLowerCase()}${product.category === 'storage' ? ' that stores panel material chaotically or by type and delivers just-in-time to saw or CNC' : product.category === 'feeding' ? ' that automatically feeds panel saws with the correct material' : product.category === 'return' ? ' for automatic return transport of offcuts and finished parts between machines and storage' : product.category === 'nesting' ? ' for automatic removal and sorting of CNC finished parts' : ' for automated panel processing'}. Asamer delivers, installs and services BARBARIC systems in CZ, SK and HU.`,
+                  `BARBARIC ${product.name} je ${categoryLabel.toLowerCase()}${product.category === 'storage' ? ', který skladuje deskový materiál chaoticky nebo dle druhu a dodává Just-in-Time k pile nebo CNC' : product.category === 'feeding' ? ', který automaticky podává formátovacím pilám správný materiál' : product.category === 'return' ? ' pro automatický zpětný transport zbytků a hotových dílů mezi stroji a skladem' : product.category === 'nesting' ? ' pro automatický odběr a třídění CNC hotových dílů' : ' pro automatizované zpracování desek'}. Asamer dodává, instaluje a servisuje systémy BARBARIC v CZ, SK a HU.`,
+                )}
+              </p>
+
               <p className="text-sm text-white/60 leading-relaxed mb-8">{product.description[lang]}</p>
               <a href={inquiryMail} className="btn-primary-dark self-start">
                 {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}

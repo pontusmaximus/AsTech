@@ -62,11 +62,17 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
     { name: product.name, url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}` },
   ]);
 
+  const productUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`;
   const productSchema = {
     '@context': 'https://schema.org', '@type': 'Product',
+    '@id': productUrl,
     name: `Gannomat ${product.name}`, description: product.seoDescription[lang], image: product.image,
-    brand: { '@type': 'Brand', name: 'Gannomat' }, category: categoryLabel,
-    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
+    url: productUrl,
+    brand: { '@type': 'Brand', name: 'Gannomat' },
+    manufacturer: { '@type': 'Organization', name: 'Gannomat GmbH', url: 'https://www.gannomat.at' },
+    model: product.name,
+    category: categoryLabel,
+    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'EUR', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
   };
 
   const specEntries = product.specs ? Object.entries(product.specs) : [];
@@ -104,7 +110,17 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
             <div className="flex flex-col justify-center">
               <span className="text-[11px] uppercase tracking-widest text-white/40 mb-3">{categoryLabel}</span>
               <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-2">Gannomat {product.name}</h1>
-              <p className="text-base text-white/55 mb-6">{product.tagline[lang]}</p>
+              <p className="text-base text-white/55 mb-3">{product.tagline[lang]}</p>
+
+              {/* Definition-Lead for AEO */}
+              <p className="text-sm text-white/70 leading-relaxed mb-5 border-l-2 border-primary/40 pl-3">
+                {tr(
+                  `Gannomat ${product.name} ist eine ${categoryLabel}${product.category === 'insertion' ? ' – sie bohrt, beleimt und treibt Dübel in einem Durchgang für effiziente Korpusmontage' : product.category === 'fitting' ? ' – sie bohrt und presst Beschläge wie Scharniere, Topfbänder und Verbinder automatisch ein' : product.category === 'carcass' ? ' für die automatisierte Korpusmontage und -verpressung in der Serienfertigung' : product.category === 'machining' ? ' für CNC-gesteuerte Fräs-, Bohr- und Bearbeitungsprozesse' : ' für die professionelle Möbelfertigung'}. Asamer ist autorisierter Gannomat-Händler für CZ, SK und HU.`,
+                  `Gannomat ${product.name} is a ${categoryLabel.toLowerCase()}${product.category === 'insertion' ? ' – it drills, glues and inserts dowels in a single pass for efficient carcass assembly' : product.category === 'fitting' ? ' – it drills and presses fittings like hinges, cup hinges and connectors automatically' : product.category === 'carcass' ? ' for automated carcass assembly and pressing in series production' : product.category === 'machining' ? ' for CNC-controlled milling, drilling and machining processes' : ' for professional furniture manufacturing'}. Asamer is an authorized Gannomat dealer for CZ, SK and HU.`,
+                  `Gannomat ${product.name} je ${categoryLabel.toLowerCase()}${product.category === 'insertion' ? ' – vrtá, lepí a zatlouká kolíky v jednom průchodu pro efektivní montáž korpusů' : product.category === 'fitting' ? ' – automaticky vrtá a zalisovává kování jako závěsy, garnýže a spojovníky' : product.category === 'carcass' ? ' pro automatizovanou montáž a lisování korpusů v sériové výrobě' : product.category === 'machining' ? ' pro CNC řízené frézovací, vrtací a obráběcí procesy' : ' pro profesionální výrobu nábytku'}. Asamer je autorizovaný prodejce Gannomat pro CZ, SK a HU.`,
+                )}
+              </p>
+
               <p className="text-sm text-white/60 leading-relaxed mb-8">{product.description[lang]}</p>
               <a href={inquiryMail} className="btn-primary-dark self-start">
                 {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}

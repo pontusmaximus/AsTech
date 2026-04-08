@@ -9,7 +9,7 @@ import CategorySidebar from '../components/manufacturer/CategorySidebar';
 import CategorySection from '../components/manufacturer/CategorySection';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
-import { breadcrumbSchema } from '../seo/structuredData';
+import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { getOttProductsByCategory, buildOttProductPath, OTT_CATEGORY_LABELS } from '../data/ottProducts';
 import type { OttCategory } from '../data/ottProducts';
@@ -42,9 +42,20 @@ const OttPage = () => {
   const categoryData = categories.map((cat) => ({ cat, products: getOttProductsByCategory(cat) })).filter((c) => c.products.length > 0);
   const sidebarItems = categoryData.map((c) => ({ id: c.cat, label: OTT_CATEGORY_LABELS[c.cat][lang], productCount: c.products.length }));
 
+  const allProducts = categoryData.flatMap((c) => c.products);
+  const productList = itemListSchema(
+    tr('OTT Kantenanleimmaschinen', 'OTT Edgebanding Machines', 'OTT olepovačky hran'),
+    allProducts.map((p) => ({
+      name: `OTT ${p.name}`,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildOttProductPath(lang, p))}`,
+      image: p.image,
+      description: p.seoDescription[lang],
+    })),
+  );
+
   return (
     <>
-      <SeoHead routeKey="ott" structuredData={[breadcrumbs]} />
+      <SeoHead routeKey="ott" structuredData={[breadcrumbs, productList]} />
       <div className="bg-dark min-h-screen">
 
         {/* ====== 1. HERO ====== */}
@@ -57,6 +68,20 @@ const OttPage = () => {
           bgVideoStart={31}
           bgVideoEnd={40}
         />
+
+        {/* ====== 1b. INTRO / DEFINITION-LEAD ====== */}
+        <section className="container-wide pb-8">
+          <h1 className="text-2xl md:text-3xl font-display font-light text-white mb-3">
+            {tr('OTT Kantenanleimmaschinen', 'OTT Edgebanding Machines', 'OTT olepovačky hran')}
+          </h1>
+          <p className="text-white/70 text-sm leading-relaxed max-w-3xl">
+            {tr(
+              'OTT ist ein deutscher Hersteller von Kantenanleimmaschinen für die Holz- und Möbelindustrie. Das Sortiment reicht von kompakten Einstiegsmodellen wie der Pacific+ (18 m/min) bis zu industriellen Hochleistungsmaschinen wie der TopEdge mit PUR, EVA und bluEdge HyFuse Lasertechnologie. Asamer ist exklusiver OTT-Vertriebspartner für CZ, SK und HU mit lokalem Service und Softwareintegration über die offene OPC-UA-Schnittstelle.',
+              'OTT is a German manufacturer of edgebanding machines for the wood and furniture industry. The range spans from compact entry-level models like the Pacific+ (18 m/min) to industrial high-performance machines like the TopEdge with PUR, EVA and bluEdge HyFuse laser technology. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.',
+              'OTT je německý výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Sortiment sahá od kompaktních vstupních modelů jako Pacific+ (18 m/min) až po průmyslové vysokovýkonné stroje jako TopEdge s PUR, EVA a laserovou technologií bluEdge HyFuse. Asamer je exkluzivní distribuční partner OTT pro CZ, SK a HU s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.',
+            )}
+          </p>
+        </section>
 
         {/* ====== 2. SIDEBAR + PRODUCT GRID ====== */}
         <div className="container-wide py-12">
@@ -103,19 +128,19 @@ const OttPage = () => {
         <div className="border-t border-white/5">
           <div className="container-wide py-12">
 
-            {/* OTT vs HOMAG Comparison */}
+            {/* OTT vs Konkurrenz Comparison */}
             <section className="mb-10">
               <h2 className="text-sm font-display text-white/40 mb-4">{tr('Warum OTT über Asamer?', 'Why OTT via Asamer?', 'Proč OTT přes Asamer?')}</h2>
               <div className="rounded-xl border border-white/10 overflow-hidden max-w-2xl">
                 <div className="grid grid-cols-3 text-xs">
                   <div className="p-3 border-b border-r border-white/5 text-white/25">{tr('Merkmal', 'Feature', 'Vlastnost')}</div>
                   <div className="p-3 border-b border-r border-white/5 text-primary font-medium text-center">OTT / Asamer</div>
-                  <div className="p-3 border-b border-white/5 text-white/25 text-center">HOMAG</div>
+                  <div className="p-3 border-b border-white/5 text-white/25 text-center">{tr('Konkurrenz', 'Competitors', 'Konkurence')}</div>
                   {[
-                    ['OPC-UA Interface', <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, tr('Standard', 'Standard', 'Standard'), <X key="x" className="w-3.5 h-3.5 text-red-400/50 inline" />, tr('Aufpreis', 'Extra cost', 'Příplatek')],
-                    [tr('PUR-Spezialisierung', 'PUR specialization', 'PUR'), <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, 'CombiMelt', <AlertTriangle key="a" className="w-3.5 h-3.5 text-amber-400/50 inline" />, tr('Optional', 'Optional', 'Volitelně')],
-                    [tr('ERP-Integration', 'ERP integration', 'ERP'), <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, 'Asamer-Team', <AlertTriangle key="a" className="w-3.5 h-3.5 text-amber-400/50 inline" />, tr('kostenpflichtig', 'paid', 'placená')],
-                    [tr('Service CZ/SK/HU', 'Service CZ/SK/HU', 'Servis CZ/SK/HU'), <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, tr('vor Ort', 'on-site', 'na místě'), <AlertTriangle key="a" className="w-3.5 h-3.5 text-amber-400/50 inline" />, tr('zentral DE', 'central DE', 'centrální DE')],
+                    ['OPC-UA Interface', <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, tr('Standard', 'Standard', 'Standard'), <X key="x" className="w-3.5 h-3.5 text-red-400/50 inline" />, tr('oft Aufpreis', 'often extra cost', 'často příplatek')],
+                    [tr('PUR-Spezialisierung', 'PUR specialization', 'PUR'), <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, 'CombiMelt', <AlertTriangle key="a" className="w-3.5 h-3.5 text-amber-400/50 inline" />, tr('je nach Hersteller', 'depends on brand', 'dle výrobce')],
+                    [tr('ERP-Integration', 'ERP integration', 'ERP'), <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, 'Asamer-Team', <AlertTriangle key="a" className="w-3.5 h-3.5 text-amber-400/50 inline" />, tr('oft kostenpflichtig', 'often paid', 'často placená')],
+                    [tr('Service CZ/SK/HU', 'Service CZ/SK/HU', 'Servis CZ/SK/HU'), <Check key="c" className="w-3.5 h-3.5 text-emerald-400 inline" />, tr('vor Ort', 'on-site', 'na místě'), <AlertTriangle key="a" className="w-3.5 h-3.5 text-amber-400/50 inline" />, tr('oft zentral', 'often central', 'často centrální')],
                   ].map(([label, icon1, val1, icon2, val2], i) => (
                     <div key={i} className="contents">
                       <div className={`p-3 border-r border-white/5 text-white/40 ${i < 3 ? 'border-b border-white/5' : ''}`}>{label}</div>

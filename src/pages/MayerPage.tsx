@@ -10,7 +10,7 @@ import CategorySidebar from '../components/manufacturer/CategorySidebar';
 import CategorySection from '../components/manufacturer/CategorySection';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
-import { breadcrumbSchema } from '../seo/structuredData';
+import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { getMayerProductsByCategory, buildMayerProductPath, MAYER_CATEGORY_LABELS } from '../data/mayerProducts';
 import type { MayerCategory } from '../data/mayerProducts';
@@ -47,9 +47,20 @@ const MayerPage = () => {
   const categoryData = categories.map((cat) => ({ cat, products: getMayerProductsByCategory(cat) })).filter((c) => c.products.length > 0);
   const sidebarItems = categoryData.map((c) => ({ id: c.cat, label: MAYER_CATEGORY_LABELS[c.cat][lang], productCount: c.products.length }));
 
+  const allProducts = categoryData.flatMap((c) => c.products);
+  const productList = itemListSchema(
+    tr('Mayer Plattenaufteilsägen', 'Mayer Panel Saws', 'Mayer formátovací pily'),
+    allProducts.map((p) => ({
+      name: `Mayer ${p.name}`,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildMayerProductPath(lang, p))}`,
+      image: p.image,
+      description: p.seoDescription[lang],
+    })),
+  );
+
   return (
     <>
-      <SeoHead routeKey="mayer" structuredData={[breadcrumbs]} />
+      <SeoHead routeKey="mayer" structuredData={[breadcrumbs, productList]} />
       <div className="bg-dark min-h-screen">
 
         <HeroSection
@@ -61,6 +72,20 @@ const MayerPage = () => {
           bgImage="/images/mayer/hero-mayer-asamer.jpg"
           bgContainMobile
         />
+
+        {/* INTRO / DEFINITION-LEAD */}
+        <section className="container-wide pb-8">
+          <h1 className="text-2xl md:text-3xl font-display font-light text-white mb-3">
+            {tr('Mayer Plattenaufteilsägen', 'Mayer Panel Saws', 'Mayer formátovací pily')}
+          </h1>
+          <p className="text-white/70 text-sm leading-relaxed max-w-3xl">
+            {tr(
+              'Mayer (Felder Group) baut horizontale Druckbalken-Plattenaufteilsägen für die Holz-, Kunststoff- und Metallverarbeitung. Die Kappa Automatic-Reihe (80–140) ist auf Holz und Plattenwerkstoffe spezialisiert, die Advanced Line (100–250) schneidet Aluminium, NE-Metalle und Kunststoffe. Asamer ist autorisierter Mayer-Händler für CZ, SK und HU mit Service und Ersatzteillager vor Ort.',
+              'Mayer (Felder Group) builds horizontal pressure beam panel saws for wood, plastics and metal processing. The Kappa Automatic range (80–140) specializes in wood and panel materials, while the Advanced Line (100–250) cuts aluminium, non-ferrous metals and plastics. Asamer is an authorized Mayer dealer for CZ, SK and HU with on-site service and spare parts.',
+              'Mayer (Felder Group) vyrábí horizontální formátovací pily s tlačným trámem pro zpracování dřeva, plastů a kovů. Řada Kappa Automatic (80–140) se specializuje na dřevo a deskové materiály, Advanced Line (100–250) řeže hliník, neželezné kovy a plasty. Asamer je autorizovaný prodejce Mayer pro CZ, SK a HU s lokálním servisem a skladem náhradních dílů.',
+            )}
+          </p>
+        </section>
 
         <div className="container-wide py-12">
           <div className="flex gap-10">

@@ -49,6 +49,34 @@ export const SLUG_TRANSLATIONS: Record<string, Record<Language, string>> = {
     sk: '/imprint',
     hu: '/impresszum',
   },
+  '/faq': {
+    de: '/faq',
+    en: '/faq',
+    cz: '/faq',
+    sk: '/faq',
+    hu: '/faq',
+  },
+  '/ratgeber/pur-vs-eva': {
+    de: '/ratgeber/pur-vs-eva',
+    en: '/guide/pur-vs-eva',
+    cz: '/pruvodce/pur-vs-eva',
+    sk: '/sprievodca/pur-vs-eva',
+    hu: '/utmutato/pur-vs-eva',
+  },
+  '/ratgeber/kantenanleimmaschine-waehlen': {
+    de: '/ratgeber/kantenanleimmaschine-waehlen',
+    en: '/guide/choose-edgebander',
+    cz: '/pruvodce/vyber-olepovacky-hran',
+    sk: '/sprievodca/vyber-olepovacky-hran',
+    hu: '/utmutato/elzarogep-valasztas',
+  },
+  '/ratgeber/lagerautomatisierung': {
+    de: '/ratgeber/lagerautomatisierung',
+    en: '/guide/warehouse-automation',
+    cz: '/pruvodce/automatizace-skladu',
+    sk: '/sprievodca/automatizacia-skladu',
+    hu: '/utmutato/raktarautomatizalas',
+  },
 };
 
 // Reverse map: any localized slug (with leading /) → canonical CZ slug

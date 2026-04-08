@@ -15,7 +15,11 @@ export type SeoRouteKey =
   | 'service'
   | 'usedMachines'
   | 'contact'
-  | 'imprint';
+  | 'imprint'
+  | 'faq'
+  | 'guidePurVsEva'
+  | 'guideEdgebander'
+  | 'guideWarehouseAutomation';
 
 export interface RouteMeta {
   title: string;
@@ -444,6 +448,150 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         description:
           'Impresszum, cégjegyzékadatok és jogi információk az Asamer Technologie GmbH és ASAMER s.r.o. vállalatokról.',
         keywords: ['Impresszum', 'Jogi információk', 'Asamer'],
+      },
+    }),
+  },
+  faq: {
+    slug: '/faq',
+    slugByLang: SLUG_TRANSLATIONS['/faq'],
+    meta: createMeta({
+      de: {
+        title: 'FAQ – Häufige Fragen zu Holzbearbeitungsmaschinen | Asamer',
+        description:
+          'Antworten auf häufige Fragen zu Kantenanleimmaschinen, Lagerautomatisierung, PUR vs EVA, Service, Finanzierung und Gebrauchtmaschinen. Asamer Technologie.',
+        keywords: ['FAQ', 'Kantenanleimmaschine', 'PUR EVA', 'Service', 'Finanzierung', 'Gebrauchtmaschinen'],
+      },
+      en: {
+        title: 'FAQ – Frequently Asked Questions about Woodworking Machines | Asamer',
+        description:
+          'Answers to common questions about edgebanding machines, warehouse automation, PUR vs EVA, service, financing and used machines. Asamer Technology.',
+        keywords: ['FAQ', 'Edgebander', 'PUR EVA', 'Service', 'Financing', 'Used machines'],
+      },
+      cz: {
+        title: 'FAQ – Časté dotazy k dřevoobráběcím strojům | Asamer',
+        description:
+          'Odpovědi na časté dotazy k olepovačkám hran, automatizaci skladu, PUR vs EVA, servisu, financování a použitým strojům. Asamer Technologie.',
+        keywords: ['FAQ', 'Olepovačka hran', 'PUR EVA', 'Servis', 'Financování', 'Použité stroje'],
+      },
+      sk: {
+        title: 'FAQ – Časté otázky k drevoobrábacím strojom | Asamer',
+        description:
+          'Odpovede na časté otázky k olepovačkám hrán, automatizácii skladu, PUR vs EVA, servisu, financovaniu a použitým strojom. Asamer Technologie.',
+        keywords: ['FAQ', 'Olepovačka hrán', 'PUR EVA', 'Servis', 'Financovanie', 'Použité stroje'],
+      },
+      hu: {
+        title: 'FAQ – Gyakran ismételt kérdések famegmunkáló gépekről | Asamer',
+        description:
+          'Válaszok a gyakori kérdésekre élzárógépekről, raktárautomatizálásról, PUR vs EVA, szervizről, finanszírozásról és használt gépekről. Asamer Technologie.',
+        keywords: ['FAQ', 'Élzárógép', 'PUR EVA', 'Szerviz', 'Finanszírozás', 'Használt gépek'],
+      },
+    }),
+  },
+  guidePurVsEva: {
+    slug: '/ratgeber/pur-vs-eva',
+    slugByLang: SLUG_TRANSLATIONS['/ratgeber/pur-vs-eva'],
+    meta: createMeta({
+      de: {
+        title: 'PUR vs EVA Leim – Leitfaden zur Leimtechnologie | Asamer',
+        description:
+          'PUR oder EVA Leim für Kantenanleimmaschinen? Vergleich der Leimtechnologien, Vor- und Nachteile, Empfehlung nach Betriebsgröße. OTT-Maschinen von Asamer.',
+        keywords: ['PUR', 'EVA', 'Leimtechnologie', 'Kantenanleimmaschine', 'OTT', 'Hotmelt'],
+      },
+      en: {
+        title: 'PUR vs EVA Glue – Guide to Gluing Technology | Asamer',
+        description:
+          'PUR or EVA glue for edgebanding machines? Comparison of gluing technologies, pros and cons, recommendation by operation size. OTT machines from Asamer.',
+        keywords: ['PUR', 'EVA', 'Gluing technology', 'Edgebander', 'OTT', 'Hotmelt'],
+      },
+      cz: {
+        title: 'PUR vs EVA lepidlo – Průvodce technologií lepení | Asamer',
+        description:
+          'PUR nebo EVA lepidlo pro olepovačky hran? Srovnání technologií lepení, výhody a nevýhody, doporučení dle velikosti provozu. Stroje OTT od Asamer.',
+        keywords: ['PUR', 'EVA', 'Technologie lepení', 'Olepovačka hran', 'OTT', 'Hotmelt'],
+      },
+      sk: {
+        title: 'PUR vs EVA lepidlo – Sprievodca technológiou lepenia | Asamer',
+        description:
+          'PUR alebo EVA lepidlo pre olepovačky hrán? Porovnanie technológií lepenia, výhody a nevýhody, odporúčanie podľa veľkosti prevádzky. Stroje OTT od Asamer.',
+        keywords: ['PUR', 'EVA', 'Technológia lepenia', 'Olepovačka hrán', 'OTT', 'Hotmelt'],
+      },
+      hu: {
+        title: 'PUR vs EVA ragasztó – Ragasztási technológia útmutató | Asamer',
+        description:
+          'PUR vagy EVA ragasztó élzárógépekhez? Ragasztási technológiák összehasonlítása, előnyök és hátrányok, javaslat üzemméret szerint. OTT gépek az Asamertől.',
+        keywords: ['PUR', 'EVA', 'Ragasztási technológia', 'Élzárógép', 'OTT', 'Hotmelt'],
+      },
+    }),
+  },
+  guideEdgebander: {
+    slug: '/ratgeber/kantenanleimmaschine-waehlen',
+    slugByLang: SLUG_TRANSLATIONS['/ratgeber/kantenanleimmaschine-waehlen'],
+    meta: createMeta({
+      de: {
+        title: 'Kantenanleimmaschine nach Betriebsgröße wählen | Asamer',
+        description:
+          'Welche Kantenanleimmaschine passt zu Ihrem Betrieb? Empfehlung für kleine Tischlereien, Mittelbetriebe und industrielle Fertigung. OTT-Modelle im Vergleich.',
+        keywords: ['Kantenanleimmaschine', 'Betriebsgröße', 'OTT', 'Tischlerei', 'Vergleich'],
+      },
+      en: {
+        title: 'Choose an Edgebander by Operation Size | Asamer',
+        description:
+          'Which edgebanding machine fits your workshop? Recommendations for small joineries, mid-size operations and industrial production. OTT models compared.',
+        keywords: ['Edgebander', 'Operation size', 'OTT', 'Joinery', 'Comparison'],
+      },
+      cz: {
+        title: 'Výběr olepovačky hran podle velikosti provozu | Asamer',
+        description:
+          'Která olepovačka hran se hodí pro váš provoz? Doporučení pro malé truhlárny, střední provozy a průmyslovou výrobu. Srovnání modelů OTT.',
+        keywords: ['Olepovačka hran', 'Velikost provozu', 'OTT', 'Truhlárna', 'Srovnání'],
+      },
+      sk: {
+        title: 'Výber olepovačky hrán podľa veľkosti prevádzky | Asamer',
+        description:
+          'Ktorá olepovačka hrán sa hodí pre vašu prevádzku? Odporúčanie pre malé stolárne, stredné prevádzky a priemyselnú výrobu. Porovnanie modelov OTT.',
+        keywords: ['Olepovačka hrán', 'Veľkosť prevádzky', 'OTT', 'Stolárňa', 'Porovnanie'],
+      },
+      hu: {
+        title: 'Élzárógép választása üzemméret szerint | Asamer',
+        description:
+          'Melyik élzárógép illik az Ön üzeméhez? Javaslat kis asztalosmühelyek, középüzemek és ipari gyártás számára. OTT modellek összehasonlítása.',
+        keywords: ['Élzárógép', 'Üzemméret', 'OTT', 'Asztalosmühely', 'Összehasonlítás'],
+      },
+    }),
+  },
+  guideWarehouseAutomation: {
+    slug: '/ratgeber/lagerautomatisierung',
+    slugByLang: SLUG_TRANSLATIONS['/ratgeber/lagerautomatisierung'],
+    meta: createMeta({
+      de: {
+        title: 'Lagerautomatisierung – Wann lohnt sie sich? | Asamer',
+        description:
+          'Lagerautomatisierung mit BARBARIC: bis -40% Lagerkosten, 99,9% Bestandsgenauigkeit. ROI-Rechnung, Einsatzbereiche und Systeme für die Holzverarbeitung.',
+        keywords: ['Lagerautomatisierung', 'BARBARIC', 'Flächenlager', 'ROI', 'Holzverarbeitung'],
+      },
+      en: {
+        title: 'Warehouse Automation – When Does It Pay Off? | Asamer',
+        description:
+          'Warehouse automation with BARBARIC: up to -40% storage costs, 99.9% inventory accuracy. ROI calculation, use cases and systems for wood processing.',
+        keywords: ['Warehouse automation', 'BARBARIC', 'Panel storage', 'ROI', 'Wood processing'],
+      },
+      cz: {
+        title: 'Automatizace skladu – Kdy se vyplatí? | Asamer',
+        description:
+          'Automatizace skladu s BARBARIC: až -40 % skladových nákladů, 99,9 % přesnost zásob. ROI kalkulace, oblasti nasazení a systémy pro zpracování dřeva.',
+        keywords: ['Automatizace skladu', 'BARBARIC', 'Plošný sklad', 'ROI', 'Zpracování dřeva'],
+      },
+      sk: {
+        title: 'Automatizácia skladu – Kedy sa oplatí? | Asamer',
+        description:
+          'Automatizácia skladu s BARBARIC: až -40 % skladových nákladov, 99,9 % presnosť zásob. ROI kalkulácia, oblasti nasadenia a systémy pre spracovanie dreva.',
+        keywords: ['Automatizácia skladu', 'BARBARIC', 'Plošný sklad', 'ROI', 'Spracovanie dreva'],
+      },
+      hu: {
+        title: 'Raktárautomatizálás – Mikor éri meg? | Asamer',
+        description:
+          'Raktárautomatizálás BARBARIC rendszerekkel: akár -40% raktárköltség, 99,9% készletpontosság. ROI-számítás, alkalmazási területek és rendszerek fafeldolgozáshoz.',
+        keywords: ['Raktárautomatizálás', 'BARBARIC', 'Lapraktár', 'ROI', 'Fafeldolgozás'],
       },
     }),
   },

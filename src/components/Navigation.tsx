@@ -200,6 +200,13 @@ const Navigation = () => {
             </Link>
 
             <Link
+              to={buildPath('/faq')}
+              className={`text-sm transition-colors ${location.pathname === buildPath('/faq') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+            >
+              FAQ
+            </Link>
+
+            <Link
               to={buildPath('/kontakt')}
               onClick={() => handleNavigationCta('contact', 'nav_desktop')}
               className={`text-sm transition-colors ${location.pathname === buildPath('/kontakt') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
@@ -335,6 +342,12 @@ const Navigation = () => {
                   className={`text-left ${location.pathname === buildPath('/pouzite-stroje') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
                   {t.nav.usedMachines}
+                </Link>
+                <Link
+                  to={buildPath('/faq')}
+                  className={`text-left ${location.pathname === buildPath('/faq') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
+                >
+                  FAQ
                 </Link>
                 <Link
                   to={buildPath('/kontakt')}

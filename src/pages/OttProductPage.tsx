@@ -64,11 +64,17 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
     { name: product.name, url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}` },
   ]);
 
+  const productUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`;
   const productSchema = {
     '@context': 'https://schema.org', '@type': 'Product',
+    '@id': productUrl,
     name: `OTT ${product.name}`, description: product.seoDescription[lang], image: product.image,
-    brand: { '@type': 'Brand', name: 'OTT' }, category: categoryLabel,
-    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
+    url: productUrl,
+    brand: { '@type': 'Brand', name: 'OTT' },
+    manufacturer: { '@type': 'Organization', name: 'OTT Paul GmbH + Co KG', url: 'https://www.ottpaul.com' },
+    model: product.name,
+    category: categoryLabel,
+    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'EUR', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
   };
 
   const specRows: { label: string; value: string }[] = [];
@@ -115,7 +121,16 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
             <div className="flex flex-col justify-center">
               <span className="text-[11px] uppercase tracking-widest text-white/40 mb-3">{categoryLabel}</span>
               <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-2">OTT {product.name}</h1>
-              <p className="text-base text-white/55 mb-6">{product.tagline[lang]}</p>
+              <p className="text-base text-white/55 mb-3">{product.tagline[lang]}</p>
+
+              {/* Definition-Lead for AEO */}
+              <p className="text-sm text-white/70 leading-relaxed mb-6 border-l-2 border-primary/40 pl-3">
+                {tr(
+                  `Die OTT ${product.name} ist eine ${categoryLabel} für ${product.badge === 'EINSTIEG' ? 'kleine und mittlere Tischlereien' : product.badge === 'MITTEL' ? 'mittlere Betriebe mit variantenreicher Fertigung' : product.badge === 'NEU' ? 'professionelle Betriebe mit steigenden Anforderungen' : product.badge === 'FLAGGSCHIFF' ? 'industrielle Großbetriebe im Dauerbetrieb' : 'professionelle Fertigungsbetriebe'}${product.usp?.[lang] ? ` – ${product.usp[lang]}` : ''}.`,
+                  `The OTT ${product.name} is an ${categoryLabel.toLowerCase()} for ${product.badge === 'EINSTIEG' ? 'small and medium-sized joineries' : product.badge === 'MITTEL' ? 'mid-sized operations with varied production' : product.badge === 'NEU' ? 'professional operations with growing demands' : product.badge === 'FLAGGSCHIFF' ? 'industrial large-scale continuous operation' : 'professional manufacturing operations'}${product.usp?.[lang] ? ` – ${product.usp[lang]}` : ''}.`,
+                  `OTT ${product.name} je ${categoryLabel.toLowerCase()} pro ${product.badge === 'EINSTIEG' ? 'malé a střední truhlárny' : product.badge === 'MITTEL' ? 'střední provozy s různorodou výrobou' : product.badge === 'NEU' ? 'profesionální provozy s rostoucími nároky' : product.badge === 'FLAGGSCHIFF' ? 'průmyslové velkoprovozy v nepřetržitém režimu' : 'profesionální výrobní provozy'}${product.usp?.[lang] ? ` – ${product.usp[lang]}` : ''}.`,
+                )}
+              </p>
 
               {/* Highlights or description */}
               {product.highlights?.[lang] ? (

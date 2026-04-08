@@ -9,7 +9,7 @@ import CategorySidebar from '../components/manufacturer/CategorySidebar';
 import CategorySection from '../components/manufacturer/CategorySection';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
-import { breadcrumbSchema } from '../seo/structuredData';
+import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { getGannomatProductsByCategory, buildGannomatProductPath, GANNOMAT_CATEGORY_LABELS } from '../data/gannomatProducts';
 import type { GannomatCategory } from '../data/gannomatProducts';
@@ -40,9 +40,20 @@ const GannomatPage = () => {
   const categoryData = categories.map((cat) => ({ cat, products: getGannomatProductsByCategory(cat) })).filter((c) => c.products.length > 0);
   const sidebarItems = categoryData.map((c) => ({ id: c.cat, label: GANNOMAT_CATEGORY_LABELS[c.cat][lang], productCount: c.products.length }));
 
+  const allProducts = categoryData.flatMap((c) => c.products);
+  const productList = itemListSchema(
+    tr('Gannomat Bohr-, Dübel- & Beschlägeautomaten', 'Gannomat Drilling, Dowel & Fitting Machines', 'Gannomat vrtací, kolkovací a kování stroje'),
+    allProducts.map((p) => ({
+      name: `Gannomat ${p.name}`,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildGannomatProductPath(lang, p))}`,
+      image: p.image,
+      description: p.seoDescription[lang],
+    })),
+  );
+
   return (
     <>
-      <SeoHead routeKey="gannomat" structuredData={[breadcrumbs]} />
+      <SeoHead routeKey="gannomat" structuredData={[breadcrumbs, productList]} />
       <div className="bg-dark min-h-screen">
 
         <HeroSection
@@ -50,6 +61,20 @@ const GannomatPage = () => {
           logoAlt="Gannomat logo"
           bgImage="https://qmprofile.com/wp-content/uploads/2023/01/qmprofile-gannomat4.jpg"
         />
+
+        {/* INTRO / DEFINITION-LEAD */}
+        <section className="container-wide pb-8">
+          <h1 className="text-2xl md:text-3xl font-display font-light text-white mb-3">
+            {tr('Gannomat Bohr-, Dübel- & Beschlägeautomaten', 'Gannomat Drilling, Dowel & Fitting Machines', 'Gannomat vrtací, kolkovací a kování stroje')}
+          </h1>
+          <p className="text-white/70 text-sm leading-relaxed max-w-3xl">
+            {tr(
+              'Gannomat (Österreich) fertigt Maschinen für Bohren, Dübeleintreiben, Beschlägeset­zen und Korpusmontage in der Möbelindustrie. Das Sortiment umfasst die Selekta-Kolkovačky, Index CNC-Reihe, Express-Beschlägeautomaten und Concept-Korpuspressen. Asamer ist autorisierter Gannomat-Händler für CZ, SK und HU mit Montage, Schulung und Ersatzteillager.',
+              'Gannomat (Austria) manufactures machines for drilling, dowel insertion, fitting placement and carcass assembly in the furniture industry. The range includes Selekta dowel inserters, Index CNC series, Express fitting machines and Concept carcass presses. Asamer is an authorized Gannomat dealer for CZ, SK and HU with installation, training and spare parts stock.',
+              'Gannomat (Rakousko) vyrábí stroje pro vrtání, kolkování, osazování kování a montáž korpusů v nábytkářském průmyslu. Sortiment zahrnuje kolkovačky Selekta, řadu Index CNC, automatické osazovače kování Express a korpusové lisy Concept. Asamer je autorizovaný prodejce Gannomat pro CZ, SK a HU s montáží, školením a skladem náhradních dílů.',
+            )}
+          </p>
+        </section>
 
         <div className="container-wide py-12">
           <div className="flex gap-10">

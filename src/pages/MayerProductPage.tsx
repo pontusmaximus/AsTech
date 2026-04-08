@@ -69,11 +69,17 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
     { name: product.name, url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}` },
   ]);
 
+  const productUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`;
   const productSchema = {
     '@context': 'https://schema.org', '@type': 'Product',
+    '@id': productUrl,
     name: `Mayer ${product.name}`, description: product.seoDescription[lang], image: product.image,
-    brand: { '@type': 'Brand', name: 'Mayer' }, category: categoryLabel,
-    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
+    url: productUrl,
+    brand: { '@type': 'Brand', name: 'Mayer' },
+    manufacturer: { '@type': 'Organization', name: 'Mayer (Felder Group)', url: 'https://www.mayersaws.com' },
+    model: product.name,
+    category: categoryLabel,
+    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'EUR', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
   };
 
   const specRows: { label: string; value: string }[] = [];
@@ -118,7 +124,16 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
             <div className="flex flex-col justify-center">
               <span className="text-[11px] uppercase tracking-widest text-white/40 mb-3">{categoryLabel}</span>
               <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-2">Mayer {product.name}</h1>
-              <p className="text-base text-white/55 mb-6">{product.tagline[lang]}</p>
+              <p className="text-base text-white/55 mb-3">{product.tagline[lang]}</p>
+
+              {/* Definition-Lead for AEO */}
+              <p className="text-sm text-white/70 leading-relaxed mb-6 border-l-2 border-primary/40 pl-3">
+                {tr(
+                  `Die Mayer ${product.name} ist eine ${categoryLabel} für ${product.materials.includes('aluminium') ? 'die Verarbeitung von Aluminium, Kunststoff und NE-Metallen' : 'die präzise Aufteilung von Holz- und Plattenwerkstoffen'}${product.specs.cuttingLength ? ` mit ${product.specs.cuttingLength} Schnittlänge` : ''}.`,
+                  `The Mayer ${product.name} is a ${categoryLabel.toLowerCase()} for ${product.materials.includes('aluminium') ? 'processing aluminium, plastics and non-ferrous metals' : 'precise cutting of wood and panel materials'}${product.specs.cuttingLength ? ` with ${product.specs.cuttingLength} cutting length` : ''}.`,
+                  `Mayer ${product.name} je ${categoryLabel.toLowerCase()} pro ${product.materials.includes('aluminium') ? 'zpracování hliníku, plastů a neželezných kovů' : 'přesné dělení dřeva a deskových materiálů'}${product.specs.cuttingLength ? ` s délkou řezu ${product.specs.cuttingLength}` : ''}.`,
+                )}
+              </p>
 
               {/* Materials inline */}
               <div className="flex flex-wrap items-center gap-0 mb-6 text-xs text-white/40">

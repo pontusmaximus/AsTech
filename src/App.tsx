@@ -29,6 +29,10 @@ import MayerProductPage from './pages/MayerProductPage';
 import BarbaricProductPage from './pages/BarbaricProductPage';
 import GannomatPage from './pages/GannomatPage';
 import GannomatProductPage from './pages/GannomatProductPage';
+import FaqPage from './pages/FaqPage';
+import GuidePurVsEvaPage from './pages/GuidePurVsEvaPage';
+import GuideEdgebanderPage from './pages/GuideEdgebanderPage';
+import GuideWarehouseAutomationPage from './pages/GuideWarehouseAutomationPage';
 import NotFoundPage from './pages/NotFoundPage';
 import Footer from './sections/Footer';
 import CookieConsent from './components/CookieConsent';
@@ -147,6 +151,7 @@ const LEGACY_SLUGS = [
   'megoldasok',
   'service',
   'szerviz',
+  'faq',
 ];
 
 const AppRoutes = () => {
@@ -189,6 +194,18 @@ const AppRoutes = () => {
         ))}
         {getAllSlugVariants('/imprint').map((s) => (
           <Route key={s} path={s} element={<LocalizedRoute page={<ImprintPage />} czSlug="/imprint" />} />
+        ))}
+        {getAllSlugVariants('/faq').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<FaqPage />} czSlug="/faq" />} />
+        ))}
+        {getAllSlugVariants('/ratgeber/pur-vs-eva').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<GuidePurVsEvaPage />} czSlug="/ratgeber/pur-vs-eva" />} />
+        ))}
+        {getAllSlugVariants('/ratgeber/kantenanleimmaschine-waehlen').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<GuideEdgebanderPage />} czSlug="/ratgeber/kantenanleimmaschine-waehlen" />} />
+        ))}
+        {getAllSlugVariants('/ratgeber/lagerautomatisierung').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<GuideWarehouseAutomationPage />} czSlug="/ratgeber/lagerautomatisierung" />} />
         ))}
         <Route path="*" element={<NotFoundPage />} />
       </Route>
