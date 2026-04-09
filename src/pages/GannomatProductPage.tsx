@@ -62,19 +62,6 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
     { name: product.name, url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}` },
   ]);
 
-  const productUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`;
-  const productSchema = {
-    '@context': 'https://schema.org', '@type': 'Product',
-    '@id': productUrl,
-    name: `Gannomat ${product.name}`, description: product.seoDescription[lang], image: product.image,
-    url: productUrl,
-    brand: { '@type': 'Brand', name: 'Gannomat' },
-    manufacturer: { '@type': 'Organization', name: 'Gannomat GmbH', url: 'https://www.gannomat.at' },
-    model: product.name,
-    category: categoryLabel,
-    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'EUR', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
-  };
-
   const specEntries = product.specs ? Object.entries(product.specs) : [];
 
   return (
@@ -83,7 +70,7 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
         overrides={{ title: product.seoTitle[lang], description: product.seoDescription[lang], image: product.image, slug: productPath }}
         buildAlternateSlug={(al) => buildGannomatProductPath(al, product)}
         ogType="product"
-        structuredData={[breadcrumbs, productSchema]}
+        structuredData={[breadcrumbs]}
       />
 
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">

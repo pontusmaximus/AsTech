@@ -69,19 +69,6 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
     { name: product.name, url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}` },
   ]);
 
-  const productUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`;
-  const productSchema = {
-    '@context': 'https://schema.org', '@type': 'Product',
-    '@id': productUrl,
-    name: `Mayer ${product.name}`, description: product.seoDescription[lang], image: product.image,
-    url: productUrl,
-    brand: { '@type': 'Brand', name: 'Mayer' },
-    manufacturer: { '@type': 'Organization', name: 'Mayer (Felder Group)', url: 'https://www.mayersaws.com' },
-    model: product.name,
-    category: categoryLabel,
-    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'EUR', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
-  };
-
   const specRows: { label: string; value: string }[] = [];
   if (product.specs.cuttingLength) specRows.push({ label: tr('Schnittlänge', 'Cutting length', 'Délka řezu'), value: product.specs.cuttingLength });
   if (product.specs.cuttingHeight) specRows.push({ label: tr('Schnitthöhe', 'Cutting height', 'Výška řezu'), value: product.specs.cuttingHeight });
@@ -97,7 +84,7 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
         overrides={{ title: product.seoTitle[lang], description: product.seoDescription[lang], image: product.image, slug: productPath }}
         buildAlternateSlug={(al) => buildMayerProductPath(al, product)}
         ogType="product"
-        structuredData={[breadcrumbs, productSchema]}
+        structuredData={[breadcrumbs]}
       />
 
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">

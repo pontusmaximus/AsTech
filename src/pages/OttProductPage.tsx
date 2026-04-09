@@ -64,19 +64,6 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
     { name: product.name, url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}` },
   ]);
 
-  const productUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`;
-  const productSchema = {
-    '@context': 'https://schema.org', '@type': 'Product',
-    '@id': productUrl,
-    name: `OTT ${product.name}`, description: product.seoDescription[lang], image: product.image,
-    url: productUrl,
-    brand: { '@type': 'Brand', name: 'OTT' },
-    manufacturer: { '@type': 'Organization', name: 'OTT Paul GmbH + Co KG', url: 'https://www.ottpaul.com' },
-    model: product.name,
-    category: categoryLabel,
-    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'EUR', seller: { '@type': 'Organization', name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN } },
-  };
-
   const specRows: { label: string; value: string }[] = [];
   if (product.specs.length) specRows.push({ label: tr('Baulänge', 'Length', 'Délka'), value: product.specs.length });
   if (product.specs.edgeThickness) specRows.push({ label: tr('Kantenstärke', 'Edge thickness', 'Tloušťka hrany'), value: product.specs.edgeThickness });
@@ -94,7 +81,7 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
         overrides={{ title: product.seoTitle[lang], description: product.seoDescription[lang], image: product.image, slug: productPath }}
         buildAlternateSlug={(al) => buildOttProductPath(al, product)}
         ogType="product"
-        structuredData={[breadcrumbs, productSchema]}
+        structuredData={[breadcrumbs]}
       />
 
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
