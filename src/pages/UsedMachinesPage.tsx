@@ -18,6 +18,9 @@ type UsedMachine = {
   images?: string[];
   imageFit?: 'cover' | 'contain';
   imageDisplay?: 'slideshow' | 'grid';
+  price?: number;
+  listPrice?: number;
+  priceCurrency?: string;
 };
 
 const slugify = (value: string) =>
@@ -90,6 +93,13 @@ const UsedMachinesPage = () => {
     return en;
   };
 
+  const formatPrice = (price: number, currency: string) => {
+    const numberLocale =
+      locale === 'de' ? 'de-DE' : locale === 'cz' ? 'cs-CZ' : locale === 'sk' ? 'sk-SK' : locale === 'hu' ? 'hu-HU' : 'en-US';
+    const formatted = price.toLocaleString(numberLocale);
+    return currency === 'EUR' ? `€ ${formatted}` : `${formatted} ${currency}`;
+  };
+
   const machines: UsedMachine[] = [
     {
       name: 'Tornado Top',
@@ -102,6 +112,9 @@ const UsedMachinesPage = () => {
         '/images/used-machines/ott-tornado-top-1.jpg',
         '/images/used-machines/ott-tornado-top-2.jpg',
       ],
+      price: 18000,
+      listPrice: 18500,
+      priceCurrency: 'EUR',
       shortDescription: tr(
         'Kantenleimmaschine mit 330.000 lfm Laufleistung.',
         'Edgebanding machine with 330,000 lfm of usage.',
@@ -151,6 +164,9 @@ const UsedMachinesPage = () => {
         '/images/used-machines/scm-stefani-solution-md-1.jpg',
         '/images/used-machines/scm-stefani-solution-md-2.jpg',
       ],
+      price: 23000,
+      listPrice: 23500,
+      priceCurrency: 'EUR',
       shortDescription: tr(
         'Kantenleimmaschine, automatische Beschickung, 450.000 lfm.',
         'Edgebanding machine, automatic feeding, 450,000 lfm.',
@@ -165,6 +181,9 @@ const UsedMachinesPage = () => {
       status: tr('verfügbar', 'available', 'k dispozici'),
       statusKey: 'available',
       images: ['/images/used-machines/homag-s-200-1.jpg', '/images/used-machines/homag-s-200-2.jpg'],
+      price: 19000,
+      listPrice: 19500,
+      priceCurrency: 'EUR',
       shortDescription: tr(
         'Kantenleimmaschine mit 93.000 lfm Laufleistung.',
         'Edgebanding machine with 93,000 lfm of usage.',
@@ -226,12 +245,28 @@ const UsedMachinesPage = () => {
           category,
           ...(typeof machine.year === 'number' ? { productionDate: String(machine.year) } : {}),
           itemCondition,
-          offers: {
-            '@type': 'Offer',
-            url: anchorUrl,
-            availability: getAvailability(machine.status, machine.statusKey),
-            itemCondition,
-          },
+          ...(typeof machine.price === 'number'
+            ? {
+                offers: {
+                  '@type': 'Offer',
+                  url: anchorUrl,
+                  availability: getAvailability(machine.status, machine.statusKey),
+                  itemCondition,
+                  price: machine.price,
+                  priceCurrency: machine.priceCurrency ?? 'EUR',
+                  ...(typeof machine.listPrice === 'number' && machine.listPrice > machine.price
+                    ? {
+                        priceSpecification: {
+                          '@type': 'UnitPriceSpecification',
+                          price: machine.listPrice,
+                          priceCurrency: machine.priceCurrency ?? 'EUR',
+                          priceType: 'https://schema.org/ListPrice',
+                        },
+                      }
+                    : {}),
+                },
+              }
+            : {}),
         },
       };
     }),
@@ -389,6 +424,32 @@ const UsedMachinesPage = () => {
                   <div className="flex items-start gap-2 text-white/75 text-sm">
                     <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
                     <span>{tr('Zustand', 'Condition', 'Stav')}: {machine.condition}</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-white/75 text-sm">
+                    <Tag className="w-4 h-4 text-primary mt-0.5" />
+                    <span>
+                      {tr('Preis', 'Price', 'Cena')}:{' '}
+                      {typeof machine.price === 'number' ? (
+                        <>
+                          {typeof machine.listPrice === 'number' && machine.listPrice > machine.price ? (
+                            <span className="text-white/40 line-through mr-1.5">
+                              {formatPrice(machine.listPrice, machine.priceCurrency ?? 'EUR')}
+                            </span>
+                          ) : null}
+                          <span
+                            className={
+                              typeof machine.listPrice === 'number' && machine.listPrice > machine.price
+                                ? 'text-primary font-medium'
+                                : ''
+                            }
+                          >
+                            {formatPrice(machine.price, machine.priceCurrency ?? 'EUR')}
+                          </span>
+                        </>
+                      ) : (
+                        tr('auf Anfrage', 'on request', 'na vyžádání')
+                      )}
+                    </span>
                   </div>
                 </div>
                 <a
