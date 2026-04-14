@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { readCookieConsent } from '../lib/cookieConsent';
+import type { ConsentCategories } from '../lib/cookieConsent';
 
 declare global {
   interface Window {
@@ -8,6 +10,15 @@ declare global {
 }
 
 const SCRIPT_ID = 'asamer-ga4-script';
+
+const loadGtagScript = (measurementId: string) => {
+  if (document.getElementById(SCRIPT_ID)) return;
+  const script = document.createElement('script');
+  script.id = SCRIPT_ID;
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+  document.head.appendChild(script);
+};
 
 const Ga4Loader = () => {
   useEffect(() => {
@@ -30,7 +41,7 @@ const Ga4Loader = () => {
       };
     }
 
-    // Consent Mode default: denied until user gives consent via cookie banner.
+    // Consent Mode v2 default: everything denied until the user opts in.
     window.gtag('consent', 'default', {
       analytics_storage: 'denied',
       ad_storage: 'denied',
@@ -47,13 +58,20 @@ const Ga4Loader = () => {
       anonymize_ip: true,
     });
 
-    if (document.getElementById(SCRIPT_ID)) return;
+    const existing = readCookieConsent();
+    if (existing?.categories.analytics) {
+      loadGtagScript(measurementId);
+    }
 
-    const script = document.createElement('script');
-    script.id = SCRIPT_ID;
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    document.head.appendChild(script);
+    const handleConsent = (event: Event) => {
+      const detail = (event as CustomEvent<ConsentCategories>).detail;
+      if (detail?.analytics) {
+        loadGtagScript(measurementId);
+      }
+    };
+
+    window.addEventListener('asamer:cookie-consent-changed', handleConsent);
+    return () => window.removeEventListener('asamer:cookie-consent-changed', handleConsent);
   }, []);
 
   return null;

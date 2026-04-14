@@ -44,7 +44,7 @@ const BarbaricPage = () => {
   const productList = itemListSchema(
     tr('BARBARIC Automatisierung & Plattenhandling', 'BARBARIC Automation & Panel Handling', 'BARBARIC automatizace a manipulace s deskami'),
     allProducts.map((p) => ({
-      name: `BARBARIC ${p.name}`,
+      name: `${p.name} BARBARIC`,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildBarbaricProductPath(lang, p))}`,
       image: p.image,
       description: p.seoDescription[lang],
@@ -99,9 +99,9 @@ const BarbaricPage = () => {
                         key={product.slug}
                         to={buildLocalizedPath(lang, buildBarbaricProductPath(lang, product))}
                         image={product.image}
-                        imageAlt={`Barbaric ${product.name}`}
+                        imageAlt={`${product.name} Barbaric`}
                         categoryLabel={BARBARIC_CATEGORY_LABELS[c.cat][lang]}
-                        name={product.name}
+                        name={`${product.name} Barbaric`}
                         bullets={[product.tagline[lang]]}
                         detailLabel={tr('Details ansehen', 'View details', 'Zobrazit detail')}
                       />

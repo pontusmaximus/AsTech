@@ -16,6 +16,8 @@ export type SeoRouteKey =
   | 'usedMachines'
   | 'contact'
   | 'imprint'
+  | 'privacy'
+  | 'terms'
   | 'faq'
   | 'guidePurVsEva'
   | 'guideEdgebander'
@@ -448,6 +450,78 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         description:
           'Impresszum, cégjegyzékadatok és jogi információk az Asamer Technologie GmbH és ASAMER s.r.o. vállalatokról.',
         keywords: ['Impresszum', 'Jogi információk', 'Asamer'],
+      },
+    }),
+  },
+  privacy: {
+    slug: '/privacy',
+    slugByLang: SLUG_TRANSLATIONS['/privacy'],
+    meta: createMeta({
+      de: {
+        title: 'Datenschutzerklärung | Asamer Technologie',
+        description:
+          'Datenschutzerklärung gemäß DSGVO: Informationen zur Verarbeitung personenbezogener Daten, Cookies, Analyse und Betroffenenrechten bei Asamer Technologie.',
+        keywords: ['Datenschutz', 'DSGVO', 'Privacy', 'Cookies', 'Asamer'],
+      },
+      en: {
+        title: 'Privacy Policy | Asamer Technology',
+        description:
+          'Privacy policy under GDPR: how Asamer Technology processes personal data, uses cookies and analytics, and your data subject rights.',
+        keywords: ['Privacy', 'GDPR', 'Data protection', 'Cookies', 'Asamer'],
+      },
+      cz: {
+        title: 'Ochrana osobních údajů | Asamer Technologie',
+        description:
+          'Zásady ochrany osobních údajů podle GDPR: zpracování osobních údajů, cookies, analytika a práva subjektů údajů ve společnosti Asamer Technologie.',
+        keywords: ['Ochrana osobních údajů', 'GDPR', 'Cookies', 'Asamer'],
+      },
+      sk: {
+        title: 'Ochrana osobných údajov | Asamer Technologie',
+        description:
+          'Zásady ochrany osobných údajov podľa GDPR: spracovanie osobných údajov, cookies, analytika a práva dotknutých osôb v spoločnosti Asamer Technologie.',
+        keywords: ['Ochrana osobných údajov', 'GDPR', 'Cookies', 'Asamer'],
+      },
+      hu: {
+        title: 'Adatvédelmi tájékoztató | Asamer Technologie',
+        description:
+          'Adatvédelmi tájékoztató a GDPR szerint: személyes adatok kezelése, cookie-k, analitika és érintetti jogok az Asamer Technologie-nál.',
+        keywords: ['Adatvédelem', 'GDPR', 'Cookies', 'Asamer'],
+      },
+    }),
+  },
+  terms: {
+    slug: '/terms',
+    slugByLang: SLUG_TRANSLATIONS['/terms'],
+    meta: createMeta({
+      de: {
+        title: 'AGB – Allgemeine Geschäftsbedingungen | Asamer Technologie',
+        description:
+          'Allgemeine Geschäftsbedingungen der Asamer Technologie GmbH und ASAMER s.r.o. für den Verkauf, die Installation und den Service industrieller Maschinen.',
+        keywords: ['AGB', 'Geschäftsbedingungen', 'Asamer', 'Vertragsbedingungen'],
+      },
+      en: {
+        title: 'Terms & Conditions | Asamer Technology',
+        description:
+          'General terms and conditions of Asamer Technologie GmbH and ASAMER s.r.o. for the sale, installation and service of industrial machinery.',
+        keywords: ['Terms', 'Conditions', 'Asamer', 'Legal'],
+      },
+      cz: {
+        title: 'Obchodní podmínky | Asamer Technologie',
+        description:
+          'Obchodní podmínky společností Asamer Technologie GmbH a ASAMER s.r.o. pro prodej, instalaci a servis průmyslových strojů.',
+        keywords: ['Obchodní podmínky', 'Asamer', 'Smluvní podmínky'],
+      },
+      sk: {
+        title: 'Obchodné podmienky | Asamer Technologie',
+        description:
+          'Obchodné podmienky spoločností Asamer Technologie GmbH a ASAMER s.r.o. pre predaj, inštaláciu a servis priemyselných strojov.',
+        keywords: ['Obchodné podmienky', 'Asamer', 'Zmluvné podmienky'],
+      },
+      hu: {
+        title: 'Általános szerződési feltételek | Asamer Technologie',
+        description:
+          'Az Asamer Technologie GmbH és az ASAMER s.r.o. általános szerződési feltételei ipari gépek értékesítéséhez, telepítéséhez és szervizéhez.',
+        keywords: ['ÁSZF', 'Szerződési feltételek', 'Asamer'],
       },
     }),
   },

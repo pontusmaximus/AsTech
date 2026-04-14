@@ -245,14 +245,6 @@ const Home = () => {
                 {heroLines[1]}
               </span>
             </h1>
-
-            <p className="hero-subtitle text-sm sm:text-base text-white/70 max-w-2xl mb-3 sm:mb-4 leading-relaxed">
-              {tr(
-                'Asamer Technologie ist exklusiver OTT-Vertriebspartner und autorisierter Händler für Mayer, BARBARIC und Gannomat in Tschechien, der Slowakei und Ungarn – Maschinen, Automatisierung, Software-Integration und Service aus einer Hand.',
-                'Asamer Technology is the exclusive OTT distribution partner and authorized dealer for Mayer, BARBARIC and Gannomat in the Czech Republic, Slovakia and Hungary – machines, automation, software integration and service from a single source.',
-                'Asamer Technologie je exkluzivní distribuční partner OTT a autorizovaný prodejce Mayer, BARBARIC a Gannomat v České republice, na Slovensku a v Maďarsku – stroje, automatizace, softwarová integrace a servis z jednoho zdroje.',
-              )}
-            </p>
             <p className="hero-subtitle text-base sm:text-lg md:text-2xl text-white/60 max-w-2xl mb-6 sm:mb-10 leading-relaxed">
               {t.hero.subheadline}
             </p>

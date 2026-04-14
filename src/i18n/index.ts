@@ -166,6 +166,8 @@ export interface Translations {
     copyright: string;
     imprint: string;
     privacy: string;
+    terms: string;
+    cookieSettings: string;
   };
 }
 
@@ -336,6 +338,8 @@ const translations: Record<Language, Translations> = {
       copyright: '© 2026 Asamer Technologie GmbH und Asamer s.r.o. Alle Rechte vorbehalten.',
       imprint: 'Impressum',
       privacy: 'Datenschutz',
+      terms: 'AGB',
+      cookieSettings: 'Cookie-Einstellungen',
     },
   },
   en: {
@@ -504,6 +508,8 @@ const translations: Record<Language, Translations> = {
       copyright: '© 2026 Asamer Technologie GmbH and Asamer s.r.o. All rights reserved.',
       imprint: 'Imprint',
       privacy: 'Privacy Policy',
+      terms: 'Terms',
+      cookieSettings: 'Cookie settings',
     },
   },
   cz: {
@@ -672,6 +678,8 @@ const translations: Record<Language, Translations> = {
       copyright: '© 2026 Asamer Technologie GmbH a Asamer s.r.o. Všechna práva vyhrazena.',
       imprint: 'Tiráž',
       privacy: 'Ochrana osobních údajů',
+      terms: 'Obchodní podmínky',
+      cookieSettings: 'Nastavení cookies',
     },
   },
   hu: {
@@ -840,6 +848,8 @@ const translations: Record<Language, Translations> = {
       copyright: '© 2026 Asamer Technologie GmbH és Asamer s.r.o. Minden jog fenntartva.',
       imprint: 'Impresszum',
       privacy: 'Adatvédelem',
+      terms: 'ÁSZF',
+      cookieSettings: 'Cookie beállítások',
     },
   },
   sk: {
@@ -1008,6 +1018,8 @@ const translations: Record<Language, Translations> = {
       copyright: '© 2026 Asamer Technologie GmbH a Asamer s.r.o. Všetky práva vyhradené.',
       imprint: 'Tiráž',
       privacy: 'Ochrana osobných údajov',
+      terms: 'Obchodné podmienky',
+      cookieSettings: 'Nastavenia cookies',
     },
   },
 };

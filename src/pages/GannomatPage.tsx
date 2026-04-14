@@ -44,7 +44,7 @@ const GannomatPage = () => {
   const productList = itemListSchema(
     tr('Gannomat Bohr-, Dübel- & Beschlägeautomaten', 'Gannomat Drilling, Dowel & Fitting Machines', 'Gannomat vrtací, kolkovací a kování stroje'),
     allProducts.map((p) => ({
-      name: `Gannomat ${p.name}`,
+      name: `${p.name} Gannomat`,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildGannomatProductPath(lang, p))}`,
       image: p.image,
       description: p.seoDescription[lang],
@@ -98,9 +98,9 @@ const GannomatPage = () => {
                         key={product.slug}
                         to={buildLocalizedPath(lang, buildGannomatProductPath(lang, product))}
                         image={product.image}
-                        imageAlt={`Gannomat ${product.name}`}
+                        imageAlt={`${product.name} Gannomat`}
                         categoryLabel={GANNOMAT_CATEGORY_LABELS[c.cat][lang]}
-                        name={product.name}
+                        name={`${product.name} Gannomat`}
                         bullets={[product.tagline[lang]]}
                         detailLabel={tr('Details ansehen', 'View details', 'Zobrazit detail')}
                       />

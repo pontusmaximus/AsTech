@@ -80,11 +80,26 @@ const CookieConsent = () => {
   }, []);
 
   useEffect(() => {
+    const handleOpen = () => {
+      const existing = readCookieConsent();
+      setDraft(existing?.categories ?? createEssentialOnlyCategories());
+      setIsSettingsOpen(true);
+    };
+    window.addEventListener('asamer:open-cookie-settings', handleOpen);
+    return () => window.removeEventListener('asamer:open-cookie-settings', handleOpen);
+  }, []);
+
+  useEffect(() => {
     if (!isSettingsOpen) return;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsSettingsOpen(false);
+    };
+    window.addEventListener('keydown', handleKey);
     return () => {
       document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKey);
     };
   }, [isSettingsOpen]);
 

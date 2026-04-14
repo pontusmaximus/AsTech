@@ -49,6 +49,20 @@ export const SLUG_TRANSLATIONS: Record<string, Record<Language, string>> = {
     sk: '/imprint',
     hu: '/impresszum',
   },
+  '/privacy': {
+    de: '/datenschutz',
+    en: '/privacy',
+    cz: '/ochrana-osobnich-udaju',
+    sk: '/ochrana-osobnych-udajov',
+    hu: '/adatvedelem',
+  },
+  '/terms': {
+    de: '/agb',
+    en: '/terms',
+    cz: '/obchodni-podminky',
+    sk: '/obchodne-podmienky',
+    hu: '/altalanos-szerzodesi-feltetelek',
+  },
   '/faq': {
     de: '/faq',
     en: '/faq',

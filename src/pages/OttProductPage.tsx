@@ -103,11 +103,11 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
           {/* ── Hero: Image + Info ── */}
           <div className="page-header grid lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
             <div className="border border-white/10 overflow-hidden">
-              <img src={product.image} alt={`OTT ${product.name}`} className="w-full aspect-[4/3] object-cover" />
+              <img src={product.image} alt={`${product.name} OTT`} className="w-full aspect-[4/3] object-cover" />
             </div>
             <div className="flex flex-col justify-center">
               <span className="text-[11px] uppercase tracking-widest text-white/40 mb-3">{categoryLabel}</span>
-              <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-2">OTT {product.name}</h1>
+              <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-2">{product.name} OTT</h1>
               <p className="text-base text-white/55 mb-3">{product.tagline[lang]}</p>
 
               {/* Definition-Lead for AEO */}

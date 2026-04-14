@@ -200,11 +200,11 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
     },
     highlights: ['Compact design — only 100 mm lateral clearance in all directions', '90° rotation unit for all-direction storage (180° optional)', 'Automatic panel measurement and weighing in every cycle', 'Short payback period of 1–2 years', 'Order-picking operation possible — saw not required'],
     seoTitle: {
-      de: 'Barbaric CSF Professional Flächenlager – Händler CZ/SK/HU | Asamer',
-      en: 'Barbaric CSF Professional Panel Storage – dealer CZ/SK/HU | Asamer',
-      cz: 'Barbaric CSF Professional skladování desek – koupit přes Asamer',
-      sk: 'Barbaric CSF Professional skladovanie dosák – kúpiť cez Asamer',
-      hu: 'Barbaric CSF Professional lapraktározás – Asamer viszonteladó',
+      de: 'Flächenlager CSF Professional Barbaric – Händler CZ/SK/HU | Asamer',
+      en: 'Panel Storage CSF Professional Barbaric – dealer CZ/SK/HU | Asamer',
+      cz: 'Skladování desek CSF Professional Barbaric – koupit přes Asamer',
+      sk: 'Skladovanie dosák CSF Professional Barbaric – kúpiť cez Asamer',
+      hu: 'Lapraktározás CSF Professional Barbaric – Asamer viszonteladó',
     },
     seoDescription: {
       de: 'CSF Professional – kompaktes Flächenlager für Handwerk. Vollautomatische Ein-/Auslagerung. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.',
@@ -242,11 +242,11 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
     },
     highlights: ['Cycle times below 1 minute for maximum throughput', 'Movement speeds up to 150 m/min', 'Crane bridge lengths up to 25 m — storage areas up to 25 × 70 m', 'Integration with chain conveyors and conveyor belts', 'Trusted by renowned industrial enterprises worldwide'],
     seoTitle: {
-      de: 'Barbaric CSF Industrial Flächenlager – Händler CZ/SK/HU | Asamer',
-      en: 'Barbaric CSF Industrial Panel Storage – dealer CZ/SK/HU | Asamer',
-      cz: 'Barbaric CSF Industrial skladování desek – koupit přes Asamer',
-      sk: 'Barbaric CSF Industrial skladovanie dosák – kúpiť cez Asamer',
-      hu: 'Barbaric CSF Industrial lapraktározás – Asamer viszonteladó',
+      de: 'Flächenlager CSF Industrial Barbaric – Händler CZ/SK/HU | Asamer',
+      en: 'Panel Storage CSF Industrial Barbaric – dealer CZ/SK/HU | Asamer',
+      cz: 'Skladování desek CSF Industrial Barbaric – koupit přes Asamer',
+      sk: 'Skladovanie dosák CSF Industrial Barbaric – kúpiť cez Asamer',
+      hu: 'Lapraktározás CSF Industrial Barbaric – Asamer viszonteladó',
     },
     seoDescription: {
       de: 'CSF Industrial – industrielles Flächenlager mit ERP-Anbindung. Hohe Taktzeiten, große Kapazität. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.',
@@ -284,11 +284,11 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
     },
     highlights: ['Double-scissor load arm — lifting height 4,200 mm', 'Adequate ground level height of 3,200 mm for comfortable operation', 'Often eliminates need for production hall expansion', 'Optimal material flow with gentle, damage-free handling', 'Camera system for surveillance from user terminal'],
     seoTitle: {
-      de: 'Barbaric CSF Multilevel Flächenlager – Händler CZ/SK/HU | Asamer',
-      en: 'Barbaric CSF Multilevel Panel Storage – dealer CZ/SK/HU | Asamer',
-      cz: 'Barbaric CSF Multilevel skladování desek – koupit přes Asamer',
-      sk: 'Barbaric CSF Multilevel skladovanie dosák – kúpiť cez Asamer',
-      hu: 'Barbaric CSF Multilevel lapraktározás – Asamer viszonteladó',
+      de: 'Flächenlager CSF Multilevel Barbaric – Händler CZ/SK/HU | Asamer',
+      en: 'Panel Storage CSF Multilevel Barbaric – dealer CZ/SK/HU | Asamer',
+      cz: 'Skladování desek CSF Multilevel Barbaric – koupit přes Asamer',
+      sk: 'Skladovanie dosák CSF Multilevel Barbaric – kúpiť cez Asamer',
+      hu: 'Lapraktározás CSF Multilevel Barbaric – Asamer viszonteladó',
     },
     seoDescription: {
       de: 'CSF Multilevel – mehrstöckiges Flächenlager. Maximale Kapazität auf minimaler Fläche. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.',
@@ -319,11 +319,11 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
     },
     highlights: ['Custom-engineered for unusual panel formats and special materials', 'Designed precisely to your process and production requirements', 'Uses proven Barbaric components and handling concepts', 'Available for both craft and industrial production environments'],
     seoTitle: {
-      de: 'Barbaric Sonderanwendungen Flächenlager – Händler CZ/SK/HU | Asamer',
-      en: 'Barbaric Custom Panel Storage Solutions – dealer CZ/SK/HU | Asamer',
-      cz: 'Barbaric speciální skladování desek – koupit přes Asamer',
-      sk: 'Barbaric špeciálne skladovanie dosák – kúpiť cez Asamer',
-      hu: 'Barbaric egyedi lapraktározás – Asamer viszonteladó',
+      de: 'Sonderanwendungen Flächenlager Barbaric – Händler CZ/SK/HU | Asamer',
+      en: 'Custom Panel Storage Solutions Barbaric – dealer CZ/SK/HU | Asamer',
+      cz: 'Speciální skladování desek Barbaric – koupit přes Asamer',
+      sk: 'Špeciálne skladovanie dosák Barbaric – kúpiť cez Asamer',
+      hu: 'Egyedi lapraktározás Barbaric – Asamer viszonteladó',
     },
     seoDescription: {
       de: 'Sonderanwendungen – maßgeschneiderte Lagerlösungen für besondere Anforderungen. Individuell konzipiert. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.',
@@ -370,11 +370,11 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       hu: { 'Vezérlés': 'Kezelői terminál 2D/3D-vel', 'Interfészek': 'Minden fő fűrész-/CNC-gyártó', 'Lapkérés': 'Teljesen automatikus a fűrésztől', 'Megtérülés': '< 1 év' },
     },
     seoTitle: {
-      de: 'Barbaric LCV Performance Beschickung – Händler CZ/SK/HU | Asamer',
-      en: 'Barbaric LCV Performance Feeding System – dealer CZ/SK/HU | Asamer',
-      cz: 'Barbaric LCV Performance podávací systém – koupit přes Asamer',
-      sk: 'Barbaric LCV Performance podávací systém – kúpiť cez Asamer',
-      hu: 'Barbaric LCV Performance adagoló rendszer – Asamer viszonteladó',
+      de: 'Beschickung LCV Performance Barbaric – Händler CZ/SK/HU | Asamer',
+      en: 'Feeding System LCV Performance Barbaric – dealer CZ/SK/HU | Asamer',
+      cz: 'Podávací systém LCV Performance Barbaric – koupit přes Asamer',
+      sk: 'Podávací systém LCV Performance Barbaric – kúpiť cez Asamer',
+      hu: 'Adagoló rendszer LCV Performance Barbaric – Asamer viszonteladó',
     },
     seoDescription: {
       de: 'LCV Performance – vollautomatische Beschickung für Sägen und CNC. Interfaces zu allen Herstellern. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.',
@@ -414,11 +414,11 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       hu: { 'Teherbírás': '60 kg', 'Lapméret min.': '80 × 300 mm', 'Lapméret max.': '2 800 × 1 300 mm', 'Lapvastagság': '8–60 mm', 'Átbocsátás': 'akár 10 darab/perc', 'Emelő meghajtás': 'Villanymotor', 'Forgató meghajtás': 'Villanymotor', 'Üzemi nyomás': '6 bar', 'Feszültség': '400 V / 50 Hz', 'Összteljesítmény': '5 kW', 'Légfogyasztás': '420 Nl/perc' },
     },
     seoTitle: {
-      de: 'Barbaric NST Nesting Picker – Händler CZ/SK/HU | Asamer',
-      en: 'Barbaric NST Nesting Picker – dealer CZ/SK/HU | Asamer',
-      cz: 'Barbaric NST Nesting Picker – koupit přes Asamer',
-      sk: 'Barbaric NST Nesting Picker – kúpiť cez Asamer',
-      hu: 'Barbaric NST Nesting Picker – Asamer viszonteladó',
+      de: 'Nesting Picker NST Barbaric – Händler CZ/SK/HU | Asamer',
+      en: 'Nesting Picker NST Barbaric – dealer CZ/SK/HU | Asamer',
+      cz: 'Nesting Picker NST Barbaric – koupit přes Asamer',
+      sk: 'Nesting Picker NST Barbaric – kúpiť cez Asamer',
+      hu: 'Nesting Picker NST Barbaric – Asamer viszonteladó',
     },
     seoDescription: {
       de: 'NST Nesting Picker – kameragesteuerte Abstapelung nach Nesting. Automatische Sortierung und Reststückentsorgung. Asamer: Barbaric-Händler CZ, SK & HU.',
@@ -445,7 +445,7 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       sk: { 'Kompatibilita': 'Akákoľvek olepovačka hrán', 'Rýchlosť': 'Plynulo nastaviteľná', 'Doba inštalácie': 'cca 0,5 dňa', 'Voliteľné príslušenstvo': 'Predlžovací pás, Ergonomický balíček (zdvíhací stôl + vzduchový stôl)' },
       hu: { 'Kompatibilitás': 'Bármely élzárógép', 'Sebesség': 'Fokozatmentesen állítható', 'Telepítési idő': 'kb. 0,5 nap', 'Opciók': 'Hosszabbító szalag, Ergonómiai csomag (emelőasztal + légpárnás asztal)' },
     },
-    seoTitle: { de: 'Barbaric RTS Compact Returnsystem – Händler CZ/SK/HU | Asamer', en: 'Barbaric RTS Compact Return System – dealer CZ/SK/HU | Asamer', cz: 'Barbaric RTS Compact návratový systém – koupit přes Asamer', sk: 'Barbaric RTS Compact návratový systém – kúpiť cez Asamer', hu: 'Barbaric RTS Compact visszafutó rendszer – Asamer viszonteladó' },
+    seoTitle: { de: 'Returnsystem RTS Compact Barbaric – Händler CZ/SK/HU | Asamer', en: 'Return System RTS Compact Barbaric – dealer CZ/SK/HU | Asamer', cz: 'Návratový systém RTS Compact Barbaric – koupit přes Asamer', sk: 'Návratový systém RTS Compact Barbaric – kúpiť cez Asamer', hu: 'Visszafutó rendszer RTS Compact Barbaric – Asamer viszonteladó' },
     seoDescription: { de: 'RTS Compact – universelles Rückführsystem für Kantenanleimer. Kurze Amortisation. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.', en: 'RTS Compact – universal return system for edgebanders. Short ROI. Asamer: authorized Barbaric dealer for CZ, SK & HU.', cz: 'RTS Compact – univerzální vratný systém pro olepovačky. Krátká návratnost. Asamer: autorizovaný prodejce Barbaric pro CZ, SK a HU.', sk: 'RTS Compact – univerzálny vratný systém pre olepovačky. Krátka návratnosť. Asamer: autorizovaný predajca Barbaric pre CZ, SK a HU.', hu: 'RTS Compact – univerzális visszafutó élzárógépekhez. Rövid megtérülés. Asamer: hivatalos Barbaric viszonteladó CZ, SK és HU.' },
   },
   {
@@ -463,7 +463,7 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       sk: { 'Režim odberu': 'Duálny (2 diely súčasne)', 'Funkcie otáčania': '90° a 180°', 'Doba inštalácie': 'cca 2 dni', 'Stohovacie stanice': 'Viacero možných', 'Návratnosť': '< 1 rok' },
       hu: { 'Felvételi mód': 'Kettős (2 darab egyidejűleg)', 'Fordító funkciók': '90° és 180°', 'Telepítési idő': 'kb. 2 nap', 'Rakodóállomások': 'Több lehetséges', 'Megtérülés': '< 1 év' },
     },
-    seoTitle: { de: 'Barbaric RTS Professional Returnsystem – Händler CZ/SK/HU | Asamer', en: 'Barbaric RTS Professional Return System – dealer CZ/SK/HU | Asamer', cz: 'Barbaric RTS Professional návratový systém – koupit přes Asamer', sk: 'Barbaric RTS Professional návratový systém – kúpiť cez Asamer', hu: 'Barbaric RTS Professional visszafutó rendszer – Asamer viszonteladó' },
+    seoTitle: { de: 'Returnsystem RTS Professional Barbaric – Händler CZ/SK/HU | Asamer', en: 'Return System RTS Professional Barbaric – dealer CZ/SK/HU | Asamer', cz: 'Návratový systém RTS Professional Barbaric – koupit přes Asamer', sk: 'Návratový systém RTS Professional Barbaric – kúpiť cez Asamer', hu: 'Visszafutó rendszer RTS Professional Barbaric – Asamer viszonteladó' },
     seoDescription: { de: 'RTS Professional – intelligentes Rückführsystem mit optionaler Abstapelung. Flexibel konfigurierbar. Asamer: Barbaric-Händler CZ, SK & HU.', en: 'RTS Professional – intelligent return system with optional destacking. Flexibly configurable. Asamer: Barbaric dealer CZ, SK & HU.', cz: 'RTS Professional – inteligentní vratný systém s volitelným odstapelováním. Flexibilní. Asamer: prodejce Barbaric CZ, SK a HU.', sk: 'RTS Professional – inteligentný vratný systém s voliteľným odstapelovaním. Flexibilný. Asamer: predajca Barbaric CZ, SK a HU.', hu: 'RTS Professional – intelligens visszafutó opcionális lerakodással. Rugalmasan konfigurálható. Asamer: Barbaric viszonteladó CZ, SK és HU.' },
   },
   {
@@ -481,7 +481,7 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       hu: { 'Max. teherbírás': '100 kg', 'Max. darab hossz': '4 100 mm', 'Fordító funkciók': '90° és 180°', 'Adatinterfész': 'Élzárógép-gyártókhoz', 'Megtérülés': '< 1 év' },
     },
     highlights: ['Designed for industrial environments — loads up to 100 kg', 'Parts up to 4,100 mm in length', 'Robust construction for continuous high-cycle-rate operation', 'Vacuum suction handling — gentle on all surface materials', 'Significantly increases efficiency, reduces operator strain'],
-    seoTitle: { de: 'Barbaric RTS Industrial Returnsystem – Händler CZ/SK/HU | Asamer', en: 'Barbaric RTS Industrial Return System – dealer CZ/SK/HU | Asamer', cz: 'Barbaric RTS Industrial návratový systém – koupit přes Asamer', sk: 'Barbaric RTS Industrial návratový systém – kúpiť cez Asamer', hu: 'Barbaric RTS Industrial visszafutó rendszer – Asamer viszonteladó' },
+    seoTitle: { de: 'Returnsystem RTS Industrial Barbaric – Händler CZ/SK/HU | Asamer', en: 'Return System RTS Industrial Barbaric – dealer CZ/SK/HU | Asamer', cz: 'Návratový systém RTS Industrial Barbaric – koupit přes Asamer', sk: 'Návratový systém RTS Industrial Barbaric – kúpiť cez Asamer', hu: 'Visszafutó rendszer RTS Industrial Barbaric – Asamer viszonteladó' },
     seoDescription: { de: 'RTS Industrial – industrielles Rückführsystem für Lasten bis 100 kg. Robuster Dauerbetrieb. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.', en: 'RTS Industrial – industrial return system for loads up to 100 kg. Robust continuous operation. Asamer: authorized Barbaric dealer for CZ, SK & HU.', cz: 'RTS Industrial – průmyslový vratný systém pro nosnosti do 100 kg. Robustní provoz. Asamer: prodejce Barbaric CZ, SK a HU.', sk: 'RTS Industrial – priemyselný vratný systém pre nosnosti do 100 kg. Robustná prevádzka. Asamer: predajca Barbaric CZ, SK a HU.', hu: 'RTS Industrial – ipari visszafutó 100 kg-ig. Robusztus folyamatos üzem. Asamer: hivatalos Barbaric viszonteladó CZ, SK és HU.' },
   },
   {
@@ -499,7 +499,7 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       sk: { 'Rýchlosť dopravníka': 'až 70 m/min', 'Výstup': '1 000–1 200 dielov/zmena', 'Typ stroja': 'Priechodné stroje (olepovačky hrán, vŕtacie linky)', 'Veľkosť dávky': '1 (jednotlivé diely)' },
       hu: { 'Szállítási sebesség': 'akár 70 m/perc', 'Kibocsátás': '1 000–1 200 darab/műszak', 'Géptípus': 'Átmenő gépek (élzárógépek, fúrósorok)', 'Tételméret': '1 (egyedi darabok)' },
     },
-    seoTitle: { de: 'Barbaric Automatisches Teilehandling – Händler CZ/SK/HU | Asamer', en: 'Barbaric Automatic Parts Handling – dealer CZ/SK/HU | Asamer', cz: 'Barbaric automatické zacházení s díly – koupit přes Asamer', sk: 'Barbaric automatické zaobchádzanie s dielmi – kúpiť cez Asamer', hu: 'Barbaric automatikus alkatrészkezelés – Asamer viszonteladó' },
+    seoTitle: { de: 'Automatisches Teilehandling Barbaric – Händler CZ/SK/HU | Asamer', en: 'Automatic Parts Handling Barbaric – dealer CZ/SK/HU | Asamer', cz: 'Automatické zacházení s díly Barbaric – koupit přes Asamer', sk: 'Automatické zaobchádzanie s dielmi Barbaric – kúpiť cez Asamer', hu: 'Automatikus alkatrészkezelés Barbaric – Asamer viszonteladó' },
     seoDescription: { de: 'Teilehandling – automatisches Handling für Losgröße 1 an Durchlaufmaschinen. Individuelle Sortierung. Asamer: Barbaric-Händler CZ, SK & HU.', en: 'Parts handling – automatic handling for batch-size-1 on throughfeed machines. Individual sorting. Asamer: Barbaric dealer CZ, SK & HU.', cz: 'Zacházení s díly – automatické pro dávku 1 na průchozích strojích. Individuální třídění. Asamer: prodejce Barbaric CZ, SK a HU.', sk: 'Zaobchádzanie s dielmi – automatické pre dávku 1 na priechodných strojoch. Individuálne triedenie. Asamer: predajca Barbaric CZ, SK a HU.', hu: 'Alkatrészkezelés – automatikus egydarabos gyártáshoz átmenő gépeken. Egyedi válogatás. Asamer: Barbaric viszonteladó CZ, SK és HU.' },
   },
 
@@ -519,7 +519,7 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       hu: { 'Raktárterület': 'kb. 120 m² kis helyen', 'Ciklusidő': 'akár 6 darab/perc', 'Max. lapméret': '2 800 × 1 950 mm', 'Max. vastagság': '25 mm (opcionálisan 40 mm)', 'Fiók meghajtás': 'Minden fiók egyedileg meghajtva (átfedő nyitási/zárási ciklusok)' },
     },
     highlights: ['~120 m² storage area on a minimal footprint', 'Cycle time ~6 parts/min for consistent part flow', 'Max. panel size 2.8 × 1.95 m, max. thickness 25 mm (opt. 40 mm)', 'Available in single and double-sided versions', 'Individual drive per drawer for precise, independent control'],
-    seoTitle: { de: 'Barbaric PBX Teilepuffer – Händler CZ/SK/HU | Asamer', en: 'Barbaric PBX Parts Buffer – dealer CZ/SK/HU | Asamer', cz: 'Barbaric PBX buffer dílů – koupit přes Asamer', sk: 'Barbaric PBX buffer dielov – kúpiť cez Asamer', hu: 'Barbaric PBX alkatrész-puffer – Asamer viszonteladó' },
+    seoTitle: { de: 'Teilepuffer PBX Barbaric – Händler CZ/SK/HU | Asamer', en: 'Parts Buffer PBX Barbaric – dealer CZ/SK/HU | Asamer', cz: 'Buffer dílů PBX Barbaric – koupit přes Asamer', sk: 'Buffer dielov PBX Barbaric – kúpiť cez Asamer', hu: 'Alkatrész-puffer PBX Barbaric – Asamer viszonteladó' },
     seoDescription: { de: 'PBX – Teilepuffer für gleichmäßigen Teilefluss. ~120 m², 6 Teile/min, max. 2,8×1,95 m. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.', en: 'PBX – parts buffer for even part flow. ~120 m², 6 parts/min, max. 2.8×1.95 m. Asamer: authorized Barbaric dealer for CZ, SK & HU.', cz: 'PBX – buffer dílů pro rovnoměrný tok. ~120 m², 6 dílů/min, max. 2,8×1,95 m. Asamer: prodejce Barbaric CZ, SK a HU.', sk: 'PBX – buffer dielov pre rovnomerný tok. ~120 m², 6 dielov/min, max. 2,8×1,95 m. Asamer: predajca Barbaric CZ, SK a HU.', hu: 'PBX – alkatrész-puffer egyenletes áramláshoz. ~120 m², 6 db/perc, max. 2,8×1,95 m. Asamer: Barbaric viszonteladó CZ, SK és HU.' },
   },
 
@@ -539,7 +539,7 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       sk: { 'Vhodné pre': 'Dvere, rámy, podlahoviny (vinyl/parkety), balený tovar', 'Rozpoznanie': 'Čiarový kód + optická detekcia dielov', 'Napojenie': 'ERP / logistické systémy', 'Vychystávanie': 'Plne automatická kompletácia zákaziek', 'Manipulátor': 'Prísavky + zvierací mechanizmus', 'Voliteľne': 'Rozšírenie CSF dosková traversa' },
       hu: { 'Alkalmas': 'Ajtók, keretek, padlóburkolatok (vinyl/parketta), csomagolt áruk', 'Felismerés': 'Vonalkód + optikai alkatrész-érzékelés', 'Integráció': 'ERP / logisztikai rendszerek', 'Komissiózás': 'Teljesen automatikus rendelés-összeállítás', 'Manipulátor': 'Tapadókorongok + szorítómechanizmus', 'Opció': 'CSF laptraverz bővítés' },
     },
-    seoTitle: { de: 'Barbaric DRX Türenlagersystem – Händler CZ/SK/HU | Asamer', en: 'Barbaric DRX Door Storage System – dealer CZ/SK/HU | Asamer', cz: 'Barbaric DRX skladovací systém dveří – koupit přes Asamer', sk: 'Barbaric DRX skladovací systém dverí – kúpiť cez Asamer', hu: 'Barbaric DRX ajtóraktározó rendszer – Asamer viszonteladó' },
+    seoTitle: { de: 'Türenlagersystem DRX Barbaric – Händler CZ/SK/HU | Asamer', en: 'Door Storage System DRX Barbaric – dealer CZ/SK/HU | Asamer', cz: 'Skladovací systém dveří DRX Barbaric – koupit přes Asamer', sk: 'Skladovací systém dverí DRX Barbaric – kúpiť cez Asamer', hu: 'Ajtóraktározó rendszer DRX Barbaric – Asamer viszonteladó' },
     seoDescription: { de: 'DRX – neues Türenlagersystem. Kompakt, hohe Kapazität, industrielle Fertigung. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.', en: 'DRX – new door storage system. Compact, high capacity, industrial production. Asamer: authorized Barbaric dealer for CZ, SK & HU.', cz: 'DRX – nový skladovací systém dveří. Kompaktní, vysoká kapacita. Asamer: autorizovaný prodejce Barbaric pro CZ, SK a HU.', sk: 'DRX – nový skladovací systém dverí. Kompaktný, vysoká kapacita. Asamer: autorizovaný predajca Barbaric pre CZ, SK a HU.', hu: 'DRX – új ajtóraktár rendszer. Kompakt, nagy kapacitás, ipari gyártás. Asamer: hivatalos Barbaric viszonteladó CZ, SK és HU.' },
   },
   {
@@ -557,7 +557,7 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       sk: { 'Typ': 'Špecializovaný sklad dverí', 'Napojenie': 'ERP + výrobné systémy', 'Prevádzka': 'Priemyselná nepretržitá' },
       hu: { 'Típus': 'Speciális ajtóraktár', 'Integráció': 'ERP + gyártási rendszerek', 'Üzemmód': 'Folyamatos ipari' },
     },
-    seoTitle: { de: 'Barbaric CSF Industrial Türen – Händler CZ/SK/HU | Asamer', en: 'Barbaric CSF Industrial Doors – dealer CZ/SK/HU | Asamer', cz: 'Barbaric CSF Industrial dveře – koupit přes Asamer', sk: 'Barbaric CSF Industrial dvere – kúpiť cez Asamer', hu: 'Barbaric CSF Industrial ajtók – Asamer viszonteladó' },
+    seoTitle: { de: 'Türen CSF Industrial Barbaric – Händler CZ/SK/HU | Asamer', en: 'Doors CSF Industrial Barbaric – dealer CZ/SK/HU | Asamer', cz: 'Dveře CSF Industrial Barbaric – koupit přes Asamer', sk: 'Dvere CSF Industrial Barbaric – kúpiť cez Asamer', hu: 'Ajtók CSF Industrial Barbaric – Asamer viszonteladó' },
     seoDescription: { de: 'CSF Industrial Türen – spezialisiertes Flächenlager für Türenproduktion. Hohe Kapazität. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.', en: 'CSF Industrial Doors – specialized panel storage for door production. High capacity. Asamer: authorized Barbaric dealer for CZ, SK & HU.', cz: 'CSF Industrial Dveře – specializovaný sklad pro výrobu dveří. Vysoká kapacita. Asamer: prodejce Barbaric CZ, SK a HU.', sk: 'CSF Industrial Dvere – špecializovaný sklad pre výrobu dverí. Vysoká kapacita. Asamer: predajca Barbaric CZ, SK a HU.', hu: 'CSF Industrial Ajtók – speciális raktár ajtógyártáshoz. Nagy kapacitás. Asamer: hivatalos Barbaric viszonteladó CZ, SK és HU.' },
   },
   {
@@ -575,7 +575,7 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       sk: { 'Cykly': 'až 6 cyklov/min', 'Max. nosnosť': '80 kg', 'Výška stohovania': 'až 1 800 mm', 'Celková výška': 'Nízka', 'Chápadlo': 'Plošné prísavky pre štrukturované povrchy dverí', 'Tvorba vákua': 'Pomocou ejektorov' },
       hu: { 'Ciklusok': 'akár 6 ciklus/perc', 'Max. teherbírás': '80 kg', 'Rakodási magasság': 'akár 1 800 mm', 'Beépítési magasság': 'Alacsony', 'Megfogó': 'Felületi tapadókorongok strukturált ajtófelületekhez', 'Vákuumtermelés': 'Ejektorokkal' },
     },
-    seoTitle: { de: 'Barbaric TMP Türenmanipulator – Händler CZ/SK/HU | Asamer', en: 'Barbaric TMP Door Manipulator – dealer CZ/SK/HU | Asamer', cz: 'Barbaric TMP manipulátor dveří – koupit přes Asamer', sk: 'Barbaric TMP manipulátor dverí – kúpiť cez Asamer', hu: 'Barbaric TMP ajtómanipulátor – Asamer viszonteladó' },
+    seoTitle: { de: 'Türenmanipulator TMP Barbaric – Händler CZ/SK/HU | Asamer', en: 'Door Manipulator TMP Barbaric – dealer CZ/SK/HU | Asamer', cz: 'Manipulátor dveří TMP Barbaric – koupit přes Asamer', sk: 'Manipulátor dverí TMP Barbaric – kúpiť cez Asamer', hu: 'Ajtómanipulátor TMP Barbaric – Asamer viszonteladó' },
     seoDescription: { de: 'TMP – Türenmanipulator für CNC-Beschickung und Stapelung. Schnell und kompakt. Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.', en: 'TMP – door manipulator for CNC feeding and stacking. Fast and compact. Asamer: authorized Barbaric dealer for CZ, SK & HU.', cz: 'TMP – manipulátor dveří pro podávání CNC a stohování. Rychlý a kompaktní. Asamer: prodejce Barbaric CZ, SK a HU.', sk: 'TMP – manipulátor dverí pre podávanie CNC a stohovanie. Rýchly a kompaktný. Asamer: predajca Barbaric CZ, SK a HU.', hu: 'TMP – ajtómanipulátor CNC adagoláshoz és rakodáshoz. Gyors és kompakt. Asamer: hivatalos Barbaric viszonteladó CZ, SK és HU.' },
   },
 
@@ -595,7 +595,7 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
       sk: { 'Max. cykly': '10 cyklov/min', 'Veľkosť dosky min.': '2 000 × 600 mm', 'Veľkosť dosky max.': '5 600 × 2 100 mm (závisí od modelu)', 'Presnosť aplikácie': '±1 mm', 'Štandardný štítok': '98 × 55 mm', 'Max. šírka tlače': '104 mm', 'Riadenie osí': 'Frekvenčný menič', 'Formáty súborov': 'JPG, BMP', 'Rozhranie': 'Štandard k softvéru nározového plánu / nestingu' },
       hu: { 'Max. ciklusok': '10 ciklus/perc', 'Lapméret min.': '2 000 × 600 mm', 'Lapméret max.': '5 600 × 2 100 mm (modellfüggő)', 'Applikációs pontosság': '±1 mm', 'Standard címke': '98 × 55 mm', 'Max. nyomtatási szélesség': '104 mm', 'Tengelyvezérlés': 'Frekvenciaváltó', 'Fájlformátumok': 'JPG, BMP', 'Interfész': 'Standard szabási terv / nesting szoftverhez' },
     },
-    seoTitle: { de: 'Barbaric LPS Labeling Printer – Händler CZ/SK/HU | Asamer', en: 'Barbaric LPS Labeling Printer – dealer CZ/SK/HU | Asamer', cz: 'Barbaric LPS tiskárna štítků – koupit přes Asamer', sk: 'Barbaric LPS tlačiareň štítkov – kúpiť cez Asamer', hu: 'Barbaric LPS címkenyomtató – Asamer viszonteladó' },
+    seoTitle: { de: 'Labeling Printer LPS Barbaric – Händler CZ/SK/HU | Asamer', en: 'Labeling Printer LPS Barbaric – dealer CZ/SK/HU | Asamer', cz: 'Tiskárna štítků LPS Barbaric – koupit přes Asamer', sk: 'Tlačiareň štítkov LPS Barbaric – kúpiť cez Asamer', hu: 'Címkenyomtató LPS Barbaric – Asamer viszonteladó' },
     seoDescription: { de: 'LPS – Labeling Printer für Platten-Etikettierung vor dem Zuschnitt. Lückenlose Nachverfolgung. Asamer: Barbaric-Händler CZ, SK & HU.', en: 'LPS – labeling printer for panel identification before cutting. Full traceability. Asamer: Barbaric dealer CZ, SK & HU.', cz: 'LPS – tiskárna štítků pro identifikaci desek před řezáním. Plná sledovatelnost. Asamer: prodejce Barbaric CZ, SK a HU.', sk: 'LPS – tlačiareň štítkov pre identifikáciu dosiek pred rezaním. Plná sledovateľnosť. Asamer: predajca Barbaric CZ, SK a HU.', hu: 'LPS – címkenyomtató lapok azonosításához vágás előtt. Teljes nyomonkövetés. Asamer: Barbaric viszonteladó CZ, SK és HU.' },
   },
 ];

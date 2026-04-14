@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "vercel:preview": "vercel",
     "vercel:prod": "vercel --prod",
-    "generate:sitemap": "tsx scripts/generate-sitemap.ts"
+    "generate:sitemap": "tsx scripts/generate-sitemap.ts",
+    "analyze": "vite build --mode analyze"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -64,6 +65,7 @@
     "split-type": "^0.3.4",
     "tailwind-merge": "^3.4.0",
     "vaul": "^1.1.2",
+    "web-vitals": "^5.2.0",
     "zod": "^4.3.5"
   },
   "devDependencies": {
@@ -79,6 +81,7 @@
     "globals": "^16.5.0",
     "kimi-plugin-inspect-react": "^1.0.3",
     "postcss": "^8.5.6",
+    "rollup-plugin-visualizer": "^7.0.1",
     "tailwindcss": "^3.4.19",
     "tailwindcss-animate": "^1.0.7",
     "tsx": "^4.21.0",

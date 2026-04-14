@@ -252,11 +252,11 @@ const IMG_EXPERT = `${G}/expert.jpg`;
 const IMG_TWIN = `${G}/twin.jpg`;
 
 const seoT = (name: string): Record<Language, string> => ({
-  de: `Gannomat ${name} – Asamer Händler CZ/SK/HU`,
-  en: `Gannomat ${name} – Asamer dealer CZ/SK/HU`,
-  cz: `Gannomat ${name} – koupit přes Asamer`,
-  sk: `Gannomat ${name} – kúpiť cez Asamer`,
-  hu: `Gannomat ${name} – Asamer viszonteladó CZ/SK/HU`,
+  de: `${name} Gannomat – Asamer Händler CZ/SK/HU`,
+  en: `${name} Gannomat – Asamer dealer CZ/SK/HU`,
+  cz: `${name} Gannomat – koupit přes Asamer`,
+  sk: `${name} Gannomat – kúpiť cez Asamer`,
+  hu: `${name} Gannomat – Asamer viszonteladó CZ/SK/HU`,
 });
 
 const seoD = (name: string, de: string, en: string, cz: string): Record<Language, string> => ({

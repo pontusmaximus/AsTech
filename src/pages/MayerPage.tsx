@@ -51,7 +51,7 @@ const MayerPage = () => {
   const productList = itemListSchema(
     tr('Mayer Plattenaufteilsägen', 'Mayer Panel Saws', 'Mayer formátovací pily'),
     allProducts.map((p) => ({
-      name: `Mayer ${p.name}`,
+      name: `${p.name} Mayer`,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildMayerProductPath(lang, p))}`,
       image: p.image,
       description: p.seoDescription[lang],
@@ -107,9 +107,9 @@ const MayerPage = () => {
                         key={product.slug}
                         to={buildLocalizedPath(lang, buildMayerProductPath(lang, product))}
                         image={product.image}
-                        imageAlt={`Mayer ${product.name}`}
+                        imageAlt={`${product.name} Mayer`}
                         categoryLabel={MAYER_CATEGORY_LABELS[c.cat][lang]}
-                        name={`Mayer ${product.name}`}
+                        name={`${product.name} Mayer`}
                         bullets={[product.tagline[lang]]}
                         detailLabel={tr('Details ansehen', 'View details', 'Zobrazit detail')}
                       />

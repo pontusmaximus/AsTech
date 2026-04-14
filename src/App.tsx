@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback, createContext, useContext } from 'react';
+import { useState, useEffect, useMemo, useCallback, createContext, useContext, lazy, Suspense } from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -15,29 +15,32 @@ import type { Language, Translations } from './i18n';
 import translations from './i18n';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
-import MayerPage from './pages/MayerPage';
-import OttPage from './pages/OttPage';
-import BarbaricPage from './pages/BarbaricPage';
-import FinancingPage from './pages/FinancingPage';
-import SolutionsPage from './pages/SolutionsPage';
-import ServicePage from './pages/ServicePage';
-import ContactPage from './pages/ContactPage';
-import ImprintPage from './pages/ImprintPage';
-import UsedMachinesPage from './pages/UsedMachinesPage';
-import OttProductPage from './pages/OttProductPage';
-import MayerProductPage from './pages/MayerProductPage';
-import BarbaricProductPage from './pages/BarbaricProductPage';
-import GannomatPage from './pages/GannomatPage';
-import GannomatProductPage from './pages/GannomatProductPage';
-import FaqPage from './pages/FaqPage';
-import GuidePurVsEvaPage from './pages/GuidePurVsEvaPage';
-import GuideEdgebanderPage from './pages/GuideEdgebanderPage';
-import GuideWarehouseAutomationPage from './pages/GuideWarehouseAutomationPage';
-import NotFoundPage from './pages/NotFoundPage';
+const MayerPage = lazy(() => import('./pages/MayerPage'));
+const OttPage = lazy(() => import('./pages/OttPage'));
+const BarbaricPage = lazy(() => import('./pages/BarbaricPage'));
+const FinancingPage = lazy(() => import('./pages/FinancingPage'));
+const SolutionsPage = lazy(() => import('./pages/SolutionsPage'));
+const ServicePage = lazy(() => import('./pages/ServicePage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const ImprintPage = lazy(() => import('./pages/ImprintPage'));
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
+const TermsPage = lazy(() => import('./pages/TermsPage'));
+const UsedMachinesPage = lazy(() => import('./pages/UsedMachinesPage'));
+const OttProductPage = lazy(() => import('./pages/OttProductPage'));
+const MayerProductPage = lazy(() => import('./pages/MayerProductPage'));
+const BarbaricProductPage = lazy(() => import('./pages/BarbaricProductPage'));
+const GannomatPage = lazy(() => import('./pages/GannomatPage'));
+const GannomatProductPage = lazy(() => import('./pages/GannomatProductPage'));
+const FaqPage = lazy(() => import('./pages/FaqPage'));
+const GuidePurVsEvaPage = lazy(() => import('./pages/GuidePurVsEvaPage'));
+const GuideEdgebanderPage = lazy(() => import('./pages/GuideEdgebanderPage'));
+const GuideWarehouseAutomationPage = lazy(() => import('./pages/GuideWarehouseAutomationPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 import Footer from './sections/Footer';
 import CookieConsent from './components/CookieConsent';
 import AnalyticsTracker from './components/AnalyticsTracker';
 import Ga4Loader from './components/Ga4Loader';
+import WebVitalsReporter from './components/WebVitalsReporter';
 import {
   buildLocalizedPath,
   DEFAULT_LANGUAGE,
@@ -152,6 +155,16 @@ const LEGACY_SLUGS = [
   'service',
   'szerviz',
   'faq',
+  'privacy',
+  'datenschutz',
+  'ochrana-osobnich-udaju',
+  'ochrana-osobnych-udajov',
+  'adatvedelem',
+  'terms',
+  'agb',
+  'obchodni-podminky',
+  'obchodne-podmienky',
+  'altalanos-szerzodesi-feltetelek',
 ];
 
 const AppRoutes = () => {
@@ -194,6 +207,12 @@ const AppRoutes = () => {
         ))}
         {getAllSlugVariants('/imprint').map((s) => (
           <Route key={s} path={s} element={<LocalizedRoute page={<ImprintPage />} czSlug="/imprint" />} />
+        ))}
+        {getAllSlugVariants('/privacy').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<PrivacyPolicyPage />} czSlug="/privacy" />} />
+        ))}
+        {getAllSlugVariants('/terms').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<TermsPage />} czSlug="/terms" />} />
         ))}
         {getAllSlugVariants('/faq').map((s) => (
           <Route key={s} path={s} element={<LocalizedRoute page={<FaqPage />} czSlug="/faq" />} />
@@ -307,11 +326,14 @@ const LanguageAppLayout = () => {
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
       <LanguageContext.Provider value={{ lang, t, setLang: handleSetLang, buildPath }}>
         <Ga4Loader />
+        <WebVitalsReporter />
         <AnalyticsTracker />
         <div className={`app ${isLoaded ? 'loaded' : ''}`}>
           <Navigation />
           <main>
-            <Outlet />
+            <Suspense fallback={<div aria-hidden="true" style={{ minHeight: '60vh' }} />}>
+              <Outlet />
+            </Suspense>
           </main>
           <Footer />
           <CookieConsent />

@@ -46,7 +46,7 @@ const OttPage = () => {
   const productList = itemListSchema(
     tr('OTT Kantenanleimmaschinen', 'OTT Edgebanding Machines', 'OTT olepovačky hran'),
     allProducts.map((p) => ({
-      name: `OTT ${p.name}`,
+      name: `${p.name} OTT`,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildOttProductPath(lang, p))}`,
       image: p.image,
       description: p.seoDescription[lang],
@@ -109,10 +109,10 @@ const OttPage = () => {
                         key={product.slug}
                         to={buildPath(buildOttProductPath(lang, product))}
                         image={product.image}
-                        imageAlt={`OTT ${product.name}`}
+                        imageAlt={`${product.name} OTT`}
                         badge={product.badge}
                         categoryLabel={OTT_CATEGORY_LABELS[c.cat][lang]}
-                        name={`OTT ${product.name}`}
+                        name={`${product.name} OTT`}
                         bullets={product.usp ? [product.usp[lang], product.tagline[lang]] : undefined}
                         detailLabel={tr('Details ansehen', 'View details', 'Zobrazit detail')}
                       />

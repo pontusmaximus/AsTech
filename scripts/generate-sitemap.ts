@@ -131,13 +131,13 @@ GANNOMAT_PRODUCTS.forEach((product) => {
 const getPriority = (lang: Language, canonicalSlug: string): string => {
   if (lang === DEFAULT_LANGUAGE && canonicalSlug === '/') return '1.0';
   if (lang === DEFAULT_LANGUAGE) return '0.9';
-  if (canonicalSlug === '/imprint') return '0.1';
+  if (canonicalSlug === '/imprint' || canonicalSlug === '/privacy' || canonicalSlug === '/terms') return '0.1';
   return '0.7';
 };
 
 const getChangefreq = (canonicalSlug: string): string => {
   if (canonicalSlug === '/') return 'weekly';
-  if (canonicalSlug === '/imprint') return 'yearly';
+  if (canonicalSlug === '/imprint' || canonicalSlug === '/privacy' || canonicalSlug === '/terms') return 'yearly';
   return 'monthly';
 };
 

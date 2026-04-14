@@ -1,7 +1,5 @@
 /* Asamer Technologie GmbH - Themeable Design */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
-
 :root {
   --site-bg-rgb: 10, 10, 15;
   --site-bg: rgb(var(--site-bg-rgb));

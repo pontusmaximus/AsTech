@@ -139,6 +139,7 @@ export interface MayerProduct {
   badge?: Record<Language, string>;
   seoTitle: Record<Language, string>;
   seoDescription: Record<Language, string>;
+  seoKeywords?: Record<Language, string[]>;
 }
 
 /* ------------------------------------------------------------------ */
@@ -180,11 +181,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       feedSpeed: '5–100 m/min',
     },
     seoTitle: {
-      de: 'Mayer kappa automatic 80 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
-      en: 'Mayer kappa automatic 80 Panel Saw – Buy via Asamer dealer CZ/SK/HU',
-      cz: 'Mayer kappa automatic 80 formátovací pila – koupit přes Asamer',
-      sk: 'Mayer kappa automatic 80 formátovacia píla – kúpiť cez Asamer',
-      hu: 'Mayer kappa automatic 80 lapszabó fűrész – vásárlás Asamer-en keresztül',
+      de: 'Plattensäge kappa automatic 80 Mayer kaufen – Asamer Händler CZ/SK/HU',
+      en: 'Panel Saw kappa automatic 80 Mayer – Buy via Asamer dealer CZ/SK/HU',
+      cz: 'Formátovací pila kappa automatic 80 Mayer – koupit přes Asamer',
+      sk: 'Formátovacia píla kappa automatic 80 Mayer – kúpiť cez Asamer',
+      hu: 'Lapszabó fűrész kappa automatic 80 Mayer – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
       de: 'kappa automatic 80 – horizontale Plattensäge, Einstiegsmodell. 80 mm Schnitthöhe bei 3.200 mm Schnittlänge. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -192,6 +193,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'kappa automatic 80 – horizontální formátovací pila, vstupní model. Výška řezu 80 mm, délka 3 200 mm. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'kappa automatic 80 – horizontálna formátovacia píla, vstupný model. Výška rezu 80 mm, dĺžka 3 200 mm. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'kappa automatic 80 – horizontális lapszabó fűrész, belépő modell. 80 mm vágási magasság, 3 200 mm hossz. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'kappa automatic 80', 'Plattensäge', 'Plattenaufteilsäge', 'horizontale Plattensäge', 'Aufteilzentrum', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'kappa automatic 80', 'panel saw', 'beam saw', 'horizontal panel saw', 'cutting center', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'kappa automatic 80', 'formátovací pila', 'nářezové centrum', 'horizontální pila', 'dělicí pila', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'kappa automatic 80', 'formátovacia píla', 'nářezové centrum', 'horizontálna píla', 'deliaca píla', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'kappa automatic 80', 'lapszabó fűrész', 'vágóközpont', 'horizontális fűrész', 'Felder Group', 'Asamer'],
     },
   },
   {
@@ -227,11 +235,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       feedSpeed: '5–100 m/min',
     },
     seoTitle: {
-      de: 'Mayer kappa automatic 100 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
-      en: 'Mayer kappa automatic 100 Panel Saw – Buy via Asamer dealer CZ/SK/HU',
-      cz: 'Mayer kappa automatic 100 formátovací pila – koupit přes Asamer',
-      sk: 'Mayer kappa automatic 100 formátovacia píla – kúpiť cez Asamer',
-      hu: 'Mayer kappa automatic 100 lapszabó fűrész – vásárlás Asamer-en keresztül',
+      de: 'Plattensäge kappa automatic 100 Mayer kaufen – Asamer Händler CZ/SK/HU',
+      en: 'Panel Saw kappa automatic 100 Mayer – Buy via Asamer dealer CZ/SK/HU',
+      cz: 'Formátovací pila kappa automatic 100 Mayer – koupit přes Asamer',
+      sk: 'Formátovacia píla kappa automatic 100 Mayer – kúpiť cez Asamer',
+      hu: 'Lapszabó fűrész kappa automatic 100 Mayer – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
       de: 'kappa automatic 100 – horizontale Plattensäge, professioneller Zuschnitt. 100 mm Schnitthöhe, 3.200 mm. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -239,6 +247,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'kappa automatic 100 – horizontální formátovací pila pro profesionální řezání. Výška řezu 100 mm. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'kappa automatic 100 – horizontálna formátovacia píla pre profesionálne rezanie. Výška rezu 100 mm. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'kappa automatic 100 – horizontális lapszabó fűrész professzionális vágáshoz. 100 mm magasság. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'kappa automatic 100', 'Plattensäge', 'Plattenaufteilsäge', 'horizontale Plattensäge', 'Aufteilzentrum', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'kappa automatic 100', 'panel saw', 'beam saw', 'horizontal panel saw', 'cutting center', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'kappa automatic 100', 'formátovací pila', 'nářezové centrum', 'horizontální pila', 'dělicí pila', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'kappa automatic 100', 'formátovacia píla', 'nářezové centrum', 'horizontálna píla', 'deliaca píla', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'kappa automatic 100', 'lapszabó fűrész', 'vágóközpont', 'horizontális fűrész', 'Felder Group', 'Asamer'],
     },
   },
   {
@@ -274,11 +289,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       feedSpeed: '5–100 m/min',
     },
     seoTitle: {
-      de: 'Mayer kappa automatic 120 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
-      en: 'Mayer kappa automatic 120 Panel Saw – Buy via Asamer dealer CZ/SK/HU',
-      cz: 'Mayer kappa automatic 120 formátovací pila – koupit přes Asamer',
-      sk: 'Mayer kappa automatic 120 formátovacia píla – kúpiť cez Asamer',
-      hu: 'Mayer kappa automatic 120 lapszabó fűrész – vásárlás Asamer-en keresztül',
+      de: 'Plattensäge kappa automatic 120 Mayer kaufen – Asamer Händler CZ/SK/HU',
+      en: 'Panel Saw kappa automatic 120 Mayer – Buy via Asamer dealer CZ/SK/HU',
+      cz: 'Formátovací pila kappa automatic 120 Mayer – koupit přes Asamer',
+      sk: 'Formátovacia píla kappa automatic 120 Mayer – kúpiť cez Asamer',
+      hu: 'Lapszabó fűrész kappa automatic 120 Mayer – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
       de: 'kappa automatic 120 – horizontale Plattensäge für mittlere Volumes. 120 mm Schnitthöhe, 3.800 mm. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -286,6 +301,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'kappa automatic 120 – horizontální formátovací pila pro střední objemy. Výška řezu 120 mm, délka 3 800 mm. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'kappa automatic 120 – horizontálna formátovacia píla pre stredné objemy. Výška rezu 120 mm, dĺžka 3 800 mm. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'kappa automatic 120 – horizontális lapszabó fűrész közepes gyártáshoz. 120 mm magasság, 3 800 mm hossz. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'kappa automatic 120', 'Plattensäge', 'Plattenaufteilsäge', 'horizontale Plattensäge', 'Aufteilzentrum', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'kappa automatic 120', 'panel saw', 'beam saw', 'horizontal panel saw', 'cutting center', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'kappa automatic 120', 'formátovací pila', 'nářezové centrum', 'horizontální pila', 'dělicí pila', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'kappa automatic 120', 'formátovacia píla', 'nářezové centrum', 'horizontálna píla', 'deliaca píla', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'kappa automatic 120', 'lapszabó fűrész', 'vágóközpont', 'horizontális fűrész', 'Felder Group', 'Asamer'],
     },
   },
   {
@@ -321,11 +343,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       feedSpeed: '5–100 m/min',
     },
     seoTitle: {
-      de: 'Mayer kappa automatic 140 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
-      en: 'Mayer kappa automatic 140 Panel Saw – Buy via Asamer dealer CZ/SK/HU',
-      cz: 'Mayer kappa automatic 140 formátovací pila – koupit přes Asamer',
-      sk: 'Mayer kappa automatic 140 formátovacia píla – kúpiť cez Asamer',
-      hu: 'Mayer kappa automatic 140 lapszabó fűrész – vásárlás Asamer-en keresztül',
+      de: 'Plattensäge kappa automatic 140 Mayer kaufen – Asamer Händler CZ/SK/HU',
+      en: 'Panel Saw kappa automatic 140 Mayer – Buy via Asamer dealer CZ/SK/HU',
+      cz: 'Formátovací pila kappa automatic 140 Mayer – koupit přes Asamer',
+      sk: 'Formátovacia píla kappa automatic 140 Mayer – kúpiť cez Asamer',
+      hu: 'Lapszabó fűrész kappa automatic 140 Mayer – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
       de: 'kappa automatic 140 – Flaggschiff-Plattensäge. 140 mm, 4.300 mm, bis zu 100 m/min. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -333,6 +355,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'kappa automatic 140 – vlajková formátovací pila. 140 mm, 4 300 mm, do 100 m/min. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'kappa automatic 140 – vlajková formátovacia píla. 140 mm, 4 300 mm, do 100 m/min. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'kappa automatic 140 – zászlóshajó lapszabó fűrész. 140 mm, 4 300 mm, 100 m/perc-ig. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'kappa automatic 140', 'Plattensäge', 'Plattenaufteilsäge', 'horizontale Plattensäge', 'Aufteilzentrum', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'kappa automatic 140', 'panel saw', 'beam saw', 'horizontal panel saw', 'cutting center', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'kappa automatic 140', 'formátovací pila', 'nářezové centrum', 'horizontální pila', 'dělicí pila', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'kappa automatic 140', 'formátovacia píla', 'nářezové centrum', 'horizontálna píla', 'deliaca píla', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'kappa automatic 140', 'lapszabó fűrész', 'vágóközpont', 'horizontális fűrész', 'Felder Group', 'Asamer'],
     },
   },
 
@@ -371,11 +400,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       motor: '18/24 kW',
     },
     seoTitle: {
-      de: 'Mayer advanced line 100 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
-      en: 'Mayer advanced line 100 Panel Saw – Buy via Asamer dealer CZ/SK/HU',
-      cz: 'Mayer advanced line 100 formátovací pila – koupit přes Asamer',
-      sk: 'Mayer advanced line 100 formátovacia píla – kúpiť cez Asamer',
-      hu: 'Mayer advanced line 100 lapszabó fűrész – vásárlás Asamer-en keresztül',
+      de: 'Plattensäge advanced line 100 Mayer kaufen – Asamer Händler CZ/SK/HU',
+      en: 'Panel Saw advanced line 100 Mayer – Buy via Asamer dealer CZ/SK/HU',
+      cz: 'Formátovací pila advanced line 100 Mayer – koupit přes Asamer',
+      sk: 'Formátovacia píla advanced line 100 Mayer – kúpiť cez Asamer',
+      hu: 'Lapszabó fűrész advanced line 100 Mayer – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
       de: 'advanced line 100 – Plattensäge für Alu & Kunststoff. 100 mm Schnitthöhe, 18/24 kW Motor. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -383,6 +412,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'advanced line 100 – formátovací pila pro hliník a plasty. Výška řezu 100 mm, motor 18/24 kW. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'advanced line 100 – formátovacia píla pre hliník a plasty. Výška rezu 100 mm, motor 18/24 kW. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'advanced line 100 – lapszabó fűrész alumíniumhoz és műanyaghoz. 100 mm magasság, 18/24 kW motor. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'advanced line 100', 'Plattensäge', 'Aluminium Plattensäge', 'Aufteilzentrum', 'Kunststoff', 'NE-Metall', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'advanced line 100', 'panel saw', 'aluminium panel saw', 'cutting center', 'plastics', 'non-ferrous', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'advanced line 100', 'formátovací pila', 'nářezové centrum', 'pila na hliník', 'pila na plasty', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'advanced line 100', 'formátovacia píla', 'nářezové centrum', 'píla na hliník', 'píla na plasty', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'advanced line 100', 'lapszabó fűrész', 'vágóközpont', 'alumínium fűrész', 'műanyag fűrész', 'Felder Group', 'Asamer'],
     },
   },
   {
@@ -421,11 +457,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       bladeProjection: '142 mm',
     },
     seoTitle: {
-      de: 'Mayer advanced line 130 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
-      en: 'Mayer advanced line 130 Panel Saw – Buy via Asamer dealer CZ/SK/HU',
-      cz: 'Mayer advanced line 130 formátovací pila – koupit přes Asamer',
-      sk: 'Mayer advanced line 130 formátovacia píla – kúpiť cez Asamer',
-      hu: 'Mayer advanced line 130 lapszabó fűrész – vásárlás Asamer-en keresztül',
+      de: 'Plattensäge advanced line 130 Mayer kaufen – Asamer Händler CZ/SK/HU',
+      en: 'Panel Saw advanced line 130 Mayer – Buy via Asamer dealer CZ/SK/HU',
+      cz: 'Formátovací pila advanced line 130 Mayer – koupit přes Asamer',
+      sk: 'Formátovacia píla advanced line 130 Mayer – kúpiť cez Asamer',
+      hu: 'Lapszabó fűrész advanced line 130 Mayer – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
       de: 'advanced line 130 – Plattensäge für Alu & Kunststoff. 130 mm Schnitthöhe, integrierte Absaugung. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -433,6 +469,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'advanced line 130 – formátovací pila pro hliník a plasty. Výška řezu 130 mm, integrované odsávání. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'advanced line 130 – formátovacia píla pre hliník a plasty. Výška rezu 130 mm, integrované odsávanie. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'advanced line 130 – lapszabó fűrész alumíniumhoz és műanyaghoz. 130 mm magasság, integrált elszívás. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'advanced line 130', 'Plattensäge', 'Aluminium Plattensäge', 'Aufteilzentrum', 'Kunststoff', 'NE-Metall', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'advanced line 130', 'panel saw', 'aluminium panel saw', 'cutting center', 'plastics', 'non-ferrous', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'advanced line 130', 'formátovací pila', 'nářezové centrum', 'pila na hliník', 'pila na plasty', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'advanced line 130', 'formátovacia píla', 'nářezové centrum', 'píla na hliník', 'píla na plasty', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'advanced line 130', 'lapszabó fűrész', 'vágóközpont', 'alumínium fűrész', 'műanyag fűrész', 'Felder Group', 'Asamer'],
     },
   },
   {
@@ -478,11 +521,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       },
     },
     seoTitle: {
-      de: 'Mayer advanced line 160 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
-      en: 'Mayer advanced line 160 Panel Saw – Buy via Asamer dealer CZ/SK/HU',
-      cz: 'Mayer advanced line 160 formátovací pila – koupit přes Asamer',
-      sk: 'Mayer advanced line 160 formátovacia píla – kúpiť cez Asamer',
-      hu: 'Mayer advanced line 160 lapszabó fűrész – vásárlás Asamer-en keresztül',
+      de: 'Plattensäge advanced line 160 Mayer kaufen – Asamer Händler CZ/SK/HU',
+      en: 'Panel Saw advanced line 160 Mayer – Buy via Asamer dealer CZ/SK/HU',
+      cz: 'Formátovací pila advanced line 160 Mayer – koupit přes Asamer',
+      sk: 'Formátovacia píla advanced line 160 Mayer – kúpiť cez Asamer',
+      hu: 'Lapszabó fűrész advanced line 160 Mayer – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
       de: 'advanced line 160 – Hochleistungs-Plattensäge mit PC-Touchscreen. 160 mm Schnitthöhe. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -490,6 +533,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'advanced line 160 – vysokovýkonná formátovací pila s PC dotykovým displejem. Výška řezu 160 mm. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'advanced line 160 – vysokovýkonná formátovacia píla s PC dotykovým displejom. Výška rezu 160 mm. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'advanced line 160 – nagyteljesítményű lapszabó fűrész PC érintőképernyővel. 160 mm magasság. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'advanced line 160', 'Plattensäge', 'Aluminium Plattensäge', 'Aufteilzentrum', 'PC-Steuerung', 'Kunststoff', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'advanced line 160', 'panel saw', 'aluminium panel saw', 'cutting center', 'PC control', 'plastics', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'advanced line 160', 'formátovací pila', 'nářezové centrum', 'pila na hliník', 'PC řízení', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'advanced line 160', 'formátovacia píla', 'nářezové centrum', 'píla na hliník', 'PC riadenie', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'advanced line 160', 'lapszabó fűrész', 'vágóközpont', 'alumínium fűrész', 'PC-vezérlés', 'Felder Group', 'Asamer'],
     },
   },
   {
@@ -535,11 +585,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       },
     },
     seoTitle: {
-      de: 'Mayer advanced line 160 turn Plattensäge kaufen – Asamer Händler CZ/SK/HU',
-      en: 'Mayer advanced line 160 turn Panel Saw – Buy via Asamer dealer CZ/SK/HU',
-      cz: 'Mayer advanced line 160 turn formátovací pila – koupit přes Asamer',
-      sk: 'Mayer advanced line 160 turn formátovacia píla – kúpiť cez Asamer',
-      hu: 'Mayer advanced line 160 turn lapszabó fűrész – vásárlás Asamer-en keresztül',
+      de: 'Plattensäge advanced line 160 turn Mayer kaufen – Asamer Händler CZ/SK/HU',
+      en: 'Panel Saw advanced line 160 turn Mayer – Buy via Asamer dealer CZ/SK/HU',
+      cz: 'Formátovací pila advanced line 160 turn Mayer – koupit přes Asamer',
+      sk: 'Formátovacia píla advanced line 160 turn Mayer – kúpiť cez Asamer',
+      hu: 'Lapszabó fűrész advanced line 160 turn Mayer – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
       de: 'advanced line 160 turn – Plattensäge mit 90°-Wendeinheit. Beidseitige Bearbeitung, 160 mm. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -547,6 +597,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'advanced line 160 turn – formátovací pila s 90° otočnou jednotkou. Oboustranné zpracování. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'advanced line 160 turn – formátovacia píla s 90° otočnou jednotkou. Obojstranné spracovanie. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'advanced line 160 turn – lapszabó fűrész 90°-os forgató egységgel. Kétoldalas megmunkálás. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'advanced line 160 turn', 'Plattensäge', 'Aluminium Plattensäge', 'Aufteilzentrum', 'Wendeinheit', 'Kunststoff', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'advanced line 160 turn', 'panel saw', 'aluminium panel saw', 'cutting center', 'turning unit', 'plastics', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'advanced line 160 turn', 'formátovací pila', 'nářezové centrum', 'pila na hliník', 'otočná jednotka', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'advanced line 160 turn', 'formátovacia píla', 'nářezové centrum', 'píla na hliník', 'otočná jednotka', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'advanced line 160 turn', 'lapszabó fűrész', 'vágóközpont', 'alumínium fűrész', 'forgató egység', 'Felder Group', 'Asamer'],
     },
   },
   {
@@ -585,11 +642,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       bladeProjection: '215 mm',
     },
     seoTitle: {
-      de: 'Mayer advanced line 200 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
-      en: 'Mayer advanced line 200 Panel Saw – Buy via Asamer dealer CZ/SK/HU',
-      cz: 'Mayer advanced line 200 formátovací pila – koupit přes Asamer',
-      sk: 'Mayer advanced line 200 formátovacia píla – kúpiť cez Asamer',
-      hu: 'Mayer advanced line 200 lapszabó fűrész – vásárlás Asamer-en keresztül',
+      de: 'Plattensäge advanced line 200 Mayer kaufen – Asamer Händler CZ/SK/HU',
+      en: 'Panel Saw advanced line 200 Mayer – Buy via Asamer dealer CZ/SK/HU',
+      cz: 'Formátovací pila advanced line 200 Mayer – koupit přes Asamer',
+      sk: 'Formátovacia píla advanced line 200 Mayer – kúpiť cez Asamer',
+      hu: 'Lapszabó fűrész advanced line 200 Mayer – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
       de: 'advanced line 200 – Plattensäge für Großformate. 200 mm Schnitthöhe, 5.600 mm Schnittlänge. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -597,6 +654,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'advanced line 200 – formátovací pila pro velké formáty. Výška řezu 200 mm, délka 5 600 mm. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'advanced line 200 – formátovacia píla pre veľké formáty. Výška rezu 200 mm, dĺžka 5 600 mm. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'advanced line 200 – lapszabó fűrész nagy formátumokhoz. 200 mm magasság, 5 600 mm hossz. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'advanced line 200', 'Plattensäge', 'Aluminium Plattensäge', 'Aufteilzentrum', 'Großformat', 'Kunststoff', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'advanced line 200', 'panel saw', 'aluminium panel saw', 'cutting center', 'large format', 'plastics', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'advanced line 200', 'formátovací pila', 'nářezové centrum', 'pila na hliník', 'velký formát', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'advanced line 200', 'formátovacia píla', 'nářezové centrum', 'píla na hliník', 'veľký formát', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'advanced line 200', 'lapszabó fűrész', 'vágóközpont', 'alumínium fűrész', 'nagy formátum', 'Felder Group', 'Asamer'],
     },
   },
   {
@@ -635,11 +699,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       bladeProjection: '270 mm',
     },
     seoTitle: {
-      de: 'Mayer advanced line 250 Plattensäge kaufen – Asamer Händler CZ/SK/HU',
-      en: 'Mayer advanced line 250 Panel Saw – Buy via Asamer dealer CZ/SK/HU',
-      cz: 'Mayer advanced line 250 formátovací pila – koupit přes Asamer',
-      sk: 'Mayer advanced line 250 formátovacia píla – kúpiť cez Asamer',
-      hu: 'Mayer advanced line 250 lapszabó fűrész – vásárlás Asamer-en keresztül',
+      de: 'Plattensäge advanced line 250 Mayer kaufen – Asamer Händler CZ/SK/HU',
+      en: 'Panel Saw advanced line 250 Mayer – Buy via Asamer dealer CZ/SK/HU',
+      cz: 'Formátovací pila advanced line 250 Mayer – koupit přes Asamer',
+      sk: 'Formátovacia píla advanced line 250 Mayer – kúpiť cez Asamer',
+      hu: 'Lapszabó fűrész advanced line 250 Mayer – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
       de: 'advanced line 250 – stärkste Plattensäge ihrer Klasse. 55/75 kW Motor, 860 mm Sägeblatt. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -647,6 +711,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'advanced line 250 – nejsilnější formátovací pila ve své třídě. Motor 55/75 kW, kotouč 860 mm. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'advanced line 250 – najsilnejšia formátovacia píla vo svojej triede. Motor 55/75 kW, kotúč 860 mm. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'advanced line 250 – a kategória legerősebb lapszabó fűrésze. 55/75 kW motor, 860 mm lap. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'advanced line 250', 'Plattensäge', 'Plattenaufteilsäge', 'Aluminium Plattensäge', 'Aufteilzentrum', 'Industriesäge', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'advanced line 250', 'panel saw', 'panel dividing saw', 'aluminium panel saw', 'cutting center', 'industrial saw', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'advanced line 250', 'formátovací pila', 'nářezové centrum', 'dělicí pila', 'pila na hliník', 'průmyslová pila', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'advanced line 250', 'formátovacia píla', 'nářezové centrum', 'deliaca píla', 'píla na hliník', 'priemyselná píla', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'advanced line 250', 'lapszabó fűrész', 'vágóközpont', 'alumínium fűrész', 'ipari fűrész', 'Felder Group', 'Asamer'],
     },
   },
 
@@ -687,11 +758,11 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       },
     },
     seoTitle: {
-      de: 'Mayer Winkelanlagen – Industrielle Schneidlösungen | Asamer CZ/SK/HU',
-      en: 'Mayer Angle Cutting Systems – Industrial Solutions | Asamer CZ/SK/HU',
-      cz: 'Mayer úhlové řezací systémy – průmyslová řešení | Asamer CZ/SK/HU',
-      sk: 'Mayer uhlové rezacie systémy – priemyselné riešenia | Asamer CZ/SK/HU',
-      hu: 'Mayer szögvágó rendszerek – ipari megoldások | Asamer CZ/SK/HU',
+      de: 'Winkelanlagen Mayer – Industrielle Schneidlösungen | Asamer CZ/SK/HU',
+      en: 'Angle Cutting Systems Mayer – Industrial Solutions | Asamer CZ/SK/HU',
+      cz: 'Úhlové řezací systémy Mayer – průmyslová řešení | Asamer CZ/SK/HU',
+      sk: 'Uhlové rezacie systémy Mayer – priemyselné riešenia | Asamer CZ/SK/HU',
+      hu: 'Szögvágó rendszerek Mayer – ipari megoldások | Asamer CZ/SK/HU',
     },
     seoDescription: {
       de: 'Winkelanlagen – industrielle Schneidlösungen für Längs- und Querschnitte. Maßgeschneidert. Asamer: autorisierter Mayer-Händler für CZ, SK & HU.',
@@ -699,6 +770,13 @@ export const MAYER_PRODUCTS: MayerProduct[] = [
       cz: 'Úhlové řezací systémy – průmyslová řešení pro podélné a příčné řezy. Na míru. Asamer: autorizovaný prodejce Mayer pro CZ, SK a HU.',
       sk: 'Uhlové rezacie systémy – priemyselné riešenia pre pozdĺžne a priečne rezy. Na mieru. Asamer: autorizovaný predajca Mayer pre CZ, SK a HU.',
       hu: 'Szögvágó rendszerek – ipari megoldások hossz- és keresztvágásokhoz. Egyedi. Asamer: hivatalos Mayer viszonteladó CZ, SK és HU.',
+    },
+    seoKeywords: {
+      de: ['Mayer', 'Winkelanlagen', 'Winkelschneidanlage', 'industrielle Schneidlösung', 'Aufteilzentrum', 'Felder Group', 'Asamer'],
+      en: ['Mayer', 'angle cutting systems', 'industrial cutting solution', 'cutting center', 'Felder Group', 'Asamer'],
+      cz: ['Mayer', 'úhlové řezací systémy', 'nářezové centrum', 'průmyslové řezání', 'Felder Group', 'Asamer'],
+      sk: ['Mayer', 'uhlové rezacie systémy', 'nářezové centrum', 'priemyselné rezanie', 'Felder Group', 'Asamer'],
+      hu: ['Mayer', 'szögvágó rendszerek', 'vágóközpont', 'ipari vágási megoldás', 'Felder Group', 'Asamer'],
     },
   },
 ];

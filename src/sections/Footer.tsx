@@ -157,12 +157,29 @@ const Footer = () => {
               {t.footer.imprint}
             </Link>
             <Link
-              to={buildPath('/imprint')}
+              to={buildPath('/privacy')}
               onClick={() => handleFooterLinkClick('privacy')}
               className="text-white/30 text-sm hover:text-white transition-colors"
             >
               {t.footer.privacy}
             </Link>
+            <Link
+              to={buildPath('/terms')}
+              onClick={() => handleFooterLinkClick('terms')}
+              className="text-white/30 text-sm hover:text-white transition-colors"
+            >
+              {t.footer.terms}
+            </Link>
+            <button
+              type="button"
+              onClick={() => {
+                handleFooterLinkClick('cookie-settings');
+                window.dispatchEvent(new Event('asamer:open-cookie-settings'));
+              }}
+              className="text-white/30 text-sm hover:text-white transition-colors"
+            >
+              {t.footer.cookieSettings}
+            </button>
           </div>
 
           <button
