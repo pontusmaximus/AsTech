@@ -11,7 +11,8 @@ export type BarbaricCategory =
   | 'return'
   | 'buffer'
   | 'door'
-  | 'labeling';
+  | 'labeling'
+  | 'vacuum-handling';
 
 const BARBARIC_CATEGORY_SLUGS: Record<BarbaricCategory, Record<Language, string>> = {
   storage: {
@@ -62,6 +63,13 @@ const BARBARIC_CATEGORY_SLUGS: Record<BarbaricCategory, Record<Language, string>
     cz: 'stitkovani',
     sk: 'stitkovanie',
     hu: 'cimkenyomtatas',
+  },
+  'vacuum-handling': {
+    de: 'vakuumhandling-holz',
+    en: 'vacuum-handling-wood',
+    cz: 'vakuove-manipulace-drevo',
+    sk: 'vakuove-manipulacia-drevo',
+    hu: 'vakuumos-fakezeles',
   },
 };
 
@@ -145,6 +153,13 @@ export const BARBARIC_CATEGORY_LABELS: Record<BarbaricCategory, Record<Language,
     cz: 'Štítkovací tiskárna',
     sk: 'Štítkovacia tlačiareň',
     hu: 'Címkenyomtató',
+  },
+  'vacuum-handling': {
+    de: 'Vakuumhandling Holz',
+    en: 'Vacuum Handling Wood',
+    cz: 'Vakuové manipulace se dřevem',
+    sk: 'Vakuové manipulácie s drevom',
+    hu: 'Vákuumos fakezelés',
   },
 };
 
@@ -597,6 +612,108 @@ export const BARBARIC_PRODUCTS: BarbaricProduct[] = [
     },
     seoTitle: { de: 'Labeling Printer LPS Barbaric – Händler CZ/SK/HU | Asamer', en: 'Labeling Printer LPS Barbaric – dealer CZ/SK/HU | Asamer', cz: 'Tiskárna štítků LPS Barbaric – koupit přes Asamer', sk: 'Tlačiareň štítkov LPS Barbaric – kúpiť cez Asamer', hu: 'Címkenyomtató LPS Barbaric – Asamer viszonteladó' },
     seoDescription: { de: 'LPS – Labeling Printer für Platten-Etikettierung vor dem Zuschnitt. Lückenlose Nachverfolgung. Asamer: Barbaric-Händler CZ, SK & HU.', en: 'LPS – labeling printer for panel identification before cutting. Full traceability. Asamer: Barbaric dealer CZ, SK & HU.', cz: 'LPS – tiskárna štítků pro identifikaci desek před řezáním. Plná sledovatelnost. Asamer: prodejce Barbaric CZ, SK a HU.', sk: 'LPS – tlačiareň štítkov pre identifikáciu dosiek pred rezaním. Plná sledovateľnosť. Asamer: predajca Barbaric CZ, SK a HU.', hu: 'LPS – címkenyomtató lapok azonosításához vágás előtt. Teljes nyomonkövetés. Asamer: Barbaric viszonteladó CZ, SK és HU.' },
+  },
+
+  /* ==================== VACUUM HANDLING ==================== */
+  {
+    slug: 'vakuumhandling-holz',
+    name: 'Vakuumhandling Holz',
+    category: 'vacuum-handling',
+    image: '/images/barbaric/vakuumhandling-holz.png',
+    tagline: {
+      de: 'Manuelle Vakuumheber für Platten, Türblätter & Spezialanwendungen',
+      en: 'Manual vacuum lifters for panels, door leaves & special applications',
+      cz: 'Manuální vakuové zvedáky pro desky, dveřní křídla a speciální aplikace',
+      sk: 'Manuálne vákuové zdviháky pre dosky, dverné krídla a špeciálne aplikácie',
+      hu: 'Kézi vákuumemelők lapokhoz, ajtólapokhoz és speciális alkalmazásokhoz',
+    },
+    description: {
+      de: 'Vakuumhandling Holz umfasst das komplette Barbaric-Programm manueller Vakuumheber für das ergonomische Handling von handelsüblichen Platten, Türblättern und Schnittholz. Die UniWood-Serie deckt alle gängigen Holzwerkstoffe ab – von beschichteten Platten über OSB, Spanplatten und MDF bis hin zu leicht strukturierten Oberflächen. Ergänzend stehen Spezialhebegeräte wie gripLifter, plankLifter, NeedleGripper und rackLifter für Rahmen, Schnittholz, luftdurchlässige Holzfasermaterialien und Lageranwendungen zur Verfügung.',
+      en: 'Vacuum Handling Wood covers the complete Barbaric range of manual vacuum lifters for ergonomic handling of commercial panels, door leaves and lumber. The UniWood series handles all common wood-based materials – from coated panels through OSB, chipboard and MDF to slightly textured surfaces. Special lifters like gripLifter, plankLifter, NeedleGripper and rackLifter complete the portfolio for frames, lumber, air-permeable fibre materials and rack storage applications.',
+      cz: 'Vakuové manipulace se dřevem zahrnuje kompletní program manuálních vakuových zvedáků Barbaric pro ergonomickou manipulaci s běžnými deskami, dveřními křídly a řezivem. Řada UniWood pokrývá všechny běžné dřevěné materiály – od laminovaných desek přes OSB, dřevotřísku a MDF až po mírně strukturované povrchy. Speciální zvedáky gripLifter, plankLifter, NeedleGripper a rackLifter doplňují portfolio pro rámy, řezivo, vzduchem propustné vláknité materiály a skladové aplikace.',
+      sk: 'Vakuové manipulácie s drevom zahŕňa kompletný program manuálnych vákuových zdvihákov Barbaric pre ergonomickú manipuláciu s bežnými doskami, dvernými krídlami a rezivom. Rad UniWood pokrýva všetky bežné drevené materiály – od laminovaných dosiek cez OSB, drevotriesku a MDF až po mierne štruktúrované povrchy. Špeciálne zdviháky gripLifter, plankLifter, NeedleGripper a rackLifter dopĺňajú portfólio pre rámy, rezivo, vzduchom priepustné vláknité materiály a skladové aplikácie.',
+      hu: 'A Vákuumos fakezelés a Barbaric kézi vákuumemelők teljes programját öleli fel a kereskedelmi lapok, ajtólapok és fűrészáru ergonomikus kezelésére. Az UniWood sorozat minden gyakori faalapú anyagot kezel – bevonatos lapoktól az OSB-n, forgácslapon és MDF-en át a kissé strukturált felületekig. A speciális emelők – gripLifter, plankLifter, NeedleGripper és rackLifter – kiegészítik a kínálatot keretek, fűrészáru, légáteresztő rostanyagok és polcos tárolási alkalmazásokhoz.',
+    },
+    features: {
+      de: [
+        'UniWood UWL 3 – Standardheber mit 90°-Kippwerk, bis 250 kg',
+        'UniWood UWL 3J – Großformatplatten bis 300 kg (optional 500 kg)',
+        'UniWood UWL 3S – Einzelsauger, bis 150 kg, 90°-Kippwerk',
+        'UniWood UWL 5 – Spezialheber für Türblätter',
+        'SWL gripLifter – Rahmenhandling (50–150 mm, bis 500 kg)',
+        'SWL plankLifter – Schnittholzhandling bis 1500 kg',
+        'NGR NeedleGripper – luftdurchlässige Holzfasermaterialien bis 100 kg',
+        'RWL rackLifter – Lagerlösungen bis 250 kg',
+      ],
+      en: [
+        'UniWood UWL 3 – standard lifter with 90° tipping, up to 250 kg',
+        'UniWood UWL 3J – large-format panels up to 300 kg (optional 500 kg)',
+        'UniWood UWL 3S – single suction cup, up to 150 kg, 90° tipping',
+        'UniWood UWL 5 – specialised lifter for door leaves',
+        'SWL gripLifter – frame handling (50–150 mm, up to 500 kg)',
+        'SWL plankLifter – lumber handling up to 1500 kg',
+        'NGR NeedleGripper – air-permeable wood-fibre materials up to 100 kg',
+        'RWL rackLifter – rack storage solutions up to 250 kg',
+      ],
+      cz: [
+        'UniWood UWL 3 – standardní zvedák s 90° sklápěním, do 250 kg',
+        'UniWood UWL 3J – velkoformátové desky do 300 kg (volitelně 500 kg)',
+        'UniWood UWL 3S – jedna přísavka, do 150 kg, 90° sklápění',
+        'UniWood UWL 5 – speciální zvedák pro dveřní křídla',
+        'SWL gripLifter – manipulace s rámy (50–150 mm, do 500 kg)',
+        'SWL plankLifter – manipulace s řezivem do 1500 kg',
+        'NGR NeedleGripper – vzduchem propustné dřevovláknité materiály do 100 kg',
+        'RWL rackLifter – skladová řešení do 250 kg',
+      ],
+      sk: [
+        'UniWood UWL 3 – štandardný zdvihák s 90° sklápaním, do 250 kg',
+        'UniWood UWL 3J – veľkoformátové dosky do 300 kg (voliteľne 500 kg)',
+        'UniWood UWL 3S – jedna prísavka, do 150 kg, 90° sklápanie',
+        'UniWood UWL 5 – špeciálny zdvihák pre dverné krídla',
+        'SWL gripLifter – manipulácia s rámami (50–150 mm, do 500 kg)',
+        'SWL plankLifter – manipulácia s rezivom do 1500 kg',
+        'NGR NeedleGripper – vzduchom priepustné drevovláknité materiály do 100 kg',
+        'RWL rackLifter – skladové riešenia do 250 kg',
+      ],
+      hu: [
+        'UniWood UWL 3 – standard emelő 90°-os billentéssel, 250 kg-ig',
+        'UniWood UWL 3J – nagyformátumú lapok 300 kg-ig (opcionálisan 500 kg)',
+        'UniWood UWL 3S – egy szívócsésze, 150 kg-ig, 90°-os billentés',
+        'UniWood UWL 5 – speciális emelő ajtólapokhoz',
+        'SWL gripLifter – keretkezelés (50–150 mm, 500 kg-ig)',
+        'SWL plankLifter – fűrészáru kezelés 1500 kg-ig',
+        'NGR NeedleGripper – légáteresztő farostanyagok 100 kg-ig',
+        'RWL rackLifter – polcos tárolási megoldások 250 kg-ig',
+      ],
+    },
+    specs: {
+      de: { 'Tragkraft Standardgeräte': '150–300 kg (optional bis 500 kg)', 'Hubgeschwindigkeit': '0–10 m/min', 'Kippwerk': '0° bis 90°, ~5 s Kippzeit', 'Luftverbrauch': '11 Nl/s', 'Kettenlänge nutzbar': '3,5 m', 'Eigengewicht UWL 3J': '~85 kg' },
+      en: { 'Load capacity standard': '150–300 kg (optional up to 500 kg)', 'Lifting speed': '0–10 m/min', 'Tipping mechanism': '0° to 90°, ~5 s tipping time', 'Air consumption': '11 Nl/s', 'Usable chain length': '3.5 m', 'Own weight UWL 3J': '~85 kg' },
+      cz: { 'Nosnost standardních zařízení': '150–300 kg (volitelně do 500 kg)', 'Rychlost zdvihu': '0–10 m/min', 'Sklápěcí mechanismus': '0° až 90°, ~5 s', 'Spotřeba vzduchu': '11 Nl/s', 'Využitelná délka řetězu': '3,5 m', 'Vlastní hmotnost UWL 3J': '~85 kg' },
+      sk: { 'Nosnosť štandardných zariadení': '150–300 kg (voliteľne do 500 kg)', 'Rýchlosť zdvihu': '0–10 m/min', 'Sklápací mechanizmus': '0° až 90°, ~5 s', 'Spotreba vzduchu': '11 Nl/s', 'Využiteľná dĺžka reťaze': '3,5 m', 'Vlastná hmotnosť UWL 3J': '~85 kg' },
+      hu: { 'Teherbírás standard': '150–300 kg (opcionálisan 500 kg-ig)', 'Emelési sebesség': '0–10 m/min', 'Billentő mechanizmus': '0°-tól 90°-ig, ~5 s', 'Levegőfogyasztás': '11 Nl/s', 'Használható lánchossz': '3,5 m', 'Önsúly UWL 3J': '~85 kg' },
+    },
+    highlights: [
+      'Complete UniWood range for all commercial wood panels',
+      'Ergonomic design with adjustable operating handle',
+      '90° tipping mechanism for vertical/horizontal handling',
+      'Suitable for coated surfaces, OSB, chipboard, MDF (>8 mm)',
+      'Special lifters for frames, lumber, needle-gripper & rack storage',
+    ],
+    seoTitle: {
+      de: 'Vakuumhandling Holz Barbaric – Vakuumheber Händler CZ/SK/HU | Asamer',
+      en: 'Vacuum Handling Wood Barbaric – Manual Lifters CZ/SK/HU | Asamer',
+      cz: 'Vakuové manipulace se dřevem Barbaric – prodejce | Asamer',
+      sk: 'Vakuové manipulácie s drevom Barbaric – predajca | Asamer',
+      hu: 'Vákuumos fakezelés Barbaric – viszonteladó CZ/SK/HU | Asamer',
+    },
+    seoDescription: {
+      de: 'Vakuumhandling Holz Barbaric – UniWood-Serie & Spezialheber (gripLifter, plankLifter, NeedleGripper). Asamer: autorisierter Barbaric-Händler für CZ, SK & HU.',
+      en: 'Vacuum Handling Wood Barbaric – UniWood series & special lifters (gripLifter, plankLifter, NeedleGripper). Asamer: authorised Barbaric dealer for CZ, SK & HU.',
+      cz: 'Vakuové manipulace se dřevem Barbaric – řada UniWood a speciální zvedáky. Asamer: autorizovaný prodejce Barbaric pro CZ, SK a HU.',
+      sk: 'Vakuové manipulácie s drevom Barbaric – rad UniWood a špeciálne zdviháky. Asamer: autorizovaný predajca Barbaric pre CZ, SK a HU.',
+      hu: 'Vákuumos fakezelés Barbaric – UniWood sorozat és speciális emelők. Asamer: hivatalos Barbaric viszonteladó CZ, SK és HU területén.',
+    },
   },
 ];
 
