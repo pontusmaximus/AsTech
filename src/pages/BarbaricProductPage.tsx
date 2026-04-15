@@ -12,8 +12,107 @@ import {
   buildLocalizedPath, CANONICAL_DOMAIN,
 } from '../lib/language';
 import { getBarbaricProductBySlug, buildBarbaricProductPath, BARBARIC_CATEGORY_LABELS } from '../data/barbaricProducts';
-import type { BarbaricProduct } from '../data/barbaricProducts';
+import type { BarbaricProduct, BarbaricCategory } from '../data/barbaricProducts';
 import type { Language } from '../i18n';
+
+const CATEGORY_SUFFIX: Record<BarbaricCategory, Record<Language, string>> = {
+  storage: {
+    de: ', das Plattenmaterial chaotisch oder sortenrein lagert und Just-in-Time an Säge oder CNC liefert',
+    en: ' that stores panel material chaotically or by type and delivers just-in-time to saw or CNC',
+    cz: ', který skladuje deskový materiál chaoticky nebo dle druhu a dodává Just-in-Time k pile nebo CNC',
+    sk: ', ktorý skladuje doskový materiál chaoticky alebo podľa druhu a dodáva Just-in-Time k píle alebo CNC',
+    hu: ', amely a laptáblákat kaotikusan vagy fajtánként tárolja és Just-in-Time szállítja a fűrészhez vagy CNC-hez',
+  },
+  feeding: {
+    de: ', das Plattenaufteilsägen vollautomatisch mit dem richtigen Material beschickt',
+    en: ' that automatically feeds panel saws with the correct material',
+    cz: ', který automaticky podává formátovacím pilám správný materiál',
+    sk: ', ktorý automaticky podáva formátovacím pílam správny materiál',
+    hu: ', amely automatikusan adagolja a megfelelő anyagot a formátumfűrészekhez',
+  },
+  nesting: {
+    de: ' für die automatische Entnahme und Sortierung von CNC-Fertigteilen',
+    en: ' for automatic removal and sorting of CNC finished parts',
+    cz: ' pro automatický odběr a třídění CNC hotových dílů',
+    sk: ' pre automatický odber a triedenie CNC hotových dielov',
+    hu: ' CNC készalkatrészek automatikus kivételéhez és válogatásához',
+  },
+  return: {
+    de: ' für den automatischen Rücktransport von Rest- und Fertigteilen zwischen Maschinen und Lager',
+    en: ' for automatic return transport of offcuts and finished parts between machines and storage',
+    cz: ' pro automatický zpětný transport zbytků a hotových dílů mezi stroji a skladem',
+    sk: ' pre automatický spätný transport zvyškov a hotových dielov medzi strojmi a skladom',
+    hu: ' gépek és raktár közötti maradék- és készalkatrészek automatikus visszaszállításához',
+  },
+  buffer: {
+    de: ' für die Zwischenpufferung von Teilen zwischen Fertigungsschritten',
+    en: ' for intermediate buffering of parts between production steps',
+    cz: ' pro mezipufrování dílů mezi výrobními kroky',
+    sk: ' pre medzipufrovanie dielov medzi výrobnými krokmi',
+    hu: ' alkatrészek közbenső pufferelésére a gyártási lépések között',
+  },
+  door: {
+    de: ' für das automatisierte Handling von Türen und Türblättern',
+    en: ' for automated handling of doors and door leaves',
+    cz: ' pro automatizovanou manipulaci s dveřmi a dveřními křídly',
+    sk: ' pre automatizovanú manipuláciu s dverami a dvernými krídlami',
+    hu: ' ajtók és ajtólapok automatizált kezelésére',
+  },
+  labeling: {
+    de: ' für die automatische Etikettierung von Platten vor dem Zuschnitt',
+    en: ' for automatic labelling of panels before cutting',
+    cz: ' pro automatické štítkování desek před řezáním',
+    sk: ' pre automatické štítkovanie dosiek pred rezaním',
+    hu: ' lapok automatikus címkézésére a vágás előtt',
+  },
+  'vacuum-lifters': {
+    de: ' für das ergonomische manuelle Handling von Holzplatten, Türblättern und Werkstücken am Arbeitsplatz',
+    en: ' for ergonomic manual handling of wood panels, door leaves and workpieces at the workstation',
+    cz: ' pro ergonomickou manuální manipulaci s dřevěnými deskami, dveřními křídly a obrobky na pracovišti',
+    sk: ' pre ergonomickú manuálnu manipuláciu s drevenými doskami, dvernými krídlami a obrobkami na pracovisku',
+    hu: ' fa lapok, ajtólapok és munkadarabok ergonomikus kézi kezelésére a munkahelyen',
+  },
+  'vacuum-special': {
+    de: ' für das Handling von Rahmen, Schnittholz und speziellen Werkstoffen wie luftdurchlässigen Holzfasermaterialien',
+    en: ' for handling frames, sawn timber and special materials including air-permeable wood-fibre boards',
+    cz: ' pro manipulaci s rámy, řezivem a speciálními materiály včetně vzduchem propustných dřevovláknitých desek',
+    sk: ' pre manipuláciu s rámami, rezivom a špeciálnymi materiálmi vrátane vzduchom priepustných drevovláknitých dosiek',
+    hu: ' keretek, fűrészáru és speciális anyagok kezeléséhez, beleértve a légáteresztő farostlemezeket',
+  },
+  'vacuum-traverses': {
+    de: ' für das sichere Vakuumhandling spezieller Werkstücke wie Dünnplatten, Türen mit Glasausschnitten oder Blech- und Plexiglasteilen',
+    en: ' for safe vacuum handling of special workpieces such as thin panels, doors with glass cutouts or sheet metal and Plexiglas parts',
+    cz: ' pro bezpečnou vakuovou manipulaci se speciálními obrobky, jako jsou tenké desky, dveře se skleněnými výřezy nebo plechové a plexisklové díly',
+    sk: ' pre bezpečnú vákuovú manipuláciu so špeciálnymi obrobkami, ako sú tenké dosky, dvere so sklenenými výrezmi alebo plechové a plexisklové diely',
+    hu: ' speciális munkadarabok biztonságos vákuumos kezeléséhez, mint vékony lapok, üvegkivágásos ajtók vagy lemez- és plexialkatrészek',
+  },
+  'vacuum-cranes': {
+    de: ' als Trägersystem für Vakuumheber im manuellen Holzhandling',
+    en: ' as a carrier system for vacuum lifters in manual wood handling',
+    cz: ' jako nosný systém pro vakuové zvedáky při manuální manipulaci se dřevem',
+    sk: ' ako nosný systém pre vákuové zdviháky pri manuálnej manipulácii s drevom',
+    hu: ' hordozórendszerként vákuumemelőkhöz a kézi fakezelésben',
+  },
+};
+
+const ASAMER_TAIL: Record<Language, string> = {
+  de: '. Asamer liefert, installiert und wartet BARBARIC-Systeme in CZ, SK und HU.',
+  en: '. Asamer delivers, installs and services BARBARIC systems in CZ, SK and HU.',
+  cz: '. Asamer dodává, instaluje a servisuje systémy BARBARIC v CZ, SK a HU.',
+  sk: '. Asamer dodáva, inštaluje a servisuje systémy BARBARIC v CZ, SK a HU.',
+  hu: '. Az Asamer BARBARIC rendszereket szállít, telepít és szervizel CZ, SK és HU területén.',
+};
+
+const buildDefinitionLead = (product: BarbaricProduct, categoryLabel: string, lang: Language): string => {
+  const suffix = CATEGORY_SUFFIX[product.category][lang];
+  const tail = ASAMER_TAIL[lang];
+  const label = lang === 'de' ? categoryLabel : categoryLabel.toLowerCase();
+  if (lang === 'de') return `BARBARIC ${product.name} ist ein ${label}${suffix}${tail}`;
+  if (lang === 'en') return `BARBARIC ${product.name} is a ${label}${suffix}${tail}`;
+  if (lang === 'cz') return `BARBARIC ${product.name} je ${label}${suffix}${tail}`;
+  if (lang === 'sk') return `BARBARIC ${product.name} je ${label}${suffix}${tail}`;
+  return `A BARBARIC ${product.name} egy ${label}${suffix}${tail}`;
+};
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -108,11 +207,7 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
 
               {/* Definition-Lead for AEO */}
               <p className="text-sm text-white/70 leading-relaxed mb-5 border-l-2 border-primary/40 pl-3">
-                {tr(
-                  `BARBARIC ${product.name} ist ein ${categoryLabel}${product.category === 'storage' ? ', das Plattenmaterial chaotisch oder sortenrein lagert und Just-in-Time an Säge oder CNC liefert' : product.category === 'feeding' ? ', das Plattenaufteilsägen vollautomatisch mit dem richtigen Material beschickt' : product.category === 'return' ? ' für den automatischen Rücktransport von Rest- und Fertigteilen zwischen Maschinen und Lager' : product.category === 'nesting' ? ' für die automatische Entnahme und Sortierung von CNC-Fertigteilen' : ` für die automatisierte Plattenverarbeitung`}. Asamer liefert, installiert und wartet BARBARIC-Systeme in CZ, SK und HU.`,
-                  `BARBARIC ${product.name} is a ${categoryLabel.toLowerCase()}${product.category === 'storage' ? ' that stores panel material chaotically or by type and delivers just-in-time to saw or CNC' : product.category === 'feeding' ? ' that automatically feeds panel saws with the correct material' : product.category === 'return' ? ' for automatic return transport of offcuts and finished parts between machines and storage' : product.category === 'nesting' ? ' for automatic removal and sorting of CNC finished parts' : ' for automated panel processing'}. Asamer delivers, installs and services BARBARIC systems in CZ, SK and HU.`,
-                  `BARBARIC ${product.name} je ${categoryLabel.toLowerCase()}${product.category === 'storage' ? ', který skladuje deskový materiál chaoticky nebo dle druhu a dodává Just-in-Time k pile nebo CNC' : product.category === 'feeding' ? ', který automaticky podává formátovacím pilám správný materiál' : product.category === 'return' ? ' pro automatický zpětný transport zbytků a hotových dílů mezi stroji a skladem' : product.category === 'nesting' ? ' pro automatický odběr a třídění CNC hotových dílů' : ' pro automatizované zpracování desek'}. Asamer dodává, instaluje a servisuje systémy BARBARIC v CZ, SK a HU.`,
-                )}
+                {buildDefinitionLead(product, categoryLabel, lang)}
               </p>
 
               <p className="text-sm text-white/60 leading-relaxed mb-8">{product.description[lang]}</p>
