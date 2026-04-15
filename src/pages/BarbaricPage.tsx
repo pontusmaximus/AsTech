@@ -36,7 +36,7 @@ const BarbaricPage = () => {
     return () => ctx.revert();
   }, []);
 
-  const categories: BarbaricCategory[] = ['storage', 'feeding', 'nesting', 'return', 'buffer', 'door', 'labeling', 'vacuum-handling'];
+  const categories: BarbaricCategory[] = ['storage', 'feeding', 'nesting', 'return', 'buffer', 'door', 'labeling', 'vacuum-lifters', 'vacuum-special', 'vacuum-traverses', 'vacuum-cranes'];
   const categoryData = categories.map((cat) => ({ cat, products: getBarbaricProductsByCategory(cat) })).filter((c) => c.products.length > 0);
   const sidebarItems = categoryData.map((c) => ({ id: c.cat, label: BARBARIC_CATEGORY_LABELS[c.cat][lang], productCount: c.products.length }));
 
