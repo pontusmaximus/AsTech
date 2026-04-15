@@ -259,20 +259,26 @@ let count = 0;
 
 for (const page of pages) {
   const hreflangTags = page.alternates
-    .map((a) => `<link rel="alternate" hreflang="${a.hreflang}" href="${a.href}"/>`)
+    .map((a) => `<link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" data-rh="true"/>`)
     .join('\n    ');
-  const xDefaultTag = `<link rel="alternate" hreflang="x-default" href="${page.xDefaultHref}"/>`;
+  const xDefaultTag = `<link rel="alternate" hreflang="x-default" href="${page.xDefaultHref}" data-rh="true"/>`;
 
   const seoHead = `
-    <title>${escHtml(page.title)}</title>
-    <meta name="description" content="${escHtml(page.description)}"/>
-    <link rel="canonical" href="${page.canonical}"/>
+    <title data-rh="true">${escHtml(page.title)}</title>
+    <meta name="description" content="${escHtml(page.description)}" data-rh="true"/>
+    <meta name="robots" content="index,follow" data-rh="true"/>
+    <link rel="canonical" href="${page.canonical}" data-rh="true"/>
     ${hreflangTags}
     ${xDefaultTag}
-    <meta property="og:title" content="${escHtml(page.title)}"/>
-    <meta property="og:description" content="${escHtml(page.description)}"/>
-    <meta property="og:url" content="${page.canonical}"/>
-    <meta property="og:site_name" content="Asamer Technologie"/>`;
+    <meta property="og:type" content="website" data-rh="true"/>
+    <meta property="og:title" content="${escHtml(page.title)}" data-rh="true"/>
+    <meta property="og:description" content="${escHtml(page.description)}" data-rh="true"/>
+    <meta property="og:url" content="${page.canonical}" data-rh="true"/>
+    <meta property="og:site_name" content="Asamer Technologie" data-rh="true"/>
+    <meta property="og:image" content="${CANONICAL_DOMAIN}/images/automation-robot.jpg" data-rh="true"/>
+    <meta property="og:image:width" content="1200" data-rh="true"/>
+    <meta property="og:image:height" content="630" data-rh="true"/>
+    <meta property="og:locale" content="${languageToHreflang(page.lang)}" data-rh="true"/>`;
 
   // Replace lang attribute
   let html = template.replace('<html lang="cs">', `<html lang="${languageToHreflang(page.lang)}">`);

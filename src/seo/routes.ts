@@ -2,7 +2,7 @@ import type { Language } from '../i18n';
 import { DEFAULT_LANGUAGE } from '../lib/language';
 import { SLUG_TRANSLATIONS } from '../lib/slugs';
 
-export const DEFAULT_OG_IMAGE = '/images/automation-robot.jpg';
+export const DEFAULT_OG_IMAGE = 'https://asamer.cz/images/automation-robot.jpg';
 
 export type SeoRouteKey =
   | 'home'

@@ -261,7 +261,7 @@ const LanguageAppLayout = () => {
 
   useEffect(() => {
     localStorage.setItem('asamer-lang', lang);
-    document.documentElement.lang = lang;
+    document.documentElement.lang = lang === 'cz' ? 'cs' : lang;
   }, [lang]);
 
   const handleSetLang = useCallback(

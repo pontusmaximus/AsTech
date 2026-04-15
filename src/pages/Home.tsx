@@ -291,7 +291,7 @@ const Home = () => {
                       {webp && <source type="image/webp" srcSet={webp} />}
                       <img
                         src={solution.image}
-                        alt=""
+                        alt={`${solution.title} – ${solution.subtitle}`}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         loading="lazy"
                       />
