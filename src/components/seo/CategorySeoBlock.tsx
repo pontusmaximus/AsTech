@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import type { CategorySeoContent } from '../../data/seo/types';
+import type { CategorySeoContent, MultiLangText } from '../../data/seo/types';
 import type { Language } from '../../i18n';
 import { faqPageSchema } from '../../seo/structuredData';
 
@@ -10,13 +10,18 @@ interface Props {
   tr: (de: string, en: string, cz: string) => string;
 }
 
-const ml = (obj: { de: string; en: string; cz: string }, lang: Language, tr: Props['tr']) =>
-  tr(obj.de, obj.en, obj.cz);
+const ml = (obj: MultiLangText, lang: Language): string => {
+  if (lang === 'sk') return obj.sk ?? obj.cz;
+  if (lang === 'hu') return obj.hu ?? obj.en;
+  if (lang === 'de') return obj.de;
+  if (lang === 'cz') return obj.cz;
+  return obj.en;
+};
 
 const CategorySeoBlock = ({ content, lang, tr }: Props) => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const faqSchema = content.faq.length > 0
-    ? faqPageSchema(content.faq.map((f) => ({ question: ml(f.question, lang, tr), answer: ml(f.answer, lang, tr) })))
+    ? faqPageSchema(content.faq.map((f) => ({ question: ml(f.question, lang), answer: ml(f.answer, lang) })))
     : null;
 
   return (
@@ -27,7 +32,7 @@ const CategorySeoBlock = ({ content, lang, tr }: Props) => {
       {/* Expanded Intro */}
       <div className="max-w-3xl mb-10">
         <p className="text-white/60 text-sm leading-relaxed whitespace-pre-line">
-          {ml(content.introExpanded, lang, tr)}
+          {ml(content.introExpanded, lang)}
         </p>
       </div>
 
@@ -37,10 +42,10 @@ const CategorySeoBlock = ({ content, lang, tr }: Props) => {
           {content.sections.map((section, i) => (
             <div key={i}>
               <h2 className="text-sm font-display font-medium text-white/80 mb-2">
-                {ml(section.heading, lang, tr)}
+                {ml(section.heading, lang)}
               </h2>
               <p className="text-xs text-white/45 leading-relaxed">
-                {ml(section.body, lang, tr)}
+                {ml(section.body, lang)}
               </p>
             </div>
           ))}
@@ -63,13 +68,13 @@ const CategorySeoBlock = ({ content, lang, tr }: Props) => {
                     onClick={() => setOpenFaq(isOpen ? null : i)}
                     className="w-full flex items-center justify-between gap-3 px-4 py-3 text-left"
                   >
-                    <span className="text-sm text-white/60">{ml(item.question, lang, tr)}</span>
+                    <span className="text-sm text-white/60">{ml(item.question, lang)}</span>
                     <ChevronDown className={`w-4 h-4 text-white/30 shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
                   </button>
                   {isOpen && (
                     <div className="px-4 pb-4">
                       <p className="text-sm text-white/40 leading-relaxed">
-                        {ml(item.answer, lang, tr)}
+                        {ml(item.answer, lang)}
                       </p>
                     </div>
                   )}

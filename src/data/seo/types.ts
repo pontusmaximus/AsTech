@@ -4,6 +4,10 @@ export interface MultiLangText {
   de: string;
   en: string;
   cz: string;
+  /** Slovak — falls back to cz if not provided. */
+  sk?: string;
+  /** Hungarian — falls back to en if not provided. */
+  hu?: string;
 }
 
 export interface SeoContentSection {
