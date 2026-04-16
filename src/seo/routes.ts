@@ -21,7 +21,9 @@ export type SeoRouteKey =
   | 'faq'
   | 'guidePurVsEva'
   | 'guideEdgebander'
-  | 'guideWarehouseAutomation';
+  | 'guideWarehouseAutomation'
+  | 'guidePanelSawComparison'
+  | 'guideFundingCz';
 
 export interface RouteMeta {
   title: string;
@@ -666,6 +668,78 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         description:
           'Raktárautomatizálás BARBARIC rendszerekkel: akár -40% raktárköltség, 99,9% készletpontosság. ROI-számítás, alkalmazási területek és rendszerek fafeldolgozáshoz.',
         keywords: ['Raktárautomatizálás', 'BARBARIC', 'Lapraktár', 'ROI', 'Fafeldolgozás'],
+      },
+    }),
+  },
+  guidePanelSawComparison: {
+    slug: '/ratgeber/formatsaege-aluminium-vs-holz',
+    slugByLang: SLUG_TRANSLATIONS['/ratgeber/formatsaege-aluminium-vs-holz'],
+    meta: createMeta({
+      de: {
+        title: 'Plattensäge für Holz oder Alu? Mayer Kappa vs Advanced Line | Asamer',
+        description:
+          'Plattensäge für Holz oder Aluminium – welche Formatsäge passt? Vergleich Mayer Kappa Automatic vs Advanced Line: Sägeblatt, Vorschub, Toleranzen, Kühlung.',
+        keywords: ['Plattensäge', 'Formatsäge', 'Aluminium', 'Holz', 'Mayer Kappa', 'Mayer Advanced Line', 'Asamer'],
+      },
+      en: {
+        title: 'Panel Saw for Wood vs Aluminium – Mayer Kappa vs Advanced Line | Asamer',
+        description:
+          'Panel saw for wood or aluminium – which one fits? Comparison of Mayer Kappa Automatic and Advanced Line: blade, feed, tolerances, coolant, pressure beam.',
+        keywords: ['Panel saw', 'Aluminium', 'Wood', 'Mayer Kappa', 'Mayer Advanced Line', 'Sizing saw', 'Asamer'],
+      },
+      cz: {
+        title: 'Formátovací pila na hliník nebo dřevo? Mayer Kappa vs Advanced Line | Asamer',
+        description:
+          'Formátovací pila na hliník nebo dřevo – kterou zvolit? Srovnání Mayer Kappa Automatic a Advanced Line: pilový kotouč, posuv, tolerance, chlazení.',
+        keywords: ['Formátovací pila', 'Hliník', 'Dřevo', 'Mayer Kappa', 'Mayer Advanced Line', 'Nářezové centrum', 'Asamer'],
+      },
+      sk: {
+        title: 'Formátovacia píla na hliník alebo drevo? Mayer Kappa vs Advanced Line | Asamer',
+        description:
+          'Formátovacia píla na hliník alebo drevo – ktorú zvoliť? Porovnanie Mayer Kappa Automatic a Advanced Line: pílový kotúč, posuv, tolerancie, chladenie.',
+        keywords: ['Formátovacia píla', 'Hliník', 'Drevo', 'Mayer Kappa', 'Mayer Advanced Line', 'Asamer'],
+      },
+      hu: {
+        title: 'Lapszabó fűrész fához vagy alumíniumhoz? Mayer Kappa vs Advanced Line | Asamer',
+        description:
+          'Lapszabó fűrész fához vagy alumíniumhoz – melyik a megfelelő? Mayer Kappa Automatic és Advanced Line összehasonlítása: fűrészlap, előtolás, tűrés.',
+        keywords: ['Lapszabó fűrész', 'Alumínium', 'Fa', 'Mayer Kappa', 'Mayer Advanced Line', 'Asamer'],
+      },
+    }),
+  },
+  guideFundingCz: {
+    slug: '/ratgeber/foerderung-holzbearbeitung-cz-2026',
+    slugByLang: SLUG_TRANSLATIONS['/ratgeber/foerderung-holzbearbeitung-cz-2026'],
+    meta: createMeta({
+      de: {
+        title: 'Förderung Holzbearbeitung CZ 2026 – OP TAK, NRB, InvestEU | Asamer',
+        description:
+          'Förderung für Holzbearbeitungsmaschinen in Tschechien 2026: OP TAK Technologie, NRB Investitionskredite, InvestEU. Förderquoten, Timing, Dokumente.',
+        keywords: ['Förderung CZ 2026', 'OP TAK', 'NRB', 'InvestEU', 'Holzbearbeitung', 'Dotace stroje', 'Asamer'],
+      },
+      en: {
+        title: 'EU Funding for Woodworking Machines in CZ 2026 – OP TAK, NRB | Asamer',
+        description:
+          'Funding for woodworking machinery in the Czech Republic 2026: OP TAK Technologie, NRB loans, InvestEU. Refund rates, timing and required documentation.',
+        keywords: ['EU Funding CZ', 'OP TAK', 'NRB', 'InvestEU', 'Woodworking', 'Machine grant', 'Asamer'],
+      },
+      cz: {
+        title: 'Dotace na stroje 2026 – OP TAK, NRB, InvestEU pro dřevozpracující podniky | Asamer',
+        description:
+          'Dotace na dřevoobráběcí stroje v ČR 2026: OP TAK Technologie, úvěry NRB, InvestEU. Výše podpory, harmonogram a požadované dokumenty – poradenství Asamer.',
+        keywords: ['Dotace stroje 2026', 'OP TAK', 'Technologie výrobní podniky', 'NRB', 'InvestEU', 'Dřevozpracující průmysl'],
+      },
+      sk: {
+        title: 'Dotácie na stroje v ČR 2026 – OP TAK, NRB, InvestEU | Asamer',
+        description:
+          'Dotácie na drevoobrábacie stroje v Česku 2026: OP TAK Technologie, úvery NRB, InvestEU. Výška podpory, harmonogram a potrebné dokumenty.',
+        keywords: ['Dotácie stroje', 'OP TAK', 'NRB', 'InvestEU', 'Drevoobrábacie stroje', 'Asamer'],
+      },
+      hu: {
+        title: 'Támogatások famegmunkáló gépekre Csehországban 2026 – OP TAK, NRB | Asamer',
+        description:
+          'Támogatások famegmunkáló gépekre Csehországban 2026: OP TAK Technologie, NRB hitelek, InvestEU. Támogatási arányok, ütemterv és dokumentáció.',
+        keywords: ['Pályázat gépekre', 'OP TAK', 'NRB', 'InvestEU', 'Famegmunkálás', 'Asamer'],
       },
     }),
   },

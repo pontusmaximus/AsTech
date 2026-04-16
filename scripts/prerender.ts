@@ -30,6 +30,8 @@ import { OTT_PRODUCTS, buildOttProductPath, OTT_CATEGORY_LABELS } from '../src/d
 import { MAYER_PRODUCTS, buildMayerProductPath, MAYER_CATEGORY_LABELS } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, buildBarbaricProductPath, BARBARIC_CATEGORY_LABELS } from '../src/data/barbaricProducts';
 import { GANNOMAT_PRODUCTS, buildGannomatProductPath, GANNOMAT_CATEGORY_LABELS } from '../src/data/gannomatProducts';
+import { USED_MACHINES } from '../src/data/usedMachines';
+import { localizeSlug } from '../src/lib/slugs';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -247,6 +249,53 @@ for (const product of GANNOMAT_PRODUCTS) {
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
       bodyContent: productPageBody(lang, 'Gannomat', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/gannomat'),
+    });
+  }
+}
+
+// 6. Used machine detail pages
+const mlText = (obj: { de: string; en: string; cz: string; sk?: string; hu?: string }, lang: Language): string => {
+  if (lang === 'sk') return obj.sk ?? obj.cz;
+  if (lang === 'hu') return obj.hu ?? obj.en;
+  if (lang === 'de') return obj.de;
+  if (lang === 'cz') return obj.cz;
+  return obj.en;
+};
+
+for (const machine of USED_MACHINES) {
+  for (const lang of SUPPORTED_LANGUAGES) {
+    const buildUsedMachinePath = (al: Language) => `${localizeSlug('/pouzite-stroje', al)}/${machine.slug}`;
+    const machinePath = buildUsedMachinePath(lang);
+    const path = buildLocalizedPath(lang, machinePath);
+    const alternates = makeAlternates((al) => buildLocalizedPath(al, buildUsedMachinePath(al)));
+    const xDefaultHref = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildUsedMachinePath(HREFLANG_DEFAULT))}`;
+
+    const machineLabel = { de: 'Gebrauchtmaschine', en: 'Used machine', cz: 'Použitý stroj', sk: 'Použitý stroj', hu: 'Használt gép' };
+    const title = `${machine.manufacturer} ${machine.name} – ${machineLabel[lang]} | Asamer`;
+    const description = mlText(machine.shortDescription, lang);
+
+    const homePath = buildLocalizedPath(lang, '/');
+    const categoryPath = buildLocalizedPath(lang, localizeSlug('/pouzite-stroje', lang));
+    const homeLabel = T.home[lang];
+    const breadcrumbParts = [
+      breadcrumb([
+        { label: homeLabel, href: homePath },
+        { label: machineLabel[lang], href: categoryPath },
+        { label: `${machine.manufacturer} ${machine.name}`, href: '#' },
+      ]),
+      `<h1>${escHtml(`${machine.manufacturer} ${machine.name}`)}</h1>`,
+      `<p>${escHtml(description)}</p>`,
+      machine.longDescription ? `<p>${escHtml(mlText(machine.longDescription, lang))}</p>` : '',
+      `<p><a href="mailto:office@asamer.net">${escHtml(T.contact[lang])}</a></p>`,
+    ].filter(Boolean);
+
+    pages.push({
+      path, lang,
+      title,
+      description,
+      canonical: `${CANONICAL_DOMAIN}${path}`,
+      alternates, xDefaultHref,
+      bodyContent: breadcrumbParts.join('\n'),
     });
   }
 }

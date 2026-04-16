@@ -1,4 +1,5 @@
-import { ArrowRight, CheckCircle2, Mail, Tag } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, CheckCircle2, Mail, Tag } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
@@ -6,8 +7,21 @@ import { buildCanonicalUrl, CANONICAL_DOMAIN } from '../lib/language';
 import { localizeSlug } from '../lib/slugs';
 import SeoHead from '../seo/SeoHead';
 import { trackEvent } from '../lib/analytics';
+import { USED_MACHINES } from '../data/usedMachines';
+import type { UsedMachine as UsedMachineData } from '../data/usedMachines';
+import type { MultiLangText } from '../data/seo/types';
+import type { Language } from '../i18n';
+
+const mlText = (obj: MultiLangText, lang: Language): string => {
+  if (lang === 'sk') return obj.sk ?? obj.cz;
+  if (lang === 'hu') return obj.hu ?? obj.en;
+  if (lang === 'de') return obj.de;
+  if (lang === 'cz') return obj.cz;
+  return obj.en;
+};
 
 type UsedMachine = {
+  slug: string;
   name: string;
   manufacturer: string;
   year?: number;
@@ -78,7 +92,7 @@ const getItemCondition = (condition: string) => {
 };
 
 const UsedMachinesPage = () => {
-  const { lang } = useLanguage();
+  const { lang, buildPath } = useLanguage();
   const locale =
     lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu'
       ? lang
@@ -100,110 +114,23 @@ const UsedMachinesPage = () => {
     return currency === 'EUR' ? `€ ${formatted}` : `${formatted} ${currency}`;
   };
 
-  const machines: UsedMachine[] = [
-    {
-      name: 'Tornado Top',
-      manufacturer: 'OTT',
-      year: 2011,
-      condition: tr('gut', 'good', 'dobrý'),
-      status: tr('verfügbar', 'available', 'k dispozici'),
-      statusKey: 'available',
-      images: [
-        '/images/used-machines/ott-tornado-top-1.jpg',
-        '/images/used-machines/ott-tornado-top-2.jpg',
-      ],
-      price: 18000,
-      listPrice: 18500,
-      priceCurrency: 'EUR',
-      shortDescription: tr(
-        'Kantenleimmaschine mit 330.000 lfm Laufleistung.',
-        'Edgebanding machine with 330,000 lfm of usage.',
-        'Olepovačka hran s nájezdem 330 000 lfm.'
-      ),
-    },
-    {
-      name: 'FH 4 330 220 automatic',
-      manufacturer: 'SCHELLING',
-      year: 2015,
-      condition: tr('sehr gut', 'very good', 'velmi dobrý'),
-      status: tr('verfügbar', 'available', 'k dispozici'),
-      statusKey: 'available',
-      images: [
-        '/images/used-machines/schelling-fh4-330-220-automatic-1.jpg',
-        '/images/used-machines/schelling-fh4-330-220-automatic-2.jpg',
-      ],
-      shortDescription: tr(
-        'Automatisches Plattensägezentrum für effizienten Zuschnitt.',
-        'Automatic panel saw for efficient cutting.',
-        'Automatická panelová pila pro efektivní řezání.'
-      ),
-    },
-    {
-      name: 'PT',
-      manufacturer: 'Gabbiani',
-      year: 2021,
-      condition: tr('gut', 'good', 'dobrý'),
-      status: tr('verfügbar', 'available', 'k dispozici'),
-      statusKey: 'available',
-      images: ['/images/used-machines/gabbiani-pt-1.jpg', '/images/used-machines/gabbiani-pt-2.jpg'],
-      shortDescription: tr(
-        'Plattenaufteilsäge mit automatischer Beschickung.',
-        'Panel saw with automatic feeding.',
-        'Formátovací pila s automatickým podáváním.',
-      ),
-    },
-    {
-      name: 'Solution MD',
-      manufacturer: 'SCM Stefani',
-      year: 2016,
-      condition: tr('gut', 'good', 'dobrý'),
-      status: tr('verfügbar', 'available', 'k dispozici'),
-      statusKey: 'available',
-      imageFit: 'cover',
-      images: [
-        '/images/used-machines/scm-stefani-solution-md-1.jpg',
-        '/images/used-machines/scm-stefani-solution-md-2.jpg',
-      ],
-      price: 23000,
-      listPrice: 23500,
-      priceCurrency: 'EUR',
-      shortDescription: tr(
-        'Kantenleimmaschine, automatische Beschickung, 450.000 lfm.',
-        'Edgebanding machine, automatic feeding, 450,000 lfm.',
-        'Olepovačka hran, automatické podávání, 450 000 lfm.',
-      ),
-    },
-    {
-      name: 'S 200',
-      manufacturer: 'HOMAG',
-      year: 2022,
-      condition: tr('sehr gut', 'very good', 'velmi dobrý'),
-      status: tr('verfügbar', 'available', 'k dispozici'),
-      statusKey: 'available',
-      images: ['/images/used-machines/homag-s-200-1.jpg', '/images/used-machines/homag-s-200-2.jpg'],
-      price: 19000,
-      listPrice: 19500,
-      priceCurrency: 'EUR',
-      shortDescription: tr(
-        'Kantenleimmaschine mit 93.000 lfm Laufleistung.',
-        'Edgebanding machine with 93,000 lfm of usage.',
-        'Olepovačka hran s nájezdem 93 000 lfm.'
-      ),
-    },
-    {
-      name: '1308XL Power',
-      manufacturer: 'HOLZ-HER',
-      condition: tr('sehr gut', 'very good', 'velmi dobrý'),
-      status: tr('verkauft', 'sold', 'prodáno'),
-      statusKey: 'sold',
-      images: ['/images/used-machines/holz-her-1308xl-power.jpg'],
-      shortDescription: tr(
-        'Kantenleimmaschine für präzise Kantenbearbeitung.',
-        'Edgebanding machine for precise edge finishing.',
-        'Olepovačka hran pro přesné dokončení hran.'
-      ),
-    },
-  ];
+  // Adapter: convert UsedMachineData (from data file) to the local rendering type
+  const machines: UsedMachine[] = USED_MACHINES.map((m) => ({
+    slug: m.slug,
+    name: m.name,
+    manufacturer: m.manufacturer,
+    year: m.year,
+    condition: mlText(m.condition, lang),
+    status: m.status === 'sold' ? tr('verkauft', 'sold', 'prodáno') : tr('verfügbar', 'available', 'k dispozici'),
+    statusKey: m.status,
+    images: m.images,
+    imageFit: m.imageFit,
+    imageDisplay: m.imageDisplay,
+    price: m.price,
+    listPrice: m.listPrice,
+    priceCurrency: m.priceCurrency,
+    shortDescription: mlText(m.shortDescription, lang),
+  }));
 
   const sortedMachines = [...machines].sort(
     (a, b) => Number(isSoldStatus(a.status, a.statusKey)) - Number(isSoldStatus(b.status, b.statusKey)),
@@ -452,14 +379,23 @@ const UsedMachinesPage = () => {
                     </span>
                   </div>
                 </div>
-                <a
-                  href={inquiryMail}
-                  className="btn-outline-dark w-full justify-center"
-                  onClick={() => handleMachineInquiryClick(machine, 'card')}
-                >
-                  <Mail className="w-4 h-4" />
-                  {tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}
-                </a>
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <Link
+                    to={`${buildPath('/pouzite-stroje')}/${machine.slug}`}
+                    className="btn-outline-dark flex-1 justify-center"
+                  >
+                    {tr('Details ansehen', 'View details', 'Zobrazit detail')}
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                  <a
+                    href={inquiryMail}
+                    className="btn-primary-dark flex-1 justify-center"
+                    onClick={() => handleMachineInquiryClick(machine, 'card')}
+                  >
+                    <Mail className="w-4 h-4" />
+                    {tr('Anfrage', 'Inquiry', 'Poptávka')}
+                  </a>
+                </div>
               </article>
             );
           })}

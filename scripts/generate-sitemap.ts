@@ -14,6 +14,8 @@ import { OTT_PRODUCTS, buildOttProductPath } from '../src/data/ottProducts';
 import { MAYER_PRODUCTS, buildMayerProductPath } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, buildBarbaricProductPath } from '../src/data/barbaricProducts';
 import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannomatProducts';
+import { USED_MACHINES } from '../src/data/usedMachines';
+import { localizeSlug } from '../src/lib/slugs';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -122,6 +124,26 @@ GANNOMAT_PRODUCTS.forEach((product) => {
       lang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`,
       canonicalSlug: `/gannomat/${product.slug}`,
+      alternates,
+      defaultUrl,
+    });
+  });
+});
+
+// Used machine detail page entries
+USED_MACHINES.forEach((machine) => {
+  SUPPORTED_LANGUAGES.forEach((lang) => {
+    const buildUsedMachinePath = (al: Language) => `${localizeSlug('/pouzite-stroje', al)}/${machine.slug}`;
+    const machinePath = buildUsedMachinePath(lang);
+    const alternates = SUPPORTED_LANGUAGES.map((altLang) => ({
+      lang: altLang,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, buildUsedMachinePath(altLang))}`,
+    }));
+    const defaultUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildUsedMachinePath(HREFLANG_DEFAULT))}`;
+    entries.push({
+      lang,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, machinePath)}`,
+      canonicalSlug: `/pouzite-stroje/${machine.slug}`,
       alternates,
       defaultUrl,
     });

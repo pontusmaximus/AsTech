@@ -181,6 +181,11 @@ The Tornado+ can be extended with the TRANScompact return conveyor into an effic
 Vsestranna vybava Tornado+ z ni cini idealnim reseni pro provozy s menicimi se pozadavky. At uz tenke ABS hrany pro seriovou vyrobu nebo tluste masivni drevene hrany pro zakazkovou praci - Tornado+ rychle prepina mezi ruznymi materialy a tlousskami. Standardni vybava zahrnuje spojovaci obrabeni, zasobnik hran, system CombiMelt, oriznute zarizeni, frezovaci agregat a skrabku.
 
 Tornado+ lze rozsirit o vratny dopravnik TRANScompact na efektivni pruchozi linku. Ve srovnani s Pacific+ nabizi vetsi flexibilitu rychlosti posuvu, pricemz cenove zustavava vyrazne pod profesionalnimi modely Storm+ a TopEdge. Asamer dodava Tornado+ pro cesky, slovensky a madarsky trh s komplexnim servisem, zasobovanim nahradnimi dily a skolenim. Pro stredni provozy hledajici spolehlive univerzalni reseni pro olepovani hran je Tornado+ vynikajici investici s dlouhodobou hodnotou.`,
+      hu: `Az OTT Tornado+ a legbeváltabb modell az OTT élzárógép-családban, és évek óta bestseller a közepes méretu asztalosüzemekben és bútorgyártóknál. 6,2 méteres hosszával kiváló kompromisszumot kínál a kompaktság és a teljesítmény között. A gép 0,3 és 15 mm közötti élvastagságokat dolgoz fel 60 mm-es lapvastagságig, 12-18 m/perc eloretolási sebességgel.
+
+A Tornado+ sokoldalú felszereltsége ideális választássá teszi a változó igényekkel dolgozó üzemek számára. Legyen szó vékony ABS élekrol sorozatgyártáshoz vagy vastag tömörfa élekrol egyedi munkákhoz, a Tornado+ gyorsan vált a különbözo anyagok és vastagságok között. A standard felszereltség része a fugamegmunkálás, az éltár, a CombiMelt ragasztórendszer, a formatizáló egység, a maróegység és a kaparó.
+
+A Tornado+ a TRANScompact visszatéríto szalaggal hatékony átfutó sorrá bovítheto. A Pacific+-hoz képest nagyobb eloretolási sebesség-rugalmasságot kínál, miközben árban jelentosen a professzionális Storm+ és TopEdge alatt marad. Az Asamer a cseh, szlovák és magyar piacra átfogó szervizzel, alkatrészellátással és képzéssel szállítja a Tornado+-t. Megbízható, mindenre alkalmas élzárógépet kereso közepes méretu üzemek számára a Tornado+ kiváló, hosszú távon értékálló befektetés.`,
     },
 
     applicationSections: [
@@ -189,11 +194,13 @@ Tornado+ lze rozsirit o vratny dopravnik TRANScompact na efektivni pruchozi link
           de: 'Fuer variantenreiche Fertigung',
           en: 'For variant-rich production',
           cz: 'Pro ruznorodou vyrobu',
+          hu: 'Változatos gyártáshoz',
         },
         body: {
           de: 'Die Tornado+ ist der Allrounder fuer Betriebe, die taeglich mit unterschiedlichen Kantenmaterialien und -staerken arbeiten. Schnelle Umruestzeiten und eine intuitive Bedienung ermoeglichen den effizienten Wechsel zwischen PVC, ABS, Melamin und Echtholzfurnier - ideal fuer Moebelwerkstaetten mit Einzel- und Kleinserienfertigung.',
           en: 'The Tornado+ is the all-rounder for operations that work daily with different edge materials and thicknesses. Quick changeover times and intuitive operation enable efficient switching between PVC, ABS, melamine and real wood veneer - ideal for furniture workshops with one-off and small-batch production.',
           cz: 'Tornado+ je univerzalni stroj pro provozy pracujici denne s ruznymi hranovymi materialy a tlousskami. Rychle prestavovaci casy a intuitivni ovladani umoznuji efektivni prepinani mezi PVC, ABS, melaminem a dyhou z praveho dreva - idealni pro nabytkarske dilny s kusovou a maloseriovou vyrobou.',
+          hu: 'A Tornado+ az a mindenre alkalmas gép, amely napi szinten különbözo élanyagokkal és vastagságokkal dolgozó üzemek számára készült. A gyors átállási idok és az intuitív kezelés hatékony váltást tesznek lehetové PVC, ABS, melamin és valódi fafurnér között, ideális egyedi és kis sorozatú gyártást végzo bútormuhelyek számára.',
         },
       },
       {
@@ -201,11 +208,13 @@ Tornado+ lze rozsirit o vratny dopravnik TRANScompact na efektivni pruchozi link
           de: 'Bewaeehrtes Arbeitspferd fuer den Dauereinsatz',
           en: 'Proven workhorse for continuous use',
           cz: 'Overeny tahoun pro nepretrzity provoz',
+          hu: 'Bevált igásló a folyamatos használathoz',
         },
         body: {
           de: 'Seit Jahren ist die Tornado+ das meistverkaufte Modell von OTT. Die robuste Bauweise und die erprobte Technik sorgen fuer geringe Wartungskosten und hohe Verfuegbarkeit. Viele Betriebe setzen die Tornado+ im Einschicht- und Zweischichtbetrieb ein und profitieren von ihrer Zuverlaessigkeit und Langlebigkeit.',
           en: 'For years, the Tornado+ has been OTT\'s best-selling model. Its robust construction and proven technology ensure low maintenance costs and high availability. Many operations run the Tornado+ in single or double-shift production and benefit from its reliability and longevity.',
           cz: 'Jiz leta je Tornado+ nejprodavanejsim modelem OTT. Robustni konstrukce a osvedcena technika zajisuji nizke naklady na udrzbu a vysokou dostupnost. Mnoho provozu pouziva Tornado+ v jednosmennem i dvousmennem provozu a tezi z jeji spolehlivosti a zivotnosti.',
+          hu: 'A Tornado+ évek óta az OTT legkelendobb modellje. Robusztus kivitelezése és bevált technikája alacsony karbantartási költségeket és magas rendelkezésre állást biztosít. Számos üzem használja a Tornado+-t egy- és kétmuszakos üzemben, élvezve megbízhatóságát és hosszú élettartamát.',
         },
       },
     ],
@@ -214,6 +223,7 @@ Tornado+ lze rozsirit o vratny dopravnik TRANScompact na efektivni pruchozi link
       de: 'Die Tornado+ ist die richtige Wahl, wenn Sie eine bewaehrte Allround-Kantenanleimmaschine fuer den taeglichen Einsatz suchen. Im Vergleich zur Pacific+ bietet sie mehr Geschwindigkeitsflexibilitaet. Wenn Sie hoehere Vorschubgeschwindigkeiten oder eine Industrie-4.0-Anbindung benoetigen, empfehlen wir die FlexEdge oder Storm+.',
       en: 'The Tornado+ is the right choice if you are looking for a proven all-round edgebanding machine for daily use. Compared to the Pacific+, it offers more speed flexibility. If you need higher feed speeds or Industry 4.0 connectivity, we recommend the FlexEdge or Storm+.',
       cz: 'Tornado+ je spravna volba, pokud hledate overene univerzalni reseni pro denni olepovani hran. Ve srovnani s Pacific+ nabizi vetsi flexibilitu rychlosti. Pokud potrebujete vyssi rychlosti posuvu nebo pripojeni k Prumyslu 4.0, doporucujeme FlexEdge nebo Storm+.',
+      hu: 'A Tornado+ a helyes választás, ha bevált, mindenre alkalmas élzárógépet keres napi használatra. A Pacific+-hoz képest nagyobb sebesség-rugalmasságot kínál. Ha nagyobb eloretolási sebességre vagy Ipar 4.0-kompatibilitásra van szüksége, a FlexEdge-et vagy a Storm+-t ajánljuk.',
     },
 
     faq: [
@@ -222,11 +232,13 @@ Tornado+ lze rozsirit o vratny dopravnik TRANScompact na efektivni pruchozi link
           de: 'Worin unterscheidet sich die Tornado+ von der Pacific+?',
           en: 'What is the difference between the Tornado+ and the Pacific+?',
           cz: 'Cim se Tornado+ lisi od Pacific+?',
+          hu: 'Miben különbözik a Tornado+ a Pacific+-tól?',
         },
         answer: {
           de: 'Die Tornado+ ist mit 6,2 m etwas laenger als die Pacific+ (5,7 m) und bietet einen variablen Vorschub von 12-18 m/min gegenueber den festen 18 m/min der Pacific+. Sie ist vielseitiger ausgestattet und als bewaeahrtestes Modell der OTT-Reihe besonders zuverlaessig.',
           en: 'The Tornado+ at 6.2 m is slightly longer than the Pacific+ (5.7 m) and offers a variable feed speed of 12-18 m/min compared to the fixed 18 m/min of the Pacific+. It has more versatile equipment and, as the most proven model in the OTT range, is particularly reliable.',
           cz: 'Tornado+ s 6,2 m je o neco delsi nez Pacific+ (5,7 m) a nabizi promennou rychlost posuvu 12-18 m/min oproti fixnim 18 m/min u Pacific+. Je vsestranneji vybavena a jako nejovereneji model rady OTT je obzvlaste spolehliva.',
+          hu: 'A Tornado+ 6,2 m-rel valamivel hosszabb, mint a Pacific+ (5,7 m), és 12-18 m/perc változtatható eloretolást kínál a Pacific+ fix 18 m/perc értékével szemben. Sokoldalúbban felszerelt, és az OTT-család legbeváltabb modelljeként különösen megbízható.',
         },
       },
       {
@@ -234,11 +246,13 @@ Tornado+ lze rozsirit o vratny dopravnik TRANScompact na efektivni pruchozi link
           de: 'Fuer wie viele Teile pro Schicht ist die Tornado+ ausgelegt?',
           en: 'How many parts per shift is the Tornado+ designed for?',
           cz: 'Na kolik kusu za smenu je Tornado+ navrzena?',
+          hu: 'Hány darab/muszak teljesítményre tervezték a Tornado+-t?',
         },
         answer: {
           de: 'Mit 12-18 m/min Vorschub ist die Tornado+ fuer mittelgrosse Produktionsmengen ausgelegt. Im praktischen Einsatz koennen je nach Teilgeometrie und Kantenmaterial mehrere hundert Teile pro Schicht bearbeitet werden.',
           en: 'With 12-18 m/min feed speed, the Tornado+ is designed for medium-sized production volumes. In practical use, depending on part geometry and edge material, several hundred parts per shift can be processed.',
           cz: 'S rychlosti posuvu 12-18 m/min je Tornado+ navrzena pro stredne velke vyrobni objemy. V praktickem provozu lze v zavislosti na geometrii dilu a hranovem materialu zpracovat nekolik set kusu za smenu.',
+          hu: 'A 12-18 m/perc eloretolási sebességgel a Tornado+ közepes méretu gyártási mennyiségekre tervezett. A gyakorlatban, a munkadarab geometriájától és élanyagtól függoen, muszakonként több száz darab dolgozható fel.',
         },
       },
       {
@@ -246,11 +260,13 @@ Tornado+ lze rozsirit o vratny dopravnik TRANScompact na efektivni pruchozi link
           de: 'Ist die Tornado+ fuer den Zweischichtbetrieb geeignet?',
           en: 'Is the Tornado+ suitable for two-shift operation?',
           cz: 'Je Tornado+ vhodna pro dvousmenni provoz?',
+          hu: 'Alkalmas a Tornado+ kétmuszakos üzemre?',
         },
         answer: {
           de: 'Ja, die robuste Bauweise der Tornado+ ist fuer den Dauerbetrieb ausgelegt. Viele Betriebe setzen sie erfolgreich im Zweischichtbetrieb ein. Fuer noch intensivere Nutzung empfehlen wir die Storm+ oder TopEdge.',
           en: 'Yes, the robust construction of the Tornado+ is designed for continuous operation. Many workshops successfully use it in two-shift production. For even more intensive use, we recommend the Storm+ or TopEdge.',
           cz: 'Ano, robustni konstrukce Tornado+ je navrzena pro nepretrzity provoz. Mnoho provozu ji uspesne pouziva ve dvousmennem provozu. Pro jeste intenzivnejsi vyuziti doporucujeme Storm+ nebo TopEdge.',
+          hu: 'Igen, a Tornado+ robusztus kivitelezése folyamatos üzemre tervezett. Számos üzem sikeresen használja kétmuszakos üzemben. Még intenzívebb használathoz a Storm+-t vagy a TopEdge-et ajánljuk.',
         },
       },
     ],

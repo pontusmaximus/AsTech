@@ -91,6 +91,20 @@ export const SLUG_TRANSLATIONS: Record<string, Record<Language, string>> = {
     sk: '/sprievodca/automatizacia-skladu',
     hu: '/utmutato/raktarautomatizalas',
   },
+  '/ratgeber/formatsaege-aluminium-vs-holz': {
+    de: '/ratgeber/formatsaege-aluminium-vs-holz',
+    en: '/guide/panel-saw-aluminium-vs-wood',
+    cz: '/pruvodce/formatovaci-pila-hlinik-vs-drevo',
+    sk: '/sprievodca/formatovacia-pila-hlinik-vs-drevo',
+    hu: '/utmutato/formatizalo-furesz-aluminium-vs-fa',
+  },
+  '/ratgeber/foerderung-holzbearbeitung-cz-2026': {
+    de: '/ratgeber/foerderung-holzbearbeitung-cz-2026',
+    en: '/guide/funding-woodworking-machines-cz-2026',
+    cz: '/pruvodce/dotace-drevoobrabeci-stroje-cz-2026',
+    sk: '/sprievodca/dotacie-stroje-cz-2026',
+    hu: '/utmutato/tamogatasok-csehorszag-2026',
+  },
 };
 
 // Reverse map: any localized slug (with leading /) → canonical CZ slug

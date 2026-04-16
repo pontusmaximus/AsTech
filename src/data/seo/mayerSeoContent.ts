@@ -30,11 +30,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Für den Holzwerkstoff-Zuschnitt in Tischlereien',
           en: 'For wood panel cutting in joinery shops',
           cz: 'Pro řezání dřevěných desek v truhlářských dílnách',
+          hu: 'Lapfűrész asztalosműhelyekben történő faalapú lapok vágásához',
         },
         body: {
           de: 'Die kappa automatic 80 ist die optimale Plattensäge für Tischlereien und Möbelwerkstätten, die regelmäßig Spanplatten, MDF-Platten und Sperrholz auf Maß zuschneiden. Die kompakte Bauweise spart Stellfläche, während der automatische Materialvorschub und der Druckbalken die Ein-Mann-Bedienung ermöglichen. Die 80 mm Schnitthöhe reicht für die gängigen Plattenformate im Möbelbau und Innenausbau.',
           en: 'The kappa automatic 80 is the optimal panel saw for joinery shops and furniture workshops that regularly cut chipboard, MDF and plywood to size. The compact design saves floor space while the automatic material pusher and pressure beam enable single-operator use. The 80 mm cutting height covers the common panel formats used in furniture making and interior fit-out.',
           cz: 'kappa automatic 80 je optimální formátovací pila pro truhlárny a nábytkářské dílny, které pravidelně řežou dřevotřísky, MDF desky a překližky na míru. Kompaktní konstrukce šetří podlahovou plochu, zatímco automatický posuv materiálu a přítlačný trám umožňují obsluhu jedním operátorem. Výška řezu 80 mm pokrývá běžné formáty desek používané ve výrobě nábytku a interiérových vestaveb.',
+          hu: 'A kappa automatic 80 az optimális lapfűrész asztalosüzemek és bútorműhelyek számára, amelyek rendszeresen vágnak forgácslapot, MDF-et és rétegelt lemezt méretre. A kompakt felépítés helyet takarít meg, miközben az automatikus anyagtoló és a nyomógerenda lehetővé teszik az egyszemélyes kezelést. A 80 mm vágásmagasság lefedi a bútorgyártásban és belsőépítészetben használt szokásos lapformátumokat.',
         },
       },
       {
@@ -42,11 +44,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Für die Serienfertigung im Handwerk',
           en: 'For series production in craft businesses',
           cz: 'Pro sériovou výrobu v řemeslných provozech',
+          hu: 'Sorozatgyártáshoz kisipari üzemekben',
         },
         body: {
           de: 'Dank der Vorschubgeschwindigkeit von bis zu 100 m/min und der Schnittoptimier-Software eignet sich die kappa automatic 80 hervorragend für die wirtschaftliche Serienfertigung im Handwerk. Materialverschnitt wird minimiert, Rüstzeiten verkürzt und der Durchsatz gesteigert. Die Windows-basierte Steuerung ermöglicht eine einfache Schnittverwaltung und digitale Auftragsverarbeitung.',
           en: 'Thanks to the feed speed of up to 100 m/min and the cut optimisation software, the kappa automatic 80 is ideally suited for economical series production in craft businesses. Material waste is minimised, setup times reduced and throughput increased. The Windows-based control system enables easy cut management and digital order processing.',
           cz: 'Díky rychlosti posuvu až 100 m/min a softwaru pro optimalizaci řezů je kappa automatic 80 ideálně vhodná pro ekonomickou sériovou výrobu v řemeslných provozech. Odpad materiálu je minimalizován, časy přípravy zkráceny a průchodnost zvýšena. Řídicí systém na bázi Windows umožňuje snadnou správu řezů a digitální zpracování zakázek.',
+          hu: 'A 100 m/min-ig terjedő előtolási sebességnek és a vágásoptimalizáló szoftvernek köszönhetően a kappa automatic 80 kiválóan alkalmas a gazdaságos sorozatgyártásra kisipari üzemekben. Az anyagveszteség minimálisra csökken, az átállási idők rövidülnek és a termelékenység nő. A Windows-alapú vezérlőrendszer lehetővé teszi az egyszerű vágáskezelést és a digitális megrendelésfeldolgozást.',
         },
       },
     ],
@@ -54,6 +58,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Die kappa automatic 80 ist die richtige Wahl, wenn Sie eine kompakte horizontale Plattensäge für Holzwerkstoffe suchen und hauptsächlich Platten bis 80 mm Stärke verarbeiten. Sie eignet sich ideal als Einstiegsmaschine für wachsende Tischlereien, die von manuellen Formatkreissägen auf automatisierte Plattensägen umsteigen möchten. Kontaktieren Sie Asamer für ein individuelles Angebot.',
       en: 'The kappa automatic 80 is the right choice if you are looking for a compact horizontal panel saw for wood-based materials and primarily process panels up to 80 mm thickness. It is ideal as an entry-level machine for growing joinery shops upgrading from manual sliding table saws to automated panel saws. Contact Asamer for a tailored quotation.',
       cz: 'kappa automatic 80 je správná volba, pokud hledáte kompaktní horizontální formátovací pilu pro dřevěné materiály a převážně zpracováváte desky do tloušťky 80 mm. Je ideální jako vstupní stroj pro rostoucí truhlárny, které přecházejí z manuálních formátovacích kotoučových pil na automatizované formátovací pily. Kontaktujte Asamer pro individuální nabídku.',
+      hu: 'A kappa automatic 80 akkor a jó választás, ha kompakt vízszintes lapfűrészt keres faalapú anyagokhoz és főként 80 mm vastagságig dolgoz fel lapokat. Ideális belépő gép növekvő asztalosüzemek számára, amelyek a kézi formátumozó körfűrészekről automatizált lapfűrészekre váltanak. Lépjen kapcsolatba az Asamerrel egyedi ajánlatért.',
     },
     faq: [
       {
@@ -61,11 +66,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Welche Materialien kann die kappa automatic 80 schneiden?',
           en: 'What materials can the kappa automatic 80 cut?',
           cz: 'Jaké materiály dokáže kappa automatic 80 řezat?',
+          hu: 'Milyen anyagokat tud vágni a kappa automatic 80?',
         },
         answer: {
           de: 'Die kappa automatic 80 ist für Holzwerkstoffe wie Spanplatten, MDF, HDF, Sperrholz, Tischlerplatten und Massivholz ausgelegt. Die Schnitthöhe von 80 mm erlaubt den Zuschnitt einzelner Platten sowie kleinerer Plattenstapel.',
           en: 'The kappa automatic 80 is designed for wood-based materials such as chipboard, MDF, HDF, plywood, blockboard and solid wood. The 80 mm cutting height allows cutting of individual panels and smaller panel stacks.',
           cz: 'kappa automatic 80 je navržena pro dřevěné materiály jako dřevotřísky, MDF, HDF, překližky, stolařské desky a masivní dřevo. Výška řezu 80 mm umožňuje řezání jednotlivých desek i menších stohu desek.',
+          hu: 'A kappa automatic 80 faalapú anyagokhoz készült, mint a forgácslap, MDF, HDF, rétegelt lemez, asztaloslap és tömör fa. A 80 mm vágásmagasság lehetővé teszi egyedi lapok és kisebb lapcsomagok vágását.',
         },
       },
       {
@@ -73,11 +80,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Ist die kappa automatic 80 als Ein-Mann-Maschine bedienbar?',
           en: 'Can the kappa automatic 80 be operated by a single person?',
           cz: 'Lze kappa automatic 80 obsluhovat jedním operátorem?',
+          hu: 'Egyetlen kezelő üzemeltetheti-e a kappa automatic 80-at?',
         },
         answer: {
           de: 'Ja, die schwere Stahlkonstruktion mit automatischem Druckbalken und Materialvorschub ermöglicht die vollständige Ein-Mann-Bedienung. Der Bediener programmiert die Schnitte am Touchpanel, und die Maschine führt Vorschub und Sägevorgang selbstständig aus.',
           en: 'Yes, the heavy steel construction with automatic pressure beam and material pusher enables full single-operator use. The operator programs cuts on the touch panel and the machine independently executes the feed and sawing process.',
           cz: 'Ano, těžká ocelová konstrukce s automatickým přítlačným trámem a posuvem materiálu umožňuje plnou obsluhu jedním operátorem. Obsluha naprogramuje řezy na dotykovém panelu a stroj samostatně provede posuv a řezný proces.',
+          hu: 'Igen, a nehéz acélszerkezet automatikus nyomógerendával és anyagtolóval lehetővé teszi a teljes egyszemélyes kezelést. A kezelő beprogramozza a vágásokat az érintőképernyőn, és a gép önállóan hajtja végre az előtolást és a fűrészelést.',
         },
       },
       {
@@ -85,11 +94,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Welche Vorschubgeschwindigkeit bietet die kappa automatic 80?',
           en: 'What feed speed does the kappa automatic 80 offer?',
           cz: 'Jakou rychlost posuvu nabízí kappa automatic 80?',
+          hu: 'Milyen előtolási sebességet kínál a kappa automatic 80?',
         },
         answer: {
           de: 'Die Vorschubgeschwindigkeit ist stufenlos regelbar von 5 bis 100 m/min, was eine flexible Anpassung an unterschiedliche Materialien und Anforderungen ermöglicht.',
           en: 'The feed speed is continuously variable from 5 to 100 m/min, enabling flexible adaptation to different materials and requirements.',
           cz: 'Rychlost posuvu je plynule regulovatelná od 5 do 100 m/min, což umožňuje flexibilní přizpůsobení různým materiálům a požadavkům.',
+          hu: 'Az előtolási sebesség fokozatmentesen szabályozható 5-től 100 m/min-ig, ami rugalmas alkalmazkodást tesz lehetővé a különböző anyagokhoz és követelményekhez.',
         },
       },
       {
@@ -97,11 +108,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Wo kann ich die Mayer kappa automatic 80 kaufen?',
           en: 'Where can I buy the Mayer kappa automatic 80?',
           cz: 'Kde mohu koupit Mayer kappa automatic 80?',
+          hu: 'Hol vásárolhatom meg a Mayer kappa automatic 80-at?',
         },
         answer: {
           de: 'Asamer ist der autorisierte Mayer-Händler für Tschechien, die Slowakei und Ungarn. Wir bieten persönliche Beratung, Vorführung, Lieferung, Inbetriebnahme und After-Sales-Service aus einer Hand.',
           en: 'Asamer is the authorised Mayer dealer for the Czech Republic, Slovakia and Hungary. We provide personal consultation, demonstration, delivery, commissioning and after-sales service from a single source.',
           cz: 'Asamer je autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko. Nabízíme osobní poradenství, předvedení, dodání, uvedení do provozu a poprodejní servis z jednoho zdroje.',
+          hu: 'Az Asamer a Mayer hivatalos viszonteladója Csehország, Szlovákia és Magyarország területén. Személyre szabott tanácsadást, bemutatót, szállítást, üzembe helyezést és értékesítés utáni szervizt kínálunk egy kézből.',
         },
       },
     ],
@@ -115,6 +128,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: `Die Mayer kappa automatic 100 ist eine horizontale Plattensäge mit gehobener Ausstattung, die mehr Kraft, mehr Leistung und mehr Komfort bietet als das Einstiegsmodell. Mit einer Schnitthöhe von 100 mm und einer Schnittlänge von 3.200 mm eignet sich diese Plattenaufteilsäge hervorragend für professionelle Holzverarbeiter, Möbelhersteller und industrielle Betriebe mit mittlerem bis hohem Durchsatz. Die schwere Stahlkonstruktion bildet die Grundlage für eine vibrationsarme, präzise Arbeitsweise und garantiert eine ausgezeichnete Wiederholgenauigkeit. Der neue Sägewagen mit Schnittrichtung gegen den Anschlag sorgt für saubere Schnittkanten an Spanplatten, MDF-Platten, Multiplex und Massivholz. Die stufenlos regelbare Vorschubgeschwindigkeit von 5 bis 100 m/min ermöglicht eine optimale Anpassung an verschiedene Holzwerkstoffe und Plattendicken. Der modulare Schnittoptimierer reduziert Verschnitt und steigert die Materialausbeute deutlich. Kompatibilität mit der Ardis-Schnittoptimier-Software erlaubt die digitale Auftragsverarbeitung, die Anbindung an ERP-Systeme und eine durchgängige Produktionsplanung. Das ergonomische Bedienkonzept und die Windows-basierte Steuerung machen die tägliche Arbeit effizient und benutzerfreundlich. Asamer liefert die kappa automatic 100 nach Tschechien, in die Slowakei und nach Ungarn und unterstützt Sie mit fachkundiger Beratung, Installation und Wartung.`,
       en: `The Mayer kappa automatic 100 is a horizontal panel saw with premium equipment, offering more power, more performance and more comfort than the entry-level model. With a cutting height of 100 mm and a cutting length of 3,200 mm, this beam saw is ideally suited for professional wood processors, furniture manufacturers and industrial operations with medium to high throughput. The heavy steel construction provides the foundation for low-vibration, precise operation and guarantees excellent repeat accuracy. The new saw carriage with cutting direction against the fence ensures clean cut edges on chipboard, MDF, multiplex and solid wood. The continuously variable feed speed from 5 to 100 m/min allows optimal adaptation to various wood-based materials and panel thicknesses. The modular cut optimiser significantly reduces waste and increases material yield. Compatibility with the Ardis cut optimisation software enables digital order processing, ERP system integration and seamless production planning. The ergonomic operating concept and Windows-based control make daily work efficient and user-friendly. Asamer delivers the kappa automatic 100 to the Czech Republic, Slovakia and Hungary and supports you with expert consultation, installation and maintenance.`,
       cz: `Mayer kappa automatic 100 je horizontální formátovací pila s vyšší výbavou, která nabízí více síly, více výkonu a více komfortu oproti vstupnímu modelu. S výškou řezu 100 mm a délkou řezu 3 200 mm je tato pila na desky ideální pro profesionální dřevozpracovatele, výrobce nábytku a průmyslové provozy se středním až vysokým průchodem. Těžká ocelová konstrukce tvoří základ pro práci s minimálními vibracemi a garantuje vynikající opakovatelnou přesnost. Nový pilový vozík se směrem řezu proti dorazu zajišťuje čisté řezné hrany na dřevotřísce, MDF, multiplexu a masivním dřevu. Plynule regulovatelná rychlost posuvu od 5 do 100 m/min umožňuje optimální přizpůsobení různým dřevěným materiálům a tloušťkám desek. Modulární optimalizátor řezů výrazně snižuje odpad a zvyšuje výtěžnost materiálu. Kompatibilita se softwarem Ardis pro optimalizaci řezů umožňuje digitální zpracování zakázek, napojení na ERP systémy a komplexní plánování výroby. Ergonomický koncept ovládání a řídicí systém na bázi Windows činí každodenní práci efektivní a uživatelsky přívětivou. Asamer dodává kappa automatic 100 do České republiky, na Slovensko a do Maďarska a podporuje vás odborným poradenstvím, instalací a údržbou.`,
+      hu: `A Mayer kappa automatic 100 prémium felszereltségű vízszintes lapfűrész, amely több erőt, nagyobb teljesítményt és nagyobb kényelmet kínál a belépő modellhez képest. 100 mm vágásmagassággal és 3 200 mm vágóhosszal ez a lapfűrész ideális professzionális fafeldolgozók, bútorgyártók és közepes-nagy kapacitású ipari üzemek számára. A nehéz acélszerkezet biztosítja a rezgésmentes, precíz működést és kiváló ismétlési pontosságot garantál. Az új fűrészkocsi az ütköző ellenében vágó iránnyal tiszta vágási éleket biztosít forgácslapon, MDF-en, multiplexen és tömör fán. Az 5-től 100 m/min-ig fokozatmentesen állítható előtolási sebesség optimális alkalmazkodást tesz lehetővé a különböző faalapú anyagokhoz és laptestvastagságokhoz. A moduláris vágásoptimalizáló jelentősen csökkenti a hulladékot és növeli az anyagkihasználást. Az Ardis vágásoptimalizáló szoftverrel való kompatibilitás lehetővé teszi a digitális megrendelésfeldolgozást, az ERP-rendszerek integrálását és a zökkenőmentes gyártástervezést. Az ergonomikus kezelési koncepció és a Windows-alapú vezérlés hatékonnyá és felhasználóbaráttá teszi a napi munkát. Az Asamer Csehországba, Szlovákiába és Magyarországra szállítja a kappa automatic 100-at, és szakértő tanácsadással, telepítéssel és karbantartással támogatja Önt.`,
     },
     applicationSections: [
       {
@@ -122,11 +136,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Professioneller Plattenzuschnitt im Möbelbau',
           en: 'Professional panel cutting in furniture manufacturing',
           cz: 'Profesionální řezání desek ve výrobě nábytku',
+          hu: 'Professzionális lapszabás a bútorgyártásban',
         },
         body: {
           de: 'Die kappa automatic 100 ist für Möbelhersteller konzipiert, die hohe Stückzahlen an Korpusteilen, Fronten und Einlegeböden aus Holzwerkstoffen zuschneiden. Die 100 mm Schnitthöhe erlaubt auch dickere Plattenstapel, sodass mehrere Platten in einem Durchgang geschnitten werden können. Die Schnittoptimierer-Software minimiert Verschnitt und senkt die Materialkosten pro Werkstück.',
           en: 'The kappa automatic 100 is designed for furniture manufacturers who cut high volumes of carcass parts, fronts and shelves from wood-based panels. The 100 mm cutting height allows thicker panel stacks, so multiple panels can be cut in a single pass. The cut optimiser software minimises waste and lowers material cost per workpiece.',
           cz: 'kappa automatic 100 je navržena pro výrobce nábytku, kteří řežou vysoké objemy korpusových dílů, front a polic z dřevěných desek. Výška řezu 100 mm umožňuje řezání tlustších stohu desek, takže lze řezat více desek v jednom průchodu. Software pro optimalizaci řezů minimalizuje odpad a snižuje náklady na materiál na obrobek.',
+          hu: 'A kappa automatic 100 bútorgyártók számára készült, akik nagy mennyiségben vágnak korpuszelemeket, frontokat és polcokat faalapú lapokból. A 100 mm vágásmagasság vastagabb lapcsomagokat tesz lehetővé, így több lap vágható egy menetben. A vágásoptimalizáló szoftver minimalizálja a hulladékot és csökkenti a darabonkénti anyagköltséget.',
         },
       },
       {
@@ -134,11 +150,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Innenausbau und Ladenbau',
           en: 'Interior fit-out and shopfitting',
           cz: 'Interiérové vestavby a výroba prodejen',
+          hu: 'Belsőépítészet és üzletépítés',
         },
         body: {
           de: 'Im Innenausbau und Ladenbau sind präzise Zuschnitte und kurze Rüstzeiten entscheidend. Die kappa automatic 100 bietet mit ihrer Ardis-Anbindung eine durchgängige digitale Auftragsverarbeitung vom Entwurf bis zum fertigen Teil. Die schwere Stahlkonstruktion garantiert auch bei Dauerbetrieb höchste Schnittqualität und Maßhaltigkeit.',
           en: 'In interior fit-out and shopfitting, precise cuts and short setup times are decisive. The kappa automatic 100, with its Ardis connectivity, provides seamless digital order processing from design to finished part. The heavy steel construction guarantees the highest cut quality and dimensional accuracy even in continuous operation.',
           cz: 'V interiérových vestavbách a výrobě prodejen jsou rozhodující přesné řezy a krátké časy přípravy. kappa automatic 100 s připojením k Ardis poskytuje bezešvé digitální zpracování zakázek od návrhu po hotový díl. Těžká ocelová konstrukce garantuje nejvyšší kvalitu řezu a rozměrovou přesnost i při nepřetržitém provozu.',
+          hu: 'A belsőépítészetben és üzletépítésben döntő fontosságúak a precíz vágások és a rövid átállási idők. A kappa automatic 100 az Ardis-kapcsolattal zökkenőmentes digitális megrendelésfeldolgozást biztosít a tervezéstől a kész darabig. A nehéz acélszerkezet folyamatos üzemben is garantálja a legmagasabb vágásminőséget és méretpontosságot.',
         },
       },
     ],
@@ -146,6 +164,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Wählen Sie die kappa automatic 100, wenn Sie über das Einstiegsmodell hinauswachsen und eine höhere Schnitthöhe, mehr Komfort und modulare Schnittoptimierung benötigen. Sie ist ideal für Betriebe, die 100 mm Plattenstärke verarbeiten und die Anbindung an Ardis-Software nutzen möchten. Asamer berät Sie persönlich vor Ort.',
       en: 'Choose the kappa automatic 100 when you are outgrowing the entry-level model and need a higher cutting height, more comfort and modular cut optimisation. It is ideal for operations processing 100 mm panel thickness and wanting Ardis software integration. Asamer provides on-site personal consultation.',
       cz: 'Zvolte kappa automatic 100, pokud přerůstáte vstupní model a potřebujete vyšší výšku řezu, více komfortu a modulární optimalizaci řezů. Je ideální pro provozy zpracovávající desky o tloušťce 100 mm a chtějí napojení na software Ardis. Asamer vám poskytne osobní poradenství na místě.',
+      hu: 'Válassza a kappa automatic 100-at, ha kinőtte a belépő modellt és nagyobb vágásmagasságra, nagyobb kényelemre és moduláris vágásoptimalizálásra van szüksége. Ideális 100 mm laptestvastagságot feldolgozó üzemek számára, amelyek Ardis szoftverintegrációt szeretnének. Az Asamer helyszíni személyes tanácsadást biztosít.',
     },
     faq: [
       {
@@ -153,11 +172,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Was unterscheidet die kappa automatic 100 von der 80er?',
           en: 'What differentiates the kappa automatic 100 from the 80?',
           cz: 'Čím se liší kappa automatic 100 od modelu 80?',
+          hu: 'Miben különbözik a kappa automatic 100 a 80-as modelltől?',
         },
         answer: {
           de: 'Die kappa automatic 100 bietet 100 mm statt 80 mm Schnitthöhe, einen modularen Schnittoptimierer und eine gehobene Ausstattung mit mehr Komfortfunktionen. Die Schnittlänge bleibt bei 3.200 mm.',
           en: 'The kappa automatic 100 offers 100 mm instead of 80 mm cutting height, a modular cut optimiser and premium equipment with more comfort features. The cutting length remains at 3,200 mm.',
           cz: 'kappa automatic 100 nabízí výšku řezu 100 mm místo 80 mm, modulární optimalizátor řezů a vyšší výbavu s více komfortními funkcemi. Délka řezu zůstává 3 200 mm.',
+          hu: 'A kappa automatic 100 100 mm vágásmagasságot kínál a 80 mm helyett, moduláris vágásoptimalizálót és prémium felszereltséget több kényelmi funkcióval. A vágóhossz 3 200 mm marad.',
         },
       },
       {
@@ -165,11 +186,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Kann die kappa automatic 100 mit Schnittoptimier-Software arbeiten?',
           en: 'Can the kappa automatic 100 work with cut optimisation software?',
           cz: 'Může kappa automatic 100 pracovat se softwarem pro optimalizaci řezů?',
+          hu: 'Tud a kappa automatic 100 vágásoptimalizáló szoftverrel dolgozni?',
         },
         answer: {
           de: 'Ja, die kappa automatic 100 ist kompatibel mit der Ardis-Schnittoptimier-Software, die eine automatische Berechnung optimaler Schnittmuster, eine Reduzierung des Materialverschnitts und eine digitale Auftragsverarbeitung ermöglicht.',
           en: 'Yes, the kappa automatic 100 is compatible with Ardis cut optimisation software, which enables automatic calculation of optimal cutting patterns, reduction of material waste and digital order processing.',
           cz: 'Ano, kappa automatic 100 je kompatibilní se softwarem Ardis pro optimalizaci řezů, který umožňuje automatický výpočet optimálních řezných plánů, snížení odpadu materiálu a digitální zpracování zakázek.',
+          hu: 'Igen, a kappa automatic 100 kompatibilis az Ardis vágásoptimalizáló szoftverrel, amely lehetővé teszi az optimális vágási minták automatikus kiszámítását, az anyaghulladék csökkentését és a digitális megrendelésfeldolgozást.',
         },
       },
       {
@@ -177,11 +200,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Für welche Betriebsgrößen eignet sich die kappa automatic 100?',
           en: 'What business sizes is the kappa automatic 100 suitable for?',
           cz: 'Pro jaké velikosti provozů je kappa automatic 100 vhodná?',
+          hu: 'Milyen méretű üzemek számára alkalmas a kappa automatic 100?',
         },
         answer: {
           de: 'Die kappa automatic 100 eignet sich für mittlere bis große Handwerksbetriebe, Möbelhersteller und Innenausbau-Unternehmen mit regelmäßigem Plattenzuschnitt und mittlerem Durchsatz.',
           en: 'The kappa automatic 100 is suitable for medium to large craft businesses, furniture manufacturers and interior fit-out companies with regular panel cutting and medium throughput.',
           cz: 'kappa automatic 100 je vhodná pro středně velké až velké řemeslné provozy, výrobce nábytku a interiérové firmy s pravidelným řezáním desek a středním průchodem.',
+          hu: 'A kappa automatic 100 közepes és nagy kisipari üzemek, bútorgyártók és belsőépítő cégek számára alkalmas, amelyek rendszeresen végeznek lapszabást közepes kapacitással.',
         },
       },
     ],
@@ -195,6 +220,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: `Die Mayer kappa automatic 120 ist eine leistungsstarke horizontale Plattensäge für das schnelle und maßgenaue Zuschneiden von Einzelplatten und Plattenpaketen. Mit 120 mm Schnitthöhe und 3.800 mm Schnittlänge bietet sie eine deutlich erweiterte Kapazität gegenüber den kleineren kappa-Modellen und ist damit die optimale Wahl für mittlere Produktionsvolumen. Die schwere Stahlkonstruktion mit massivem Druckbalken gewährleistet auch bei der Verarbeitung dicker Plattenstapel aus Spanplatten, MDF, Multiplex oder Massivholz höchste Wiederholgenauigkeit und Schnittqualität. Der stufenlos regelbare Vorschub von 5 bis 100 m/min erlaubt eine effiziente Anpassung an unterschiedliche Materialien und Plattendicken. Die erweiterte Schnittlänge von 3.800 mm ermöglicht die Verarbeitung von Großformaten, wie sie im modernen Möbelbau und Innenausbau zunehmend gefordert werden. Kompatibel mit der Ardis-Schnittoptimierung lässt sich der Verschnitt minimieren und die Materialausbeute maximieren. Die Maschine ist mit einem ergonomischen Bedienpanel ausgestattet, das eine intuitive Programmierung der Schnittmuster ermöglicht und in bestehende Produktionsabläufe integriert werden kann. Asamer liefert die kappa automatic 120 als autorisierter Mayer-Händler in Tschechien, der Slowakei und Ungarn und steht Ihnen mit Beratung, Vorführung, Lieferung und After-Sales-Service zur Seite.`,
       en: `The Mayer kappa automatic 120 is a powerful horizontal panel saw for fast and dimensionally accurate cutting of single panels and panel stacks. With 120 mm cutting height and 3,800 mm cutting length, it offers significantly expanded capacity compared to the smaller kappa models, making it the optimal choice for medium production volumes. The heavy steel construction with massive pressure beam guarantees the highest repeat accuracy and cut quality even when processing thick panel stacks of chipboard, MDF, multiplex or solid wood. The continuously variable feed from 5 to 100 m/min allows efficient adaptation to different materials and panel thicknesses. The extended 3,800 mm cutting length enables processing of large formats that are increasingly demanded in modern furniture manufacturing and interior fit-out. Compatible with Ardis cut optimisation, material waste can be minimised and yield maximised. The machine features an ergonomic control panel that allows intuitive programming of cutting patterns and can be integrated into existing production workflows. Asamer delivers the kappa automatic 120 as an authorised Mayer dealer in the Czech Republic, Slovakia and Hungary and supports you with consultation, demonstration, delivery and after-sales service.`,
       cz: `Mayer kappa automatic 120 je výkonná horizontální formátovací pila pro rychlé a rozměrově přesné řezání jednotlivých desek i balíků desek. S výškou řezu 120 mm a délkou řezu 3 800 mm nabízí výrazně rozšířenou kapacitu oproti menším modelům kappa a je tak optimální volbou pro střední objemy výroby. Těžká ocelová konstrukce s masivním přítlačným trámem zaručuje nejvyšší opakovatelnou přesnost a kvalitu řezu i při zpracování tlustých stohu desek z dřevotřísky, MDF, multiplexu nebo masivního dřeva. Plynule regulovatelný posuv od 5 do 100 m/min umožňuje efektivní přizpůsobení různým materiálům a tloušťkám desek. Rozšířená délka řezu 3 800 mm umožňuje zpracování velkých formátů, které jsou stále více požadovány v moderní výrobě nábytku a interiérových vestavbách. Kompatibilita s optimalizací řezů Ardis umožňuje minimalizovat odpad a maximalizovat výtěžnost materiálu. Stroj je vybaven ergonomickým ovládacím panelem, který umožňuje intuitivní programování řezných plánů a lze jej integrovat do stávajících výrobních procesů. Asamer dodává kappa automatic 120 jako autorizovaný prodejce Mayer v České republice, na Slovensku a v Maďarsku a stojí vám po boku s poradenstvím, předvedením, dodáním a poprodejním servisem.`,
+      hu: `A Mayer kappa automatic 120 egy nagy teljesítményű vízszintes lapfűrész egyedi lapok és lapcsomagok gyors és méretpontos vágásához. 120 mm vágásmagassággal és 3 800 mm vágóhosszal jelentősen kibővített kapacitást kínál a kisebb kappa modellekhez képest, így az optimális választás közepes gyártási mennyiségekhez. A nehéz acélszerkezet masszív nyomógerendával garantálja a legmagasabb ismétlési pontosságot és vágásminőséget forgácslap, MDF, multiplex vagy tömör fa vastag lapcsomagjainak feldolgozása esetén is. Az 5-től 100 m/min-ig fokozatmentesen állítható előtolás hatékony alkalmazkodást tesz lehetővé a különböző anyagokhoz és laptestvastagságokhoz. A kibővített 3 800 mm-es vágóhossz lehetővé teszi a modern bútorgyártásban és belsőépítészetben egyre inkább igényelt nagy formátumok feldolgozását. Az Ardis vágásoptimalizálással való kompatibilitás minimalizálja a hulladékot és maximalizálja az anyagkihasználást. A gép ergonomikus vezérlőpanellel van felszerelve, amely intuitív vágástervprogramozást tesz lehetővé és integrálható a meglévő gyártási folyamatokba. Az Asamer a Mayer hivatalos viszonteladójaként szállítja a kappa automatic 120-at Csehországban, Szlovákiában és Magyarországon, és tanácsadással, bemutatóval, szállítással és értékesítés utáni szervizzel áll mellette.`,
     },
     applicationSections: [
       {
@@ -202,11 +228,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Paketschnitt für mittlere Serien',
           en: 'Stack cutting for medium-volume series',
           cz: 'Řezání balíků pro středně velké série',
+          hu: 'Csomagvágás közepes sorozatokhoz',
         },
         body: {
           de: 'Mit 120 mm Schnitthöhe ermöglicht die kappa automatic 120 das effiziente Schneiden von Plattenpaketen. Mehrere Spanplatten oder MDF-Platten werden gleichzeitig verarbeitet, was den Durchsatz bei der Serienfertigung von Korpusteilen, Regalböden und Fronten erheblich steigert.',
           en: 'With 120 mm cutting height, the kappa automatic 120 enables efficient stack cutting. Multiple chipboard or MDF panels are processed simultaneously, significantly increasing throughput in series production of carcass parts, shelves and fronts.',
           cz: 'S výškou řezu 120 mm umožňuje kappa automatic 120 efektivní řezání balíků desek. Více dřevotřískových nebo MDF desek je zpracováno současně, což výrazně zvyšuje průchodnost při sériové výrobě korpusových dílů, polic a front.',
+          hu: '120 mm vágásmagassággal a kappa automatic 120 hatékony csomagvágást tesz lehetővé. Több forgácslap vagy MDF-lap feldolgozása egyszerre történik, ami jelentősen növeli a termelékenységet korpuszelemek, polcok és frontok sorozatgyártásánál.',
         },
       },
       {

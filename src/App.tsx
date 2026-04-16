@@ -26,6 +26,7 @@ const ImprintPage = lazy(() => import('./pages/ImprintPage'));
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
 const UsedMachinesPage = lazy(() => import('./pages/UsedMachinesPage'));
+const UsedMachineDetailPage = lazy(() => import('./pages/UsedMachineDetailPage'));
 const OttProductPage = lazy(() => import('./pages/OttProductPage'));
 const MayerProductPage = lazy(() => import('./pages/MayerProductPage'));
 const BarbaricProductPage = lazy(() => import('./pages/BarbaricProductPage'));
@@ -35,6 +36,8 @@ const FaqPage = lazy(() => import('./pages/FaqPage'));
 const GuidePurVsEvaPage = lazy(() => import('./pages/GuidePurVsEvaPage'));
 const GuideEdgebanderPage = lazy(() => import('./pages/GuideEdgebanderPage'));
 const GuideWarehouseAutomationPage = lazy(() => import('./pages/GuideWarehouseAutomationPage'));
+const GuidePanelSawComparisonPage = lazy(() => import('./pages/GuidePanelSawComparisonPage'));
+const GuideFundingCzPage = lazy(() => import('./pages/GuideFundingCzPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 import Footer from './sections/Footer';
 import CookieConsent from './components/CookieConsent';
@@ -200,6 +203,9 @@ const AppRoutes = () => {
           <Route key={s} path={s} element={<LocalizedRoute page={<ServicePage />} czSlug="/servis" />} />
         ))}
         {getAllSlugVariants('/pouzite-stroje').map((s) => (
+          <Route key={`${s}-detail`} path={`${s}/:slug`} element={<UsedMachineDetailPage />} />
+        ))}
+        {getAllSlugVariants('/pouzite-stroje').map((s) => (
           <Route key={s} path={s} element={<LocalizedRoute page={<UsedMachinesPage />} czSlug="/pouzite-stroje" />} />
         ))}
         {getAllSlugVariants('/kontakt').map((s) => (
@@ -225,6 +231,12 @@ const AppRoutes = () => {
         ))}
         {getAllSlugVariants('/ratgeber/lagerautomatisierung').map((s) => (
           <Route key={s} path={s} element={<LocalizedRoute page={<GuideWarehouseAutomationPage />} czSlug="/ratgeber/lagerautomatisierung" />} />
+        ))}
+        {getAllSlugVariants('/ratgeber/formatsaege-aluminium-vs-holz').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<GuidePanelSawComparisonPage />} czSlug="/ratgeber/formatsaege-aluminium-vs-holz" />} />
+        ))}
+        {getAllSlugVariants('/ratgeber/foerderung-holzbearbeitung-cz-2026').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<GuideFundingCzPage />} czSlug="/ratgeber/foerderung-holzbearbeitung-cz-2026" />} />
         ))}
         <Route path="*" element={<NotFoundPage />} />
       </Route>
