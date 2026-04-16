@@ -1028,6 +1028,11 @@ Zero glue line edges are the current trend in furniture manufacturing and are in
 Technologie bluEdge je navrzena jako moznost dovybaveni pro vsechny olepovacky hran OTT. At uz Pacific+, Tornado+, FlexEdge, Storm+, StrongEdge nebo TopEdge - laserovou jednotku HyFuse lze integrovat do kterehokoliv modelu. To umoznuje provozum upgradovat svuj stavajici stroj na premiovy segment, aniz by musely investovat do zcela noveho zarizeni.
 
 Hrany s nulovou sparou jsou aktualni trendem ve vyrobe nabytku a koncovi zakaznici je stale vice vyzaduji. Neviditelne spojeni mezi hranou a deskou dodava nabytku premiovy vzhled, ktery nelze dosahnout konvencni lepici technikou. Na rozdil od PUR spoju, ktere jsou sice tenke, ale stale viditelne, bluEdge spojeni zcela splyva s povrchem desky. Asamer je autorizovany prodejce OTT pro CZ, SK a HU a podpoeuji vas pri integraci technologie bluEdge do vasi stavajici nebo nove olepovaci linky.`,
+      hu: `Az OTT bluEdge featuring HyFuse az OTT fugamentes technológiája, amely teljesen új minoségi szintre emeli az élzárást. Ez az eljárás nem használ hagyományos ragasztót. Helyette az él funkcionális rétegét egy lézeregység termikusan aktiválja, és közvetlenül a lappal olvasztja össze. Az eredmény egy teljesen láthatatlan kötés az él és a lap között - az úgynevezett fugamentes vagy zero-gap csatlakozás.
+
+A bluEdge technológiát minden OTT élzárógéphez utólag felszerelheto opcióként tervezték. Legyen szó Pacific+, Tornado+, FlexEdge, Storm+, StrongEdge vagy TopEdge gépekrol, a HyFuse lézeregység bármelyik modellbe integrálható. Ez lehetové teszi az üzemek számára, hogy meglévo gépüket a prémium szegmensbe fejlesszék anélkül, hogy teljesen új berendezésbe kellene befektetniük.
+
+A fugamentes élek a bútorgyártás aktuális trendje, és a végfelhasználók egyre inkább keresik ezeket. Az él és a lap közötti láthatatlan kötés olyan prémium megjelenést kölcsönöz a bútoroknak, amely hagyományos ragasztási technikával nem érheto el. A vékony, de mégis látható PUR-kötésekkel ellentétben a bluEdge-kapcsolat teljesen beleolvad a lap felületébe. Az Asamer a hivatalos OTT viszonteladó Csehország, Szlovákia és Magyarország számára, és támogatja Önt a bluEdge technológia meglévo vagy új élzáró soraiba történo integrálásában.`,
     },
 
     applicationSections: [
@@ -1036,11 +1041,13 @@ Hrany s nulovou sparou jsou aktualni trendem ve vyrobe nabytku a koncovi zakazni
           de: 'Premium-Moebeloptik mit unsichtbarer Fuge',
           en: 'Premium furniture aesthetics with invisible joint',
           cz: 'Premiovy vzhled nabytku s neviditelnou sparou',
+          hu: 'Prémium bútormegjelenés láthatatlan fugával',
         },
         body: {
           de: 'Die bluEdge-Nullfugentechnologie erzeugt eine vollstaendig unsichtbare Verbindung zwischen Kante und Platte. Kein Klebstofffilm, keine Farbabweichung, keine sichtbare Trennlinie. Das Ergebnis ist ein monolithisches Erscheinungsbild, das besonders bei dunklen Dekoren und Hochglanzflaechen den entscheidenden Qualitaetsunterschied ausmacht.',
           en: 'The bluEdge zero glue line technology creates a completely invisible connection between edge and board. No adhesive film, no colour deviation, no visible separation line. The result is a monolithic appearance that makes the critical quality difference, especially with dark decors and high-gloss surfaces.',
           cz: 'Technologie nulove spary bluEdge vytvari zcela neviditelne spojeni mezi hranou a deskou. Zadny film lepidla, zadna odchylka barvy, zadna viditelna delici linie. Vysledkem je monoliticky vzhled, ktery cini rozhodujici kvalitativni rozdil zejmena u tmavych dekoru a vysokoleskych ploch.',
+          hu: 'A bluEdge fugamentes technológia teljesen láthatatlan kötést hoz létre az él és a lap között. Nincs ragasztófilm, nincs színeltérés, nincs látható választóvonal. Az eredmény egy monolitikus megjelenés, amely különösen sötét dekoroknál és magasfényu felületeknél jelenti a dönto minoségi különbséget.',
         },
       },
       {
@@ -1048,11 +1055,13 @@ Hrany s nulovou sparou jsou aktualni trendem ve vyrobe nabytku a koncovi zakazni
           de: 'Nachruestbar fuer alle OTT-Modelle',
           en: 'Retrofittable to all OTT models',
           cz: 'Dodatecne montovatelna na vsechny modely OTT',
+          hu: 'Minden OTT-modellhez utólag felszerelheto',
         },
         body: {
           de: 'Die HyFuse-Lasereinheit kann in jede OTT-Kantenanleimmaschine integriert werden - vom Einstiegsmodell Pacific+ bis zum Flaggschiff TopEdge. Bestehende Betriebe koennen so ihr Leistungsspektrum um die gefragte Nullfugentechnik erweitern und neue Marktsegmente erschliessen.',
           en: 'The HyFuse laser unit can be integrated into any OTT edgebanding machine - from the entry-level Pacific+ to the flagship TopEdge. Existing operations can thus expand their service range to include the sought-after zero glue line technology and open up new market segments.',
           cz: 'Laserovou jednotku HyFuse lze integrovat do jakekoli olepovacky hran OTT - od vstupniho modelu Pacific+ az po vlajkovou lod TopEdge. Stavajici provozy tak mohou rozsirit sve moznosti o zadanou technologii nulove spary a otevrit si nove trzni segmenty.',
+          hu: 'A HyFuse lézeregység bármelyik OTT élzárógépbe integrálható - a belépo szintu Pacific+-tól a zászlóshajó TopEdge-ig. A meglévo üzemek így bovíthetik szolgáltatási kínálatukat a keresett fugamentes technológiával, és új piaci szegmenseket nyithatnak meg.',
         },
       },
     ],
@@ -1061,6 +1070,7 @@ Hrany s nulovou sparou jsou aktualni trendem ve vyrobe nabytku a koncovi zakazni
       de: 'bluEdge featuring HyFuse ist die Wahl fuer Betriebe, die ihren Kunden Premium-Kantenqualitaet ohne sichtbare Fuge anbieten wollen. Die Technologie laesst sich als Nachruestoption in jede bestehende OTT-Maschine integrieren. Die Investition rechnet sich besonders fuer Hersteller hochwertiger Kuechen und Designmoebel.',
       en: 'bluEdge featuring HyFuse is the choice for operations that want to offer their customers premium edge quality with no visible joint. The technology can be integrated as a retrofit option into any existing OTT machine. The investment pays off particularly for manufacturers of high-end kitchens and designer furniture.',
       cz: 'bluEdge featuring HyFuse je volba pro provozy, ktere chteji svym zakaznikum nabidnout premiovou kvalitu hran bez viditelne spary. Technologii lze integrovat jako moznost dovybaveni do jakehokoli stavajiciho stroje OTT. Investice se vyplaci zejmena pro vyrobce vysokokvalitnich kuchyni a designoveho nabytku.',
+      hu: 'A bluEdge featuring HyFuse olyan üzemek választása, amelyek ügyfeleiknek prémium élminoséget kívánnak kínálni látható fuga nélkül. A technológia utólag felszerelheto opcióként bármely meglévo OTT-gépbe integrálható. A beruházás különösen magas minoségu konyhák és designbútorok gyártói számára térül meg.',
     },
 
     faq: [
@@ -1069,11 +1079,13 @@ Hrany s nulovou sparou jsou aktualni trendem ve vyrobe nabytku a koncovi zakazni
           de: 'Was ist der Unterschied zwischen bluEdge und PUR-Verklebung?',
           en: 'What is the difference between bluEdge and PUR bonding?',
           cz: 'Jaky je rozdil mezi bluEdge a PUR lepenim?',
+          hu: 'Mi a különbség a bluEdge és a PUR ragasztás között?',
         },
         answer: {
           de: 'Bei PUR wird ein Klebstoff verwendet, der eine duenne, aber sichtbare Fuge bildet. Bei bluEdge wird die Funktionsschicht der Kante per Laser aktiviert und direkt mit der Platte verschmolzen - voellig ohne Klebstoff. Das Ergebnis ist eine vollstaendig unsichtbare Verbindung.',
           en: 'PUR uses an adhesive that forms a thin but visible joint. With bluEdge, the functional layer of the edge is activated by laser and fused directly to the board - entirely without adhesive. The result is a completely invisible connection.',
           cz: 'U PUR se pouziva lepidlo, ktere vytvari tenkou, ale viditelnou sparu. U bluEdge je funkcni vrstva hrany aktivovana laserem a primo spojena s deskou - zcela bez lepidla. Vysledkem je uplne neviditelne spojeni.',
+          hu: 'A PUR ragasztót használ, amely vékony, de látható fugát képez. A bluEdge-nél az él funkcionális rétegét lézer aktiválja, és közvetlenül a lappal olvasztja össze - teljesen ragasztó nélkül. Az eredmény egy teljesen láthatatlan kötés.',
         },
       },
       {
@@ -1081,11 +1093,13 @@ Hrany s nulovou sparou jsou aktualni trendem ve vyrobe nabytku a koncovi zakazni
           de: 'Kann bluEdge auch an aeltere OTT-Maschinen nachgeruestet werden?',
           en: 'Can bluEdge be retrofitted to older OTT machines?',
           cz: 'Lze bluEdge dovybavit i na starsi stroje OTT?',
+          hu: 'A bluEdge utólag felszerelheto régebbi OTT-gépekre is?',
         },
         answer: {
           de: 'Ja, die HyFuse-Lasereinheit ist fuer alle OTT-Kantenanleimmaschinen als Nachruestoption erhaeltlich. Asamer prueft die Kompatibilitaet und fuehrt die Nachruestung vor Ort in CZ, SK und HU durch.',
           en: 'Yes, the HyFuse laser unit is available as a retrofit option for all OTT edgebanding machines. Asamer checks compatibility and carries out the retrofit on-site in CZ, SK and HU.',
           cz: 'Ano, laserova jednotka HyFuse je k dispozici jako moznost dovybaveni pro vsechny olepovacky hran OTT. Asamer overi kompatibilitu a provede dovybaveni primo na miste v CZ, SK a HU.',
+          hu: 'Igen, a HyFuse lézeregység minden OTT élzárógéphez utólag felszerelheto opcióként elérheto. Az Asamer ellenorzi a kompatibilitást, és a helyszínen elvégzi az utólagos felszerelést CZ, SK és HU területén.',
         },
       },
       {
@@ -1093,11 +1107,13 @@ Hrany s nulovou sparou jsou aktualni trendem ve vyrobe nabytku a koncovi zakazni
           de: 'Welche Kantenmaterialien sind mit bluEdge kompatibel?',
           en: 'Which edge materials are compatible with bluEdge?',
           cz: 'Ktere hranove materialy jsou kompatibilni s bluEdge?',
+          hu: 'Mely élanyagok kompatibilisek a bluEdge-dzsel?',
         },
         answer: {
           de: 'bluEdge funktioniert mit Kantenmaterialien, die ueber eine laserreaktive Funktionsschicht verfuegen. Die gaengigen Kantenhersteller wie Rehau, Doellken und Ostermann bieten entsprechende Kanten an. Asamer berart Sie gerne zur Materialauswahl.',
           en: 'bluEdge works with edge materials that feature a laser-reactive functional layer. Common edge manufacturers such as Rehau, Doellken and Ostermann offer compatible edges. Asamer is happy to advise you on material selection.',
           cz: 'bluEdge funguje s hranovymi materialy, ktere maji laserove reaktivni funkcni vrstvu. Bezni vyrobci hran jako Rehau, Doellken a Ostermann nabizeji odpovidajici hrany. Asamer vam rad poradi s vyberem materialu.',
+          hu: 'A bluEdge olyan élanyagokkal muködik, amelyek lézerreaktív funkcionális réteggel rendelkeznek. A bevett élgyártók, mint a Rehau, Doellken és Ostermann, kínálnak ilyen kompatibilis éleket. Az Asamer szívesen ad tanácsot az anyagválasztáshoz.',
         },
       },
     ],
@@ -1125,6 +1141,11 @@ Compared to the TRANSlift, the TRANScompact requires less ceiling height and is 
 TRANScompact je idealnim doplnkem k OTT Pacific+ a Tornado+. Diky kompaktni konstrukci se system vejde i do stisnenych dilenskych prostor a presto umozni efektivni navrat obrobku. Operator polozi obrobek na vstupni stranu olepovacky, stroj zpracuje hranu a TRANScompact automaticky prepravi obrobek zpet k operatorovi - v pripade potreby otoceny pro dalsi hranu.
 
 Ve srovnani s TRANSlift vyzaduje TRANScompact mensi vysku stropu a je navrzeny pro nizsi objemy. Ve srovnani s TRANSedge je kompaktnejsi a cenove dostupnejsi, ale nabizi nizsi taktovaci frekvenci. Asamer je autorizovany prodejce OTT pro CZ, SK a HU a rad vam poradi s vyberem spravneho vratneho systemu pro vasi olepovaci linku.`,
+      hu: `Az OTT TRANScompact egy kompakt visszatéríto szállító integrált forgatófunkcióval, amelyet kifejezetten kisebb gyártósorokhoz és korlátozott helyu muhelyterekhez fejlesztettek ki. A megmunkált munkadarabokat visszaszállítja a gépkezelohöz, így lehetové teszi az élzárógép egyszemélyes üzemeltetését. Az integrált forgatófunkció lehetové teszi a munkadarab átfordítását a következo él megmunkálásához.
+
+A TRANScompact ideális kiegészítoje az OTT Pacific+ és Tornado+ gépeknek. Kompakt kivitelezésének köszönhetoen a rendszer szuk muhelyterekbe is beleillik, mégis hatékony munkadarab-visszatérítést biztosít. A kezelo a munkadarabot az élzárógép beadagoló oldalára helyezi, a gép megmunkálja az élt, és a TRANScompact automatikusan visszaszállítja a munkadarabot a kezelohöz - szükség esetén elforgatva a következo él megmunkálásához.
+
+A TRANSlifthez képest a TRANScompact kevesebb mennyezetmagasságot igényel, és alacsonyabb darabszámokhoz tervezték. A TRANSedge-hez képest kompaktabb és megfizethetobb, de alacsonyabb ütemgyakoriságot kínál. Az Asamer a hivatalos OTT viszonteladó CZ, SK és HU területére, és szívesen ad tanácsot a megfelelo visszatéríto rendszer kiválasztásához az élzáró sorához.`,
     },
 
     applicationSections: [
@@ -1133,11 +1154,13 @@ Ve srovnani s TRANSlift vyzaduje TRANScompact mensi vysku stropu a je navrzeny p
           de: 'Einmann-Betrieb fuer kleine Werkstaetten',
           en: 'Single-operator running for small workshops',
           cz: 'Jednooperatorsky provoz pro male dilny',
+          hu: 'Egyszemélyes üzem kis muhelyek számára',
         },
         body: {
           de: 'Das TRANScompact ermoeglicht den Betrieb der Kantenanleimmaschine mit nur einem Bediener. Das Werkstueck wird automatisch zurueckgefuehrt, sodass kein zweiter Mitarbeiter zum Abnehmen der Teile benoetigt wird. Die Drehfunktion eruebrigt zusaetzlich das manuelle Wenden des Werkstuecks.',
           en: 'The TRANScompact enables running the edgebanding machine with just one operator. The workpiece is automatically returned, so no second employee is needed for part removal. The rotation function also eliminates the need for manual turning of the workpiece.',
           cz: 'TRANScompact umoznuje provoz olepovacky hran s jednim operatorem. Obrobek je automaticky vracen, takze neni potreba druheho zamestnance pro odebrani dilu. Funkce otaceni navic odstranuji nutnost rucniho obraceni obrobku.',
+          hu: 'A TRANScompact lehetové teszi az élzárógép egyetlen kezelovel történo üzemeltetését. A munkadarab automatikusan visszatér, így nincs szükség második alkalmazottra az alkatrészek levételéhez. A forgatófunkció ezenkívül feleslegessé teszi a munkadarab kézi átfordítását.',
         },
       },
       {
@@ -1145,11 +1168,13 @@ Ve srovnani s TRANSlift vyzaduje TRANScompact mensi vysku stropu a je navrzeny p
           de: 'Platzsparende Loesung fuer Pacific+ und Tornado+',
           en: 'Space-saving solution for Pacific+ and Tornado+',
           cz: 'Prostorove usporne reseni pro Pacific+ a Tornado+',
+          hu: 'Helytakarékos megoldás Pacific+ és Tornado+ gépekhez',
         },
         body: {
           de: 'Das TRANScompact wurde speziell als Ergaenzung zu den kompakten OTT-Modellen Pacific+ und Tornado+ konzipiert. Zusammen bilden sie eine platzsparende Produktionszelle, die auch in beengten Werkstattverhaeltnissen effizient arbeitet.',
           en: 'The TRANScompact was specifically designed as a companion to the compact OTT models Pacific+ and Tornado+. Together they form a space-saving production cell that works efficiently even in tight workshop conditions.',
           cz: 'TRANScompact byl specialne navrzeny jako doplnek ke kompaktnim modelum OTT Pacific+ a Tornado+. Dohromady tvori prostorove uspornou vyrobni bunku, ktera efektivne funguje i ve stisnenych dilenskych podminkach.',
+          hu: 'A TRANScompactot kifejezetten a kompakt OTT Pacific+ és Tornado+ modellek kiegészítojeként tervezték. Együtt helytakarékos gyártócellát alkotnak, amely szuk muhelykörülmények között is hatékonyan muködik.',
         },
       },
     ],
@@ -1158,6 +1183,7 @@ Ve srovnani s TRANSlift vyzaduje TRANScompact mensi vysku stropu a je navrzeny p
       de: 'Waehlen Sie das TRANScompact, wenn Sie die Pacific+ oder Tornado+ mit einem kompakten, platzsparenden Rueckfuehrsystem ergaenzen moechten. Fuer hoehere Taktraten oder groessere Maschinen wie Storm+ oder TopEdge empfehlen wir das TRANSlift oder TRANSedge.',
       en: 'Choose the TRANScompact if you want to complement the Pacific+ or Tornado+ with a compact, space-saving return system. For higher cycle rates or larger machines like Storm+ or TopEdge, we recommend the TRANSlift or TRANSedge.',
       cz: 'Zvolte TRANScompact, pokud chcete doplnit Pacific+ nebo Tornado+ kompaktnim, prostorove uspornym vratnym systemem. Pro vyssi taktovaci frekvence nebo vetsi stroje jako Storm+ nebo TopEdge doporucujeme TRANSlift nebo TRANSedge.',
+      hu: 'Válassza a TRANScompactot, ha a Pacific+-t vagy Tornado+-t kompakt, helytakarékos visszatéríto rendszerrel szeretné kiegészíteni. Nagyobb ütemgyakoriságokhoz vagy nagyobb gépekhez, mint a Storm+ vagy TopEdge, a TRANSlift vagy TRANSedge modelleket ajánljuk.',
     },
 
     faq: [
@@ -1166,11 +1192,13 @@ Ve srovnani s TRANSlift vyzaduje TRANScompact mensi vysku stropu a je navrzeny p
           de: 'Fuer welche OTT-Maschinen eignet sich das TRANScompact?',
           en: 'Which OTT machines is the TRANScompact suitable for?',
           cz: 'Pro ktere stroje OTT je TRANScompact vhodny?',
+          hu: 'Mely OTT-gépekhez alkalmas a TRANScompact?',
         },
         answer: {
           de: 'Das TRANScompact ist besonders als Ergaenzung zur Pacific+ und Tornado+ geeignet. Grundsaetzlich kann es aber auch mit anderen OTT-Modellen kombiniert werden, wenn der Platz begrenzt ist.',
           en: 'The TRANScompact is particularly suited as a companion to the Pacific+ and Tornado+. In principle, it can also be combined with other OTT models when space is limited.',
           cz: 'TRANScompact je obzvlaste vhodny jako doplnek k Pacific+ a Tornado+. V zasade ho lze kombinovat i s dalsimi modely OTT, pokud je prostor omezeny.',
+          hu: 'A TRANScompact különösen a Pacific+ és Tornado+ kiegészítojeként alkalmas. Elviekben azonban más OTT-modellekkel is kombinálható, ha a hely korlátozott.',
         },
       },
       {
@@ -1178,11 +1206,13 @@ Ve srovnani s TRANSlift vyzaduje TRANScompact mensi vysku stropu a je navrzeny p
           de: 'Kann das TRANScompact Werkstuecke drehen?',
           en: 'Can the TRANScompact rotate workpieces?',
           cz: 'Muze TRANScompact otacet obrobky?',
+          hu: 'A TRANScompact képes a munkadarabok elforgatására?',
         },
         answer: {
           de: 'Ja, das TRANScompact verfuegt ueber eine integrierte Drehfunktion. So kann das Werkstueck automatisch gedreht werden, um die naechste Kante zu bearbeiten, ohne dass der Bediener manuell eingreifen muss.',
           en: 'Yes, the TRANScompact features an integrated rotation function. This allows the workpiece to be automatically rotated to process the next edge without manual intervention from the operator.',
           cz: 'Ano, TRANScompact disponuje integrovanou funkci otaceni. Obrobek tak muze byt automaticky otocen pro zpracovani dalsi hrany, aniz by operator musel rucne zasahovat.',
+          hu: 'Igen, a TRANScompact integrált forgatófunkcióval rendelkezik. A munkadarab így automatikusan elforgatható a következo él megmunkálásához, anélkül hogy a kezelonek kézzel kellene beavatkoznia.',
         },
       },
       {
@@ -1190,11 +1220,13 @@ Ve srovnani s TRANSlift vyzaduje TRANScompact mensi vysku stropu a je navrzeny p
           de: 'Was ist der Unterschied zwischen TRANScompact und TRANSlift?',
           en: 'What is the difference between TRANScompact and TRANSlift?',
           cz: 'Jaky je rozdil mezi TRANScompact a TRANSlift?',
+          hu: 'Mi a különbség a TRANScompact és a TRANSlift között?',
         },
         answer: {
           de: 'Das TRANScompact ist ein horizontales Rueckfuehrsystem mit Drehfunktion fuer kompakte Werkstaetten. Das TRANSlift transportiert Werkstuecke vertikal und spart dadurch Hallenflaeche, benoetigt aber mehr Deckenhoehe. TRANSlift eignet sich fuer groessere Maschinen und hoehere Stueckzahlen.',
           en: 'The TRANScompact is a horizontal return system with rotation for compact workshops. The TRANSlift transports workpieces vertically, saving floor space but requiring more ceiling height. TRANSlift is suited for larger machines and higher volumes.',
           cz: 'TRANScompact je horizontalni vratny system s otacenim pro kompaktni dilny. TRANSlift prepravuje obrobky vertikalne, cimz setri podlahovou plochu, ale vyzaduje vetsi vysku stropu. TRANSlift je vhodny pro vetsi stroje a vyssi objemy.',
+          hu: 'A TRANScompact egy vízszintes visszatéríto rendszer forgatófunkcióval, kompakt muhelyekhez. A TRANSlift függolegesen szállítja a munkadarabokat, ezzel padlóterületet takarít meg, de nagyobb mennyezetmagasságot igényel. A TRANSlift nagyobb gépekhez és magasabb darabszámokhoz alkalmas.',
         },
       },
     ],
@@ -1222,6 +1254,11 @@ Compared to the TRANScompact, the TRANSlift offers more capacity and saves floor
 TRANSlift je doporucene vratne reseni pro modely OTT Storm+, StrongEdge, TopEdge a FlexEdge. Je navrzeny pro vysoke objemy a prumyslovy nepretrzity provoz a lze jej integrovat do viceurovnovych vyrobnich linek. Vertikalni konstrukce jej cini obzvlaste atraktivnim pro provozy, ktere chteji optimalizovat vyuziti podlahove plochy, aniz by se musely vzdat efektivniho navratu obrobku.
 
 Ve srovnani s TRANScompact nabizi TRANSlift vetsi kapacitu a setri podlahovou plochu na ukor vysky stropu. Ve srovnani s TRANSedge je vsestrannejsi a neni omezen pouze na olepovaci linky. Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko a podpori vas pri planovani a integraci TRANSlift do vasi vyrobni linky.`,
+      hu: `Az OTT TRANSlift egy emelo visszatéríto rendszer, amely függolegesen szállítja a munkadarabokat, ezzel értékes padlóterületet takarítva meg. Ahelyett, hogy a munkadarabokat vízszintesen juttatná vissza, a TRANSlift felemeli oket egy felso szintre, visszaszállítja oket az élzárógép felett, és a beadagolónál ismét leereszti. Ez az elv jelentosen csökkenti a gyártósor területigényét.
+
+A TRANSlift az ajánlott visszatéríto megoldás az OTT Storm+, StrongEdge, TopEdge és FlexEdge modellekhez. Magas darabszámokhoz és ipari folyamatos üzemhez tervezték, és többszintu gyártósorokba is integrálható. A függoleges kivitelezés különösen vonzóvá teszi azon üzemek számára, amelyek optimalizálni szeretnék padlóterületük kihasználását anélkül, hogy lemondanának a hatékony munkadarab-visszatérítésrol.
+
+A TRANScompacthoz képest a TRANSlift nagyobb kapacitást kínál és padlóterületet takarít meg a mennyezetmagasság rovására. A TRANSedge-hez képest sokoldalúbban használható, és nem korlátozódik csak az élzáró sorokra. Az Asamer a hivatalos OTT viszonteladó Csehország, Szlovákia és Magyarország számára, és támogatja Önt a TRANSlift tervezésében és gyártósorba integrálásában.`,
     },
 
     applicationSections: [
@@ -1230,11 +1267,13 @@ Ve srovnani s TRANScompact nabizi TRANSlift vetsi kapacitu a setri podlahovou pl
           de: 'Platzoptimierung durch vertikale Rueckfuehrung',
           en: 'Space optimization through vertical return',
           cz: 'Optimalizace prostoru diky vertikalnimu vraceni',
+          hu: 'Helyoptimalizálás függoleges visszatérítéssel',
         },
         body: {
           de: 'Das TRANSlift nutzt den Raum oberhalb der Kantenanleimmaschine fuer den Werkstuecktransport. Dadurch wird die Hallenflaeche neben der Maschine frei fuer andere Zwecke. Besonders in Produktionshallen mit begrenzter Bodenflaeche, aber ausreichender Deckhoehe, ist das TRANSlift die optimale Loesung.',
           en: 'The TRANSlift uses the space above the edgebanding machine for workpiece transport. This frees up the floor space beside the machine for other purposes. Especially in production halls with limited floor space but sufficient ceiling height, the TRANSlift is the optimal solution.',
           cz: 'TRANSlift vyuziva prostor nad olepovackou hran pro prepravu obrobku. Tim se uvolni podlahova plocha vedle stroje pro jine ucely. Zejmena ve vyrobnich halach s omezenou podlahovou plochou, ale dostatecnou vyskou stropu, je TRANSlift optimalnim resenim.',
+          hu: 'A TRANSlift az élzárógép feletti teret használja a munkadarabok szállításához. Ezáltal a gép melletti padlóterület más célokra szabadul fel. Különösen azokban a gyártócsarnokokban, ahol a padlóterület korlátozott, de a mennyezetmagasság elegendo, a TRANSlift az optimális megoldás.',
         },
       },
       {
@@ -1242,11 +1281,13 @@ Ve srovnani s TRANScompact nabizi TRANSlift vetsi kapacitu a setri podlahovou pl
           de: 'Fuer industrielle Kantenanleimlinien',
           en: 'For industrial edgebanding lines',
           cz: 'Pro prumyslove olepovaci linky',
+          hu: 'Ipari élzáró sorokhoz',
         },
         body: {
           de: 'Als Rueckfuehrsystem fuer die Profi- und Flaggschiff-Modelle Storm+, StrongEdge und TopEdge ist das TRANSlift auf den industriellen Dauerbetrieb mit hohen Taktraten ausgelegt. Die robuste Bauweise gewaehrleistet zuverlaessigen Betrieb auch im Dreischichtbetrieb.',
           en: 'As a return system for the professional and flagship models Storm+, StrongEdge and TopEdge, the TRANSlift is designed for continuous industrial operation at high cycle rates. Its robust construction ensures reliable operation even in three-shift production.',
           cz: 'Jako vratny system pro profesionalni a vlajkove modely Storm+, StrongEdge a TopEdge je TRANSlift navrzeny pro prumyslovy nepretrzity provoz s vysokymi taktovacimi frekvencemi. Robustni konstrukce zajisuji spolehlivy provoz i v trismennem provozu.',
+          hu: 'A professzionális és zászlóshajó Storm+, StrongEdge és TopEdge modellek visszatéríto rendszereként a TRANSliftet folyamatos ipari üzemre és magas ütemgyakoriságokra tervezték. Robusztus kivitelezése megbízható muködést biztosít háromszakos üzemben is.',
         },
       },
     ],
@@ -1255,6 +1296,7 @@ Ve srovnani s TRANScompact nabizi TRANSlift vetsi kapacitu a setri podlahovou pl
       de: 'Waehlen Sie das TRANSlift, wenn Sie Hallenflaeche sparen moechten und ausreichende Deckenhoehe haben. Es ist die empfohlene Loesung fuer Storm+, StrongEdge und TopEdge. Fuer kompakte Werkstaetten mit Pacific+ oder Tornado+ ist das TRANScompact die bessere Wahl.',
       en: 'Choose the TRANSlift if you want to save floor space and have sufficient ceiling height. It is the recommended solution for Storm+, StrongEdge and TopEdge. For compact workshops with Pacific+ or Tornado+, the TRANScompact is the better choice.',
       cz: 'Zvolte TRANSlift, pokud chcete setrit podlahovou plochu a mate dostatecnou vysku stropu. Je to doporucene reseni pro Storm+, StrongEdge a TopEdge. Pro kompaktni dilny s Pacific+ nebo Tornado+ je lepsim resenim TRANScompact.',
+      hu: 'Válassza a TRANSliftet, ha padlóterületet szeretne megtakarítani és elegendo mennyezetmagassággal rendelkezik. Ez az ajánlott megoldás Storm+, StrongEdge és TopEdge gépekhez. Kompakt muhelyekhez Pacific+ vagy Tornado+ gépekkel a TRANScompact a jobb választás.',
     },
 
     faq: [
@@ -1263,11 +1305,13 @@ Ve srovnani s TRANScompact nabizi TRANSlift vetsi kapacitu a setri podlahovou pl
           de: 'Wie viel Deckenhoehe benoetigt das TRANSlift?',
           en: 'How much ceiling height does the TRANSlift require?',
           cz: 'Jakou vysku stropu vyzaduje TRANSlift?',
+          hu: 'Mekkora mennyezetmagasságot igényel a TRANSlift?',
         },
         answer: {
           de: 'Die benoetigte Deckenhoehe haengt von der Maschinenhoehe und dem Werkstueckformat ab. Asamer berart Sie bei der Layoutplanung und prueft die raeumlichen Voraussetzungen in Ihrer Produktionshalle.',
           en: 'The required ceiling height depends on the machine height and workpiece format. Asamer advises you during layout planning and checks the spatial requirements in your production hall.',
           cz: 'Potrebna vyska stropu zavisi na vysce stroje a formatu obrobku. Asamer vam poradi pri planovani dispozice a overi prostorove pozadavky ve vasi vyrobni hale.',
+          hu: 'A szükséges mennyezetmagasság a gép magasságától és a munkadarab méretétol függ. Az Asamer tanácsot ad a layouttervezés során, és ellenorzi a gyártócsarnok térbeli feltételeit.',
         },
       },
       {
@@ -1275,11 +1319,13 @@ Ve srovnani s TRANScompact nabizi TRANSlift vetsi kapacitu a setri podlahovou pl
           de: 'Kann das TRANSlift auch mit kleineren Maschinen verwendet werden?',
           en: 'Can the TRANSlift also be used with smaller machines?',
           cz: 'Lze TRANSlift pouzivat i s mensimi stroji?',
+          hu: 'Használható a TRANSlift kisebb gépekkel is?',
         },
         answer: {
           de: 'Grundsaetzlich ja, aber fuer die kompakten Modelle Pacific+ und Tornado+ empfehlen wir das TRANScompact als wirtschaftlichere Loesung. Das TRANSlift ist primaer fuer Storm+, StrongEdge, TopEdge und FlexEdge konzipiert.',
           en: 'In principle yes, but for the compact models Pacific+ and Tornado+, we recommend the TRANScompact as a more economical solution. The TRANSlift is primarily designed for Storm+, StrongEdge, TopEdge and FlexEdge.',
           cz: 'V zasade ano, ale pro kompaktni modely Pacific+ a Tornado+ doporucujeme TRANScompact jako ekonomictejsi reseni. TRANSlift je primarne navrzeny pro Storm+, StrongEdge, TopEdge a FlexEdge.',
+          hu: 'Elviekben igen, de a Pacific+ és Tornado+ kompakt modellekhez a TRANScompactot ajánljuk gazdaságosabb megoldásként. A TRANSliftet elsosorban Storm+, StrongEdge, TopEdge és FlexEdge gépekhez tervezték.',
         },
       },
       {
@@ -1287,11 +1333,13 @@ Ve srovnani s TRANScompact nabizi TRANSlift vetsi kapacitu a setri podlahovou pl
           de: 'Spart das TRANSlift wirklich Hallenflaeche?',
           en: 'Does the TRANSlift really save floor space?',
           cz: 'Opravdu TRANSlift setri podlahovou plochu?',
+          hu: 'Valóban megtakarít padlóterületet a TRANSlift?',
         },
         answer: {
           de: 'Ja, da die Werkstuecke vertikal ueber die Maschine zurueckgefuehrt werden, entfaellt die horizontale Rueckfuehrstrecke neben der Maschine. Je nach Hallenlayout kann das TRANSlift die benoetigte Grundflaeche der Produktionslinie um bis zu 40% reduzieren.',
           en: 'Yes, since workpieces are returned vertically above the machine, the horizontal return path beside the machine is eliminated. Depending on the hall layout, the TRANSlift can reduce the required footprint of the production line by up to 40%.',
           cz: 'Ano, protoze obrobky jsou vraceny vertikalne nad strojem, odpada horizontalni vratna draha vedle stroje. V zavislosti na dispozici haly muze TRANSlift snizit potrebnou zastavbovou plochu vyrobni linky az o 40 %.',
+          hu: 'Igen, mivel a munkadarabok függolegesen a gép felett térnek vissza, a gép melletti vízszintes visszatérítoút megszunik. A csarnok elrendezésétol függoen a TRANSlift akár 40%-kal is csökkentheti a gyártósor szükséges alapterületét.',
         },
       },
     ],
@@ -1319,6 +1367,11 @@ In a complete edgebanding line with Storm+ or TopEdge, the TRANSedge forms the b
 Na rozdil od univerzalne pouzitelneho TRANSlift je TRANSedge specialne prizpusoben pozadavkum olepovacich linek. Ridici system je primo synchronizovan s olepovackou hran, coz umoznuje precizni casovani a minimalni taktovaci casy. System automaticky detekuje polohu obrobku a prizpusobuje rychlost prepravy vyrobnimu rytmu.
 
 V kompletni olepovaci lince se Storm+ nebo TopEdge tvori TRANSedge patyr toku materialu. Automaticky provoz umoznuje provoz linky s jednim operatorem pri maximalizaci propustnosti. Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko a spolecne s vami naplanuji optimalni konfiguraci vasi olepovaci linky s TRANSedge.`,
+      hu: `Az OTT TRANSedge egy specializált visszatéríto rendszer, amelyet kifejezetten magas ütemgyakoriságú élzáró sorokhoz fejlesztettek ki. Automatikus munkadarab-visszatérítést biztosít, zökkenomentesen integrálódva a meglévo gyártási folyamatokba, és maximális áteresztoképességre optimalizált. A TRANSedge ideális kiegészítoje a nagy teljesítményu OTT Storm+ és TopEdge modelleknek.
+
+Az univerzálisan használható TRANSlifttel ellentétben a TRANSedge-et kifejezetten az élzáró sorok követelményeire szabták. A vezérlorendszer közvetlenül szinkronizált az élzárógéppel, ami pontos idozítést és minimális ütemidoket tesz lehetové. A rendszer automatikusan érzékeli a munkadarab helyzetét, és a szállítási sebességet a gyártási ritmushoz igazítja.
+
+Egy teljes élzáró sorban Storm+ vagy TopEdge géppel a TRANSedge alkotja az anyagáramlás gerincét. Az automatikus üzem lehetové teszi a sor egyetlen kezelovel történo üzemeltetését, miközben az áteresztoképesség maximalizálódik. Az Asamer a hivatalos OTT viszonteladó Csehország, Szlovákia és Magyarország számára, és Önnel közösen tervezi meg az élzáró sor optimális konfigurációját TRANSedge-dzsel.`,
     },
 
     applicationSections: [
@@ -1327,11 +1380,13 @@ V kompletni olepovaci lince se Storm+ nebo TopEdge tvori TRANSedge patyr toku ma
           de: 'Optimiert fuer Storm+- und TopEdge-Linien',
           en: 'Optimized for Storm+ and TopEdge lines',
           cz: 'Optimalizovany pro linky Storm+ a TopEdge',
+          hu: 'Storm+ és TopEdge sorokhoz optimalizálva',
         },
         body: {
           de: 'Das TRANSedge ist als spezialisiertes Rueckfuehrsystem fuer die leistungsstarken OTT-Modelle Storm+ und TopEdge konzipiert. Die direkte Synchronisierung mit der Maschinensteuerung ermoeglicht hoechste Taktraten und nahtlosen Materialfluss in industriellen Kantenanleimlinien.',
           en: 'The TRANSedge is designed as a specialized return system for the high-performance OTT models Storm+ and TopEdge. Direct synchronization with the machine control enables the highest cycle rates and seamless material flow in industrial edgebanding lines.',
           cz: 'TRANSedge je navrzeny jako specializovany vratny system pro vysokovykonne modely OTT Storm+ a TopEdge. Prima synchronizace s rizenim stroje umoznuje nejvyssi taktovaci frekvence a bezproblemovy tok materialu v prumyslovych olepovacich linkach.',
+          hu: 'A TRANSedge-et specializált visszatéríto rendszerként tervezték a nagy teljesítményu OTT Storm+ és TopEdge modellekhez. A gépvezérléssel való közvetlen szinkronizáció a legmagasabb ütemgyakoriságokat és zökkenomentes anyagáramlást tesz lehetové az ipari élzáró sorokban.',
         },
       },
       {
@@ -1339,11 +1394,13 @@ V kompletni olepovaci lince se Storm+ nebo TopEdge tvori TRANSedge patyr toku ma
           de: 'Einmann-Betrieb bei maximaler Leistung',
           en: 'Single-operator operation at maximum performance',
           cz: 'Jednooperatorsky provoz pri maximalnim vykonu',
+          hu: 'Egyszemélyes üzem maximális teljesítménnyel',
         },
         body: {
           de: 'Durch den vollautomatischen Werkstueckruecklauf kann die gesamte Kantenanleimlinie von einem einzelnen Bediener betrieben werden. Das TRANSedge uebernimmt den Transport, die Positionierung und bei Bedarf auch das Wenden des Werkstuecks. Die Einsparung eines zweiten Bedieners amortisiert die Investition in kurzer Zeit.',
           en: 'With fully automatic workpiece return, the entire edgebanding line can be operated by a single operator. The TRANSedge handles transport, positioning and if required also turning of the workpiece. The saving of a second operator pays back the investment in a short time.',
           cz: 'Diky plne automatickemu navratu obrobku muze celou olepovaci linku provozovat jediny operator. TRANSedge zajisuje prepravu, polohovani a v pripade potreby i otaceni obrobku. Uspora druheho operatora se vrati investici v kratkem case.',
+          hu: 'A teljesen automatikus munkadarab-visszatérítésnek köszönhetoen a teljes élzáró sort egyetlen kezelo üzemeltetheti. A TRANSedge gondoskodik a szállításról, a pozicionálásról, és szükség esetén a munkadarab átfordításáról is. Egy második kezelo megtakarítása rövid idon belül megtéríti a beruházást.',
         },
       },
     ],
@@ -1352,6 +1409,7 @@ V kompletni olepovaci lince se Storm+ nebo TopEdge tvori TRANSedge patyr toku ma
       de: 'Waehlen Sie das TRANSedge, wenn Sie eine Storm+- oder TopEdge-Linie mit maximalem Durchsatz und hoher Taktrate betreiben moechten. Gegenueber dem TRANSlift bietet das TRANSedge eine spezifischere Optimierung fuer Kantenanleimlinien. Fuer kompaktere Setups empfehlen wir TRANScompact oder TRANSlift.',
       en: 'Choose the TRANSedge if you want to run a Storm+ or TopEdge line with maximum throughput and high cycle rate. Compared to the TRANSlift, the TRANSedge offers more specific optimization for edgebanding lines. For more compact setups, we recommend TRANScompact or TRANSlift.',
       cz: 'Zvolte TRANSedge, pokud chcete provozovat linku Storm+ nebo TopEdge s maximalnim vykonem a vysokou taktovaci frekvenci. Ve srovnani s TRANSlift nabizi TRANSedge specifictejsi optimalizaci pro olepovaci linky. Pro kompaktnejsi sestavy doporucujeme TRANScompact nebo TRANSlift.',
+      hu: 'Válassza a TRANSedge-et, ha maximális áteresztoképességgel és magas ütemgyakorisággal szeretne Storm+ vagy TopEdge sort üzemeltetni. A TRANSlifthez képest a TRANSedge specifikusabb optimalizációt kínál az élzáró sorokhoz. Kompaktabb felállásokhoz a TRANScompactot vagy TRANSliftet ajánljuk.',
     },
 
     faq: [
@@ -1360,11 +1418,13 @@ V kompletni olepovaci lince se Storm+ nebo TopEdge tvori TRANSedge patyr toku ma
           de: 'Was unterscheidet das TRANSedge vom TRANSlift?',
           en: 'What distinguishes the TRANSedge from the TRANSlift?',
           cz: 'Cim se TRANSedge lisi od TRANSlift?',
+          hu: 'Mi különbözteti meg a TRANSedge-et a TRANSlifttol?',
         },
         answer: {
           de: 'Das TRANSedge ist speziell fuer Kantenanleimlinien optimiert und direkt mit der Maschinensteuerung synchronisiert. Das TRANSlift ist ein universelleres Hebe-Rueckfuehrsystem, das auch in anderen Produktionslinien eingesetzt werden kann.',
           en: 'The TRANSedge is specifically optimized for edgebanding lines and directly synchronized with the machine control. The TRANSlift is a more universal lifting return system that can also be used in other production lines.',
           cz: 'TRANSedge je specialne optimalizovan pro olepovaci linky a primo synchronizovan s rizením stroje. TRANSlift je univerzalnejsi zvedaci vratny system, ktery lze pouzivat i v jinych vyrobnich linkach.',
+          hu: 'A TRANSedge-et kifejezetten az élzáró sorokra optimalizálták, és közvetlenül a gépvezérléssel szinkronizált. A TRANSlift egy univerzálisabb emelo visszatéríto rendszer, amely más gyártósorokban is használható.',
         },
       },
       {
@@ -1372,11 +1432,13 @@ V kompletni olepovaci lince se Storm+ nebo TopEdge tvori TRANSedge patyr toku ma
           de: 'Kann das TRANSedge auch mit dem FlexEdge verwendet werden?',
           en: 'Can the TRANSedge also be used with the FlexEdge?',
           cz: 'Lze TRANSedge pouzivat i s FlexEdge?',
+          hu: 'Használható a TRANSedge a FlexEdge-dzsel is?',
         },
         answer: {
           de: 'Ja, das TRANSedge kann grundsaetzlich mit dem FlexEdge kombiniert werden. Die empfohlene Kombination ist jedoch Storm+ oder TopEdge mit TRANSedge fuer maximale Leistung. Fuer den FlexEdge empfehlen wir primaer TRANScompact oder TRANSlift.',
           en: 'Yes, the TRANSedge can in principle be combined with the FlexEdge. However, the recommended combination is Storm+ or TopEdge with TRANSedge for maximum performance. For the FlexEdge, we primarily recommend TRANScompact or TRANSlift.',
           cz: 'Ano, TRANSedge lze v zasade kombinovat s FlexEdge. Doporucena kombinace je vsak Storm+ nebo TopEdge s TRANSedge pro maximalni vykon. Pro FlexEdge primarne doporucujeme TRANScompact nebo TRANSlift.',
+          hu: 'Igen, a TRANSedge elviekben kombinálható a FlexEdge-dzsel. Az ajánlott kombináció azonban Storm+ vagy TopEdge TRANSedge-dzsel a maximális teljesítményért. A FlexEdge-hez elsosorban TRANScompactot vagy TRANSliftet ajánlunk.',
         },
       },
       {
@@ -1384,11 +1446,13 @@ V kompletni olepovaci lince se Storm+ nebo TopEdge tvori TRANSedge patyr toku ma
           de: 'Wie hoch ist die maximale Taktrate des TRANSedge?',
           en: 'What is the maximum cycle rate of the TRANSedge?',
           cz: 'Jaka je maximalni taktovaci frekvence TRANSedge?',
+          hu: 'Mekkora a TRANSedge maximális ütemgyakorisága?',
         },
         answer: {
           de: 'Die Taktrate des TRANSedge richtet sich nach der angeschlossenen Kantenanleimmaschine und dem Werkstueckformat. Bei einer TopEdge mit 22 m/min Vorschub wird die Taktrate durch die Maschinengeschwindigkeit bestimmt - das TRANSedge haelt mit. Kontaktieren Sie Asamer fuer eine Berechnung Ihres spezifischen Durchsatzes.',
           en: 'The cycle rate of the TRANSedge depends on the connected edgebanding machine and the workpiece format. With a TopEdge at 22 m/min feed speed, the cycle rate is determined by the machine speed - the TRANSedge keeps up. Contact Asamer for a calculation of your specific throughput.',
           cz: 'Taktovaci frekvence TRANSedge se ridi pripojenou olepovackou hran a formatem obrobku. Pri TopEdge s rychlosti posuvu 22 m/min je taktovaci frekvence urcena rychlosti stroje - TRANSedge drzi krok. Kontaktujte Asamer pro vypocet vaseho konkretniho vystupu.',
+          hu: 'A TRANSedge ütemgyakorisága a csatlakoztatott élzárógéptol és a munkadarab méretétol függ. Egy TopEdge esetén 22 m/perc eloretolási sebességgel az ütemgyakoriságot a gép sebessége határozza meg - a TRANSedge lépést tart. Keresse az Asamert a konkrét áteresztoképesség kiszámításához.',
         },
       },
     ],
@@ -1422,6 +1486,11 @@ A distinctive feature of the OTT machine range is the consistent upgrade path. O
 Olepovacky hran OTT pokryvaji siroke vykonove spektrum: rychlosti posuvu 12 az 22 m/min, tlousky hran 0,3 az 25 mm a tlousky desek az 80 mm. At uz remeslna dilna s kusovou vyrobou nebo prumyslovy provoz s nepretrzitym trismenniym provozem - OTT nabizi pro kazdou potrebu spravny stroj. Vsechny modely mohou byt vybaveny systemem CombiMelt PUR pro vodetesne lepene spoje a technologii nulove spary bluEdge HyFuse.
 
 Vyraznym rysem rady stroju OTT je pruchodna moznost dovybaveni. Provozy mohou zacit se vstupnim modelem a pozdeji dovybavit lepici technologii, rizeni a obrabeci agregaty. Modely jako FlexEdge a TopEdge nabizeji se standardnim rizenim Beckhoff a rozhranim OPC-UA plnou schopnost Prumyslu 4.0. Asamer vas podpoeuji v celem regionu CZ, SK a HU poradensttvim, prodejem, instalaci, skolenim a servisem nahradnich dilu.`,
+      hu: `Az OTT Paul élzárógépek a Csehországban, Szlovákiában és Magyarországon muködo igényes asztalosmuhelyek és bútorgyártók elso választásai. Az Asamer a CZ/SK/HU régió hivatalos OTT viszonteladója, és az OTT élzárógépek teljes kínálatát kínálja - a kompakt belépo szintu Pacific+-tól a zászlóshajó TopEdge-ig.
+
+Az OTT élzárógépek széles teljesítménytartományt fednek le: eloretolási sebesség 12-tol 22 m/percig, élvastagság 0,3-tól 25 mm-ig, és lapvastagság 80 mm-ig. Legyen szó egyedi gyártású kézmuves muhelyrol vagy háromszakos folyamatos üzemu ipari üzemrol, az OTT minden igényre a megfelelo gépet kínálja. Minden modell felszerelheto a CombiMelt PUR rendszerrel a vízálló ragasztási kötésekhez, valamint a bluEdge HyFuse fugamentes technológiával.
+
+Az OTT gépcsalád jellegzetessége a következetes utólagos felszerelési lehetoség. Az üzemek kezdhetik egy belépo szintu modellel, majd késobb bovíthetik a ragasztási technológiát, a vezérlést és a megmunkáló egységeket. A FlexEdge és TopEdge modellek a szériakivitelben található Beckhoff-vezérléssel és OPC-UA-interfésszel teljes Ipar 4.0-kompatibilitást kínálnak. Az Asamer a teljes CZ, SK és HU régióban tanácsadással, értékesítéssel, telepítéssel, oktatással és alkatrészszervizzel támogatja Önt.`,
     },
 
     sections: [
@@ -1430,11 +1499,13 @@ Vyraznym rysem rady stroju OTT je pruchodna moznost dovybaveni. Provozy mohou za
           de: 'OTT Kantenanleimmaschinen im Ueberblick',
           en: 'OTT edgebanding machines overview',
           cz: 'Prehled olepovacek hran OTT',
+          hu: 'OTT élzárógépek áttekintése',
         },
         body: {
           de: 'Das OTT-Programm umfasst sieben Kantenanleimmaschinen-Modelle: Pacific+ (Einstieg, 5,7 m), Tornado+ (bewaeahrt, 6,2 m), FlexEdge (Industrie 4.0, 7,1 m), Storm+ (Profi, 7,8 m), StrongEdge (schwere Kanten, 8,6 m), TopEdge S/L (Flaggschiff, 9,2-10,2 m) und die DoorEdition (Tuerenspezialist, ab 8 m). Jedes Modell ist auf ein spezifisches Anforderungsprofil zugeschnitten.',
           en: 'The OTT programme comprises seven edgebanding machine models: Pacific+ (entry-level, 5.7 m), Tornado+ (proven, 6.2 m), FlexEdge (Industry 4.0, 7.1 m), Storm+ (professional, 7.8 m), StrongEdge (heavy edges, 8.6 m), TopEdge S/L (flagship, 9.2-10.2 m) and the DoorEdition (door specialist, from 8 m). Each model is tailored to a specific requirement profile.',
           cz: 'Program OTT zahrnuje sedm modelu olepovacek hran: Pacific+ (vstupni, 5,7 m), Tornado+ (osvedceny, 6,2 m), FlexEdge (Prumysl 4.0, 7,1 m), Storm+ (profesionalni, 7,8 m), StrongEdge (tezke hrany, 8,6 m), TopEdge S/L (vlajkova lod, 9,2-10,2 m) a DoorEdition (specialista na dvere, od 8 m). Kazdy model je prizpusoben specifickemu profilu pozadavku.',
+          hu: 'Az OTT kínálat hét élzárógép-modellt tartalmaz: Pacific+ (belépo szintu, 5,7 m), Tornado+ (bevált, 6,2 m), FlexEdge (Ipar 4.0, 7,1 m), Storm+ (professzionális, 7,8 m), StrongEdge (nehéz élekhez, 8,6 m), TopEdge S/L (zászlóshajó, 9,2-10,2 m) és a DoorEdition (ajtóspecialista, 8 m-tol). Minden modell egy adott igényprofilhoz szabott.',
         },
       },
       {
@@ -1442,11 +1513,13 @@ Vyraznym rysem rady stroju OTT je pruchodna moznost dovybaveni. Provozy mohou za
           de: 'Klebetechnologie: EVA, PUR und Nullfuge',
           en: 'Adhesive technology: EVA, PUR and zero glue line',
           cz: 'Lepici technologie: EVA, PUR a nulova spara',
+          hu: 'Ragasztási technológia: EVA, PUR és fugamentes',
         },
         body: {
           de: 'OTT bietet drei Klebetechnologie-Stufen: EVA (Standard, bewaeahrt und wirtschaftlich), PUR (wasserbestaendig, hitzebestaendig, nahezu unsichtbar) und bluEdge HyFuse (Nullfuge, kein Klebstoff, vollstaendig unsichtbar). Das CombiMelt-System ermoeglicht den schnellen Wechsel zwischen EVA und PUR. Alle Technologien sind nachruestbar.',
           en: 'OTT offers three adhesive technology tiers: EVA (standard, proven and economical), PUR (water-resistant, heat-resistant, virtually invisible) and bluEdge HyFuse (zero joint, no adhesive, completely invisible). The CombiMelt system enables fast switching between EVA and PUR. All technologies are retrofittable.',
           cz: 'OTT nabizi tri urovne lepici technologie: EVA (standard, osvedcena a ekonomicka), PUR (odolna vode, odolna teplu, prakticky neviditelna) a bluEdge HyFuse (nulova spara, zadne lepidlo, zcela neviditelna). System CombiMelt umoznuje rychle prepinani mezi EVA a PUR. Vsechny technologie jsou dodatecne montovatelne.',
+          hu: 'Az OTT három ragasztási technológiai szintet kínál: EVA (standard, bevált és gazdaságos), PUR (vízálló, hoálló, gyakorlatilag láthatatlan) és bluEdge HyFuse (fugamentes, ragasztó nélküli, teljesen láthatatlan). A CombiMelt rendszer lehetové teszi a gyors váltást EVA és PUR között. Minden technológia utólag felszerelheto.',
         },
       },
       {
@@ -1454,11 +1527,13 @@ Vyraznym rysem rady stroju OTT je pruchodna moznost dovybaveni. Provozy mohou za
           de: 'Materialkompatibilitaet und Anwendungsbereiche',
           en: 'Material compatibility and application areas',
           cz: 'Kompatibilita materialu a oblasti pouziti',
+          hu: 'Anyag-kompatibilitás és alkalmazási területek',
         },
         body: {
           de: 'OTT-Kantenanleimmaschinen verarbeiten alle gaengigen Kantenmaterialien: ABS, PVC, PP, Melamin, Furnier, Massivholz und CPL. Die Einsatzbereiche reichen von der Moebelproduktion ueber den Kuechenbau und Ladenbau bis zur Tuerenherstellung und zum Innenausbau. Dank der Kantenstaerken bis 25 mm (StrongEdge, TopEdge L) sind auch schwere Massivholzprofile moeglich.',
           en: 'OTT edgebanding machines process all common edge materials: ABS, PVC, PP, melamine, veneer, solid wood and CPL. Application areas range from furniture production through kitchen and shopfitting to door manufacturing and interior construction. With edge thicknesses up to 25 mm (StrongEdge, TopEdge L), even heavy solid wood profiles are possible.',
           cz: 'Olepovacky hran OTT zpracovavaji vsechny bezne hranove materialy: ABS, PVC, PP, melamin, dyhu, masivni drevo a CPL. Oblasti pouziti sahaji od vyroby nabytku pres kuchynsky a obchodni zastavbu az po vyrobu dveri a interierovou vystavbu. Diky tlouskam hran az 25 mm (StrongEdge, TopEdge L) jsou mozne i tezke masivni drevene profily.',
+          hu: 'Az OTT élzárógépek minden elterjedt élanyagot feldolgoznak: ABS, PVC, PP, melamin, furnér, tömörfa és CPL. Az alkalmazási területek a bútorgyártástól a konyha- és üzletberendezés-gyártáson át az ajtógyártásig és belsoépítészetig terjednek. A 25 mm-es (StrongEdge, TopEdge L) élvastagságoknak köszönhetoen nehéz tömörfa profilok is megmunkálhatók.',
         },
       },
       {
@@ -1466,11 +1541,13 @@ Vyraznym rysem rady stroju OTT je pruchodna moznost dovybaveni. Provozy mohou za
           de: 'Kaufberatung: Die richtige OTT-Maschine waehlen',
           en: 'Buying guide: choosing the right OTT machine',
           cz: 'Pruvodce nakupem: vyber spravneho stroje OTT',
+          hu: 'Vásárlási útmutató: a megfelelo OTT-gép kiválasztása',
         },
         body: {
           de: 'Die Wahl der richtigen Kantenanleimmaschine haengt von Ihren spezifischen Anforderungen ab: Stueckzahlbedarf, Kantenstaerken, Plattenstaerken, benoetigte Klebetechnologie und Budget. Fuer Handwerksbetriebe empfehlen wir Pacific+ oder Tornado+. Fuer mittlere Betriebe mit Digitalisierungsbedarf die FlexEdge. Fuer industrielle Fertigung Storm+ oder TopEdge. Asamer berart Sie gerne persoenlich.',
           en: 'Choosing the right edgebanding machine depends on your specific requirements: volume demand, edge thicknesses, board thicknesses, required adhesive technology and budget. For craft workshops, we recommend the Pacific+ or Tornado+. For medium operations with digitalisation needs, the FlexEdge. For industrial production, the Storm+ or TopEdge. Asamer is happy to advise you personally.',
           cz: 'Vyber spravne olepovacky hran zavisi na vasich specifickych pozadavcich: objem vyroby, tlousky hran, tlousky desek, pozadovana lepici technologie a rozpocet. Pro remeslne dilny doporucujeme Pacific+ nebo Tornado+. Pro stredni provozy s potrebou digitalizace FlexEdge. Pro prumyslovou vyrobu Storm+ nebo TopEdge. Asamer vam rad poradi osobne.',
+          hu: 'A megfelelo élzárógép kiválasztása az Ön egyedi igényeitol függ: darabszámigény, élvastagságok, lapvastagságok, szükséges ragasztási technológia és költségvetés. Kézmuves muhelyeknek a Pacific+-t vagy Tornado+-t ajánljuk. Közepes méretu, digitalizációt igénylo üzemeknek a FlexEdge-et. Ipari gyártáshoz a Storm+-t vagy TopEdge-et. Az Asamer szívesen ad személyes tanácsadást.',
         },
       },
     ],
@@ -1481,11 +1558,13 @@ Vyraznym rysem rady stroju OTT je pruchodna moznost dovybaveni. Provozy mohou za
           de: 'Welche ist die beste OTT-Kantenanleimmaschine fuer kleine Tischlereien?',
           en: 'Which is the best OTT edgebanding machine for small workshops?',
           cz: 'Ktera je nejlepsi olepovacka hran OTT pro male truhlarstvi?',
+          hu: 'Melyik a legjobb OTT élzárógép kis asztalosmuhelyek számára?',
         },
         answer: {
           de: 'Fuer kleine Tischlereien empfehlen wir die Pacific+ (5,7 m, 18 m/min) als kompaktes Einstiegsmodell oder die Tornado+ (6,2 m, 12-18 m/min) als bewaehrtesten Allrounder.',
           en: 'For small workshops, we recommend the Pacific+ (5.7 m, 18 m/min) as a compact entry model or the Tornado+ (6.2 m, 12-18 m/min) as the most proven all-rounder.',
           cz: 'Pro male truhlarske dilny doporucujeme Pacific+ (5,7 m, 18 m/min) jako kompaktni vstupni model nebo Tornado+ (6,2 m, 12-18 m/min) jako nejosvedcenejsi univerzalni reseni.',
+          hu: 'Kis asztalosmuhelyek számára a Pacific+-t (5,7 m, 18 m/perc) ajánljuk kompakt belépo szintu modellként, vagy a Tornado+-t (6,2 m, 12-18 m/perc) a legbeváltabb mindenesként.',
         },
       },
       {
@@ -1493,11 +1572,13 @@ Vyraznym rysem rady stroju OTT je pruchodna moznost dovybaveni. Provozy mohou za
           de: 'Koennen OTT-Kantenanleimmaschinen PUR-Klebstoff verarbeiten?',
           en: 'Can OTT edgebanding machines process PUR adhesive?',
           cz: 'Mohou olepovacky hran OTT zpracovavat PUR lepidlo?',
+          hu: 'Képesek az OTT élzárógépek PUR ragasztó feldolgozására?',
         },
         answer: {
           de: 'Ja, alle OTT-Modelle sind mit dem CombiMelt-System fuer PUR-Verarbeitung erhaeltlich oder nachruestbar. Die Storm+ und TopEdge haben PUR serienmaeassig, bei den anderen Modellen ist es eine Option.',
           en: 'Yes, all OTT models are available with or can be retrofitted with the CombiMelt system for PUR processing. The Storm+ and TopEdge include PUR as standard, while on other models it is an option.',
           cz: 'Ano, vsechny modely OTT jsou k dispozici se systemem CombiMelt pro zpracovani PUR nebo je lze dovybavit. Storm+ a TopEdge maji PUR standardne, u ostatnich modelu je to volba.',
+          hu: 'Igen, minden OTT-modell elérheto vagy utólag felszerelheto a CombiMelt rendszerrel PUR-feldolgozáshoz. A Storm+ és TopEdge szériakivitelben tartalmaz PUR-t, a többi modellnél ez opció.',
         },
       },
       {
@@ -1505,11 +1586,13 @@ Vyraznym rysem rady stroju OTT je pruchodna moznost dovybaveni. Provozy mohou za
           de: 'Wer ist der OTT-Haendler fuer Tschechien und die Slowakei?',
           en: 'Who is the OTT dealer for the Czech Republic and Slovakia?',
           cz: 'Kdo je prodejcem OTT pro Ceskou republiku a Slovensko?',
+          hu: 'Ki az OTT viszonteladója Csehországban és Szlovákiában?',
         },
         answer: {
           de: 'Asamer ist der autorisierte OTT-Haendler fuer Tschechien (CZ), die Slowakei (SK) und Ungarn (HU). Wir bieten Beratung, Verkauf, Installation, Schulung und Ersatzteilservice fuer alle OTT-Produkte.',
           en: 'Asamer is the authorized OTT dealer for the Czech Republic (CZ), Slovakia (SK) and Hungary (HU). We provide consultation, sales, installation, training and spare parts service for all OTT products.',
           cz: 'Asamer je autorizovany prodejce OTT pro Ceskou republiku (CZ), Slovensko (SK) a Madarsko (HU). Poskytujeme poradenstvi, prodej, instalaci, skoleni a servis nahradnich dilu pro vsechny produkty OTT.',
+          hu: 'Az Asamer a hivatalos OTT viszonteladó Csehország (CZ), Szlovákia (SK) és Magyarország (HU) számára. Tanácsadást, értékesítést, telepítést, oktatást és alkatrészszervizt kínálunk minden OTT-termékhez.',
         },
       },
       {
@@ -1517,11 +1600,13 @@ Vyraznym rysem rady stroju OTT je pruchodna moznost dovybaveni. Provozy mohou za
           de: 'Was kostet eine OTT-Kantenanleimmaschine?',
           en: 'What does an OTT edgebanding machine cost?',
           cz: 'Kolik stoji olepovacka hran OTT?',
+          hu: 'Mennyibe kerül egy OTT élzárógép?',
         },
         answer: {
           de: 'Der Preis haengt vom Modell und der Ausstattung ab. Kontaktieren Sie Asamer fuer ein individuelles Angebot. Wir erstellen Ihnen gerne eine massgeschneiderte Konfiguration fuer Ihren Bedarf.',
           en: 'The price depends on the model and equipment. Contact Asamer for an individual quotation. We are happy to create a customized configuration for your needs.',
           cz: 'Cena zavisi na modelu a vybaveni. Kontaktujte Asamer pro individualni nabidku. Radi vam pripravime konfiguraci na miru vasim potrebam.',
+          hu: 'Az ár a modelltol és a felszereltségtol függ. Keresse az Asamert egyéni árajánlatért. Szívesen készítünk testreszabott konfigurációt az Ön igényeihez.',
         },
       },
     ],
@@ -1549,6 +1634,11 @@ The CombiMelt system features patented Top-Driven-Roller technology that ensures
 Lepici technologie je rozhodujicim faktorem kvality hran. Zatimco EVA lepidlo postacuje pro mnoho standardnich aplikaci, PUR lepidlo poskytuje vodetesnou, teplotne odolnou a vyrazne tensi lepenou sparu. Pro kuchynsky nabytek, nabytek do vlhkych prostor a premiovy designovy nabytek je PUR dnes uznavanym standardem. Technologie bluEdge od OTT jde jeste o krok dale: laserovou aktivaci funkcni vrstvy vznikne zcela neviditelne spojeni bez jakehokoliv lepidla.
 
 System CombiMelt se vyznacuje patentovanou technologii Top-Driven-Roller, ktera zajisuji rovnomerny nanost lepidla bez bublin. Dve oddelene nadoby pro EVA a PUR umoznuji rychle prepinani mezi obema typy lepidel. Kompletni servisni stanice vyrazne zjednodusuje cisteni a udrzbu. Asamer je autorizovany prodejce OTT pro CZ, SK a HU a podpoeuji vas pri vyberu a integraci optimalni lepici technologie pro vasi olepovaci linku.`,
+      hu: `Az OTT Paul az élzárógépek mellett specializált ragasztási technológiai megoldásokat is kínál, amelyek minden élzáró sor teljesítményét bovítik. A középpontban az EVA és PUR ragasztókhoz használt CombiMelt olvasztórendszer, valamint a forradalmi bluEdge HyFuse fugamentes technológia áll. Mindkét rendszer elérheto utólag felszerelheto opcióként minden OTT élzárógéphez.
+
+A ragasztási technológia meghatározó tényezo az élminoségben. Míg az EVA ragasztó sok szabványos alkalmazáshoz elegendo, a PUR ragasztó vízálló, hoálló és jelentosen vékonyabb ragasztókötést biztosít. A konyhabútor, a nedves helyiségekbe szánt bútorok és a prémium designbútorok esetében a PUR ma az elismert szabvány. Az OTT bluEdge technológiája egy lépéssel tovább megy: a funkcionális réteg lézeres aktiválásával teljesen láthatatlan kötés jön létre bármilyen ragasztó nélkül.
+
+A CombiMelt rendszer szabadalmaztatott Top-Driven-Roller technológiája egyenletes, buborékmentes ragasztófelvitelt biztosít. Két külön tartály EVA és PUR számára gyors váltást tesz lehetové a két ragasztótípus között. A komplett szervizállomás jelentosen leegyszerusíti a tisztítást és a karbantartást. Az Asamer a hivatalos OTT viszonteladó CZ, SK és HU területére, és támogatja Önt az élzáró sorához optimális ragasztási technológia kiválasztásában és integrálásában.`,
     },
 
     sections: [
@@ -1557,11 +1647,13 @@ System CombiMelt se vyznacuje patentovanou technologii Top-Driven-Roller, ktera 
           de: 'EVA vs. PUR vs. Nullfuge: Welche Klebetechnologie wann?',
           en: 'EVA vs. PUR vs. zero glue line: which adhesive technology when?',
           cz: 'EVA vs. PUR vs. nulova spara: ktera lepici technologie kdy?',
+          hu: 'EVA vs. PUR vs. fugamentes: melyik ragasztási technológia mikor?',
         },
         body: {
           de: 'EVA eignet sich fuer Standardmoebel in trockenen Umgebungen. PUR ist die Wahl fuer wasserfeste Verbindungen im Kuechenbau und bei Feuchtraummoebeln. bluEdge HyFuse liefert die hoechste aesthetische Qualitaet mit vollstaendig unsichtbarer Fuge fuer Premiummoebel. Im CombiMelt-System laesst sich schnell zwischen EVA und PUR wechseln.',
           en: 'EVA is suitable for standard furniture in dry environments. PUR is the choice for waterproof joints in kitchen furniture and wet-room cabinetry. bluEdge HyFuse delivers the highest aesthetic quality with a completely invisible joint for premium furniture. The CombiMelt system allows quick switching between EVA and PUR.',
           cz: 'EVA je vhodna pro standardni nabytek v suchych prostredich. PUR je volba pro vodetesne spoje ve vyrobe kuchyni a nabytku do vlhkych prostor. bluEdge HyFuse dodava nejvyssi estetickou kvalitu se zcela neviditelnou sparou pro premiovy nabytek. V systemu CombiMelt lze rychle prepinat mezi EVA a PUR.',
+          hu: 'Az EVA száraz környezetu szabványos bútorokhoz alkalmas. A PUR a konyhabútor és nedves helyiségekbe szánt bútorok vízálló kötéseinek választása. A bluEdge HyFuse a legmagasabb esztétikai minoséget nyújtja teljesen láthatatlan fugával a prémium bútorokhoz. A CombiMelt rendszerben gyorsan lehet váltani EVA és PUR között.',
         },
       },
       {
@@ -1569,11 +1661,13 @@ System CombiMelt se vyznacuje patentovanou technologii Top-Driven-Roller, ktera 
           de: 'PUR-Klebstoff: Vorteile und Anwendung',
           en: 'PUR adhesive: advantages and application',
           cz: 'PUR lepidlo: vyhody a pouziti',
+          hu: 'PUR ragasztó: elonyök és alkalmazás',
         },
         body: {
           de: 'PUR (Polyurethan-Reaktivklebstoff) haertet durch Reaktion mit Luftfeuchtigkeit aus und bildet eine dauerhafte, wasserbestaendige Verbindung. Die Leimfuge ist deutlich duenner als bei EVA und nahezu unsichtbar. PUR ist hitzebestaendiger als EVA und quillt nicht bei Feuchtigkeit auf. Im Kuechenbau und bei Labormoebeln ist PUR heute Standard.',
           en: 'PUR (polyurethane reactive adhesive) cures by reacting with atmospheric moisture, forming a permanent, water-resistant bond. The glue joint is significantly thinner than EVA and virtually invisible. PUR is more heat-resistant than EVA and does not swell with moisture. In kitchen and laboratory furniture, PUR is now standard.',
           cz: 'PUR (polyuretanove reaktivni lepidlo) tvrdne reakci se vzdusnou vlhkosti a vytvari trvaly, vodetesny spoj. Lepena spara je vyrazne tensi nez u EVA a prakticky neviditelna. PUR je odolnejsi vuci teplu nez EVA a pri vlhkosti nenaboba. Ve vyrobe kuchyni a laboratorniho nabytku je PUR dnes standardem.',
+          hu: 'A PUR (poliuretán-reaktív ragasztó) a levego nedvességével reagálva szilárdul meg, és tartós, vízálló kötést hoz létre. A ragasztókötés jelentosen vékonyabb az EVA-nál és gyakorlatilag láthatatlan. A PUR hoállóbb, mint az EVA, és nedvesség hatására nem dagad meg. A konyhabútor- és laboratóriumi bútorgyártásban a PUR ma szabvány.',
         },
       },
       {
@@ -1581,11 +1675,13 @@ System CombiMelt se vyznacuje patentovanou technologii Top-Driven-Roller, ktera 
           de: 'bluEdge HyFuse: Die Zukunft der Kantenverklebung',
           en: 'bluEdge HyFuse: the future of edge bonding',
           cz: 'bluEdge HyFuse: budoucnost lepeni hran',
+          hu: 'bluEdge HyFuse: az élragasztás jövoje',
         },
         body: {
           de: 'Die bluEdge-Nullfugentechnologie mit HyFuse-Laser ersetzt den Klebstoff vollstaendig. Die Funktionsschicht der Kante wird thermisch aktiviert und mit der Platte verschmolzen. Das Ergebnis ist eine monolithische Oberflaeche ohne jede sichtbare Trennlinie. Diese Technologie ist bei allen OTT-Maschinen nachruestbar und oeffnet Betrieben den Weg ins Premium-Segment.',
           en: 'The bluEdge zero joint technology with HyFuse laser completely replaces adhesive. The functional layer of the edge is thermally activated and fused to the board. The result is a monolithic surface without any visible separation line. This technology is retrofittable to all OTT machines, opening the path to the premium segment for workshops.',
           cz: 'Technologie nulove spary bluEdge s laserem HyFuse zcela nahrazuje lepidlo. Funkcni vrstva hrany je termicky aktivovana a spojena s deskou. Vysledkem je monoliticky povrch bez jakekoli viditelne delici linie. Tato technologie je dodatecne montovatelna na vsechny stroje OTT a otevira provozum cestu do premiovehpo segmentu.',
+          hu: 'A bluEdge fugamentes technológia HyFuse-lézerrel teljesen helyettesíti a ragasztót. Az él funkcionális rétegét termikusan aktiválják, és a lappal olvasztják össze. Az eredmény egy monolitikus felület, minden látható választóvonal nélkül. Ez a technológia minden OTT-gépre utólag felszerelheto, és megnyitja az üzemek útját a prémium szegmens felé.',
         },
       },
     ],
@@ -1596,11 +1692,13 @@ System CombiMelt se vyznacuje patentovanou technologii Top-Driven-Roller, ktera 
           de: 'Was ist besser fuer Kuechenmoebel: PUR oder EVA?',
           en: 'Which is better for kitchen furniture: PUR or EVA?',
           cz: 'Co je lepsi pro kuchynsky nabytek: PUR nebo EVA?',
+          hu: 'Melyik jobb konyhabútorhoz: PUR vagy EVA?',
         },
         answer: {
           de: 'Fuer Kuechenmoebel empfehlen wir PUR-Klebstoff. Er bildet wasserfeste, hitzebestaendige Fugen, die auch in der feuchten Kuechenumgebung dauerhaft halten. EVA kann bei Dampf und Feuchtigkeit aufquellen.',
           en: 'For kitchen furniture, we recommend PUR adhesive. It forms waterproof, heat-resistant joints that hold permanently even in the humid kitchen environment. EVA can swell with steam and moisture.',
           cz: 'Pro kuchynsky nabytek doporucujeme PUR lepidlo. Vytvari vodetesne, teplotne odolne spoje, ktere drzi trvale i ve vlhkem kuchynskem prostredi. EVA muze pri pare a vlhkosti nabobtnat.',
+          hu: 'Konyhabútorhoz a PUR ragasztót ajánljuk. Vízálló, hoálló kötéseket hoz létre, amelyek a párás konyhai környezetben is tartósan megmaradnak. Az EVA goz és nedvesség hatására megdagadhat.',
         },
       },
       {
@@ -1608,11 +1706,13 @@ System CombiMelt se vyznacuje patentovanou technologii Top-Driven-Roller, ktera 
           de: 'Kann das CombiMelt-System nachgeruestet werden?',
           en: 'Can the CombiMelt system be retrofitted?',
           cz: 'Lze system CombiMelt dovybavit?',
+          hu: 'Utólag felszerelheto a CombiMelt rendszer?',
         },
         answer: {
           de: 'Ja, das CombiMelt-System kann an alle OTT-Kantenanleimmaschinen nachgeruestet werden. Asamer fuehrt die Nachruestung in CZ, SK und HU durch.',
           en: 'Yes, the CombiMelt system can be retrofitted to all OTT edgebanding machines. Asamer carries out retrofitting in CZ, SK and HU.',
           cz: 'Ano, system CombiMelt lze dovybavit na vsechny olepovacky hran OTT. Asamer provadi dovybaveni v CZ, SK a HU.',
+          hu: 'Igen, a CombiMelt rendszer minden OTT élzárógépre utólag felszerelheto. Az Asamer az utólagos felszerelést CZ, SK és HU területén végzi.',
         },
       },
       {
@@ -1620,11 +1720,13 @@ System CombiMelt se vyznacuje patentovanou technologii Top-Driven-Roller, ktera 
           de: 'Wie funktioniert die Nullfugentechnologie bluEdge?',
           en: 'How does the bluEdge zero glue line technology work?',
           cz: 'Jak funguje technologie nulove spary bluEdge?',
+          hu: 'Hogyan muködik a bluEdge fugamentes technológia?',
         },
         answer: {
           de: 'Bei bluEdge HyFuse wird die Funktionsschicht der Kante per Laser thermisch aktiviert und direkt mit der Platte verschmolzen. Es wird kein Klebstoff verwendet - die Verbindung ist vollstaendig unsichtbar.',
           en: 'With bluEdge HyFuse, the functional layer of the edge is thermally activated by laser and fused directly to the board. No adhesive is used - the connection is completely invisible.',
           cz: 'U bluEdge HyFuse je funkcni vrstva hrany termicky aktivovana laserem a primo spojena s deskou. Nepouziva se zadne lepidlo - spojeni je zcela neviditelne.',
+          hu: 'A bluEdge HyFuse-nál az él funkcionális rétegét lézerrel termikusan aktiválják, és közvetlenül a lappal olvasztják össze. Nem használnak ragasztót - a kötés teljesen láthatatlan.',
         },
       },
       {
@@ -1632,11 +1734,13 @@ System CombiMelt se vyznacuje patentovanou technologii Top-Driven-Roller, ktera 
           de: 'Welche Kantenhersteller liefern bluEdge-kompatible Kanten?',
           en: 'Which edge manufacturers supply bluEdge-compatible edges?',
           cz: 'Kteri vyrobci hran dodavaji hrany kompatibilni s bluEdge?',
+          hu: 'Mely élgyártók szállítanak bluEdge-kompatibilis éleket?',
         },
         answer: {
           de: 'Alle fuehrenden Kantenhersteller wie Rehau, Doellken und Ostermann bieten Kanten mit laserreaktiver Funktionsschicht an. Asamer berart Sie gerne zur Materialauswahl.',
           en: 'All leading edge manufacturers such as Rehau, Doellken and Ostermann offer edges with laser-reactive functional layers. Asamer is happy to advise you on material selection.',
           cz: 'Vsichni predni vyrobci hran jako Rehau, Doellken a Ostermann nabizeji hrany s laserove reaktivni funkcni vrstvou. Asamer vam rad poradi s vyberem materialu.',
+          hu: 'Minden vezeto élgyártó, mint a Rehau, Doellken és Ostermann, kínál lézerreaktív funkcionális réteggel ellátott éleket. Az Asamer szívesen ad tanácsot az anyagválasztáshoz.',
         },
       },
     ],
@@ -1664,6 +1768,11 @@ OTT offers three system variants: TRANScompact (compact, with rotation function,
 Vratny system umoznuje jednooperatorsky provoz olepovacky hran: operator vlozi obrobek, stroj zpracuje hranu a vratny system automaticky prepravi hotovy dil zpet k operatorovi. Bez vratneho systemu je potreba druhy zamestnanec pro odebirani dilu na vystupu stroje. Investice do vratneho systemu se proto rychle vrati diky usporam na mzdovych nakladech.
 
 OTT nabizi tri varianty systemu: TRANScompact (kompaktni, s funkci otaceni, pro Pacific+ a Tornado+), TRANSlift (vertikalni vraceni, prostorove usporne, pro Storm+, StrongEdge, TopEdge) a TRANSedge (specializovany na olepovaci linky, nejvyssi taktovaci frekvence, pro Storm+ a TopEdge). Asamer je autorizovany prodejce OTT pro CZ, SK a HU a radi vam poradi s optimalni kombinaci olepovacky hran a vratneho systemu pro vas provoz.`,
+      hu: `A visszatéríto és anyagmozgatási rendszerek minden hatékony élzáró sor elengedhetetlen részét képezik. Az OTT Paul a TRANScompact, TRANSlift és TRANSedge rendszerekkel három, különbözo igényekre szabott visszatéríto rendszert kínál. A kompakt muhelyi visszatérítéstol a magas ütemgyakoriságú ipari rendszerig minden üzem megtalálja a megfelelo megoldást.
+
+A visszatéríto rendszer lehetové teszi az élzárógép egyszemélyes üzemét: a kezelo behelyezi a munkadarabot, a gép megmunkálja az élt, és a visszatéríto rendszer automatikusan visszaszállítja a kész darabot a kezelohöz. Visszatéríto rendszer nélkül egy második alkalmazottra van szükség a darabok levételéhez a gép kiadagolóoldalán. A visszatéríto rendszerbe történo beruházás ezért a megtakarított bérköltségeken keresztül gyorsan megtérül.
+
+Az OTT három rendszerváltozatot kínál: TRANScompact (kompakt, forgatófunkcióval, Pacific+ és Tornado+ gépekhez), TRANSlift (függoleges visszatérítés, helytakarékos, Storm+, StrongEdge, TopEdge gépekhez) és TRANSedge (élzáró sorokra specializált, legmagasabb ütemgyakoriság, Storm+ és TopEdge gépekhez). Az Asamer a hivatalos OTT viszonteladó CZ, SK és HU területére, és tanácsot ad az élzárógép és visszatéríto rendszer optimális kombinációjához az Ön üzeméhez.`,
     },
 
     sections: [
@@ -1672,11 +1781,13 @@ OTT nabizi tri varianty systemu: TRANScompact (kompaktni, s funkci otaceni, pro 
           de: 'Drei Rueckfuehrsysteme fuer drei Anforderungsprofile',
           en: 'Three return systems for three requirement profiles',
           cz: 'Tri vratne systemy pro tri profily pozadavku',
+          hu: 'Három visszatéríto rendszer három igényprofilhoz',
         },
         body: {
           de: 'TRANScompact ist das kompakte Einstiegssystem mit Drehfunktion fuer kleinere Werkstaetten. TRANSlift nutzt den vertikalen Raum und spart Hallenflaeche. TRANSedge ist auf maximale Taktrate in industriellen Kantenanleimlinien optimiert. Jedes System kann mit allen OTT-Kantenanleimmaschinen kombiniert werden.',
           en: 'TRANScompact is the compact entry system with rotation for smaller workshops. TRANSlift uses vertical space and saves floor area. TRANSedge is optimized for maximum cycle rate in industrial edgebanding lines. Each system can be combined with all OTT edgebanding machines.',
           cz: 'TRANScompact je kompaktni vstupni system s otacenim pro mensi dilny. TRANSlift vyuziva vertikalni prostor a setri podlahovou plochu. TRANSedge je optimalizovan pro maximalni taktovaci frekvenci v prumyslovych olepovacich linkach. Kazdy system lze kombinovat se vsemi olepovackami hran OTT.',
+          hu: 'A TRANScompact a kompakt belépo szintu rendszer forgatófunkcióval, kisebb muhelyekhez. A TRANSlift függoleges teret használ, és padlóterületet takarít meg. A TRANSedge-et a maximális ütemgyakoriságra optimalizálták ipari élzáró sorokhoz. Minden rendszer kombinálható az összes OTT élzárógéppel.',
         },
       },
       {
@@ -1684,11 +1795,13 @@ OTT nabizi tri varianty systemu: TRANScompact (kompaktni, s funkci otaceni, pro 
           de: 'Einmann-Betrieb und Amortisation',
           en: 'Single-operator running and return on investment',
           cz: 'Jednooperatorsky provoz a navratnost investice',
+          hu: 'Egyszemélyes üzem és megtérülés',
         },
         body: {
           de: 'Der groesste wirtschaftliche Vorteil eines Rueckfuehrsystems ist die Einsparung eines zweiten Bedieners. Bei durchschnittlichen Personalkosten amortisiert sich ein TRANScompact innerhalb weniger Monate. Bei groeosseren Systemen wie TRANSlift und TRANSedge traegt die gesteigerte Produktivitaet zusaetzlich zur schnellen Amortisation bei.',
           en: 'The greatest economic advantage of a return system is the saving of a second operator. At average labour costs, a TRANScompact pays for itself within a few months. For larger systems like TRANSlift and TRANSedge, increased productivity further contributes to rapid return on investment.',
           cz: 'Nejvetsi ekonomickou vyhodou vratneho systemu je uspora druheho operatora. Při prumernych mzdovych nakladech se TRANScompact vrati behem nekolika mesicu. U vetsich systemu jako TRANSlift a TRANSedge navic zvysena produktivita prispiva k rychle navratnosti investice.',
+          hu: 'A visszatéríto rendszer legnagyobb gazdasági elonye egy második kezelo megtakarítása. Átlagos bérköltségek mellett a TRANScompact néhány hónapon belül megtérül. A nagyobb rendszereknél, mint a TRANSlift és TRANSedge, a megnövekedett termelékenység is hozzájárul a gyors megtéréshez.',
         },
       },
       {
@@ -1696,11 +1809,13 @@ OTT nabizi tri varianty systemu: TRANScompact (kompaktni, s funkci otaceni, pro 
           de: 'Empfohlene Kombinationen mit OTT-Maschinen',
           en: 'Recommended combinations with OTT machines',
           cz: 'Doporucene kombinace se stroji OTT',
+          hu: 'Ajánlott kombinációk OTT-gépekkel',
         },
         body: {
           de: 'Pacific+ und Tornado+ harmonieren am besten mit TRANScompact. FlexEdge kann mit TRANScompact oder TRANSlift kombiniert werden. Storm+ und StrongEdge empfehlen wir mit TRANSlift oder TRANSedge. Die TopEdge entfaltet ihr volles Potenzial in Kombination mit dem TRANSedge fuer maximale Taktrate.',
           en: 'Pacific+ and Tornado+ pair best with TRANScompact. FlexEdge can be combined with TRANScompact or TRANSlift. For Storm+ and StrongEdge, we recommend TRANSlift or TRANSedge. The TopEdge achieves its full potential in combination with TRANSedge for maximum cycle rate.',
           cz: 'Pacific+ a Tornado+ se nejlepe sladí s TRANScompact. FlexEdge lze kombinovat s TRANScompact nebo TRANSlift. Pro Storm+ a StrongEdge doporucujeme TRANSlift nebo TRANSedge. TopEdge rozvineme svuj plny potencial v kombinaci s TRANSedge pro maximalni taktovaci frekvenci.',
+          hu: 'A Pacific+ és Tornado+ a TRANScompacttal harmonizál a legjobban. A FlexEdge a TRANScompacttal vagy TRANSlifttel kombinálható. A Storm+ és StrongEdge esetében a TRANSliftet vagy TRANSedge-et ajánljuk. A TopEdge a TRANSedge-dzsel kombinálva bontakoztatja ki teljes potenciálját a maximális ütemgyakorisághoz.',
         },
       },
       {
@@ -1708,11 +1823,13 @@ OTT nabizi tri varianty systemu: TRANScompact (kompaktni, s funkci otaceni, pro 
           de: 'Planung und Integration durch Asamer',
           en: 'Planning and integration by Asamer',
           cz: 'Planovani a integrace od Asamer',
+          hu: 'Tervezés és integráció az Asamertol',
         },
         body: {
           de: 'Die Wahl des richtigen Rueckfuehrsystems haengt von vielen Faktoren ab: Hallengroesse, Deckenhoehe, Maschinenmodell, Stueckzahlbedarf und Budget. Asamer analysiert Ihre raeumlichen und produktionstechnischen Voraussetzungen und empfiehlt die optimale Loesung. Unser Service umfasst Planung, Lieferung, Installation und Inbetriebnahme in CZ, SK und HU.',
           en: 'Choosing the right return system depends on many factors: hall size, ceiling height, machine model, volume requirements and budget. Asamer analyses your spatial and production conditions and recommends the optimal solution. Our service covers planning, delivery, installation and commissioning in CZ, SK and HU.',
           cz: 'Vyber spravneho vratneho systemu zavisi na mnoha faktorech: velikost haly, vyska stropu, model stroje, objem vyroby a rozpocet. Asamer analyzuje vase prostorove a vyrobni podminky a doporuci optimalni reseni. Nas servis zahrnuje planovani, dodani, instalaci a uvedeni do provozu v CZ, SK a HU.',
+          hu: 'A megfelelo visszatéríto rendszer kiválasztása sok tényezotol függ: csarnokméret, mennyezetmagasság, gépmodell, darabszámigény és költségvetés. Az Asamer elemzi az Ön térbeli és gyártástechnikai feltételeit, és ajánlja az optimális megoldást. Szervízünk kiterjed a tervezésre, szállításra, telepítésre és üzembe helyezésre CZ, SK és HU területén.',
         },
       },
     ],
@@ -1723,11 +1840,13 @@ OTT nabizi tri varianty systemu: TRANScompact (kompaktni, s funkci otaceni, pro 
           de: 'Brauche ich ein Rueckfuehrsystem fuer meine Kantenanleimmaschine?',
           en: 'Do I need a return system for my edgebanding machine?',
           cz: 'Potrebuji vratny system pro svou olepovacku hran?',
+          hu: 'Szükségem van visszatéríto rendszerre az élzárógépemhez?',
         },
         answer: {
           de: 'Ein Rueckfuehrsystem ist nicht zwingend noetig, spart aber einen zweiten Bediener und steigert die Produktivitaet erheblich. Fuer die meisten Betriebe amortisiert sich die Investition schnell durch eingesparte Personalkosten.',
           en: 'A return system is not mandatory but saves a second operator and significantly increases productivity. For most operations, the investment pays for itself quickly through saved labour costs.',
           cz: 'Vratny system neni nezbytne nutny, ale setri druheho operatora a vyrazne zvysuje produktivitu. Pro vetsinu provozu se investice rychle vrati diky usporenim mzdovym nakladum.',
+          hu: 'A visszatéríto rendszer nem feltétlenül szükséges, de egy második kezelot takarít meg, és jelentosen növeli a termelékenységet. A legtöbb üzem számára a beruházás gyorsan megtérül a megtakarított bérköltségek révén.',
         },
       },
       {
@@ -1735,11 +1854,13 @@ OTT nabizi tri varianty systemu: TRANScompact (kompaktni, s funkci otaceni, pro 
           de: 'Welches Rueckfuehrsystem passt zu meiner OTT-Maschine?',
           en: 'Which return system fits my OTT machine?',
           cz: 'Jaky vratny system se hodi k memu stroji OTT?',
+          hu: 'Melyik visszatéríto rendszer illik az OTT-gépemhez?',
         },
         answer: {
           de: 'Fuer Pacific+ und Tornado+ empfehlen wir TRANScompact. Fuer FlexEdge, Storm+ und StrongEdge eignen sich TRANSlift oder TRANSedge. Fuer TopEdge empfehlen wir TRANSedge fuer maximale Taktrate oder TRANSlift fuer Platzersparnis.',
           en: 'For Pacific+ and Tornado+, we recommend TRANScompact. For FlexEdge, Storm+ and StrongEdge, TRANSlift or TRANSedge are suitable. For TopEdge, we recommend TRANSedge for maximum cycle rate or TRANSlift for space saving.',
           cz: 'Pro Pacific+ a Tornado+ doporucujeme TRANScompact. Pro FlexEdge, Storm+ a StrongEdge jsou vhodne TRANSlift nebo TRANSedge. Pro TopEdge doporucujeme TRANSedge pro maximalni taktovaci frekvenci nebo TRANSlift pro usporu mista.',
+          hu: 'A Pacific+ és Tornado+ gépekhez a TRANScompactot ajánljuk. A FlexEdge, Storm+ és StrongEdge gépekhez a TRANSlift vagy TRANSedge alkalmas. A TopEdge-hez a TRANSedge-et ajánljuk a maximális ütemgyakoriságért, vagy a TRANSliftet a helymegtakarításért.',
         },
       },
       {
@@ -1747,11 +1868,13 @@ OTT nabizi tri varianty systemu: TRANScompact (kompaktni, s funkci otaceni, pro 
           de: 'Wie schnell amortisiert sich ein OTT-Rueckfuehrsystem?',
           en: 'How quickly does an OTT return system pay for itself?',
           cz: 'Jak rychle se OTT vratny system vrati?',
+          hu: 'Milyen gyorsan térül meg egy OTT visszatéríto rendszer?',
         },
         answer: {
           de: 'Die Amortisationsdauer haengt von den Personalkosten und der Auslastung ab. Bei einem TRANScompact rechnet sich die Investition typischerweise innerhalb weniger Monate durch die Einsparung eines zweiten Bedieners. Asamer erstellt Ihnen gerne eine individuelle Wirtschaftlichkeitsberechnung.',
           en: 'The payback period depends on labour costs and utilization. For a TRANScompact, the investment typically pays for itself within a few months by saving a second operator. Asamer is happy to prepare an individual profitability calculation for you.',
           cz: 'Doba navratnosti zavisi na mzdovych nakladech a vytizeni. U TRANScompact se investice typicky vrati behem nekolika mesicu diky uspore druheho operatora. Asamer vam rad pripravi individualni vypocet ekonomicnosti.',
+          hu: 'A megtérülési ido a bérköltségektol és a kihasználtságtól függ. Egy TRANScompact esetében a beruházás jellemzoen néhány hónapon belül megtérül egy második kezelo megtakarításával. Az Asamer szívesen készít egyéni gazdaságossági számítást.',
         },
       },
     ],
