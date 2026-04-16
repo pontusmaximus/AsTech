@@ -60,7 +60,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['DM Sans', 'system-ui', 'sans-serif'],
-        display: ['DM Sans', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'DM Sans', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",
