@@ -36,6 +36,16 @@ Asamer is the authorized OTT dealer for the Czech Republic, Slovakia and Hungary
 Pacific+ je vybavena systemem CombiMelt, ktery zpracovava jak EVA, tak PUR lepidla. To umoznuje vytvaret vlhkosti odolne lepene spoje, ktere jsou zadany ve vyrobe kuchyni a interieru obchodu. Standardni vybava zahrnuje spojovaci obrabeni, zasobnik hran, oriznute zarizeni K12, frezovaci agregat, radiusovou skrabku a zaoblovani rohu AKF. System CombiMelt lze volitelne dovybavit pro zpracovani PUR.
 
 Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko. Pacific+ dodavame vcetne poradenstvi, instalace a servisu nahradnich dilu. Pro remeslne dilny hledajici cenove dostupny vstup do strojniho olepovani hran je Pacific+ nejekonomictejsim resenim v nabidce OTT. At uz klasicke PVC hrany, ABS hrany nebo dyhy z praveho dreva - stroj zvladne vsechny bezne hranove materialy s trvale vysokou kvalitou a minimalnimi casy na prestaveni.`,
+      sk: `OTT Pacific+ je kompaktna olepovacka hran vyvinuta specialne pre remeselne dielne a male stolarstva. S dlzkou iba 5,7 metra sa zmesti aj do stiesnenych dielenskych priestorov a napriek tomu dodava plnohodnotny vysledok olepovania hran. Stroj spracovava hrany o hrubke 0,3 az 15 mm na doskach do hrubky 60 mm pri rychlosti posuvu 18 m/min vratane spracovania rohov. Tym je idealna pre dennu vyrobu nabytkovych celnych ploch, korpusov a pracovnych dosiek v jednozmennej prevadzke.
+
+Pacific+ je vybavena systemom CombiMelt, ktory spracovava ako EVA, tak aj PUR lepidla. To umoznuje vytvarat vlhkostne odolne lepene spoje, ktore su pozadovane vo vyrobe kuchyn a interieru obchodov. Standardna vybava zahrna spajacie obrabanie, zasobnik hran, orezavacie zariadenie K12, frezovaci agregat, radiusovu skrabku a zaoblovanie rohov AKF. System CombiMelt je mozne volitelne dovybavit na spracovanie PUR.
+
+Asamer je autorizovany predajca OTT pre Ceskú republiku, Slovensko a Madarsko. Pacific+ dodavame vratane poradenstva, instalacie a servisu nahradnych dielov. Pre remeselne dielne hladajuce cenovo dostupny vstup do strojneho olepovania hran je Pacific+ najekonomickejsim riesenim v ponuke OTT. Ci uz klasicke PVC hrany, ABS hrany alebo dyhy z praveho dreva - stroj zvladne vsetky bezne hranove materialy s trvalo vysokou kvalitou a minimalnymi casmi na prestavenie.`,
+      hu: `Az OTT Pacific+ egy kompakt élzárógép, amelyet kifejezetten kézmuves muhelyek és kis asztalosüzemek számára fejlesztettek ki. Mindössze 5,7 méteres hosszával szuk muhelyterekbe is beleillik, mégis teljes értéku élzárási eredményt biztosít. A gép 0,3-tól 15 mm-ig terjedo élvastagságot dolgoz fel 60 mm-es lapvastagságig, 18 m/perc eloretolási sebességgel, beleértve a sarokmegmunkálást is. Ez kiváló választássá teszi a bútorfrontok, korpuszok és munkalapok napi gyártásához egymuszakos üzemben.
+
+A Pacific+ CombiMelt ragasztórendszerrel van felszerelve, amely EVA és PUR ragasztókat is kezel. Ez nedvességálló ragasztási kötéseket tesz lehetové, amelyekre a konyhabútor- és üzletberendezés-gyártásban van szükség. A standard felszereltség része a fugamegmunkálás, az éltár, a K12 formatizáló egység, a maróegység, a sugárkaparó és az AKF sarokkerekíto. A CombiMelt rendszer opcionálisan PUR-feldolgozásra is boviheto.
+
+Az Asamer a hivatalos OTT viszonteladó Csehország, Szlovákia és Magyarország számára. A Pacific+-t teljes körú tanácsadással, telepítéssel és alkatrészszervizzel szállítjuk. Az élzárógépbe való megfizetheto belépést kereso muhelyek számára a Pacific+ a legköltséghatékonyabb megoldás az OTT kínálatában. Legyen szó klasszikus PVC-élekrol, ABS-élekrol vagy valódi fafurnérról, a gép minden bevett élanyagot következetesen magas minoségben és minimális átállási idovel kezel.`,
     },
 
     applicationSections: [
@@ -44,11 +54,15 @@ Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko. 
           de: 'Fuer kleine Tischlereien und Einsteiger',
           en: 'For small joinery workshops and beginners',
           cz: 'Pro male truhlarske dilny a zacinajici',
+          sk: 'Pre male stolarske dielne a zaciatocnikov',
+          hu: 'Kis asztalosmuhelyek és kezdok számára',
         },
         body: {
           de: 'Die Pacific+ ist das Einstiegsmodell im OTT-Programm und bietet kleinen Tischlereien alles, was sie fuer die taegliche Kantenbearbeitung benoetigen. Mit 18 m/min Vorschub inklusive Eckenbearbeitung laesst sich ein praxisgerechter Durchsatz erzielen, ohne in eine groessere Maschine investieren zu muessen. Die einfache Bedienung und die kompakten Abmessungen machen sie ideal fuer Betriebe mit ein bis drei Mitarbeitern.',
           en: 'The Pacific+ is the entry-level model in the OTT range and provides small joinery workshops with everything needed for daily edgebanding. With a feed speed of 18 m/min including corner processing, it achieves practical throughput without requiring investment in a larger machine. Simple operation and compact dimensions make it ideal for workshops with one to three employees.',
           cz: 'Pacific+ je vstupni model v nabidce OTT a poskytuje malym truhlarskym dilnam vse potrebne pro denni olepovani hran. S rychlosti posuvu 18 m/min vcetne zpracovani rohu dosahuje praktickeho vystupu bez nutnosti investovat do vetsiho stroje. Jednoducha obsluha a kompaktni rozmery ji cini idealnim resenim pro provozovny s jednim az tremi zamestnanci.',
+          sk: 'Pacific+ je vstupny model v ponuke OTT a poskytuje malym stolarskym dielnam vsetko potrebne pre denne olepovanie hran. S rychlostou posuvu 18 m/min vratane spracovania rohov dosahuje prakticky vystup bez nutnosti investovat do vacsieho stroja. Jednoducha obsluha a kompaktne rozmery z nej robia idealne riesenie pre prevadzky s jednym az troma zamestnancami.',
+          hu: 'A Pacific+ a belépo szintu modell az OTT kínálatában, és mindent biztosít a kis asztalosmuhelyeknek, amire a napi élzáráshoz szükségük van. A sarokmegmunkálással együtt 18 m/perc eloretolási sebességgel gyakorlati teljesítményt érhet el anélkül, hogy nagyobb gépbe kellene befektetnie. Az egyszeru kezelés és a kompakt méretek ideálissá teszik egy-három alkalmazottas muhelyek számára.',
         },
       },
       {
@@ -56,11 +70,15 @@ Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko. 
           de: 'Kuechenbau und Ladenbau mit PUR-Option',
           en: 'Kitchen and shopfitting with PUR option',
           cz: 'Vyroba kuchyni a obchodni vybava s moznosti PUR',
+          sk: 'Vyroba kuchyn a obchodne vybavenie s moznostou PUR',
+          hu: 'Konyha- és üzletberendezés-gyártás PUR opcióval',
         },
         body: {
           de: 'Dank des nachruestbaren CombiMelt-PUR-Systems koennen auch Feuchtraum- und Kuechen-Kanten mit wasserfesten PUR-Leimfugen verarbeitet werden. Das macht die Pacific+ zu einer vielseitigen Loesung fuer Tischlereien, die sowohl Standard-Moebel als auch Kuechen und Sanitaermoebel fertigen.',
           en: 'Thanks to the retrofittable CombiMelt PUR system, moisture-proof kitchen and wet-room edges can also be processed with waterproof PUR glue joints. This makes the Pacific+ a versatile solution for workshops producing both standard furniture and kitchen or bathroom cabinetry.',
           cz: 'Diky dodatecne montovitelnemu systemu CombiMelt PUR lze zpracovavat i hrany pro vlhke prostory a kuchyne s vodetesnymi PUR lepenymi sparami. To cini Pacific+ vsestrannym resenim pro dilny vyrabejici jak standardni nabytek, tak kuchynsky ci koupelnovy nabytek.',
+          sk: 'Vdaka dodatocne montovatelnemu systemu CombiMelt PUR je mozne spracovavat aj hrany pre vlhke priestory a kuchyne s vodotesnymi PUR lepenymi sparami. To cini Pacific+ vsestranným riesenim pre dielne vyrabajuce ako standardny nabytok, tak kuchynsky ci kupelnovy nabytok.',
+          hu: 'A bovíthetobb CombiMelt PUR rendszernek köszönhetoen a nedves helyiségek és konyhák élei is feldolgozhatók vízálló PUR ragasztókötésekkel. Ez sokoldalú megoldássá teszi a Pacific+-t azon muhelyek számára, amelyek standard bútorokat, valamint konyhai vagy fürdoszobai szekrényeket is gyártanak.',
         },
       },
     ],
@@ -69,6 +87,8 @@ Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko. 
       de: 'Waehlen Sie die Pacific+, wenn Sie eine kompakte und bezahlbare Kantenanleimmaschine fuer Ihren Handwerksbetrieb suchen. Sie eignet sich optimal fuer Einzelstueck- und Kleinserienfertigung mit bis zu 18 m/min Vorschub. Wenn Sie hoehere Vorschubgeschwindigkeiten oder groessere Kantenstaerken benoetigen, sollten Sie die Tornado+ oder FlexEdge in Betracht ziehen.',
       en: 'Choose the Pacific+ if you need a compact, affordable edgebanding machine for your workshop. It is optimal for one-off and small-batch production at up to 18 m/min feed speed. If you require higher feed speeds or heavier edge thicknesses, consider the Tornado+ or FlexEdge.',
       cz: 'Zvolte Pacific+, pokud hledate kompaktni a cenove dostupnou olepovacku hran pro svou dilnu. Je optimalni pro kusovou a maloseriovou vyrobu s rychlosti posuvu az 18 m/min. Pokud potrebujete vyssi rychlosti posuvu nebo vetsi tlousky hran, zvazujte Tornado+ nebo FlexEdge.',
+      sk: 'Zvolte Pacific+, ak hladate kompaktnu a cenovo dostupnu olepovacku hran pre svoju dielnu. Je optimalna pre kusovu a malosseriovu vyrobu s rychlostou posuvu az 18 m/min. Ak potrebujete vyssie rychlosti posuvu alebo vacsie hrubky hran, zvazte Tornado+ alebo FlexEdge.',
+      hu: 'Válassza a Pacific+-t, ha kompakt, megfizetheto élzárógépre van szüksége muhelyébe. Optimális egyedi és kis sorozatú gyártáshoz, akár 18 m/perc eloretolási sebességgel. Ha nagyobb eloretolási sebességre vagy nagyobb élvastagságokra van szüksége, fontolja meg a Tornado+-t vagy a FlexEdge-et.',
     },
 
     faq: [
@@ -77,11 +97,15 @@ Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko. 
           de: 'Welche Kantenstaerke verarbeitet die Pacific+?',
           en: 'What edge thickness can the Pacific+ process?',
           cz: 'Jakou tlousku hran zpracuje Pacific+?',
+          sk: 'Aku hrubku hran spracuje Pacific+?',
+          hu: 'Milyen élvastagságot képes feldolgozni a Pacific+?',
         },
         answer: {
           de: 'Die Pacific+ verarbeitet Kantenstaerken von 0,3 bis 15 mm. Sie ist damit fuer alle gaengigen duennen Kanten (ABS, PVC, Melamin) ebenso geeignet wie fuer dickere Massivholzkanten.',
           en: 'The Pacific+ processes edge thicknesses from 0.3 to 15 mm, making it suitable for all common thin edges (ABS, PVC, melamine) as well as thicker solid wood edges.',
           cz: 'Pacific+ zpracovava tlousky hran od 0,3 do 15 mm. Je tak vhodna pro vsechny bezne tenke hrany (ABS, PVC, melamin) i pro tlustsi masivni drevene hrany.',
+          sk: 'Pacific+ spracovava hrubky hran od 0,3 do 15 mm. Je tak vhodna pre vsetky bezne tenke hrany (ABS, PVC, melamin) aj pre hrubsie masivne drevene hrany.',
+          hu: 'A Pacific+ 0,3 és 15 mm közötti élvastagságokat dolgoz fel, így alkalmas minden elterjedt vékony élhez (ABS, PVC, melamin) és vastagabb tömörfa élekhez is.',
         },
       },
       {
@@ -89,11 +113,15 @@ Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko. 
           de: 'Kann die Pacific+ PUR-Klebstoff verarbeiten?',
           en: 'Can the Pacific+ process PUR adhesive?',
           cz: 'Muze Pacific+ zpracovavat PUR lepidlo?',
+          sk: 'Moze Pacific+ spracovavat PUR lepidlo?',
+          hu: 'Képes a Pacific+ PUR ragasztót feldolgozni?',
         },
         answer: {
           de: 'Ja, die Pacific+ kann mit dem optionalen CombiMelt-PUR-System auf PUR-Leimverarbeitung nachgeruestet werden. Im Grundausbau arbeitet sie mit EVA-Klebstoff.',
           en: 'Yes, the Pacific+ can be retrofitted for PUR adhesive processing with the optional CombiMelt PUR system. In its standard configuration, it works with EVA adhesive.',
           cz: 'Ano, Pacific+ lze dovybavit systemem CombiMelt PUR pro zpracovani PUR lepidla. V zakladni konfiguraci pracuje s EVA lepidlem.',
+          sk: 'Ano, Pacific+ je mozne dovybavit systemom CombiMelt PUR pre spracovanie PUR lepidla. V zakladnej konfiguracii pracuje s EVA lepidlom.',
+          hu: 'Igen, a Pacific+ az opcionális CombiMelt PUR rendszerrel PUR-feldolgozásra alakítható. Alapkonfigurációban EVA ragasztóval muködik.',
         },
       },
       {
@@ -101,11 +129,15 @@ Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko. 
           de: 'Wie viel Platz braucht die Pacific+ in der Werkstatt?',
           en: 'How much space does the Pacific+ need in the workshop?',
           cz: 'Kolik mista zabira Pacific+ v dilne?',
+          sk: 'Kolko miesta zabera Pacific+ v dielni?',
+          hu: 'Mennyi helyre van szüksége a Pacific+-nak a muhelyben?',
         },
         answer: {
           de: 'Die Pacific+ hat eine Baulaenge von nur 5,7 Metern und ist damit die kompakteste Kantenanleimmaschine im OTT-Programm. Zusammen mit einem TRANScompact-Rueckfuehrsystem laesst sie sich auch auf kleiner Flaeche effizient betreiben.',
           en: 'The Pacific+ has a footprint of just 5.7 metres, making it the most compact edgebanding machine in the OTT range. Combined with a TRANScompact return system, it can be operated efficiently even in tight spaces.',
           cz: 'Pacific+ ma delku pouhych 5,7 metru a je tak nejkompaktnejsi olepovackou hran v nabidce OTT. V kombinaci s vratnym systemem TRANScompact ji lze efektivne provozovat i na malem prostoru.',
+          sk: 'Pacific+ ma dlzku iba 5,7 metra a je tak najkompaktnejsou olepovackou hran v ponuke OTT. V kombinacii s vratnym systemom TRANScompact ju mozno efektivne prevadzkovat aj na malom priestore.',
+          hu: 'A Pacific+ mindössze 5,7 méteres, így a legkompaktabb élzárógép az OTT kínálatában. Egy TRANScompact visszatéríto rendszerrel kombinálva szuk helyen is hatékonyan üzemeltetheto.',
         },
       },
       {
@@ -113,11 +145,15 @@ Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko. 
           de: 'Was kostet eine OTT Pacific+ Kantenanleimmaschine?',
           en: 'What does an OTT Pacific+ edgebanding machine cost?',
           cz: 'Kolik stoji olepovacka hran OTT Pacific+?',
+          sk: 'Kolko stoji olepovacka hran OTT Pacific+?',
+          hu: 'Mennyibe kerül egy OTT Pacific+ élzárógép?',
         },
         answer: {
           de: 'Der Preis der Pacific+ haengt von der gewaehlten Ausstattung ab. Als autorisierter OTT-Haendler fuer CZ, SK und HU erstellt Asamer Ihnen gerne ein individuelles Angebot. Kontaktieren Sie uns fuer eine unverbindliche Beratung.',
           en: 'The price of the Pacific+ depends on the chosen equipment configuration. As the authorized OTT dealer for CZ, SK and HU, Asamer is happy to provide you with a tailored quotation. Contact us for a no-obligation consultation.',
           cz: 'Cena Pacific+ zavisi na zvolene konfiguraci vybaveni. Jako autorizovany prodejce OTT pro CZ, SK a HU vam Asamer rad pripravi individualni nabidku. Kontaktujte nas pro nezavaznou konzultaci.',
+          sk: 'Cena Pacific+ zavisi od zvolenej konfiguracie vybavenia. Ako autorizovany predajca OTT pre CZ, SK a HU vam Asamer rad pripravi individualnu ponuku. Kontaktujte nas pre nezavaznu konzultaciu.',
+          hu: 'A Pacific+ ára a választott felszereltségtol függ. A CZ, SK és HU hivatalos OTT viszonteladójaként az Asamer szívesen készít egyéni árajánlatot. Keressen minket kötelezettségmentes konzultációért.',
         },
       },
     ],
