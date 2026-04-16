@@ -63,11 +63,19 @@ module.exports = {
         display: ['Space Grotesk', 'DM Sans', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
-        xl: "calc(var(--radius) + 4px)",
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-        xs: "calc(var(--radius) - 6px)",
+        // 3-stage radius scale mapped to CSS tokens
+        // small (buttons/chips/inputs): 0.5rem
+        // medium (standard cards/alerts): 0.75rem
+        // large (product cards/hero blocks/CTAs): 1.25rem
+        none: "0px",
+        xs: "0.25rem",
+        sm: "0.5rem",
+        md: "0.75rem",
+        lg: "0.75rem",
+        xl: "1.25rem",
+        "2xl": "1.25rem",
+        "3xl": "1.5rem",
+        full: "9999px",
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",

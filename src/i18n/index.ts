@@ -6,7 +6,7 @@ export interface Translations {
     cutting: string;
     edgebanding: string;
     handling: string;
-    automation: string;
+    financing: string;
     service: string;
     usedMachines: string;
     company: string;
@@ -178,7 +178,7 @@ const translations: Record<Language, Translations> = {
       cutting: 'Schneiden',
       edgebanding: 'Kantenbearbeitung',
       handling: 'Manipulation & Lager',
-      automation: 'Finanzierung',
+      financing: 'Finanzierung',
       service: 'Service',
       usedMachines: 'Gebrauchtmaschinen',
       company: 'Unternehmen',
@@ -348,7 +348,7 @@ const translations: Record<Language, Translations> = {
       cutting: 'Cutting',
       edgebanding: 'Edgebanding',
       handling: 'Handling & Storage',
-      automation: 'Funding',
+      financing: 'Funding',
       service: 'Service',
       usedMachines: 'Used machines',
       company: 'Company',
@@ -518,7 +518,7 @@ const translations: Record<Language, Translations> = {
       cutting: 'Řezání',
       edgebanding: 'Olepování hran',
       handling: 'Manipulace a skladování',
-      automation: 'Financování',
+      financing: 'Financování',
       service: 'Servis',
       usedMachines: 'Použité stroje',
       company: 'Společnost',
@@ -688,7 +688,7 @@ const translations: Record<Language, Translations> = {
       cutting: 'Vágás',
       edgebanding: 'Élzárás',
       handling: 'Kezelés és raktározás',
-      automation: 'Finanszírozás',
+      financing: 'Finanszírozás',
       service: 'Szerviz',
       usedMachines: 'Hasznalt gepek',
       company: 'Vállalat',
@@ -858,7 +858,7 @@ const translations: Record<Language, Translations> = {
       cutting: 'Rezanie',
       edgebanding: 'Olepovanie hrán',
       handling: 'Manipulácia a skladovanie',
-      automation: 'Financovanie',
+      financing: 'Financovanie',
       service: 'Servis',
       usedMachines: 'Pouzite stroje',
       company: 'Spoločnosť',

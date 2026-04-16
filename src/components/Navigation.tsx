@@ -94,14 +94,40 @@ const Navigation = () => {
     lang === 'hu' ? 'Gyártók' :
     'Manufacturers';
 
+  const navAriaLabel =
+    lang === 'de' ? 'Hauptnavigation' :
+    lang === 'cz' ? 'Hlavní navigace' :
+    lang === 'sk' ? 'Hlavná navigácia' :
+    lang === 'hu' ? 'Főnavigáció' :
+    'Main navigation';
+  const manufacturersAriaLabel =
+    lang === 'de' ? 'Hersteller-Navigation' :
+    lang === 'cz' ? 'Navigace výrobců' :
+    lang === 'sk' ? 'Navigácia výrobcov' :
+    lang === 'hu' ? 'Gyártók menü' :
+    'Manufacturer navigation';
+  const homeAriaLabel =
+    lang === 'de' ? 'Asamer Technologie – Startseite' :
+    lang === 'cz' ? 'Asamer Technologie – Úvod' :
+    lang === 'sk' ? 'Asamer Technologie – Domov' :
+    lang === 'hu' ? 'Asamer Technologie – Kezdőlap' :
+    'Asamer Technologie – home';
+  const menuAriaLabel =
+    lang === 'de' ? 'Menü' :
+    lang === 'cz' ? 'Menu' :
+    lang === 'sk' ? 'Menu' :
+    lang === 'hu' ? 'Menü' :
+    'Menu';
+
   return (
     <nav
       className={`nav-readable fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBgClass} py-3 md:py-5`}
+      aria-label={navAriaLabel}
     >
       <div className="container-wide">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to={buildPath('/')} className="flex items-center gap-2 sm:gap-3 group">
+          <Link to={buildPath('/')} className="flex items-center gap-2 sm:gap-3 group" aria-label={homeAriaLabel}>
             <div className="relative">
               <svg
                 width="36"
@@ -140,7 +166,11 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {/* Manufacturer Links */}
-            <div className="flex items-center gap-6 mr-4 pr-4 border-r border-white/10">
+            <div
+              role="group"
+              aria-label={manufacturersAriaLabel}
+              className="flex items-center gap-6 mr-4 pr-4 border-r border-white/10"
+            >
               <Link
                 to={buildPath('/ott')}
                 onClick={() => handleManufacturerClick('ott', 'desktop')}
@@ -182,7 +212,7 @@ const Navigation = () => {
               to={buildPath('/financovani')}
               className={`text-sm transition-colors ${location.pathname === buildPath('/financovani') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
-              {t.nav.automation}
+              {t.nav.financing}
             </Link>
 
             <Link
@@ -232,34 +262,45 @@ const Navigation = () => {
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
                 className="flex items-center gap-1 text-sm text-white/60 hover:text-white transition-colors"
+                aria-haspopup="listbox"
+                aria-expanded={isLangMenuOpen}
+                aria-controls="nav-lang-menu"
               >
                 {languages.find((l) => l.code === lang)?.label}
                 <ChevronDown
                   className={`w-4 h-4 transition-transform ${
                     isLangMenuOpen ? 'rotate-180' : ''
                   }`}
+                  aria-hidden="true"
                 />
               </button>
 
               {isLangMenuOpen && (
-                <div className="absolute top-full right-0 mt-2 nav-dropdown-panel rounded-lg shadow-xl py-2 min-w-[80px] border border-white/5">
+                <ul
+                  id="nav-lang-menu"
+                  role="listbox"
+                  className="absolute top-full right-0 mt-2 nav-dropdown-panel rounded-lg shadow-xl py-2 min-w-[80px] border border-white/5"
+                >
                   {languages.map((l) => (
-                    <button
-                      key={l.code}
-                      onClick={() => {
-                        changeLanguage(l.code, 'desktop');
-                        setIsLangMenuOpen(false);
-                      }}
-                      className={`w-full px-4 py-2 text-sm text-left transition-colors hover:bg-white/5 ${
-                        lang === l.code
-                          ? 'text-primary font-medium'
-                          : 'text-white/70'
-                      }`}
-                    >
-                      {l.label}
-                    </button>
+                    <li key={l.code} role="none">
+                      <button
+                        role="option"
+                        aria-selected={lang === l.code}
+                        onClick={() => {
+                          changeLanguage(l.code, 'desktop');
+                          setIsLangMenuOpen(false);
+                        }}
+                        className={`w-full px-4 py-2 text-sm text-left transition-colors hover:bg-white/5 ${
+                          lang === l.code
+                            ? 'text-primary font-medium'
+                            : 'text-white/70'
+                        }`}
+                      >
+                        {l.label}
+                      </button>
+                    </li>
                   ))}
-                </div>
+                </ul>
               )}
             </div>
           </div>
@@ -268,19 +309,21 @@ const Navigation = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 text-white/60 hover:text-white transition-colors"
-            aria-label="Toggle menu"
+            aria-label={menuAriaLabel}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="nav-mobile-panel"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6" aria-hidden="true" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6" aria-hidden="true" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 nav-mobile-panel py-5">
+          <div id="nav-mobile-panel" className="lg:hidden absolute top-full left-0 right-0 nav-mobile-panel py-5">
             <div className="flex flex-col gap-4">
               {/* Manufacturer Links */}
               <div className="px-6 pb-4 border-b border-white/5">
@@ -329,7 +372,7 @@ const Navigation = () => {
                   to={buildPath('/financovani')}
                   className={`text-left ${location.pathname === buildPath('/financovani') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
-                  {t.nav.automation}
+                  {t.nav.financing}
                 </Link>
                 <Link
                   to={buildPath('/servis')}

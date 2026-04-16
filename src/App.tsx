@@ -44,6 +44,7 @@ import CookieConsent from './components/CookieConsent';
 import AnalyticsTracker from './components/AnalyticsTracker';
 import Ga4Loader from './components/Ga4Loader';
 import WebVitalsReporter from './components/WebVitalsReporter';
+import RouteSkeleton from './components/RouteSkeleton';
 import {
   buildLocalizedPath,
   DEFAULT_LANGUAGE,
@@ -343,7 +344,7 @@ const LanguageAppLayout = () => {
         <div className={`app ${isLoaded ? 'loaded' : ''}`}>
           <Navigation />
           <main>
-            <Suspense fallback={<div aria-hidden="true" style={{ minHeight: '60vh' }} />}>
+            <Suspense fallback={<RouteSkeleton />}>
               <Outlet />
             </Suspense>
           </main>

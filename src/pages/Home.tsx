@@ -249,14 +249,14 @@ const Home = () => {
               {t.hero.subheadline}
             </p>
 
-            <div className="hero-cta flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 mb-2 sm:mb-0">
+            <div className="hero-cta flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-6 mb-2 sm:mb-0">
               <a href={generalInquiryMail} className="btn-primary-dark" onClick={handleHeroContactClick}>
                 {t.hero.cta}
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a href={buildPath('/ott')} className="btn-outline-dark">
+              <a href={buildPath('/ott')} className="btn-ghost-dark text-sm sm:text-base">
                 {tr('Produkte entdecken', 'Discover products', 'Objevit produkty')}
-                <ArrowUpRight className="w-5 h-5" />
+                <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
 
