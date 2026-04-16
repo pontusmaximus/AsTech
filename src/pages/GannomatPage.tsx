@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Factory, Handshake, MapPin, GraduationCap } from 'lucide-react';
 import ProductCard from '../components/manufacturer/ProductCard';
 import gsap from 'gsap';
 import { useLanguage } from '../App';
@@ -7,6 +7,7 @@ import { translatePageText } from '../i18n/pageTextTranslations';
 import HeroSection from '../components/manufacturer/HeroSection';
 import CategorySidebar from '../components/manufacturer/CategorySidebar';
 import CategorySection from '../components/manufacturer/CategorySection';
+import ManufacturerIntro from '../components/manufacturer/ManufacturerIntro';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
@@ -65,18 +66,21 @@ const GannomatPage = () => {
         />
 
         {/* INTRO / DEFINITION-LEAD */}
-        <section className="container-wide pb-8">
-          <h1 className="text-2xl md:text-3xl font-display font-light text-white mb-3">
-            {tr('Gannomat Bohr-, Dübel- & Beschlägeautomaten', 'Gannomat Drilling, Dowel & Fitting Machines', 'Gannomat vrtací, kolkovací a kování stroje')}
-          </h1>
-          <p className="text-white/70 text-sm leading-relaxed max-w-3xl">
-            {tr(
-              'Gannomat (Österreich) fertigt Maschinen für Bohren, Dübeleintreiben, Beschlägeset­zen und Korpusmontage in der Möbelindustrie. Das Sortiment umfasst die Selekta-Kolkovačky, Index CNC-Reihe, Express-Beschlägeautomaten und Concept-Korpuspressen. Asamer ist autorisierter Gannomat-Händler für CZ, SK und HU mit Montage, Schulung und Ersatzteillager.',
-              'Gannomat (Austria) manufactures machines for drilling, dowel insertion, fitting placement and carcass assembly in the furniture industry. The range includes Selekta dowel inserters, Index CNC series, Express fitting machines and Concept carcass presses. Asamer is an authorized Gannomat dealer for CZ, SK and HU with installation, training and spare parts stock.',
-              'Gannomat (Rakousko) vyrábí stroje pro vrtání, kolkování, osazování kování a montáž korpusů v nábytkářském průmyslu. Sortiment zahrnuje kolkovačky Selekta, řadu Index CNC, automatické osazovače kování Express a korpusové lisy Concept. Asamer je autorizovaný prodejce Gannomat pro CZ, SK a HU s montáží, školením a skladem náhradních dílů.',
-            )}
-          </p>
-        </section>
+        <ManufacturerIntro
+          eyebrow={tr('Österreich · Bohren · Dübeln · Beschläge', 'Austria · Drilling · Doweling · Fittings', 'Rakousko · Vrtání · Kolkování · Kování')}
+          title={tr('Gannomat Bohr-, Dübel- & Beschlägeautomaten', 'Gannomat Drilling, Dowel & Fitting Machines', 'Gannomat vrtací, kolkovací a kování stroje')}
+          lead={tr(
+            'Gannomat (Österreich) fertigt Maschinen für Bohren, Dübeleintreiben, Beschlägeset­zen und Korpusmontage in der Möbelindustrie. Das Sortiment umfasst die Selekta-Kolkovačky, Index CNC-Reihe, Express-Beschlägeautomaten und Concept-Korpuspressen. Asamer ist autorisierter Gannomat-Händler für CZ, SK und HU mit Montage, Schulung und Ersatzteillager.',
+            'Gannomat (Austria) manufactures machines for drilling, dowel insertion, fitting placement and carcass assembly in the furniture industry. The range includes Selekta dowel inserters, Index CNC series, Express fitting machines and Concept carcass presses. Asamer is an authorized Gannomat dealer for CZ, SK and HU with installation, training and spare parts stock.',
+            'Gannomat (Rakousko) vyrábí stroje pro vrtání, kolkování, osazování kování a montáž korpusů v nábytkářském průmyslu. Sortiment zahrnuje kolkovačky Selekta, řadu Index CNC, automatické osazovače kování Express a korpusové lisy Concept. Asamer je autorizovaný prodejce Gannomat pro CZ, SK a HU s montáží, školením a skladem náhradních dílů.',
+          )}
+          facts={[
+            { icon: Factory, label: tr('Herkunft', 'Origin', 'Původ'), value: tr('Made in Austria', 'Made in Austria', 'Made in Austria'), iconClass: 'text-emerald-400' },
+            { icon: Handshake, label: tr('Asamer-Rolle', 'Asamer role', 'Role Asamer'), value: tr('Autorisierter Händler', 'Authorized dealer', 'Autorizovaný prodejce'), iconClass: 'text-emerald-400' },
+            { icon: MapPin, label: tr('Märkte', 'Markets', 'Trhy'), value: 'CZ · SK · HU', iconClass: 'text-emerald-400' },
+            { icon: GraduationCap, label: tr('Begleitung', 'Support', 'Podpora'), value: tr('Montage · Schulung · Teile', 'Install · Training · Parts', 'Montáž · Školení · Díly'), iconClass: 'text-emerald-400' },
+          ]}
+        />
 
         <div className="container-wide py-12">
           <div className="flex gap-10">

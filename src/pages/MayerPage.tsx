@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Factory, Handshake, MapPin, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/manufacturer/ProductCard';
 import gsap from 'gsap';
@@ -8,6 +8,7 @@ import { translatePageText } from '../i18n/pageTextTranslations';
 import HeroSection from '../components/manufacturer/HeroSection';
 import CategorySidebar from '../components/manufacturer/CategorySidebar';
 import CategorySection from '../components/manufacturer/CategorySection';
+import ManufacturerIntro from '../components/manufacturer/ManufacturerIntro';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
@@ -76,18 +77,21 @@ const MayerPage = () => {
         />
 
         {/* INTRO / DEFINITION-LEAD */}
-        <section className="container-wide pb-8">
-          <h1 className="text-2xl md:text-3xl font-display font-light text-white mb-3">
-            {tr('Mayer Plattenaufteilsägen', 'Mayer Panel Saws', 'Mayer formátovací pily')}
-          </h1>
-          <p className="text-white/70 text-sm leading-relaxed max-w-3xl">
-            {tr(
-              'Mayer (Felder Group) baut horizontale Druckbalken-Plattenaufteilsägen für die Holz-, Kunststoff- und Metallverarbeitung. Die Kappa Automatic-Reihe (80–140) ist auf Holz und Plattenwerkstoffe spezialisiert, die Advanced Line (100–250) schneidet Aluminium, NE-Metalle und Kunststoffe. Asamer ist autorisierter Mayer-Händler für CZ, SK und HU mit Service und Ersatzteillager vor Ort.',
-              'Mayer (Felder Group) builds horizontal pressure beam panel saws for wood, plastics and metal processing. The Kappa Automatic range (80–140) specializes in wood and panel materials, while the Advanced Line (100–250) cuts aluminium, non-ferrous metals and plastics. Asamer is an authorized Mayer dealer for CZ, SK and HU with on-site service and spare parts.',
-              'Mayer (Felder Group) vyrábí horizontální formátovací pily s tlačným trámem pro zpracování dřeva, plastů a kovů. Řada Kappa Automatic (80–140) se specializuje na dřevo a deskové materiály, Advanced Line (100–250) řeže hliník, neželezné kovy a plasty. Asamer je autorizovaný prodejce Mayer pro CZ, SK a HU s lokálním servisem a skladem náhradních dílů.',
-            )}
-          </p>
-        </section>
+        <ManufacturerIntro
+          eyebrow={tr('Österreich · Felder Group · Plattenaufteilsägen', 'Austria · Felder Group · Panel saws', 'Rakousko · Felder Group · Formátovací pily')}
+          title={tr('Mayer Plattenaufteilsägen', 'Mayer Panel Saws', 'Mayer formátovací pily')}
+          lead={tr(
+            'Mayer (Felder Group) baut horizontale Druckbalken-Plattenaufteilsägen für die Holz-, Kunststoff- und Metallverarbeitung. Die Kappa Automatic-Reihe (80–140) ist auf Holz und Plattenwerkstoffe spezialisiert, die Advanced Line (100–250) schneidet Aluminium, NE-Metalle und Kunststoffe. Asamer ist autorisierter Mayer-Händler für CZ, SK und HU mit Service und Ersatzteillager vor Ort.',
+            'Mayer (Felder Group) builds horizontal pressure beam panel saws for wood, plastics and metal processing. The Kappa Automatic range (80–140) specializes in wood and panel materials, while the Advanced Line (100–250) cuts aluminium, non-ferrous metals and plastics. Asamer is an authorized Mayer dealer for CZ, SK and HU with on-site service and spare parts.',
+            'Mayer (Felder Group) vyrábí horizontální formátovací pily s tlačným trámem pro zpracování dřeva, plastů a kovů. Řada Kappa Automatic (80–140) se specializuje na dřevo a deskové materiály, Advanced Line (100–250) řeže hliník, neželezné kovy a plasty. Asamer je autorizovaný prodejce Mayer pro CZ, SK a HU s lokálním servisem a skladem náhradních dílů.',
+          )}
+          facts={[
+            { icon: Factory, label: tr('Herkunft', 'Origin', 'Původ'), value: tr('Made in Austria', 'Made in Austria', 'Made in Austria') },
+            { icon: Handshake, label: tr('Asamer-Rolle', 'Asamer role', 'Role Asamer'), value: tr('Autorisierter Händler', 'Authorized dealer', 'Autorizovaný prodejce') },
+            { icon: MapPin, label: tr('Märkte', 'Markets', 'Trhy'), value: 'CZ · SK · HU' },
+            { icon: Wrench, label: tr('Vor Ort', 'On-site', 'Na místě'), value: tr('Service & Ersatzteile', 'Service & spare parts', 'Servis a náhradní díly') },
+          ]}
+        />
 
         <div className="container-wide py-12">
           <div className="flex gap-10">

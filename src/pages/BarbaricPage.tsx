@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Factory, Handshake, MapPin, Network } from 'lucide-react';
 import ProductCard from '../components/manufacturer/ProductCard';
 import gsap from 'gsap';
 import { useLanguage } from '../App';
@@ -7,6 +7,7 @@ import { translatePageText } from '../i18n/pageTextTranslations';
 import HeroSection from '../components/manufacturer/HeroSection';
 import CategorySidebar from '../components/manufacturer/CategorySidebar';
 import CategorySection from '../components/manufacturer/CategorySection';
+import ManufacturerIntro from '../components/manufacturer/ManufacturerIntro';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
@@ -68,18 +69,21 @@ const BarbaricPage = () => {
         />
 
         {/* INTRO / DEFINITION-LEAD */}
-        <section className="container-wide pb-8">
-          <h1 className="text-2xl md:text-3xl font-display font-light text-white mb-3">
-            {tr('BARBARIC Lagerautomatisierung & Plattenhandling', 'BARBARIC Warehouse Automation & Panel Handling', 'BARBARIC automatizace skladu a manipulace s deskami')}
-          </h1>
-          <p className="text-white/70 text-sm leading-relaxed max-w-3xl">
-            {tr(
-              'BARBARIC (Österreich) entwickelt Systeme für automatische Plattenlagerung, Beschickung und Rücktransport in der Holz- und Möbelindustrie. Vom CSF Flächenlager über LCV-Beschickungssysteme bis zu NST Nesting Pickern – BARBARIC automatisiert den Materialfluss zwischen Lager, Säge und CNC. Asamer ist autorisierter BARBARIC-Händler für CZ, SK und HU mit Montage, Service und ERP-Anbindung.',
-              'BARBARIC (Austria) develops systems for automatic panel storage, feeding and return transport in the wood and furniture industry. From CSF panel storage to LCV feeding systems and NST nesting pickers – BARBARIC automates material flow between warehouse, saw and CNC. Asamer is an authorized BARBARIC dealer for CZ, SK and HU with installation, service and ERP integration.',
-              'BARBARIC (Rakousko) vyvíjí systémy pro automatické skladování desek, podávání a zpětný transport v dřevařském a nábytkářském průmyslu. Od plošných skladů CSF přes podávací systémy LCV až po NST nesting pickery – BARBARIC automatizuje tok materiálu mezi skladem, pilou a CNC. Asamer je autorizovaný prodejce BARBARIC pro CZ, SK a HU s montáží, servisem a integrací ERP.',
-            )}
-          </p>
-        </section>
+        <ManufacturerIntro
+          eyebrow={tr('Österreich · Lagerautomatisierung & Plattenhandling', 'Austria · Warehouse automation & panel handling', 'Rakousko · Automatizace skladu a manipulace s deskami')}
+          title={tr('BARBARIC Lagerautomatisierung & Plattenhandling', 'BARBARIC Warehouse Automation & Panel Handling', 'BARBARIC automatizace skladu a manipulace s deskami')}
+          lead={tr(
+            'BARBARIC (Österreich) entwickelt Systeme für automatische Plattenlagerung, Beschickung und Rücktransport in der Holz- und Möbelindustrie. Vom CSF Flächenlager über LCV-Beschickungssysteme bis zu NST Nesting Pickern – BARBARIC automatisiert den Materialfluss zwischen Lager, Säge und CNC. Asamer ist autorisierter BARBARIC-Händler für CZ, SK und HU mit Montage, Service und ERP-Anbindung.',
+            'BARBARIC (Austria) develops systems for automatic panel storage, feeding and return transport in the wood and furniture industry. From CSF panel storage to LCV feeding systems and NST nesting pickers – BARBARIC automates material flow between warehouse, saw and CNC. Asamer is an authorized BARBARIC dealer for CZ, SK and HU with installation, service and ERP integration.',
+            'BARBARIC (Rakousko) vyvíjí systémy pro automatické skladování desek, podávání a zpětný transport v dřevařském a nábytkářském průmyslu. Od plošných skladů CSF přes podávací systémy LCV až po NST nesting pickery – BARBARIC automatizuje tok materiálu mezi skladem, pilou a CNC. Asamer je autorizovaný prodejce BARBARIC pro CZ, SK a HU s montáží, servisem a integrací ERP.',
+          )}
+          facts={[
+            { icon: Factory, label: tr('Herkunft', 'Origin', 'Původ'), value: tr('Made in Austria', 'Made in Austria', 'Made in Austria'), iconClass: 'text-orange-400' },
+            { icon: Handshake, label: tr('Asamer-Rolle', 'Asamer role', 'Role Asamer'), value: tr('Autorisierter Händler', 'Authorized dealer', 'Autorizovaný prodejce'), iconClass: 'text-orange-400' },
+            { icon: MapPin, label: tr('Märkte', 'Markets', 'Trhy'), value: 'CZ · SK · HU', iconClass: 'text-orange-400' },
+            { icon: Network, label: tr('Integration', 'Integration', 'Integrace'), value: tr('Montage · Service · ERP', 'Install · Service · ERP', 'Montáž · Servis · ERP'), iconClass: 'text-orange-400' },
+          ]}
+        />
 
         <div className="container-wide py-12">
           <div className="flex gap-10">

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ArrowUpRight, Flame, Droplets, Monitor, Wrench, Flag, Check, X, AlertTriangle, MapPin } from 'lucide-react';
+import { ArrowUpRight, Flame, Droplets, Monitor, Wrench, Flag, Check, X, AlertTriangle, MapPin, Factory, Handshake, Network } from 'lucide-react';
 import ProductCard from '../components/manufacturer/ProductCard';
 import gsap from 'gsap';
 import { useLanguage } from '../App';
@@ -7,6 +7,7 @@ import { translatePageText } from '../i18n/pageTextTranslations';
 import HeroSection from '../components/manufacturer/HeroSection';
 import CategorySidebar from '../components/manufacturer/CategorySidebar';
 import CategorySection from '../components/manufacturer/CategorySection';
+import ManufacturerIntro from '../components/manufacturer/ManufacturerIntro';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
@@ -72,18 +73,37 @@ const OttPage = () => {
         />
 
         {/* ====== 1b. INTRO / DEFINITION-LEAD ====== */}
-        <section className="container-wide pb-8">
-          <h1 className="text-2xl md:text-3xl font-display font-light text-white mb-3">
-            {tr('OTT Kantenanleimmaschinen', 'OTT Edgebanding Machines', 'OTT olepovačky hran')}
-          </h1>
-          <p className="text-white/70 text-sm leading-relaxed max-w-3xl">
-            {tr(
-              'OTT ist ein deutscher Hersteller von Kantenanleimmaschinen für die Holz- und Möbelindustrie. Das Sortiment reicht von kompakten Einstiegsmodellen wie der Pacific+ (18 m/min) bis zu industriellen Hochleistungsmaschinen wie der TopEdge mit PUR, EVA und bluEdge HyFuse Lasertechnologie. Asamer ist exklusiver OTT-Vertriebspartner für CZ, SK und HU mit lokalem Service und Softwareintegration über die offene OPC-UA-Schnittstelle.',
-              'OTT is a German manufacturer of edgebanding machines for the wood and furniture industry. The range spans from compact entry-level models like the Pacific+ (18 m/min) to industrial high-performance machines like the TopEdge with PUR, EVA and bluEdge HyFuse laser technology. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.',
-              'OTT je německý výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Sortiment sahá od kompaktních vstupních modelů jako Pacific+ (18 m/min) až po průmyslové vysokovýkonné stroje jako TopEdge s PUR, EVA a laserovou technologií bluEdge HyFuse. Asamer je exkluzivní distribuční partner OTT pro CZ, SK a HU s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.',
-            )}
-          </p>
-        </section>
+        <ManufacturerIntro
+          eyebrow={tr('Deutschland · Kantenanleimtechnologie', 'Germany · Edgebanding technology', 'Německo · Olepování hran')}
+          title={tr('OTT Kantenanleimmaschinen', 'OTT Edgebanding Machines', 'OTT olepovačky hran')}
+          lead={tr(
+            'OTT ist ein deutscher Hersteller von Kantenanleimmaschinen für die Holz- und Möbelindustrie. Das Sortiment reicht von kompakten Einstiegsmodellen wie der Pacific+ (18 m/min) bis zu industriellen Hochleistungsmaschinen wie der TopEdge mit PUR, EVA und bluEdge HyFuse Lasertechnologie. Asamer ist exklusiver OTT-Vertriebspartner für CZ, SK und HU mit lokalem Service und Softwareintegration über die offene OPC-UA-Schnittstelle.',
+            'OTT is a German manufacturer of edgebanding machines for the wood and furniture industry. The range spans from compact entry-level models like the Pacific+ (18 m/min) to industrial high-performance machines like the TopEdge with PUR, EVA and bluEdge HyFuse laser technology. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.',
+            'OTT je německý výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Sortiment sahá od kompaktních vstupních modelů jako Pacific+ (18 m/min) až po průmyslové vysokovýkonné stroje jako TopEdge s PUR, EVA a laserovou technologií bluEdge HyFuse. Asamer je exkluzivní distribuční partner OTT pro CZ, SK a HU s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.',
+          )}
+          facts={[
+            {
+              icon: Factory,
+              label: tr('Herkunft', 'Origin', 'Původ'),
+              value: tr('Made in Germany', 'Made in Germany', 'Made in Germany'),
+            },
+            {
+              icon: Handshake,
+              label: tr('Asamer-Rolle', 'Asamer role', 'Role Asamer'),
+              value: tr('Exklusiver Händler', 'Exclusive dealer', 'Exkluzivní prodejce'),
+            },
+            {
+              icon: MapPin,
+              label: tr('Märkte', 'Markets', 'Trhy'),
+              value: 'CZ · SK · HU',
+            },
+            {
+              icon: Network,
+              label: tr('Schnittstelle', 'Interface', 'Rozhraní'),
+              value: 'OPC-UA · ERP / MES',
+            },
+          ]}
+        />
 
         {/* ====== 2. SIDEBAR + PRODUCT GRID ====== */}
         <div className="container-wide py-12">
