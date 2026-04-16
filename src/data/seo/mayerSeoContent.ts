@@ -872,11 +872,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Für welche Industrien eignet sich die advanced line 200?',
           en: 'Which industries is the advanced line 200 suitable for?',
           cz: 'Pro jaká odvětví je advanced line 200 vhodná?',
+          hu: 'Mely iparágak számára alkalmas az advanced line 200?',
         },
         answer: {
           de: 'Die advanced line 200 eignet sich für den Transportbau, Fahrzeugbau, Containerbau, Fassadenbau und alle Industrien, die großformatige Aluminium- oder Kunststoffplatten verarbeiten.',
           en: 'The advanced line 200 is suitable for transport, vehicle and container construction, facade building and all industries processing large-format aluminium or plastic panels.',
           cz: 'advanced line 200 je vhodná pro dopravní, automobilový a kontejnerový průmysl, stavbu fasád a všechna odvětví zpracovávající velkoformátové hliníkové nebo plastové desky.',
+          hu: 'Az advanced line 200 alkalmas szállítástechnikai, jármű- és konténergyártási, homlokzatépítési alkalmazásokra és minden olyan iparágban, amely nagy formátumú alumínium- vagy műanyag lapokat dolgoz fel.',
         },
       },
     ],
@@ -890,6 +892,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: `Die Mayer advanced line 250 ist die stärkste Plattenaufteilsäge ihrer Klasse und setzt mit einem 55/75 kW Motor, einem 860 mm Sägeblattdurchmesser und 270 mm Projektion neue Maßstäbe in der industriellen Plattenzuschnitt-Technologie. Diese Plattensäge wurde für kompromisslose Industrieproduktion konzipiert, dort wo maximale Schneidleistung und höchste Schnittqualität gleichermaßen zählen. Die Schnitthöhe von 250 mm und die konfigurierbare Schnittlänge von 3.200 bis 4.200 mm ermöglichen die Verarbeitung massiver Aluminium-, NE-Metall- und Kunststoff-Werkstücke, die andere Maschinen an ihre Grenzen bringen. Die Vorschubgeschwindigkeit von 0,2 bis 60 m/min ist auf die Anforderungen der Schwerzerspanung optimiert: langsame, vibrationskontrollierte Schnitte in dickem Aluminium und schnellere Durchgänge in Kunststoffen. Das Dual Servo Drive mit separaten Messsystemen und programmierbaren Korrekturkurven garantiert selbst bei maximaler Beanspruchung und nach tausenden Schnitten eine herausragende Schnittgenauigkeit. Der schwere Maschinenkörper absorbiert die enormen Schnittkräfte und verhindert jegliche Resonanzschwingungen. Die advanced line 250 ist die Maschine der Wahl für Aluminium-Hütten, Kunststoff-Verarbeitungszentren und anspruchsvolle Industrieunternehmen. Asamer bietet als autorisierter Mayer-Händler für Tschechien, die Slowakei und Ungarn umfassende Beratung, Projektplanung und Service für die advanced line 250.`,
       en: `The Mayer advanced line 250 is the strongest panel dividing saw in its class, setting new benchmarks in industrial panel cutting technology with a 55/75 kW motor, 860 mm saw blade diameter and 270 mm projection. This panel saw was designed for uncompromising industrial production, where maximum cutting performance and highest cut quality matter equally. The 250 mm cutting height and configurable cutting length from 3,200 to 4,200 mm enable the processing of massive aluminium, non-ferrous metal and plastic workpieces that push other machines to their limits. The feed speed from 0.2 to 60 m/min is optimised for heavy-duty cutting: slow, vibration-controlled cuts in thick aluminium and faster passes in plastics. The Dual Servo Drive with separate measuring systems and programmable correction curves guarantees outstanding cutting accuracy even under maximum stress and after thousands of cuts. The heavy machine body absorbs the enormous cutting forces and prevents any resonance vibrations. The advanced line 250 is the machine of choice for aluminium smelters, plastic processing centres and demanding industrial companies. Asamer, as authorised Mayer dealer for the Czech Republic, Slovakia and Hungary, offers comprehensive consultation, project planning and service for the advanced line 250.`,
       cz: `Mayer advanced line 250 je nejsilnější formátovací pila ve své třídě a stanovuje nová měřítka v technologii průmyslového řezání desek s motorem 55/75 kW, průměrem pilového kotouče 860 mm a projekcí 270 mm. Tato formátovací pila byla navržena pro nekompromisní průmyslovou výrobu, kde stejně záleží na maximálním řezném výkonu i nejvyšší kvalitě řezu. Výška řezu 250 mm a konfigurovatelná délka řezu od 3 200 do 4 200 mm umožňují zpracování masivních obrobků z hliníku, neželezných kovů a plastů, které tlačí jiné stroje na hranici jejich možností. Rychlost posuvu od 0,2 do 60 m/min je optimalizována pro těžké obrábění: pomalé, vibrací kontrolované řezy v tlustém hliníku a rychlejší průchody v plastech. Dual Servo Drive se separátními měřicími systémy a programovatelnými korekčními křivkami zaručuje vynikající přesnost řezu i při maximálním zatížení a po tisících řezech. Těžký strojní rám pohlcuje enormní řezné síly a zabraňuje jakýmkoli rezonančním vibracím. advanced line 250 je stroj první volby pro hliníkárny, centra zpracování plastů a náročné průmyslové podniky. Asamer jako autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko nabízí komplexní poradenství, projektové plánování a servis pro advanced line 250.`,
+      hu: `A Mayer advanced line 250 a kategória legerősebb lapfűrésze, és új mércét állít fel az ipari lapvágási technológiában 55/75 kW motorral, 860 mm-es fűrészlap-átmérővel és 270 mm-es kiállással. Ezt a lapfűrészt kompromisszumok nélküli ipari gyártásra tervezték, ahol egyaránt számít a maximális vágási teljesítmény és a legmagasabb vágásminőség. A 250 mm-es vágásmagasság és a 3 200 és 4 200 mm között konfigurálható vágóhossz lehetővé teszi olyan masszív alumínium-, nemvasfém- és műanyag munkadarabok megmunkálását, amelyek más gépeket a teljesítőképesség határára kényszerítenek. A 0,2-től 60 m/min-ig terjedő előtolási sebesség optimalizált nehéz forgácsolásra: lassú, rezgésvezérelt vágások vastag alumíniumban és gyorsabb átmenetek műanyagokban. A külön mérőrendszerekkel és programozható korrekciós görbékkel ellátott Dual Servo Drive maximális terhelés mellett és több ezer vágás után is kiváló vágási pontosságot garantál. A nehéz gépkeret elnyeli az óriási vágóerőket és megakadályozza a rezonancia-rezgéseket. Az advanced line 250 az első választás alumíniumművek, műanyag-feldolgozó központok és igényes ipari vállalkozások számára. Az Asamer mint hivatalos Mayer viszonteladó Csehország, Szlovákia és Magyarország számára teljes körű tanácsadást, projekttervezést és szervizt kínál az advanced line 250 modellhez.`,
     },
     applicationSections: [
       {
@@ -897,11 +900,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Schwerzerspanung von Aluminium',
           en: 'Heavy-duty aluminium cutting',
           cz: 'Těžké obrábění hliníku',
+          hu: 'Alumínium nehéz forgácsolása',
         },
         body: {
           de: 'Die advanced line 250 wurde für die Schwerzerspanung dicker Aluminiumplatten und -blöcke konstruiert. Der 55/75 kW Motor und das 860 mm Sägeblatt bewältigen Materialstärken bis 250 mm und liefern dabei gratfreie Schnitte höchster Qualität. Dies macht sie zur ersten Wahl für Aluminium-Hütten und Lagerhalter.',
           en: 'The advanced line 250 was built for heavy-duty cutting of thick aluminium plates and blocks. The 55/75 kW motor and 860 mm saw blade handle material thicknesses up to 250 mm while delivering burr-free cuts of the highest quality. This makes it the first choice for aluminium smelters and stockholders.',
           cz: 'advanced line 250 byla zkonstruována pro těžké obrábění tlustých hliníkových desek a bloků. Motor 55/75 kW a pilový kotouč 860 mm zvládají tloušťky materiálu až 250 mm a přitom dodávají řezy bez otřepů nejvyšší kvality. To z ní činí první volbu pro hliníkárny a velkoobchody.',
+          hu: 'Az advanced line 250 vastag alumíniumlemezek és -tömbök nehéz forgácsolására készült. Az 55/75 kW-os motor és a 860 mm-es fűrészlap 250 mm-ig terjedő anyagvastagságokat kezel, miközben a legmagasabb minőségű, sorjamentes vágásokat biztosít. Ez teszi az alumíniumművek és nagykereskedések első választásává.',
         },
       },
       {
@@ -909,11 +914,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Verarbeitung massiver Kunststoffblöcke',
           en: 'Processing solid plastic blocks',
           cz: 'Zpracování masivních plastových bloků',
+          hu: 'Masszív műanyagtömbök feldolgozása',
         },
         body: {
           de: 'Massive Kunststoffblöcke aus Polyethylen, Polyamid, PTFE und anderen technischen Kunststoffen erfordern eine Maschine mit außergewöhnlicher Leistung. Die advanced line 250 bietet mit 250 mm Schnitthöhe und der enormen Motorleistung die nötige Kapazität für diese anspruchsvollen Materialien.',
           en: 'Solid plastic blocks of polyethylene, polyamide, PTFE and other engineering plastics require a machine with exceptional power. The advanced line 250, with 250 mm cutting height and enormous motor power, provides the necessary capacity for these demanding materials.',
           cz: 'Masivní plastové bloky z polyethylenu, polyamidu, PTFE a dalších technických plastů vyžadují stroj s výjimečným výkonem. advanced line 250 s výškou řezu 250 mm a enormním výkonem motoru poskytuje potřebnou kapacitu pro tyto náročné materiály.',
+          hu: 'A polietilénből, poliamidból, PTFE-ből és más műszaki műanyagokból készült masszív műanyagtömbök kivételes teljesítményű gépet igényelnek. Az advanced line 250 a 250 mm-es vágásmagasságával és az óriási motorteljesítményével biztosítja a szükséges kapacitást ezekhez az igényes anyagokhoz.',
         },
       },
     ],
@@ -921,6 +928,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Die advanced line 250 ist die Investition für Betriebe, die die stärkste Plattensäge ihrer Klasse benötigen. Mit 55/75 kW Motor und 250 mm Schnitthöhe gibt es keine Limits. Sie eignet sich für schwere Industrieproduktion in Aluminium-Hütten, Kunststoff-Verarbeitungszentren und Großbetrieben. Asamer berät Sie zu Ihrer Konfiguration.',
       en: 'The advanced line 250 is the investment for operations that need the strongest panel saw in its class. With 55/75 kW motor and 250 mm cutting height, there are no limits. It suits heavy industrial production in aluminium smelters, plastic processing centres and large-scale operations. Asamer advises you on your configuration.',
       cz: 'advanced line 250 je investice pro provozy, které potřebují nejsilnější formátovací pilu ve své třídě. S motorem 55/75 kW a výškou řezu 250 mm neexistují limity. Hodí se pro těžkou průmyslovou výrobu v hliníkárnách, centrech zpracování plastů a velkoprovozech. Asamer vám poradí s konfigurací.',
+      hu: 'Az advanced line 250 olyan üzemek beruházása, amelyeknek a kategória legerősebb lapfűrészére van szükségük. 55/75 kW-os motorral és 250 mm-es vágásmagassággal nincsenek határok. Alkalmas nehéz ipari gyártásra alumíniumművekben, műanyag-feldolgozó központokban és nagyüzemekben. Az Asamer tanácsot ad a konfigurációhoz.',
     },
     faq: [
       {
@@ -928,11 +936,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Warum ist die advanced line 250 die stärkste in ihrer Klasse?',
           en: 'Why is the advanced line 250 the strongest in its class?',
           cz: 'Proč je advanced line 250 nejsilnější ve své třídě?',
+          hu: 'Miért az advanced line 250 a legerősebb a kategóriájában?',
         },
         answer: {
           de: 'Die advanced line 250 kombiniert einen 55/75 kW Motor mit einem 860 mm Sägeblatt und 270 mm Projektion, was sie zur leistungsstärksten Plattenaufteilsäge in ihrer Klasse macht.',
           en: 'The advanced line 250 combines a 55/75 kW motor with an 860 mm saw blade and 270 mm projection, making it the most powerful panel dividing saw in its class.',
           cz: 'advanced line 250 kombinuje motor 55/75 kW s pilovým kotoučem 860 mm a projekcí 270 mm, což z ní činí nejvýkonnější formátovací pilu ve své třídě.',
+          hu: 'Az advanced line 250 egy 55/75 kW-os motort kombinál egy 860 mm-es fűrészlappal és 270 mm-es kiállással, ami a kategória legteljesítményesebb lapfűrészévé teszi.',
         },
       },
       {
@@ -940,11 +950,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Welche Schnitthöhe bietet die advanced line 250?',
           en: 'What cutting height does the advanced line 250 offer?',
           cz: 'Jakou výšku řezu nabízí advanced line 250?',
+          hu: 'Milyen vágásmagasságot kínál az advanced line 250?',
         },
         answer: {
           de: 'Die advanced line 250 bietet eine Schnitthöhe von 250 mm, die höchste in der Advanced-Line-Serie und ausgelegt für massive Aluminium- und Kunststoffblöcke.',
           en: 'The advanced line 250 offers a 250 mm cutting height, the highest in the Advanced Line series and designed for massive aluminium and plastic blocks.',
           cz: 'advanced line 250 nabízí výšku řezu 250 mm, nejvyšší v řadě Advanced Line a navrženou pro masivní hliníkové a plastové bloky.',
+          hu: 'Az advanced line 250 250 mm-es vágásmagasságot kínál, a legnagyobbat az Advanced Line sorozatban, amelyet masszív alumínium- és műanyagtömbökhöz terveztek.',
         },
       },
       {
@@ -952,11 +964,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Kann die advanced line 250 auch Kunststoffe schneiden?',
           en: 'Can the advanced line 250 also cut plastics?',
           cz: 'Může advanced line 250 řezat i plasty?',
+          hu: 'Tud az advanced line 250 műanyagokat is vágni?',
         },
         answer: {
           de: 'Ja, die advanced line 250 verarbeitet neben Aluminium und NE-Metallen auch alle gängigen technischen Kunststoffe wie PE, PA, PTFE, PEEK und glasfaserverstärkte Composites.',
           en: 'Yes, in addition to aluminium and non-ferrous metals, the advanced line 250 also processes all common engineering plastics such as PE, PA, PTFE, PEEK and glass-fibre reinforced composites.',
           cz: 'Ano, advanced line 250 kromě hliníku a neželezných kovů zpracovává i všechny běžné technické plasty jako PE, PA, PTFE, PEEK a sklolamináty.',
+          hu: 'Igen, az advanced line 250 az alumínium és a nemvasfémek mellett minden szokásos műszaki műanyagot is feldolgoz, mint a PE, PA, PTFE, PEEK és az üvegszállal erősített kompozitok.',
         },
       },
     ],
@@ -970,6 +984,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: `Die Mayer Winkelanlagen sind maßgeschneiderte industrielle Schneidlösungen, die automatisierte Längs- und Querschnitte in einem integrierten System vereinen. Diese Winkelschneid-Anlagen werden individuell nach den spezifischen Anforderungen des Kunden konfiguriert und bieten die höchste Stufe der Automatisierung in der Plattenzuschnitt-Technologie. Die Systeme verarbeiten Aluminium, NE-Metalle, Kunststoffe und Holzwerkstoffe und sind für die Integration in bestehende Produktionslinien und ERP-Systeme ausgelegt. Der Materialfluss ist vollständig automatisiert: Platten werden zugeführt, in Längsrichtung geschnitten, automatisch um 90° gedreht und anschließend quergeschnitten. Dies eliminiert manuelle Handhabung, reduziert den Personalbedarf auf ein Minimum und maximiert den Durchsatz. Die Konfiguration umfasst Schnittlänge, Schnitthöhe, Motorleistung, Vorschubsystem, Absaugung und Materialhandling-Komponenten, die exakt auf die zu verarbeitenden Materialien, Formate und Produktionsvolumen abgestimmt werden. Mayer Winkelanlagen finden Einsatz in der Möbelindustrie, im Fassadenbau, in der Aluminium- und Kunststoffverarbeitung sowie in der Automobilzulieferung. Die Investition in eine Winkelanlage amortisiert sich durch drastisch gesteigerte Produktivität, reduzierten Materialeinsatz und niedrigere Personalkosten. Asamer ist als autorisierter Mayer-Händler für Tschechien, die Slowakei und Ungarn Ihr Partner für die Planung, Konfiguration und Realisierung Ihrer individuellen Winkelanlage.`,
       en: `The Mayer angle cutting systems are custom-built industrial cutting solutions that combine automated longitudinal and cross cuts in a single integrated system. These angle cutting installations are individually configured to the customer's specific requirements and represent the highest level of automation in panel cutting technology. The systems process aluminium, non-ferrous metals, plastics and wood-based materials and are designed for integration into existing production lines and ERP systems. The material flow is fully automated: panels are fed in, cut longitudinally, automatically rotated by 90 degrees and then cross-cut. This eliminates manual handling, reduces staffing requirements to a minimum and maximises throughput. The configuration encompasses cutting length, cutting height, motor power, feed system, extraction and material handling components, precisely matched to the materials, formats and production volumes to be processed. Mayer angle cutting systems are used in the furniture industry, facade construction, aluminium and plastics processing, and automotive supply. The investment in an angle cutting system pays off through dramatically increased productivity, reduced material usage and lower staffing costs. Asamer, as the authorised Mayer dealer for the Czech Republic, Slovakia and Hungary, is your partner for planning, configuration and realisation of your individual angle cutting system.`,
       cz: `Mayer Winkelanlagen (úhlové řezací systémy) jsou zakázková průmyslová řezací řešení, která kombinují automatizované podélné a příčné řezy v jednom integrovaném systému. Tyto úhlové řezací instalace jsou individuálně konfigurovány podle specifických požadavků zákazníka a představují nejvyšší stupeň automatizace v technologii řezání desek. Systémy zpracovávají hliník, neželezné kovy, plasty a dřevěné materiály a jsou navrženy pro integraci do stávajících výrobních linek a ERP systémů. Materiálový tok je plně automatizovaný: desky jsou přiváděny, podélně řezány, automaticky otočeny o 90° a poté příčně řezány. To eliminuje manuální manipulaci, snižuje potřebu personálu na minimum a maximalizuje průchodnost. Konfigurace zahrnuje délku řezu, výšku řezu, výkon motoru, posuvový systém, odsávání a komponenty pro manipulaci s materiálem, přesně přizpůsobené zpracovávaným materiálům, formátům a objemům výroby. Úhlové řezací systémy Mayer nacházejí uplatnění v nábytkářském průmyslu, stavbě fasád, zpracování hliníku a plastů a automobilovém průmyslu. Investice do úhlového řezacího systému se vrátí díky dramaticky zvýšené produktivitě, sníženému materiálovému vstupu a nižším personálním nákladům. Asamer jako autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko je váš partner pro plánování, konfiguraci a realizaci vašeho individuálního úhlového řezacího systému.`,
+      hu: `A Mayer Winkelanlagen (szögvágó rendszerek) testreszabott ipari vágási megoldások, amelyek egyetlen integrált rendszerben egyesítik az automatizált hossz- és keresztvágásokat. Ezek a szögvágó berendezések az ügyfél egyedi igényei szerint kerülnek konfigurálásra, és a lapvágási technológia legmagasabb szintű automatizációját képviselik. A rendszerek alumíniumot, nemvasfémeket, műanyagokat és faalapú anyagokat dolgoznak fel, és meglévő gyártósorokba és ERP-rendszerekbe integrálhatók. Az anyagáramlás teljesen automatizált: a lapok bevitelre kerülnek, hosszirányban vágódnak, automatikusan 90°-kal elfordulnak, majd keresztvágásra kerülnek. Ez kiküszöböli a kézi mozgatást, minimálisra csökkenti a személyzeti igényt és maximalizálja a teljesítményt. A konfiguráció magában foglalja a vágóhosszt, vágásmagasságot, motorteljesítményt, előtolórendszert, elszívást és anyagmozgató komponenseket, pontosan a feldolgozandó anyagokhoz, formátumokhoz és gyártási volumenekhez igazítva. A Mayer szögvágó rendszereket a bútoriparban, homlokzatépítésben, alumínium- és műanyag-feldolgozásban és autóipari beszállításban alkalmazzák. A szögvágó rendszerbe történő beruházás a jelentősen megnövekedett termelékenység, a csökkentett anyagfelhasználás és az alacsonyabb személyzeti költségek révén térül meg. Az Asamer mint hivatalos Mayer viszonteladó Csehország, Szlovákia és Magyarország számára az Ön partnere egyedi szögvágó rendszerének tervezésében, konfigurálásában és megvalósításában.`,
     },
     applicationSections: [
       {
@@ -977,11 +992,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Vollautomatisierte Produktionslinien',
           en: 'Fully automated production lines',
           cz: 'Plně automatizované výrobní linky',
+          hu: 'Teljesen automatizált gyártósorok',
         },
         body: {
           de: 'Mayer Winkelanlagen sind das Herzstück vollautomatisierter Produktionslinien. Der durchgängige Materialfluss von der Plattenzufuhr über Längs- und Querschnitt bis zur Ausgabe der fertigen Zuschnitte reduziert den Bedieneraufwand auf ein Minimum und maximiert den täglichen Output.',
           en: 'Mayer angle cutting systems are the core of fully automated production lines. The continuous material flow from panel feeding through longitudinal and cross cutting to output of finished cut pieces reduces operator effort to a minimum and maximises daily output.',
           cz: 'Úhlové řezací systémy Mayer jsou srdcem plně automatizovaných výrobních linek. Nepřetržitý materiálový tok od přívodu desek přes podélné a příčné řezání po výstup hotových nařezaných dílů snižuje obsluhu na minimum a maximalizuje denní výstup.',
+          hu: 'A Mayer szögvágó rendszerek a teljesen automatizált gyártósorok szíve. A folyamatos anyagáramlás a lapadagolástól a hossz- és keresztvágáson át a kész darabok kiadásáig minimálisra csökkenti a kezelői munkát és maximalizálja a napi kimenetet.',
         },
       },
       {
@@ -989,11 +1006,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'ERP-Integration und Industrie 4.0',
           en: 'ERP integration and Industry 4.0',
           cz: 'Integrace do ERP a Průmysl 4.0',
+          hu: 'ERP-integráció és Ipar 4.0',
         },
         body: {
           de: 'Die Winkelanlagen lassen sich nahtlos in bestehende ERP-Systeme integrieren, sodass Kundenaufträge digital empfangen, automatisch in optimierte Schnittmuster umgesetzt und ohne manuellen Eingriff produziert werden. Dies ist der Weg zu Industrie 4.0 im Plattenzuschnitt.',
           en: 'The angle cutting systems can be seamlessly integrated into existing ERP systems, so customer orders are received digitally, automatically converted into optimised cutting patterns and produced without manual intervention. This is the path to Industry 4.0 in panel cutting.',
           cz: 'Úhlové řezací systémy lze bezešvě integrovat do stávajících ERP systémů, takže objednávky zákazníků jsou přijímány digitálně, automaticky převáděny na optimalizované řezné plány a vyráběny bez manuálního zásahu. To je cesta k Průmyslu 4.0 v řezání desek.',
+          hu: 'A szögvágó rendszerek zökkenőmentesen integrálhatók a meglévő ERP-rendszerekbe, így az ügyfélmegrendeléseket digitálisan fogadják, automatikusan optimalizált vágási mintákká alakítják és kézi beavatkozás nélkül gyártják. Ez az Ipar 4.0 útja a lapvágásban.',
         },
       },
     ],
@@ -1001,6 +1020,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Mayer Winkelanlagen sind die richtige Investition, wenn Sie Ihre Plattenproduktion vollständig automatisieren und Längs- sowie Querschnitte in einem durchgängigen System vereinen möchten. Jede Anlage wird individuell konfiguriert. Kontaktieren Sie Asamer für eine unverbindliche Projektberatung.',
       en: 'Mayer angle cutting systems are the right investment when you want to fully automate your panel production and combine longitudinal and cross cuts in a continuous system. Each installation is individually configured. Contact Asamer for a non-binding project consultation.',
       cz: 'Úhlové řezací systémy Mayer jsou správná investice, pokud chcete plně automatizovat vaši výrobu desek a spojit podélné i příčné řezy v souvislém systému. Každá instalace je individuálně konfigurována. Kontaktujte Asamer pro nezávaznou projektovou konzultaci.',
+      hu: 'A Mayer szögvágó rendszerek a megfelelő beruházás, ha teljesen automatizálni szeretné a lapgyártását és egy folyamatos rendszerben egyesíteni a hossz- és keresztvágásokat. Minden berendezés egyedileg konfigurálható. Lépjen kapcsolatba az Asamerrel egy kötelezettségmentes projektkonzultációért.',
     },
     faq: [
       {
@@ -1008,11 +1028,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Was sind Mayer Winkelanlagen?',
           en: 'What are Mayer angle cutting systems?',
           cz: 'Co jsou úhlové řezací systémy Mayer?',
+          hu: 'Mik azok a Mayer Winkelanlagen (szögvágó rendszerek)?',
         },
         answer: {
           de: 'Mayer Winkelanlagen sind maßgeschneiderte industrielle Schneidanlagen, die automatisierte Längs- und Querschnitte in einem integrierten System vereinen. Sie werden individuell nach Kundenanforderungen konfiguriert.',
           en: 'Mayer angle cutting systems are custom-built industrial cutting installations that combine automated longitudinal and cross cuts in a single integrated system. They are individually configured to customer requirements.',
           cz: 'Úhlové řezací systémy Mayer jsou zakázkové průmyslové řezací instalace, které kombinují automatizované podélné a příčné řezy v jednom integrovaném systému. Jsou individuálně konfigurovány podle požadavků zákazníka.',
+          hu: 'A Mayer Winkelanlagen testreszabott ipari vágóberendezések, amelyek egyetlen integrált rendszerben egyesítik az automatizált hossz- és keresztvágásokat. Egyedileg kerülnek konfigurálásra az ügyfél igényei szerint.',
         },
       },
       {
@@ -1020,11 +1042,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Welche Materialien verarbeiten Mayer Winkelanlagen?',
           en: 'What materials do Mayer angle cutting systems process?',
           cz: 'Jaké materiály zpracovávají úhlové řezací systémy Mayer?',
+          hu: 'Milyen anyagokat dolgoznak fel a Mayer Winkelanlagen rendszerek?',
         },
         answer: {
           de: 'Mayer Winkelanlagen verarbeiten Aluminium, NE-Metalle, Kunststoffe und Holzwerkstoffe, je nach individueller Konfiguration.',
           en: 'Mayer angle cutting systems process aluminium, non-ferrous metals, plastics and wood-based materials, depending on the individual configuration.',
           cz: 'Úhlové řezací systémy Mayer zpracovávají hliník, neželezné kovy, plasty a dřevěné materiály, podle individuální konfigurace.',
+          hu: 'A Mayer Winkelanlagen rendszerek alumíniumot, nemvasfémeket, műanyagokat és faalapú anyagokat dolgoznak fel, az egyedi konfigurációtól függően.',
         },
       },
       {
@@ -1032,11 +1056,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Lassen sich Winkelanlagen in ERP-Systeme integrieren?',
           en: 'Can angle cutting systems be integrated into ERP systems?',
           cz: 'Lze úhlové řezací systémy integrovat do ERP systémů?',
+          hu: 'Integrálhatók-e a szögvágó rendszerek ERP-rendszerekbe?',
         },
         answer: {
           de: 'Ja, Mayer Winkelanlagen sind für die nahtlose Integration in bestehende ERP- und Produktionssysteme konzipiert und unterstützen die digitale Auftragsverarbeitung und automatische Schnittoptimierung.',
           en: 'Yes, Mayer angle cutting systems are designed for seamless integration into existing ERP and production systems and support digital order processing and automatic cut optimisation.',
           cz: 'Ano, úhlové řezací systémy Mayer jsou navrženy pro bezešvou integraci do stávajících ERP a výrobních systémů a podporují digitální zpracování zakázek a automatickou optimalizaci řezů.',
+          hu: 'Igen, a Mayer Winkelanlagen rendszereket a meglévő ERP- és gyártási rendszerekbe történő zökkenőmentes integrációra tervezték, és támogatják a digitális megrendelésfeldolgozást és az automatikus vágásoptimalizálást.',
         },
       },
       {
@@ -1044,11 +1070,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Wie kann ich eine Winkelanlage bei Asamer anfragen?',
           en: 'How can I enquire about an angle cutting system at Asamer?',
           cz: 'Jak mohu poptávat úhlový řezací systém u Asamer?',
+          hu: 'Hogyan kérhetek ajánlatot szögvágó rendszerre az Asamernél?',
         },
         answer: {
           de: 'Kontaktieren Sie Asamer für eine unverbindliche Projektberatung. Wir analysieren Ihren Bedarf und konfigurieren eine individuell auf Ihre Produktionsanforderungen zugeschnittene Winkelanlage.',
           en: 'Contact Asamer for a non-binding project consultation. We analyse your needs and configure an angle cutting system individually tailored to your production requirements.',
           cz: 'Kontaktujte Asamer pro nezávaznou projektovou konzultaci. Analyzujeme vaše potřeby a nakonfigurujeme úhlový řezací systém individuálně přizpůsobený vašim výrobním požadavkům.',
+          hu: 'Lépjen kapcsolatba az Asamerrel egy kötelezettségmentes projektkonzultációért. Elemezzük az igényeit és egy egyedileg az Ön gyártási követelményeire szabott szögvágó rendszert konfigurálunk.',
         },
       },
     ],
@@ -1068,6 +1096,7 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
       de: `Die Mayer kappa-Serie umfasst horizontale Plattenaufteilsägen, die speziell für den Zuschnitt von Holzwerkstoffen entwickelt wurden. Von der kompakten kappa automatic 80 als Einstiegsmodell bis zum Flaggschiff kappa automatic 140 mit 4.300 mm Schnittlänge und industriellem Leistungsniveau bietet die Serie eine Lösung für jede Betriebsgröße und jeden Durchsatzanspruch. Alle kappa-Maschinen zeichnen sich durch eine schwere Stahlkonstruktion aus, die vibrationsarmes Arbeiten und höchste Wiederholgenauigkeit gewährleistet. Der automatische Druckbalken und der Materialvorschub aus Stahl ermöglichen die Ein-Mann-Bedienung und senken die Personalkosten. Die stufenlos regelbare Vorschubgeschwindigkeit von 5 bis 100 m/min gehört zu den höchsten am Markt und sichert schnelle Zykluszeiten in der Serienfertigung. Alle Modelle sind kompatibel mit der Ardis-Schnittoptimier-Software für automatisierte Schnittberechnung, Verschnittminimierung und digitale Auftragsverarbeitung. Die kappa-Serie verarbeitet Spanplatten, MDF, HDF, Sperrholz, Multiplex, Tischlerplatten und Massivholz. Typische Einsatzgebiete sind Tischlereien, Möbelhersteller, Innenausbau-Unternehmen, Holzhandel und industrielle Fertigungsbetriebe. Asamer ist der autorisierte Mayer-Händler für Tschechien, die Slowakei und Ungarn und bietet für die gesamte kappa-Serie Beratung, Vorführung, Lieferung, Inbetriebnahme und After-Sales-Service an. Kontaktieren Sie uns für eine persönliche Beratung und ein individuelles Angebot.`,
       en: `The Mayer kappa series comprises horizontal panel saws specifically developed for cutting wood-based materials. From the compact kappa automatic 80 as the entry-level model to the flagship kappa automatic 140 with 4,300 mm cutting length and industrial performance level, the series offers a solution for every business size and throughput requirement. All kappa machines feature heavy steel construction that ensures low-vibration operation and the highest repeat accuracy. The automatic pressure beam and steel material pusher enable single-operator use and lower labour costs. The continuously variable feed speed from 5 to 100 m/min is among the highest on the market and secures fast cycle times in series production. All models are compatible with Ardis cut optimisation software for automated cut calculation, waste minimisation and digital order processing. The kappa series processes chipboard, MDF, HDF, plywood, multiplex, blockboard and solid wood. Typical application areas include joinery shops, furniture manufacturers, interior fit-out companies, timber traders and industrial manufacturing operations. Asamer is the authorised Mayer dealer for the Czech Republic, Slovakia and Hungary and offers consultation, demonstration, delivery, commissioning and after-sales service for the entire kappa series. Contact us for personal advice and a tailored quotation.`,
       cz: `Řada Mayer kappa zahrnuje horizontální formátovací pily speciálně vyvinuté pro řezání dřevěných materiálů. Od kompaktní kappa automatic 80 jako vstupního modelu po vlajkovou loď kappa automatic 140 s délkou řezu 4 300 mm a průmyslovým výkonem nabízí řada řešení pro každou velikost podniku a požadavek na průchodnost. Všechny stroje kappa se vyznačují těžkou ocelovou konstrukcí, která zajišťuje práci s minimálními vibracemi a nejvyšší opakovatelnou přesnost. Automatický přítlačný trám a posuv materiálu z oceli umožňují obsluhu jedním operátorem a snižují personální náklady. Plynule regulovatelná rychlost posuvu od 5 do 100 m/min patří k nejvyšším na trhu a zajišťuje rychlé cyklové časy v sériové výrobě. Všechny modely jsou kompatibilní se softwarem Ardis pro optimalizaci řezů pro automatický výpočet řezů, minimalizaci odpadu a digitální zpracování zakázek. Řada kappa zpracovává dřevotřísky, MDF, HDF, překližky, multiplex, stolařské desky a masivní dřevo. Typické oblasti použití zahrnují truhlárny, výrobce nábytku, interiérové firmy, obchod se dřevem a průmyslové výrobní provozy. Asamer je autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko a nabízí pro celou řadu kappa poradenství, předvedení, dodání, uvedení do provozu a poprodejní servis. Kontaktujte nás pro osobní poradenství a individuální nabídku.`,
+      hu: `A Mayer kappa sorozat vízszintes lapfűrészeket tartalmaz, amelyeket kifejezetten faalapú anyagok vágásához fejlesztettek ki. A kompakt kappa automatic 80 belépő modelltől a 4 300 mm vágóhosszú és ipari teljesítményszintű csúcsmodell kappa automatic 140-ig a sorozat minden vállalati méret és teljesítményigény számára megoldást kínál. Minden kappa gépet nehéz acélszerkezet jellemzi, amely biztosítja a rezgésmentes működést és a legmagasabb ismétlési pontosságot. Az automatikus nyomógerenda és az acél anyagtoló lehetővé teszi az egyszemélyes kezelést és csökkenti a személyzeti költségeket. Az 5-től 100 m/min-ig fokozatmentesen állítható előtolási sebesség a piac legmagasabb közt van, és gyors ciklusidőket biztosít a sorozatgyártásban. Minden modell kompatibilis az Ardis vágásoptimalizáló szoftverrel az automatikus vágásszámításhoz, a hulladékminimalizáláshoz és a digitális megrendelésfeldolgozáshoz. A kappa sorozat forgácslapot, MDF-et, HDF-et, rétegelt lemezt, multiplexet, asztaloslapot és tömör fát dolgoz fel. Tipikus alkalmazási területek az asztalosüzemek, bútorgyártók, belsőépítészeti cégek, fakereskedelmek és ipari gyártóüzemek. Az Asamer a Mayer hivatalos viszonteladója Csehország, Szlovákia és Magyarország számára, és a teljes kappa sorozathoz tanácsadást, bemutatót, szállítást, üzembe helyezést és értékesítés utáni szervizt kínál. Vegye fel velünk a kapcsolatot személyes tanácsadásért és egyedi ajánlatért.`,
     },
     sections: [
       {
@@ -1075,11 +1104,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Technologie der kappa-Plattensägen',
           en: 'kappa panel saw technology',
           cz: 'Technologie formátovacích pil kappa',
+          hu: 'A kappa lapfűrészek technológiája',
         },
         body: {
           de: 'Alle kappa-Modelle teilen die gleiche Grundtechnologie: schwere Stahlkonstruktion, neuer Sägewagen mit Schnittrichtung gegen den Anschlag, doppeltes Messsystem für maximale Wiederholgenauigkeit und ergonomisches 24-Zoll-Bedienpanel mit Windows-basierter Software. Die Vorschubgeschwindigkeit von 5 bis 100 m/min ist stufenlos regelbar und erlaubt die Anpassung an unterschiedliche Holzwerkstoffe.',
           en: 'All kappa models share the same core technology: heavy steel construction, new saw carriage with cutting direction against the fence, dual measuring system for maximum repeat accuracy and ergonomic 24-inch control panel with Windows-based software. The feed speed from 5 to 100 m/min is continuously variable and allows adaptation to different wood-based materials.',
           cz: 'Všechny modely kappa sdílejí stejnou základní technologii: těžká ocelová konstrukce, nový pilový vozík se směrem řezu proti dorazu, dvojitý měřicí systém pro maximální opakovatelnou přesnost a ergonomický 24palcový ovládací panel se softwarem na bázi Windows. Rychlost posuvu od 5 do 100 m/min je plynule regulovatelná a umožňuje přizpůsobení různým dřevěným materiálům.',
+          hu: 'Minden kappa modell ugyanazt az alaptechnológiát osztja: nehéz acélszerkezet, új fűrészkocsi az ütköző ellenében vágó iránnyal, kettős mérőrendszer a maximális ismétlési pontossághoz és ergonomikus 24 hüvelykes vezérlőpanel Windows-alapú szoftverrel. Az 5-től 100 m/min-ig terjedő előtolási sebesség fokozatmentesen szabályozható és lehetővé teszi a különböző faalapú anyagokhoz való alkalmazkodást.',
         },
       },
       {
@@ -1087,11 +1118,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Modellvergleich: kappa 80 bis kappa 140',
           en: 'Model comparison: kappa 80 to kappa 140',
           cz: 'Srovnání modelů: kappa 80 až kappa 140',
+          hu: 'Modellek összehasonlítása: kappa 80-tól kappa 140-ig',
         },
         body: {
           de: 'Die kappa automatic 80 bietet 80 mm Schnitthöhe und 3.200 mm Schnittlänge als Einstieg. Die kappa automatic 100 erweitert auf 100 mm mit modularem Schnittoptimierer. Die kappa automatic 120 liefert 120 mm und 3.800 mm Schnittlänge. Die kappa automatic 140 ist das Flaggschiff mit 140 mm Schnitthöhe und 4.300 mm Schnittlänge für industrielle Serienfertigung.',
           en: 'The kappa automatic 80 offers 80 mm cutting height and 3,200 mm cutting length as the entry point. The kappa automatic 100 extends to 100 mm with modular cut optimiser. The kappa automatic 120 delivers 120 mm and 3,800 mm cutting length. The kappa automatic 140 is the flagship with 140 mm cutting height and 4,300 mm cutting length for industrial series production.',
           cz: 'kappa automatic 80 nabízí 80 mm výšku řezu a 3 200 mm délku řezu jako vstupní model. kappa automatic 100 rozšiřuje na 100 mm s modulárním optimalizátorem řezů. kappa automatic 120 dodává 120 mm a 3 800 mm délku řezu. kappa automatic 140 je vlajková loď se 140 mm výškou řezu a 4 300 mm délkou řezu pro průmyslovou sériovou výrobu.',
+          hu: 'A kappa automatic 80 belépő modellként 80 mm vágásmagasságot és 3 200 mm vágóhosszt kínál. A kappa automatic 100 100 mm-re bővít moduláris vágásoptimalizálóval. A kappa automatic 120 120 mm-t és 3 800 mm vágóhosszt biztosít. A kappa automatic 140 a csúcsmodell 140 mm vágásmagassággal és 4 300 mm vágóhosszal, ipari sorozatgyártáshoz.',
         },
       },
       {
@@ -1099,11 +1132,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Software und Digitalisierung',
           en: 'Software and digitalisation',
           cz: 'Software a digitalizace',
+          hu: 'Szoftver és digitalizáció',
         },
         body: {
           de: 'Die kappa-Serie unterstützt die Ardis-Schnittoptimier-Software, die automatisch die effizientesten Schnittmuster berechnet, den Verschnitt minimiert und eine nahtlose digitale Auftragsverarbeitung vom Büro bis zur Maschine ermöglicht. Dies ist ein wesentlicher Baustein für die Digitalisierung im Holzverarbeitungsbetrieb.',
           en: 'The kappa series supports Ardis cut optimisation software, which automatically calculates the most efficient cutting patterns, minimises waste and enables seamless digital order processing from office to machine. This is an essential building block for digitalisation in wood processing operations.',
           cz: 'Řada kappa podporuje software Ardis pro optimalizaci řezů, který automaticky vypočítává nejefektivnější řezné plány, minimalizuje odpad a umožňuje bezešvé digitální zpracování zakázek od kanceláře po stroj. To je zásadní stavební kámen pro digitalizaci v dřevozpracujících provozech.',
+          hu: 'A kappa sorozat támogatja az Ardis vágásoptimalizáló szoftvert, amely automatikusan kiszámítja a leghatékonyabb vágási mintákat, minimalizálja a hulladékot és zökkenőmentes digitális megrendelésfeldolgozást tesz lehetővé az irodától a gépig. Ez alapvető építőkő a faipari üzemek digitalizációjához.',
         },
       },
     ],
@@ -1113,11 +1148,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Welche Mayer kappa-Plattensäge ist die richtige für mich?',
           en: 'Which Mayer kappa panel saw is right for me?',
           cz: 'Která formátovací pila Mayer kappa je pro mě ta pravá?',
+          hu: 'Melyik Mayer kappa lapfűrész a megfelelő számomra?',
         },
         answer: {
           de: 'Die Wahl hängt von Ihrer benötigten Schnitthöhe, Schnittlänge und Ihrem Produktionsvolumen ab. Die kappa 80 eignet sich für den Einstieg, die kappa 100 und 120 für mittlere Anforderungen und die kappa 140 für die industrielle Serienfertigung. Asamer berät Sie gerne persönlich.',
           en: 'The choice depends on your required cutting height, cutting length and production volume. The kappa 80 suits entry-level needs, the kappa 100 and 120 for medium requirements, and the kappa 140 for industrial series production. Asamer is happy to advise you personally.',
           cz: 'Volba závisí na vaší požadované výšce řezu, délce řezu a objemu výroby. kappa 80 se hodí pro vstup, kappa 100 a 120 pro střední požadavky a kappa 140 pro průmyslovou sériovou výrobu. Asamer vám rád osobně poradí.',
+          hu: 'A választás a szükséges vágásmagasságtól, vágóhossztól és a gyártási volumentől függ. A kappa 80 belépő szintű igényekhez, a kappa 100 és 120 közepes követelményekhez, a kappa 140 pedig ipari sorozatgyártáshoz alkalmas. Az Asamer szívesen ad személyes tanácsot.',
         },
       },
       {
@@ -1125,11 +1162,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Kann ich eine kappa-Plattensäge bei Asamer kaufen?',
           en: 'Can I buy a kappa panel saw from Asamer?',
           cz: 'Mohu si kappa formátovací pilu koupit u Asamer?',
+          hu: 'Vásárolhatok kappa lapfűrészt az Asamernél?',
         },
         answer: {
           de: 'Ja, Asamer ist autorisierter Mayer-Händler für Tschechien, die Slowakei und Ungarn. Wir bieten die komplette kappa-Serie mit Beratung, Lieferung, Inbetriebnahme und Service an.',
           en: 'Yes, Asamer is the authorised Mayer dealer for the Czech Republic, Slovakia and Hungary. We offer the complete kappa series with consultation, delivery, commissioning and service.',
           cz: 'Ano, Asamer je autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko. Nabízíme kompletní řadu kappa s poradenstvím, dodáním, uvedením do provozu a servisem.',
+          hu: 'Igen, az Asamer a Mayer hivatalos viszonteladója Csehország, Szlovákia és Magyarország területén. A teljes kappa sorozatot kínáljuk tanácsadással, szállítással, üzembe helyezéssel és szervizzel.',
         },
       },
       {
@@ -1137,11 +1176,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Welche Holzwerkstoffe kann die kappa-Serie verarbeiten?',
           en: 'What wood-based materials can the kappa series process?',
           cz: 'Jaké dřevěné materiály může řada kappa zpracovávat?',
+          hu: 'Milyen faalapú anyagokat tud a kappa sorozat feldolgozni?',
         },
         answer: {
           de: 'Die kappa-Serie verarbeitet Spanplatten, MDF, HDF, Sperrholz, Multiplex, Tischlerplatten, Massivholz und weitere Holzwerkstoffe.',
           en: 'The kappa series processes chipboard, MDF, HDF, plywood, multiplex, blockboard, solid wood and other wood-based materials.',
           cz: 'Řada kappa zpracovává dřevotřísky, MDF, HDF, překližky, multiplex, stolařské desky, masivní dřevo a další dřevěné materiály.',
+          hu: 'A kappa sorozat forgácslapot, MDF-et, HDF-et, rétegelt lemezt, multiplexet, asztaloslapot, tömör fát és egyéb faalapú anyagokat dolgoz fel.',
         },
       },
     ],
@@ -1155,6 +1196,7 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
       de: `Die Mayer Advanced Line ist eine Reihe horizontaler Plattensägen, die speziell für die Bearbeitung von Aluminium, NE-Metallen, Kunststoffen und Composites entwickelt wurde. Die Serie reicht von der bewährten advanced line 100 mit 18/24 kW Motor bis zur stärksten Plattenaufteilsäge ihrer Klasse, der advanced line 250 mit 55/75 kW Motor und 860 mm Sägeblatt. Jedes Modell wurde für vibrationsfreie, gratarme Schnitte in anspruchsvollen Materialien optimiert. Die niedrigen Vorschubgeschwindigkeiten ab 0,2 m/min sind entscheidend für saubere Schnittkanten in Aluminium und empfindlichen Kunststoffen, während Geschwindigkeiten bis 60 m/min schnelle Durchsätze bei weicheren Materialien ermöglichen. Alle Advanced-Line-Modelle verfügen über das Dual Servo Drive System mit zwei unabhängigen Servomotoren für absolute Positioniergenauigkeit. Höhere Modelle bieten PC-Steuerung per Touchscreen, programmierbare Korrekturkurven und den patentierten Lamellen-Screen für optimale Absaugung. Die advanced line 160 turn erweitert die Möglichkeiten um eine automatische 90°-Wendeinheit für beidseitige Bearbeitung in einem Durchgang. Typische Einsatzgebiete umfassen Fassadenbau, Werbetechnik, Kunststoffverarbeitung, Aluminium-Lager, Transportbau und industrielle Fertigung. Asamer ist der autorisierte Mayer-Händler für Tschechien, die Slowakei und Ungarn und bietet die gesamte Advanced Line mit umfassender Beratung, Projektplanung, Installation, Schulung und After-Sales-Service an.`,
       en: `The Mayer Advanced Line is a series of horizontal panel saws specifically developed for processing aluminium, non-ferrous metals, plastics and composites. The series ranges from the proven advanced line 100 with 18/24 kW motor to the strongest panel dividing saw in its class, the advanced line 250 with 55/75 kW motor and 860 mm saw blade. Every model has been optimised for vibration-free, burr-free cuts in demanding materials. The low feed speeds from 0.2 m/min are crucial for clean cut edges in aluminium and sensitive plastics, while speeds up to 60 m/min enable fast throughput with softer materials. All Advanced Line models feature the Dual Servo Drive system with two independent servo motors for absolute positioning accuracy. Higher models offer PC control via touchscreen, programmable correction curves and the patented Lamella Screen for optimal extraction. The advanced line 160 turn extends the possibilities with an automatic 90-degree turning unit for double-sided processing in a single pass. Typical application areas include facade construction, sign making, plastics processing, aluminium stockholding, transport construction and industrial manufacturing. Asamer is the authorised Mayer dealer for the Czech Republic, Slovakia and Hungary and offers the entire Advanced Line with comprehensive consultation, project planning, installation, training and after-sales service.`,
       cz: `Mayer Advanced Line je řada horizontálních formátovacích pil speciálně vyvinutých pro zpracování hliníku, neželezných kovů, plastů a kompozitů. Řada sahá od osvědčené advanced line 100 s motorem 18/24 kW po nejsilnější formátovací pilu ve své třídě, advanced line 250 s motorem 55/75 kW a pilovým kotoučem 860 mm. Každý model byl optimalizován pro řezy bez vibrací a bez otřepů v náročných materiálech. Nízké rychlosti posuvu od 0,2 m/min jsou klíčové pro čisté řezné hrany v hliníku a citlivých plastech, zatímco rychlosti do 60 m/min umožňují rychlé průchody u měkčích materiálů. Všechny modely Advanced Line disponují systémem Dual Servo Drive se dvěma nezávislými servomotory pro absolutní přesnost polohování. Vyšší modely nabízejí PC řízení přes dotykový displej, programovatelné korekční křivky a patentovaný lamelový screen pro optimální odsávání. advanced line 160 turn rozšiřuje možnosti o automatickou 90° otočnou jednotku pro oboustranné zpracování v jednom průchodu. Typické oblasti použití zahrnují stavbu fasád, reklamní techniku, zpracování plastů, hliníkové sklady, dopravní průmysl a průmyslovou výrobu. Asamer je autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko a nabízí celou řadu Advanced Line s komplexním poradenstvím, projektovým plánováním, instalací, školením a poprodejním servisem.`,
+      hu: `A Mayer Advanced Line vízszintes lapfűrészek sorozata, amelyet kifejezetten alumínium, nemvasfémek, műanyagok és kompozitok megmunkálásához fejlesztettek ki. A sorozat a bevált 18/24 kW-os motorral felszerelt advanced line 100-tól a kategória legerősebb lapfűrészéig, az 55/75 kW-os motorral és 860 mm-es fűrészlappal felszerelt advanced line 250-ig terjed. Minden modellt rezgésmentes, sorjamentes vágásokra optimalizáltak igényes anyagokban. A 0,2 m/min-től kezdődő alacsony előtolási sebességek alapvetőek a tiszta vágási élekhez alumíniumban és érzékeny műanyagokban, míg a 60 m/min-ig terjedő sebességek gyors átmeneteket tesznek lehetővé puhább anyagoknál. Minden Advanced Line modell rendelkezik a Dual Servo Drive rendszerrel két független szervomotorral az abszolút pozicionálási pontosság érdekében. A magasabb modellek érintőképernyős PC-vezérlést, programozható korrekciós görbéket és a szabadalmaztatott lamellás screent kínálják az optimális elszíváshoz. Az advanced line 160 turn automatikus 90°-os fordítóegységgel bővíti a lehetőségeket a kétoldali megmunkáláshoz egyetlen átmenetben. Tipikus alkalmazási területek a homlokzatépítés, reklámtechnika, műanyag-feldolgozás, alumíniumraktárak, szállítástechnika és ipari gyártás. Az Asamer a Mayer hivatalos viszonteladója Csehország, Szlovákia és Magyarország számára, és a teljes Advanced Line sorozatot kínálja átfogó tanácsadással, projekttervezéssel, telepítéssel, oktatással és értékesítés utáni szervizzel.`,
     },
     sections: [
       {
@@ -1162,11 +1204,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Für welche Materialien ist die Advanced Line geeignet?',
           en: 'What materials is the Advanced Line suitable for?',
           cz: 'Pro jaké materiály je Advanced Line vhodná?',
+          hu: 'Milyen anyagokhoz alkalmas az Advanced Line?',
         },
         body: {
           de: 'Die Advanced Line verarbeitet Aluminium in allen Legierungen und Formen (Vollmaterial, Verbundplatten, Profile), NE-Metalle wie Messing und Kupfer sowie alle gängigen Kunststoffe von Acrylglas über PVC bis zu technischen Hochleistungs-Kunststoffen wie PTFE und PEEK. Auch glasfaser- und kohlefaserverstärkte Composites werden präzise geschnitten.',
           en: 'The Advanced Line processes aluminium in all alloys and forms (solid material, composite panels, profiles), non-ferrous metals such as brass and copper, and all common plastics from acrylic glass to PVC to high-performance engineering plastics such as PTFE and PEEK. Glass-fibre and carbon-fibre reinforced composites are also cut precisely.',
           cz: 'Advanced Line zpracovává hliník ve všech slitinách a formách (plný materiál, kompozitní desky, profily), neželezné kovy jako mosaz a měď a všechny běžné plasty od akrylátového skla přes PVC po technické vysokovýkonné plasty jako PTFE a PEEK. Přesně řeže i kompozity vyztužené skleněnými a uhlíkovými vlákny.',
+          hu: 'Az Advanced Line feldolgozza az alumíniumot minden ötvözetben és formában (tömör anyag, kompozit lapok, profilok), a nemvasfémeket mint a sárgaréz és a réz, valamint minden szokásos műanyagot az akrilüvegtől a PVC-n át a nagyteljesítményű műszaki műanyagokig, mint a PTFE és a PEEK. Az üvegszál- és szénszál-erősítésű kompozitokat is precízen vágja.',
         },
       },
       {
@@ -1174,11 +1218,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Modellübersicht der Advanced Line',
           en: 'Advanced Line model overview',
           cz: 'Přehled modelů Advanced Line',
+          hu: 'Advanced Line modellek áttekintése',
         },
         body: {
           de: 'Die advanced line 100 (18/24 kW, 100 mm) ist der Klassiker. Die advanced line 130 (24 kW, 130 mm) bietet integrierte Absaugung und Dual Servo Drive. Die advanced line 160 (35 kW, 160 mm) ist die preisgekrönte Version mit PC-Steuerung. Die advanced line 160 turn ergänzt die 90°-Wendeinheit. Die advanced line 200 (43 kW, 200 mm) ist für Großformate bis 5.600 mm ausgelegt. Die advanced line 250 (55/75 kW, 250 mm) ist die stärkste ihrer Klasse.',
           en: 'The advanced line 100 (18/24 kW, 100 mm) is the classic. The advanced line 130 (24 kW, 130 mm) offers integrated extraction and Dual Servo Drive. The advanced line 160 (35 kW, 160 mm) is the award-winning version with PC control. The advanced line 160 turn adds the 90-degree turning unit. The advanced line 200 (43 kW, 200 mm) is designed for large formats up to 5,600 mm. The advanced line 250 (55/75 kW, 250 mm) is the strongest in its class.',
           cz: 'advanced line 100 (18/24 kW, 100 mm) je klasika. advanced line 130 (24 kW, 130 mm) nabízí integrované odsávání a Dual Servo Drive. advanced line 160 (35 kW, 160 mm) je oceněná verze s PC řízením. advanced line 160 turn přidává 90° otočnou jednotku. advanced line 200 (43 kW, 200 mm) je určena pro velké formáty do 5 600 mm. advanced line 250 (55/75 kW, 250 mm) je nejsilnější ve své třídě.',
+          hu: 'Az advanced line 100 (18/24 kW, 100 mm) a klasszikus. Az advanced line 130 (24 kW, 130 mm) integrált elszívást és Dual Servo Drive-ot kínál. Az advanced line 160 (35 kW, 160 mm) a díjnyertes verzió PC-vezérléssel. Az advanced line 160 turn kiegészíti a 90°-os fordítóegységgel. Az advanced line 200 (43 kW, 200 mm) 5 600 mm-ig terjedő nagy formátumokra készült. Az advanced line 250 (55/75 kW, 250 mm) a legerősebb a kategóriájában.',
         },
       },
       {
@@ -1186,11 +1232,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Dual Servo Drive und Präzisionstechnologie',
           en: 'Dual Servo Drive and precision technology',
           cz: 'Dual Servo Drive a precizní technologie',
+          hu: 'Dual Servo Drive és precíziós technológia',
         },
         body: {
           de: 'Das Dual Servo Drive System ist das Herzstück der Advanced Line und verwendet zwei unabhängige Servomotoren für absolute Positioniergenauigkeit. Programmierbare Korrekturkurven erlauben die automatische Kompensation materialbedingter Abweichungen. In Kombination mit dem doppelten Druckbalken und Lasermessung erreichen die Advanced-Line-Sägen eine Schnittgenauigkeit, die in der Branche ihresgleichen sucht.',
           en: 'The Dual Servo Drive system is the heart of the Advanced Line and uses two independent servo motors for absolute positioning accuracy. Programmable correction curves allow automatic compensation of material-related deviations. In combination with the double pressure beam and laser measurement, the Advanced Line saws achieve a cutting accuracy that is unmatched in the industry.',
           cz: 'Systém Dual Servo Drive je srdcem Advanced Line a používá dva nezávislé servomotory pro absolutní přesnost polohování. Programovatelné korekční křivky umožňují automatickou kompenzaci odchylek způsobených materiálem. V kombinaci s dvojitým přítlačným trámem a laserovým měřením dosahují pily Advanced Line přesnosti řezu, která nemá v oboru obdoby.',
+          hu: 'A Dual Servo Drive rendszer az Advanced Line szíve, és két független szervomotort használ az abszolút pozicionálási pontossághoz. A programozható korrekciós görbék lehetővé teszik az anyagból eredő eltérések automatikus kompenzálását. A kettős nyomógerendával és a lézeres méréssel kombinálva az Advanced Line fűrészek olyan vágási pontosságot érnek el, amelynek nincs párja az iparágban.',
         },
       },
     ],
@@ -1200,11 +1248,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Welche Advanced Line eignet sich für Aluminium-Verbundplatten?',
           en: 'Which Advanced Line is suitable for aluminium composite panels?',
           cz: 'Která Advanced Line je vhodná pro hliníkové kompozitní desky?',
+          hu: 'Melyik Advanced Line alkalmas alumínium kompozit lapokhoz?',
         },
         answer: {
           de: 'Für Aluminium-Verbundplatten eignen sich alle Advanced-Line-Modelle. Die advanced line 100 ist ideal als Einstieg, während die 130 und 160 mit integrierter Absaugung und höherer Motorleistung für größere Volumen besser geeignet sind.',
           en: 'All Advanced Line models are suitable for aluminium composite panels. The advanced line 100 is ideal as an entry point, while the 130 and 160 with integrated extraction and higher motor power are better suited for larger volumes.',
           cz: 'Pro hliníkové kompozitní desky jsou vhodné všechny modely Advanced Line. advanced line 100 je ideální jako vstup, zatímco 130 a 160 s integrovaným odsáváním a vyšším výkonem motoru jsou vhodnější pro větší objemy.',
+          hu: 'Minden Advanced Line modell alkalmas alumínium kompozit lapokhoz. Az advanced line 100 ideális belépő modellként, míg az integrált elszívással és nagyobb motorteljesítménnyel felszerelt 130 és 160 jobban megfelel nagyobb volumeneknek.',
         },
       },
       {
@@ -1212,11 +1262,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Was ist der Unterschied zwischen kappa und Advanced Line?',
           en: 'What is the difference between kappa and Advanced Line?',
           cz: 'Jaký je rozdíl mezi kappa a Advanced Line?',
+          hu: 'Mi a különbség a kappa és az Advanced Line között?',
         },
         answer: {
           de: 'Die kappa-Serie ist für Holzwerkstoffe optimiert und bietet hohe Vorschubgeschwindigkeiten bis 100 m/min. Die Advanced Line ist für Aluminium, NE-Metalle und Kunststoffe konzipiert und bietet niedrigere Vorschubgeschwindigkeiten ab 0,2 m/min für gratfreie Schnitte in Metall.',
           en: 'The kappa series is optimised for wood-based materials and offers high feed speeds up to 100 m/min. The Advanced Line is designed for aluminium, non-ferrous metals and plastics and offers lower feed speeds from 0.2 m/min for burr-free cuts in metal.',
           cz: 'Řada kappa je optimalizována pro dřevěné materiály a nabízí vysoké rychlosti posuvu do 100 m/min. Advanced Line je navržena pro hliník, neželezné kovy a plasty a nabízí nižší rychlosti posuvu od 0,2 m/min pro řezy bez otřepů v kovu.',
+          hu: 'A kappa sorozat faalapú anyagokra optimalizált és magas, 100 m/min-ig terjedő előtolási sebességet kínál. Az Advanced Line alumíniumhoz, nemvasfémekhez és műanyagokhoz készült és alacsonyabb, 0,2 m/min-től induló előtolási sebességet kínál a fémben történő sorjamentes vágásokhoz.',
         },
       },
       {
@@ -1224,11 +1276,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Bietet Asamer Service für die Advanced Line an?',
           en: 'Does Asamer offer service for the Advanced Line?',
           cz: 'Nabízí Asamer servis pro Advanced Line?',
+          hu: 'Kínál az Asamer szervizt az Advanced Line-hoz?',
         },
         answer: {
           de: 'Ja, Asamer ist autorisierter Mayer-Händler und bietet für die gesamte Advanced Line Beratung, Projektplanung, Lieferung, Inbetriebnahme, Schulung und After-Sales-Service in Tschechien, der Slowakei und Ungarn an.',
           en: 'Yes, Asamer is an authorised Mayer dealer and offers consultation, project planning, delivery, commissioning, training and after-sales service for the entire Advanced Line in the Czech Republic, Slovakia and Hungary.',
           cz: 'Ano, Asamer je autorizovaný prodejce Mayer a nabízí pro celou řadu Advanced Line poradenství, projektové plánování, dodání, uvedení do provozu, školení a poprodejní servis v České republice, na Slovensku a v Maďarsku.',
+          hu: 'Igen, az Asamer a Mayer hivatalos viszonteladója, és a teljes Advanced Line sorozathoz tanácsadást, projekttervezést, szállítást, üzembe helyezést, oktatást és értékesítés utáni szervizt kínál Csehországban, Szlovákiában és Magyarországon.',
         },
       },
     ],
@@ -1242,6 +1296,7 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
       de: `Die industriellen Lösungen von Mayer gehen über einzelne Plattensägen hinaus und umfassen maßgeschneiderte Winkelschneid-Anlagen für vollautomatisierte Produktionslinien. Diese Systeme werden individuell nach Kundenanforderungen konfiguriert und integrieren Längs- und Querschnitt-Kapazitäten in einem durchgängigen System mit automatischem Materialfluss. Die Platten werden zugeführt, in Längsrichtung geschnitten, automatisch um 90° gedreht und anschließend quergeschnitten, ohne dass ein manueller Eingriff erforderlich ist. Die Einsatzmöglichkeiten umfassen alle Materialien, die auch mit den Einzelmaschinen der kappa- und Advanced-Line-Serien verarbeitet werden: Holzwerkstoffe, Aluminium, NE-Metalle, Kunststoffe und Composites. Die industriellen Lösungen sind für die Integration in bestehende ERP- und Produktionssysteme ausgelegt und unterstützen die digitale Auftragsverarbeitung, automatische Schnittoptimierung und Industrie-4.0-Konzepte. Der ROI einer Winkelanlage resultiert aus drastisch gesteigerter Produktivität, reduziertem Materialverschnitt durch optimierte Schnittmuster, gesenkten Personalkosten durch Automatisierung und einer gleichbleibend hohen Schnittqualität auch bei Mehrschichtbetrieb. Mayer Winkelanlagen sind in der Möbelindustrie, im Fassadenbau, in der Aluminium- und Kunststoffverarbeitung sowie in der Automobilzulieferung weltweit im Einsatz. Asamer ist der autorisierte Mayer-Händler für Tschechien, die Slowakei und Ungarn und Ihr Ansprechpartner für die Planung, Konfiguration, Installation und den Betrieb Ihrer individuellen Industrielösung. Wir analysieren Ihren Produktionsprozess, erarbeiten ein maßgeschneidertes Konzept und begleiten Sie von der Projektplanung bis zur Inbetriebnahme und darüber hinaus.`,
       en: `Mayer's industrial solutions go beyond individual panel saws and encompass custom-built angle cutting systems for fully automated production lines. These systems are individually configured to customer requirements and integrate longitudinal and cross-cutting capacities in a continuous system with automatic material flow. Panels are fed in, cut longitudinally, automatically rotated by 90 degrees and then cross-cut without any manual intervention required. The application possibilities cover all materials also processed by the individual machines of the kappa and Advanced Line series: wood-based materials, aluminium, non-ferrous metals, plastics and composites. The industrial solutions are designed for integration into existing ERP and production systems and support digital order processing, automatic cut optimisation and Industry 4.0 concepts. The ROI of an angle cutting system results from dramatically increased productivity, reduced material waste through optimised cutting patterns, lowered staffing costs through automation and consistently high cut quality even in multi-shift operation. Mayer angle cutting systems are used worldwide in the furniture industry, facade construction, aluminium and plastics processing, and automotive supply. Asamer is the authorised Mayer dealer for the Czech Republic, Slovakia and Hungary and your contact for planning, configuration, installation and operation of your individual industrial solution. We analyse your production process, develop a tailored concept and accompany you from project planning through commissioning and beyond.`,
       cz: `Průmyslová řešení Mayer jdou nad rámec jednotlivých formátovacích pil a zahrnují zakázkové úhlové řezací systémy pro plně automatizované výrobní linky. Tyto systémy jsou individuálně konfigurovány podle požadavků zákazníka a integrují kapacity pro podélné a příčné řezání v souvislém systému s automatickým materiálovým tokem. Desky jsou přiváděny, podélně řezány, automaticky otočeny o 90° a poté příčně řezány bez jakéhokoli manuálního zásahu. Možnosti použití pokrývají všechny materiály zpracovávané i jednotlivými stroji řad kappa a Advanced Line: dřevěné materiály, hliník, neželezné kovy, plasty a kompozity. Průmyslová řešení jsou navržena pro integraci do stávajících ERP a výrobních systémů a podporují digitální zpracování zakázek, automatickou optimalizaci řezů a koncepty Průmyslu 4.0. Návratnost investice do úhlového řezacího systému vyplývá z dramaticky zvýšené produktivity, sníženého odpadu materiálu díky optimalizovaným řezným plánům, snížených personálních nákladů díky automatizaci a trvale vysoké kvality řezu i ve vícesměnném provozu. Úhlové řezací systémy Mayer jsou celosvětově používány v nábytkářském průmyslu, stavbě fasád, zpracování hliníku a plastů a automobilovém průmyslu. Asamer je autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko a váš kontakt pro plánování, konfiguraci, instalaci a provoz vašeho individuálního průmyslového řešení. Analyzujeme váš výrobní proces, vypracujeme koncept na míru a provázíme vás od projektového plánování přes uvedení do provozu a dále.`,
+      hu: `A Mayer ipari megoldásai túlmutatnak az egyedi lapfűrészeken, és testreszabott szögvágó rendszereket foglalnak magukban teljesen automatizált gyártósorokhoz. Ezek a rendszerek egyedileg konfiguráltak az ügyfél igényei szerint, és a hossz- és keresztvágási kapacitásokat egyetlen folyamatos rendszerbe integrálják automatikus anyagáramlással. A lapokat beadagolják, hosszirányban vágják, automatikusan 90°-kal elforgatják, majd keresztvágják, anélkül hogy bármilyen kézi beavatkozásra lenne szükség. Az alkalmazási lehetőségek lefedik mindazokat az anyagokat, amelyeket a kappa és Advanced Line sorozatok egyedi gépei is feldolgoznak: faalapú anyagok, alumínium, nemvasfémek, műanyagok és kompozitok. Az ipari megoldások meglévő ERP- és gyártási rendszerekbe történő integrációra készültek, és támogatják a digitális megrendelésfeldolgozást, az automatikus vágásoptimalizálást és az Ipar 4.0 koncepciókat. A szögvágó rendszerbe történő beruházás megtérülése a drámaian megnövekedett termelékenységből, az optimalizált vágási mintákon keresztüli csökkentett anyaghulladékból, az automatizálásból eredő alacsonyabb személyzeti költségekből és a többműszakos üzemben is változatlanul magas vágásminőségből ered. A Mayer szögvágó rendszereket világszerte használják a bútoriparban, homlokzatépítésben, alumínium- és műanyag-feldolgozásban és autóipari beszállításban. Az Asamer a Mayer hivatalos viszonteladója Csehország, Szlovákia és Magyarország számára, és az Ön kapcsolattartója az egyedi ipari megoldásának tervezésében, konfigurálásában, telepítésében és üzemeltetésében. Elemezzük gyártási folyamatát, testreszabott koncepciót dolgozunk ki, és a projekttervezéstől az üzembe helyezésen át tovább is elkísérjük Önt.`,
     },
     sections: [
       {
@@ -1249,11 +1304,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Was sind Mayer Winkelanlagen?',
           en: 'What are Mayer angle cutting systems?',
           cz: 'Co jsou úhlové řezací systémy Mayer?',
+          hu: 'Mik azok a Mayer szögvágó rendszerek?',
         },
         body: {
           de: 'Mayer Winkelanlagen sind vollautomatisierte Schneidanlagen, die Längs- und Querschnitte in einem integrierten System vereinen. Die Platten werden automatisch zugeführt, geschnitten, um 90° gedreht und erneut geschnitten. Die Konfiguration erfolgt individuell nach Materialbedarf, Format und Durchsatz.',
           en: 'Mayer angle cutting systems are fully automated cutting installations that combine longitudinal and cross cuts in an integrated system. Panels are automatically fed, cut, rotated by 90 degrees and cut again. The configuration is individual based on material needs, format and throughput.',
           cz: 'Úhlové řezací systémy Mayer jsou plně automatizované řezací instalace, které kombinují podélné a příčné řezy v integrovaném systému. Desky jsou automaticky přiváděny, řezány, otáčeny o 90° a opět řezány. Konfigurace je individuální podle materiálových potřeb, formátu a průchodnosti.',
+          hu: 'A Mayer szögvágó rendszerek teljesen automatizált vágóberendezések, amelyek egy integrált rendszerben egyesítik a hossz- és keresztvágásokat. A lapokat automatikusan adagolják, vágják, 90°-kal elfordítják és újra vágják. A konfiguráció az anyagigény, formátum és teljesítmény alapján egyedi.',
         },
       },
       {
@@ -1261,11 +1318,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Vorteile der Automatisierung',
           en: 'Benefits of automation',
           cz: 'Výhody automatizace',
+          hu: 'Az automatizálás előnyei',
         },
         body: {
           de: 'Die vollständige Automatisierung einer Winkelanlage steigert den Durchsatz drastisch, reduziert den Personalbedarf auf ein Minimum, eliminiert Bedienfehler und senkt den Materialverschnitt durch automatische Schnittoptimierung. Die gleichbleibend hohe Schnittqualität unabhängig vom Bediener und die Möglichkeit des Mehrschichtbetriebs sind weitere entscheidende Vorteile.',
           en: 'Full automation of an angle cutting system dramatically increases throughput, reduces staffing to a minimum, eliminates operator errors and lowers material waste through automatic cut optimisation. Consistently high cut quality regardless of operator and the possibility of multi-shift operation are further decisive advantages.',
           cz: 'Plná automatizace úhlového řezacího systému dramaticky zvyšuje průchodnost, snižuje potřebu personálu na minimum, eliminuje chyby obsluhy a snižuje odpad materiálu díky automatické optimalizaci řezů. Trvale vysoká kvalita řezu nezávislá na obsluze a možnost vícesměnného provozu jsou další rozhodující výhody.',
+          hu: 'Egy szögvágó rendszer teljes automatizálása drámaian növeli a teljesítményt, minimálisra csökkenti a személyzeti igényt, kiküszöböli a kezelői hibákat és csökkenti az anyaghulladékot az automatikus vágásoptimalizálás révén. A kezelőtől független, változatlanul magas vágásminőség és a többműszakos üzem lehetősége további döntő előnyök.',
         },
       },
       {
@@ -1273,11 +1332,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Industrie 4.0 und Digitalisierung',
           en: 'Industry 4.0 and digitalisation',
           cz: 'Průmysl 4.0 a digitalizace',
+          hu: 'Ipar 4.0 és digitalizáció',
         },
         body: {
           de: 'Mayer Winkelanlagen sind für Industrie-4.0-Konzepte vorbereitet. Die nahtlose ERP-Integration, die digitale Auftragsverarbeitung und die automatische Schnittoptimierung bilden die Grundlage für eine vernetzte, transparente und effiziente Produktion. Produktionsdaten werden in Echtzeit erfasst und ausgewertet.',
           en: 'Mayer angle cutting systems are prepared for Industry 4.0 concepts. Seamless ERP integration, digital order processing and automatic cut optimisation form the foundation for a connected, transparent and efficient production. Production data is captured and analysed in real time.',
           cz: 'Úhlové řezací systémy Mayer jsou připraveny pro koncepty Průmyslu 4.0. Bezešvá integrace do ERP, digitální zpracování zakázek a automatická optimalizace řezů tvoří základ pro propojenou, transparentní a efektivní výrobu. Výrobní data jsou zachycována a vyhodnocována v reálném čase.',
+          hu: 'A Mayer szögvágó rendszerek felkészültek az Ipar 4.0 koncepciókra. A zökkenőmentes ERP-integráció, a digitális megrendelésfeldolgozás és az automatikus vágásoptimalizálás alapot képez a hálózatba kapcsolt, átlátható és hatékony gyártáshoz. A gyártási adatokat valós időben rögzítik és elemzik.',
         },
       },
     ],
@@ -1287,11 +1348,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Wie lange dauert die Planung und Installation einer Winkelanlage?',
           en: 'How long does planning and installation of an angle cutting system take?',
           cz: 'Jak dlouho trvá plánování a instalace úhlového řezacího systému?',
+          hu: 'Meddig tart egy szögvágó rendszer tervezése és telepítése?',
         },
         answer: {
           de: 'Die Projektlaufzeit hängt von der Komplexität der Anlage ab. Typischerweise umfasst die Planung 2 bis 4 Monate und die Installation 2 bis 6 Wochen. Asamer begleitet den gesamten Prozess von der Bedarfsanalyse bis zur Inbetriebnahme.',
           en: 'The project timeline depends on the complexity of the installation. Typically, planning takes 2 to 4 months and installation 2 to 6 weeks. Asamer accompanies the entire process from needs analysis to commissioning.',
           cz: 'Časový rámec projektu závisí na složitosti instalace. Typicky plánování trvá 2 až 4 měsíce a instalace 2 až 6 týdnů. Asamer provází celým procesem od analýzy potřeb po uvedení do provozu.',
+          hu: 'A projekt időtartama a berendezés összetettségétől függ. A tervezés jellemzően 2-4 hónapot, a telepítés 2-6 hetet vesz igénybe. Az Asamer a teljes folyamatot végigkíséri az igényfelméréstől az üzembe helyezésig.',
         },
       },
       {
@@ -1299,11 +1362,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Welche Branchen setzen Mayer Winkelanlagen ein?',
           en: 'Which industries use Mayer angle cutting systems?',
           cz: 'Jaká odvětví používají úhlové řezací systémy Mayer?',
+          hu: 'Mely iparágak alkalmazzák a Mayer szögvágó rendszereket?',
         },
         answer: {
           de: 'Mayer Winkelanlagen werden in der Möbelindustrie, im Fassadenbau, in der Aluminium- und Kunststoffverarbeitung, im Transportbau und in der Automobilzulieferung eingesetzt.',
           en: 'Mayer angle cutting systems are used in the furniture industry, facade construction, aluminium and plastics processing, transport construction and automotive supply.',
           cz: 'Úhlové řezací systémy Mayer se používají v nábytkářském průmyslu, stavbě fasád, zpracování hliníku a plastů, dopravním průmyslu a automobilovém průmyslu.',
+          hu: 'A Mayer szögvágó rendszereket a bútoriparban, homlokzatépítésben, alumínium- és műanyag-feldolgozásban, szállítástechnikában és autóipari beszállításban alkalmazzák.',
         },
       },
       {
@@ -1311,11 +1376,13 @@ export const MAYER_CATEGORY_SEO: Record<MayerCategory, CategorySeoContent> = {
           de: 'Kann Asamer eine Winkelanlage vor Ort planen?',
           en: 'Can Asamer plan an angle cutting system on-site?',
           cz: 'Může Asamer naplánovat úhlový řezací systém přímo na místě?',
+          hu: 'Tud az Asamer szögvágó rendszert a helyszínen megtervezni?',
         },
         answer: {
           de: 'Ja, Asamer bietet Vor-Ort-Beratung und Bedarfsanalyse an. Wir vermessen Ihren Produktionsbereich, analysieren Ihren Materialfluss und erarbeiten ein maßgeschneidertes Winkelanlagen-Konzept.',
           en: 'Yes, Asamer offers on-site consultation and needs analysis. We survey your production area, analyse your material flow and develop a tailored angle cutting system concept.',
           cz: 'Ano, Asamer nabízí konzultace a analýzu potřeb přímo na místě. Zaměříme váš výrobní prostor, analyzujeme materiálový tok a vypracujeme koncept úhlového řezacího systému na míru.',
+          hu: 'Igen, az Asamer helyszíni tanácsadást és igényfelmérést kínál. Felmérjük gyártási területét, elemezzük az anyagáramlást és testreszabott szögvágó rendszer koncepciót dolgozunk ki.',
         },
       },
     ],
