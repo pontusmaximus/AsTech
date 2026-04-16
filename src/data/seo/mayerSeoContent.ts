@@ -242,11 +242,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Großformatige Platten im Innenausbau',
           en: 'Large-format panels in interior fit-out',
           cz: 'Velkoformátové desky v interiérových vestavbách',
+          hu: 'Nagyformátumú lapok belsőépítészetben',
         },
         body: {
           de: 'Die erweiterte Schnittlänge von 3.800 mm macht die kappa automatic 120 zur idealen Lösung für den Zuschnitt großformatiger Platten, wie sie im hochwertigen Innenausbau, Ladenbau und bei Wandverkleidungen verwendet werden. Auch Türblätter und Tischplatten lassen sich präzise und wirtschaftlich zuschneiden.',
           en: 'The extended 3,800 mm cutting length makes the kappa automatic 120 the ideal solution for cutting large-format panels used in high-end interior fit-out, shopfitting and wall cladding. Door panels and table tops can also be cut precisely and economically.',
           cz: 'Rozšířená délka řezu 3 800 mm činí kappa automatic 120 ideálním řešením pro řezání velkoformátových desek používaných v kvalitních interiérových vestavbách, obchodních vestavbách a obkladech stěn. Dveřní výplně a stolní desky lze rovněž řezat přesně a ekonomicky.',
+          hu: 'A 3 800 mm-re kiterjesztett vágóhossz a kappa automatic 120-at ideális megoldássá teszi nagyformátumú lapok szabásához, amelyeket kiváló minőségű belsőépítészetben, üzletépítésben és falburkolatoknál használnak. Ajtólapok és asztallapok is precízen és gazdaságosan szabhatók.',
         },
       },
     ],
@@ -254,6 +256,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Die kappa automatic 120 empfiehlt sich, wenn Sie regelmäßig Plattenpakete bis 120 mm schneiden und eine erweiterte Schnittlänge von 3.800 mm benötigen. Sie ist die mittlere Variante zwischen kompakter Werkstattmaschine und industriellem Flaggschiff. Fragen Sie bei Asamer nach Ihrem individuellen Angebot.',
       en: 'The kappa automatic 120 is recommended when you regularly cut panel stacks up to 120 mm and need an extended 3,800 mm cutting length. It is the mid-range option between compact workshop machine and industrial flagship. Ask Asamer for your individual quotation.',
       cz: 'kappa automatic 120 se doporučuje, pokud pravidelně řežete balíky desek do 120 mm a potřebujete rozšířenou délku řezu 3 800 mm. Je střední variantou mezi kompaktním dílenským strojem a průmyslovou vlajkovou lodí. Požádejte Asamer o individuální nabídku.',
+      hu: 'A kappa automatic 120 ajánlott, ha rendszeresen vág 120 mm-ig terjedő lapcsomagokat és 3 800 mm-es kibővített vágóhosszra van szüksége. Középkategóriás opció a kompakt műhelygép és az ipari zászlóshajó között. Kérjen egyedi ajánlatot az Asamertől.',
     },
     faq: [
       {
@@ -261,11 +264,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Wie groß ist die maximale Schnittlänge der kappa automatic 120?',
           en: 'What is the maximum cutting length of the kappa automatic 120?',
           cz: 'Jaká je maximální délka řezu kappa automatic 120?',
+          hu: 'Mekkora a kappa automatic 120 maximális vágóhossza?',
         },
         answer: {
           de: 'Die kappa automatic 120 bietet eine Schnittlänge von 3.800 mm und eignet sich damit auch für großformatige Platten.',
           en: 'The kappa automatic 120 offers a 3,800 mm cutting length, making it suitable also for large-format panels.',
           cz: 'kappa automatic 120 nabízí délku řezu 3 800 mm a je tak vhodná i pro velkoformátové desky.',
+          hu: 'A kappa automatic 120 3 800 mm vágóhosszat kínál, így nagyformátumú lapokhoz is alkalmas.',
         },
       },
       {
@@ -273,11 +278,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Kann die kappa automatic 120 Plattenpakete schneiden?',
           en: 'Can the kappa automatic 120 cut panel stacks?',
           cz: 'Může kappa automatic 120 řezat balíky desek?',
+          hu: 'Tud a kappa automatic 120 lapcsomagokat vágni?',
         },
         answer: {
           de: 'Ja, mit 120 mm Schnitthöhe können mehrere Platten gleichzeitig im Paket geschnitten werden. Dies steigert den Durchsatz erheblich und eignet sich besonders für die Serienfertigung.',
           en: 'Yes, with 120 mm cutting height, multiple panels can be cut simultaneously in a stack. This significantly increases throughput and is particularly suited for series production.',
           cz: 'Ano, s výškou řezu 120 mm lze řezat více desek současně v balíku. To výrazně zvyšuje průchodnost a je to zvláště vhodné pro sériovou výrobu.',
+          hu: 'Igen, 120 mm vágásmagassággal több lap vágható egyszerre csomagban. Ez jelentősen növeli a termelékenységet, és különösen alkalmas sorozatgyártáshoz.',
         },
       },
       {
@@ -285,11 +292,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Ist die kappa automatic 120 für die Möbelindustrie geeignet?',
           en: 'Is the kappa automatic 120 suitable for the furniture industry?',
           cz: 'Je kappa automatic 120 vhodná pro nábytkářský průmysl?',
+          hu: 'Alkalmas-e a kappa automatic 120 a bútoriparhoz?',
         },
         answer: {
           de: 'Ja, die Maschine ist ideal für die Möbelindustrie und den Innenausbau. Die Kombination aus 120 mm Schnitthöhe, 3.800 mm Schnittlänge und Schnittoptimierung deckt die Anforderungen moderner Möbelproduktion ab.',
           en: 'Yes, the machine is ideal for the furniture industry and interior fit-out. The combination of 120 mm cutting height, 3,800 mm cutting length and cut optimisation covers the demands of modern furniture production.',
           cz: 'Ano, stroj je ideální pro nábytkářský průmysl a interiérové vestavby. Kombinace výšky řezu 120 mm, délky řezu 3 800 mm a optimalizace řezů pokrývá požadavky moderní výroby nábytku.',
+          hu: 'Igen, a gép ideális a bútoriparhoz és belsőépítészethez. A 120 mm vágásmagasság, 3 800 mm vágóhossz és vágásoptimalizálás kombinációja lefedi a modern bútorgyártás követelményeit.',
         },
       },
     ],
@@ -303,6 +312,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: `Die Mayer kappa automatic 140 ist das Flaggschiff der kappa-Serie und bietet maximale Leistung für die industrielle Serienfertigung. Mit einer beeindruckenden Schnitthöhe von 140 mm und einer Schnittlänge von 4.300 mm vereint diese horizontale Plattenaufteilsäge Kraft, Geschwindigkeit und Flexibilität auf höchstem Niveau. Die Vorschubgeschwindigkeit reicht stufenlos von 5 bis 100 m/min und zählt damit zu den schnellsten in ihrer Klasse. Die robuste Stahlkonstruktion mit massivem Druckbalken gewährleistet auch bei der Verarbeitung schwerer Plattenstapel aus Spanplatten, MDF, HDF, Multiplex und Massivholz höchste Wiederholgenauigkeit und Schnittqualität. Die großzügige Schnittlänge von 4.300 mm ermöglicht die Verarbeitung von Überformaten und langen Werkstücken, die in der industriellen Möbelfertigung und im Objektbau benötigt werden. Kompatibel mit der Ardis-Schnittoptimier-Software lassen sich selbst komplexe Schnittmuster automatisch berechnen und Verschnitt auf ein Minimum reduzieren. Die Windows-basierte Touchscreen-Steuerung erlaubt eine schnelle und intuitive Programmierung. Die kappa automatic 140 ist die erste Wahl für Fertigungsbetriebe, die keine Kompromisse bei Leistung und Präzision eingehen. Asamer liefert die kappa automatic 140 als autorisierter Mayer-Händler in Tschechien, der Slowakei und Ungarn mit umfassendem Service von der Beratung bis zur Wartung.`,
       en: `The Mayer kappa automatic 140 is the flagship of the kappa series, delivering maximum performance for industrial series production. With an impressive 140 mm cutting height and 4,300 mm cutting length, this horizontal beam saw combines power, speed and flexibility at the highest level. The feed speed is continuously variable from 5 to 100 m/min, making it one of the fastest in its class. The robust steel construction with massive pressure beam guarantees the highest repeat accuracy and cut quality even when processing heavy panel stacks of chipboard, MDF, HDF, multiplex and solid wood. The generous 4,300 mm cutting length enables processing of oversized and long workpieces required in industrial furniture manufacturing and contract work. Compatible with Ardis cut optimisation software, even complex cutting patterns are calculated automatically and waste is reduced to a minimum. The Windows-based touchscreen control allows fast and intuitive programming. The kappa automatic 140 is the first choice for manufacturing operations that accept no compromises on performance and precision. Asamer delivers the kappa automatic 140 as an authorised Mayer dealer in the Czech Republic, Slovakia and Hungary with comprehensive service from consultation to maintenance.`,
       cz: `Mayer kappa automatic 140 je vlajkovou lodí řady kappa a nabízí maximální výkon pro průmyslovou sériovou výrobu. S impozantní výškou řezu 140 mm a délkou řezu 4 300 mm spojuje tato horizontální formátovací pila sílu, rychlost a flexibilitu na nejvyšší úrovni. Rychlost posuvu je plynule regulovatelná od 5 do 100 m/min, což ji řadí mezi nejrychlejší ve své třídě. Robustní ocelová konstrukce s masivním přítlačným trámem zaručuje nejvyšší opakovatelnou přesnost a kvalitu řezu i při zpracování těžkých stohu desek z dřevotřísky, MDF, HDF, multiplexu a masivního dřeva. Velkoryse dimenzovaná délka řezu 4 300 mm umožňuje zpracování nadrozměrných a dlouhých obrobků potřebných v průmyslové výrobě nábytku a zakázkové výrobě. Kompatibilita se softwarem Ardis pro optimalizaci řezů umožňuje automatický výpočet i složitých řezných plánů a minimalizaci odpadu. Dotyková obrazovka na bázi Windows umožňuje rychlé a intuitivní programování. kappa automatic 140 je první volbou pro výrobní podniky, které nedělají kompromisy ve výkonu a přesnosti. Asamer dodává kappa automatic 140 jako autorizovaný prodejce Mayer v České republice, na Slovensku a v Maďarsku s komplexním servisem od poradenství po údržbu.`,
+      hu: `A Mayer kappa automatic 140 a kappa széria zászlóshajója és maximális teljesítményt nyújt ipari sorozatgyártáshoz. Impozáns 140 mm vágásmagassággal és 4 300 mm vágóhosszal ez a vízszintes lapfűrész a legmagasabb szinten egyesíti az erőt, a sebességet és a rugalmasságot. Az előtolási sebesség fokozatmentesen szabályozható 5-től 100 m/min-ig, ami kategóriájában a leggyorsabbak közé sorolja. A robusztus acélszerkezet masszív nyomógerendával garantálja a legmagasabb ismétlési pontosságot és vágásminőséget forgácslap, MDF, HDF, multiplex és tömör fa nehéz lapcsomagjainak feldolgozása esetén is. A bőkezűen méretezett 4 300 mm-es vágóhossz lehetővé teszi az ipari bútorgyártásban és projektmunkákban szükséges túlméretes és hosszú munkadarabok feldolgozását. Az Ardis vágásoptimalizáló szoftverrel való kompatibilitás lehetővé teszi még összetett vágási minták automatikus kiszámítását is és minimálisra csökkenti a hulladékot. A Windows-alapú érintőképernyő gyors és intuitív programozást tesz lehetővé. A kappa automatic 140 az első választás olyan gyártó vállalatok számára, amelyek nem kötnek kompromisszumot a teljesítmény és a pontosság terén. Az Asamer a Mayer hivatalos viszonteladójaként szállítja a kappa automatic 140-et Csehországban, Szlovákiában és Magyarországon átfogó szervizzel a tanácsadástól a karbantartásig.`,
     },
     applicationSections: [
       {
@@ -310,11 +320,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Industrielle Serienfertigung von Möbelteilen',
           en: 'Industrial series production of furniture parts',
           cz: 'Průmyslová sériová výroba nábytkových dílů',
+          hu: 'Bútoralkatrészek ipari sorozatgyártása',
         },
         body: {
           de: 'Die kappa automatic 140 ist für die industrielle Großserienfertigung konzipiert. Mit 140 mm Schnitthöhe können dicke Plattenpakete effizient geschnitten werden, während die Ardis-Software den Verschnitt minimiert. Die hohe Vorschubgeschwindigkeit sorgt für maximalen Durchsatz bei gleichbleibend hoher Schnittqualität.',
           en: 'The kappa automatic 140 is designed for industrial large-scale series production. With 140 mm cutting height, thick panel stacks can be cut efficiently while Ardis software minimises waste. The high feed speed ensures maximum throughput with consistently high cut quality.',
           cz: 'kappa automatic 140 je navržena pro průmyslovou velkosériovou výrobu. S výškou řezu 140 mm lze efektivně řezat tlusté balíky desek, zatímco software Ardis minimalizuje odpad. Vysoká rychlost posuvu zajišťuje maximální průchodnost při trvale vysoké kvalitě řezu.',
+          hu: 'A kappa automatic 140 ipari nagysorozatú gyártásra készült. 140 mm vágásmagassággal vastag lapcsomagok vághatók hatékonyan, miközben az Ardis szoftver minimalizálja a hulladékot. A nagy előtolási sebesség maximális termelékenységet biztosít állandóan magas vágásminőség mellett.',
         },
       },
       {
@@ -322,11 +334,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Objektbau und Großprojekte',
           en: 'Contract work and large-scale projects',
           cz: 'Zakázková výroba a velké projekty',
+          hu: 'Projektmunkák és nagyprojektek',
         },
         body: {
           de: 'Die 4.300 mm Schnittlänge und die 140 mm Schnitthöhe machen die kappa automatic 140 ideal für Großprojekte im Objektbau, wo überformatige Platten und hohe Stückzahlen verarbeitet werden müssen. Wandverkleidungen, Trennwände und großflächige Möbelelemente lassen sich wirtschaftlich und maßgenau zuschneiden.',
           en: 'The 4,300 mm cutting length and 140 mm cutting height make the kappa automatic 140 ideal for large-scale contract work projects where oversized panels and high volumes need to be processed. Wall cladding, partition walls and large-scale furniture elements can be cut economically and to exact dimensions.',
           cz: 'Délka řezu 4 300 mm a výška řezu 140 mm činí kappa automatic 140 ideální pro velké zakázkové projekty, kde je třeba zpracovávat nadrozměrné desky a vysoké objemy. Obklady stěn, příčky a velkoplošné nábytkové prvky lze řezat ekonomicky a rozměrově přesně.',
+          hu: 'A 4 300 mm vágóhossz és 140 mm vágásmagasság ideálissá teszi a kappa automatic 140-et nagy projektmunkákhoz, ahol túlméretes lapokat és nagy mennyiségeket kell feldolgozni. Falburkolatok, térelválasztók és nagyméretű bútorelemek gazdaságosan és méretpontosan szabhatók.',
         },
       },
       {
@@ -334,11 +348,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Holzhandel und Plattengroßhandel',
           en: 'Timber trade and panel wholesaling',
           cz: 'Obchod se dřevem a velkoobchod s deskami',
+          hu: 'Fakereskedelem és lap-nagykereskedelem',
         },
         body: {
           de: 'Im Holzhandel und Plattengroßhandel ist die kappa automatic 140 ideal für den Zuschnitt-Service: Kundenaufträge werden digital empfangen, die Schnittoptimierung berechnet die effizientesten Schnittmuster, und die Maschine schneidet mit bis zu 100 m/min Vorschubgeschwindigkeit. Das reduziert Wartezeiten und erhöht die Kundenzufriedenheit.',
           en: 'In timber trade and panel wholesaling, the kappa automatic 140 is ideal for cut-to-size services: customer orders are received digitally, the cut optimiser calculates the most efficient cutting patterns, and the machine cuts at up to 100 m/min feed speed. This reduces waiting times and increases customer satisfaction.',
           cz: 'V obchodu se dřevem a velkoobchodu s deskami je kappa automatic 140 ideální pro služby řezání na míru: objednávky zákazníků jsou přijímány digitálně, optimalizátor řezů vypočítá nejefektivnější řezné plány a stroj řeže rychlostí posuvu až 100 m/min. To snižuje čekací doby a zvyšuje spokojenost zákazníků.',
+          hu: 'A fakereskedelemben és lap-nagykereskedelemben a kappa automatic 140 ideális méretre szabási szolgáltatásokhoz: a megrendelések digitálisan érkeznek, a vágásoptimalizáló kiszámítja a leghatékonyabb vágási mintákat, és a gép akár 100 m/min előtolási sebességgel vág. Ez csökkenti a várakozási időt és növeli a vevői elégedettséget.',
         },
       },
     ],
@@ -346,6 +362,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Die kappa automatic 140 ist die richtige Wahl für industrielle Betriebe, die maximale Schnitthöhe, maximale Schnittlänge und höchsten Durchsatz in der kappa-Serie benötigen. Als Flaggschiff ist sie für den Dauerbetrieb in der Serienfertigung ausgelegt. Kontaktieren Sie Asamer für eine Vorführung und ein maßgeschneidertes Angebot.',
       en: 'The kappa automatic 140 is the right choice for industrial operations that need maximum cutting height, maximum cutting length and highest throughput in the kappa series. As the flagship, it is designed for continuous operation in series production. Contact Asamer for a demonstration and tailored quotation.',
       cz: 'kappa automatic 140 je správná volba pro průmyslové provozy, které potřebují maximální výšku řezu, maximální délku řezu a nejvyšší průchodnost v řadě kappa. Jako vlajková loď je navržena pro nepřetržitý provoz v sériové výrobě. Kontaktujte Asamer pro předvedení a nabídku na míru.',
+      hu: 'A kappa automatic 140 a jó választás ipari üzemek számára, amelyeknek maximális vágásmagasságra, maximális vágóhosszra és a legnagyobb termelékenységre van szükségük a kappa sorozatban. Zászlóshajóként folyamatos üzemre készült sorozatgyártásban. Lépjen kapcsolatba az Asamerrel bemutatóért és személyre szabott ajánlatért.',
     },
     faq: [
       {
@@ -353,11 +370,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Ist die kappa automatic 140 die schnellste Plattensäge ihrer Klasse?',
           en: 'Is the kappa automatic 140 the fastest panel saw in its class?',
           cz: 'Je kappa automatic 140 nejrychlejší formátovací pilou ve své třídě?',
+          hu: 'A kappa automatic 140 a leggyorsabb lapfűrész a kategóriájában?',
         },
         answer: {
           de: 'Die kappa automatic 140 gehört mit einer Vorschubgeschwindigkeit von bis zu 100 m/min zu den schnellsten Plattensägen in der Klasse der horizontalen Holzplattensägen.',
           en: 'With a feed speed of up to 100 m/min, the kappa automatic 140 is among the fastest panel saws in the horizontal wood panel saw class.',
           cz: 'S rychlostí posuvu až 100 m/min patří kappa automatic 140 k nejrychlejším formátovacím pilám ve třídě horizontálních pil na dřevěné desky.',
+          hu: 'A 100 m/min-ig terjedő előtolási sebességgel a kappa automatic 140 a vízszintes fa-lapfűrészek kategóriájában a leggyorsabbak közé tartozik.',
         },
       },
       {
@@ -365,11 +384,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Welche Schnittlänge bietet die kappa automatic 140?',
           en: 'What cutting length does the kappa automatic 140 offer?',
           cz: 'Jakou délku řezu nabízí kappa automatic 140?',
+          hu: 'Mekkora vágóhosszt kínál a kappa automatic 140?',
         },
         answer: {
           de: 'Die kappa automatic 140 bietet eine Schnittlänge von 4.300 mm und ermöglicht damit die Verarbeitung von Überformaten und besonders langen Werkstücken.',
           en: 'The kappa automatic 140 offers a 4,300 mm cutting length, enabling the processing of oversized and particularly long workpieces.',
           cz: 'kappa automatic 140 nabízí délku řezu 4 300 mm, což umožňuje zpracování nadrozměrných a obzvláště dlouhých obrobků.',
+          hu: 'A kappa automatic 140 4 300 mm vágóhosszat kínál, lehetővé téve túlméretes és különösen hosszú munkadarabok feldolgozását.',
         },
       },
       {
@@ -377,11 +398,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Für welche Branchen ist die kappa automatic 140 geeignet?',
           en: 'Which industries is the kappa automatic 140 suitable for?',
           cz: 'Pro jaké odvětví je kappa automatic 140 vhodná?',
+          hu: 'Mely iparágak számára alkalmas a kappa automatic 140?',
         },
         answer: {
           de: 'Die kappa automatic 140 eignet sich für die Möbelindustrie, den Innenausbau, den Objektbau, den Holzhandel und alle Betriebe mit industriellem Plattenzuschnitt in der Serienfertigung.',
           en: 'The kappa automatic 140 is suitable for the furniture industry, interior fit-out, contract building, timber trade and all operations with industrial panel cutting in series production.',
           cz: 'kappa automatic 140 je vhodná pro nábytkářský průmysl, interiérové vestavby, zakázkovou výrobu, obchod se dřevem a všechny provozy s průmyslovým řezáním desek v sériové výrobě.',
+          hu: 'A kappa automatic 140 alkalmas a bútoripar, belsőépítészet, projektmunkák, fakereskedelem és minden olyan üzem számára, ahol ipari lapszabás történik sorozatgyártásban.',
         },
       },
     ],
@@ -395,6 +418,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: `Die Mayer advanced line 100 ist der bewährte Klassiker unter den Plattensägen für die Bearbeitung von Aluminium, NE-Metallen und Kunststoffen. Mit einer Motorleistung von 18/24 kW und einer Schnitthöhe von 100 mm liefert diese Plattenaufteilsäge vibrationsfreie, präzise Schnitte auch in anspruchsvollen Materialien wie Aluminium-Verbundplatten, Acrylglas, Polycarbonat und Hart-PVC. Die stabile Maschinenkonstruktion und die exzellente Sägewagenführung sorgen für gleichbleibend hohe Schnittqualität im Dauerbetrieb. Die Schnittlänge ist zwischen 3.200 und 4.200 mm konfigurierbar, was eine flexible Anpassung an verschiedene Werkstückformate ermöglicht. Die Vorschubgeschwindigkeit von 0,2 bis 60 m/min ist stufenlos regelbar und auf die besonderen Anforderungen der Metallbearbeitung abgestimmt, insbesondere die niedrigen Vorschubgeschwindigkeiten ermöglichen gratfreie Schnitte in Aluminiumplatten und Kunststoffprofilen. Universelle Rollentische ermöglichen die Ein-Mann-Bedienung und den Transport großer Platten. Die advanced line 100 hat sich in tausenden Installationen weltweit bewährt und ist der zuverlässige Partner für den täglichen Produktionsbetrieb. Asamer ist autorisierter Mayer-Händler für Tschechien, die Slowakei und Ungarn und berät Sie umfassend zur advanced line 100, einschließlich Aufstellplanung, Inbetriebnahme und Schulung.`,
       en: `The Mayer advanced line 100 is the proven classic among panel saws for processing aluminium, non-ferrous metals and plastics. With 18/24 kW motor power and a cutting height of 100 mm, this panel dividing saw delivers vibration-free, precise cuts even in demanding materials such as aluminium composite panels, acrylic glass, polycarbonate and rigid PVC. The stable machine construction and excellent saw carriage guidance ensure consistently high cut quality in continuous operation. The cutting length is configurable between 3,200 and 4,200 mm, allowing flexible adaptation to various workpiece formats. The feed speed from 0.2 to 60 m/min is continuously variable and tuned to the special requirements of metal processing; in particular, the low feed speeds enable burr-free cuts in aluminium panels and plastic profiles. Universal roller tables enable single-operator use and the transport of large panels. The advanced line 100 has proven itself in thousands of installations worldwide and is the reliable partner for daily production operations. Asamer is the authorised Mayer dealer for the Czech Republic, Slovakia and Hungary and provides comprehensive consultation on the advanced line 100, including layout planning, commissioning and training.`,
       cz: `Mayer advanced line 100 je osvědčená klasika mezi formátovacími pilami pro zpracování hliníku, neželezných kovů a plastů. S výkonem motoru 18/24 kW a výškou řezu 100 mm dodává tato pila na desky precizní řezy bez vibrací i v náročných materiálech, jako jsou hliníkové kompozitní desky, akrylátové sklo, polykarbonát a tvrdé PVC. Stabilní konstrukce stroje a vynikající vedení pilového vozíku zajišťují trvale vysokou kvalitu řezu v nepřetržitém provozu. Délka řezu je konfigurovatelná mezi 3 200 a 4 200 mm, což umožňuje flexibilní přizpůsobení různým formátům obrobků. Rychlost posuvu od 0,2 do 60 m/min je plynule regulovatelná a přizpůsobená speciálním požadavkům zpracování kovů; zejména nízké rychlosti posuvu umožňují řezy bez otřepů v hliníkových deskách a plastových profilech. Univerzální válečkové stoly umožňují obsluhu jedním operátorem a přepravu velkých desek. advanced line 100 se osvědčila v tisících instalacích po celém světě a je spolehlivým partnerem pro každodenní výrobní provoz. Asamer je autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko a poskytuje komplexní poradenství k advanced line 100, včetně plánování rozmístění, uvedení do provozu a školení.`,
+      hu: `A Mayer advanced line 100 a bevált klasszikus lapfűrész alumínium, nemvasfémek és műanyagok feldolgozásához. 18/24 kW motorteljesítménnyel és 100 mm vágásmagassággal ez a lapfűrész rezgésmentes, precíz vágásokat szállít még olyan igényes anyagokban is, mint az alumínium kompozitlapok, akrilüveg, polikarbonát és kemény PVC. A stabil gépszerkezet és a kiváló fűrészkocsi-vezetés folyamatos üzemben is állandóan magas vágásminőséget biztosít. A vágóhossz 3 200 és 4 200 mm között konfigurálható, ami rugalmas alkalmazkodást tesz lehetővé a különböző munkadarab-formátumokhoz. A 0,2-től 60 m/min-ig terjedő előtolási sebesség fokozatmentesen szabályozható és a fémmegmunkálás speciális igényeire van hangolva; különösen az alacsony előtolási sebességek teszik lehetővé a sorjamentes vágásokat alumíniumlapokban és műanyagprofilokban. Univerzális görgős asztalok teszik lehetővé az egyszemélyes kezelést és a nagy lapok szállítását. Az advanced line 100 több ezer telepítésben bizonyított világszerte, és megbízható partner a napi gyártási üzemhez. Az Asamer a Mayer hivatalos viszonteladója Csehország, Szlovákia és Magyarország területén, és átfogó tanácsadást nyújt az advanced line 100-hoz, beleértve a layout-tervezést, üzembe helyezést és oktatást.`,
     },
     applicationSections: [
       {
@@ -402,11 +426,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Zuschnitt von Aluminium-Verbundplatten',
           en: 'Cutting aluminium composite panels',
           cz: 'Řezání hliníkových kompozitních desek',
+          hu: 'Alumínium kompozitlapok vágása',
         },
         body: {
           de: 'Die advanced line 100 ist prädestiniert für den Zuschnitt von Aluminium-Verbundplatten (Alucobond, Dibond und ähnliche). Die niedrige Vorschubgeschwindigkeit ab 0,2 m/min und der 18/24 kW Motor erzeugen saubere, gratfreie Schnittkanten ohne Nachbearbeitung. Fassadenbauer und Werbetechniker profitieren von der hohen Maßhaltigkeit.',
           en: 'The advanced line 100 is predestined for cutting aluminium composite panels (Alucobond, Dibond and similar). The low feed speed from 0.2 m/min and the 18/24 kW motor produce clean, burr-free cut edges without post-processing. Facade builders and sign makers benefit from the high dimensional accuracy.',
           cz: 'advanced line 100 je přímo předurčena pro řezání hliníkových kompozitních desek (Alucobond, Dibond a podobné). Nízká rychlost posuvu od 0,2 m/min a motor 18/24 kW vytvářejí čisté řezné hrany bez otřepů a bez nutnosti následného opracování. Výrobci fasád a reklamní technici profitují z vysoké rozměrové přesnosti.',
+          hu: 'Az advanced line 100 kifejezetten alkalmas alumínium kompozitlapok (Alucobond, Dibond és hasonlók) szabására. A 0,2 m/min-tól induló alacsony előtolási sebesség és a 18/24 kW motor tiszta, sorjamentes vágási éleket hoz létre utómegmunkálás nélkül. A homlokzatépítők és reklámtechnikusok profitálnak a magas méretpontosságból.',
         },
       },
       {
@@ -414,11 +440,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Kunststoff-Plattenbearbeitung',
           en: 'Plastic panel processing',
           cz: 'Zpracování plastových desek',
+          hu: 'Műanyaglapok feldolgozása',
         },
         body: {
           de: 'Acrylglas (PMMA), Polycarbonat, Hart-PVC und andere technische Kunststoffe lassen sich auf der advanced line 100 gratfrei und ohne Ausrisse schneiden. Die stufenlos regelbare Vorschubgeschwindigkeit erlaubt die optimale Anpassung an unterschiedliche Kunststoffarten und Materialstärken.',
           en: 'Acrylic glass (PMMA), polycarbonate, rigid PVC and other engineering plastics can be cut on the advanced line 100 without burrs or tear-out. The continuously variable feed speed allows optimal adaptation to different plastic types and material thicknesses.',
           cz: 'Akrylátové sklo (PMMA), polykarbonát, tvrdé PVC a další technické plasty lze na advanced line 100 řezat bez otřepů a bez vytrhávání. Plynule regulovatelná rychlost posuvu umožňuje optimální přizpůsobení různým typům plastů a tloušťkám materiálu.',
+          hu: 'Az akrilüveg (PMMA), polikarbonát, kemény PVC és egyéb műszaki műanyagok az advanced line 100-on sorjamentesen és kiszakadás nélkül vághatók. A fokozatmentesen szabályozható előtolási sebesség lehetővé teszi az optimális alkalmazkodást a különböző műanyagtípusokhoz és anyagvastagságokhoz.',
         },
       },
       {
@@ -426,11 +454,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'NE-Metall-Verarbeitung',
           en: 'Non-ferrous metal processing',
           cz: 'Zpracování neželezných kovů',
+          hu: 'Nemvasfémek feldolgozása',
         },
         body: {
           de: 'Neben Aluminium verarbeitet die advanced line 100 auch Messing, Kupfer und andere NE-Metalle. Die schwingungsarme Konstruktion und die präzise Sägewagenführung garantieren exakte Ergebnisse auch bei empfindlichen Materialien.',
           en: 'In addition to aluminium, the advanced line 100 also processes brass, copper and other non-ferrous metals. The low-vibration construction and precise saw carriage guidance guarantee exact results even with sensitive materials.',
           cz: 'Kromě hliníku zpracovává advanced line 100 také mosaz, měď a další neželezné kovy. Konstrukce s nízkými vibracemi a precizní vedení pilového vozíku zaručují přesné výsledky i u citlivých materiálů.',
+          hu: 'Az alumíniumon kívül az advanced line 100 sárgarezet, rezet és egyéb nemvasfémeket is feldolgoz. A rezgésszegény szerkezet és a precíz fűrészkocsi-vezetés pontos eredményeket garantál érzékeny anyagoknál is.',
         },
       },
     ],
@@ -438,6 +468,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Die advanced line 100 ist Ihre Wahl, wenn Sie eine bewährte Plattensäge für Aluminium und Kunststoffe in der 100-mm-Klasse suchen. Sie überzeugt durch Zuverlässigkeit und vibrationsfreie Schnitte und ist ideal für Fassadenbauer, Werbetechniker und Kunststoffverarbeiter. Asamer berät Sie persönlich.',
       en: 'The advanced line 100 is your choice when you need a proven panel saw for aluminium and plastics in the 100 mm class. It convinces with reliability and vibration-free cuts and is ideal for facade builders, sign makers and plastics processors. Asamer offers personal consultation.',
       cz: 'advanced line 100 je vaše volba, pokud hledáte osvědčenou formátovací pilu pro hliník a plasty ve třídě 100 mm. Přesvědčí spolehlivostí a řezy bez vibrací a je ideální pro výrobce fasád, reklamní techniky a zpracovatele plastů. Asamer nabízí osobní poradenství.',
+      hu: 'Az advanced line 100 az Ön választása, ha bevált lapfűrészre van szüksége alumíniumhoz és műanyagokhoz a 100 mm-es kategóriában. Megbízhatóságával és rezgésmentes vágásaival győz, és ideális homlokzatépítőknek, reklámtechnikusoknak és műanyag-feldolgozóknak. Az Asamer személyes tanácsadást kínál.',
     },
     faq: [
       {
@@ -445,11 +476,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Kann die advanced line 100 Aluminium schneiden?',
           en: 'Can the advanced line 100 cut aluminium?',
           cz: 'Může advanced line 100 řezat hliník?',
+          hu: 'Tud az advanced line 100 alumíniumot vágni?',
         },
         answer: {
           de: 'Ja, die advanced line 100 ist speziell für den Zuschnitt von Aluminium, Aluminium-Verbundplatten und NE-Metallen konzipiert. Der 18/24 kW Motor liefert die nötige Leistung für saubere, gratfreie Schnitte.',
           en: 'Yes, the advanced line 100 is specifically designed for cutting aluminium, aluminium composite panels and non-ferrous metals. The 18/24 kW motor delivers the necessary power for clean, burr-free cuts.',
           cz: 'Ano, advanced line 100 je speciálně navržena pro řezání hliníku, hliníkových kompozitních desek a neželezných kovů. Motor 18/24 kW dodává potřebný výkon pro čisté řezy bez otřepů.',
+          hu: 'Igen, az advanced line 100 kifejezetten alumínium, alumínium kompozitlapok és nemvasfémek vágására készült. A 18/24 kW motor biztosítja a szükséges teljesítményt a tiszta, sorjamentes vágásokhoz.',
         },
       },
       {
@@ -457,11 +490,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Welche Vorschubgeschwindigkeit hat die advanced line 100?',
           en: 'What feed speed does the advanced line 100 have?',
           cz: 'Jakou rychlost posuvu má advanced line 100?',
+          hu: 'Milyen előtolási sebessége van az advanced line 100-nak?',
         },
         answer: {
           de: 'Die Vorschubgeschwindigkeit beträgt 0,2 bis 60 m/min, stufenlos regelbar. Die niedrigen Geschwindigkeiten sind entscheidend für gratfreie Schnitte in Aluminium und Kunststoffen.',
           en: 'The feed speed ranges from 0.2 to 60 m/min, continuously variable. The low speeds are crucial for burr-free cuts in aluminium and plastics.',
           cz: 'Rychlost posuvu je 0,2 až 60 m/min, plynule regulovatelná. Nízké rychlosti jsou klíčové pro řezy bez otřepů v hliníku a plastech.',
+          hu: 'Az előtolási sebesség 0,2-től 60 m/min-ig terjed, fokozatmentesen szabályozható. Az alacsony sebességek kulcsfontosságúak a sorjamentes vágásokhoz alumíniumban és műanyagokban.',
         },
       },
       {
@@ -469,11 +504,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Welche Kunststoffe kann die advanced line 100 verarbeiten?',
           en: 'What plastics can the advanced line 100 process?',
           cz: 'Jaké plasty může advanced line 100 zpracovávat?',
+          hu: 'Milyen műanyagokat tud feldolgozni az advanced line 100?',
         },
         answer: {
           de: 'Die advanced line 100 verarbeitet Acrylglas (PMMA), Polycarbonat, Hart-PVC, PE, PP und weitere technische Kunststoffe gratfrei und ohne Ausrisse.',
           en: 'The advanced line 100 processes acrylic glass (PMMA), polycarbonate, rigid PVC, PE, PP and other engineering plastics without burrs or tear-out.',
           cz: 'advanced line 100 zpracovává akrylátové sklo (PMMA), polykarbonát, tvrdé PVC, PE, PP a další technické plasty bez otřepů a bez vytrhávání.',
+          hu: 'Az advanced line 100 akrilüveget (PMMA), polikarbonátot, kemény PVC-t, PE-t, PP-t és egyéb műszaki műanyagokat dolgoz fel sorjamentesen és kiszakadás nélkül.',
         },
       },
     ],
@@ -487,6 +524,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: `Die Mayer advanced line 130 ist eine vielseitige Plattensäge für Aluminium, NE-Metalle und Kunststoffe mit 130 mm Schnitthöhe und integrierter Absaugung. Die stabile Konstruktion in Kombination mit vibrationsfreien Präzisionslagern gewährleistet exakte Ergebnisse bei jedem Schnitt. Das Dual-Servo-Drive-System mit zwei unabhängigen Servomotoren liefert absolute Positioniergenauigkeit und ermöglicht programmierbare Korrekturkurven für unterschiedliche Materialien. Der 24 kW Motor treibt ein 500 mm Sägeblatt mit 142 mm Projektion an und bietet damit die Leistungsreserve, die für den Zuschnitt von dicken Aluminium-Verbundplatten und massiven Kunststoffblöcken erforderlich ist. Die Schnittlänge ist zwischen 3.200 und 4.200 mm konfigurierbar. Der doppelte Druckbalken mit Lasermessung minimiert Besäumschnitte und optimiert den Materialverbrauch. Ein patentierter Spaltkeil verhindert das Verklemmen bei Platten mit hoher Materialspannung. Die integrierte Absaugung hält den Arbeitsbereich sauber und erfüllt Arbeitsschutz-Anforderungen. Der optionale Front-Drehtisch ermöglicht eine 90°-Neupositionierung für platzsparende Flexibilität. Die advanced line 130 ist maßgeschneidert nach Kundenbedarf konfigurierbar und verbindet das Außergewöhnliche mit dem Nützlichen. Asamer bietet als autorisierter Mayer-Händler für Tschechien, die Slowakei und Ungarn umfassende Beratung und individuelle Lösungen für die advanced line 130.`,
       en: `The Mayer advanced line 130 is a versatile panel saw for aluminium, non-ferrous metals and plastics with 130 mm cutting height and integrated extraction. The stable construction combined with vibration-free precision bearings ensures exact results on every cut. The Dual Servo Drive system with two independent servo motors delivers absolute positioning accuracy and enables programmable correction curves for different materials. The 24 kW motor drives a 500 mm saw blade with 142 mm projection, providing the power reserve required for cutting thick aluminium composite panels and solid plastic blocks. The cutting length is configurable between 3,200 and 4,200 mm. The double pressure beam with laser measurement minimises trimming cuts and optimises material consumption. A patented riving knife prevents clamping on panels with high material tension. The integrated extraction keeps the work area clean and meets occupational health and safety requirements. The optional front turntable enables 90-degree repositioning for space-saving flexibility. The advanced line 130 can be custom-configured to customer needs, combining the extraordinary with the useful. Asamer, as authorised Mayer dealer for the Czech Republic, Slovakia and Hungary, offers comprehensive consultation and individual solutions for the advanced line 130.`,
       cz: `Mayer advanced line 130 je všestranná formátovací pila pro hliník, neželezné kovy a plasty s výškou řezu 130 mm a integrovaným odsáváním. Stabilní konstrukce v kombinaci s precizními ložisky bez vibrací zajišťuje přesné výsledky při každém řezu. Systém Dual Servo Drive se dvěma nezávislými servomotory dodává absolutní přesnost polohování a umožňuje programovatelné korekční křivky pro různé materiály. Motor 24 kW pohání pilový kotouč 500 mm s projekcí 142 mm a poskytuje tak výkonovou rezervu potřebnou pro řezání tlustých hliníkových kompozitních desek a masivních plastových bloků. Délka řezu je konfigurovatelná mezi 3 200 a 4 200 mm. Dvojitý přítlačný trám s laserovým měřením minimalizuje ořezové řezy a optimalizuje spotřebu materiálu. Patentovaný rozevírací klín zabraňuje zaseknutí u desek s vysokým vnitřním pnutím materiálu. Integrované odsávání udržuje pracovní prostor čistý a splňuje požadavky na bezpečnost práce. Volitelný přední otočný stůl umožňuje 90° přepolohování pro úspornou flexibilitu. advanced line 130 je konfigurovatelná na míru podle potřeb zákazníka a spojuje výjimečné s užitečným. Asamer jako autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko nabízí komplexní poradenství a individuální řešení pro advanced line 130.`,
+      hu: `A Mayer advanced line 130 egy sokoldalú lapfűrész alumíniumhoz, nemvasfémekhez és műanyagokhoz 130 mm vágásmagassággal és integrált elszívással. A stabil szerkezet a rezgésmentes precíziós csapágyakkal kombinálva pontos eredményeket biztosít minden vágásnál. A Dual Servo Drive rendszer két független szervomotorral abszolút pozícionálási pontosságot nyújt és programozható korrekciós görbéket tesz lehetővé a különböző anyagokhoz. A 24 kW motor egy 500 mm-es fűrészlapot hajt meg 142 mm-es kivetítéssel, és olyan teljesítménytartalékot biztosít, amely vastag alumínium kompozitlapok és masszív műanyagtömbök vágásához szükséges. A vágóhossz 3 200 és 4 200 mm között konfigurálható. A kettős nyomógerenda lézeres méréssel minimalizálja a szélvágásokat és optimalizálja az anyagfelhasználást. Egy szabadalmaztatott hasítóék megakadályozza a beszorulást nagy anyagfeszültségű lapoknál. Az integrált elszívás tisztán tartja a munkaterületet és megfelel a munkavédelmi követelményeknek. Az opcionális elülső forgóasztal 90°-os átpozícionálást tesz lehetővé helytakarékos rugalmassággal. Az advanced line 130 személyre szabottan konfigurálható a vevői igények szerint, egyesítve a rendkívülit a hasznossal. Az Asamer a Mayer hivatalos viszonteladójaként Csehországban, Szlovákiában és Magyarországon átfogó tanácsadást és egyedi megoldásokat kínál az advanced line 130-hoz.`,
     },
     applicationSections: [
       {
@@ -494,11 +532,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Fassadenbau mit Aluminium-Verbundplatten',
           en: 'Facade construction with aluminium composite panels',
           cz: 'Stavba fasád z hliníkových kompozitních desek',
+          hu: 'Homlokzatépítés alumínium kompozitlapokkal',
         },
         body: {
           de: 'Die advanced line 130 ist ideal für Fassadenbauer, die Aluminium-Verbundplatten wie Alucobond oder Dibond auf Maß zuschneiden. Die 130 mm Schnitthöhe erlaubt auch dickere Verbundmaterialien und Sandwichpanels. Die Lasermessung am Druckbalken reduziert Besäumschnitte und senkt die Materialkosten.',
           en: 'The advanced line 130 is ideal for facade builders cutting aluminium composite panels such as Alucobond or Dibond to size. The 130 mm cutting height accommodates thicker composite materials and sandwich panels. The laser measurement on the pressure beam reduces trimming cuts and lowers material costs.',
           cz: 'advanced line 130 je ideální pro stavitele fasád řezající hliníkové kompozitní desky jako Alucobond nebo Dibond na míru. Výška řezu 130 mm pojme i tlustší kompozitní materiály a sendvičové panely. Laserové měření na přítlačném trámu snižuje ořezové řezy a snižuje náklady na materiál.',
+          hu: 'Az advanced line 130 ideális homlokzatépítők számára, akik alumínium kompozitlapokat, például Alucobond vagy Dibond lapokat szabnak méretre. A 130 mm vágásmagasság vastagabb kompozit anyagokat és szendvicspanelokat is befogad. A nyomógerendán lévő lézeres mérés csökkenti a szélvágásokat és az anyagköltségeket.',
         },
       },
       {
@@ -506,11 +546,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Kunststoffverarbeitung im Industriemaßstab',
           en: 'Plastic processing at industrial scale',
           cz: 'Zpracování plastů v průmyslovém měřítku',
+          hu: 'Műanyag-feldolgozás ipari léptékben',
         },
         body: {
           de: 'Für Kunststoffverarbeiter bietet die advanced line 130 die Kombination aus Leistung, Präzision und integrierter Absaugung. Massive Kunststoffblöcke aus Polyethylen, Polyamid oder PTFE werden ebenso sauber geschnitten wie dünne Acrylglasplatten. Der patentierte Spaltkeil verhindert das Verklemmen bei Materialien unter Spannung.',
           en: 'For plastics processors, the advanced line 130 offers the combination of power, precision and integrated extraction. Solid plastic blocks of polyethylene, polyamide or PTFE are cut as cleanly as thin acrylic sheets. The patented riving knife prevents clamping on materials under tension.',
           cz: 'Pro zpracovatele plastů nabízí advanced line 130 kombinaci výkonu, přesnosti a integrovaného odsávání. Masivní plastové bloky z polyethylenu, polyamidu nebo PTFE jsou řezány stejně čistě jako tenké akrylátové desky. Patentovaný rozevírací klín zabraňuje zaseknutí u materiálů pod pnutím.',
+          hu: 'A műanyag-feldolgozók számára az advanced line 130 az erő, a precizitás és az integrált elszívás kombinációját kínálja. A polietilén, poliamid vagy PTFE masszív műanyagtömbök ugyanolyan tisztán vághatók, mint a vékony akrilüveg lapok. A szabadalmaztatott hasítóék megakadályozza a feszültség alatt álló anyagok beszorulását.',
         },
       },
     ],
@@ -518,6 +560,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Die advanced line 130 ist optimal, wenn Sie 130 mm Schnitthöhe, integrierte Absaugung und Dual Servo Drive benötigen. Sie bietet mehr als die 100er und ist kompakter als die 160er. Ideal für Fassadenbauer, Werbetechniker und Kunststoffverarbeiter, die eine maßgeschneiderte Lösung suchen. Kontaktieren Sie Asamer für eine individuelle Konfiguration.',
       en: 'The advanced line 130 is optimal when you need 130 mm cutting height, integrated extraction and Dual Servo Drive. It offers more than the 100 and is more compact than the 160. Ideal for facade builders, sign makers and plastics processors looking for a tailored solution. Contact Asamer for individual configuration.',
       cz: 'advanced line 130 je optimální, pokud potřebujete výšku řezu 130 mm, integrované odsávání a Dual Servo Drive. Nabízí více než model 100 a je kompaktnější než model 160. Ideální pro stavitele fasád, reklamní techniky a zpracovatele plastů hledající řešení na míru. Kontaktujte Asamer pro individuální konfiguraci.',
+      hu: 'Az advanced line 130 optimális, ha 130 mm vágásmagasságra, integrált elszívásra és Dual Servo Drive rendszerre van szüksége. Többet kínál, mint a 100-as, és kompaktabb, mint a 160-as. Ideális homlokzatépítőknek, reklámtechnikusoknak és műanyag-feldolgozóknak, akik személyre szabott megoldást keresnek. Lépjen kapcsolatba az Asamerrel egyedi konfigurációért.',
     },
     faq: [
       {
@@ -525,11 +568,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Was ist das Dual Servo Drive System der advanced line 130?',
           en: 'What is the Dual Servo Drive system of the advanced line 130?',
           cz: 'Co je systém Dual Servo Drive u advanced line 130?',
+          hu: 'Mi a Dual Servo Drive rendszer az advanced line 130-nál?',
         },
         answer: {
           de: 'Das Dual Servo Drive System besteht aus zwei unabhängigen Servomotoren, die absolute Positioniergenauigkeit und programmierbare Korrekturkurven für verschiedene Materialien bieten.',
           en: 'The Dual Servo Drive system consists of two independent servo motors that provide absolute positioning accuracy and programmable correction curves for different materials.',
           cz: 'Systém Dual Servo Drive sestává ze dvou nezávislých servomotorů, které poskytují absolutní přesnost polohování a programovatelné korekční křivky pro různé materiály.',
+          hu: 'A Dual Servo Drive rendszer két független szervomotorból áll, amelyek abszolút pozícionálási pontosságot és programozható korrekciós görbéket biztosítanak különböző anyagokhoz.',
         },
       },
       {
@@ -537,11 +582,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Hat die advanced line 130 eine integrierte Absaugung?',
           en: 'Does the advanced line 130 have integrated extraction?',
           cz: 'Má advanced line 130 integrované odsávání?',
+          hu: 'Rendelkezik az advanced line 130 integrált elszívással?',
         },
         answer: {
           de: 'Ja, die advanced line 130 verfügt über eine integrierte Absaugung, die den Arbeitsbereich sauber hält und die Arbeitsschutz-Anforderungen erfüllt.',
           en: 'Yes, the advanced line 130 features integrated extraction that keeps the work area clean and meets occupational health and safety requirements.',
           cz: 'Ano, advanced line 130 disponuje integrovaným odsáváním, které udržuje pracovní prostor čistý a splňuje požadavky na bezpečnost práce.',
+          hu: 'Igen, az advanced line 130 integrált elszívással van felszerelve, amely tisztán tartja a munkaterületet és megfelel a munkavédelmi követelményeknek.',
         },
       },
       {
@@ -549,11 +596,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Welches Sägeblatt verwendet die advanced line 130?',
           en: 'What saw blade does the advanced line 130 use?',
           cz: 'Jaký pilový kotouč používá advanced line 130?',
+          hu: 'Milyen fűrészlapot használ az advanced line 130?',
         },
         answer: {
           de: 'Die advanced line 130 verwendet ein 500 mm Sägeblatt mit 142 mm Projektion, angetrieben von einem 24 kW Motor.',
           en: 'The advanced line 130 uses a 500 mm saw blade with 142 mm projection, driven by a 24 kW motor.',
           cz: 'advanced line 130 používá pilový kotouč 500 mm s projekcí 142 mm, poháněný motorem 24 kW.',
+          hu: 'Az advanced line 130 egy 500 mm-es fűrészlapot használ 142 mm-es kivetítéssel, amelyet 24 kW motor hajt meg.',
         },
       },
     ],
@@ -567,6 +616,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: `Die Mayer advanced line 160 ist eine mehrfach preisgekrönte Hochleistungs-Plattensäge mit PC-Steuerung per Touchscreen, die 160 mm Schnitthöhe für die industrielle Bearbeitung von Aluminium, NE-Metallen und Kunststoffen bietet. Der leistungsstarke 35 kW Motor treibt ein 600 mm Sägeblatt mit 180 mm Projektion an und liefert die Schneidleistung, die für dicke Aluminium-Verbundplatten, massive Kunststoffblöcke und NE-Metall-Werkstücke erforderlich ist. Die Schnittlänge ist zwischen 3.200 und 4.200 mm konfigurierbar, bei einer Vorschubgeschwindigkeit von 0,2 bis 60 m/min. Die advanced line 160 wurde mehrfach für innovative Lösungen und Patente ausgezeichnet und setzt Maßstäbe in ihrer Klasse. Das Dual Servo Drive System mit programmierbaren Korrekturkurven gewährleistet höchste Positioniergenauigkeit unabhängig vom Material. Die PC-Steuerung mit intuitivem Touchscreen erlaubt eine komfortable Auftragsverwaltung, die Speicherung von Schnittmustern und die Integration in übergeordnete Produktionssysteme. Der Lamellen-Screen sorgt für optimale Absaugleistung und hält den Arbeitsbereich frei von Spänen und Staub. Die advanced line 160 ist ein echter Allrounder für anspruchsvolle Industrieanwendungen, bei denen hoher Durchsatz und höchste Schnittgenauigkeit gleichermaßen gefordert sind. Asamer bietet als autorisierter Mayer-Händler für Tschechien, die Slowakei und Ungarn die komplette Betreuung von Beratung über Installation bis zum After-Sales-Service.`,
       en: `The Mayer advanced line 160 is a multiple award-winning high-performance panel saw with PC control via touchscreen, offering 160 mm cutting height for industrial processing of aluminium, non-ferrous metals and plastics. The powerful 35 kW motor drives a 600 mm saw blade with 180 mm projection, delivering the cutting performance required for thick aluminium composite panels, solid plastic blocks and non-ferrous metal workpieces. The cutting length is configurable between 3,200 and 4,200 mm with a feed speed of 0.2 to 60 m/min. The advanced line 160 has won multiple awards for innovative solutions and patents, setting benchmarks in its class. The Dual Servo Drive system with programmable correction curves ensures the highest positioning accuracy regardless of material. The PC control with intuitive touchscreen enables comfortable order management, storage of cutting patterns and integration into higher-level production systems. The Lamella Screen provides optimal extraction performance and keeps the work area free from chips and dust. The advanced line 160 is a true all-rounder for demanding industrial applications where high throughput and maximum cutting accuracy are equally required. Asamer, as the authorised Mayer dealer for the Czech Republic, Slovakia and Hungary, provides complete support from consultation through installation to after-sales service.`,
       cz: `Mayer advanced line 160 je mnohonásobně oceněná vysokovýkonná formátovací pila s PC řízením přes dotykový displej, nabízející výšku řezu 160 mm pro průmyslové zpracování hliníku, neželezných kovů a plastů. Výkonný motor 35 kW pohání pilový kotouč 600 mm s projekcí 180 mm a dodává řezný výkon potřebný pro tlusté hliníkové kompozitní desky, masivní plastové bloky a obrobky z neželezných kovů. Délka řezu je konfigurovatelná mezi 3 200 a 4 200 mm při rychlosti posuvu 0,2 až 60 m/min. advanced line 160 získala několik ocenění za inovativní řešení a patenty a stanovuje měřítka ve své třídě. Systém Dual Servo Drive s programovatelnými korekčními křivkami zajišťuje nejvyšší přesnost polohování nezávisle na materiálu. PC řízení s intuitivním dotykovým displejem umožňuje komfortní správu zakázek, ukládání řezných plánů a integraci do nadřazených výrobních systémů. Lamelový screen zajišťuje optimální výkon odsávání a udržuje pracovní prostor bez třísek a prachu. advanced line 160 je skutečný univerzál pro náročné průmyslové aplikace, kde jsou stejně vyžadovány vysoká průchodnost a maximální přesnost řezu. Asamer jako autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko poskytuje kompletní podporu od poradenství přes instalaci po poprodejní servis.`,
+      hu: `A Mayer advanced line 160 egy többszörösen díjazott, nagy teljesítményű lapfűrész érintőképernyős PC-vezérléssel, amely 160 mm vágásmagasságot kínál alumínium, nemvasfémek és műanyagok ipari feldolgozásához. A 35 kW-os erős motor egy 600 mm-es fűrészlapot hajt meg 180 mm-es kivetítéssel, és olyan vágási teljesítményt nyújt, amely szükséges vastag alumínium kompozitlapokhoz, masszív műanyagtömbökhöz és nemvasfém munkadarabokhoz. A vágóhossz 3 200 és 4 200 mm között konfigurálható, az előtolási sebesség 0,2-től 60 m/min-ig. Az advanced line 160 több díjat kapott innovatív megoldásaiért és szabadalmaiért, és mércét állít kategóriájában. A Dual Servo Drive rendszer programozható korrekciós görbékkel biztosítja a legmagasabb pozícionálási pontosságot anyagtól függetlenül. Az intuitív érintőképernyős PC-vezérlés kényelmes megrendeléskezelést, vágási minták tárolását és magasabb szintű gyártási rendszerekbe való integrációt tesz lehetővé. A lamellás szűrő optimális elszívási teljesítményt biztosít és tisztán tartja a munkaterületet a forgácstól és portól. Az advanced line 160 igazi mindenes igényes ipari alkalmazásokhoz, ahol egyaránt szükséges a nagy termelékenység és a maximális vágási pontosság. Az Asamer a Mayer hivatalos viszonteladójaként Csehországban, Szlovákiában és Magyarországon teljes körű támogatást nyújt a tanácsadástól a telepítésen át az értékesítés utáni szervizig.`,
     },
     applicationSections: [
       {
@@ -574,11 +624,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Industrielle Aluminium-Plattenbearbeitung',
           en: 'Industrial aluminium panel processing',
           cz: 'Průmyslové zpracování hliníkových desek',
+          hu: 'Ipari alumíniumlap-feldolgozás',
         },
         body: {
           de: 'Die advanced line 160 ist die erste Wahl für industrielle Aluminium-Verarbeiter mit hohem Durchsatz. Der 35 kW Motor und das 600 mm Sägeblatt schneiden auch dicke Aluminiumplatten und Verbundwerkstoffe präzise und gratfrei. Die PC-Steuerung ermöglicht die Speicherung tausender Schnittmuster und eine nahtlose ERP-Integration.',
           en: 'The advanced line 160 is the first choice for industrial aluminium processors with high throughput. The 35 kW motor and 600 mm saw blade cut even thick aluminium panels and composite materials precisely and burr-free. The PC control enables storage of thousands of cutting patterns and seamless ERP integration.',
           cz: 'advanced line 160 je první volbou pro průmyslové zpracovatele hliníku s vysokým průchodem. Motor 35 kW a pilový kotouč 600 mm řežou i tlusté hliníkové desky a kompozitní materiály přesně a bez otřepů. PC řízení umožňuje ukládání tisíců řezných plánů a bezešvou integraci do ERP.',
+          hu: 'Az advanced line 160 az első választás nagy kapacitású ipari alumínium-feldolgozók számára. A 35 kW-os motor és a 600 mm-es fűrészlap vastag alumíniumlapokat és kompozit anyagokat is precízen és sorjamentesen vág. A PC-vezérlés több ezer vágási minta tárolását és zökkenőmentes ERP-integrációt tesz lehetővé.',
         },
       },
       {
@@ -586,11 +638,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Technische Kunststoffe und Composites',
           en: 'Engineering plastics and composites',
           cz: 'Technické plasty a kompozity',
+          hu: 'Műszaki műanyagok és kompozitok',
         },
         body: {
           de: 'Die Kombination aus variabler Vorschubgeschwindigkeit und programmierbaren Korrekturkurven macht die advanced line 160 ideal für die Verarbeitung technischer Kunststoffe wie PTFE, PEEK, POM und glasfaserverstärkter Composites. Der Lamellen-Screen sorgt für eine effiziente Absaugung der Kunststoff-Späne.',
           en: 'The combination of variable feed speed and programmable correction curves makes the advanced line 160 ideal for processing engineering plastics like PTFE, PEEK, POM and glass-fibre reinforced composites. The Lamella Screen ensures efficient extraction of plastic chips.',
           cz: 'Kombinace variabilní rychlosti posuvu a programovatelných korekčních křivek činí advanced line 160 ideální pro zpracování technických plastů jako PTFE, PEEK, POM a skleněnými vlákny vyztužených kompozitů. Lamelový screen zajišťuje efektivní odsávání plastových třísek.',
+          hu: 'A változtatható előtolási sebesség és a programozható korrekciós görbék kombinációja az advanced line 160-at ideálissá teszi műszaki műanyagok, például PTFE, PEEK, POM és üvegszál-erősítésű kompozitok feldolgozásához. A lamellás szűrő hatékony műanyagforgács-elszívást biztosít.',
         },
       },
     ],
@@ -598,6 +652,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Die advanced line 160 ist Ihre Wahl bei industriellen Anforderungen an Schnitthöhe (160 mm), Motorleistung (35 kW) und PC-Steuerung. Sie eignet sich für Betriebe, die Aluminium, Kunststoffe und NE-Metalle im Dauerbetrieb mit hoher Stückzahl verarbeiten. Lassen Sie sich von Asamer ein individuelles Angebot erstellen.',
       en: 'The advanced line 160 is your choice for industrial requirements in cutting height (160 mm), motor power (35 kW) and PC control. It suits operations processing aluminium, plastics and non-ferrous metals in continuous high-volume production. Let Asamer prepare a tailored quotation for you.',
       cz: 'advanced line 160 je vaše volba pro průmyslové požadavky na výšku řezu (160 mm), výkon motoru (35 kW) a PC řízení. Hodí se pro provozy zpracovávající hliník, plasty a neželezné kovy v nepřetržité velkoobjemové výrobě. Nechte si od Asamer vypracovat nabídku na míru.',
+      hu: 'Az advanced line 160 az Ön választása a vágásmagasság (160 mm), motorteljesítmény (35 kW) és PC-vezérlés ipari követelményeihez. Olyan üzemekhez illik, amelyek alumíniumot, műanyagokat és nemvasfémeket dolgoznak fel folyamatos nagy mennyiségű gyártásban. Kérjen személyre szabott ajánlatot az Asamertől.',
     },
     faq: [
       {
@@ -605,11 +660,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Welche Steuerung hat die advanced line 160?',
           en: 'What control system does the advanced line 160 have?',
           cz: 'Jaký řídicí systém má advanced line 160?',
+          hu: 'Milyen vezérlőrendszere van az advanced line 160-nak?',
         },
         answer: {
           de: 'Die advanced line 160 verfügt über eine PC-Steuerung mit Touchscreen, die intuitive Auftragsplanung, Speicherung von Schnittmustern und ERP-Integration ermöglicht.',
           en: 'The advanced line 160 features PC control with touchscreen, enabling intuitive order planning, storage of cutting patterns and ERP integration.',
           cz: 'advanced line 160 disponuje PC řízením s dotykovým displejem, které umožňuje intuitivní plánování zakázek, ukládání řezných plánů a integraci do ERP.',
+          hu: 'Az advanced line 160 érintőképernyős PC-vezérléssel rendelkezik, amely intuitív megrendeléstervezést, vágási minták tárolását és ERP-integrációt tesz lehetővé.',
         },
       },
       {
@@ -617,11 +674,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Wie stark ist der Motor der advanced line 160?',
           en: 'How powerful is the motor of the advanced line 160?',
           cz: 'Jak výkonný je motor advanced line 160?',
+          hu: 'Milyen erős az advanced line 160 motorja?',
         },
         answer: {
           de: 'Die advanced line 160 ist mit einem 35 kW Motor ausgestattet, der ein 600 mm Sägeblatt mit 180 mm Projektion antreibt.',
           en: 'The advanced line 160 is equipped with a 35 kW motor driving a 600 mm saw blade with 180 mm projection.',
           cz: 'advanced line 160 je vybavena motorem 35 kW, který pohání pilový kotouč 600 mm s projekcí 180 mm.',
+          hu: 'Az advanced line 160 35 kW-os motorral van felszerelve, amely egy 600 mm-es fűrészlapot hajt meg 180 mm-es kivetítéssel.',
         },
       },
       {
@@ -629,11 +688,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Wofür wurde die advanced line 160 ausgezeichnet?',
           en: 'What awards has the advanced line 160 received?',
           cz: 'Za co byla advanced line 160 oceněna?',
+          hu: 'Milyen díjakat kapott az advanced line 160?',
         },
         answer: {
           de: 'Die advanced line 160 wurde mehrfach für innovative Lösungen und Patente ausgezeichnet, darunter das Dual Servo Drive System und die PC-Steuerung per Touchscreen.',
           en: 'The advanced line 160 has received multiple awards for innovative solutions and patents, including the Dual Servo Drive system and PC control via touchscreen.',
           cz: 'advanced line 160 získala mnohonásobná ocenění za inovativní řešení a patenty, včetně systému Dual Servo Drive a PC řízení přes dotykový displej.',
+          hu: 'Az advanced line 160 több díjat kapott innovatív megoldásokért és szabadalmakért, beleértve a Dual Servo Drive rendszert és az érintőképernyős PC-vezérlést.',
         },
       },
     ],
@@ -647,6 +708,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: `Die Mayer advanced line 160 turn erweitert die bewährte 160er-Plattform um eine automatische 90°-Wendeinheit und ermöglicht damit beidseitige Bearbeitung in einem Durchgang. Diese Plattenaufteilsäge ist speziell für Produktionslinien konzipiert, bei denen Längs- und Querschnitte ohne manuelles Umsetzen der Werkstücke durchgeführt werden sollen. Die 160 mm Schnitthöhe, der 35 kW Motor und das 600 mm Sägeblatt mit 180 mm Projektion bieten die gleiche Leistungsfähigkeit wie die Standard-160er-Version. Die automatische Wendeinheit dreht die Platten um 90° und positioniert sie für den nächsten Schnitt, was den Materialfluss beschleunigt und Bedienereingriffe minimiert. Dies ist besonders wertvoll bei der Verarbeitung großformatiger Aluminium-Verbundplatten und schwerer Kunststoffplatten, die manuell nur schwer zu handhaben sind. Das Dual Servo Drive System garantiert höchste Positioniergenauigkeit auch nach dem Wendevorgang. Die komfortable Bedienbarkeit ermöglicht ein einfaches Materialhandling selbst bei übergroßen Platten. Die Schnittlänge ist zwischen 3.200 und 4.200 mm konfigurierbar. Der doppelte Druckbalken mit Lasermessung stellt sicher, dass beide Schnittrichtungen die gleiche Präzision erreichen. Die advanced line 160 turn ist die logische Wahl für Betriebe, die Produktivität und Automatisierung in der Aluminium- und Kunststoffverarbeitung auf die nächste Stufe heben möchten. Asamer ist Ihr Ansprechpartner als autorisierter Mayer-Händler für CZ, SK und HU.`,
       en: `The Mayer advanced line 160 turn extends the proven 160 platform with an automatic 90-degree turning unit, enabling double-sided processing in a single pass. This panel dividing saw is specifically designed for production lines where longitudinal and cross cuts need to be performed without manual repositioning of workpieces. The 160 mm cutting height, 35 kW motor and 600 mm saw blade with 180 mm projection deliver the same capability as the standard 160 version. The automatic turning unit rotates panels by 90 degrees and positions them for the next cut, accelerating material flow and minimising operator intervention. This is particularly valuable when processing large-format aluminium composite panels and heavy plastic sheets that are difficult to handle manually. The Dual Servo Drive system guarantees the highest positioning accuracy even after the turning operation. The comfortable operability enables easy material handling even with oversized panels. The cutting length is configurable between 3,200 and 4,200 mm. The double pressure beam with laser measurement ensures that both cutting directions achieve the same precision. The advanced line 160 turn is the logical choice for operations wanting to take productivity and automation in aluminium and plastics processing to the next level. Asamer is your contact as the authorised Mayer dealer for CZ, SK and HU.`,
       cz: `Mayer advanced line 160 turn rozšiřuje osvědčenou platformu 160 o automatickou 90° otočnou jednotku a umožňuje tak oboustranné zpracování v jednom průchodu. Tato formátovací pila je speciálně navržena pro výrobní linky, kde je třeba provádět podélné i příčné řezy bez manuálního přemisťování obrobků. Výška řezu 160 mm, motor 35 kW a pilový kotouč 600 mm s projekcí 180 mm nabízejí stejný výkon jako standardní verze 160. Automatická otočná jednotka otáčí desky o 90° a polohuje je pro další řez, čímž urychluje materiálový tok a minimalizuje zásahy obsluhy. To je zvláště cenné při zpracování velkoformátových hliníkových kompozitních desek a těžkých plastových desek, které lze manuálně jen obtížně manipulovat. Systém Dual Servo Drive zaručuje nejvyšší přesnost polohování i po otočení. Komfortní ovládání umožňuje snadnou manipulaci s materiálem i u nadrozměrných desek. Délka řezu je konfigurovatelná mezi 3 200 a 4 200 mm. Dvojitý přítlačný trám s laserovým měřením zajišťuje, že oba směry řezu dosahují stejné přesnosti. advanced line 160 turn je logická volba pro provozy, které chtějí posunout produktivitu a automatizaci ve zpracování hliníku a plastů na další úroveň. Asamer je váš kontakt jako autorizovaný prodejce Mayer pro CZ, SK a HU.`,
+      hu: `A Mayer advanced line 160 turn kibővíti a bevált 160-as platformot egy automatikus 90°-os forgatóegységgel, lehetővé téve a kétoldali feldolgozást egyetlen menetben. Ez a lapfűrész kifejezetten olyan gyártósorokhoz készült, ahol hosszanti és keresztirányú vágásokat kell végezni a munkadarabok kézi áthelyezése nélkül. A 160 mm vágásmagasság, a 35 kW motor és az 180 mm kivetítésű 600 mm fűrészlap ugyanazt a teljesítményt kínálja, mint a standard 160-as verzió. Az automatikus forgatóegység 90°-kal elforgatja a lapokat és pozícionálja őket a következő vágáshoz, gyorsítva az anyagáramlást és minimalizálva a kezelői beavatkozást. Ez különösen értékes nagyformátumú alumínium kompozitlapok és nehéz műanyaglapok feldolgozásánál, amelyek kézzel nehezen kezelhetők. A Dual Servo Drive rendszer a forgatás után is garantálja a legmagasabb pozícionálási pontosságot. A kényelmes kezelés egyszerű anyagkezelést tesz lehetővé túlméretes lapoknál is. A vágóhossz 3 200 és 4 200 mm között konfigurálható. A kettős nyomógerenda lézeres méréssel biztosítja, hogy mindkét vágási irány ugyanazt a pontosságot érje el. Az advanced line 160 turn logikus választás olyan üzemek számára, amelyek az alumínium- és műanyagfeldolgozás termelékenységét és automatizálását a következő szintre szeretnék emelni. Az Asamer a kapcsolattartó, mint hivatalos Mayer viszonteladó CZ, SK és HU területén.`,
     },
     applicationSections: [
       {
@@ -654,11 +716,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Automatisierte Längs- und Querschnitte in einem Durchgang',
           en: 'Automated longitudinal and cross cuts in a single pass',
           cz: 'Automatizované podélné a příčné řezy v jednom průchodu',
+          hu: 'Automatizált hosszanti és keresztvágások egy menetben',
         },
         body: {
           de: 'Die 90°-Wendeinheit der advanced line 160 turn ermöglicht Längs- und Querschnitte ohne manuelles Umsetzen. Die Platten werden automatisch gedreht und für den nächsten Schnitt positioniert. Dies steigert den Durchsatz um bis zu 40 % gegenüber Maschinen ohne Wendeinheit und reduziert den Personalbedarf.',
           en: 'The 90-degree turning unit of the advanced line 160 turn enables longitudinal and cross cuts without manual repositioning. Panels are automatically rotated and positioned for the next cut. This increases throughput by up to 40% compared to machines without a turning unit and reduces staffing requirements.',
           cz: 'Otočná jednotka 90° u advanced line 160 turn umožňuje podélné a příčné řezy bez manuálního přemisťování. Desky jsou automaticky otočeny a polohovány pro další řez. To zvyšuje průchodnost až o 40 % oproti strojům bez otočné jednotky a snižuje potřebu personálu.',
+          hu: 'Az advanced line 160 turn 90°-os forgatóegysége hosszanti és keresztvágásokat tesz lehetővé kézi átpozícionálás nélkül. A lapokat automatikusan forgatja és pozícionálja a következő vágáshoz. Ez akár 40%-kal növeli a termelékenységet a forgatóegység nélküli gépekhez képest, és csökkenti a munkaerő-szükségletet.',
         },
       },
       {
@@ -666,11 +730,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Großformatige Aluminium-Verarbeitung',
           en: 'Large-format aluminium processing',
           cz: 'Zpracování velkých hliníkových formátů',
+          hu: 'Nagyformátumú alumínium-feldolgozás',
         },
         body: {
           de: 'Bei der Verarbeitung großformatiger Aluminiumplatten und Verbundwerkstoffe ist die Wendeinheit ein enormer Vorteil: Schwere Platten müssen nicht von Hand gedreht werden, was die Ergonomie verbessert, Beschädigungen verhindert und den Materialfluss optimiert.',
           en: 'When processing large-format aluminium panels and composites, the turning unit is an enormous advantage: heavy panels do not need to be turned manually, improving ergonomics, preventing damage and optimising material flow.',
           cz: 'Při zpracování velkoformátových hliníkových desek a kompozitů je otočná jednotka obrovskou výhodou: těžké desky nemusí být ručně otáčeny, což zlepšuje ergonomii, zabraňuje poškození a optimalizuje materiálový tok.',
+          hu: 'Nagyformátumú alumíniumlapok és kompozitok feldolgozásánál a forgatóegység hatalmas előny: a nehéz lapokat nem kell kézzel forgatni, ami javítja az ergonómiát, megakadályozza a sérüléseket és optimalizálja az anyagáramlást.',
         },
       },
     ],
@@ -678,6 +744,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Wählen Sie die advanced line 160 turn, wenn Sie in Ihrer Produktion regelmäßig Längs- und Querschnitte an Aluminium- oder Kunststoffplatten benötigen und den Wendevorgang automatisieren möchten. Die Investition amortisiert sich durch höheren Durchsatz und geringeren Personalbedarf. Asamer berät Sie zur optimalen Konfiguration.',
       en: 'Choose the advanced line 160 turn when your production regularly requires longitudinal and cross cuts on aluminium or plastic panels and you want to automate the turning process. The investment pays off through higher throughput and lower staffing requirements. Asamer advises you on the optimal configuration.',
       cz: 'Zvolte advanced line 160 turn, pokud ve vaší výrobě pravidelně potřebujete podélné a příčné řezy na hliníkových nebo plastových deskách a chcete automatizovat otáčení. Investice se vrátí díky vyšší průchodnosti a nižší potřebě personálu. Asamer vám poradí s optimální konfigurací.',
+      hu: 'Válassza az advanced line 160 turn-t, ha gyártásában rendszeresen hosszanti és keresztvágásra van szüksége alumínium- vagy műanyaglapokon, és automatizálni szeretné a forgatást. A beruházás a nagyobb termelékenység és kisebb munkaerő-szükséglet révén megtérül. Az Asamer tanácsot ad az optimális konfigurációhoz.',
     },
     faq: [
       {
@@ -685,11 +752,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Was macht die Wendeinheit der advanced line 160 turn?',
           en: 'What does the turning unit of the advanced line 160 turn do?',
           cz: 'Co dělá otočná jednotka advanced line 160 turn?',
+          hu: 'Mit csinál az advanced line 160 turn forgatóegysége?',
         },
         answer: {
           de: 'Die automatische 90°-Wendeinheit dreht Werkstücke nach dem Längsschnitt um 90° und positioniert sie für den Querschnitt. So werden beide Schnittrichtungen in einem Durchgang ohne manuelles Eingreifen durchgeführt.',
           en: 'The automatic 90-degree turning unit rotates workpieces by 90 degrees after the longitudinal cut and positions them for the cross cut. Both cutting directions are performed in a single pass without manual intervention.',
           cz: 'Automatická 90° otočná jednotka otočí obrobky po podélném řezu o 90° a napolohuje je pro příčný řez. Oba směry řezu jsou provedeny v jednom průchodu bez manuálního zásahu.',
+          hu: 'Az automatikus 90°-os forgatóegység a hosszanti vágás után 90°-kal elforgatja a munkadarabokat és pozícionálja őket a keresztvágáshoz. Mindkét vágási irány egy menetben, kézi beavatkozás nélkül valósul meg.',
         },
       },
       {
@@ -697,11 +766,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Wie viel Produktivitätsgewinn bringt die Wendeinheit?',
           en: 'How much productivity gain does the turning unit provide?',
           cz: 'Jaký nárůst produktivity přináší otočná jednotka?',
+          hu: 'Mekkora termelékenységnövekedést hoz a forgatóegység?',
         },
         answer: {
           de: 'Die Wendeinheit kann den Durchsatz um bis zu 40 % steigern, da das manuelle Drehen und Neupositionieren der Platten entfällt und der Materialfluss kontinuierlich läuft.',
           en: 'The turning unit can increase throughput by up to 40% as manual turning and repositioning of panels is eliminated and the material flow runs continuously.',
           cz: 'Otočná jednotka může zvýšit průchodnost až o 40 %, protože odpadá manuální otáčení a přepolohování desek a materiálový tok probíhá nepřetržitě.',
+          hu: 'A forgatóegység akár 40%-kal is növelheti a termelékenységet, mivel megszűnik a lapok kézi forgatása és átpozícionálása, és az anyagáramlás folyamatosan zajlik.',
         },
       },
       {
@@ -709,11 +780,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Für welche Materialien eignet sich die advanced line 160 turn?',
           en: 'What materials is the advanced line 160 turn suitable for?',
           cz: 'Pro jaké materiály je advanced line 160 turn vhodná?',
+          hu: 'Milyen anyagokhoz alkalmas az advanced line 160 turn?',
         },
         answer: {
           de: 'Die advanced line 160 turn eignet sich für Aluminium, Aluminium-Verbundplatten, NE-Metalle und Kunststoffe aller Art, von Acrylglas über PVC bis zu technischen Hochleistungs-Kunststoffen.',
           en: 'The advanced line 160 turn is suitable for aluminium, aluminium composite panels, non-ferrous metals and all types of plastics, from acrylic glass and PVC to high-performance engineering plastics.',
           cz: 'advanced line 160 turn je vhodná pro hliník, hliníkové kompozitní desky, neželezné kovy a plasty všeho druhu, od akrylátového skla přes PVC po technické vysokovýkonné plasty.',
+          hu: 'Az advanced line 160 turn alkalmas alumíniumhoz, alumínium kompozitlapokhoz, nemvasfémekhez és minden típusú műanyaghoz, az akrilüvegtől a PVC-n át a nagy teljesítményű műszaki műanyagokig.',
         },
       },
     ],
@@ -727,6 +800,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: `Die Mayer advanced line 200 ist eine Hochleistungs-Plattensäge für großformatige Werkstücke aus Aluminium, NE-Metallen und Kunststoffen. Mit einer eindrucksvollen Schnitthöhe von 200 mm, einer Schnittlänge bis 5.600 mm und einem 43 kW Motor ist sie das Arbeitstier für anspruchsvolle Industrieumgebungen. Das 670 mm Sägeblatt mit 215 mm Projektion liefert die Schneidleistung, die für massive Aluminiumpakete und dicke Kunststoffblöcke erforderlich ist. Der schwere Maschinenkörper ist für eine außergewöhnliche Belastbarkeit konstruiert und bleibt auch bei maximaler Beanspruchung absolut stabil. Das Dual Servo Drive System mit separaten Messsystemen garantiert höchste Positioniergenauigkeit, und der doppelte Druckbalken mit Lasermessung stellt eine gleichmäßige Klemmung über die gesamte Werkstücklänge sicher. Die Vorschubgeschwindigkeit von 0,2 bis 60 m/min erlaubt sowohl langsame, gratfreie Schnitte in Aluminium als auch schnelle Durchsätze bei weicheren Kunststoffen. Die Schnittlänge bis 5.600 mm eröffnet Möglichkeiten im Transport-, Fahrzeug- und Containerbau, wo überformatige Platten verarbeitet werden. Die advanced line 200 ist die Maschine für Betriebe, die keine Grenzen bei Werkstückgröße und Materialstärke akzeptieren. Asamer ist als autorisierter Mayer-Händler Ihr Partner für Beratung, Lieferung und Service in Tschechien, der Slowakei und Ungarn.`,
       en: `The Mayer advanced line 200 is a high-performance panel saw for large-format workpieces of aluminium, non-ferrous metals and plastics. With an impressive 200 mm cutting height, cutting length up to 5,600 mm and a 43 kW motor, it is the workhorse for demanding industrial environments. The 670 mm saw blade with 215 mm projection delivers the cutting performance required for massive aluminium stacks and thick plastic blocks. The heavy machine body is engineered for exceptional load capacity and remains absolutely stable even under maximum stress. The Dual Servo Drive system with separate measuring systems guarantees the highest positioning accuracy, and the double pressure beam with laser measurement ensures uniform clamping across the entire workpiece length. The feed speed from 0.2 to 60 m/min allows both slow, burr-free cuts in aluminium and fast throughput with softer plastics. The cutting length up to 5,600 mm opens possibilities in transport, vehicle and container construction, where oversized panels are processed. The advanced line 200 is the machine for operations that accept no limits on workpiece size and material thickness. Asamer is your partner as the authorised Mayer dealer for consultation, delivery and service in the Czech Republic, Slovakia and Hungary.`,
       cz: `Mayer advanced line 200 je vysokovýkonná formátovací pila pro velkoformátové obrobky z hliníku, neželezných kovů a plastů. S impozantní výškou řezu 200 mm, délkou řezu až 5 600 mm a motorem 43 kW je to tahoun pro náročná průmyslová prostředí. Pilový kotouč 670 mm s projekcí 215 mm dodává řezný výkon potřebný pro masivní hliníkové balíky a tlusté plastové bloky. Těžký strojní rám je zkonstruován pro výjimečnou nosnost a zůstává absolutně stabilní i při maximálním zatížení. Systém Dual Servo Drive se separátními měřicími systémy zaručuje nejvyšší přesnost polohování a dvojitý přítlačný trám s laserovým měřením zajišťuje rovnoměrné upnutí po celé délce obrobku. Rychlost posuvu od 0,2 do 60 m/min umožňuje jak pomalé řezy bez otřepů v hliníku, tak rychlé průchody u měkčích plastů. Délka řezu až 5 600 mm otevírá možnosti v dopravním, automobilovém a kontejnerovém průmyslu, kde se zpracovávají nadrozměrné desky. advanced line 200 je stroj pro provozy, které nepřijímají žádné omezení velikosti obrobku a tloušťky materiálu. Asamer je váš partner jako autorizovaný prodejce Mayer pro poradenství, dodávky a servis v České republice, na Slovensku a v Maďarsku.`,
+      hu: `A Mayer advanced line 200 egy nagy teljesítményű lapfűrész alumínium, nemvasfémek és műanyagok nagyformátumú munkadarabjaihoz. Impozáns 200 mm vágásmagassággal, akár 5 600 mm vágóhosszal és 43 kW motorral ez az igényes ipari környezetek igáslova. A 670 mm-es fűrészlap 215 mm kivetítéssel olyan vágási teljesítményt biztosít, amely szükséges masszív alumíniumcsomagokhoz és vastag műanyagtömbökhöz. A nehéz gépváz kivételes terhelhetőségre van tervezve és maximális terhelés alatt is abszolút stabil marad. A Dual Servo Drive rendszer külön mérőrendszerekkel garantálja a legmagasabb pozícionálási pontosságot, és a kettős nyomógerenda lézeres méréssel egyenletes szorítást biztosít a munkadarab teljes hosszában. A 0,2-től 60 m/min-ig terjedő előtolási sebesség lehetővé teszi mind a lassú, sorjamentes vágásokat alumíniumban, mind a gyors áthaladást puhább műanyagokban. Az akár 5 600 mm-es vágóhossz lehetőségeket nyit a szállítmányozási, járműgyártási és konténeripari iparban, ahol túlméretes lapokat dolgoznak fel. Az advanced line 200 olyan üzemeknek készült, amelyek nem fogadnak el korlátokat a munkadarab méretében és anyagvastagságában. Az Asamer a partnere mint hivatalos Mayer viszonteladó tanácsadásért, szállításért és szervizért Csehországban, Szlovákiában és Magyarországon.`,
     },
     applicationSections: [
       {
@@ -734,11 +808,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Großformat-Schnitte im Transportbau',
           en: 'Large-format cuts in transport construction',
           cz: 'Velkoformátové řezy v dopravním průmyslu',
+          hu: 'Nagyformátumú vágások a szállítmányozási iparban',
         },
         body: {
           de: 'Im Fahrzeug-, Container- und Transportbau werden Aluminiumplatten und Kunststoffpanels in Überformaten verarbeitet. Die advanced line 200 bietet mit 5.600 mm Schnittlänge und 200 mm Schnitthöhe die Kapazität, die für diese Anwendungen erforderlich ist. Der 43 kW Motor und das 670 mm Sägeblatt gewährleisten auch bei dicken Materialstapeln saubere Schnitte.',
           en: 'In vehicle, container and transport construction, aluminium panels and plastic panels are processed in oversized formats. The advanced line 200, with 5,600 mm cutting length and 200 mm cutting height, offers the capacity required for these applications. The 43 kW motor and 670 mm saw blade ensure clean cuts even on thick material stacks.',
           cz: 'V automobilovém, kontejnerovém a dopravním průmyslu se zpracovávají hliníkové desky a plastové panely v nadrozměrných formátech. advanced line 200 s délkou řezu 5 600 mm a výškou řezu 200 mm nabízí kapacitu potřebnou pro tyto aplikace. Motor 43 kW a pilový kotouč 670 mm zajišťují čisté řezy i na tlustých stohoch materiálu.',
+          hu: 'A jármű-, konténer- és szállítmányozási gyártásban alumíniumlapokat és műanyagpaneleket túlméretes formátumokban dolgoznak fel. Az advanced line 200 5 600 mm vágóhosszal és 200 mm vágásmagassággal biztosítja az ezen alkalmazásokhoz szükséges kapacitást. A 43 kW motor és a 670 mm-es fűrészlap tiszta vágásokat biztosít vastag anyagcsomagokon is.',
         },
       },
       {
@@ -746,11 +822,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Schwere Industrieproduktion',
           en: 'Heavy industrial production',
           cz: 'Těžká průmyslová výroba',
+          hu: 'Nehézipari gyártás',
         },
         body: {
           de: 'Für die schwere Industrieproduktion, in der massive Aluminium- und Kunststoffblöcke auf Maß geschnitten werden, ist die advanced line 200 mit ihrem 43 kW Motor und dem schweren Maschinenkörper konstruiert. Das Dual Servo Drive mit separaten Messsystemen garantiert Maßhaltigkeit auch nach tausenden Schnitten im Dauerbetrieb.',
           en: 'For heavy industrial production where massive aluminium and plastic blocks are cut to size, the advanced line 200 is built with its 43 kW motor and heavy machine body. The Dual Servo Drive with separate measuring systems guarantees dimensional accuracy even after thousands of cuts in continuous operation.',
           cz: 'Pro těžkou průmyslovou výrobu, kde se masivní hliníkové a plastové bloky řežou na míru, je advanced line 200 zkonstruována se svým motorem 43 kW a těžkým strojním rámem. Dual Servo Drive se separátními měřicími systémy zaručuje rozměrovou přesnost i po tisících řezech v nepřetržitém provozu.',
+          hu: 'A nehézipari gyártáshoz, ahol masszív alumínium- és műanyagtömböket szabnak méretre, az advanced line 200 43 kW motorjával és nehéz gépvázával készült. A Dual Servo Drive külön mérőrendszerekkel garantálja a méretpontosságot ezer vágás után is folyamatos üzemben.',
         },
       },
     ],
@@ -758,6 +836,7 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
       de: 'Die advanced line 200 ist die richtige Maschine, wenn Sie 200 mm Schnitthöhe, 5.600 mm Schnittlänge und 43 kW Motorleistung benötigen. Sie eignet sich für Industrieproduktion mit großformatigen Aluminium- und Kunststoff-Werkstücken. Asamer erstellt Ihnen ein Angebot mit individueller Konfiguration.',
       en: 'The advanced line 200 is the right machine when you need 200 mm cutting height, 5,600 mm cutting length and 43 kW motor power. It suits industrial production with large-format aluminium and plastic workpieces. Asamer prepares a quotation with individual configuration for you.',
       cz: 'advanced line 200 je správný stroj, pokud potřebujete výšku řezu 200 mm, délku řezu 5 600 mm a výkon motoru 43 kW. Hodí se pro průmyslovou výrobu s velkoformátovými hliníkovými a plastovými obrobky. Asamer vám vypracuje nabídku s individuální konfigurací.',
+      hu: 'Az advanced line 200 a megfelelő gép, ha 200 mm vágásmagasságra, 5 600 mm vágóhosszra és 43 kW motorteljesítményre van szüksége. Nagyformátumú alumínium és műanyag munkadarabokkal dolgozó ipari gyártáshoz illik. Az Asamer egyedi konfigurációjú ajánlatot készít Önnek.',
     },
     faq: [
       {
@@ -765,11 +844,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Wie groß ist die maximale Schnittlänge der advanced line 200?',
           en: 'What is the maximum cutting length of the advanced line 200?',
           cz: 'Jaká je maximální délka řezu advanced line 200?',
+          hu: 'Mekkora az advanced line 200 maximális vágóhossza?',
         },
         answer: {
           de: 'Die advanced line 200 bietet eine Schnittlänge bis 5.600 mm, ideal für überformatige Platten im Transport- und Containerbau.',
           en: 'The advanced line 200 offers a cutting length up to 5,600 mm, ideal for oversized panels in transport and container construction.',
           cz: 'advanced line 200 nabízí délku řezu až 5 600 mm, ideální pro nadrozměrné desky v dopravním a kontejnerovém průmyslu.',
+          hu: 'Az advanced line 200 akár 5 600 mm vágóhosszat kínál, ideális túlméretes lapokhoz a szállítmányozási és konténeriparban.',
         },
       },
       {
@@ -777,11 +858,13 @@ export const MAYER_PRODUCT_SEO: Record<string, ProductSeoContent> = {
           de: 'Welchen Motor hat die advanced line 200?',
           en: 'What motor does the advanced line 200 have?',
           cz: 'Jaký motor má advanced line 200?',
+          hu: 'Milyen motorja van az advanced line 200-nak?',
         },
         answer: {
           de: 'Die advanced line 200 ist mit einem leistungsstarken 43 kW Motor ausgestattet, der ein 670 mm Sägeblatt mit 215 mm Projektion antreibt.',
           en: 'The advanced line 200 is equipped with a powerful 43 kW motor driving a 670 mm saw blade with 215 mm projection.',
           cz: 'advanced line 200 je vybavena výkonným motorem 43 kW, který pohání pilový kotouč 670 mm s projekcí 215 mm.',
+          hu: 'Az advanced line 200 nagy teljesítményű 43 kW-os motorral van felszerelve, amely egy 670 mm-es fűrészlapot hajt meg 215 mm-es kivetítéssel.',
         },
       },
       {
