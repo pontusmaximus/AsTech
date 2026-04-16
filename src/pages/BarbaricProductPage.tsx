@@ -14,6 +14,8 @@ import {
 import { getBarbaricProductBySlug, buildBarbaricProductPath, BARBARIC_CATEGORY_LABELS } from '../data/barbaricProducts';
 import type { BarbaricProduct, BarbaricCategory } from '../data/barbaricProducts';
 import type { Language } from '../i18n';
+import { BARBARIC_PRODUCT_SEO } from '../data/seo/barbaricSeoContent';
+import ProductSeoBlock from '../components/seo/ProductSeoBlock';
 
 const CATEGORY_SUFFIX: Record<BarbaricCategory, Record<Language, string>> = {
   storage: {
@@ -280,6 +282,11 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
               </Link>
             </div>
           </section>
+
+          {/* ── SEO Content Block ── */}
+          {BARBARIC_PRODUCT_SEO[product.slug] && (
+            <ProductSeoBlock content={BARBARIC_PRODUCT_SEO[product.slug]} lang={lang} tr={tr} />
+          )}
 
           {/* ── CTA ── */}
           <div className="product-item border-t border-white/10 pt-10">

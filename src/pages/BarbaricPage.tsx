@@ -13,6 +13,8 @@ import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { getBarbaricProductsByCategory, buildBarbaricProductPath, BARBARIC_CATEGORY_LABELS } from '../data/barbaricProducts';
 import type { BarbaricCategory } from '../data/barbaricProducts';
+import { BARBARIC_CATEGORY_SEO } from '../data/seo/barbaricSeoContent';
+import CategorySeoBlock from '../components/seo/CategorySeoBlock';
 
 const BarbaricPage = () => {
   const { lang } = useLanguage();
@@ -112,6 +114,10 @@ const BarbaricPage = () => {
             </div>
           </div>
         </div>
+
+        {categoryData.map((c) => BARBARIC_CATEGORY_SEO[c.cat] && (
+          <CategorySeoBlock key={`seo-${c.cat}`} content={BARBARIC_CATEGORY_SEO[c.cat]} lang={lang} tr={tr} />
+        ))}
 
         <div className="border-t border-white/5">
           <div className="container-wide py-12">

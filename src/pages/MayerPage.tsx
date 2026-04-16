@@ -14,6 +14,8 @@ import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { getMayerProductsByCategory, buildMayerProductPath, MAYER_CATEGORY_LABELS } from '../data/mayerProducts';
 import type { MayerCategory } from '../data/mayerProducts';
+import { MAYER_CATEGORY_SEO } from '../data/seo/mayerSeoContent';
+import CategorySeoBlock from '../components/seo/CategorySeoBlock';
 
 const SUBTITLES: Record<MayerCategory, (tr: (d: string, e: string, c: string) => string) => string> = {
   kappa: (tr) => tr('Horizontale Druckbalkensägen für Holz', 'Horizontal pressure beam saws for wood', 'Horizontální pily pro dřevo'),
@@ -120,6 +122,11 @@ const MayerPage = () => {
             </div>
           </div>
         </div>
+
+        {/* SEO Content (per-category) */}
+        {categoryData.map((c) => MAYER_CATEGORY_SEO[c.cat] && (
+          <CategorySeoBlock key={`seo-${c.cat}`} content={MAYER_CATEGORY_SEO[c.cat]} lang={lang} tr={tr} />
+        ))}
 
         {/* Secondary info */}
         <div className="border-t border-white/5">

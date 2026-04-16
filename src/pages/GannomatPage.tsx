@@ -12,6 +12,8 @@ import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { getGannomatProductsByCategory, buildGannomatProductPath, GANNOMAT_CATEGORY_LABELS } from '../data/gannomatProducts';
+import { GANNOMAT_CATEGORY_SEO } from '../data/seo/gannomatSeoContent';
+import CategorySeoBlock from '../components/seo/CategorySeoBlock';
 import type { GannomatCategory } from '../data/gannomatProducts';
 
 const GannomatPage = () => {
@@ -111,6 +113,10 @@ const GannomatPage = () => {
             </div>
           </div>
         </div>
+
+        {categoryData.map((c) => GANNOMAT_CATEGORY_SEO[c.cat] && (
+          <CategorySeoBlock key={`seo-${c.cat}`} content={GANNOMAT_CATEGORY_SEO[c.cat]} lang={lang} tr={tr} />
+        ))}
 
         <div className="border-t border-white/5">
           <div className="container-wide py-12">

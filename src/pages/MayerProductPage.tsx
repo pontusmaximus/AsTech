@@ -14,6 +14,8 @@ import {
 import { getMayerProductBySlug, buildMayerProductPath, MAYER_CATEGORY_SHORT } from '../data/mayerProducts';
 import type { MayerProduct } from '../data/mayerProducts';
 import type { Language } from '../i18n';
+import { MAYER_PRODUCT_SEO } from '../data/seo/mayerSeoContent';
+import ProductSeoBlock from '../components/seo/ProductSeoBlock';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -203,6 +205,11 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
               </Link>
             </div>
           </section>
+
+          {/* ── SEO Content Block ── */}
+          {MAYER_PRODUCT_SEO[product.slug] && (
+            <ProductSeoBlock content={MAYER_PRODUCT_SEO[product.slug]} lang={lang} tr={tr} />
+          )}
 
           {/* ── CTA ── */}
           <div className="product-item border-t border-white/10 pt-10">

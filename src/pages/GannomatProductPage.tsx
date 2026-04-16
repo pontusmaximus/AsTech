@@ -14,6 +14,8 @@ import {
 import { getGannomatProductBySlug, buildGannomatProductPath, GANNOMAT_CATEGORY_LABELS } from '../data/gannomatProducts';
 import type { GannomatProduct } from '../data/gannomatProducts';
 import type { Language } from '../i18n';
+import { GANNOMAT_PRODUCT_SEO } from '../data/seo/gannomatSeoContent';
+import ProductSeoBlock from '../components/seo/ProductSeoBlock';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,6 +177,11 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
               </Link>
             </div>
           </section>
+
+          {/* ── SEO Content Block ── */}
+          {GANNOMAT_PRODUCT_SEO[product.slug] && (
+            <ProductSeoBlock content={GANNOMAT_PRODUCT_SEO[product.slug]} lang={lang} tr={tr} />
+          )}
 
           {/* ── CTA ── */}
           <div className="product-item border-t border-white/10 pt-10">

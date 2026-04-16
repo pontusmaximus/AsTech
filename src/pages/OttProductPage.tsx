@@ -16,6 +16,8 @@ import {
 } from '../data/ottProducts';
 import type { OttProduct } from '../data/ottProducts';
 import type { Language } from '../i18n';
+import { OTT_PRODUCT_SEO } from '../data/seo/ottSeoContent';
+import ProductSeoBlock from '../components/seo/ProductSeoBlock';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -237,6 +239,11 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
                 ))}
               </div>
             </section>
+          )}
+
+          {/* ── SEO Content Block ── */}
+          {OTT_PRODUCT_SEO[product.slug] && (
+            <ProductSeoBlock content={OTT_PRODUCT_SEO[product.slug]} lang={lang} tr={tr} />
           )}
 
           {/* ── CTA ── */}

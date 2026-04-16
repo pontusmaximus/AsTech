@@ -13,6 +13,8 @@ import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { getOttProductsByCategory, buildOttProductPath, OTT_CATEGORY_LABELS } from '../data/ottProducts';
 import type { OttCategory } from '../data/ottProducts';
+import { OTT_CATEGORY_SEO } from '../data/seo/ottSeoContent';
+import CategorySeoBlock from '../components/seo/CategorySeoBlock';
 
 const OttPage = () => {
   const { lang, buildPath } = useLanguage();
@@ -123,6 +125,11 @@ const OttPage = () => {
             </div>
           </div>
         </div>
+
+        {/* ====== 2b. SEO Content (per-category) ====== */}
+        {categoryData.map((c) => OTT_CATEGORY_SEO[c.cat] && (
+          <CategorySeoBlock key={`seo-${c.cat}`} content={OTT_CATEGORY_SEO[c.cat]} lang={lang} tr={tr} />
+        ))}
 
         {/* ====== 3. SECONDARY INFO ====== */}
         <div className="border-t border-white/5">
