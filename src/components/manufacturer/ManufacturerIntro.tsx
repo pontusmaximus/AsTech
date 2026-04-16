@@ -20,7 +20,7 @@ export interface ManufacturerIntroProps {
 }
 
 const ManufacturerIntro = ({ eyebrow, title, lead, facts }: ManufacturerIntroProps) => (
-  <section className="container-wide pt-2 pb-16 md:pb-24">
+  <section className="container-wide pt-2 pb-10 md:pb-14">
     <div className="max-w-4xl">
       <div className="accent-line mb-5" />
       {eyebrow && (
@@ -36,7 +36,7 @@ const ManufacturerIntro = ({ eyebrow, title, lead, facts }: ManufacturerIntroPro
       </p>
 
       {facts && facts.length > 0 && (
-        <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {facts.map((fact) => {
             const Icon = fact.icon;
             return (
