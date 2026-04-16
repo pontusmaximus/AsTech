@@ -677,6 +677,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Sobald zwei Bearbeitungsstationen unterschiedliche Taktzeiten haben, entstehen Stillstände: Die schnellere Station wartet, die langsamere staut zurück. Ein TMP puffert Werkstücke zwischen den Stationen und lässt beide in ihrem eigenen Takt arbeiten.',
           en: 'As soon as two processing stations have different cycle times, downtimes occur: the faster station waits, the slower one backs up. A TMP buffers workpieces between stations and lets both work at their own pace.',
           cz: 'Jakmile mají dvě zpracovatelské stanice různé doby taktu, vznikají prostoje: rychlejší stanice čeká, pomalejší se zasekává. TMP pufruje obrobky mezi stanicemi a nechává obě pracovat vlastním tempem.',
+          hu: 'Amint két feldolgozóállomás eltérő ciklusidőkkel dolgozik, állásidők keletkeznek: a gyorsabb állomás vár, a lassabb feltorlódik. A TMP a munkadarabokat az állomások között puffereli, így mindkettő saját ütemében dolgozhat.',
         },
       },
     ],
@@ -687,6 +688,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Je nach Länge 5–50 Werkstücke. Die Auslegung richtet sich nach Taktzeit-Unterschied und gewünschter Ausfall-Toleranz.',
           en: 'Depending on length, 5–50 workpieces. Sizing depends on cycle time difference and desired failure tolerance.',
           cz: 'Podle délky 5–50 obrobků. Návrh závisí na rozdílu doby taktu a požadované toleranci výpadku.',
+          hu: 'Hossztól függően 5–50 munkadarab. A méretezés a ciklusidő-különbségtől és a kívánt kiesés-toleranciától függ.',
         },
       },
       {
@@ -695,6 +697,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Bei nahezu identischen Taktzeiten eher nicht. Sobald die Taktzeit-Differenz 20 % übersteigt oder eine Station häufigere Stillstände hat, ist ein Puffer wirtschaftlich sinnvoll.',
           en: 'With nearly identical cycle times, rather not. As soon as cycle time difference exceeds 20 % or one station has frequent downtimes, a buffer makes economic sense.',
           cz: 'Při téměř stejných dobách taktu spíše ne. Jakmile rozdíl doby taktu překročí 20 % nebo má jedna stanice časté prostoje, má pufr ekonomický smysl.',
+          hu: 'Szinte azonos ciklusidőknél inkább nem. Amint a ciklusidő-különbség meghaladja a 20%-ot, vagy az egyik állomáson gyakori leállások vannak, a puffer gazdaságilag indokolt.',
         },
       },
       {
@@ -703,6 +706,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Ja — Barbaric-Pufferförderer sind modular und lassen sich in Bestandslinien integrieren. Asamer plant die Schnittstellen.',
           en: 'Yes — Barbaric buffer conveyors are modular and can be integrated into existing lines. Asamer plans the interfaces.',
           cz: 'Ano — Barbaric pufrovací dopravníky jsou modulární a lze je integrovat do stávajících linek. Asamer projektuje rozhraní.',
+          hu: 'Igen — a Barbaric puffer szállítók moduláris kialakításúak és meglévő sorokba integrálhatók. Az Asamer tervezi a csatlakozási felületeket.',
         },
       },
     ],
@@ -713,6 +717,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
       de: `Barbaric Handling-Systeme für Türen (DRX, CSF Industrial Türen, LPS) automatisieren die spezielle Handhabung von Wohnungs-, Zimmer- und Industrietüren in der Fertigung. Türen sind große, schwere und empfindliche Werkstücke: Oberflächen dürfen nicht verkratzen, Beschläge müssen präzise eingelassen sein, Kanten müssen sauber bearbeitet sein. Barbaric bietet sowohl Vakuumhandling (DRX für einzelne Türen) als auch vollautomatische Lagersysteme (CSF Industrial Türen) und Etikettierlösungen (LPS). Für Türenhersteller und Möbelwerke, die Türen in Serie fertigen, sind diese Systeme die wirtschaftlichste Lösung zur Prozessabsicherung. Asamer liefert Türen-Handling-Anlagen für CZ, SK und HU inklusive Layout-Planung.`,
       en: `Barbaric handling systems for doors (DRX, CSF Industrial Türen, LPS) automate the special handling of residential, room and industrial doors in production. Doors are large, heavy and delicate workpieces: surfaces must not scratch, fittings must be precisely recessed, edges must be cleanly processed. Barbaric offers both vacuum handling (DRX for individual doors) and fully automatic storage systems (CSF Industrial Türen) and labelling solutions (LPS). For door manufacturers and furniture factories producing doors in series, these systems are the most economical solution for process reliability. Asamer supplies door handling systems for CZ, SK and HU including layout planning.`,
       cz: `Barbaric systémy manipulace s dveřmi (DRX, CSF Industrial Türen, LPS) automatizují speciální manipulaci s bytovými, pokojovými a průmyslovými dveřmi ve výrobě. Dveře jsou velké, těžké a citlivé obrobky: povrchy se nesmí poškrábat, kování musí být přesně zapuštěné, hrany musí být čistě opracované. Barbaric nabízí jak vakuovou manipulaci (DRX pro jednotlivé dveře), tak plně automatické skladovací systémy (CSF Industrial Türen) a etiketovací řešení (LPS). Pro výrobce dveří a nábytkářské závody vyrábějící dveře sériově jsou tyto systémy nejekonomičtějším řešením zajištění procesu. Asamer dodává zařízení pro manipulaci s dveřmi pro CZ, SK a HU včetně návrhu rozvržení.`,
+      hu: `A Barbaric ajtókezelő rendszerek (DRX, CSF Industrial Türen, LPS) automatizálják a lakás-, szoba- és ipari ajtók speciális kezelését a gyártásban. Az ajtók nagy, nehéz és érzékeny munkadarabok: a felületek nem sérülhetnek meg, a vasalatokat pontosan kell elhelyezni, az éleket tisztán kell megmunkálni. A Barbaric egyaránt kínál vákuumos kezelést (DRX egyedi ajtókhoz), teljesen automatikus raktárrendszereket (CSF Industrial Türen) és címkézési megoldásokat (LPS). Sorozatban ajtót gyártó ajtógyártók és bútorüzemek számára ezek a rendszerek a legkgazdaságosabb megoldást jelentik a folyamatbiztonság szempontjából. Az Asamer ajtókezelő berendezéseket szállít Csehország, Szlovákia és Magyarország részére az elrendezéstervezéssel együtt.`,
     },
     sections: [
       {
@@ -721,6 +726,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Der DRX-Vakuumheber handhabt einzelne Türen sicher und oberflächenschonend. Ideal für Tischlereien oder kleinere Türenhersteller, die keine vollautomatische Linie brauchen, aber manuelle Hebearbeit vermeiden wollen.',
           en: 'The DRX vacuum lifter handles individual doors safely and gently on the surface. Ideal for joinery shops or smaller door manufacturers who don\'t need a fully automated line but want to avoid manual lifting.',
           cz: 'Vakuový zvedák DRX bezpečně a šetrně k povrchu manipuluje s jednotlivými dveřmi. Ideální pro truhlářství nebo menší výrobce dveří, kteří nepotřebují plně automatickou linku, ale chtějí se vyhnout ruční manipulaci.',
+          hu: 'A DRX vákuumemelő biztonságosan és felületkímélő módon kezeli az egyedi ajtókat. Ideális olyan asztalosműhelyek vagy kisebb ajtógyártók számára, akiknek nincs szükségük teljesen automatizált sorra, de el akarják kerülni a manuális emelőmunkát.',
         },
       },
       {
@@ -729,6 +735,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Das CSF Industrial für Türen ist ein vollautomatisches Lager speziell für Türelemente mit automatischer Ein- und Auslagerung, Kommissionierung und ERP-Integration. Für Türenhersteller mit Losgröße-1-Produktion unverzichtbar.',
           en: 'The CSF Industrial for doors is a fully automatic storage specifically for door elements with automatic storage and retrieval, picking and ERP integration. Essential for door manufacturers with batch-size-1 production.',
           cz: 'CSF Industrial pro dveře je plně automatický sklad speciálně pro dveřní prvky s automatickým zaskladněním a vyskladněním, komisionováním a integrací ERP. Nezbytný pro výrobce dveří s výrobou dávky 1.',
+          hu: 'A CSF Industrial ajtókhoz teljesen automatikus raktár kifejezetten ajtóelemekhez, automatikus be- és kitárolással, komissiózással és ERP integrációval. Nélkülözhetetlen az 1-es sorozatnagyságú gyártással dolgozó ajtógyártók számára.',
         },
       },
     ],
@@ -739,6 +746,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Standardgrößen bis 2,2 × 1,2 m. Überformate nach Absprache.',
           en: 'Standard sizes up to 2.2 × 1.2 m. Oversized formats by arrangement.',
           cz: 'Standardní velikosti do 2,2 × 1,2 m. Nadměrné formáty po dohodě.',
+          hu: 'Szabványos méretek 2,2 × 1,2 m-ig. Túlméretes formátumok egyeztetés alapján.',
         },
       },
       {
@@ -747,6 +755,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Ja — die Vakuumgreifer sind so ausgelegt, dass sie an Flächen ohne Beschläge greifen. Die Lagerung erfolgt beschlagschonend.',
           en: 'Yes — the vacuum grippers are designed to grip surfaces without fittings. Storage is fitting-safe.',
           cz: 'Ano — vakuové úchopy jsou navrženy tak, aby uchopily plochy bez kování. Skladování je šetrné ke kování.',
+          hu: 'Igen — a vákuumos megfogók úgy vannak kialakítva, hogy a vasalat nélküli felületeket fogják meg. A tárolás vasalatkímélő.',
         },
       },
       {
@@ -755,6 +764,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Ja — das LPS ist ein automatisches Etikettiersystem für Türen mit Barcode oder RFID-Tag.',
           en: 'Yes — the LPS is an automatic labelling system for doors with barcode or RFID tag.',
           cz: 'Ano — LPS je automatický etiketovací systém pro dveře s čárovým kódem nebo RFID tagem.',
+          hu: 'Igen — az LPS egy automatikus címkéző rendszer ajtókhoz vonalkóddal vagy RFID címkével.',
         },
       },
     ],
@@ -765,6 +775,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
       de: `Barbaric Etikettiersysteme (LPS) bringen automatisch Barcodes, QR-Codes oder RFID-Tags auf Werkstücke an — für lückenlose Rückverfolgbarkeit und fehlerfreie Zuordnung von Aufträgen. In der Möbel- und Türenfertigung ist die digitale Etikettierung der Schlüssel zur Losgröße-1-Produktion: Jedes Teil bekommt eine eindeutige ID, die über alle Bearbeitungsstationen erhalten bleibt und mit dem ERP-Auftrag verknüpft ist. Asamer integriert LPS-Systeme in Produktionslinien für CZ, SK und HU — sowohl als Einzelstation als auch als Teil durchgängiger Automatisierungsprojekte.`,
       en: `Barbaric labelling systems (LPS) automatically apply barcodes, QR codes or RFID tags to workpieces — for seamless traceability and error-free order assignment. In furniture and door production, digital labelling is the key to batch-size-1 production: every part receives a unique ID that is preserved through all processing stations and linked to the ERP order. Asamer integrates LPS systems into production lines for CZ, SK and HU — both as a standalone station and as part of comprehensive automation projects.`,
       cz: `Barbaric etiketovací systémy (LPS) automaticky nanášejí čárové kódy, QR kódy nebo RFID tagy na obrobky — pro nepřerušenou sledovatelnost a bezchybné přiřazení zakázek. Ve výrobě nábytku a dveří je digitální etiketování klíčem k výrobě dávky 1: každý díl dostane jedinečné ID, které se uchovává přes všechny zpracovatelské stanice a je propojeno se zakázkou ERP. Asamer integruje LPS systémy do výrobních linek pro CZ, SK a HU — jako samostatnou stanici i jako součást komplexních automatizačních projektů.`,
+      hu: `A Barbaric címkéző rendszerek (LPS) automatikusan helyeznek el vonalkódokat, QR-kódokat vagy RFID-címkéket a munkadarabokon — a zökkenőmentes nyomon követhetőség és a hibamentes rendeléshez rendelés érdekében. A bútor- és ajtógyártásban a digitális címkézés az 1-es sorozatnagyságú gyártás kulcsa: minden darab egyedi azonosítót kap, amely minden feldolgozási állomáson megmarad és az ERP rendelésbe kapcsolódik. Az Asamer LPS rendszereket integrál gyártósorokba Csehország, Szlovákia és Magyarország részére — önálló állomásként és átfogó automatizálási projektek részeként is.`,
     },
     sections: [
       {
@@ -773,6 +784,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Manuelle Etikettierung ist zeitraubend und fehleranfällig. Bei Losgröße-1-Produktion mit vielen verschiedenen Teilen sind Verwechslungen praktisch unvermeidbar. Die automatische Etikettierung eliminiert diesen Fehlerfaktor komplett.',
           en: 'Manual labelling is time-consuming and error-prone. In batch-size-1 production with many different parts, mix-ups are practically unavoidable. Automatic labelling eliminates this error factor completely.',
           cz: 'Ruční etiketování je časově náročné a chybové. Při výrobě dávky 1 s mnoha různými díly jsou záměny prakticky nevyhnutelné. Automatické etiketování zcela odstraňuje tento chybový faktor.',
+          hu: 'A manuális címkézés időigényes és hibára hajlamos. Sok különböző darabot tartalmazó 1-es sorozatnagyságú gyártásnál az összecserélések gyakorlatilag elkerülhetetlenek. Az automatikus címkézés teljes mértékben kiküszöböli ezt a hibatényezőt.',
         },
       },
     ],
@@ -783,6 +795,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Barcode ist günstiger und reicht für die meisten Anwendungen. RFID lohnt sich, wenn die Etiketten durch viele Oberflächenbearbeitungen (Lackierung, Kantenleimen) geschützt werden müssen.',
           en: 'Barcode is cheaper and sufficient for most applications. RFID pays off when labels must be protected through many surface treatments (painting, edgebanding).',
           cz: 'Čárový kód je levnější a stačí pro většinu aplikací. RFID se vyplatí, když musí být etikety chráněny přes mnoho povrchových úprav (lakování, olepování hran).',
+          hu: 'A vonalkód olcsóbb és a legtöbb alkalmazáshoz elegendő. Az RFID akkor éri meg, ha a címkéket sok felületkezelésen át (lakkozás, élzárás) védeni kell.',
         },
       },
       {
@@ -791,6 +804,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Das LPS wird mit SAP, Navision oder individuellen ERP-Systemen verknüpft. Die ID jedes Teils wird dort erzeugt und mit den Auftragsdaten verknüpft.',
           en: 'The LPS is linked to SAP, Navision or custom ERP systems. The ID of each part is generated there and linked to order data.',
           cz: 'LPS se propojuje s SAP, Navision nebo individuálními ERP systémy. ID každého dílu se tam generuje a propojuje s daty zakázek.',
+          hu: 'Az LPS SAP, Navision vagy egyedi ERP rendszerekhez kapcsolódik. Minden darab azonosítója ott generálódik és a rendelési adatokhoz rendelődik.',
         },
       },
       {
@@ -799,6 +813,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Bis zu 1.000 Etiketten pro Stunde, je nach Werkstückwechsel und Druckformat.',
           en: 'Up to 1,000 labels per hour, depending on workpiece change and label format.',
           cz: 'Až 1.000 etiket za hodinu v závislosti na výměně obrobku a formátu etikety.',
+          hu: 'Óránként akár 1.000 címke, a munkadarabcsere és a címkeformátum függvényében.',
         },
       },
     ],
@@ -809,6 +824,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
       de: `Barbaric Vakuumheber (UWL-Serie) ermöglichen die ergonomische, sichere und präzise Handhabung großer und schwerer Platten, Türen oder Arbeitsplatten. Statt von Hand zu heben — was Rückenprobleme, Plattenbrüche und Kratzer an beschichteten Oberflächen verursachen kann — wird das Werkstück berührungslos über Vakuum angehoben, schwebend positioniert und kontrolliert abgesetzt. Die UWL-Serie deckt alle typischen Anwendungen ab: UWL-3 als Standard, UWL-3S für dünnere Platten, UWL-3J für schnellere Zyklen, UWL-1 als Einstieg, UWL-5 für schwere Lasten. Asamer liefert, wartet und zertifiziert Barbaric-Vakuumheber für CZ, SK und HU — inklusive jährlicher Sicherheitsprüfung.`,
       en: `Barbaric vacuum lifters (UWL series) enable ergonomic, safe and precise handling of large and heavy panels, doors or worktops. Instead of lifting by hand — which can cause back problems, panel damage and scratches on coated surfaces — the workpiece is lifted contact-free via vacuum, positioned floating and set down in a controlled manner. The UWL series covers all typical applications: UWL-3 as standard, UWL-3S for thinner panels, UWL-3J for faster cycles, UWL-1 as entry, UWL-5 for heavy loads. Asamer supplies, services and certifies Barbaric vacuum lifters for CZ, SK and HU — including annual safety inspection.`,
       cz: `Barbaric vakuové zvedáky (řada UWL) umožňují ergonomickou, bezpečnou a přesnou manipulaci s velkými a těžkými deskami, dveřmi nebo pracovními deskami. Místo ručního zvedání — které může způsobit bolesti zad, poškození desek a škrábance na potažených površích — se obrobek bezkontaktně zvedá vakuem, polohuje v zavěšené poloze a kontrolovaně odkládá. Řada UWL pokrývá všechny typické aplikace: UWL-3 jako standard, UWL-3S pro tenčí desky, UWL-3J pro rychlejší cykly, UWL-1 jako vstup, UWL-5 pro těžká břemena. Asamer dodává, servisuje a certifikuje Barbaric vakuové zvedáky pro CZ, SK a HU — včetně roční bezpečnostní kontroly.`,
+      hu: `A Barbaric vákuumemelők (UWL-sorozat) nagy és nehéz lapok, ajtók vagy munkalapok ergonomikus, biztonságos és pontos kezelését teszik lehetővé. A kézi emelés helyett — amely hátproblémákat, laptörést és karcolásokat okozhat a bevont felületeken — a munkadarabot érintésmentesen vákuummal emelik fel, lebegve pozicionálják és ellenőrzött módon teszik le. Az UWL-sorozat minden tipikus alkalmazást lefed: UWL-3 szabványként, UWL-3S vékonyabb lapokhoz, UWL-3J gyorsabb ciklusokhoz, UWL-1 belépő szintként, UWL-5 nehéz terhelésekhez. Az Asamer szállítja, szervizeli és tanúsítja a Barbaric vákuumemelőket Csehország, Szlovákia és Magyarország részére — az éves biztonsági felülvizsgálattal együtt.`,
     },
     sections: [
       {
@@ -817,6 +833,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Rückenbelastung durch wiederholtes Heben ist einer der häufigsten Gründe für Arbeitsausfall in der Holzindustrie. Vakuumheber entfernen diesen Risikofaktor komplett und machen die Arbeit auch für ältere Mitarbeiter oder Frauen zugänglich.',
           en: 'Back strain from repetitive lifting is one of the most common reasons for work absence in the wood industry. Vacuum lifters completely remove this risk factor and make work accessible to older employees or women.',
           cz: 'Zatížení zad opakovaným zvedáním je jedním z nejčastějších důvodů pracovní neschopnosti v dřevařském průmyslu. Vakuové zvedáky tento rizikový faktor zcela odstraňují a zpřístupňují práci i starším pracovníkům nebo ženám.',
+          hu: 'Az ismétlődő emelésből eredő hátterhelés a fafeldolgozó iparban a munkából való kiesés egyik leggyakoribb oka. A vákuumemelők teljesen kiküszöbölik ezt a kockázati tényezőt, és a munkát idősebb dolgozók vagy nők számára is elérhetővé teszik.',
         },
       },
       {
@@ -825,6 +842,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'UWL-1: Einstieg, kleinere Lasten. UWL-3: Standardmodell für die meisten Holz-Anwendungen. UWL-3S: Sonderausführung für dünne oder poröse Platten. UWL-3J: schnellere Zykluszeiten. UWL-5: Schwerlast-Variante bis große Türen und Platten.',
           en: 'UWL-1: entry, smaller loads. UWL-3: standard model for most wood applications. UWL-3S: special version for thin or porous panels. UWL-3J: faster cycle times. UWL-5: heavy-duty variant up to large doors and panels.',
           cz: 'UWL-1: vstup, menší zatížení. UWL-3: standardní model pro většinu aplikací se dřevem. UWL-3S: speciální provedení pro tenké nebo porézní desky. UWL-3J: rychlejší doby cyklu. UWL-5: varianta pro těžké břemena až po velké dveře a desky.',
+          hu: 'UWL-1: belépő, kisebb terhelések. UWL-3: szabványmodell a legtöbb fa-alkalmazáshoz. UWL-3S: speciális kivitel vékony vagy porózus lapokhoz. UWL-3J: gyorsabb ciklusidők. UWL-5: nehézterhelésű változat egészen nagy ajtókig és lapokig.',
         },
       },
     ],
@@ -835,6 +853,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Standard-Sauger sind für ebene Flächen ausgelegt. Für gebogene Oberflächen gibt es Sonderausführungen mit angepassten Saugern.',
           en: 'Standard cups are designed for flat surfaces. For curved surfaces, special versions with adapted cups are available.',
           cz: 'Standardní přísavky jsou navrženy pro rovné plochy. Pro zakřivené povrchy jsou k dispozici speciální provedení s přizpůsobenými přísavkami.',
+          hu: 'A szabvány szívótárcsákat sík felületekhez tervezték. Ívelt felületekhez speciális kivitelek állnak rendelkezésre testreszabott szívótárcsákkal.',
         },
       },
       {
@@ -843,6 +862,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Die meisten UWL arbeiten mit integrierter Vakuumpumpe — keine externe Druckluft nötig. Sonderausführungen mit externer Pumpe gibt es für spezielle Anwendungen.',
           en: 'Most UWLs work with an integrated vacuum pump — no external compressed air required. Special versions with external pump are available for specific applications.',
           cz: 'Většina UWL pracuje s integrovaným vakuovým čerpadlem — žádný externí stlačený vzduch není nutný. Speciální provedení s externím čerpadlem jsou k dispozici pro specifické aplikace.',
+          hu: 'A legtöbb UWL integrált vákuumszivattyúval működik — nincs szükség külső sűrített levegőre. Specifikus alkalmazásokhoz külső szivattyús speciális kivitelek is rendelkezésre állnak.',
         },
       },
       {
@@ -851,6 +871,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Jährliche Sicherheitsprüfung nach DGUV ist Pflicht. Asamer bietet diese Prüfung im Wartungspaket an.',
           en: 'Annual safety inspection per DGUV is mandatory. Asamer offers this inspection in the maintenance package.',
           cz: 'Roční bezpečnostní kontrola dle DGUV je povinná. Asamer nabízí tuto kontrolu v servisním balíčku.',
+          hu: 'A DGUV szerinti éves biztonsági felülvizsgálat kötelező. Az Asamer ezt a felülvizsgálatot a karbantartási csomagban kínálja.',
         },
       },
     ],
@@ -861,6 +882,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
       de: `Barbaric Sondervakuumheber (SWL-Serie, NGR) kommen zum Einsatz, wenn Standard-Sauger nicht ausreichen: Für Bohlen (Plank-Lifter), empfindliche Oberflächen (Nadelgreifer), lange Profile oder nicht-plane Werkstücke gibt es spezialisierte Greiftechniken. SWL-Griplifter kombinieren Vakuum mit mechanischem Greifen für schwierige Geometrien; NGR-Nadelgreifer durchdringen porösen Materialien wie Dämmplatten; RWL-Racklifter heben Teile aus Regalen. Für Möbelwerke, Plattenveredler und Spezialfertigungen sind diese Sonderwerkzeuge die einzige Möglichkeit, bestimmte Handhabungsaufgaben zu automatisieren. Asamer projektiert Sondervakuumtechnik für CZ, SK und HU individuell.`,
       en: `Barbaric special vacuum lifters (SWL series, NGR) come into play when standard suction cups are not sufficient: specialised gripping techniques exist for planks (Plank-Lifter), sensitive surfaces (needle gripper), long profiles or non-flat workpieces. SWL Grip-Lifters combine vacuum with mechanical gripping for difficult geometries; NGR needle grippers penetrate porous materials like insulation panels; RWL Rack-Lifters lift parts from racks. For furniture factories, panel finishers and special manufacturing, these special tools are the only way to automate certain handling tasks. Asamer designs special vacuum technology for CZ, SK and HU individually.`,
       cz: `Barbaric speciální vakuové zvedáky (řada SWL, NGR) se nasazují tam, kde standardní přísavky nestačí: pro fošny (Plank-Lifter), citlivé povrchy (jehlový úchop), dlouhé profily nebo nerovné obrobky existují specializované úchopové techniky. SWL Grip-Lifter kombinují vakuum s mechanickým úchopem pro obtížné geometrie; NGR jehlové úchopy pronikají porézními materiály jako izolační desky; RWL Rack-Lifter zvedají díly z regálů. Pro nábytkářské závody, zpracovatele desek a speciální výroby jsou tyto speciální nástroje jedinou možností, jak automatizovat určité manipulační úlohy. Asamer projektuje speciální vakuovou techniku pro CZ, SK a HU individuálně.`,
+      hu: `A Barbaric speciális vákuumemelők (SWL-sorozat, NGR) ott kerülnek bevetésre, ahol a szabvány szívótárcsák nem elegendőek: pallókhoz (Plank-Lifter), érzékeny felületekhez (tűs megfogó), hosszú profilokhoz vagy nem sík munkadarabokhoz speciális megfogási technikák állnak rendelkezésre. Az SWL Grip-Lifter vákuumot kombinál mechanikus megfogással a nehéz geometriákhoz; az NGR tűs megfogó porózus anyagokon is áthatol, mint például szigetelőlapok; az RWL Rack-Lifter polcokból emeli ki a darabokat. Bútorüzemek, laplemez-feldolgozók és különleges gyártás számára ezek a speciális eszközök jelentik az egyetlen lehetőséget bizonyos anyagmozgatási feladatok automatizálására. Az Asamer egyedileg tervezi a speciális vákuumtechnikát Csehország, Szlovákia és Magyarország részére.`,
     },
     sections: [
       {
@@ -869,6 +891,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Sobald Standard-Vakuumtechnik an der Werkstück-Geometrie oder Oberfläche scheitert — etwa bei gebogenen Flächen, extrem dünnen Platten, porösem Material oder komplexen Formen — sind Sondervakuumheber die Lösung. Asamer klärt die Machbarkeit in der Vorplanung.',
           en: 'As soon as standard vacuum technology fails due to workpiece geometry or surface — such as curved surfaces, extremely thin panels, porous material or complex shapes — special vacuum lifters are the solution. Asamer clarifies feasibility during pre-planning.',
           cz: 'Jakmile standardní vakuová technika selhává kvůli geometrii obrobku nebo povrchu — například u zakřivených ploch, extrémně tenkých desek, porézního materiálu nebo složitých tvarů — jsou speciální vakuové zvedáky řešením. Asamer objasní proveditelnost v předběžném plánování.',
+          hu: 'Amint a szabvány vákuumtechnika a munkadarab geometriája vagy felülete miatt kudarcot vall — például ívelt felületeknél, rendkívül vékony lapoknál, porózus anyagnál vagy összetett formáknál — a speciális vákuumemelők jelentik a megoldást. Az Asamer az előtervezés során tisztázza a megvalósíthatóságot.',
         },
       },
     ],
@@ -879,6 +902,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Asamer und Barbaric prüfen gerne Machbarkeit und Wirtschaftlichkeit. Senden Sie uns ein Foto oder Zeichnung Ihres Werkstücks.',
           en: 'Asamer and Barbaric are happy to check feasibility and economics. Send us a photo or drawing of your workpiece.',
           cz: 'Asamer a Barbaric rádi posoudí proveditelnost a ekonomiku. Pošlete nám fotografii nebo nákres vašeho obrobku.',
+          hu: 'Az Asamer és a Barbaric szívesen megvizsgálja a megvalósíthatóságot és a gazdaságosságot. Küldjön nekünk fényképet vagy rajzot a munkadarabról.',
         },
       },
       {
@@ -887,6 +911,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Typisch 8–16 Wochen von der Konzeption bis zur Auslieferung — je nach Komplexität.',
           en: 'Typically 8–16 weeks from concept to delivery — depending on complexity.',
           cz: 'Obvykle 8–16 týdnů od konceptu po dodání — v závislosti na složitosti.',
+          hu: 'Tipikusan 8–16 hét a koncepciótól a szállításig — a komplexitástól függően.',
         },
       },
       {
@@ -895,6 +920,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'In vielen Fällen ja — Asamer prüft die Umrüstbarkeit vorhandener UWL auf Sondersauger oder Nadelgreifer.',
           en: 'In many cases yes — Asamer checks the retrofittability of existing UWL to special cups or needle grippers.',
           cz: 'V mnoha případech ano — Asamer kontroluje možnost dovybavení stávajících UWL speciálními přísavkami nebo jehlovými úchopy.',
+          hu: 'Sok esetben igen — az Asamer ellenőrzi a meglévő UWL-ek átalakíthatóságát speciális szívótárcsákra vagy tűs megfogókra.',
         },
       },
     ],
@@ -905,6 +931,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
       de: `Barbaric Vakuumtraversen sind lange Greifer-Systeme für die Handhabung großformatiger, langer oder leichter Werkstücke — etwa Dünnplatten, Türen, Bleche oder Plexiglas. Die Traverse verteilt Sauggreifer auf der gesamten Werkstückfläche und sorgt für stabile, verzugsarme Handhabung auch bei biegsamem Material. Typische Modelle: Dünnplattentraverse für dünne Spanplatten oder MDF, Türentraverse für Türelemente und Blech-Plexiglas-Traverse für Metall oder Kunststoffplatten. Für Werkstoffe, die beim konventionellen Heben durchhängen oder brechen würden, sind Traversen unverzichtbar. Asamer liefert Vakuumtraversen für CZ, SK und HU inklusive Sicherheitsabnahme.`,
       en: `Barbaric vacuum traverses are long gripper systems for handling large-format, long or lightweight workpieces — such as thin panels, doors, sheet metal or Plexiglas. The traverse distributes suction cups across the entire workpiece area and provides stable, low-warp handling even for flexible material. Typical models: thin panel traverse for thin chipboard or MDF, door traverse for door elements, and sheet-metal-Plexiglas traverse for metal or plastic panels. For materials that would sag or break during conventional lifting, traverses are indispensable. Asamer supplies vacuum traverses for CZ, SK and HU including safety acceptance.`,
       cz: `Barbaric vakuové traverzy jsou dlouhé úchopové systémy pro manipulaci s velkoformátovými, dlouhými nebo lehkými obrobky — například tenkými deskami, dveřmi, plechem nebo plexisklem. Traverza rozmísťuje přísavky po celé ploše obrobku a zajišťuje stabilní manipulaci s minimálním deformováním i u ohebného materiálu. Typické modely: traverza pro tenké desky (dřevotříska nebo MDF), dveřní traverza pro dveřní prvky a traverza plech-plexisklo pro kovové nebo plastové desky. Pro materiály, které by při běžném zvedání prohýbaly nebo praskaly, jsou traverzy nepostradatelné. Asamer dodává vakuové traverzy pro CZ, SK a HU včetně bezpečnostního schválení.`,
+      hu: `A Barbaric vákuumos traverzek hosszú megfogórendszerek nagyméretű, hosszú vagy könnyű munkadarabok — például vékony lapok, ajtók, lemezek vagy plexiüveg — kezeléséhez. A traverz a szívótárcsákat a munkadarab teljes felületén elosztja, és stabil, alacsony vetemedésű kezelést biztosít rugalmas anyagoknál is. Tipikus modellek: vékony laphoz való traverz vékony forgácslaphoz vagy MDF-hez, ajtótraverz ajtóelemekhez, valamint lemez-plexiüveg traverz fém- vagy műanyag lapokhoz. Olyan anyagoknál, amelyek hagyományos emelésnél megereszkednének vagy eltörnének, a traverzek nélkülözhetetlenek. Az Asamer vákuumos traverzeket szállít Csehország, Szlovákia és Magyarország részére a biztonsági átvétellel együtt.`,
     },
     sections: [
       {
@@ -913,6 +940,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Dünne Platten (< 10 mm) biegen sich beim klassischen Mittelgriff-Heben durch und reißen an den Rändern. Eine Dünnplattentraverse verteilt die Last über die gesamte Fläche, sodass die Platte planar bleibt. Ein Muss in der Feinmöbel- oder Akustikplattenfertigung.',
           en: 'Thin panels (< 10 mm) sag during classic centre-grip lifting and tear at the edges. A thin panel traverse distributes the load across the entire surface so the panel remains planar. A must in fine furniture or acoustic panel production.',
           cz: 'Tenké desky (< 10 mm) se při klasickém zvedání středovým úchopem prohýbají a trhají na okrajích. Traverza pro tenké desky rozkládá zatížení po celé ploše, takže deska zůstává rovná. Nutnost ve výrobě jemného nábytku nebo akustických desek.',
+          hu: 'A vékony lapok (< 10 mm) klasszikus középpontos emelésnél megereszkednek és elszakadnak a szélükön. A vékony laphoz való traverz eloszlatja a terhelést a teljes felületen, így a lap sík marad. Kötelező a finom bútoriparban vagy az akusztikai lapok gyártásában.',
         },
       },
     ],
@@ -923,6 +951,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Standardtraversen bis 3 m, Sonderausführungen bis 6 m.',
           en: 'Standard traverses up to 3 m, special versions up to 6 m.',
           cz: 'Standardní traverzy do 3 m, speciální provedení do 6 m.',
+          hu: 'Szabvány traverzek 3 m-ig, speciális kivitelek 6 m-ig.',
         },
       },
       {
@@ -931,6 +960,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Ab 2 mm bis 15 mm typischerweise. Für HPL oder Folien braucht es spezielle Saugeroberflächen.',
           en: 'Typically from 2 mm to 15 mm. For HPL or foils, special cup surfaces are required.',
           cz: 'Obvykle od 2 mm do 15 mm. Pro HPL nebo fólie jsou nutné speciální povrchy přísavek.',
+          hu: 'Tipikusan 2 mm-től 15 mm-ig. HPL-hez vagy fóliákhoz speciális szívótárcsa-felületek szükségesek.',
         },
       },
       {
@@ -939,6 +969,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Ja — Blech-Plexiglas-Traverse für Metalle und Kunststoff-Flachmaterial.',
           en: 'Yes — sheet-metal-Plexiglas traverse for metals and plastic flat material.',
           cz: 'Ano — traverza plech-plexisklo pro kovy a ploché plastové materiály.',
+          hu: 'Igen — lemez-plexiüveg traverz fémekhez és lapos műanyag anyagokhoz.',
         },
       },
     ],
@@ -949,6 +980,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
       de: `Barbaric Vakuumkräne sind die stationären oder flächendeckenden Handhabungssysteme, wenn regelmäßige Plattenbewegungen über definierte Wege nötig sind — aber ohne vollautomatisches Flächenlager. Sie reichen von Säulenschwenkkränen (SSK) über Schienensysteme (SSY) bis zu Fachwerkbrücken (2D und 3D) für große Hallenflächen. Das gemeinsame Prinzip: Ein Kran fährt oder schwenkt über das Arbeitsfeld, nimmt Lasten über Vakuum auf und setzt sie präzise ab — gesteuert durch den Bediener oder automatisch per SPS. Für Tischlereien, Lagerbetriebe und Produktionslinien mit schweren Werkstücken sind Vakuumkräne eine wirtschaftliche Handhabungslösung. Asamer plant die passende Kran-Klasse je nach Layout und Einsatzprofil für Kunden in CZ, SK und HU.`,
       en: `Barbaric vacuum cranes are the stationary or area-covering handling systems when regular panel movements over defined paths are required — but without a fully automatic panel storage. They range from column slewing cranes (SSK) through rail systems (SSY) to truss bridges (2D and 3D) for large hall areas. The common principle: a crane travels or slews over the work area, picks up loads via vacuum and sets them down precisely — controlled by the operator or automatically via PLC. For joinery shops, warehousing operations and production lines with heavy workpieces, vacuum cranes are an economical handling solution. Asamer plans the right crane class depending on layout and operational profile for customers in CZ, SK and HU.`,
       cz: `Barbaric vakuové jeřáby jsou stacionární nebo plošné manipulační systémy, pokud jsou potřebné pravidelné pohyby desek po definovaných trasách — ale bez plně automatického skladu desek. Sahají od sloupových otočných jeřábů (SSK) přes kolejnicové systémy (SSY) až po sloupcové mosty (2D a 3D) pro velké halové plochy. Společný princip: jeřáb jede nebo se otáčí nad pracovní plochou, přijímá břemena přes vakuum a přesně je odkládá — řízené obsluhou nebo automaticky přes PLC. Pro truhlářství, skladové provozy a výrobní linky s těžkými obrobky jsou vakuové jeřáby ekonomickým manipulačním řešením. Asamer projektuje vhodnou třídu jeřábu podle rozvržení a provozního profilu pro zákazníky v CZ, SK a HU.`,
+      hu: `A Barbaric vákuumdaruk stacionárius vagy területi lefedést biztosító anyagmozgató rendszerek, ha rendszeres lapmozgásokra van szükség meghatározott útvonalakon — de teljesen automatikus lapraktár nélkül. Az oszlopos forgódaruktól (SSK) a sínrendszereken (SSY) át a rácsos hidakig (2D és 3D) terjednek, amelyek nagy csarnokterületeket fednek le. A közös alapelv: a daru a munkaterület felett halad vagy forog, vákuummal felveszi a terheket és pontosan leteszi őket — a kezelő által vezérelve vagy automatikusan PLC-n keresztül. Asztalosműhelyek, raktárüzemek és nehéz munkadarabokkal dolgozó gyártósorok számára a vákuumdaruk gazdaságos anyagmozgatási megoldást jelentenek. Az Asamer az elrendezés és az üzemeltetési profil alapján tervezi meg a megfelelő daruosztályt csehországi, szlovákiai és magyarországi ügyfelek számára.`,
     },
     sections: [
       {
@@ -957,6 +989,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'SSK Säulenschwenkkran: feste Position, Halbkreis-Abdeckung — ideal für einen Arbeitsplatz. SSY Schienensystem: lineare Fahrbahn — ideal für Linien oder Durchgangslager. Fachwerkbrücke 2D: rechteckige Flächenabdeckung — für mittlere Hallen. Fachwerkbrücke 3D: zusätzliche Z-Achse — für mehrstufige Bewegungen.',
           en: 'SSK column slewing crane: fixed position, semi-circle coverage — ideal for a single workstation. SSY rail system: linear path — ideal for lines or pass-through storage. Truss bridge 2D: rectangular area coverage — for medium halls. Truss bridge 3D: additional Z-axis — for multi-level movements.',
           cz: 'SSK sloupový otočný jeřáb: pevná pozice, půlkruh pokrytí — ideální pro jedno pracoviště. SSY kolejnicový systém: lineární dráha — ideální pro linky nebo průchozí sklady. Sloupcový most 2D: obdélníkové pokrytí plochy — pro střední haly. Sloupcový most 3D: další osa Z — pro víceúrovňové pohyby.',
+          hu: 'SSK oszlopos forgódaru: rögzített pozíció, félköríves lefedés — ideális egy munkaállomáshoz. SSY sínrendszer: lineáris pálya — ideális sorokhoz vagy átjárható raktárakhoz. Rácsos híd 2D: téglalap alakú területlefedés — közepes csarnokokhoz. Rácsos híd 3D: további Z-tengely — többszintű mozgásokhoz.',
         },
       },
     ],
@@ -967,6 +1000,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Deutlich günstiger — ein SSK startet bei einem Bruchteil der Kosten eines automatischen Lagers. Wirtschaftlich sinnvoll, wenn manuelles Handling durch Kranführung ersetzt wird, nicht durch Automatisierung.',
           en: 'Significantly cheaper — an SSK starts at a fraction of the cost of an automatic storage. Economically sensible when manual handling is replaced by crane operation, not by automation.',
           cz: 'Výrazně levnější — SSK začíná na zlomku nákladů automatického skladu. Ekonomicky smysluplné, když se manuální manipulace nahradí ovládáním jeřábu, ne automatizací.',
+          hu: 'Lényegesen olcsóbb — egy SSK az automatikus raktár költségeinek töredékén indul. Gazdaságilag akkor indokolt, ha a manuális anyagmozgatást darus üzemeltetéssel, nem pedig automatizálással váltják ki.',
         },
       },
       {
@@ -975,6 +1009,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'SSK und Fachwerkbrücke benötigen Fundamente, SSY wird an bestehender Deckenkonstruktion montiert. Asamer koordiniert die Bauausführung.',
           en: 'SSK and truss bridge require foundations; SSY is mounted on existing ceiling structure. Asamer coordinates construction work.',
           cz: 'SSK a sloupcový most vyžadují základy; SSY se montuje na stávající stropní konstrukci. Asamer koordinuje stavební práce.',
+          hu: 'Az SSK és a rácsos híd alapokat igényel; az SSY a meglévő mennyezeti szerkezetre van szerelve. Az Asamer koordinálja a kivitelezési munkákat.',
         },
       },
       {
@@ -983,6 +1018,7 @@ export const BARBARIC_CATEGORY_SEO: Record<BarbaricCategory, CategorySeoContent>
           de: 'Beides möglich. Kleinere Kräne werden meist manuell geführt, größere können automatisch fahren (SPS-Steuerung, Lichtschranken, ERP-Kopplung).',
           en: 'Both possible. Smaller cranes are usually operated manually, larger ones can run automatically (PLC control, light barriers, ERP coupling).',
           cz: 'Obojí možné. Menší jeřáby se obvykle ovládají ručně, větší mohou jezdit automaticky (řízení PLC, světelné závory, napojení na ERP).',
+          hu: 'Mindkettő lehetséges. A kisebb darukat általában kézzel vezetik, a nagyobbak automatikusan is haladhatnak (PLC-vezérlés, fénysorompók, ERP-csatlakozás).',
         },
       },
     ],
