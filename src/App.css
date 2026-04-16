@@ -746,6 +746,14 @@ html.theme-light .text-white\/85 {
   color: rgba(15, 23, 42, 0.88) !important;
 }
 
+html.theme-light .text-white\/90 {
+  color: rgba(15, 23, 42, 0.92) !important;
+}
+
+html.theme-light .text-white\/95 {
+  color: rgba(15, 23, 42, 0.95) !important;
+}
+
 html.theme-light .hover\:text-white:hover {
   color: #0f172a !important;
 }
