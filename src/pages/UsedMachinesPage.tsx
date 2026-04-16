@@ -8,7 +8,6 @@ import { localizeSlug } from '../lib/slugs';
 import SeoHead from '../seo/SeoHead';
 import { trackEvent } from '../lib/analytics';
 import { USED_MACHINES } from '../data/usedMachines';
-import type { UsedMachine as UsedMachineData } from '../data/usedMachines';
 import type { MultiLangText } from '../data/seo/types';
 import type { Language } from '../i18n';
 
