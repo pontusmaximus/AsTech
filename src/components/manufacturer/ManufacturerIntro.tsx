@@ -36,7 +36,7 @@ const ManufacturerIntro = ({ eyebrow, title, lead, facts }: ManufacturerIntroPro
       </p>
 
       {facts && facts.length > 0 && (
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-8 mb-6 md:mb-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {facts.map((fact) => {
             const Icon = fact.icon;
             return (
