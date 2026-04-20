@@ -34,6 +34,12 @@ import { BARBARIC_PRODUCTS, buildBarbaricProductPath, BARBARIC_CATEGORY_LABELS }
 import { GANNOMAT_PRODUCTS, buildGannomatProductPath, GANNOMAT_CATEGORY_LABELS } from '../src/data/gannomatProducts';
 import { USED_MACHINES } from '../src/data/usedMachines';
 import { localizeSlug } from '../src/lib/slugs';
+import { OTT_PRODUCT_SEO, OTT_CATEGORY_SEO } from '../src/data/seo/ottSeoContent';
+import { MAYER_PRODUCT_SEO, MAYER_CATEGORY_SEO } from '../src/data/seo/mayerSeoContent';
+import { BARBARIC_PRODUCT_SEO, BARBARIC_CATEGORY_SEO } from '../src/data/seo/barbaricSeoContent';
+import { GANNOMAT_PRODUCT_SEO, GANNOMAT_CATEGORY_SEO } from '../src/data/seo/gannomatSeoContent';
+import type { ProductSeoContent, CategorySeoContent, MultiLangText } from '../src/data/seo/types';
+import { faqPageSchema } from '../src/seo/structuredData';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -50,7 +56,24 @@ const T = {
   products: { de: 'Produkte', en: 'Products', cz: 'Produkty', sk: 'Produkty', hu: 'Termékek' },
   contact: { de: 'Kontakt aufnehmen', en: 'Get in touch', cz: 'Kontaktujte nás', sk: 'Kontaktujte nás', hu: 'Lépjen kapcsolatba' },
   dealer: { de: 'Autorisierter Händler für Zentraleuropa', en: 'Authorized dealer for Central Europe', cz: 'Autorizovaný prodejce pro střední Evropu', sk: 'Autorizovaný predajca pre strednú Európu', hu: 'Hivatalos viszonteladó Közép-Európában' },
+  sectionDetail: { de: 'Im Detail', en: 'In Detail', cz: 'Podrobnosti', sk: 'Podrobnosti', hu: 'Részletek' },
+  sectionApplications: { de: 'Einsatzbereiche', en: 'Applications', cz: 'Oblasti nasazení', sk: 'Oblasti nasadenia', hu: 'Alkalmazási területek' },
+  sectionBuyingAdvice: { de: 'Kaufberatung', en: 'Buying Guide', cz: 'Nákupní poradce', sk: 'Nákupný poradca', hu: 'Vásárlási tanácsadó' },
+  sectionFaq: { de: 'Häufige Fragen', en: 'FAQ', cz: 'Časté dotazy', sk: 'Časté otázky', hu: 'Gyakori kérdések' },
 } as const;
+
+/**
+ * Sprach-Resolver mit Fallback — identisch zur ml()-Funktion in
+ * src/components/seo/ProductSeoBlock.tsx, damit Prerender und Client
+ * den gleichen Text zeigen.
+ */
+const ml = (obj: MultiLangText, lang: Language): string => {
+  if (lang === 'sk') return obj.sk ?? obj.cz;
+  if (lang === 'hu') return obj.hu ?? obj.en;
+  if (lang === 'de') return obj.de;
+  if (lang === 'cz') return obj.cz;
+  return obj.en;
+};
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -81,8 +104,80 @@ const breadcrumb = (items: { label: string; href: string }[]) =>
     `<li>${i < items.length - 1 ? `<a href="${it.href}">${escHtml(it.label)}</a>` : `<span>${escHtml(it.label)}</span>`}</li>`
   ).join(' › ')}</ol></nav>`;
 
-/** Build static page body content */
-function staticPageBody(key: SeoRouteKey, lang: Language, title: string, description: string): string {
+/** Split text on double-newlines and wrap each paragraph in <p>. */
+const paragraphs = (text: string): string =>
+  text.split(/\n{2,}/).map((p) => `<p>${escHtml(p.trim())}</p>`).join('\n');
+
+/** FAQ als native <details>/<summary> (kein JS noetig). JSON-LD wird separat erzeugt. */
+const renderFaq = (items: ProductSeoContent['faq'], lang: Language, heading: string): string => {
+  if (!items || items.length === 0) return '';
+  const details = items
+    .map(
+      (it) => `<details><summary>${escHtml(ml(it.question, lang))}</summary><p>${escHtml(ml(it.answer, lang))}</p></details>`,
+    )
+    .join('\n');
+  return `<section><h2>${escHtml(heading)}</h2>${details}</section>`;
+};
+
+/** Rendert ProductSeoContent als indexierbares HTML fuer Googlebot (ohne JS). */
+const renderProductSeo = (content: ProductSeoContent, lang: Language): string => {
+  const parts: string[] = [];
+  parts.push(
+    `<section><h2>${escHtml(T.sectionDetail[lang])}</h2>${paragraphs(ml(content.longDescription, lang))}</section>`,
+  );
+  if (content.applicationSections.length > 0) {
+    const sections = content.applicationSections
+      .map((s) => `<article><h3>${escHtml(ml(s.heading, lang))}</h3><p>${escHtml(ml(s.body, lang))}</p></article>`)
+      .join('\n');
+    parts.push(`<section><h2>${escHtml(T.sectionApplications[lang])}</h2>${sections}</section>`);
+  }
+  parts.push(
+    `<section><h2>${escHtml(T.sectionBuyingAdvice[lang])}</h2><p>${escHtml(ml(content.buyingAdvice, lang))}</p></section>`,
+  );
+  parts.push(renderFaq(content.faq, lang, T.sectionFaq[lang]));
+  return parts.join('\n');
+};
+
+/** Rendert CategorySeoContent als indexierbares HTML. */
+const renderCategorySeo = (content: CategorySeoContent, lang: Language): string => {
+  const parts: string[] = [];
+  parts.push(`<section>${paragraphs(ml(content.introExpanded, lang))}</section>`);
+  if (content.sections.length > 0) {
+    const sections = content.sections
+      .map((s) => `<article><h3>${escHtml(ml(s.heading, lang))}</h3><p>${escHtml(ml(s.body, lang))}</p></article>`)
+      .join('\n');
+    parts.push(`<section>${sections}</section>`);
+  }
+  parts.push(renderFaq(content.faq, lang, T.sectionFaq[lang]));
+  return parts.join('\n');
+};
+
+/** Sammelt FAQ-Items aus ProductSeoContent und baut JSON-LD-Script. */
+const productFaqJsonLd = (content: ProductSeoContent | undefined, lang: Language): string => {
+  if (!content || content.faq.length === 0) return '';
+  const schema = faqPageSchema(content.faq.map((f) => ({ question: ml(f.question, lang), answer: ml(f.answer, lang) })));
+  return `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
+};
+
+/** Sammelt FAQ-Items aus mehreren CategorySeoContents und baut kombiniertes JSON-LD. */
+const categoriesFaqJsonLd = (contents: CategorySeoContent[], lang: Language): string => {
+  const allFaqs = contents.flatMap((c) => c.faq);
+  if (allFaqs.length === 0) return '';
+  const schema = faqPageSchema(allFaqs.map((f) => ({ question: ml(f.question, lang), answer: ml(f.answer, lang) })));
+  return `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
+};
+
+/** Build static page body content. Brand-Hub-Seiten erhalten zusaetzlich
+ *  alle CategorySeoContent-Bloecke (longInhalt + FAQ pro Kategorie) plus
+ *  ein kombiniertes FAQ-JSON-LD-Schema.
+ */
+function staticPageBody(
+  key: SeoRouteKey,
+  lang: Language,
+  title: string,
+  description: string,
+  categorySeoContents: CategorySeoContent[] = [],
+): string {
   const homePath = buildLocalizedPath(lang, '/');
   const homeLabel = T.home[lang];
 
@@ -106,10 +201,21 @@ function staticPageBody(key: SeoRouteKey, lang: Language, title: string, descrip
     ).join('')}</ul>`);
   }
 
+  // Brand-Hub: CategorySeoContent pro Kategorie ausgeben + gesammeltes FAQ-Schema.
+  if (categorySeoContents.length > 0) {
+    parts.push(categoriesFaqJsonLd(categorySeoContents, lang));
+    for (const content of categorySeoContents) {
+      parts.push(renderCategorySeo(content, lang));
+    }
+  }
+
   return parts.join('\n');
 }
 
-/** Build product page body content */
+/** Build product page body content. Wenn ProductSeoContent vorhanden ist,
+ *  wird der komplette keyword-reiche Block (longDescription, Anwendungen,
+ *  Kaufberatung, FAQ) plus JSON-LD inline eingebunden.
+ */
 function productPageBody(
   lang: Language,
   brand: string,
@@ -118,6 +224,7 @@ function productPageBody(
   description: string,
   tagline: string,
   brandSlug: string,
+  seoContent?: ProductSeoContent,
 ): string {
   const homePath = buildLocalizedPath(lang, '/');
   const brandPath = buildLocalizedPath(lang, brandSlug);
@@ -137,6 +244,11 @@ function productPageBody(
     `<p><a href="mailto:office@asamer.net">${escHtml(T.contact[lang])}</a></p>`,
   ];
 
+  if (seoContent) {
+    parts.push(productFaqJsonLd(seoContent, lang));
+    parts.push(renderProductSeo(seoContent, lang));
+  }
+
   return parts.join('\n');
 }
 
@@ -155,6 +267,17 @@ function makeAlternates(buildPath: (lang: Language) => string) {
   }));
 }
 
+// Map von Brand-Hub-Key zu allen CategorySeoContents. Wird genutzt, damit
+// Brand-Hub-Seiten (/ott, /mayer, /barbaric, /gannomat) den kompletten
+// keyword-reichen Kategorie-Inhalt (longIntro + FAQ je Kategorie) im
+// statischen HTML mitliefern.
+const HUB_CATEGORY_SEO: Partial<Record<SeoRouteKey, CategorySeoContent[]>> = {
+  ott: Object.values(OTT_CATEGORY_SEO),
+  mayer: Object.values(MAYER_CATEGORY_SEO),
+  barbaric: Object.values(BARBARIC_CATEGORY_SEO),
+  gannomat: Object.values(GANNOMAT_CATEGORY_SEO),
+};
+
 // 1. Static pages from SEO_ROUTES
 for (const [key, config] of Object.entries(SEO_ROUTES)) {
   for (const lang of SUPPORTED_LANGUAGES) {
@@ -163,6 +286,7 @@ for (const [key, config] of Object.entries(SEO_ROUTES)) {
     const meta = config.meta[lang];
     const alternates = makeAlternates((al) => buildLocalizedPath(al, getSlugForLang(config, al)));
     const xDefaultHref = buildCanonicalUrl(HREFLANG_DEFAULT, getSlugForLang(config, HREFLANG_DEFAULT));
+    const hubSeo = HUB_CATEGORY_SEO[key as SeoRouteKey] ?? [];
 
     pages.push({
       path,
@@ -172,7 +296,7 @@ for (const [key, config] of Object.entries(SEO_ROUTES)) {
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates,
       xDefaultHref,
-      bodyContent: staticPageBody(key as SeoRouteKey, lang, meta.title, meta.description),
+      bodyContent: staticPageBody(key as SeoRouteKey, lang, meta.title, meta.description, hubSeo),
     });
   }
 }
@@ -192,7 +316,7 @@ for (const product of OTT_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
-      bodyContent: productPageBody(lang, 'OTT', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/ott'),
+      bodyContent: productPageBody(lang, 'OTT', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/ott', OTT_PRODUCT_SEO[product.slug]),
     });
   }
 }
@@ -212,7 +336,7 @@ for (const product of MAYER_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
-      bodyContent: productPageBody(lang, 'Mayer', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/mayer'),
+      bodyContent: productPageBody(lang, 'Mayer', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/mayer', MAYER_PRODUCT_SEO[product.slug]),
     });
   }
 }
@@ -232,7 +356,7 @@ for (const product of BARBARIC_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
-      bodyContent: productPageBody(lang, 'Barbaric', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/barbaric'),
+      bodyContent: productPageBody(lang, 'Barbaric', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/barbaric', BARBARIC_PRODUCT_SEO[product.slug]),
     });
   }
 }
@@ -252,7 +376,7 @@ for (const product of GANNOMAT_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
-      bodyContent: productPageBody(lang, 'Gannomat', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/gannomat'),
+      bodyContent: productPageBody(lang, 'Gannomat', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/gannomat', GANNOMAT_PRODUCT_SEO[product.slug]),
     });
   }
 }
