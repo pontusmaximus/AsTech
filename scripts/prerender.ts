@@ -23,6 +23,8 @@ import {
   buildCanonicalUrl,
   CANONICAL_DOMAIN,
   SUPPORTED_LANGUAGES,
+  INDEXABLE_LANGUAGES,
+  NON_INDEXABLE_LANGUAGES,
   HREFLANG_DEFAULT,
   languageToHreflang,
 } from '../src/lib/language';
@@ -145,7 +147,9 @@ function productPageBody(
 const pages: PageMeta[] = [];
 
 function makeAlternates(buildPath: (lang: Language) => string) {
-  return SUPPORTED_LANGUAGES.map((al) => ({
+  // Nur indexierbare Sprachen als hreflang-Alternates ausgeben — SK ist
+  // explizit ausgeschlossen (siehe INDEXABLE_LANGUAGES in lib/language.ts).
+  return INDEXABLE_LANGUAGES.map((al) => ({
     hreflang: languageToHreflang(al),
     href: `${CANONICAL_DOMAIN}${buildPath(al)}`,
   }));
@@ -312,10 +316,11 @@ for (const page of pages) {
     .join('\n    ');
   const xDefaultTag = `<link rel="alternate" hreflang="x-default" href="${page.xDefaultHref}" data-rh="true"/>`;
 
+  const robotsContent = NON_INDEXABLE_LANGUAGES.includes(page.lang) ? 'noindex,follow' : 'index,follow';
   const seoHead = `
     <title data-rh="true">${escHtml(page.title)}</title>
     <meta name="description" content="${escHtml(page.description)}" data-rh="true"/>
-    <meta name="robots" content="index,follow" data-rh="true"/>
+    <meta name="robots" content="${robotsContent}" data-rh="true"/>
     <link rel="canonical" href="${page.canonical}" data-rh="true"/>
     ${hreflangTags}
     ${xDefaultTag}

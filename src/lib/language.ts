@@ -6,6 +6,14 @@ export interface LanguageRouteConfig {
 }
 
 export const SUPPORTED_LANGUAGES: Language[] = ['de', 'en', 'cz', 'sk', 'hu'];
+/**
+ * Sprachen, die indexiert werden sollen. SK ist ausgeschlossen, weil der
+ * Content zu >95 % per Fallback aus CZ stammt und Google das als Duplicate
+ * Content gewertet hat. SK bleibt in SUPPORTED_LANGUAGES, damit der
+ * Sprachwechsler und das App-Routing weiter funktionieren.
+ */
+export const INDEXABLE_LANGUAGES: Language[] = ['de', 'en', 'cz', 'hu'];
+export const NON_INDEXABLE_LANGUAGES: Language[] = ['sk'];
 export const DEFAULT_LANGUAGE: Language = 'cz';
 export const HREFLANG_DEFAULT: Language = 'cz';
 export const CANONICAL_DOMAIN = 'https://asamer.cz';

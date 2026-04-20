@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../App';
-import { buildCanonicalUrl, DEFAULT_LANGUAGE, HREFLANG_DEFAULT, languageToHreflang, SUPPORTED_LANGUAGES } from '../lib/language';
+import { buildCanonicalUrl, DEFAULT_LANGUAGE, HREFLANG_DEFAULT, INDEXABLE_LANGUAGES, languageToHreflang, NON_INDEXABLE_LANGUAGES } from '../lib/language';
 import { DEFAULT_OG_IMAGE, getFallbackMeta, getSlugForLang, SEO_ROUTES } from './routes';
 import type { SeoRouteKey } from './routes';
 import type { Language } from '../i18n';
@@ -33,27 +33,28 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
   const keywords = overrides.keywords ?? metaForLang.keywords;
   const image = overrides.image ?? routeConfig?.image ?? DEFAULT_OG_IMAGE;
   const canonical = buildCanonicalUrl(lang, slug);
+  const effectiveRobots = NON_INDEXABLE_LANGUAGES.includes(lang) ? 'noindex,follow' : robots;
 
   return (
     <Helmet prioritizeSeoTags>
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords.join(', ')} />}
-      <meta name="robots" content={robots} />
+      <meta name="robots" content={effectiveRobots} />
 
       <link rel="canonical" href={canonical} />
-      {SUPPORTED_LANGUAGES.map((supportedLang) => {
+      {INDEXABLE_LANGUAGES.map((indexableLang) => {
         const altSlug = buildAlternateSlug
-          ? buildAlternateSlug(supportedLang)
+          ? buildAlternateSlug(indexableLang)
           : routeConfig
-            ? getSlugForLang(routeConfig, supportedLang)
+            ? getSlugForLang(routeConfig, indexableLang)
             : slug;
         return (
           <link
-            key={supportedLang}
+            key={indexableLang}
             rel="alternate"
-            hrefLang={languageToHreflang(supportedLang)}
-            href={buildCanonicalUrl(supportedLang, altSlug)}
+            hrefLang={languageToHreflang(indexableLang)}
+            href={buildCanonicalUrl(indexableLang, altSlug)}
           />
         );
       })}

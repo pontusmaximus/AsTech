@@ -7,7 +7,7 @@ import {
   CANONICAL_DOMAIN,
   DEFAULT_LANGUAGE,
   HREFLANG_DEFAULT,
-  SUPPORTED_LANGUAGES,
+  INDEXABLE_LANGUAGES,
   languageToHreflang,
 } from '../src/lib/language';
 import { OTT_PRODUCTS, buildOttProductPath } from '../src/data/ottProducts';
@@ -36,10 +36,10 @@ const entries: SitemapEntry[] = [];
 
 // Static page entries
 Object.values(SEO_ROUTES).forEach((config) => {
-  SUPPORTED_LANGUAGES.forEach((lang) => {
+  INDEXABLE_LANGUAGES.forEach((lang) => {
     const langSlug = getSlugForLang(config, lang);
     const localizedPath = buildLocalizedPath(lang, langSlug);
-    const alternates = SUPPORTED_LANGUAGES.map((altLang) => ({
+    const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
       lang: altLang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, getSlugForLang(config, altLang))}`,
     }));
@@ -56,9 +56,9 @@ Object.values(SEO_ROUTES).forEach((config) => {
 
 // OTT product page entries
 OTT_PRODUCTS.forEach((product) => {
-  SUPPORTED_LANGUAGES.forEach((lang) => {
+  INDEXABLE_LANGUAGES.forEach((lang) => {
     const productPath = buildOttProductPath(lang, product);
-    const alternates = SUPPORTED_LANGUAGES.map((altLang) => ({
+    const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
       lang: altLang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, buildOttProductPath(altLang, product))}`,
     }));
@@ -75,9 +75,9 @@ OTT_PRODUCTS.forEach((product) => {
 
 // Mayer product page entries
 MAYER_PRODUCTS.forEach((product) => {
-  SUPPORTED_LANGUAGES.forEach((lang) => {
+  INDEXABLE_LANGUAGES.forEach((lang) => {
     const productPath = buildMayerProductPath(lang, product);
-    const alternates = SUPPORTED_LANGUAGES.map((altLang) => ({
+    const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
       lang: altLang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, buildMayerProductPath(altLang, product))}`,
     }));
@@ -94,9 +94,9 @@ MAYER_PRODUCTS.forEach((product) => {
 
 // Barbaric product page entries
 BARBARIC_PRODUCTS.forEach((product) => {
-  SUPPORTED_LANGUAGES.forEach((lang) => {
+  INDEXABLE_LANGUAGES.forEach((lang) => {
     const productPath = buildBarbaricProductPath(lang, product);
-    const alternates = SUPPORTED_LANGUAGES.map((altLang) => ({
+    const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
       lang: altLang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, buildBarbaricProductPath(altLang, product))}`,
     }));
@@ -113,9 +113,9 @@ BARBARIC_PRODUCTS.forEach((product) => {
 
 // Gannomat product page entries
 GANNOMAT_PRODUCTS.forEach((product) => {
-  SUPPORTED_LANGUAGES.forEach((lang) => {
+  INDEXABLE_LANGUAGES.forEach((lang) => {
     const productPath = buildGannomatProductPath(lang, product);
-    const alternates = SUPPORTED_LANGUAGES.map((altLang) => ({
+    const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
       lang: altLang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, buildGannomatProductPath(altLang, product))}`,
     }));
@@ -132,10 +132,10 @@ GANNOMAT_PRODUCTS.forEach((product) => {
 
 // Used machine detail page entries
 USED_MACHINES.forEach((machine) => {
-  SUPPORTED_LANGUAGES.forEach((lang) => {
+  INDEXABLE_LANGUAGES.forEach((lang) => {
     const buildUsedMachinePath = (al: Language) => `${localizeSlug('/pouzite-stroje', al)}/${machine.slug}`;
     const machinePath = buildUsedMachinePath(lang);
-    const alternates = SUPPORTED_LANGUAGES.map((altLang) => ({
+    const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
       lang: altLang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, buildUsedMachinePath(altLang))}`,
     }));
