@@ -100,6 +100,7 @@ const ImaSchellingPage = () => {
         <HeroSection
           logoSrc="/images/logo/ima-schelling-logo.png"
           logoAlt="IMA Schelling logo"
+          logoWrapperClassName="!bg-transparent !shadow-none !px-0 !py-0"
           bgImage="https://www.imaschelling.com/typo3conf/ext/imaschelling/Resources/Public/Images/header/header-image.jpg"
         />
 
