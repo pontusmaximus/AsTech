@@ -612,15 +612,15 @@ const BarsHero = ({
         <div className="container-wide pb-10 md:pb-14">
           <div className="page-header max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="inline-block h-px w-10 bg-red-500/80" />
-              <span className="text-[11px] uppercase tracking-[0.28em] text-red-400/90">
+              <span className="inline-block h-px w-10 bg-white/80" />
+              <span className="text-[11px] uppercase tracking-[0.28em] text-white">
                 {eyebrow}
               </span>
             </div>
             <h1 className="font-display text-white font-semibold leading-[0.95] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)]">
               {title}
             </h1>
-            <p className="mt-4 text-white/70 text-sm sm:text-base md:text-lg max-w-xl">
+            <p className="mt-4 text-white text-sm sm:text-base md:text-lg max-w-xl">
               {subtitle}
             </p>
           </div>
