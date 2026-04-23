@@ -98,7 +98,7 @@ const ImaSchellingPage = () => {
       <div className="bg-dark min-h-screen">
 
         <HeroSection
-          bgImage="https://www.imaschelling.com/typo3conf/ext/imaschelling/Resources/Public/Images/header/header-image.jpg"
+          bgImage="/images/ima-schelling/hero.jpg"
         />
 
         {/* INTRO */}
