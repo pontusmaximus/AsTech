@@ -9,6 +9,10 @@ export interface HeroSectionProps {
   bgImage?: string;
   /** On mobile, show full image without cropping */
   bgContainMobile?: boolean;
+  /** Show full image without cropping on all viewports */
+  bgContain?: boolean;
+  /** Custom background-size CSS value (e.g. "70%", "auto", "1200px"). Overrides cover/contain. */
+  bgSize?: string;
   bgVideo?: string;
   bgVideoStart?: number;
   bgVideoEnd?: number;
@@ -25,6 +29,8 @@ const HeroSection = ({
   headlineAlign = 'center',
   bgImage,
   bgContainMobile = false,
+  bgContain = false,
+  bgSize,
   bgVideo,
   bgVideoStart,
   bgVideoEnd,
@@ -45,7 +51,12 @@ const HeroSection = ({
           <source src={bgVideo} type="video/mp4" />
         </video>
       ) : bgImage ? (
-        <div className={`absolute inset-0 bg-center ${bgContainMobile ? 'bg-contain md:bg-cover bg-no-repeat' : 'bg-cover'}`} style={{ backgroundImage: `url(${bgImage})` }} />
+        <div
+          className={`absolute inset-0 bg-center bg-no-repeat ${
+            bgSize ? '' : bgContain ? 'bg-contain' : bgContainMobile ? 'bg-contain md:bg-cover' : 'bg-cover'
+          }`}
+          style={{ backgroundImage: `url(${bgImage})`, ...(bgSize ? { backgroundSize: bgSize } : {}) }}
+        />
       ) : (
         <div className="absolute inset-0 bg-dark-elevated" />
       )}
