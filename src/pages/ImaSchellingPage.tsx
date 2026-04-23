@@ -3,7 +3,6 @@ import { ArrowUpRight, Award, Wrench, ShieldCheck, GraduationCap, Factory, MapPi
 import gsap from 'gsap';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
-import HeroSection from '../components/manufacturer/HeroSection';
 import ManufacturerIntro from '../components/manufacturer/ManufacturerIntro';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
@@ -97,9 +96,7 @@ const ImaSchellingPage = () => {
       />
       <div className="bg-dark min-h-screen">
 
-        <HeroSection
-          bgImage="/images/ima-schelling/hero.jpg"
-        />
+        <BarsHero />
 
         {/* INTRO */}
         <ManufacturerIntro
@@ -212,6 +209,90 @@ const ImaSchellingPage = () => {
 
       </div>
     </>
+  );
+};
+
+/* ----------------------------------------------------------------- */
+/*  BarsHero – 3-frame slideshow of wide, slightly skewed red & black */
+/*  bars. Pure CSS, no images.                                         */
+/* ----------------------------------------------------------------- */
+
+const BarsHero = () => {
+  const css = `
+    @keyframes ima-bars-fade {
+      0%, 28%   { opacity: 1; }
+      33%, 95%  { opacity: 0; }
+      100%      { opacity: 1; }
+    }
+    @keyframes ima-bars-drift {
+      0%   { transform: translateX(-2%); }
+      100% { transform: translateX(2%); }
+    }
+    .ima-slide  { animation: ima-bars-fade 12s ease-in-out infinite; }
+    .ima-slide-2 { animation-delay: -8s; }
+    .ima-slide-3 { animation-delay: -4s; }
+    .ima-bar    { animation: ima-bars-drift 8s ease-in-out infinite alternate; }
+  `;
+
+  return (
+    <section className="relative min-h-[50vh] md:min-h-[55vh] overflow-hidden mb-10 md:mb-16 bg-black">
+      <style>{css}</style>
+
+      {/* Slide 1 — three near-horizontal bars, slight CCW tilt */}
+      <div className="absolute inset-0 ima-slide">
+        <div
+          className="ima-bar absolute h-[18%] bg-red-600"
+          style={{ top: '12%', left: '-10%', right: '-10%', transform: 'rotate(-3deg)' }}
+        />
+        <div
+          className="ima-bar absolute h-[24%] bg-zinc-900"
+          style={{ top: '40%', left: '-12%', right: '-12%', transform: 'rotate(-4deg)', animationDelay: '-3s' }}
+        />
+        <div
+          className="ima-bar absolute h-[14%] bg-red-700"
+          style={{ top: '74%', left: '-10%', right: '-10%', transform: 'rotate(-2deg)', animationDelay: '-5s' }}
+        />
+      </div>
+
+      {/* Slide 2 — two thick bars + accent, opposite tilt */}
+      <div className="absolute inset-0 ima-slide ima-slide-2">
+        <div
+          className="ima-bar absolute h-[30%] bg-black"
+          style={{ top: '8%', left: '-12%', right: '-12%', transform: 'rotate(4deg)' }}
+        />
+        <div
+          className="ima-bar absolute h-[10%] bg-red-600"
+          style={{ top: '46%', left: '-10%', right: '-10%', transform: 'rotate(5deg)', animationDelay: '-2s' }}
+        />
+        <div
+          className="ima-bar absolute h-[26%] bg-zinc-950"
+          style={{ top: '64%', left: '-12%', right: '-12%', transform: 'rotate(3deg)', animationDelay: '-4s' }}
+        />
+      </div>
+
+      {/* Slide 3 — alternating thin/thick stripes, stronger tilt */}
+      <div className="absolute inset-0 ima-slide ima-slide-3">
+        <div
+          className="ima-bar absolute h-[12%] bg-red-700"
+          style={{ top: '4%', left: '-10%', right: '-10%', transform: 'rotate(-6deg)' }}
+        />
+        <div
+          className="ima-bar absolute h-[20%] bg-zinc-900"
+          style={{ top: '22%', left: '-12%', right: '-12%', transform: 'rotate(-5deg)', animationDelay: '-1s' }}
+        />
+        <div
+          className="ima-bar absolute h-[14%] bg-red-600"
+          style={{ top: '48%', left: '-10%', right: '-10%', transform: 'rotate(-7deg)', animationDelay: '-3s' }}
+        />
+        <div
+          className="ima-bar absolute h-[22%] bg-black"
+          style={{ top: '68%', left: '-12%', right: '-12%', transform: 'rotate(-5deg)', animationDelay: '-5s' }}
+        />
+      </div>
+
+      {/* Bottom-fade so the section blends into the dark page */}
+      <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/30 to-transparent pointer-events-none" />
+    </section>
   );
 };
 
