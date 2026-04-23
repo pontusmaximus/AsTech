@@ -99,7 +99,6 @@ const ImaSchellingPage = () => {
 
         <HeroSection
           bgImage="/images/ima-schelling/hero.jpg"
-          bgContain
         />
 
         {/* INTRO */}
