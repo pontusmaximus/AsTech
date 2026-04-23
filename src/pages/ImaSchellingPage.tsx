@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Award, Wrench, ShieldCheck, GraduationCap, Factory, MapPin, Phone, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, Award, Wrench, ShieldCheck, GraduationCap, Factory, Phone, ChevronRight } from 'lucide-react';
 import gsap from 'gsap';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
-import ManufacturerIntro from '../components/manufacturer/ManufacturerIntro';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, faqPageSchema } from '../seo/structuredData';
@@ -201,110 +200,163 @@ const ImaSchellingPage = () => {
       />
       <div className="bg-dark min-h-screen">
 
-        <BarsHero />
-
-        {/* INTRO */}
-        <ManufacturerIntro
-          eyebrow={tr(
-            'Service · Plattenaufteilsägen · 30+ Jahre Erfahrung',
-            'Service · Panel saws · 30+ years of experience',
-            'Servis · Formátovací pily · 30+ let zkušeností',
+        <BarsHero
+          eyebrow={tr('Asamer Service', 'Asamer Service', 'Asamer Service')}
+          title="IMA Schelling"
+          subtitle={tr(
+            'Plattenaufteilsägen · Service & Lifecycle',
+            'Panel saws · Service & Lifecycle',
+            'Formátovací pily · Servis & Lifecycle',
           )}
-          title={tr(
-            'IMA Schelling Plattenaufteilsägen – Service aus erfahrener Hand',
-            'IMA Schelling Panel Saws – service from experienced hands',
-            'Formátovací pily IMA Schelling – servis ze zkušených rukou',
-          )}
-          lead={tr(
-            'IMA Schelling zählt zu den weltweit führenden Herstellern von Plattenaufteilsägen. Asamer betreut diese Anlagen seit über 30 Jahren – von der präventiven Wartung über Reparatur und Ersatzteilversorgung bis zu Bedienerschulung und Optimierungsprojekten. Auf dieser Seite verkaufen wir keine neuen IMA Schelling Maschinen, sondern bündeln unser Service-Angebot für Bestandsanlagen in CZ, SK und HU.',
-            'IMA Schelling is one of the world’s leading manufacturers of panel saws. Asamer has been servicing these machines for more than 30 years – from preventive maintenance to repair, spare parts supply, operator training and optimization projects. On this page we do not sell new IMA Schelling machines; we focus on service for existing installations in CZ, SK and HU.',
-            'IMA Schelling patří mezi přední světové výrobce formátovacích pil. Asamer se o tato zařízení stará již více než 30 let – od preventivní údržby přes opravy a dodávky náhradních dílů až po školení obsluhy a optimalizační projekty. Na této stránce nenabízíme nové stroje IMA Schelling, ale soustředíme servis pro stávající zařízení v ČR, SR a Maďarsku.',
-          )}
-          facts={[
-            { icon: Award, label: tr('Erfahrung', 'Experience', 'Zkušenosti'), value: tr('30+ Jahre IMA Schelling', '30+ years IMA Schelling', '30+ let s IMA Schelling'), iconClass: 'text-amber-400' },
-            { icon: MapPin, label: tr('Märkte', 'Markets', 'Trhy'), value: 'CZ · SK · HU', iconClass: 'text-amber-400' },
-            { icon: Wrench, label: tr('Leistungen', 'Services', 'Služby'), value: tr('Wartung · Reparatur · Teile', 'Maintenance · Repair · Parts', 'Údržba · Opravy · Díly'), iconClass: 'text-amber-400' },
-          ]}
         />
 
+        {/* INTRO + STAT STRIP */}
+        <section className="container-wide pt-2 pb-10 md:pb-14">
+          <div className="grid lg:grid-cols-12 gap-10 items-start">
+            <div className="lg:col-span-7">
+              <div className="accent-line mb-5" />
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-light leading-[1.2] tracking-tight text-white mb-5">
+                {tr(
+                  'Plattenaufteilsägen-Service aus erfahrener Hand',
+                  'Panel saw service from experienced hands',
+                  'Servis formátovacích pil ze zkušených rukou',
+                )}
+              </h2>
+              <p className="text-white/70 text-base md:text-lg leading-relaxed">
+                {tr(
+                  'IMA Schelling zählt zu den weltweit führenden Herstellern von Plattenaufteilsägen. Asamer betreut diese Anlagen seit über 30 Jahren – von präventiver Wartung über Reparatur und Ersatzteilversorgung bis zu Bedienerschulung und Optimierungsprojekten. Wir verkaufen keine neuen IMA Schelling Maschinen, sondern bündeln unser Service-Angebot für Bestandsanlagen in CZ, SK und HU.',
+                  'IMA Schelling is one of the world’s leading panel-saw manufacturers. Asamer has been servicing these machines for more than 30 years – from preventive maintenance to repair, spare parts and operator training. We do not sell new IMA Schelling machines; we focus on service for existing installations in CZ, SK and HU.',
+                  'IMA Schelling patří mezi přední světové výrobce formátovacích pil. Asamer se o tato zařízení stará již přes 30 let – od preventivní údržby přes opravy a dodávky náhradních dílů až po školení obsluhy. Nové stroje IMA Schelling neprodáváme, soustředíme servis pro stávající zařízení v ČR, SR a Maďarsku.',
+                )}
+              </p>
+            </div>
+
+            {/* Stat strip — vertical on lg, horizontal on mobile */}
+            <aside className="lg:col-span-5">
+              <dl className="grid grid-cols-3 gap-3 lg:gap-4">
+                <Stat value="30+" label={tr('Jahre IMA Schelling', 'years IMA Schelling', 'let IMA Schelling')} />
+                <Stat value="3" label={tr('Märkte (CZ·SK·HU)', 'markets (CZ·SK·HU)', 'trhy (CZ·SK·HU)')} />
+                <Stat value="24/7" label={tr('Notfall-Hotline', 'Emergency hotline', 'Nouzová linka')} />
+              </dl>
+            </aside>
+          </div>
+        </section>
+
         {/* SERVICE GRID */}
-        <div className="container-wide pb-12">
-          <div className="grid sm:grid-cols-2 gap-4">
+        <section className="container-wide pb-14">
+          <header className="mb-6 flex items-end justify-between gap-6">
+            <div>
+              <span className="text-[11px] uppercase tracking-[0.22em] text-red-400/80 mb-2 block">
+                {tr('Leistungen', 'Services', 'Služby')}
+              </span>
+              <h2 className="text-2xl md:text-3xl font-display font-light text-white leading-tight">
+                {tr(
+                  'Was wir für Ihre Anlage tun',
+                  'What we do for your machine',
+                  'Co děláme pro vaše zařízení',
+                )}
+              </h2>
+            </div>
+          </header>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {services.map((s) => {
               const Icon = s.icon;
               return (
-                <div
+                <article
                   key={s.title}
-                  className="rounded-xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/20 hover:bg-white/[0.05] transition-colors"
+                  className="group relative rounded-xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:border-red-500/40 hover:bg-white/[0.05] hover:-translate-y-0.5 hover:shadow-[0_12px_32px_-12px_rgba(239,68,68,0.25)] overflow-hidden"
                 >
-                  <div className="flex items-start gap-4">
-                    <span className="shrink-0 mt-0.5">
-                      <Icon className="w-5 h-5 text-amber-400" aria-hidden="true" />
-                    </span>
-                    <div className="min-w-0">
-                      <h3 className="text-white font-medium text-lg leading-snug mb-2">{s.title}</h3>
-                      <p className="text-white/60 text-sm leading-relaxed">{s.description}</p>
-                    </div>
+                  <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-500/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="mb-4 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 group-hover:bg-red-500/15 transition-colors">
+                    <Icon className="w-5 h-5 text-red-400" aria-hidden="true" />
                   </div>
-                </div>
+                  <h3 className="text-white font-medium text-base leading-snug mb-2">{s.title}</h3>
+                  <p className="text-white/55 text-sm leading-relaxed">{s.description}</p>
+                </article>
               );
             })}
           </div>
-        </div>
+        </section>
 
         {/* EXPERIENCE BLOCK */}
-        <div className="container-wide pb-12">
-          <div className="rounded-2xl border border-amber-500/15 bg-gradient-to-br from-amber-600/8 via-transparent to-transparent p-8 md:p-10">
-            <div className="flex items-start gap-4 max-w-3xl">
-              <Award className="w-6 h-6 text-amber-400 shrink-0 mt-1" aria-hidden="true" />
-              <div>
-                <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-3 leading-tight">
+        <section className="container-wide pb-14">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-red-950/40 via-zinc-950 to-black p-8 md:p-12">
+            {/* decorative bars in background */}
+            <div className="absolute inset-y-0 right-0 w-1/3 opacity-[0.06] pointer-events-none" aria-hidden="true">
+              <div className="absolute top-0 bottom-0 left-[20%] w-8 bg-red-500 -rotate-6" />
+              <div className="absolute top-0 bottom-0 left-[45%] w-12 bg-white -rotate-6" />
+              <div className="absolute top-0 bottom-0 left-[75%] w-6 bg-red-500 -rotate-6" />
+            </div>
+
+            <div className="relative grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+              <div className="md:col-span-4">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-display font-bold text-white text-7xl md:text-8xl leading-none tracking-tight">
+                    30
+                  </span>
+                  <span className="font-display font-light text-red-500 text-5xl md:text-6xl leading-none">+</span>
+                </div>
+                <span className="block text-[11px] uppercase tracking-[0.28em] text-white/50 mt-3">
+                  {tr('Jahre Praxis', 'Years of practice', 'Let praxe')}
+                </span>
+              </div>
+              <div className="md:col-span-8">
+                <div className="flex items-center gap-3 mb-3 text-red-400/90">
+                  <Award className="w-4 h-4" aria-hidden="true" />
+                  <span className="text-[11px] uppercase tracking-[0.22em]">
+                    {tr('Erfahrung mit IMA Schelling', 'IMA Schelling experience', 'Zkušenosti s IMA Schelling')}
+                  </span>
+                </div>
+                <p className="text-white/80 text-base md:text-lg leading-relaxed">
                   {tr(
-                    'Über 30 Jahre Erfahrung mit IMA Schelling Plattenaufteilsägen',
-                    'Over 30 years of experience with IMA Schelling panel saws',
-                    'Přes 30 let zkušeností s formátovacími pilami IMA Schelling',
-                  )}
-                </h2>
-                <p className="text-white/70 text-base leading-relaxed">
-                  {tr(
-                    'Vom klassischen Druckbalkensägen-Konzept bis zu modernen Aufteilzentren – unser Team kennt die mechanische und steuerungstechnische Bandbreite der IMA Schelling Baureihen aus Hunderten von Service-Einsätzen. Diese Erfahrung übersetzen wir in schnelle Diagnose, sauber durchgeführte Wartung und ehrliche Empfehlungen für die nächste Investitionsstufe.',
-                    'From the classic pressure-beam saw concept to modern cutting centers – our team knows the mechanical and control-side breadth of the IMA Schelling product lines from hundreds of service calls. We translate that experience into fast diagnosis, clean maintenance and honest advice on the next investment step.',
-                    'Od klasického konceptu pily s přítlačným trámem až po moderní nářezová centra – náš tým zná mechanickou i řídicí stránku řad IMA Schelling z více než stovek servisních zásahů. Tuto zkušenost přetavujeme do rychlé diagnostiky, čistě provedené údržby a poctivého doporučení pro další investiční krok.',
+                    'Vom klassischen Druckbalkensägen-Konzept bis zu modernen Aufteilzentren – unser Team kennt die mechanische und steuerungstechnische Bandbreite der IMA Schelling Baureihen aus Hunderten Service-Einsätzen. Diese Erfahrung übersetzen wir in schnelle Diagnose, saubere Wartung und ehrliche Empfehlungen für die nächste Investitionsstufe.',
+                    'From the classic pressure-beam saw concept to modern cutting centers – our team knows the mechanical and control-side breadth of the IMA Schelling lines from hundreds of service calls. We translate that experience into fast diagnosis, clean maintenance and honest advice on the next investment step.',
+                    'Od klasického konceptu pily s přítlačným trámem až po moderní nářezová centra – náš tým zná mechanickou i řídicí stránku řad IMA Schelling ze stovek servisních zásahů. Zkušenost přetavujeme do rychlé diagnostiky, čisté údržby a poctivého doporučení pro další investiční krok.',
                   )}
                 </p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* SUPPORTED MODELS */}
-        <div className="container-wide pb-12">
-          <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-3 leading-tight">
-            {tr(
-              'Welche IMA Schelling Modellreihen wir betreuen',
-              'IMA Schelling model series we support',
-              'Které řady strojů IMA Schelling servisujeme',
-            )}
-          </h2>
-          <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-3xl mb-6">
-            {tr(
-              'Unser Service deckt klassische IMA Schelling Druckbalkensägen ebenso ab wie moderne Aufteilzentren. Auch frühere IMA-Modelle (vor der Fusion zu IMA Schelling) sind betreubar.',
-              'Our service covers classic IMA Schelling pressure-beam saws as well as modern cutting centers. Earlier IMA models (predating the merger into IMA Schelling) are also supported.',
-              'Náš servis pokrývá klasické pily s přítlačným trámem IMA Schelling i moderní nářezová centra. Servisujeme také dřívější modely IMA (před fúzí na IMA Schelling).',
-            )}
-          </p>
+        <section className="container-wide pb-14">
+          <header className="mb-6">
+            <span className="text-[11px] uppercase tracking-[0.22em] text-red-400/80 mb-2 block">
+              {tr('Modellabdeckung', 'Model coverage', 'Pokrytí modelů')}
+            </span>
+            <h2 className="text-2xl md:text-3xl font-display font-light text-white leading-tight mb-3">
+              {tr(
+                'Modellreihen, die wir betreuen',
+                'Model series we support',
+                'Řady strojů, které servisujeme',
+              )}
+            </h2>
+            <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-3xl">
+              {tr(
+                'Unser Service deckt klassische IMA Schelling Druckbalkensägen ebenso ab wie moderne Aufteilzentren. Auch frühere IMA-Modelle (vor der Fusion zu IMA Schelling) sind betreubar.',
+                'Our service covers classic IMA Schelling pressure-beam saws as well as modern cutting centers. Earlier IMA models (predating the merger into IMA Schelling) are also supported.',
+                'Náš servis pokrývá klasické pily s přítlačným trámem IMA Schelling i moderní nářezová centra. Servisujeme také dřívější modely IMA (před fúzí na IMA Schelling).',
+              )}
+            </p>
+          </header>
           <div className="grid sm:grid-cols-2 gap-4">
-            {seriesGroups.map((group) => (
+            {seriesGroups.map((group, idx) => (
               <div
                 key={group.label}
-                className="rounded-xl border border-white/10 bg-white/[0.03] p-6"
+                className="rounded-xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/15 transition-colors"
               >
-                <h3 className="text-white font-medium text-lg mb-3">{group.label}</h3>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-md bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-mono">
+                    {String(idx + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="text-white font-medium text-base">{group.label}</h3>
+                </div>
                 <ul className="flex flex-wrap gap-2">
                   {group.models.map((m) => (
                     <li
                       key={m}
-                      className="px-2.5 py-1 rounded-md text-sm bg-white/[0.04] border border-white/10 text-white/70"
+                      className="px-2.5 py-1 rounded-md text-xs font-mono uppercase tracking-wide bg-white/[0.04] border border-white/10 text-white/75 hover:border-red-500/30 hover:text-white transition-colors"
                     >
                       {m}
                     </li>
@@ -320,120 +372,155 @@ const ImaSchellingPage = () => {
               'Označení modelů bez záruky – u speciálních strojů ověřujeme servisovatelnost individuálně.',
             )}
           </p>
-        </div>
+        </section>
 
         {/* FAQ */}
-        <div className="container-wide pb-12">
-          <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-6 leading-tight">
-            {tr(
-              'Häufige Fragen zum IMA Schelling Service',
-              'Frequently asked questions about IMA Schelling service',
-              'Časté dotazy k servisu IMA Schelling',
-            )}
-          </h2>
-          <div className="divide-y divide-white/5 border-y border-white/5">
+        <section className="container-wide pb-14">
+          <header className="mb-6">
+            <span className="text-[11px] uppercase tracking-[0.22em] text-red-400/80 mb-2 block">FAQ</span>
+            <h2 className="text-2xl md:text-3xl font-display font-light text-white leading-tight">
+              {tr(
+                'Häufige Fragen zum IMA Schelling Service',
+                'Frequently asked questions about IMA Schelling service',
+                'Časté dotazy k servisu IMA Schelling',
+              )}
+            </h2>
+          </header>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.02] divide-y divide-white/5 overflow-hidden">
             {faqs.map((f) => (
-              <details key={f.question} className="group py-5">
-                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none">
-                  <h3 className="text-white font-medium text-base md:text-lg">{f.question}</h3>
-                  <ChevronRight
-                    className="w-5 h-5 text-white/40 transition-transform group-open:rotate-90 shrink-0"
-                    aria-hidden="true"
-                  />
+              <details key={f.question} className="group">
+                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none px-5 md:px-6 py-5 hover:bg-white/[0.03] transition-colors">
+                  <h3 className="text-white font-medium text-base md:text-lg leading-snug pr-2">
+                    {f.question}
+                  </h3>
+                  <span className="shrink-0 inline-flex items-center justify-center w-7 h-7 rounded-md border border-white/10 text-white/50 group-hover:text-white group-hover:border-red-500/40 transition-colors">
+                    <ChevronRight
+                      className="w-4 h-4 transition-transform group-open:rotate-90"
+                      aria-hidden="true"
+                    />
+                  </span>
                 </summary>
-                <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed max-w-3xl">
-                  {f.answer}
-                </p>
+                <div className="px-5 md:px-6 pb-5 -mt-1">
+                  <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-3xl">
+                    {f.answer}
+                  </p>
+                </div>
               </details>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* RELATED LINKS */}
-        <div className="container-wide pb-12">
+        <section className="container-wide pb-14">
           <h2 className="text-xl font-display font-light text-white mb-4">
             {tr('Verwandte Seiten', 'Related pages', 'Související stránky')}
           </h2>
           <ul className="grid sm:grid-cols-3 gap-3">
-            <li>
-              <Link
-                to={buildLocalizedPath(lang, localizeSlug('/servis', lang))}
-                className="block rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:border-white/20 hover:bg-white/[0.05] transition-colors"
-              >
-                <span className="text-white text-sm font-medium block mb-1">
-                  {tr('Service & Lifecycle Support', 'Service & lifecycle support', 'Servis a podpora životního cyklu')}
-                </span>
-                <span className="text-white/50 text-xs">
-                  {tr('Allgemeines Service-Angebot', 'General service offering', 'Obecná nabídka servisu')}
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={buildLocalizedPath(lang, '/mayer')}
-                className="block rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:border-white/20 hover:bg-white/[0.05] transition-colors"
-              >
-                <span className="text-white text-sm font-medium block mb-1">
-                  {tr('Mayer Plattensägen (Verkauf)', 'Mayer panel saws (sales)', 'Mayer formátovací pily (prodej)')}
-                </span>
-                <span className="text-white/50 text-xs">
-                  {tr('Neuanschaffung Plattenaufteilsäge', 'New panel saw purchase', 'Nákup nové formátovací pily')}
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={buildLocalizedPath(lang, localizeSlug('/faq', lang))}
-                className="block rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:border-white/20 hover:bg-white/[0.05] transition-colors"
-              >
-                <span className="text-white text-sm font-medium block mb-1">FAQ</span>
-                <span className="text-white/50 text-xs">
-                  {tr('Antworten zu Service & Maschinen', 'Answers about service & machines', 'Odpovědi k servisu a strojům')}
-                </span>
-              </Link>
-            </li>
+            <RelatedLink
+              to={buildLocalizedPath(lang, localizeSlug('/servis', lang))}
+              title={tr('Service & Lifecycle Support', 'Service & lifecycle support', 'Servis a podpora životního cyklu')}
+              hint={tr('Allgemeines Service-Angebot', 'General service offering', 'Obecná nabídka servisu')}
+            />
+            <RelatedLink
+              to={buildLocalizedPath(lang, '/mayer')}
+              title={tr('Mayer Plattensägen (Verkauf)', 'Mayer panel saws (sales)', 'Mayer formátovací pily (prodej)')}
+              hint={tr('Neuanschaffung Plattenaufteilsäge', 'New panel saw purchase', 'Nákup nové formátovací pily')}
+            />
+            <RelatedLink
+              to={buildLocalizedPath(lang, localizeSlug('/faq', lang))}
+              title="FAQ"
+              hint={tr('Antworten zu Service & Maschinen', 'Answers about service & machines', 'Odpovědi k servisu a strojům')}
+            />
           </ul>
-        </div>
+        </section>
 
         {/* CTA */}
-        <div className="border-t border-white/5">
-          <div className="container-wide py-12">
-            <div className="text-center mb-6">
-              <p className="text-white/20 text-xs">
-                {tr('Hersteller-Information', 'Manufacturer information', 'Informace o výrobci')} ·{' '}
-                <a
-                  href="https://www.imaschelling.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-primary/40 hover:text-primary transition-colors"
-                >
-                  imaschelling.com
-                  <ArrowUpRight className="w-3 h-3 inline ml-0.5" />
-                </a>
-              </p>
-            </div>
-            <div className="p-4 bg-gradient-to-r from-amber-600/8 to-transparent rounded-xl border border-amber-500/10 max-w-2xl">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <p className="text-white/60 text-sm">
-                  {tr(
-                    'Service-Anfrage für Ihre IMA Schelling Plattenaufteilsäge?',
-                    'Need service for your IMA Schelling panel saw?',
-                    'Potřebujete servis pro vaši formátovací pilu IMA Schelling?',
-                  )}
-                </p>
-                <a href={inquiryMail} className="btn-primary-dark text-sm sm:whitespace-nowrap">
-                  <Phone className="w-4 h-4" />
-                  {tr('Service anfragen', 'Request service', 'Poptat servis')}
-                </a>
+        <section className="border-t border-white/5 mt-4">
+          <div className="container-wide py-14 md:py-20">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-red-950/30 via-zinc-950 to-black p-8 md:p-12">
+              <div className="absolute -right-10 -top-10 w-40 h-40 bg-red-500/10 blur-3xl rounded-full pointer-events-none" />
+              <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-10">
+                <div className="max-w-xl">
+                  <span className="text-[11px] uppercase tracking-[0.28em] text-red-400/90">
+                    {tr('Service-Anfrage', 'Service request', 'Servisní poptávka')}
+                  </span>
+                  <h2 className="mt-3 text-2xl md:text-3xl font-display font-light text-white leading-tight">
+                    {tr(
+                      'Steht Ihre IMA Schelling Säge oder läuft sie nicht mehr rund?',
+                      'Is your IMA Schelling saw down or not running smoothly?',
+                      'Stojí vaše pila IMA Schelling nebo neběží jak má?',
+                    )}
+                  </h2>
+                  <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
+                    {tr(
+                      'Schreiben Sie uns Modell und Fehlerbild – wir melden uns innerhalb weniger Stunden mit konkreten nächsten Schritten.',
+                      'Send us your model and the symptom – we get back within a few hours with concrete next steps.',
+                      'Napište nám model a popis závady – ozveme se během několika hodin s konkrétními dalšími kroky.',
+                    )}
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0">
+                  <a href={inquiryMail} className="btn-primary-dark text-sm justify-center">
+                    <Phone className="w-4 h-4" />
+                    {tr('Service anfragen', 'Request service', 'Poptat servis')}
+                  </a>
+                  <a
+                    href="tel:+420724056965"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 px-4 py-2 text-sm text-white/80 hover:text-white hover:border-white/30 transition-colors"
+                  >
+                    +420 724 056 965
+                  </a>
+                </div>
               </div>
             </div>
+
+            <p className="mt-6 text-center text-white/30 text-xs">
+              {tr('Hersteller-Information', 'Manufacturer information', 'Informace o výrobci')} ·{' '}
+              <a
+                href="https://www.imaschelling.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white/50 hover:text-white transition-colors"
+              >
+                imaschelling.com
+                <ArrowUpRight className="w-3 h-3 inline ml-0.5" />
+              </a>
+            </p>
           </div>
-        </div>
+        </section>
 
       </div>
     </>
   );
 };
+
+/* ----------------------------------------------------------------- */
+
+const Stat = ({ value, label }: { value: string; label: string }) => (
+  <div className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-4 md:px-4 md:py-5 text-center">
+    <dt className="font-display font-semibold text-white text-2xl md:text-3xl leading-none tracking-tight">
+      {value}
+    </dt>
+    <dd className="mt-2 text-[10px] md:text-[11px] uppercase tracking-widest text-white/50 leading-snug">
+      {label}
+    </dd>
+  </div>
+);
+
+const RelatedLink = ({ to, title, hint }: { to: string; title: string; hint: string }) => (
+  <li>
+    <Link
+      to={to}
+      className="group flex items-start justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:border-red-500/30 hover:bg-white/[0.05] transition-colors"
+    >
+      <span>
+        <span className="text-white text-sm font-medium block mb-1">{title}</span>
+        <span className="text-white/50 text-xs">{hint}</span>
+      </span>
+      <ChevronRight className="w-4 h-4 text-white/30 group-hover:text-red-400 group-hover:translate-x-0.5 transition-all shrink-0 mt-0.5" aria-hidden="true" />
+    </Link>
+  </li>
+);
 
 /* ----------------------------------------------------------------- */
 /*  BarsHero – 3-frame slideshow of wide, slightly skewed red & black */
@@ -465,25 +552,33 @@ const Bar = ({
 );
 
 
-const BarsHero = () => {
+const BarsHero = ({
+  eyebrow,
+  title,
+  subtitle,
+}: {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+}) => {
   const css = `
     @keyframes ima-bars-fade {
-      0%, 28%   { opacity: 1; }
+      0%, 28%   { opacity: 0.55; }
       33%, 95%  { opacity: 0; }
-      100%      { opacity: 1; }
+      100%      { opacity: 0.55; }
     }
     @keyframes ima-bars-drift {
       0%   { transform: translateY(-2%); }
       100% { transform: translateY(2%); }
     }
-    .ima-slide  { animation: ima-bars-fade 12s ease-in-out infinite; }
-    .ima-slide-2 { animation-delay: -8s; }
-    .ima-slide-3 { animation-delay: -4s; }
-    .ima-bar    { animation: ima-bars-drift 8s ease-in-out infinite alternate; }
+    .ima-slide  { animation: ima-bars-fade 14s ease-in-out infinite; }
+    .ima-slide-2 { animation-delay: -9.3s; }
+    .ima-slide-3 { animation-delay: -4.6s; }
+    .ima-bar    { animation: ima-bars-drift 9s ease-in-out infinite alternate; }
   `;
 
   return (
-    <section className="relative min-h-[50vh] md:min-h-[55vh] overflow-hidden mb-10 md:mb-16 bg-black">
+    <section className="relative min-h-[55vh] md:min-h-[62vh] overflow-hidden mb-10 md:mb-16 bg-[#0a0a0a]">
       <style>{css}</style>
 
       {/* Slide 1 — three vertical bars, slight CCW tilt */}
@@ -508,8 +603,29 @@ const BarsHero = () => {
         <Bar left="72%" width="22%" rotate={-5} color="bg-black" delay="-5s" />
       </div>
 
-      {/* Bottom-fade so the section blends into the dark page */}
-      <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/30 to-transparent pointer-events-none" />
+      {/* Vignette + bottom-fade for legibility */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.55)_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent pointer-events-none" />
+
+      {/* Wordmark overlay */}
+      <div className="absolute inset-0 z-10 flex items-end">
+        <div className="container-wide pb-10 md:pb-14">
+          <div className="page-header max-w-3xl">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="inline-block h-px w-10 bg-red-500/80" />
+              <span className="text-[11px] uppercase tracking-[0.28em] text-red-400/90">
+                {eyebrow}
+              </span>
+            </div>
+            <h1 className="font-display text-white font-semibold leading-[0.95] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)]">
+              {title}
+            </h1>
+            <p className="mt-4 text-white/70 text-sm sm:text-base md:text-lg max-w-xl">
+              {subtitle}
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
