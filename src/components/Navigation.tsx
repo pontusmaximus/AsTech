@@ -199,6 +199,13 @@ const Navigation = () => {
               >
                 Gannomat
               </Link>
+              <Link
+                to={buildPath('/ima-schelling')}
+                onClick={() => handleManufacturerClick('ima-schelling', 'desktop')}
+                className={`text-sm transition-colors ${location.pathname === buildPath('/ima-schelling') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
+              >
+                IMA Schelling
+              </Link>
             </div>
 
             <Link
@@ -356,6 +363,13 @@ const Navigation = () => {
                     onClick={() => handleManufacturerClick('gannomat', 'mobile')}
                   >
                     Gannomat
+                  </Link>
+                  <Link
+                    to={buildPath('/ima-schelling')}
+                    className="text-white/70 hover:text-white"
+                    onClick={() => handleManufacturerClick('ima-schelling', 'mobile')}
+                  >
+                    IMA Schelling
                   </Link>
                 </div>
               </div>

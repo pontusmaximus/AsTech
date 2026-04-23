@@ -31,6 +31,7 @@ const OttProductPage = lazy(() => import('./pages/OttProductPage'));
 const MayerProductPage = lazy(() => import('./pages/MayerProductPage'));
 const BarbaricProductPage = lazy(() => import('./pages/BarbaricProductPage'));
 const GannomatPage = lazy(() => import('./pages/GannomatPage'));
+const ImaSchellingPage = lazy(() => import('./pages/ImaSchellingPage'));
 const GannomatProductPage = lazy(() => import('./pages/GannomatProductPage'));
 const FaqPage = lazy(() => import('./pages/FaqPage'));
 const GuidePurVsEvaPage = lazy(() => import('./pages/GuidePurVsEvaPage'));
@@ -194,6 +195,7 @@ const AppRoutes = () => {
         <Route path="barbaric/:category/:model" element={<LocalizedBarbaricProductRoute />} />
         <Route path="gannomat" element={<GannomatPage />} />
         <Route path="gannomat/:category/:model" element={<LocalizedGannomatProductRoute />} />
+        <Route path="ima-schelling" element={<ImaSchellingPage />} />
         {getAllSlugVariants('/financovani').map((s) => (
           <Route key={s} path={s} element={<LocalizedRoute page={<FinancingPage />} czSlug="/financovani" />} />
         ))}
