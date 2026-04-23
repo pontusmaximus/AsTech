@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ArrowUpRight, Award, Wrench, ShieldCheck, GraduationCap, Factory, Handshake, MapPin, Phone } from 'lucide-react';
+import { ArrowUpRight, Award, Wrench, ShieldCheck, GraduationCap, Factory, MapPin, Phone } from 'lucide-react';
 import gsap from 'gsap';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
@@ -122,7 +122,6 @@ const ImaSchellingPage = () => {
           )}
           facts={[
             { icon: Award, label: tr('Erfahrung', 'Experience', 'Zkušenosti'), value: tr('30+ Jahre IMA Schelling', '30+ years IMA Schelling', '30+ let s IMA Schelling'), iconClass: 'text-amber-400' },
-            { icon: Handshake, label: tr('Asamer-Rolle', 'Asamer role', 'Role Asamer'), value: tr('Service-Partner', 'Service partner', 'Servisní partner'), iconClass: 'text-amber-400' },
             { icon: MapPin, label: tr('Märkte', 'Markets', 'Trhy'), value: 'CZ · SK · HU', iconClass: 'text-amber-400' },
             { icon: Wrench, label: tr('Leistungen', 'Services', 'Služby'), value: tr('Wartung · Reparatur · Teile', 'Maintenance · Repair · Parts', 'Údržba · Opravy · Díly'), iconClass: 'text-amber-400' },
           ]}
