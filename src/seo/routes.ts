@@ -10,6 +10,7 @@ export type SeoRouteKey =
   | 'ott'
   | 'barbaric'
   | 'gannomat'
+  | 'imaSchelling'
   | 'financing'
   | 'solutions'
   | 'service'
@@ -235,6 +236,41 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         description:
           'Gannomat fúró- és csapozógépek – Asamer hivatalos viszonteladó CZ, SK és HU területén. Selekta és Index zászlóshajó modellek a bútoripar számára.',
         keywords: ['Gannomat', 'Csapozógép', 'Selekta', 'Index CNC', 'Csapfúró', 'Asamer'],
+      },
+    }),
+  },
+  imaSchelling: {
+    slug: '/ima-schelling',
+    meta: createMeta({
+      de: {
+        title: 'IMA Schelling Plattenaufteilsägen Service – 30+ Jahre Erfahrung | Asamer',
+        description:
+          'Service für IMA Schelling Plattenaufteilsägen in CZ, SK & HU: Wartung, Reparatur, Ersatzteile, Schulung. Erfahrenes Team mit über 30 Jahren IMA Schelling Praxis – HKL, FH, FK, VH, VKS Baureihen.',
+        keywords: ['IMA Schelling', 'Plattenaufteilsäge', 'Service', 'Wartung', 'Reparatur', 'Ersatzteile', 'HKL', 'FH', 'FK', 'VKS', 'Asamer'],
+      },
+      en: {
+        title: 'IMA Schelling Panel Saw Service – 30+ years of experience | Asamer',
+        description:
+          'Service for IMA Schelling panel saws in CZ, SK & HU: maintenance, repair, spare parts, training. Experienced team with 30+ years on IMA Schelling – HKL, FH, FK, VH, VKS series.',
+        keywords: ['IMA Schelling', 'Panel saw', 'Service', 'Maintenance', 'Repair', 'Spare parts', 'HKL', 'FH', 'FK', 'VKS', 'Asamer'],
+      },
+      cz: {
+        title: 'Servis formátovacích pil IMA Schelling – 30+ let zkušeností | Asamer',
+        description:
+          'Servis formátovacích pil IMA Schelling pro CZ, SK a HU: údržba, opravy, náhradní díly, školení. Tým s více než 30 lety praxe – řady HKL, FH, FK, VH, VKS.',
+        keywords: ['IMA Schelling', 'Formátovací pila', 'Servis', 'Údržba', 'Opravy', 'Náhradní díly', 'HKL', 'FH', 'FK', 'VKS', 'Asamer'],
+      },
+      sk: {
+        title: 'Servis formátovacích píl IMA Schelling – 30+ rokov skúseností | Asamer',
+        description:
+          'Servis formátovacích píl IMA Schelling pre SK, CZ a HU: údržba, opravy, náhradné diely, školenia. Tím s viac než 30 rokmi praxe – rady HKL, FH, FK, VH, VKS.',
+        keywords: ['IMA Schelling', 'Formátovacia píla', 'Servis', 'Údržba', 'Opravy', 'Náhradné diely', 'HKL', 'FH', 'FK', 'VKS', 'Asamer'],
+      },
+      hu: {
+        title: 'IMA Schelling lapszabó fűrész szerviz – 30+ év tapasztalat | Asamer',
+        description:
+          'IMA Schelling lapszabó fűrészek szervize CZ, SK és HU területén: karbantartás, javítás, alkatrészek, oktatás. 30+ év tapasztalattal – HKL, FH, FK, VH, VKS sorozatok.',
+        keywords: ['IMA Schelling', 'Lapszabó fűrész', 'Szerviz', 'Karbantartás', 'Javítás', 'Alkatrészek', 'HKL', 'FH', 'FK', 'VKS', 'Asamer'],
       },
     }),
   },
