@@ -1,6 +1,6 @@
 export interface HeroSectionProps {
-  logoSrc: string;
-  logoAlt: string;
+  logoSrc?: string;
+  logoAlt?: string;
   logoClassName?: string;
   logoWrapperClassName?: string;
   headline?: string;
@@ -55,15 +55,17 @@ const HeroSection = ({
       {/* Desktop: Logo bottom-left, Headline positioned per align prop — UNCHANGED from before */}
       <div className="hidden md:block">
         {/* Logo — bottom left */}
-        <div className="absolute bottom-8 left-0 z-10 container-wide">
-          <div className="page-header">
-            <div
-              className={`inline-flex items-center justify-center rounded-lg border border-transparent bg-white px-5 py-3 shadow-[0_6px_20px_rgba(0,0,0,0.25)] ${logoWrapperClassName ?? ''}`}
-            >
-              <img src={logoSrc} alt={logoAlt} className={`h-10 md:h-14 w-auto max-w-[160px] object-contain ${logoClassName ?? ''}`} />
+        {logoSrc && (
+          <div className="absolute bottom-8 left-0 z-10 container-wide">
+            <div className="page-header">
+              <div
+                className={`inline-flex items-center justify-center rounded-lg border border-transparent bg-white px-5 py-3 shadow-[0_6px_20px_rgba(0,0,0,0.25)] ${logoWrapperClassName ?? ''}`}
+              >
+                <img src={logoSrc} alt={logoAlt ?? ''} className={`h-10 md:h-14 w-auto max-w-[160px] object-contain ${logoClassName ?? ''}`} />
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         {/* Headline */}
         {headline && (
@@ -80,22 +82,26 @@ const HeroSection = ({
       </div>
 
       {/* Mobile: Logo left + Headline right, side by side at bottom */}
-      <div className="md:hidden absolute inset-0 z-10 flex items-end">
-        <div className="w-full px-5 pb-6">
-          <div className="page-header flex items-end justify-between gap-4">
-            <div
-              className={`inline-flex items-center justify-center rounded-lg border border-transparent bg-white px-3 py-2 shadow-[0_4px_12px_rgba(0,0,0,0.2)] shrink-0 ${logoWrapperClassName ?? ''}`}
-            >
-              <img src={logoSrc} alt={logoAlt} className={`h-8 w-auto max-w-[100px] object-contain ${logoClassName ?? ''}`} />
+      {(logoSrc || headline) && (
+        <div className="md:hidden absolute inset-0 z-10 flex items-end">
+          <div className="w-full px-5 pb-6">
+            <div className="page-header flex items-end justify-between gap-4">
+              {logoSrc && (
+                <div
+                  className={`inline-flex items-center justify-center rounded-lg border border-transparent bg-white px-3 py-2 shadow-[0_4px_12px_rgba(0,0,0,0.2)] shrink-0 ${logoWrapperClassName ?? ''}`}
+                >
+                  <img src={logoSrc} alt={logoAlt ?? ''} className={`h-8 w-auto max-w-[100px] object-contain ${logoClassName ?? ''}`} />
+                </div>
+              )}
+              {headline && (
+                <h1 className="text-2xl sm:text-3xl font-display font-bold leading-[1.1] whitespace-pre-line text-right" style={{ color: headlineColor }}>
+                  {headline}
+                </h1>
+              )}
             </div>
-            {headline && (
-              <h1 className="text-2xl sm:text-3xl font-display font-bold leading-[1.1] whitespace-pre-line text-right" style={{ color: headlineColor }}>
-                {headline}
-              </h1>
-            )}
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };
