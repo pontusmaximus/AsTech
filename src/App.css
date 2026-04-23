@@ -767,6 +767,12 @@ html.theme-light .financing-hero .text-white\/75 {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
+html.theme-light .ima-hero .text-white,
+html.theme-light .ima-hero .text-white\/70,
+html.theme-light .ima-hero .text-white\/80 {
+  color: #ffffff !important;
+}
+
 html.theme-light .text-white {
   color: #0f172a !important;
 }

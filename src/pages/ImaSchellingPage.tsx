@@ -578,7 +578,7 @@ const BarsHero = ({
   `;
 
   return (
-    <section className="relative min-h-[55vh] md:min-h-[62vh] overflow-hidden mb-10 md:mb-16 bg-[#0a0a0a]">
+    <section className="ima-hero relative min-h-[55vh] md:min-h-[62vh] overflow-hidden mb-10 md:mb-16 bg-[#0a0a0a]">
       <style>{css}</style>
 
       {/* Slide 1 — three vertical bars, slight CCW tilt */}
