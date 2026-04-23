@@ -214,8 +214,33 @@ const ImaSchellingPage = () => {
 
 /* ----------------------------------------------------------------- */
 /*  BarsHero – 3-frame slideshow of wide, slightly skewed red & black */
-/*  bars. Pure CSS, no images.                                         */
+/*  vertical bars. Pure CSS, no images.                                */
 /* ----------------------------------------------------------------- */
+
+const Bar = ({
+  left,
+  width,
+  rotate,
+  color,
+  delay,
+}: {
+  left: string;
+  width: string;
+  rotate: number;
+  color: string;
+  delay?: string;
+}) => (
+  <div
+    className="ima-bar absolute"
+    style={{ left, width, top: '-15%', bottom: '-15%', animationDelay: delay }}
+  >
+    <div
+      className={`absolute inset-0 ${color}`}
+      style={{ transform: `rotate(${rotate}deg)`, transformOrigin: 'center' }}
+    />
+  </div>
+);
+
 
 const BarsHero = () => {
   const css = `
@@ -225,8 +250,8 @@ const BarsHero = () => {
       100%      { opacity: 1; }
     }
     @keyframes ima-bars-drift {
-      0%   { transform: translateX(-2%); }
-      100% { transform: translateX(2%); }
+      0%   { transform: translateY(-2%); }
+      100% { transform: translateY(2%); }
     }
     .ima-slide  { animation: ima-bars-fade 12s ease-in-out infinite; }
     .ima-slide-2 { animation-delay: -8s; }
@@ -238,56 +263,26 @@ const BarsHero = () => {
     <section className="relative min-h-[50vh] md:min-h-[55vh] overflow-hidden mb-10 md:mb-16 bg-black">
       <style>{css}</style>
 
-      {/* Slide 1 — three near-horizontal bars, slight CCW tilt */}
+      {/* Slide 1 — three vertical bars, slight CCW tilt */}
       <div className="absolute inset-0 ima-slide">
-        <div
-          className="ima-bar absolute h-[18%] bg-red-600"
-          style={{ top: '12%', left: '-10%', right: '-10%', transform: 'rotate(-3deg)' }}
-        />
-        <div
-          className="ima-bar absolute h-[24%] bg-zinc-900"
-          style={{ top: '40%', left: '-12%', right: '-12%', transform: 'rotate(-4deg)', animationDelay: '-3s' }}
-        />
-        <div
-          className="ima-bar absolute h-[14%] bg-red-700"
-          style={{ top: '74%', left: '-10%', right: '-10%', transform: 'rotate(-2deg)', animationDelay: '-5s' }}
-        />
+        <Bar left="8%"  width="18%" rotate={-4} color="bg-red-600" />
+        <Bar left="38%" width="22%" rotate={-5} color="bg-zinc-900" delay="-3s" />
+        <Bar left="72%" width="14%" rotate={-3} color="bg-red-700" delay="-5s" />
       </div>
 
       {/* Slide 2 — two thick bars + accent, opposite tilt */}
       <div className="absolute inset-0 ima-slide ima-slide-2">
-        <div
-          className="ima-bar absolute h-[30%] bg-black"
-          style={{ top: '8%', left: '-12%', right: '-12%', transform: 'rotate(4deg)' }}
-        />
-        <div
-          className="ima-bar absolute h-[10%] bg-red-600"
-          style={{ top: '46%', left: '-10%', right: '-10%', transform: 'rotate(5deg)', animationDelay: '-2s' }}
-        />
-        <div
-          className="ima-bar absolute h-[26%] bg-zinc-950"
-          style={{ top: '64%', left: '-12%', right: '-12%', transform: 'rotate(3deg)', animationDelay: '-4s' }}
-        />
+        <Bar left="6%"  width="28%" rotate={4}  color="bg-black" />
+        <Bar left="46%" width="10%" rotate={5}  color="bg-red-600" delay="-2s" />
+        <Bar left="64%" width="24%" rotate={3}  color="bg-zinc-950" delay="-4s" />
       </div>
 
-      {/* Slide 3 — alternating thin/thick stripes, stronger tilt */}
+      {/* Slide 3 — alternating thin/thick vertical stripes */}
       <div className="absolute inset-0 ima-slide ima-slide-3">
-        <div
-          className="ima-bar absolute h-[12%] bg-red-700"
-          style={{ top: '4%', left: '-10%', right: '-10%', transform: 'rotate(-6deg)' }}
-        />
-        <div
-          className="ima-bar absolute h-[20%] bg-zinc-900"
-          style={{ top: '22%', left: '-12%', right: '-12%', transform: 'rotate(-5deg)', animationDelay: '-1s' }}
-        />
-        <div
-          className="ima-bar absolute h-[14%] bg-red-600"
-          style={{ top: '48%', left: '-10%', right: '-10%', transform: 'rotate(-7deg)', animationDelay: '-3s' }}
-        />
-        <div
-          className="ima-bar absolute h-[22%] bg-black"
-          style={{ top: '68%', left: '-12%', right: '-12%', transform: 'rotate(-5deg)', animationDelay: '-5s' }}
-        />
+        <Bar left="4%"  width="12%" rotate={-6} color="bg-red-700" />
+        <Bar left="22%" width="20%" rotate={-5} color="bg-zinc-900" delay="-1s" />
+        <Bar left="50%" width="14%" rotate={-7} color="bg-red-600" delay="-3s" />
+        <Bar left="72%" width="22%" rotate={-5} color="bg-black" delay="-5s" />
       </div>
 
       {/* Bottom-fade so the section blends into the dark page */}
