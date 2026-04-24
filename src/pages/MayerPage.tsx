@@ -67,7 +67,7 @@ const MayerPage = () => {
       <div className="bg-dark min-h-screen">
 
         <HeroSection
-          headline={tr('Die massive Säge', 'The massive saw', 'Nárezové centrum')}
+          headline={tr('Zuschnittzentrum', 'Cutting center', 'Nárezové centrum')}
           headlineColor="#000000"
           logoSrc="https://www.mayersaws.com/mayer/images/mayer_saws_4c.svg"
           logoAlt="Mayer logo"
