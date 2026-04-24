@@ -96,14 +96,14 @@ const ImaSchellingPage = () => {
     },
     {
       question: tr(
-        'Wie schnell ist Asamer im Notfall vor Ort?',
-        'How quickly does Asamer respond on-site in an emergency?',
-        'Jak rychle je Asamer v nouzi na místě?',
+        'Verkauft Asamer auch neue IMA Schelling Maschinen?',
+        'Does Asamer also sell new IMA Schelling machines?',
+        'Prodává Asamer i nové stroje IMA Schelling?',
       ),
       answer: tr(
-        'Wir starten innerhalb von 2–4 Stunden mit telefonischer oder Ferndiagnose. Vor-Ort-Einsätze in CZ erreichen Standorte typischerweise am gleichen oder nächsten Werktag, in SK und HU in der Regel innerhalb von 24–48 Stunden – abhängig von Standort und Verfügbarkeit der Ersatzteile.',
-        'We start phone or remote diagnostics within 2–4 hours. On-site visits in CZ typically reach sites the same or next business day, in SK and HU usually within 24–48 hours – depending on location and parts availability.',
-        'Telefonickou nebo vzdálenou diagnostiku zahájíme do 2–4 hodin. Servisní zásahy na místě v ČR dorazí typicky tentýž nebo následující pracovní den, v SR a Maďarsku zpravidla do 24–48 hodin – podle lokality a dostupnosti dílů.',
+        'Nein. Wir sind autorisierter Händler für Formatkreissägen von Mayer Deutschland (Felder Group); bei IMA Schelling fokussieren wir uns auf Service und Lifecycle-Support bestehender Maschinen, nicht auf den Verkauf. Planen Sie eine Neuinvestition, beraten wir gerne unabhängig und vergleichen Mayer mit IMA Schelling Varianten. In der Rubrik Gebrauchtmaschinen ist gelegentlich eine gebrauchte Schelling im Angebot.',
+        'No. We are an authorized dealer of Mayer Germany (Felder Group) panel sizing saws; for IMA Schelling we focus on service and lifecycle support for existing machines, not sales. If you are planning a new purchase, we are happy to advise independently and compare Mayer with IMA Schelling options. In our used machines section a used Schelling is occasionally on offer.',
+        'Ne. Jsme autorizovaný prodejce formátovacích pil Mayer Německo (Felder Group) a u IMA Schelling se zaměřujeme na servis a podporu životního cyklu stávajících strojů, nikoli na prodej. Pokud plánujete novou investici, rádi poradíme nezávisle a srovnáme Mayer s variantami IMA Schelling. V oddílu použité stroje je občas v nabídce použitý stroj Schelling.',
       ),
     },
     {
