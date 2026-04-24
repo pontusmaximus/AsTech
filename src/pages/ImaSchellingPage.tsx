@@ -206,7 +206,7 @@ const ImaSchellingPage = () => {
           subtitle={tr(
             'Plattenaufteilsägen · Service & Lifecycle',
             'Panel saws · Service & Lifecycle',
-            'Formátovací pily · Servis & Lifecycle',
+            'velkoplošna pila / nárezové centrum · Servis & údržba',
           )}
         />
 
@@ -219,14 +219,14 @@ const ImaSchellingPage = () => {
                 {tr(
                   'Plattenaufteilsägen-Service aus erfahrener Hand',
                   'Panel saw service from experienced hands',
-                  'Servis formátovacích pil ze zkušených rukou',
+                  'Servis velkoplošných pil',
                 )}
               </h2>
               <p className="text-white/70 text-base md:text-lg leading-relaxed">
                 {tr(
                   'IMA Schelling zählt zu den weltweit führenden Herstellern von Plattenaufteilsägen. Asamer betreut diese Anlagen seit über 30 Jahren – von präventiver Wartung über Reparatur und Ersatzteilversorgung bis zu Bedienerschulung und Optimierungsprojekten. Wir verkaufen keine neuen IMA Schelling Maschinen, sondern bündeln unser Service-Angebot für Bestandsanlagen in CZ, SK und HU.',
                   'IMA Schelling is one of the world’s leading panel-saw manufacturers. Asamer has been servicing these machines for more than 30 years – from preventive maintenance to repair, spare parts and operator training. We do not sell new IMA Schelling machines; we focus on service for existing installations in CZ, SK and HU.',
-                  'IMA Schelling patří mezi přední světové výrobce formátovacích pil. Asamer se o tato zařízení stará již přes 30 let – od preventivní údržby přes opravy a dodávky náhradních dílů až po školení obsluhy. Nové stroje IMA Schelling neprodáváme, soustředíme servis pro stávající zařízení v ČR, SR a Maďarsku.',
+                  'Servisujeme velkoplošné pily značky SCHELLING, identifikujeme náhradní díly, řešíme software ve spojení s optimalizací jak HPO i jiným zapojením na ERP …',
                 )}
               </p>
             </div>
@@ -336,7 +336,7 @@ const ImaSchellingPage = () => {
               {tr(
                 'Unser Service deckt klassische IMA Schelling Druckbalkensägen ebenso ab wie moderne Aufteilzentren. Auch frühere IMA-Modelle (vor der Fusion zu IMA Schelling) sind betreubar.',
                 'Our service covers classic IMA Schelling pressure-beam saws as well as modern cutting centers. Earlier IMA models (predating the merger into IMA Schelling) are also supported.',
-                'Náš servis pokrývá klasické pily s přítlačným trámem IMA Schelling i moderní nářezová centra. Servisujeme také dřívější modely IMA (před fúzí na IMA Schelling).',
+                'Náš servis pokrývá klasické pily s přítlačným trámem IMA Schelling i moderní nářezová centra.',
               )}
             </p>
           </header>
