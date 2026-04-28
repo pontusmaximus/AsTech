@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
-import { breadcrumbSchema, faqPageSchema } from '../seo/structuredData';
+import { breadcrumbSchema, faqPageSchema, productSchema } from '../seo/structuredData';
 import SeoHead from '../seo/SeoHead';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { localizeSlug } from '../lib/slugs';
@@ -75,42 +75,41 @@ const Detail = ({ machine, lang, tr, buildPath, openFaq, setOpenFaq }: DetailPro
     `${tr('Gebrauchtmaschine Anfrage', 'Used machine inquiry', 'Poptávka na použitý stroj')}: ${machine.manufacturer} ${machine.name}`,
   );
 
+  const detailUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, detailPath)}`;
+
   const crumbs = breadcrumbSchema([
     { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
     { name: tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, categoryPath)}` },
-    { name: `${machine.manufacturer} ${machine.name}`, url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, detailPath)}` },
+    { name: `${machine.manufacturer} ${machine.name}`, url: detailUrl },
   ]);
 
-  const productSchema: Record<string, unknown> = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
+  const productLd = productSchema({
     name: `${machine.manufacturer} ${machine.name}`,
     description: ml(machine.shortDescription, lang),
-    brand: { '@type': 'Brand', name: machine.manufacturer },
-    manufacturer: { '@type': 'Organization', name: machine.manufacturer },
+    brand: machine.manufacturer,
     category: tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje'),
-    itemCondition: 'https://schema.org/UsedCondition',
-    ...(machine.images?.length ? { image: machine.images.map((src) => src.startsWith('http') ? src : `${CANONICAL_DOMAIN}${src}`) } : {}),
+    image: machine.images,
+    url: detailUrl,
+    sku: machine.slug,
+    itemCondition: 'used',
     ...(typeof machine.year === 'number' ? { productionDate: String(machine.year) } : {}),
     ...(typeof machine.price === 'number'
       ? {
           offers: {
-            '@type': 'Offer',
-            url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, detailPath)}`,
-            availability: getAvailabilitySchema(machine.status),
-            itemCondition: 'https://schema.org/UsedCondition',
             price: machine.price,
             priceCurrency: machine.priceCurrency ?? 'EUR',
+            availability: getAvailabilitySchema(machine.status),
+            url: detailUrl,
           },
         }
       : {}),
-  };
+  });
 
   const faqSchema = machine.faq && machine.faq.length > 0
     ? faqPageSchema(machine.faq.map((f) => ({ question: ml(f.question, lang), answer: ml(f.answer, lang) })))
     : null;
 
-  const structuredData = [crumbs, productSchema, ...(faqSchema ? [faqSchema] : [])];
+  const structuredData = [crumbs, productLd, ...(faqSchema ? [faqSchema] : [])];
 
   const formatPrice = (price: number, currency: string) => {
     const numberLocale =

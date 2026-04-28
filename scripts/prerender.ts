@@ -39,7 +39,7 @@ import { MAYER_PRODUCT_SEO, MAYER_CATEGORY_SEO } from '../src/data/seo/mayerSeoC
 import { BARBARIC_PRODUCT_SEO, BARBARIC_CATEGORY_SEO } from '../src/data/seo/barbaricSeoContent';
 import { GANNOMAT_PRODUCT_SEO, GANNOMAT_CATEGORY_SEO } from '../src/data/seo/gannomatSeoContent';
 import type { ProductSeoContent, CategorySeoContent, MultiLangText } from '../src/data/seo/types';
-import { faqPageSchema } from '../src/seo/structuredData';
+import { faqPageSchema, productSchema, type ProductSchemaInput } from '../src/seo/structuredData';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -167,6 +167,11 @@ const categoriesFaqJsonLd = (contents: CategorySeoContent[], lang: Language): st
   return `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
 };
 
+/** Baut Product-JSON-LD-Script. Sichtbar fuer AI-Crawler im statischen HTML. */
+const productJsonLd = (input: ProductSchemaInput): string => {
+  return `<script type="application/ld+json">${JSON.stringify(productSchema(input))}</script>`;
+};
+
 /** Build static page body content. Brand-Hub-Seiten erhalten zusaetzlich
  *  alle CategorySeoContent-Bloecke (longInhalt + FAQ pro Kategorie) plus
  *  ein kombiniertes FAQ-JSON-LD-Schema.
@@ -224,7 +229,8 @@ function productPageBody(
   description: string,
   tagline: string,
   brandSlug: string,
-  seoContent?: ProductSeoContent,
+  seoContent: ProductSeoContent | undefined,
+  productLd: { image?: string; slug: string; url: string; manufacturer?: string; seoDescription: string },
 ): string {
   const homePath = buildLocalizedPath(lang, '/');
   const brandPath = buildLocalizedPath(lang, brandSlug);
@@ -242,6 +248,16 @@ function productPageBody(
     `<p><strong>${escHtml(tagline)}</strong></p>`,
     `<p>${escHtml(description)}</p>`,
     `<p><a href="mailto:office@asamer.net">${escHtml(T.contact[lang])}</a></p>`,
+    productJsonLd({
+      name: `${brand} ${productName}`,
+      description: productLd.seoDescription,
+      brand,
+      manufacturer: productLd.manufacturer,
+      category: categoryLabel,
+      image: productLd.image,
+      sku: productLd.slug,
+      url: productLd.url,
+    }),
   ];
 
   if (seoContent) {
@@ -316,7 +332,13 @@ for (const product of OTT_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
-      bodyContent: productPageBody(lang, 'OTT', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/ott', OTT_PRODUCT_SEO[product.slug]),
+      bodyContent: productPageBody(lang, 'OTT', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/ott', OTT_PRODUCT_SEO[product.slug], {
+        image: product.image,
+        slug: product.slug,
+        url: `${CANONICAL_DOMAIN}${path}`,
+        manufacturer: 'Paul OTT GmbH',
+        seoDescription: product.seoDescription[lang],
+      }),
     });
   }
 }
@@ -336,7 +358,13 @@ for (const product of MAYER_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
-      bodyContent: productPageBody(lang, 'Mayer', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/mayer', MAYER_PRODUCT_SEO[product.slug]),
+      bodyContent: productPageBody(lang, 'Mayer', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/mayer', MAYER_PRODUCT_SEO[product.slug], {
+        image: product.image,
+        slug: product.slug,
+        url: `${CANONICAL_DOMAIN}${path}`,
+        manufacturer: 'Mayer Maschinenbau GmbH',
+        seoDescription: product.seoDescription[lang],
+      }),
     });
   }
 }
@@ -356,7 +384,13 @@ for (const product of BARBARIC_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
-      bodyContent: productPageBody(lang, 'Barbaric', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/barbaric', BARBARIC_PRODUCT_SEO[product.slug]),
+      bodyContent: productPageBody(lang, 'BARBARIC', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/barbaric', BARBARIC_PRODUCT_SEO[product.slug], {
+        image: product.image,
+        slug: product.slug,
+        url: `${CANONICAL_DOMAIN}${path}`,
+        manufacturer: 'BARBARIC GmbH',
+        seoDescription: product.seoDescription[lang],
+      }),
     });
   }
 }
@@ -376,7 +410,13 @@ for (const product of GANNOMAT_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
-      bodyContent: productPageBody(lang, 'Gannomat', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/gannomat', GANNOMAT_PRODUCT_SEO[product.slug]),
+      bodyContent: productPageBody(lang, 'Gannomat', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/gannomat', GANNOMAT_PRODUCT_SEO[product.slug], {
+        image: product.image,
+        slug: product.slug,
+        url: `${CANONICAL_DOMAIN}${path}`,
+        manufacturer: 'Gannomat GmbH',
+        seoDescription: product.seoDescription[lang],
+      }),
     });
   }
 }
@@ -405,6 +445,7 @@ for (const machine of USED_MACHINES) {
     const homePath = buildLocalizedPath(lang, '/');
     const categoryPath = buildLocalizedPath(lang, localizeSlug('/pouzite-stroje', lang));
     const homeLabel = T.home[lang];
+    const detailUrl = `${CANONICAL_DOMAIN}${path}`;
     const breadcrumbParts = [
       breadcrumb([
         { label: homeLabel, href: homePath },
@@ -415,6 +456,30 @@ for (const machine of USED_MACHINES) {
       `<p>${escHtml(description)}</p>`,
       machine.longDescription ? `<p>${escHtml(mlText(machine.longDescription, lang))}</p>` : '',
       `<p><a href="mailto:office@asamer.net">${escHtml(T.contact[lang])}</a></p>`,
+      productJsonLd({
+        name: `${machine.manufacturer} ${machine.name}`,
+        description,
+        brand: machine.manufacturer,
+        category: machineLabel[lang],
+        image: machine.images,
+        sku: machine.slug,
+        url: detailUrl,
+        itemCondition: 'used',
+        ...(typeof machine.year === 'number' ? { productionDate: String(machine.year) } : {}),
+        ...(typeof machine.price === 'number'
+          ? {
+              offers: {
+                price: machine.price,
+                priceCurrency: machine.priceCurrency ?? 'EUR',
+                availability: machine.status === 'sold' ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
+                url: detailUrl,
+              },
+            }
+          : {}),
+      }),
+      machine.faq && machine.faq.length > 0
+        ? `<script type="application/ld+json">${JSON.stringify(faqPageSchema(machine.faq.map((f) => ({ question: mlText(f.question, lang), answer: mlText(f.answer, lang) }))))}</script>`
+        : '',
     ].filter(Boolean);
 
     pages.push({

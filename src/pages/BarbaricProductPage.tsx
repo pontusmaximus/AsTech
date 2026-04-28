@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
-import { breadcrumbSchema } from '../seo/structuredData';
+import { breadcrumbSchema, productSchema } from '../seo/structuredData';
 import SeoHead from '../seo/SeoHead';
 import {
   buildLocalizedPath, CANONICAL_DOMAIN,
@@ -157,11 +157,22 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
   const inquiryMail = buildMailto('office@asamer.net', tr(`Anfrage Barbaric ${product.name}`, `Inquiry Barbaric ${product.name}`, `Poptávka Barbaric ${product.name}`));
   const categoryLabel = BARBARIC_CATEGORY_LABELS[product.category][lang];
   const productPath = buildBarbaricProductPath(lang, product);
+  const productUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`;
   const breadcrumbs = breadcrumbSchema([
     { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
     { name: 'BARBARIC', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/barbaric')}` },
-    { name: product.name, url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}` },
+    { name: product.name, url: productUrl },
   ]);
+  const productLd = productSchema({
+    name: `BARBARIC ${product.name}`,
+    description: product.seoDescription[lang],
+    brand: 'BARBARIC',
+    manufacturer: 'BARBARIC GmbH',
+    category: categoryLabel,
+    image: product.image,
+    sku: product.slug,
+    url: productUrl,
+  });
 
   const specRows: { label: string; value: string }[] = [];
   if (product.specs?.[lang]) {
@@ -178,7 +189,7 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
         overrides={{ title: product.seoTitle[lang], description: product.seoDescription[lang], image: product.image, slug: productPath }}
         buildAlternateSlug={(al) => buildBarbaricProductPath(al, product)}
         ogType="product"
-        structuredData={[breadcrumbs]}
+        structuredData={[breadcrumbs, productLd]}
       />
 
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">

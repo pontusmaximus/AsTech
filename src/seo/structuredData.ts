@@ -133,6 +133,69 @@ export const faqPageSchema = (entries: Array<{ question: string; answer: string 
   })),
 });
 
+const ITEM_CONDITION_MAP = {
+  new: 'https://schema.org/NewCondition',
+  used: 'https://schema.org/UsedCondition',
+  refurbished: 'https://schema.org/RefurbishedCondition',
+} as const;
+
+export type ProductCondition = keyof typeof ITEM_CONDITION_MAP;
+
+export interface ProductSchemaInput {
+  name: string;
+  description: string;
+  brand: string;
+  url: string;
+  image?: string | string[];
+  category?: string;
+  manufacturer?: string;
+  sku?: string;
+  itemCondition?: ProductCondition;
+  productionDate?: string;
+  offers?: {
+    price: number;
+    priceCurrency: string;
+    availability: string;
+    url?: string;
+  };
+}
+
+export const productSchema = (input: ProductSchemaInput) => {
+  const condition = ITEM_CONDITION_MAP[input.itemCondition ?? 'new'];
+  const imageInput = Array.isArray(input.image) ? input.image : input.image ? [input.image] : [];
+  const images = imageInput.length > 0
+    ? imageInput.map((src) => (src.startsWith('http') ? src : `${CANONICAL_DOMAIN}${src}`))
+    : undefined;
+
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: input.name,
+    description: input.description,
+    url: input.url,
+    brand: { '@type': 'Brand', name: input.brand },
+    manufacturer: { '@type': 'Organization', name: input.manufacturer ?? input.brand },
+    itemCondition: condition,
+    ...(images && { image: images }),
+    ...(input.category && { category: input.category }),
+    ...(input.sku && { sku: input.sku }),
+    ...(input.productionDate && { productionDate: input.productionDate }),
+  };
+
+  if (input.offers) {
+    schema.offers = {
+      '@type': 'Offer',
+      price: input.offers.price,
+      priceCurrency: input.offers.priceCurrency,
+      availability: input.offers.availability,
+      itemCondition: condition,
+      url: input.offers.url ?? input.url,
+    };
+  }
+
+  return schema;
+};
+
 export const breadcrumbSchema = (items: Array<{ name: string; url: string }>) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
