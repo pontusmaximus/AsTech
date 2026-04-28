@@ -39,7 +39,8 @@ import { MAYER_PRODUCT_SEO, MAYER_CATEGORY_SEO } from '../src/data/seo/mayerSeoC
 import { BARBARIC_PRODUCT_SEO, BARBARIC_CATEGORY_SEO } from '../src/data/seo/barbaricSeoContent';
 import { GANNOMAT_PRODUCT_SEO, GANNOMAT_CATEGORY_SEO } from '../src/data/seo/gannomatSeoContent';
 import type { ProductSeoContent, CategorySeoContent, MultiLangText } from '../src/data/seo/types';
-import { faqPageSchema, productSchema, type ProductSchemaInput } from '../src/seo/structuredData';
+import { faqPageSchema, productSchema, howToSchema, type ProductSchemaInput } from '../src/seo/structuredData';
+import { EDGEBANDER_GUIDE } from '../src/data/guides/edgebanderGuide';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -172,6 +173,58 @@ const productJsonLd = (input: ProductSchemaInput): string => {
   return `<script type="application/ld+json">${JSON.stringify(productSchema(input))}</script>`;
 };
 
+/** Sprach-Resolver fuer den Edgebander-Guide (sk → cz, hu → en Fallback). */
+const mlGuide = (txt: { de: string; en: string; cz: string; sk?: string; hu?: string }, lang: Language): string => {
+  if (lang === 'sk') return txt.sk ?? txt.cz;
+  if (lang === 'hu') return txt.hu ?? txt.en;
+  if (lang === 'de') return txt.de;
+  if (lang === 'cz') return txt.cz;
+  return txt.en;
+};
+
+const GUIDE_LABELS = {
+  guides: { de: 'Ratgeber', en: 'Guides', cz: 'Průvodce', sk: 'Sprievodca', hu: 'Útmutatók' },
+  decisionH2: { de: 'Vier Kriterien für die Entscheidung', en: 'Four decision criteria', cz: 'Čtyři kritéria pro rozhodnutí', sk: 'Štyri kritériá pre rozhodnutie', hu: 'Négy döntési szempont' },
+  faqH2: { de: 'Häufige Fragen', en: 'Frequently asked questions', cz: 'Časté dotazy', sk: 'Časté otázky', hu: 'Gyakori kérdések' },
+  howToTitle: { de: 'Welche Kantenanleimmaschine kaufen', en: 'Which edgebander to buy', cz: 'Jakou olepovačku hran koupit', sk: 'Akú olepovačku hrán kúpiť', hu: 'Milyen élzárógépet vegyek' },
+} as const;
+
+/** Voller Body fuer den Anchor-Artikel "Jakou olepovačku hran koupit?". */
+function guideEdgebanderBody(lang: Language, title: string): string {
+  const homePath = buildLocalizedPath(lang, '/');
+  const crumbs = breadcrumb([
+    { label: T.home[lang], href: homePath },
+    { label: GUIDE_LABELS.guides[lang], href: homePath },
+    { label: title.split('|')[0].split('–')[0].trim(), href: '#' },
+  ]);
+
+  const lead = `<p>${escHtml(mlGuide(EDGEBANDER_GUIDE.lead, lang))}</p>`;
+
+  const decision = `<section><h2>${escHtml(GUIDE_LABELS.decisionH2[lang])}</h2>${EDGEBANDER_GUIDE.decisionCriteria
+    .map((c) => `<article><h3>${escHtml(mlGuide(c.question, lang))}</h3><p>${escHtml(mlGuide(c.body, lang))}</p></article>`)
+    .join('\n')}</section>`;
+
+  const usedVsNew = `<section><h2>${escHtml(mlGuide(EDGEBANDER_GUIDE.usedVsNew.heading, lang))}</h2><p>${escHtml(mlGuide(EDGEBANDER_GUIDE.usedVsNew.body, lang))}</p></section>`;
+
+  const purVsEva = `<section><h2>${escHtml(mlGuide(EDGEBANDER_GUIDE.purVsEva.heading, lang))}</h2><p>${escHtml(mlGuide(EDGEBANDER_GUIDE.purVsEva.body, lang))}</p></section>`;
+
+  const service = `<section><h2>${escHtml(mlGuide(EDGEBANDER_GUIDE.service.heading, lang))}</h2><p>${escHtml(mlGuide(EDGEBANDER_GUIDE.service.body, lang))}</p></section>`;
+
+  const faqHtml = `<section><h2>${escHtml(GUIDE_LABELS.faqH2[lang])}</h2>${EDGEBANDER_GUIDE.faq
+    .map((f) => `<details><summary>${escHtml(mlGuide(f.question, lang))}</summary><p>${escHtml(mlGuide(f.answer, lang))}</p></details>`)
+    .join('\n')}</section>`;
+
+  const faqLd = `<script type="application/ld+json">${JSON.stringify(faqPageSchema(EDGEBANDER_GUIDE.faq.map((f) => ({ question: mlGuide(f.question, lang), answer: mlGuide(f.answer, lang) }))))}</script>`;
+
+  const howToLd = `<script type="application/ld+json">${JSON.stringify(howToSchema(
+    GUIDE_LABELS.howToTitle[lang],
+    mlGuide(EDGEBANDER_GUIDE.lead, lang),
+    EDGEBANDER_GUIDE.howTo.map((s) => ({ name: mlGuide(s.name, lang), text: mlGuide(s.text, lang) })),
+  ))}</script>`;
+
+  return [crumbs, `<h1>${escHtml(title)}</h1>`, lead, decision, usedVsNew, purVsEva, service, faqHtml, faqLd, howToLd].join('\n');
+}
+
 /** Build static page body content. Brand-Hub-Seiten erhalten zusaetzlich
  *  alle CategorySeoContent-Bloecke (longInhalt + FAQ pro Kategorie) plus
  *  ein kombiniertes FAQ-JSON-LD-Schema.
@@ -212,6 +265,11 @@ function staticPageBody(
     for (const content of categorySeoContents) {
       parts.push(renderCategorySeo(content, lang));
     }
+  }
+
+  // Anchor-Guide "Jakou olepovacku hran koupit?" — vollstaendiger Body inkl. FAQ + HowTo JSON-LD.
+  if (key === 'guideEdgebander') {
+    return guideEdgebanderBody(lang, title);
   }
 
   return parts.join('\n');

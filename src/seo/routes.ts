@@ -639,35 +639,35 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     slug: '/ratgeber/kantenanleimmaschine-waehlen',
     slugByLang: SLUG_TRANSLATIONS['/ratgeber/kantenanleimmaschine-waehlen'],
     meta: createMeta({
-      de: {
-        title: 'Kantenanleimmaschine nach Betriebsgröße wählen | Asamer',
-        description:
-          'Welche Kantenanleimmaschine passt zu Ihrem Betrieb? Empfehlung für kleine Tischlereien, Mittelbetriebe und industrielle Fertigung. OTT-Modelle im Vergleich.',
-        keywords: ['Kantenanleimmaschine', 'Betriebsgröße', 'OTT', 'Tischlerei', 'Vergleich'],
-      },
-      en: {
-        title: 'Choose an Edgebander by Operation Size | Asamer',
-        description:
-          'Which edgebanding machine fits your workshop? Recommendations for small joineries, mid-size operations and industrial production. OTT models compared.',
-        keywords: ['Edgebander', 'Operation size', 'OTT', 'Joinery', 'Comparison'],
-      },
       cz: {
-        title: 'Výběr olepovačky hran podle velikosti provozu | Asamer',
+        title: 'Jakou olepovačku hran koupit? Průvodce výběrem 2026 | Asamer',
         description:
-          'Která olepovačka hran se hodí pro váš provoz? Doporučení pro malé truhlárny, střední provozy a průmyslovou výrobu. Srovnání modelů OTT.',
-        keywords: ['Olepovačka hran', 'Velikost provozu', 'OTT', 'Truhlárna', 'Srovnání'],
+          'Jakou olepovačku hran koupit? Průvodce výběrem podle velikosti provozu, materiálů a rozpočtu. Modely OTT, použité vs nové, PUR vs EVA, FAQ. Asamer – autorizovaný prodejce OTT pro ČR, SR a Maďarsko.',
+        keywords: ['Olepovačka hran', 'Jakou olepovačku koupit', 'OTT', 'Truhlárna', 'PUR', 'EVA', 'Použitá olepovačka'],
       },
       sk: {
-        title: 'Výber olepovačky hrán podľa veľkosti prevádzky | Asamer',
+        title: 'Akú olepovačku hrán kúpiť? Sprievodca výberom 2026 | Asamer',
         description:
-          'Ktorá olepovačka hrán sa hodí pre vašu prevádzku? Odporúčanie pre malé stolárne, stredné prevádzky a priemyselnú výrobu. Porovnanie modelov OTT.',
-        keywords: ['Olepovačka hrán', 'Veľkosť prevádzky', 'OTT', 'Stolárňa', 'Porovnanie'],
+          'Akú olepovačku hrán kúpiť? Sprievodca výberom podľa veľkosti prevádzky, materiálov a rozpočtu. Modely OTT, použité vs nové, PUR vs EVA, FAQ. Asamer – autorizovaný predajca OTT pre SR, ČR a Maďarsko.',
+        keywords: ['Olepovačka hrán', 'Akú olepovačku kúpiť', 'OTT', 'Stolárstvo', 'PUR', 'EVA', 'Použitá olepovačka'],
+      },
+      de: {
+        title: 'Welche Kantenanleimmaschine kaufen? Ratgeber 2026 | Asamer',
+        description:
+          'Welche Kantenanleimmaschine kaufen? Ratgeber für die Auswahl nach Betriebsgröße, Materialien und Budget. OTT-Modelle, gebraucht vs neu, PUR vs EVA, FAQ. Asamer – autorisierter OTT-Händler für CZ, SK und HU.',
+        keywords: ['Kantenanleimmaschine', 'kaufen', 'OTT', 'Tischlerei', 'PUR', 'EVA', 'Gebrauchtmaschine'],
+      },
+      en: {
+        title: 'Which Edgebander to Buy? Buying Guide 2026 | Asamer',
+        description:
+          'Which edgebander to buy? A buying guide based on operation size, materials and budget. OTT models, used vs new, PUR vs EVA, FAQ. Asamer – authorized OTT dealer for CZ, SK and HU.',
+        keywords: ['Edgebander', 'Buy edgebander', 'OTT', 'Joinery', 'PUR', 'EVA', 'Used edgebander'],
       },
       hu: {
-        title: 'Élzárógép választása üzemméret szerint | Asamer',
+        title: 'Milyen élzárógépet vegyek? Vásárlási útmutató 2026 | Asamer',
         description:
-          'Melyik élzárógép illik az Ön üzeméhez? Javaslat kis asztalosmühelyek, középüzemek és ipari gyártás számára. OTT modellek összehasonlítása.',
-        keywords: ['Élzárógép', 'Üzemméret', 'OTT', 'Asztalosmühely', 'Összehasonlítás'],
+          'Milyen élzárógépet vegyek? Vásárlási útmutató üzemméret, anyagok és költségvetés szerint. OTT modellek, használt vs új, PUR vs EVA, GYIK. Asamer – hivatalos OTT-viszonteladó CZ, SK és HU számára.',
+        keywords: ['Élzárógép', 'Milyen élzárógépet', 'OTT', 'Asztalosmühely', 'PUR', 'EVA', 'Használt élzárógép'],
       },
     }),
   },

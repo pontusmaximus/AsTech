@@ -4,8 +4,17 @@ import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
-import { breadcrumbSchema } from '../seo/structuredData';
+import { breadcrumbSchema, faqPageSchema, howToSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
+import { EDGEBANDER_GUIDE } from '../data/guides/edgebanderGuide';
+import type { MultiLangText } from '../data/seo/types';
+import type { Language } from '../i18n';
+
+const mlGuide = (txt: MultiLangText, lang: Language): string => {
+  if (lang === 'sk') return txt.sk ?? txt.cz;
+  if (lang === 'hu') return txt.hu ?? txt.en;
+  return txt[lang];
+};
 
 const GuideEdgebanderPage = () => {
   const { lang, buildPath } = useLanguage();
@@ -104,13 +113,24 @@ const GuideEdgebanderPage = () => {
     return <X className="w-4 h-4 text-white/30" />;
   };
 
+  const breadcrumbs = breadcrumbSchema([
+    { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+    { name: tr('Ratgeber', 'Guides', 'Průvodce'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+    { name: tr('Kantenanleimmaschine kaufen', 'Buy edgebander', 'Olepovačka hran – výběr'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildPath('/ratgeber/kantenanleimmaschine-waehlen'))}` },
+  ]);
+  const faqLd = faqPageSchema(EDGEBANDER_GUIDE.faq.map((f) => ({
+    question: mlGuide(f.question, lang),
+    answer: mlGuide(f.answer, lang),
+  })));
+  const howToLd = howToSchema(
+    tr('Welche Kantenanleimmaschine kaufen', 'Which edgebander to buy', 'Jakou olepovačku hran koupit'),
+    mlGuide(EDGEBANDER_GUIDE.lead, lang),
+    EDGEBANDER_GUIDE.howTo.map((s) => ({ name: mlGuide(s.name, lang), text: mlGuide(s.text, lang) })),
+  );
+
   return (
     <>
-      <SeoHead routeKey="guideEdgebander" structuredData={[breadcrumbSchema([
-        { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
-        { name: tr('Ratgeber', 'Guides', 'Průvodce'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
-        { name: tr('Kantenanleimmaschine wählen', 'Choose edgebander', 'Výběr olepovačky'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildPath('/ratgeber/kantenanleimmaschine-waehlen'))}` },
-      ])]} />
+      <SeoHead routeKey="guideEdgebander" structuredData={[breadcrumbs, faqLd, howToLd]} />
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">
 
         {/* Hero / H1 + Definition Lead */}
@@ -120,18 +140,31 @@ const GuideEdgebanderPage = () => {
               <div className="accent-line mb-6" />
               <h1 className="text-section font-display font-light text-white mb-6">
                 {tr(
-                  'Kantenanleimmaschine nach Betriebsgröße wählen',
-                  'Choose an Edgebander by Operation Size',
-                  'Výběr olepovačky hran podle velikosti provozu'
+                  'Welche Kantenanleimmaschine kaufen? Ratgeber 2026',
+                  'Which Edgebander to Buy? Buying Guide 2026',
+                  'Jakou olepovačku hran koupit? Průvodce výběrem 2026'
                 )}
               </h1>
               <p className="text-white/70 text-lg leading-relaxed max-w-4xl">
-                {tr(
-                  'Die richtige Kantenanleimmaschine hängt von Ihrer Betriebsgröße, dem täglichen Durchsatz und den verarbeiteten Materialien ab. Dieser Ratgeber hilft Ihnen, das passende OTT-Modell für Ihre Anforderungen zu finden.',
-                  'The right edgebanding machine depends on your operation size, daily throughput and materials processed. This guide helps you find the matching OTT model for your requirements.',
-                  'Správná olepovačka hran závisí na velikosti vašeho provozu, denním průchodu a zpracovávaných materiálech. Tento průvodce vám pomůže najít vhodný model OTT pro vaše požadavky.'
-                )}
+                {mlGuide(EDGEBANDER_GUIDE.lead, lang)}
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Decision Criteria — 4 questions */}
+        <section className="pb-12">
+          <div className="container-wide">
+            <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-6">
+              {tr('Vier Kriterien für die Entscheidung', 'Four decision criteria', 'Čtyři kritéria pro rozhodnutí')}
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {EDGEBANDER_GUIDE.decisionCriteria.map((c) => (
+                <div key={mlGuide(c.question, 'en')} className="rounded-2xl border border-white/10 bg-dark-card p-6">
+                  <h3 className="text-lg font-medium text-white mb-3">{mlGuide(c.question, lang)}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{mlGuide(c.body, lang)}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -349,6 +382,84 @@ const GuideEdgebanderPage = () => {
                 '✓ = Standard · – = Volitelně · ✕ = nedostupné. Všechny údaje bez záruky.'
               )}
             </p>
+          </div>
+        </section>
+
+        {/* Used vs New */}
+        <section className="pb-8">
+          <div className="container-wide">
+            <div className="rounded-2xl border border-white/10 bg-dark-card p-6 md:p-8">
+              <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-5">
+                {mlGuide(EDGEBANDER_GUIDE.usedVsNew.heading, lang)}
+              </h2>
+              <p className="text-white/70 text-sm leading-relaxed mb-4">
+                {mlGuide(EDGEBANDER_GUIDE.usedVsNew.body, lang)}
+              </p>
+              <Link
+                to={buildPath('/pouzite-stroje')}
+                className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:underline"
+              >
+                {tr('Geprüfte Gebrauchtmaschinen ansehen', 'View vetted used machines', 'Zobrazit ověřené použité stroje')}
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* PUR vs EVA short */}
+        <section className="pb-8">
+          <div className="container-wide">
+            <div className="rounded-2xl border border-white/10 bg-dark-card p-6 md:p-8">
+              <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-5">
+                {mlGuide(EDGEBANDER_GUIDE.purVsEva.heading, lang)}
+              </h2>
+              <p className="text-white/70 text-sm leading-relaxed mb-4">
+                {mlGuide(EDGEBANDER_GUIDE.purVsEva.body, lang)}
+              </p>
+              <Link
+                to={buildPath('/ratgeber/pur-vs-eva')}
+                className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:underline"
+              >
+                {tr('Detail-Ratgeber PUR vs EVA', 'Read the PUR vs EVA guide', 'Detailní průvodce PUR vs EVA')}
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Service availability */}
+        <section className="pb-12">
+          <div className="container-wide">
+            <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8">
+              <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-5">
+                {mlGuide(EDGEBANDER_GUIDE.service.heading, lang)}
+              </h2>
+              <p className="text-white/75 text-sm leading-relaxed">
+                {mlGuide(EDGEBANDER_GUIDE.service.body, lang)}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="pb-12">
+          <div className="container-wide">
+            <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-6">
+              {tr('Häufige Fragen', 'Frequently asked questions', 'Časté dotazy')}
+            </h2>
+            <div className="space-y-3">
+              {EDGEBANDER_GUIDE.faq.map((item) => (
+                <details key={mlGuide(item.question, 'en')} className="rounded-xl border border-white/10 bg-dark-card p-5 group">
+                  <summary className="cursor-pointer text-white font-medium text-base list-none flex items-start justify-between gap-4">
+                    <span>{mlGuide(item.question, lang)}</span>
+                    <span className="text-primary mt-1 transition-transform group-open:rotate-45 shrink-0">+</span>
+                  </summary>
+                  <p className="text-white/70 text-sm leading-relaxed mt-3">
+                    {mlGuide(item.answer, lang)}
+                  </p>
+                </details>
+              ))}
+            </div>
           </div>
         </section>
 
