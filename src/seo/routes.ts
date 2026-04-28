@@ -567,35 +567,35 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     slug: '/faq',
     slugByLang: SLUG_TRANSLATIONS['/faq'],
     meta: createMeta({
-      de: {
-        title: 'FAQ – Häufige Fragen zu Holzbearbeitungsmaschinen | Asamer',
-        description:
-          'Antworten auf häufige Fragen zu Kantenanleimmaschinen, Lagerautomatisierung, PUR vs EVA, Service, Finanzierung und Gebrauchtmaschinen. Asamer Technologie.',
-        keywords: ['FAQ', 'Kantenanleimmaschine', 'PUR EVA', 'Service', 'Finanzierung', 'Gebrauchtmaschinen'],
-      },
-      en: {
-        title: 'FAQ – Frequently Asked Questions about Woodworking Machines | Asamer',
-        description:
-          'Answers to common questions about edgebanding machines, warehouse automation, PUR vs EVA, service, financing and used machines. Asamer Technology.',
-        keywords: ['FAQ', 'Edgebander', 'PUR EVA', 'Service', 'Financing', 'Used machines'],
-      },
       cz: {
-        title: 'FAQ – Časté dotazy k dřevoobráběcím strojům | Asamer',
+        title: 'Ratgeber & FAQ – Znalostní báze pro zpracování dřeva | Asamer',
         description:
-          'Odpovědi na časté dotazy k olepovačkám hran, automatizaci skladu, PUR vs EVA, servisu, financování a použitým strojům. Asamer Technologie.',
-        keywords: ['FAQ', 'Olepovačka hran', 'PUR EVA', 'Servis', 'Financování', 'Použité stroje'],
+          'Průvodci a odpovědi na nejčastější otázky: výběr olepovačky hran, PUR vs EVA, automatizace skladu, dotace 2026, financování a použité stroje. 30 let praxe Asamer.',
+        keywords: ['Ratgeber', 'FAQ', 'Olepovačka hran', 'PUR EVA', 'Automatizace', 'Dotace', 'Použité stroje'],
       },
       sk: {
-        title: 'FAQ – Časté otázky k drevoobrábacím strojom | Asamer',
+        title: 'Sprievodcovia & FAQ – Vedomostná báza pre spracovanie dreva | Asamer',
         description:
-          'Odpovede na časté otázky k olepovačkám hrán, automatizácii skladu, PUR vs EVA, servisu, financovaniu a použitým strojom. Asamer Technologie.',
-        keywords: ['FAQ', 'Olepovačka hrán', 'PUR EVA', 'Servis', 'Financovanie', 'Použité stroje'],
+          'Sprievodcovia a odpovede na najčastejšie otázky: výber olepovačky hrán, PUR vs EVA, automatizácia skladu, dotácie 2026, financovanie a použité stroje. 30 rokov praxe Asamer.',
+        keywords: ['Sprievodca', 'FAQ', 'Olepovačka hrán', 'PUR EVA', 'Automatizácia', 'Dotácie', 'Použité stroje'],
+      },
+      de: {
+        title: 'Ratgeber & FAQ – Wissensbasis für Holzbearbeitung | Asamer',
+        description:
+          'Ratgeber und Antworten auf die häufigsten Fragen: Kantenanleimmaschine wählen, PUR vs EVA, Lagerautomatisierung, Förderung 2026, Finanzierung und Gebrauchtmaschinen. 30 Jahre Asamer Praxis.',
+        keywords: ['Ratgeber', 'FAQ', 'Kantenanleimmaschine', 'PUR EVA', 'Automatisierung', 'Förderung', 'Gebrauchtmaschinen'],
+      },
+      en: {
+        title: 'Guides & FAQ – Knowledge Base for Wood Processing | Asamer',
+        description:
+          'Guides and answers to the most common questions: choosing an edgebander, PUR vs EVA, warehouse automation, 2026 funding, financing and used machines. 30 years of Asamer experience.',
+        keywords: ['Guide', 'FAQ', 'Edgebander', 'PUR EVA', 'Automation', 'Funding', 'Used machines'],
       },
       hu: {
-        title: 'FAQ – Gyakran ismételt kérdések famegmunkáló gépekről | Asamer',
+        title: 'Útmutatók & GYIK – Faipari tudásbázis | Asamer',
         description:
-          'Válaszok a gyakori kérdésekre élzárógépekről, raktárautomatizálásról, PUR vs EVA, szervizről, finanszírozásról és használt gépekről. Asamer Technologie.',
-        keywords: ['FAQ', 'Élzárógép', 'PUR EVA', 'Szerviz', 'Finanszírozás', 'Használt gépek'],
+          'Útmutatók és válaszok a leggyakoribb kérdésekre: élzárógép-választás, PUR vs EVA, raktárautomatizálás, 2026-os támogatás, finanszírozás és használt gépek. Asamer 30 éves tapasztalat.',
+        keywords: ['Útmutató', 'GYIK', 'Élzárógép', 'PUR EVA', 'Automatizálás', 'Támogatás', 'Használt gépek'],
       },
     }),
   },

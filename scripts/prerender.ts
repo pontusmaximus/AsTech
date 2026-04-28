@@ -39,8 +39,9 @@ import { MAYER_PRODUCT_SEO, MAYER_CATEGORY_SEO } from '../src/data/seo/mayerSeoC
 import { BARBARIC_PRODUCT_SEO, BARBARIC_CATEGORY_SEO } from '../src/data/seo/barbaricSeoContent';
 import { GANNOMAT_PRODUCT_SEO, GANNOMAT_CATEGORY_SEO } from '../src/data/seo/gannomatSeoContent';
 import type { ProductSeoContent, CategorySeoContent, MultiLangText } from '../src/data/seo/types';
-import { faqPageSchema, productSchema, howToSchema, type ProductSchemaInput } from '../src/seo/structuredData';
+import { faqPageSchema, productSchema, howToSchema, itemListSchema, type ProductSchemaInput } from '../src/seo/structuredData';
 import { EDGEBANDER_GUIDE } from '../src/data/guides/edgebanderGuide';
+import { HUB_GUIDES, HUB_FAQ_CATEGORIES, HUB_FAQ_FLAT } from '../src/data/hub/ratgeberFaqHub';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -225,6 +226,56 @@ function guideEdgebanderBody(lang: Language, title: string): string {
   return [crumbs, `<h1>${escHtml(title)}</h1>`, lead, decision, usedVsNew, purVsEva, service, faqHtml, faqLd, howToLd].join('\n');
 }
 
+const HUB_LABELS = {
+  guidesH2:  { de: 'Ratgeber',          en: 'Guides',         cz: 'Průvodci',       sk: 'Sprievodcovia',  hu: 'Útmutatók' },
+  faqH2:     { de: 'Häufige Fragen',    en: 'Frequently asked questions', cz: 'Časté dotazy',  sk: 'Časté otázky',   hu: 'Gyakori kérdések' },
+  readMin:   { de: 'Min. Lesezeit',     en: 'min read',       cz: 'min čtení',      sk: 'min čítania',    hu: 'perc olvasás' },
+} as const;
+
+/** Voller Hub-Body fuer "Ratgeber & FAQ". */
+function ratgeberFaqHubBody(lang: Language, title: string, description: string): string {
+  const homePath = buildLocalizedPath(lang, '/');
+  const crumbs = breadcrumb([
+    { label: T.home[lang], href: homePath },
+    { label: title.split('|')[0].split('–')[0].trim(), href: '#' },
+  ]);
+
+  const head = `<h1>${escHtml(title)}</h1><p>${escHtml(description)}</p>`;
+
+  const cards = `<section><h2>${escHtml(HUB_LABELS.guidesH2[lang])}</h2><ul>${HUB_GUIDES
+    .map((g) => {
+      const href = buildLocalizedPath(lang, g.slugByLang[lang]);
+      const t = mlGuide(g.title, lang);
+      const b = mlGuide(g.blurb, lang);
+      return `<li><a href="${href}"><strong>${escHtml(t)}</strong></a> – ${escHtml(b)} <em>(${g.readingTimeMin} ${escHtml(HUB_LABELS.readMin[lang])})</em></li>`;
+    })
+    .join('\n')}</ul></section>`;
+
+  const faqSections = HUB_FAQ_CATEGORIES.map((cat) => {
+    const items = cat.items
+      .map((it) => `<details><summary>${escHtml(mlGuide(it.question, lang))}</summary><p>${escHtml(mlGuide(it.answer, lang))}</p></details>`)
+      .join('\n');
+    return `<section id="${cat.id}"><h3>${escHtml(mlGuide(cat.name, lang))}</h3>${items}</section>`;
+  }).join('\n');
+
+  const faqWrap = `<section><h2>${escHtml(HUB_LABELS.faqH2[lang])}</h2>${faqSections}</section>`;
+
+  const itemListLd = `<script type="application/ld+json">${JSON.stringify(itemListSchema(
+    HUB_LABELS.guidesH2[lang],
+    HUB_GUIDES.map((g) => ({
+      name: mlGuide(g.title, lang),
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, g.slugByLang[lang])}`,
+      description: mlGuide(g.blurb, lang),
+    })),
+  ))}</script>`;
+
+  const faqLd = `<script type="application/ld+json">${JSON.stringify(faqPageSchema(
+    HUB_FAQ_FLAT.map((f) => ({ question: mlGuide(f.question, lang), answer: mlGuide(f.answer, lang) })),
+  ))}</script>`;
+
+  return [crumbs, head, cards, faqWrap, itemListLd, faqLd].join('\n');
+}
+
 /** Build static page body content. Brand-Hub-Seiten erhalten zusaetzlich
  *  alle CategorySeoContent-Bloecke (longInhalt + FAQ pro Kategorie) plus
  *  ein kombiniertes FAQ-JSON-LD-Schema.
@@ -270,6 +321,11 @@ function staticPageBody(
   // Anchor-Guide "Jakou olepovacku hran koupit?" — vollstaendiger Body inkl. FAQ + HowTo JSON-LD.
   if (key === 'guideEdgebander') {
     return guideEdgebanderBody(lang, title);
+  }
+
+  // Hub "Ratgeber & FAQ" — Cards fuer 5 Ratgeber + 18 FAQ-Items in 5 Kategorien.
+  if (key === 'faq') {
+    return ratgeberFaqHubBody(lang, title, description);
   }
 
   return parts.join('\n');

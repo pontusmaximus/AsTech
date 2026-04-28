@@ -8,6 +8,12 @@ import { stripLanguageFromPath } from '../lib/language';
 
 const Navigation = () => {
   const { lang, t, setLang, buildPath } = useLanguage();
+  const guidesAndFaqLabel =
+    lang === 'cz' ? 'Průvodci & FAQ'
+    : lang === 'sk' ? 'Sprievodcovia & FAQ'
+    : lang === 'de' ? 'Ratgeber & FAQ'
+    : lang === 'hu' ? 'Útmutatók & GYIK'
+    : 'Guides & FAQ';
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -240,7 +246,7 @@ const Navigation = () => {
               to={buildPath('/faq')}
               className={`text-sm transition-colors ${location.pathname === buildPath('/faq') ? 'text-primary' : 'text-white/60 hover:text-white'}`}
             >
-              FAQ
+              {guidesAndFaqLabel}
             </Link>
 
             <Link
@@ -404,7 +410,7 @@ const Navigation = () => {
                   to={buildPath('/faq')}
                   className={`text-left ${location.pathname === buildPath('/faq') ? 'text-primary' : 'text-white/70 hover:text-white'}`}
                 >
-                  FAQ
+                  {guidesAndFaqLabel}
                 </Link>
                 <Link
                   to={buildPath('/kontakt')}
