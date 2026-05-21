@@ -364,6 +364,7 @@ export const USED_MACHINES: UsedMachine[] = [
       { label: { de: 'Typ', en: 'Type', cz: 'Typ', sk: 'Typ', hu: 'Típus' }, value: 'Mühlbock Typ 1002' },
       { label: { de: 'Anzahl Kammern', en: 'Number of chambers', cz: 'Počet komor', sk: 'Počet komôr', hu: 'Kamrák száma' }, value: '3' },
       { label: { de: 'Füllvolumen', en: 'Load volume', cz: 'Náplň', sk: 'Náplň', hu: 'Töltőtérfogat' }, value: '2 × 40 m³ + 1 × 30 m³ (≈ 110 m³)' },
+      { label: { de: 'Stapellänge', en: 'Stack length', cz: 'Délka stohu', sk: 'Dĺžka stohu', hu: 'Rakathossz' }, value: '2 × 6,7 m + 1 × 4,7 m' },
       { label: { de: 'Baujahre', en: 'Build years', cz: 'Roky výroby', sk: 'Roky výroby', hu: 'Gyártási évek' }, value: '2005, 2006, 2017' },
       { label: { de: 'Beheizung', en: 'Heating', cz: 'Vytápění', sk: 'Vykurovanie', hu: 'Fűtés' }, value: 'Warmwasserregelung / Hot-water control' },
       { label: { de: 'Zustand', en: 'Condition', cz: 'Stav', sk: 'Stav', hu: 'Állapot' }, value: 'Gebraucht / Used' },
