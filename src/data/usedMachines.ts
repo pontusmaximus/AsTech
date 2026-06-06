@@ -53,9 +53,6 @@ export const USED_MACHINES: UsedMachine[] = [
       '/images/used-machines/ott-tornado-top-1.jpg',
       '/images/used-machines/ott-tornado-top-2.jpg',
     ],
-    price: 18000,
-    listPrice: 18500,
-    priceCurrency: 'EUR',
     shortDescription: {
       de: 'Kantenleimmaschine mit 330.000 lfm Laufleistung.',
       en: 'Edgebanding machine with 330,000 lfm of usage.',
@@ -238,9 +235,6 @@ export const USED_MACHINES: UsedMachine[] = [
       '/images/used-machines/scm-stefani-solution-md-1.jpg',
       '/images/used-machines/scm-stefani-solution-md-2.jpg',
     ],
-    price: 23000,
-    listPrice: 23500,
-    priceCurrency: 'EUR',
     shortDescription: {
       de: 'Kantenleimmaschine, automatische Beschickung, 450.000 lfm.',
       en: 'Edgebanding machine, automatic feeding, 450,000 lfm.',
