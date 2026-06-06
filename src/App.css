@@ -773,6 +773,16 @@ html.theme-light .ima-hero .text-white\/80 {
   color: #ffffff !important;
 }
 
+/* Experience block sits on a permanently dark gradient — keep its text white in light mode */
+html.theme-light .ima-experience .text-white,
+html.theme-light .ima-experience .text-white\/80 {
+  color: #ffffff !important;
+}
+
+html.theme-light .ima-experience .text-white\/50 {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
 html.theme-light .text-white {
   color: #0f172a !important;
 }

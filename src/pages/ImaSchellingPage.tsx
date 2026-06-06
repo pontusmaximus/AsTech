@@ -280,7 +280,7 @@ const ImaSchellingPage = () => {
 
         {/* EXPERIENCE BLOCK */}
         <section className="container-wide pb-14">
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-red-950/40 via-zinc-950 to-black p-8 md:p-12">
+          <div className="ima-experience relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-red-950/40 via-zinc-950 to-black p-8 md:p-12">
             {/* decorative bars in background */}
             <div className="absolute inset-y-0 right-0 w-1/3 opacity-[0.06] pointer-events-none" aria-hidden="true">
               <div className="absolute top-0 bottom-0 left-[20%] w-8 bg-red-500 -rotate-6" />
