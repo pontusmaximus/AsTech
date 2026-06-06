@@ -773,13 +773,21 @@ html.theme-light .ima-hero .text-white\/80 {
   color: #ffffff !important;
 }
 
-/* Experience block sits on a permanently dark gradient — keep its text white in light mode */
-html.theme-light .ima-experience .text-white,
-html.theme-light .ima-experience .text-white\/80 {
+/* Cards on a permanently dark gradient — keep their text light in light mode (mirrors the dark-mode look) */
+html.theme-light .ima-dark-card .text-white,
+html.theme-light .ima-dark-card .hover\:text-white:hover {
   color: #ffffff !important;
 }
 
-html.theme-light .ima-experience .text-white\/50 {
+html.theme-light .ima-dark-card .text-white\/80 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+html.theme-light .ima-dark-card .text-white\/60 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+html.theme-light .ima-dark-card .text-white\/50 {
   color: rgba(255, 255, 255, 0.55) !important;
 }
 
