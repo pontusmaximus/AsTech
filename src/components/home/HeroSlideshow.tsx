@@ -63,7 +63,7 @@ const HeroSlideshow = () => {
   // Slide 3 — „Asamer goes Hungary" (nativ pro Sprache, HU besonders relevant)
   const hungaryInquiryMail = buildMailto(
     'max@asamer.net',
-    tr('Anfrage – Asamer in Ungarn', 'Inquiry – Asamer in Hungary', 'Poptávka – Asamer v Maďarsku')
+    tr('Anfrage – Asamer goes Hungary', 'Inquiry – Asamer goes Hungary', 'Poptávka – Asamer goes Hungary')
   );
   const hu3 = ({
     de: { eyebrow: 'Asamer · Neu in Ungarn', body: 'Wir bauen ein neues Vertriebsnetzwerk in Ungarn auf – für bestmöglichen Service, Support und das passende Maschinenportfolio. Wir freuen uns auf Ihre Anfrage.', cta: 'Anfrage senden' },
