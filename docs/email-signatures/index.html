@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>asamer · E-Mail-Signaturen</title>
+<style>
+  body{font-family:'DM Sans',Arial,Helvetica,sans-serif;background:#F4F6FA;color:#0F172A;margin:0;padding:32px 20px 80px;}
+  .wrap{max-width:780px;margin:0 auto;}
+  h1{font-size:24px;margin:0 0 4px;}
+  .sub{color:#64748B;font-size:14px;margin:0 0 28px;}
+  .howto{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:18px 22px;margin-bottom:28px;font-size:14px;line-height:1.6;}
+  .howto b{color:#004899;}
+  .card{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:22px;margin-bottom:20px;}
+  .card .label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#64748B;font-weight:600;margin-bottom:14px;}
+  .sigbox{padding:18px;border:1px dashed #CBD5E1;border-radius:10px;background:#fff;overflow-x:auto;}
+  .btn{margin-top:14px;display:inline-flex;align-items:center;gap:8px;background:#004899;color:#fff;border:0;border-radius:8px;padding:10px 18px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;}
+  .btn:hover{background:#003366;}
+  .btn.copied{background:#16a34a;}
+  details{margin-top:12px;}
+  summary{cursor:pointer;color:#64748B;font-size:13px;}
+  textarea{width:100%;height:150px;margin-top:8px;font-family:ui-monospace,monospace;font-size:12px;border:1px solid #E2E8F0;border-radius:8px;padding:10px;box-sizing:border-box;}
+  .note{font-size:12px;color:#64748B;margin-top:10px;line-height:1.5;}
+  .warn{color:#b45309;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>asamer · E-Mail-Signaturen</h1>
+  <p class="sub">Eliška Asamerová · Pavel Petras · Max Asamer</p>
+
+  <div class="howto">
+    <b>So einbinden:</b> Auf „Signatur kopieren" klicken → im Mail-Programm die Signatur-Einstellungen öffnen → einfügen (⌘V / Strg+V).<br>
+    &nbsp;&nbsp;•&nbsp;<b>Apple Mail:</b> Einstellungen → Signaturen → neue Signatur, einfügen (Haken „Standardschrift verwenden" entfernen).<br>
+    &nbsp;&nbsp;•&nbsp;<b>Gmail:</b> Einstellungen → Allgemein → Signatur → einfügen.<br>
+    &nbsp;&nbsp;•&nbsp;<b>Outlook:</b> Datei → Optionen → E-Mail → Signaturen → einfügen.<br>
+    <span class="note">Das Logo lädt aus <b>asamer.cz/brand/…</b> — sichtbar, sobald die Seite deployt ist. E-Mail-Adressen sind nach Schema angenommen (siehe Hinweise) und ggf. anzupassen.</span>
+  </div>
+
+  <div id="cards"></div>
+</div>
+
+<script>
+const LOGO = "https://asamer.cz/brand/png/horizontal/asamer-logo-horizontal.png";
+const people = [
+  {name:"Eliška Asamerová", title:"CEO",
+   tel:"+43 699 1120 9087", telRaw:"+4369911209087",
+   email:"eliska@asamer.net", emailNote:"angenommen (Schema vorname@asamer.net) — bitte prüfen"},
+  {name:"Pavel Petras", title:"Sales Czech &amp; Slovakia",
+   tel:"+420 724 056 965", telRaw:"+420724056965",
+   email:"pavel@asamer.net", emailNote:"angenommen — ggf. pavel@asamer.cz"},
+  {name:"Max Asamer", title:"Sales Hungary",
+   tel:"+43 699 1120 9087", telRaw:"+4369911209087",
+   email:"max@asamer.net", emailNote:"bestätigt"},
+];
+
+function sig(p){
+  return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+  <tr>
+    <td style="vertical-align:top;padding:2px 18px 0 0;">
+      <img src="${LOGO}" alt="asamer technologie" width="203" height="50" style="display:block;border:0;outline:none;text-decoration:none;">
+    </td>
+    <td style="vertical-align:top;padding:0 0 0 18px;border-left:2px solid #004899;font-family:'DM Sans',Arial,Helvetica,sans-serif;">
+      <div style="font-size:16px;font-weight:700;color:#0F172A;line-height:20px;">${p.name}</div>
+      <div style="font-size:13px;font-weight:600;color:#004899;line-height:18px;padding-top:2px;">${p.title}</div>
+      <div style="font-size:12px;color:#475569;line-height:18px;padding-bottom:8px;">Asamer Technologie GmbH</div>
+      <div style="font-size:13px;color:#0F172A;line-height:20px;">
+        <span style="display:inline-block;width:52px;color:#004899;font-weight:600;">Telefon</span><a href="tel:${p.telRaw}" style="color:#0F172A;text-decoration:none;">${p.tel}</a>
+      </div>
+      <div style="font-size:13px;color:#0F172A;line-height:20px;">
+        <span style="display:inline-block;width:52px;color:#004899;font-weight:600;">E-Mail</span><a href="mailto:${p.email}" style="color:#0F172A;text-decoration:none;">${p.email}</a>
+      </div>
+      <div style="font-size:13px;color:#0F172A;line-height:20px;">
+        <span style="display:inline-block;width:52px;color:#004899;font-weight:600;">Web</span><a href="https://www.asamer.cz" style="color:#0F172A;text-decoration:none;">www.asamer.cz</a>
+      </div>
+    </td>
+  </tr>
+</table>`;
+}
+
+const cards = document.getElementById("cards");
+people.forEach((p,i)=>{
+  const html = sig(p);
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <div class="label">${p.name} — ${p.title}</div>
+    <div class="sigbox" id="sig${i}">${html}</div>
+    <button class="btn" onclick="copySig(${i}, this)">⧉ Signatur kopieren</button>
+    <div class="note ${p.emailNote.includes('prüfen')||p.emailNote.includes('ggf')?'warn':''}">E-Mail: ${p.email} — ${p.emailNote}</div>
+    <details><summary>HTML-Quelltext anzeigen</summary><textarea readonly onclick="this.select()">${html.replace(/</g,"&lt;")}</textarea></details>
+  `;
+  cards.appendChild(card);
+});
+
+function copySig(i, btn){
+  const el = document.getElementById("sig"+i);
+  const range = document.createRange();
+  range.selectNode(el);
+  const sel = window.getSelection();
+  sel.removeAllRanges(); sel.addRange(range);
+  try { document.execCommand("copy"); btn.classList.add("copied"); btn.textContent="✓ Kopiert!";
+        setTimeout(()=>{btn.classList.remove("copied");btn.textContent="⧉ Signatur kopieren";},1800); }
+  catch(e){ alert("Bitte manuell markieren und kopieren."); }
+  sel.removeAllRanges();
+}
+</script>
+</body>
+</html>
