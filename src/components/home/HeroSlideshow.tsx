@@ -58,13 +58,12 @@ const HeroSlideshow = () => {
   ];
   const funding = HERO_FUNDING[lang];
 
-  // Headline-Wortspiel „entlassen vs. entlasten" – nativ pro Sprache.
-  const hl = ({
-    de: { strike: 'Entlassen', rest: ' Sie Ihre Arbeitnehmer –', pre: 'oder ', accent: 'entlasten', post: ' Sie Ihr Team.' },
-    en: { strike: 'Lay off', rest: ' your workers –', pre: 'or ', accent: 'relieve', post: ' your team.' },
-    cz: { strike: 'Propusťte', rest: ' své zaměstnance –', pre: 'nebo jim ', accent: 'ulevte', post: '.' },
-    sk: { strike: 'Prepustite', rest: ' svojich zamestnancov –', pre: 'alebo im ', accent: 'uľavte', post: '.' },
-    hu: { strike: 'Bocsássa el', rest: ' a dolgozóit –', pre: 'vagy ', accent: 'tehermentesítse', post: ' a csapatát.' },
+  const slide2Hl = ({
+    de: { line1: 'Wir unterstützen Ihre Arbeitsprozesse', accent: 'Barbaric', post: ' Vakuum-Handling.' },
+    en: { line1: 'We support your work processes with', accent: 'Barbaric', post: ' vacuum handling.' },
+    cz: { line1: 'Podporujeme vaše pracovní procesy', accent: 'Barbaric', post: ' vakuovou manipulací.' },
+    sk: { line1: 'Podporujeme vaše pracovné procesy', accent: 'Barbaric', post: ' vakuovou manipuláciou.' },
+    hu: { line1: 'Támogatjuk az Ön munkafolyamatait', accent: 'Barbaric', post: ' vákuumos anyagmozgatással.' },
   } as const)[lang];
 
   const hu3 = ({
@@ -167,14 +166,10 @@ const HeroSlideshow = () => {
               </span>
 
               <h2 className="mb-5 font-display font-bold text-[clamp(2rem,6vw,4.5rem)] leading-[1.07] tracking-[-0.02em] text-[#0f172a]">
-                <span className="block">
-                  <span className="line-through decoration-red-600 decoration-[3px] text-[#0f172a]/45">{hl.strike}</span>
-                  {hl.rest}
-                </span>
+                <span className="block">{slide2Hl.line1}</span>
                 <span className="block mt-1">
-                  {hl.pre}
-                  <span className="text-primary">{hl.accent}</span>
-                  {hl.post}
+                  <span className="text-primary">{slide2Hl.accent}</span>
+                  {slide2Hl.post}
                 </span>
               </h2>
 
@@ -185,9 +180,9 @@ const HeroSlideshow = () => {
 
               <p className="text-sm sm:text-base text-[#0f172a]/70 max-w-xl mb-6 leading-relaxed">
                 {tr(
-                  'Eine einzige Person bewegt mühelos große, schwere Platten – ergonomisch, sicher und schnell. So schützen Sie Ihre Fachkräfte und halten sie im Betrieb.',
-                  'A single person moves large, heavy panels effortlessly – ergonomic, safe and fast. Protect your skilled workers and keep them on the team.',
-                  'Jediný člověk snadno přesune velké, těžké desky – ergonomicky, bezpečně a rychle. Chraňte své odborníky a udržte si je.'
+                  'Eine einzige Person bewegt mühelos große, schwere Platten – ergonomisch, sicher und schnell. Ob an der Kantenanleimmaschine, Plattenaufteilsäge oder anderen Maschinen: So schützen Sie Ihre Fachkräfte langfristig.',
+                  'A single person moves large, heavy panels effortlessly – ergonomic, safe and fast. Whether at the edgebander, panel saw, or any other machine: protect your skilled workers for the long term.',
+                  'Jediný člověk snadno přesune velké, těžké desky – ergonomicky, bezpečně a rychle. Ať u okrajovačky, pily nebo jiných strojů: chraňte své odborníky dlouhodobě.'
                 )}
               </p>
 
