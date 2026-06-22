@@ -160,6 +160,30 @@ export const HUB_GUIDES: HubGuideCard[] = [
     },
     readingTimeMin: 7,
   },
+  {
+    slugByLang: {
+      cz: '/pruvodce/vakuovy-zvedak-holz',
+      sk: '/sprievodca/vakuovy-zdvihak-drevo',
+      de: '/ratgeber/vakuumheber-holz',
+      en: '/guide/vacuum-lifter-wood',
+      hu: '/utmutato/vakuumemelo-fa',
+    },
+    title: {
+      cz: 'Vakuové zvedáky: 1 člověk místo 3',
+      sk: 'Vákuové zdviháky: 1 človek namiesto 3',
+      de: 'Vakuumheber: 1 Person statt 3',
+      en: 'Vacuum lifters: 1 person instead of 3',
+      hu: 'Vákuumemelők: 1 ember 3 helyett',
+    },
+    blurb: {
+      cz: 'Jak vakuové zvedáky Barbaric fungují na olepovačce, pile i CNC – ochrana zdraví, rychlá návratnost, až 50 % dotace.',
+      sk: 'Ako vákuové zdviháky Barbaric fungujú na olepovačke, píle aj CNC – ochrana zdravia, rýchla návratnosť, až 50 % dotácia.',
+      de: 'Wie Barbaric Vakuumheber an KAM, Säge und CNC funktionieren – Arbeitsschutz, schneller ROI, bis 50 % Förderung.',
+      en: 'How Barbaric vacuum lifters work on edge banders, saws and CNC – worker protection, fast ROI, up to 50% funding.',
+      hu: 'Hogyan működnek a Barbaric vákuumemelők élzárógépen, fűrészen és CNC-n – munkavédelem, gyors megtérülés, akár 50% támogatás.',
+    },
+    readingTimeMin: 4,
+  },
 ];
 
 /* ------------------------------------------------------------------ */

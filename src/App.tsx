@@ -39,6 +39,7 @@ const GuideEdgebanderPage = lazy(() => import('./pages/GuideEdgebanderPage'));
 const GuideWarehouseAutomationPage = lazy(() => import('./pages/GuideWarehouseAutomationPage'));
 const GuidePanelSawComparisonPage = lazy(() => import('./pages/GuidePanelSawComparisonPage'));
 const GuideFundingCzPage = lazy(() => import('./pages/GuideFundingCzPage'));
+const GuideVacuumLifterPage = lazy(() => import('./pages/GuideVacuumLifterPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 import Footer from './sections/Footer';
 import CookieConsent from './components/CookieConsent';
@@ -240,6 +241,9 @@ const AppRoutes = () => {
         ))}
         {getAllSlugVariants('/ratgeber/foerderung-holzbearbeitung-cz-2026').map((s) => (
           <Route key={s} path={s} element={<LocalizedRoute page={<GuideFundingCzPage />} czSlug="/ratgeber/foerderung-holzbearbeitung-cz-2026" />} />
+        ))}
+        {getAllSlugVariants('/pruvodce/vakuovy-zvedak-holz').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<GuideVacuumLifterPage />} czSlug="/pruvodce/vakuovy-zvedak-holz" />} />
         ))}
         <Route path="*" element={<NotFoundPage />} />
       </Route>

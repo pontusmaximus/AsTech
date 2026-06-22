@@ -8,6 +8,7 @@ import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { organizationSchema, localBusinessSchemas, websiteSchema } from '../seo/structuredData';
 import { trackEvent } from '../lib/analytics';
+import HeroSlideshow from '../components/home/HeroSlideshow';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,14 +27,6 @@ const Home = () => {
     }
     return en;
   };
-  const generalInquiryMail = buildMailto(
-    'office@asamer.net',
-    tr(
-      'Projektanfrage Asamer Website',
-      'Project inquiry Asamer website',
-      'Projektová poptávka Asamer web'
-    )
-  );
   const contactInquiryMail = buildMailto(
     'office@asamer.net',
     tr('Allgemeine Anfrage', 'General inquiry', 'Obecná poptávka')
@@ -41,21 +34,7 @@ const Home = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.hero-title-line',
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, stagger: 0.1, ease: 'power3.out', delay: 0.3 }
-      );
-
-      gsap.fromTo('.hero-subtitle',
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.8 }
-      );
-
-      gsap.fromTo('.hero-cta',
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 1 }
-      );
-
+      // Hero-Eintritts-Animationen liegen jetzt in HeroSlideshow (pro Slide).
       gsap.utils.toArray<HTMLElement>('.section-animate').forEach((section) => {
         gsap.fromTo(section,
           { y: 60, opacity: 0 },
@@ -77,22 +56,10 @@ const Home = () => {
     return () => ctx.revert();
   }, []);
 
-  const heroLines = [
-    tr('Technologie mit Erfahrung.', 'Technology with experience.', 'Technologie se zkušeností.'),
-    tr('Lösungen mit Zukunft.', 'Solutions with a future.', 'Řešení s budoucností.'),
-  ];
   const structuredData = useMemo(() => {
     const businesses = localBusinessSchemas();
     return [organizationSchema(), ...businesses, websiteSchema()];
   }, []);
-
-  const handleHeroContactClick = () => {
-    trackEvent('hero_contact_click', {
-      placement: 'home_hero',
-      lang,
-      target: 'office@asamer.net',
-    });
-  };
 
   const handleHomeContactClick = (placement: string, target: string = 'office@asamer.net') => {
     trackEvent('home_contact_click', {
@@ -223,46 +190,7 @@ const Home = () => {
     <>
       <SeoHead routeKey="home" structuredData={structuredData} />
       <div ref={heroRef} className="bg-dark home-sections">
-      <section className="relative min-h-[100svh] md:min-h-[100vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center scale-100"
-            style={{ backgroundImage: 'url(https://www.ottpaul.com/fileadmin/_processed_/d/7/csm_translift_storm_system_4f9149b8e4.jpg)' }}
-          />
-          <div className="hero-overlay-vertical absolute inset-0" />
-          <div className="hero-overlay-horizontal absolute inset-0" />
-        </div>
-
-        <div className="absolute inset-0 grid-pattern opacity-50" />
-
-        <div className="relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12">
-          <div className="max-w-5xl">
-            <h1 className="mt-6 sm:mt-10 md:mt-8 lg:mt-6 mb-5 sm:mb-8">
-              <span className="hero-title-line block font-display font-bold text-[clamp(2.25rem,8vw,6rem)] sm:text-[clamp(2.5rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-white">
-                {heroLines[0]}
-              </span>
-              <span className="hero-title-line block font-display font-bold text-[clamp(2.25rem,8vw,6rem)] sm:text-[clamp(2.5rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-primary mt-2">
-                {heroLines[1]}
-              </span>
-            </h1>
-            <p className="hero-subtitle text-base sm:text-lg md:text-2xl text-white/60 max-w-2xl mb-6 sm:mb-10 leading-relaxed">
-              {t.hero.subheadline}
-            </p>
-
-            <div className="hero-cta flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-6 mb-2 sm:mb-0">
-              <a href={generalInquiryMail} className="btn-primary-dark" onClick={handleHeroContactClick}>
-                {t.hero.cta}
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a href={buildPath('/ott')} className="btn-ghost-dark text-sm sm:text-base">
-                {tr('Produkte entdecken', 'Discover products', 'Objevit produkty')}
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <HeroSlideshow />
 
       <section id="solutions" className="section-large relative">
         <div className="container-wide">

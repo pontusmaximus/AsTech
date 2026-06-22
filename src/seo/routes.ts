@@ -24,7 +24,8 @@ export type SeoRouteKey =
   | 'guideEdgebander'
   | 'guideWarehouseAutomation'
   | 'guidePanelSawComparison'
-  | 'guideFundingCz';
+  | 'guideFundingCz'
+  | 'guideVacuumLifter';
 
 export interface RouteMeta {
   title: string;
@@ -668,6 +669,42 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         description:
           'Milyen élzárógépet vegyek? Vásárlási útmutató üzemméret, anyagok és költségvetés szerint. OTT modellek, használt vs új, PUR vs EVA, GYIK. Asamer – hivatalos OTT-viszonteladó CZ, SK és HU számára.',
         keywords: ['Élzárógép', 'Milyen élzárógépet', 'OTT', 'Asztalosmühely', 'PUR', 'EVA', 'Használt élzárógép'],
+      },
+    }),
+  },
+  guideVacuumLifter: {
+    slug: '/pruvodce/vakuovy-zvedak-holz',
+    slugByLang: SLUG_TRANSLATIONS['/pruvodce/vakuovy-zvedak-holz'],
+    meta: createMeta({
+      de: {
+        title: 'Barbaric Vakuumheber für Holz – Mitarbeiter entlasten | Asamer',
+        description:
+          'Vakuumheber für Kantenanleimmaschine, Plattensäge & Co.: Eine Person bewegt schwere Platten ergonomisch und sicher. Arbeitsschutz, schneller ROI, bis 50 % Förderung. Asamer berät Sie gerne.',
+        keywords: ['Vakuumheber', 'Barbaric', 'UniWood UWL', 'Plattenhandling', 'Ergonomie', 'Arbeitsschutz', 'Kantenanleimmaschine'],
+      },
+      en: {
+        title: 'Barbaric Vacuum Lifters for Wood – Relieve Your Team | Asamer',
+        description:
+          'Vacuum lifters for edge banders, panel saws & more: one person moves heavy panels ergonomically and safely. Worker protection, fast ROI, up to 50% funding. Asamer is glad to advise.',
+        keywords: ['Vacuum lifter', 'Barbaric', 'UniWood UWL', 'Panel handling', 'Ergonomics', 'Worker safety', 'Edge bander'],
+      },
+      cz: {
+        title: 'Vakuové zvedáky Barbaric pro dřevo – ulevte týmu | Asamer',
+        description:
+          'Vakuové zvedáky pro olepovačku hran, formátovací pilu a další: jeden člověk přesune těžké desky ergonomicky a bezpečně. Ochrana zdraví, rychlá návratnost, až 50 % dotace. Asamer rád poradí.',
+        keywords: ['Vakuový zvedák', 'Barbaric', 'UniWood UWL', 'Manipulace s deskami', 'Ergonomie', 'Ochrana zdraví', 'Olepovačka hran'],
+      },
+      sk: {
+        title: 'Vákuové zdviháky Barbaric pre drevo – uľavte tímu | Asamer',
+        description:
+          'Vákuové zdviháky pre olepovačku hrán, formátovaciu pílu a ďalšie: jeden človek presunie ťažké dosky ergonomicky a bezpečne. Ochrana zdravia, rýchla návratnosť, až 50 % dotácia. Asamer rád poradí.',
+        keywords: ['Vákuový zdvihák', 'Barbaric', 'UniWood UWL', 'Manipulácia s doskami', 'Ergonómia', 'Ochrana zdravia', 'Olepovačka hrán'],
+      },
+      hu: {
+        title: 'Barbaric vákuumemelők fához – tehermentesítse csapatát | Asamer',
+        description:
+          'Vákuumemelők élzárógéphez, formátumfűrészhez és máshoz: egy ember ergonomikusan és biztonságosan mozgat nehéz lapokat. Munkavédelem, gyors megtérülés, akár 50% támogatás. Az Asamer szívesen segít.',
+        keywords: ['Vákuumemelő', 'Barbaric', 'UniWood UWL', 'Lapkezelés', 'Ergonómia', 'Munkavédelem', 'Élzárógép'],
       },
     }),
   },

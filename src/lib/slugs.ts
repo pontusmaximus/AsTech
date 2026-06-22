@@ -105,6 +105,13 @@ export const SLUG_TRANSLATIONS: Record<string, Record<Language, string>> = {
     sk: '/sprievodca/dotacie-stroje-cz-2026',
     hu: '/utmutato/tamogatasok-csehorszag-2026',
   },
+  '/pruvodce/vakuovy-zvedak-holz': {
+    de: '/ratgeber/vakuumheber-holz',
+    en: '/guide/vacuum-lifter-wood',
+    cz: '/pruvodce/vakuovy-zvedak-holz',
+    sk: '/sprievodca/vakuovy-zdvihak-drevo',
+    hu: '/utmutato/vakuumemelo-fa',
+  },
 };
 
 // Reverse map: any localized slug (with leading /) → canonical CZ slug

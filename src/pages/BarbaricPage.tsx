@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowUpRight, Factory, Handshake, MapPin, Network } from 'lucide-react';
 import ProductCard from '../components/manufacturer/ProductCard';
 import gsap from 'gsap';
@@ -12,6 +13,7 @@ import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
+import { localizeSlug } from '../lib/slugs';
 import { getBarbaricProductsByCategory, buildBarbaricProductPath, BARBARIC_CATEGORY_LABELS } from '../data/barbaricProducts';
 import type { BarbaricCategory } from '../data/barbaricProducts';
 import { BARBARIC_CATEGORY_SEO } from '../data/seo/barbaricSeoContent';
@@ -131,7 +133,13 @@ const BarbaricPage = () => {
             <div className="p-4 bg-gradient-to-r from-orange-500/8 to-transparent rounded-xl border border-orange-500/10 max-w-2xl">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <p className="text-white/40 text-sm">{tr('Interesse an BARBARIC Automatisierung?', 'Interested in BARBARIC automation?', 'Máte zájem o automatizaci BARBARIC?')}</p>
-                <a href={inquiryMail} className="btn-primary-dark text-sm sm:whitespace-nowrap">{tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}<ArrowUpRight className="w-4 h-4" /></a>
+                <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
+                  <Link to={buildLocalizedPath(lang, localizeSlug('/pruvodce/vakuovy-zvedak-holz', lang))} className="btn-ghost-dark text-sm sm:whitespace-nowrap">
+                    {tr('Vakuumheber: 1 statt 3 – mehr erfahren', 'Vacuum lifters: 1 instead of 3 – learn more', 'Vakuové zvedáky: 1 místo 3 – zjistit více')}
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                  <a href={inquiryMail} className="btn-primary-dark text-sm sm:whitespace-nowrap">{tr('Anfrage senden', 'Send inquiry', 'Odeslat poptávku')}<ArrowUpRight className="w-4 h-4" /></a>
+                </div>
               </div>
             </div>
           </div>
