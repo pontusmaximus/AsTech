@@ -10,7 +10,7 @@ import CategorySection from '../components/manufacturer/CategorySection';
 import ManufacturerIntro from '../components/manufacturer/ManufacturerIntro';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
-import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
+import { breadcrumbSchema, itemListSchema, faqPageSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { getOttProductsByCategory, buildOttProductPath, OTT_CATEGORY_LABELS } from '../data/ottProducts';
 import type { OttCategory } from '../data/ottProducts';
@@ -32,6 +32,41 @@ const OttPage = () => {
     { name: 'OTT', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/ott')}` },
   ]);
   const inquiryMail = buildMailto('office@asamer.net', tr('Anfrage OTT', 'Inquiry OTT', 'Poptávka OTT'));
+
+  const faqs = [
+    {
+      question: tr('Was ist eine OTT Kantenanleimmaschine?', 'What is an OTT edgebanding machine?', 'Co je olepovačka hran OTT?'),
+      answer: tr(
+        'Eine OTT Kantenanleimmaschine trägt Kantenmaterial auf Möbel- und Plattenteile auf und besäumt es bündig. OTT bietet Modelle von der kompakten Pacific+ bis zur industriellen TopEdge mit PUR, EVA und bluEdge HyFuse Lasertechnologie.',
+        'An OTT edgebanding machine applies and flush-trims edge material on furniture and board parts. OTT offers models from the compact Pacific+ to the industrial TopEdge with PUR, EVA and bluEdge HyFuse laser technology.',
+        'Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse.',
+      ),
+    },
+    {
+      question: tr('Was kostet eine OTT Kantenanleimmaschine?', 'How much does an OTT edgebanding machine cost?', 'Kolik stojí olepovačka hran OTT?'),
+      answer: tr(
+        'Der Preis hängt von Modell, Ausstattung und Automatisierungsgrad ab. Asamer erstellt ein unverbindliches Angebot nach Maß und berät zu Finanzierung und Förderungen von bis zu 50 %.',
+        'The price depends on model, configuration and level of automation. Asamer prepares a tailored, no-obligation quote and advises on financing and grants of up to 50%.',
+        'Cena olepovačky hran OTT závisí na modelu, výbavě a stupni automatizace. Asamer připraví nezávaznou nabídku na míru a poradí s financováním i dotacemi až 50 %.',
+      ),
+    },
+    {
+      question: tr('Was ist der Unterschied zwischen PUR und EVA?', 'What is the difference between PUR and EVA glue?', 'Jaký je rozdíl mezi lepidlem PUR a EVA?'),
+      answer: tr(
+        'EVA ist ein universeller Schmelzklebstoff, PUR erzeugt eine wasserfeste Verbindung ohne sichtbare Fuge. Das OTT CombiMelt-System verarbeitet beide Klebstofftypen.',
+        'EVA is a universal hot-melt adhesive; PUR creates a waterproof joint with no visible glue line. The OTT CombiMelt system processes both adhesive types.',
+        'EVA je univerzální tavné lepidlo, PUR vytváří voděodolný spoj bez viditelné spáry. Systém OTT CombiMelt zvládá oba typy lepidla.',
+      ),
+    },
+    {
+      question: tr('Bietet Asamer auch gebrauchte OTT Kantenanleimmaschinen?', 'Does Asamer also offer used OTT edgebanding machines?', 'Nabízíte i použité olepovačky hran OTT?'),
+      answer: tr(
+        'Ja. Asamer bietet neue und technisch geprüfte gebrauchte OTT Kantenanleimmaschinen inklusive Service und Montage in CZ, SK und HU.',
+        'Yes. Asamer offers new and technically inspected used OTT edgebanding machines including service and installation in CZ, SK and HU.',
+        'Ano. Asamer nabízí nové i technicky prověřené použité olepovačky hran OTT včetně servisu a montáže v ČR, na Slovensku a v Maďarsku.',
+      ),
+    },
+  ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -58,7 +93,7 @@ const OttPage = () => {
 
   return (
     <>
-      <SeoHead routeKey="ott" structuredData={[breadcrumbs, productList]} />
+      <SeoHead routeKey="ott" structuredData={[breadcrumbs, productList, faqPageSchema(faqs)]} />
       <div className="bg-dark min-h-screen">
 
         {/* ====== 1. HERO ====== */}
@@ -77,9 +112,9 @@ const OttPage = () => {
           eyebrow={tr('Deutschland · Kantenanleimtechnologie', 'Germany · Edgebanding technology', 'Německo · Olepování hran')}
           title={tr('OTT Kantenanleimmaschinen', 'OTT Edgebanding Machines', 'OTT olepovačky hran')}
           lead={tr(
-            'OTT ist ein deutscher Hersteller von Kantenanleimmaschinen für die Holz- und Möbelindustrie. Das Sortiment reicht von kompakten Einstiegsmodellen wie der Pacific+ (18 m/min) bis zu industriellen Hochleistungsmaschinen wie der TopEdge mit PUR, EVA und bluEdge HyFuse Lasertechnologie. Asamer ist exklusiver OTT-Vertriebspartner für CZ, SK und HU mit lokalem Service und Softwareintegration über die offene OPC-UA-Schnittstelle.',
-            'OTT is a German manufacturer of edgebanding machines for the wood and furniture industry. The range spans from compact entry-level models like the Pacific+ (18 m/min) to industrial high-performance machines like the TopEdge with PUR, EVA and bluEdge HyFuse laser technology. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.',
-            'OTT je německý výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Sortiment sahá od kompaktních vstupních modelů jako Pacific+ (18 m/min) až po průmyslové vysokovýkonné stroje jako TopEdge s PUR, EVA a laserovou technologií bluEdge HyFuse. Asamer je exkluzivní distribuční partner OTT pro CZ, SK a HU s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.',
+            'OTT Kantenanleimmaschinen zählen zur Spitze beim Bekanten von Möbel- und Plattenteilen – von der kompakten Pacific+ (18 m/min) bis zur industriellen TopEdge mit PUR, EVA und bluEdge HyFuse Lasertechnologie. OTT ist ein deutscher Hersteller von Kantenanleimmaschinen für die Holz- und Möbelindustrie. Asamer ist exklusiver OTT-Vertriebspartner für CZ, SK und HU mit lokalem Service und Softwareintegration über die offene OPC-UA-Schnittstelle.',
+            'OTT edgebanding machines are among the best for banding furniture and board panels – from the compact Pacific+ (18 m/min) to the industrial TopEdge with PUR, EVA and bluEdge HyFuse laser technology. OTT is a German manufacturer of edgebanding machines for the wood and furniture industry. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.',
+            'Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse. OTT je německý výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.',
           )}
           facts={[
             {
@@ -219,6 +254,22 @@ const OttPage = () => {
                       <div className="text-xs text-white/30">{item.d}</div>
                     </div>
                   </div>
+                ))}
+              </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="mb-10">
+              <h2 className="text-sm font-display text-white/40 mb-4">{tr('Häufige Fragen zu OTT Kantenanleimmaschinen', 'FAQ on OTT edgebanding machines', 'Časté dotazy k olepovačkám hran OTT')}</h2>
+              <div className="max-w-2xl divide-y divide-white/5 rounded-xl border border-white/10">
+                {faqs.map((faq) => (
+                  <details key={faq.question} className="group p-4">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium text-white/80 [&::-webkit-details-marker]:hidden">
+                      {faq.question}
+                      <span className="shrink-0 text-white/30 transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="mt-3 text-sm leading-relaxed text-white/40">{faq.answer}</p>
+                  </details>
                 ))}
               </div>
             </section>

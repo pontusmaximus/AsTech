@@ -488,7 +488,7 @@ const GuideEdgebanderPage = () => {
                   to={buildPath('/ott')}
                   className="btn-primary-dark sm:whitespace-nowrap justify-center"
                 >
-                  {tr('Alle OTT-Maschinen', 'All OTT machines', 'Všechny stroje OTT')}
+                  {tr('Alle OTT-Kantenanleimmaschinen', 'All OTT edgebanders', 'Všechny olepovačky hran OTT')}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <a

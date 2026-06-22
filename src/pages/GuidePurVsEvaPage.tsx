@@ -488,7 +488,7 @@ const GuidePurVsEvaPage = () => {
                   to={buildPath('/ott')}
                   className="inline-flex items-center gap-2 text-primary text-sm font-medium hover:underline"
                 >
-                  {tr('Alle OTT-Maschinen ansehen', 'View all OTT machines', 'Zobrazit všechny stroje OTT')}
+                  {tr('Alle OTT-Kantenanleimmaschinen ansehen', 'View all OTT edgebanders', 'Zobrazit olepovačky hran OTT')}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -577,7 +577,7 @@ const GuidePurVsEvaPage = () => {
                   <ArrowRight className="w-5 h-5" />
                 </a>
                 <Link to={buildPath('/ott')} className="btn-outline-dark justify-center">
-                  {tr('OTT-Maschinen ansehen', 'View OTT machines', 'Zobrazit stroje OTT')}
+                  {tr('OTT-Kantenanleimmaschinen', 'OTT edgebanders', 'Olepovačky hran OTT')}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
