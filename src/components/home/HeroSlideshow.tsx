@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import gsap from 'gsap';
 import { useLanguage } from '../../App';
 import { translatePageText } from '../../i18n/pageTextTranslations';
 import { buildMailto } from '../../lib/email';
@@ -86,25 +85,11 @@ const HeroSlideshow = () => {
     return () => window.clearInterval(id);
   }, [reduceMotion, paused]);
 
-  // GSAP-Eintritt nur für den aktiven Slide (Scope = aktiver Slide-Knoten),
-  // spielt bei jedem Slide-Wechsel neu.
-  useEffect(() => {
-    const slideEl = rootRef.current?.querySelector(`[data-slide="${active}"]`) as HTMLElement | null;
-    if (!slideEl) return;
-    const ctx = gsap.context(() => {
-      if (reduceMotion) {
-        gsap.set('.hero-title-line, .hero-subtitle, .hero-cta', { opacity: 1, y: 0 });
-        return;
-      }
-      gsap.fromTo('.hero-title-line', { y: 80, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out', delay: 0.2 });
-      gsap.fromTo('.hero-subtitle', { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.55 });
-      gsap.fromTo('.hero-cta', { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.75 });
-    }, slideEl);
-    return () => ctx.revert();
-  }, [active, reduceMotion]);
+  // Sanfter Reveal pro Slide rein über CSS (keine GSAP-Abhängigkeit) – der
+  // aktive Slide-Inhalt fährt leicht hoch, sichtbarer Endzustand ist garantiert
+  // (kein „stuck at opacity 0" bei Autoplay-Wechseln/StrictMode).
+  const contentClass = (i: number) =>
+    reduceMotion ? '' : `transition-transform duration-700 ease-out ${i === active ? 'translate-y-0' : 'translate-y-4'}`;
 
   const slideLayer = (i: number) =>
     `absolute inset-0 flex items-center transition-opacity duration-700 ease-out ${
@@ -132,7 +117,7 @@ const HeroSlideshow = () => {
           <div className="absolute inset-0 grid-pattern opacity-50" />
         </div>
 
-        <div className="relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12">
+        <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(0)}`}>
           <div className="max-w-5xl">
             <h1 className="mt-6 sm:mt-10 md:mt-8 lg:mt-6 mb-5 sm:mb-8">
               <span className="hero-title-line block font-display font-bold text-[clamp(2.25rem,8vw,6rem)] sm:text-[clamp(2.5rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-white">
@@ -185,7 +170,7 @@ const HeroSlideshow = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#eef1f6] via-[#eef1f6]/90 to-[#eef1f6]/20 md:via-[#eef1f6]/80 md:to-transparent" />
         </div>
 
-        <div className="relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-10">
+        <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-10 ${contentClass(1)}`}>
           <div className="max-w-2xl">
             {/* Eyebrow */}
             <span className="hero-subtitle inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-primary font-medium mb-5">
@@ -270,7 +255,7 @@ const HeroSlideshow = () => {
           <div className="absolute inset-0 grid-pattern opacity-40" />
         </div>
 
-        <div className="relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12">
+        <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(2)}`}>
           <div className="max-w-3xl">
             <span className="hero-subtitle inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-white/80 font-medium mb-5">
               {hu3.eyebrow}
