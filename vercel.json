@@ -168,9 +168,35 @@
     { "source": "/service", "destination": "https://asamer.cz/cz/servis", "permanent": true },
     { "source": "/impressum", "destination": "https://asamer.cz/cz/imprint", "permanent": true },
 
-    { "source": "/products/olepovacky-ott", "destination": "https://asamer.cz/cz/ott", "permanent": true },
     { "source": "/products/olepovacky-ott/:slug*", "destination": "https://asamer.cz/cz/ott", "permanent": true },
+    { "source": "/products/kolikovaci-stroje-gannomat/:slug*", "destination": "https://asamer.cz/cz/gannomat", "permanent": true },
+    { "source": "/products/korpusove-lisy-gannomat/:slug*", "destination": "https://asamer.cz/cz/gannomat", "permanent": true },
+    { "source": "/products/manipulatory-barbaric/:slug*", "destination": "https://asamer.cz/cz/barbaric", "permanent": true },
+    { "source": "/products/pily-schelling/:slug*", "destination": "https://asamer.cz/cz/ima-schelling", "permanent": true },
+    { "source": "/products/tech-uzly-a-linky-ima-schelling/:slug*", "destination": "https://asamer.cz/cz/ima-schelling", "permanent": true },
+    { "source": "/products/pily-altendorf/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
+    { "source": "/products/pily-streibeg/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
+    { "source": "/products/susarny-dreva/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
+    { "source": "/products/sesivacky-dyh-kuper/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
+    { "source": "/products/dyhovaci-lisy-langzauner/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
+    { "source": "/products/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
+    { "source": "/second-hand/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
+    { "source": "/servis/:slug*", "destination": "https://asamer.cz/cz/servis", "permanent": true },
+    { "source": "/about/:slug*", "destination": "https://asamer.cz/cz/kontakt", "permanent": true },
+    { "source": "/xylexpo-2024/:slug*", "destination": "https://asamer.cz/cz", "permanent": true },
+    { "source": "/ligna-2024/:slug*", "destination": "https://asamer.cz/cz", "permanent": true },
 
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.asamer.cz"
+        }
+      ],
+      "destination": "https://asamer.cz/:path",
+      "permanent": true
+    },
     {
       "source": "/:path(.*)",
       "has": [
