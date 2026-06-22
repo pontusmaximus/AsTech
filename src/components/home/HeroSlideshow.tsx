@@ -75,15 +75,13 @@ const HeroSlideshow = () => {
 
   const rootRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
   const reduceMotion = usePrefersReducedMotion();
 
-  // Auto-Advance — pausiert bei Hover, aus bei reduced-motion
+  // Auto-Advance — läuft immer automatisch, kein Klick und keine Hover-Pause.
   useEffect(() => {
-    if (reduceMotion || paused) return;
     const id = window.setInterval(() => setActive((i) => (i + 1) % SLIDE_COUNT), AUTO_MS);
     return () => window.clearInterval(id);
-  }, [reduceMotion, paused]);
+  }, []);
 
   // Sanfter Reveal pro Slide rein über CSS (keine GSAP-Abhängigkeit) – der
   // aktive Slide-Inhalt fährt leicht hoch, sichtbarer Endzustand ist garantiert
@@ -100,8 +98,6 @@ const HeroSlideshow = () => {
     <section
       ref={rootRef}
       className="relative min-h-[100svh] md:min-h-[100vh] flex items-center overflow-hidden"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
       aria-roledescription="carousel"
       aria-label={tr('Startseiten-Slideshow', 'Homepage slideshow', 'Úvodní slideshow')}
     >
