@@ -167,6 +167,10 @@
     { "source": "/loesungen", "destination": "https://asamer.cz/cz/reseni", "permanent": true },
     { "source": "/service", "destination": "https://asamer.cz/cz/servis", "permanent": true },
     { "source": "/impressum", "destination": "https://asamer.cz/cz/imprint", "permanent": true },
+
+    { "source": "/products/olepovacky-ott", "destination": "https://asamer.cz/cz/ott", "permanent": true },
+    { "source": "/products/olepovacky-ott/:slug*", "destination": "https://asamer.cz/cz/ott", "permanent": true },
+
     {
       "source": "/:path(.*)",
       "has": [
