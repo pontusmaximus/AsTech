@@ -181,6 +181,11 @@ The Tornado+ can be extended with the TRANScompact return conveyor into an effic
 Vsestranna vybava Tornado+ z ni cini idealnim reseni pro provozy s menicimi se pozadavky. At uz tenke ABS hrany pro seriovou vyrobu nebo tluste masivni drevene hrany pro zakazkovou praci - Tornado+ rychle prepina mezi ruznymi materialy a tlousskami. Standardni vybava zahrnuje spojovaci obrabeni, zasobnik hran, system CombiMelt, oriznute zarizeni, frezovaci agregat a skrabku.
 
 Tornado+ lze rozsirit o vratny dopravnik TRANScompact na efektivni pruchozi linku. Ve srovnani s Pacific+ nabizi vetsi flexibilitu rychlosti posuvu, pricemz cenove zustavava vyrazne pod profesionalnimi modely Storm+ a TopEdge. Asamer dodava Tornado+ pro cesky, slovensky a madarsky trh s komplexnim servisem, zasobovanim nahradnimi dily a skolenim. Pro stredni provozy hledajici spolehlive univerzalni reseni pro olepovani hran je Tornado+ vynikajici investici s dlouhodobou hodnotou.`,
+      sk: `OTT Tornado+ je najosvedčenejší model radu olepovačiek hrán OTT a už roky je bestsellerom v stredných stolárskych a nábytkárskych prevádzkach. S dĺžkou 6,2 metra ponúka vynikajúci kompromis medzi kompaktnosťou a výkonom. Stroj spracováva hrany s hrúbkou 0,3 až 15 mm na doskách do hrúbky 60 mm pri rýchlostiach posuvu 12 až 18 m/min.
+
+Všestranná výbava Tornado+ z nej robí ideálne riešenie pre prevádzky s meniacimi sa požiadavkami. Či už tenké ABS hrany pre sériovú výrobu alebo hrubé masívne drevené hrany pre zákazkovú prácu – Tornado+ rýchlo prepína medzi rôznymi materiálmi a hrúbkami. Štandardná výbava zahŕňa spájacie obrábanie, zásobník hrán, systém CombiMelt, orezávacie zariadenie, frézovací agregát a škrabku.
+
+Tornado+ možno rozšíriť o vratný dopravník TRANScompact na efektívnu priebežnú linku. V porovnaní s Pacific+ ponúka väčšiu flexibilitu rýchlosti posuvu, pričom cenovo zostáva výrazne pod profesionálnymi modelmi Storm+ a TopEdge. Asamer dodáva Tornado+ pre český, slovenský a maďarský trh s komplexným servisom, zásobovaním náhradnými dielmi a školením. Pre stredné prevádzky hľadajúce spoľahlivé univerzálne riešenie na olepovanie hrán je Tornado+ vynikajúcou investíciou s dlhodobou hodnotou.`,
       hu: `Az OTT Tornado+ a legbeváltabb modell az OTT élzárógép-családban, és évek óta bestseller a közepes méretu asztalosüzemekben és bútorgyártóknál. 6,2 méteres hosszával kiváló kompromisszumot kínál a kompaktság és a teljesítmény között. A gép 0,3 és 15 mm közötti élvastagságokat dolgoz fel 60 mm-es lapvastagságig, 12-18 m/perc eloretolási sebességgel.
 
 A Tornado+ sokoldalú felszereltsége ideális választássá teszi a változó igényekkel dolgozó üzemek számára. Legyen szó vékony ABS élekrol sorozatgyártáshoz vagy vastag tömörfa élekrol egyedi munkákhoz, a Tornado+ gyorsan vált a különbözo anyagok és vastagságok között. A standard felszereltség része a fugamegmunkálás, az éltár, a CombiMelt ragasztórendszer, a formatizáló egység, a maróegység és a kaparó.
@@ -194,12 +199,14 @@ A Tornado+ a TRANScompact visszatéríto szalaggal hatékony átfutó sorrá bov
           de: 'Fuer variantenreiche Fertigung',
           en: 'For variant-rich production',
           cz: 'Pro ruznorodou vyrobu',
+          sk: 'Pre rôznorodú výrobu',
           hu: 'Változatos gyártáshoz',
         },
         body: {
           de: 'Die Tornado+ ist der Allrounder fuer Betriebe, die taeglich mit unterschiedlichen Kantenmaterialien und -staerken arbeiten. Schnelle Umruestzeiten und eine intuitive Bedienung ermoeglichen den effizienten Wechsel zwischen PVC, ABS, Melamin und Echtholzfurnier - ideal fuer Moebelwerkstaetten mit Einzel- und Kleinserienfertigung.',
           en: 'The Tornado+ is the all-rounder for operations that work daily with different edge materials and thicknesses. Quick changeover times and intuitive operation enable efficient switching between PVC, ABS, melamine and real wood veneer - ideal for furniture workshops with one-off and small-batch production.',
           cz: 'Tornado+ je univerzalni stroj pro provozy pracujici denne s ruznymi hranovymi materialy a tlousskami. Rychle prestavovaci casy a intuitivni ovladani umoznuji efektivni prepinani mezi PVC, ABS, melaminem a dyhou z praveho dreva - idealni pro nabytkarske dilny s kusovou a maloseriovou vyrobou.',
+          sk: 'Tornado+ je univerzálny stroj pre prevádzky pracujúce denne s rôznymi hranovými materiálmi a hrúbkami. Rýchle prestavovacie časy a intuitívne ovládanie umožňujú efektívne prepínanie medzi PVC, ABS, melamínom a dyhou z pravého dreva – ideálne pre nábytkárske dielne s kusovou a malosériovou výrobou.',
           hu: 'A Tornado+ az a mindenre alkalmas gép, amely napi szinten különbözo élanyagokkal és vastagságokkal dolgozó üzemek számára készült. A gyors átállási idok és az intuitív kezelés hatékony váltást tesznek lehetové PVC, ABS, melamin és valódi fafurnér között, ideális egyedi és kis sorozatú gyártást végzo bútormuhelyek számára.',
         },
       },
@@ -208,12 +215,14 @@ A Tornado+ a TRANScompact visszatéríto szalaggal hatékony átfutó sorrá bov
           de: 'Bewaeehrtes Arbeitspferd fuer den Dauereinsatz',
           en: 'Proven workhorse for continuous use',
           cz: 'Overeny tahoun pro nepretrzity provoz',
+          sk: 'Osvedčený ťahúň pre nepretržitú prevádzku',
           hu: 'Bevált igásló a folyamatos használathoz',
         },
         body: {
           de: 'Seit Jahren ist die Tornado+ das meistverkaufte Modell von OTT. Die robuste Bauweise und die erprobte Technik sorgen fuer geringe Wartungskosten und hohe Verfuegbarkeit. Viele Betriebe setzen die Tornado+ im Einschicht- und Zweischichtbetrieb ein und profitieren von ihrer Zuverlaessigkeit und Langlebigkeit.',
           en: 'For years, the Tornado+ has been OTT\'s best-selling model. Its robust construction and proven technology ensure low maintenance costs and high availability. Many operations run the Tornado+ in single or double-shift production and benefit from its reliability and longevity.',
           cz: 'Jiz leta je Tornado+ nejprodavanejsim modelem OTT. Robustni konstrukce a osvedcena technika zajisuji nizke naklady na udrzbu a vysokou dostupnost. Mnoho provozu pouziva Tornado+ v jednosmennem i dvousmennem provozu a tezi z jeji spolehlivosti a zivotnosti.',
+          sk: 'Už roky je Tornado+ najpredávanejším modelom OTT. Robustná konštrukcia a osvedčená technika zaisťujú nízke náklady na údržbu a vysokú dostupnosť. Mnoho prevádzok používa Tornado+ v jednozmennej aj dvojzmennej prevádzke a ťaží z jej spoľahlivosti a životnosti.',
           hu: 'A Tornado+ évek óta az OTT legkelendobb modellje. Robusztus kivitelezése és bevált technikája alacsony karbantartási költségeket és magas rendelkezésre állást biztosít. Számos üzem használja a Tornado+-t egy- és kétmuszakos üzemben, élvezve megbízhatóságát és hosszú élettartamát.',
         },
       },
@@ -223,6 +232,7 @@ A Tornado+ a TRANScompact visszatéríto szalaggal hatékony átfutó sorrá bov
       de: 'Die Tornado+ ist die richtige Wahl, wenn Sie eine bewaehrte Allround-Kantenanleimmaschine fuer den taeglichen Einsatz suchen. Im Vergleich zur Pacific+ bietet sie mehr Geschwindigkeitsflexibilitaet. Wenn Sie hoehere Vorschubgeschwindigkeiten oder eine Industrie-4.0-Anbindung benoetigen, empfehlen wir die FlexEdge oder Storm+.',
       en: 'The Tornado+ is the right choice if you are looking for a proven all-round edgebanding machine for daily use. Compared to the Pacific+, it offers more speed flexibility. If you need higher feed speeds or Industry 4.0 connectivity, we recommend the FlexEdge or Storm+.',
       cz: 'Tornado+ je spravna volba, pokud hledate overene univerzalni reseni pro denni olepovani hran. Ve srovnani s Pacific+ nabizi vetsi flexibilitu rychlosti. Pokud potrebujete vyssi rychlosti posuvu nebo pripojeni k Prumyslu 4.0, doporucujeme FlexEdge nebo Storm+.',
+      sk: 'Tornado+ je správna voľba, ak hľadáte osvedčené univerzálne riešenie na denné olepovanie hrán. V porovnaní s Pacific+ ponúka väčšiu flexibilitu rýchlosti. Ak potrebujete vyššie rýchlosti posuvu alebo pripojenie k Priemyslu 4.0, odporúčame FlexEdge alebo Storm+.',
       hu: 'A Tornado+ a helyes választás, ha bevált, mindenre alkalmas élzárógépet keres napi használatra. A Pacific+-hoz képest nagyobb sebesség-rugalmasságot kínál. Ha nagyobb eloretolási sebességre vagy Ipar 4.0-kompatibilitásra van szüksége, a FlexEdge-et vagy a Storm+-t ajánljuk.',
     },
 
@@ -232,12 +242,14 @@ A Tornado+ a TRANScompact visszatéríto szalaggal hatékony átfutó sorrá bov
           de: 'Worin unterscheidet sich die Tornado+ von der Pacific+?',
           en: 'What is the difference between the Tornado+ and the Pacific+?',
           cz: 'Cim se Tornado+ lisi od Pacific+?',
+          sk: 'Čím sa Tornado+ líši od Pacific+?',
           hu: 'Miben különbözik a Tornado+ a Pacific+-tól?',
         },
         answer: {
           de: 'Die Tornado+ ist mit 6,2 m etwas laenger als die Pacific+ (5,7 m) und bietet einen variablen Vorschub von 12-18 m/min gegenueber den festen 18 m/min der Pacific+. Sie ist vielseitiger ausgestattet und als bewaeahrtestes Modell der OTT-Reihe besonders zuverlaessig.',
           en: 'The Tornado+ at 6.2 m is slightly longer than the Pacific+ (5.7 m) and offers a variable feed speed of 12-18 m/min compared to the fixed 18 m/min of the Pacific+. It has more versatile equipment and, as the most proven model in the OTT range, is particularly reliable.',
           cz: 'Tornado+ s 6,2 m je o neco delsi nez Pacific+ (5,7 m) a nabizi promennou rychlost posuvu 12-18 m/min oproti fixnim 18 m/min u Pacific+. Je vsestranneji vybavena a jako nejovereneji model rady OTT je obzvlaste spolehliva.',
+          sk: 'Tornado+ s 6,2 m je o niečo dlhšia ako Pacific+ (5,7 m) a ponúka premenlivý posuv 12 – 18 m/min oproti pevným 18 m/min pri Pacific+. Je všestrannejšie vybavená a ako najosvedčenejší model radu OTT je obzvlášť spoľahlivá.',
           hu: 'A Tornado+ 6,2 m-rel valamivel hosszabb, mint a Pacific+ (5,7 m), és 12-18 m/perc változtatható eloretolást kínál a Pacific+ fix 18 m/perc értékével szemben. Sokoldalúbban felszerelt, és az OTT-család legbeváltabb modelljeként különösen megbízható.',
         },
       },
@@ -246,12 +258,14 @@ A Tornado+ a TRANScompact visszatéríto szalaggal hatékony átfutó sorrá bov
           de: 'Fuer wie viele Teile pro Schicht ist die Tornado+ ausgelegt?',
           en: 'How many parts per shift is the Tornado+ designed for?',
           cz: 'Na kolik kusu za smenu je Tornado+ navrzena?',
+          sk: 'Na koľko kusov za zmenu je Tornado+ navrhnutá?',
           hu: 'Hány darab/muszak teljesítményre tervezték a Tornado+-t?',
         },
         answer: {
           de: 'Mit 12-18 m/min Vorschub ist die Tornado+ fuer mittelgrosse Produktionsmengen ausgelegt. Im praktischen Einsatz koennen je nach Teilgeometrie und Kantenmaterial mehrere hundert Teile pro Schicht bearbeitet werden.',
           en: 'With 12-18 m/min feed speed, the Tornado+ is designed for medium-sized production volumes. In practical use, depending on part geometry and edge material, several hundred parts per shift can be processed.',
           cz: 'S rychlosti posuvu 12-18 m/min je Tornado+ navrzena pro stredne velke vyrobni objemy. V praktickem provozu lze v zavislosti na geometrii dilu a hranovem materialu zpracovat nekolik set kusu za smenu.',
+          sk: 'S rýchlosťou posuvu 12 – 18 m/min je Tornado+ navrhnutá pre stredne veľké výrobné objemy. V praktickej prevádzke možno v závislosti od geometrie dielu a hranového materiálu spracovať niekoľko sto kusov za zmenu.',
           hu: 'A 12-18 m/perc eloretolási sebességgel a Tornado+ közepes méretu gyártási mennyiségekre tervezett. A gyakorlatban, a munkadarab geometriájától és élanyagtól függoen, muszakonként több száz darab dolgozható fel.',
         },
       },
@@ -260,12 +274,14 @@ A Tornado+ a TRANScompact visszatéríto szalaggal hatékony átfutó sorrá bov
           de: 'Ist die Tornado+ fuer den Zweischichtbetrieb geeignet?',
           en: 'Is the Tornado+ suitable for two-shift operation?',
           cz: 'Je Tornado+ vhodna pro dvousmenni provoz?',
+          sk: 'Je Tornado+ vhodná pre dvojzmennú prevádzku?',
           hu: 'Alkalmas a Tornado+ kétmuszakos üzemre?',
         },
         answer: {
           de: 'Ja, die robuste Bauweise der Tornado+ ist fuer den Dauerbetrieb ausgelegt. Viele Betriebe setzen sie erfolgreich im Zweischichtbetrieb ein. Fuer noch intensivere Nutzung empfehlen wir die Storm+ oder TopEdge.',
           en: 'Yes, the robust construction of the Tornado+ is designed for continuous operation. Many workshops successfully use it in two-shift production. For even more intensive use, we recommend the Storm+ or TopEdge.',
           cz: 'Ano, robustni konstrukce Tornado+ je navrzena pro nepretrzity provoz. Mnoho provozu ji uspesne pouziva ve dvousmennem provozu. Pro jeste intenzivnejsi vyuziti doporucujeme Storm+ nebo TopEdge.',
+          sk: 'Áno, robustná konštrukcia Tornado+ je navrhnutá pre nepretržitú prevádzku. Mnoho prevádzok ju úspešne používa v dvojzmennej prevádzke. Pre ešte intenzívnejšie využitie odporúčame Storm+ alebo TopEdge.',
           hu: 'Igen, a Tornado+ robusztus kivitelezése folyamatos üzemre tervezett. Számos üzem sikeresen használja kétmuszakos üzemben. Még intenzívebb használathoz a Storm+-t vagy a TopEdge-et ajánljuk.',
         },
       },
@@ -294,6 +310,11 @@ As the authorized OTT dealer for the Czech Republic, Slovakia and Hungary, Asame
 Hlavnim tahakem FlexEdge je standardne osazeny ridici system Beckhoff s 18,5palcovym dotykovym displejem a rozhranim OPC-UA. Tim je stroj plne pripraven pro Prumysl 4.0 a lze ho bezproblemove zaclenit do sitovych vyrobnich prostredi. Sprava receptur, diagnostika a vzdala udrzba jsou prostrednictvim moderniho ridiciho systemu pohodlne dostupne. FlexEdge zpracovava hrany o tlousce 0,3 az 15 mm a je vybavena spojovacim obrabenim, systemem CombiMelt, frezovacim agregatem, skrabkou a zaoblovanim rohu.
 
 Jako autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko vam v Asamer rade poradime s optimalni konfiguraci FlexEdge pro vase pozadavky. Stroj je obzvlaste vhodny pro provozy, ktere jiz dnes mysli na digitalni propojeni sve dilny, ale zatim nepotrebuji prumyslovy vysokovykonny stroj jako Storm+ nebo TopEdge. S FlexEdge investujete do perspektivni olepovacky hran, ktera muze rust spolu s vasim podnikem.`,
+      sk: `OTT FlexEdge je najnovší prírastok v portfóliu strojov OTT a preklenuje medzeru medzi osvedčeným Tornado+ a výkonným Storm+. S dĺžkou 7,1 metra a rýchlosťami posuvu 12 až 20 m/min sa profiluje ako profesionálna olepovačka hrán pre náročné stolárske dielne a stredných výrobcov nábytku, ktorí kladú dôraz na budúcu využiteľnosť.
+
+Hlavným ťahákom FlexEdge je štandardne osadený riadiaci systém Beckhoff s 18,5-palcovým dotykovým displejom a rozhraním OPC-UA. Tým je stroj plne pripravený pre Priemysel 4.0 a možno ho bezproblémovo začleniť do sieťových výrobných prostredí. Správa receptúr, diagnostika a vzdialená údržba sú prostredníctvom moderného riadiaceho systému pohodlne dostupné. FlexEdge spracováva hrany s hrúbkou 0,3 až 15 mm a je vybavená spájacím obrábaním, systémom CombiMelt, frézovacím agregátom, škrabkou a zaobľovaním rohov.
+
+Ako autorizovaný predajca OTT pre Českú republiku, Slovensko a Maďarsko vám v Asamer radi poradíme s optimálnou konfiguráciou FlexEdge pre vaše požiadavky. Stroj je obzvlášť vhodný pre prevádzky, ktoré už dnes myslia na digitálne prepojenie svojej dielne, ale zatiaľ nepotrebujú priemyselný vysokovýkonný stroj ako Storm+ alebo TopEdge. S FlexEdge investujete do perspektívnej olepovačky hrán, ktorá môže rásť spolu s vaším podnikom.`,
       hu: `Az OTT FlexEdge a legújabb tagja az OTT gépportfóliónak, és áthidalja a bevált Tornado+ és a nagy teljesítményu Storm+ közötti rést. 7,1 méteres hosszával és 12-20 m/perc eloretolási sebességgel professzionális élzárógépként pozicionálódik igényes asztalosüzemek és közepes méretu bútorgyártók számára, akik értékelik a jövoálló technológiát.
 
 A FlexEdge fénypontja a szériakivitelben beépített Beckhoff vezérlés 18,5 hüvelykes érintoképernyovel és OPC-UA interfésszel. Ez a gépet teljesen Ipar 4.0-kompatibilissá teszi, lehetové téve a zökkenomentes integrációt hálózatba kötött gyártási környezetekbe. A receptkezelés, a diagnosztika és a távkarbantartás kényelmesen elvégezheto a modern vezérlorendszeren keresztül. A FlexEdge 0,3-15 mm-es élvastagságot dolgoz fel, és fugamegmunkálással, CombiMelt-tel, maróegységgel, kaparóval és sarokkerekítovel van felszerelve.
@@ -307,12 +328,14 @@ Az Asamer a hivatalos OTT viszonteladó Csehország, Szlovákia és Magyarorszá
           de: 'Digitale Werkstatt mit Industrie-4.0-Anbindung',
           en: 'Digital workshop with Industry 4.0 connectivity',
           cz: 'Digitalni dilna s pripojenim k Prumyslu 4.0',
+          sk: 'Digitálna dielňa s pripojením k Priemyslu 4.0',
           hu: 'Digitális muhely Ipar 4.0-kompatibilitással',
         },
         body: {
           de: 'Die Beckhoff-Steuerung mit OPC-UA-Schnittstelle ermoeglicht die Einbindung der FlexEdge in vernetzte Fertigungsumgebungen. Produktionsdaten koennen in Echtzeit ausgelesen, Rezepte zentral verwaltet und Fernwartung durchgefuehrt werden. Das macht die FlexEdge zur idealen Wahl fuer Betriebe auf dem Weg zur digitalen Fertigung.',
           en: 'The Beckhoff control with OPC-UA interface enables integration of the FlexEdge into networked manufacturing environments. Production data can be read in real time, recipes managed centrally and remote maintenance performed. This makes the FlexEdge the ideal choice for workshops transitioning to digital manufacturing.',
           cz: 'Ridici system Beckhoff s rozhranim OPC-UA umoznuje zaclenit FlexEdge do sitovych vyrobnich prostredi. Vyrobni data lze cist v realnem case, receptury centralne spravovat a provadet vzdalenu udrzbu. To cini FlexEdge idealnim resenim pro provozy na ceste k digitalni vyrobe.',
+          sk: 'Riadiaci systém Beckhoff s rozhraním OPC-UA umožňuje začleniť FlexEdge do sieťových výrobných prostredí. Výrobné dáta možno čítať v reálnom čase, receptúry centrálne spravovať a vykonávať vzdialenú údržbu. To robí z FlexEdge ideálne riešenie pre prevádzky na ceste k digitálnej výrobe.',
           hu: 'A Beckhoff vezérlés OPC-UA interfésszel lehetové teszi a FlexEdge integrálását hálózatba kötött gyártási környezetekbe. A gyártási adatok valós idoben kiolvashatók, a receptek központilag kezelhetok és távkarbantartás végezheto. Ez a FlexEdge-et ideális választássá teszi a digitális gyártás felé átállni kívánó üzemek számára.',
         },
       },
@@ -321,12 +344,14 @@ Az Asamer a hivatalos OTT viszonteladó Csehország, Szlovákia és Magyarorszá
           de: 'Aufstieg von Tornado+ zur naechsten Leistungsklasse',
           en: 'Upgrading from Tornado+ to the next performance class',
           cz: 'Prechod z Tornado+ do vyssi vykonnostni tridy',
+          sk: 'Prechod z Tornado+ do vyššej výkonnostnej triedy',
           hu: 'Lépés a Tornado+-ról a következo teljesítményosztályba',
         },
         body: {
           de: 'Fuer Betriebe, die aus dem Tornado+-Leistungsbereich herauswachsen, bietet die FlexEdge den logischen naechsten Schritt. Mit 20 m/min gegenueber 18 m/min und der modernen Beckhoff-Steuerung bietet sie deutlich mehr Leistung und Zukunftssicherheit, ohne gleich in die preislich anspruchsvollere Storm+-Klasse wechseln zu muessen.',
           en: 'For workshops outgrowing the Tornado+ performance class, the FlexEdge offers the logical next step. With 20 m/min versus 18 m/min and the modern Beckhoff control, it delivers significantly more performance and future-proofing without having to move straight into the more expensive Storm+ category.',
           cz: 'Pro provozy prerustavajici vykonnostni tridu Tornado+ nabizi FlexEdge logicky dalsi krok. S 20 m/min oproti 18 m/min a modernim rizenim Beckhoff prinasi vyrazne vyssi vykon a perspektivu, aniz byste museli rovnou prechazet do cenove narocnejsi kategorie Storm+.',
+          sk: 'Pre prevádzky prerastajúce výkonnostnú triedu Tornado+ ponúka FlexEdge logický ďalší krok. S 20 m/min oproti 18 m/min a moderným riadením Beckhoff prináša výrazne vyšší výkon a perspektívu bez toho, aby ste museli hneď prechádzať do cenovo náročnejšej kategórie Storm+.',
           hu: 'A Tornado+ teljesítménytartományából kinövo üzemek számára a FlexEdge a logikus következo lépést kínálja. A 18 m/perc helyett 20 m/perc sebességgel és a modern Beckhoff vezérléssel jelentosen nagyobb teljesítményt és jövoállóságot biztosít anélkül, hogy rögtön az árban igényesebb Storm+ kategóriába kellene váltani.',
         },
       },
@@ -336,6 +361,7 @@ Az Asamer a hivatalos OTT viszonteladó Csehország, Szlovákia és Magyarorszá
       de: 'Die FlexEdge ist die optimale Wahl, wenn Ihnen Industrie-4.0-Faehigkeit wichtig ist und Sie mehr Leistung als die Tornado+ benoetigen, aber noch nicht in die Storm+-Klasse investieren moechten. Die Beckhoff-Steuerung mit OPC-UA macht sie besonders zukunftssicher.',
       en: 'The FlexEdge is the optimal choice if Industry 4.0 capability matters to you and you need more performance than the Tornado+ but are not yet ready to invest in the Storm+ class. The Beckhoff control with OPC-UA makes it particularly future-proof.',
       cz: 'FlexEdge je optimalni volba, pokud je pro vas dulezita schopnost Prumyslu 4.0 a potrebujete vyssi vykon nez Tornado+, ale zatim nechcete investovat do tridy Storm+. Rizeni Beckhoff s OPC-UA ji cini obzvlaste perspektivni.',
+      sk: 'FlexEdge je optimálna voľba, ak je pre vás dôležitá schopnosť Priemyslu 4.0 a potrebujete vyšší výkon ako Tornado+, ale zatiaľ nechcete investovať do triedy Storm+. Riadenie Beckhoff s OPC-UA ju robí obzvlášť perspektívnou.',
       hu: 'A FlexEdge az optimális választás, ha fontos Önnek az Ipar 4.0-kompatibilitás, és nagyobb teljesítményre van szüksége, mint a Tornado+, de még nem áll készen a Storm+ kategóriába történo befektetésre. A Beckhoff vezérlés OPC-UA-val különösen jövoállóvá teszi.',
     },
 
@@ -345,12 +371,14 @@ Az Asamer a hivatalos OTT viszonteladó Csehország, Szlovákia és Magyarorszá
           de: 'Was macht die FlexEdge besonders gegenueber anderen OTT-Modellen?',
           en: 'What makes the FlexEdge special compared to other OTT models?',
           cz: 'Cim je FlexEdge vyjimecna oproti ostatnim modelum OTT?',
+          sk: 'Čím je FlexEdge výnimočná oproti ostatným modelom OTT?',
           hu: 'Mi teszi különlegessé a FlexEdge-et más OTT modellekhez képest?',
         },
         answer: {
           de: 'Die FlexEdge ist das einzige OTT-Modell mit serienmaeassiger Beckhoff 18,5"-Steuerung und OPC-UA-Schnittstelle. Das macht sie zur idealen Wahl fuer Betriebe, die ihre Produktion digital vernetzen wollen.',
           en: 'The FlexEdge is the only OTT model with a Beckhoff 18.5" control and OPC-UA interface as standard. This makes it the ideal choice for workshops looking to digitally connect their production.',
           cz: 'FlexEdge je jediny model OTT se standardne osazonym rizenim Beckhoff 18,5" a rozhranim OPC-UA. To z ni cini idealnim resenim pro provozy chtejici digitalne propojit svou vyrobu.',
+          sk: 'FlexEdge je jediný model OTT so štandardne osadeným riadením Beckhoff 18,5" a rozhraním OPC-UA. To z nej robí ideálne riešenie pre prevádzky chcejúce digitálne prepojiť svoju výrobu.',
           hu: 'A FlexEdge az egyetlen OTT modell, amelyben szériakivitelként szerepel a Beckhoff 18,5 hüvelykes vezérlés és az OPC-UA interfész. Ez ideális választássá teszi a gyártást digitálisan összekötni kívánó üzemek számára.',
         },
       },
@@ -359,12 +387,14 @@ Az Asamer a hivatalos OTT viszonteladó Csehország, Szlovákia és Magyarorszá
           de: 'Ist die FlexEdge fuer PUR-Klebstoff geeignet?',
           en: 'Is the FlexEdge suitable for PUR adhesive?',
           cz: 'Je FlexEdge vhodna pro PUR lepidlo?',
+          sk: 'Je FlexEdge vhodná pre PUR lepidlo?',
           hu: 'Alkalmas a FlexEdge PUR ragasztóhoz?',
         },
         answer: {
           de: 'Ja, die FlexEdge ist mit dem CombiMelt-System ausgestattet, das sowohl EVA- als auch PUR-Klebstoffe verarbeiten kann. PUR-Leimfugen sind besonders wasserbestaendig und fuer den Kuechenbau empfehlenswert.',
           en: 'Yes, the FlexEdge comes equipped with the CombiMelt system that processes both EVA and PUR adhesives. PUR glue joints are particularly moisture-resistant and recommended for kitchen furniture production.',
           cz: 'Ano, FlexEdge je vybavena systemem CombiMelt, ktery zpracovava jak EVA, tak PUR lepidla. PUR lepene spoje jsou obzvlaste odolne vlhkosti a doporucuji se pro vyrobu kuchynskeho nabytku.',
+          sk: 'Áno, FlexEdge je vybavená systémom CombiMelt, ktorý spracováva ako EVA, tak aj PUR lepidlá. PUR lepené spoje sú obzvlášť odolné vlhkosti a odporúčajú sa pre výrobu kuchynského nábytku.',
           hu: 'Igen, a FlexEdge a CombiMelt rendszerrel van felszerelve, amely EVA és PUR ragasztókat is képes feldolgozni. A PUR ragasztási kötések különösen nedvességállóak, és a konyhabútorgyártáshoz ajánlottak.',
         },
       },
@@ -373,12 +403,14 @@ Az Asamer a hivatalos OTT viszonteladó Csehország, Szlovákia és Magyarorszá
           de: 'Kann die FlexEdge in eine bestehende Produktionslinie integriert werden?',
           en: 'Can the FlexEdge be integrated into an existing production line?',
           cz: 'Lze FlexEdge integrovat do stavajici vyrobni linky?',
+          sk: 'Možno FlexEdge integrovať do existujúcej výrobnej linky?',
           hu: 'Integrálható a FlexEdge egy meglévo gyártósorba?',
         },
         answer: {
           de: 'Ja, dank der OPC-UA-Schnittstelle und der Beckhoff-Steuerung laesst sich die FlexEdge problemlos in bestehende Fertigungslinien einbinden. Sie kann mit TRANScompact- oder TRANSlift-Rueckfuehrsystemen kombiniert werden.',
           en: 'Yes, thanks to the OPC-UA interface and Beckhoff control, the FlexEdge can be easily integrated into existing production lines. It can be combined with TRANScompact or TRANSlift return systems.',
           cz: 'Ano, diky rozhrani OPC-UA a rizeni Beckhoff lze FlexEdge snadno integrovat do stavajicich vyrobnich linek. Lze ji kombinovat s vratnymi systemy TRANScompact nebo TRANSlift.',
+          sk: 'Áno, vďaka rozhraniu OPC-UA a riadeniu Beckhoff možno FlexEdge ľahko integrovať do existujúcich výrobných liniek. Možno ju kombinovať s vratnými systémami TRANScompact alebo TRANSlift.',
           hu: 'Igen, az OPC-UA interfésznek és a Beckhoff vezérlésnek köszönhetoen a FlexEdge problémamentesen integrálható meglévo gyártósorokba. Kombinálható TRANScompact vagy TRANSlift visszatéríto rendszerekkel.',
         },
       },
