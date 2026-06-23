@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
-import { breadcrumbSchema, productSchema } from '../seo/structuredData';
+import { breadcrumbSchema } from '../seo/structuredData';
 import SeoHead from '../seo/SeoHead';
 import {
   buildLocalizedPath, CANONICAL_DOMAIN,
@@ -66,17 +66,6 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
     { name: 'OTT', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/ott')}` },
     { name: product.name, url: productUrl },
   ]);
-  const productLd = productSchema({
-    name: `OTT ${product.name}`,
-    description: product.seoDescription[lang],
-    brand: 'OTT',
-    manufacturer: 'Paul OTT GmbH',
-    category: categoryLabel,
-    image: product.image,
-    sku: product.slug,
-    url: productUrl,
-  });
-
   const specRows: { label: string; value: string }[] = [];
   if (product.specs.length) specRows.push({ label: tr('Baulänge', 'Length', 'Délka'), value: product.specs.length });
   if (product.specs.edgeThickness) specRows.push({ label: tr('Kantenstärke', 'Edge thickness', 'Tloušťka hrany'), value: product.specs.edgeThickness });
@@ -94,7 +83,7 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
         overrides={{ title: product.seoTitle[lang], description: product.seoDescription[lang], image: product.image, slug: productPath }}
         buildAlternateSlug={(al) => buildOttProductPath(al, product)}
         ogType="product"
-        structuredData={[breadcrumbs, productLd]}
+        structuredData={[breadcrumbs]}
       />
 
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">

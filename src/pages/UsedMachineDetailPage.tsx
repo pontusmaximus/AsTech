@@ -83,33 +83,32 @@ const Detail = ({ machine, lang, tr, buildPath, openFaq, setOpenFaq }: DetailPro
     { name: `${machine.manufacturer} ${machine.name}`, url: detailUrl },
   ]);
 
-  const productLd = productSchema({
-    name: `${machine.manufacturer} ${machine.name}`,
-    description: ml(machine.shortDescription, lang),
-    brand: machine.manufacturer,
-    category: tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje'),
-    image: machine.images,
-    url: detailUrl,
-    sku: machine.slug,
-    itemCondition: 'used',
-    ...(typeof machine.year === 'number' ? { productionDate: String(machine.year) } : {}),
-    ...(typeof machine.price === 'number'
-      ? {
-          offers: {
-            price: machine.price,
-            priceCurrency: machine.priceCurrency ?? 'EUR',
-            availability: getAvailabilitySchema(machine.status),
-            url: detailUrl,
-          },
-        }
-      : {}),
-  });
+  // Product-Schema nur mit Preis (sonst ungültiges Produkt-Snippet ohne offers).
+  const productLd = typeof machine.price === 'number'
+    ? productSchema({
+        name: `${machine.manufacturer} ${machine.name}`,
+        description: ml(machine.shortDescription, lang),
+        brand: machine.manufacturer,
+        category: tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje'),
+        image: machine.images,
+        url: detailUrl,
+        sku: machine.slug,
+        itemCondition: 'used',
+        ...(typeof machine.year === 'number' ? { productionDate: String(machine.year) } : {}),
+        offers: {
+          price: machine.price,
+          priceCurrency: machine.priceCurrency ?? 'EUR',
+          availability: getAvailabilitySchema(machine.status),
+          url: detailUrl,
+        },
+      })
+    : null;
 
   const faqSchema = machine.faq && machine.faq.length > 0
     ? faqPageSchema(machine.faq.map((f) => ({ question: ml(f.question, lang), answer: ml(f.answer, lang) })))
     : null;
 
-  const structuredData = [crumbs, productLd, ...(faqSchema ? [faqSchema] : [])];
+  const structuredData = [crumbs, ...(productLd ? [productLd] : []), ...(faqSchema ? [faqSchema] : [])];
 
   const formatPrice = (price: number, currency: string) => {
     const numberLocale =

@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
-import { breadcrumbSchema, productSchema } from '../seo/structuredData';
+import { breadcrumbSchema } from '../seo/structuredData';
 import SeoHead from '../seo/SeoHead';
 import {
   buildLocalizedPath, CANONICAL_DOMAIN,
@@ -64,17 +64,6 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
     { name: 'Gannomat', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/gannomat')}` },
     { name: product.name, url: productUrl },
   ]);
-  const productLd = productSchema({
-    name: `Gannomat ${product.name}`,
-    description: product.seoDescription[lang],
-    brand: 'Gannomat',
-    manufacturer: 'Gannomat GmbH',
-    category: categoryLabel,
-    image: product.image,
-    sku: product.slug,
-    url: productUrl,
-  });
-
   const specEntries = product.specs ? Object.entries(product.specs) : [];
 
   return (
@@ -83,7 +72,7 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
         overrides={{ title: product.seoTitle[lang], description: product.seoDescription[lang], image: product.image, slug: productPath }}
         buildAlternateSlug={(al) => buildGannomatProductPath(al, product)}
         ogType="product"
-        structuredData={[breadcrumbs, productLd]}
+        structuredData={[breadcrumbs]}
       />
 
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">

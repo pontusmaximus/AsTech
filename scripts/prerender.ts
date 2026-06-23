@@ -389,16 +389,6 @@ function productPageBody(
     `<p><strong>${escHtml(tagline)}</strong></p>`,
     `<p>${escHtml(description)}</p>`,
     `<p><a href="mailto:office@asamer.net">${escHtml(T.contact[lang])}</a></p>`,
-    productJsonLd({
-      name: `${brand} ${productName}`,
-      description: productLd.seoDescription,
-      brand,
-      manufacturer: productLd.manufacturer,
-      category: categoryLabel,
-      image: productLd.image,
-      sku: productLd.slug,
-      url: productLd.url,
-    }),
   ];
 
   if (seoContent) {
@@ -612,27 +602,25 @@ for (const machine of USED_MACHINES) {
       `<p>${escHtml(description)}</p>`,
       machine.longDescription ? `<p>${escHtml(mlText(machine.longDescription, lang))}</p>` : '',
       `<p><a href="mailto:office@asamer.net">${escHtml(T.contact[lang])}</a></p>`,
-      productJsonLd({
-        name: `${machine.manufacturer} ${machine.name}`,
-        description,
-        brand: machine.manufacturer,
-        category: machineLabel[lang],
-        image: machine.images,
-        sku: machine.slug,
-        url: detailUrl,
-        itemCondition: 'used',
-        ...(typeof machine.year === 'number' ? { productionDate: String(machine.year) } : {}),
-        ...(typeof machine.price === 'number'
-          ? {
-              offers: {
-                price: machine.price,
-                priceCurrency: machine.priceCurrency ?? 'EUR',
-                availability: machine.status === 'sold' ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
-                url: detailUrl,
-              },
-            }
-          : {}),
-      }),
+      (typeof machine.price === 'number'
+        ? productJsonLd({
+            name: `${machine.manufacturer} ${machine.name}`,
+            description,
+            brand: machine.manufacturer,
+            category: machineLabel[lang],
+            image: machine.images,
+            sku: machine.slug,
+            url: detailUrl,
+            itemCondition: 'used',
+            ...(typeof machine.year === 'number' ? { productionDate: String(machine.year) } : {}),
+            offers: {
+              price: machine.price,
+              priceCurrency: machine.priceCurrency ?? 'EUR',
+              availability: machine.status === 'sold' ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
+              url: detailUrl,
+            },
+          })
+        : ''),
       machine.faq && machine.faq.length > 0
         ? `<script type="application/ld+json">${JSON.stringify(faqPageSchema(machine.faq.map((f) => ({ question: mlText(f.question, lang), answer: mlText(f.answer, lang) }))))}</script>`
         : '',
