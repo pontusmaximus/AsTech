@@ -80,16 +80,16 @@ const GuideVacuumLifterPage = () => {
                 <div className="accent-line mb-6" />
                 <h1 className="text-section font-display font-light text-white mb-6">
                   {tr(
-                    ‘Wir unterstützen Ihre Arbeitsprozesse. Barbaric Vakuumheber für die Holzbearbeitung.’,
-                    ‘We support your work processes. Barbaric vacuum lifters for wood processing.’,
-                    ‘Podporujeme vaše pracovní procesy. Vakuové zvedáky Barbaric pro zpracování dřeva.’
+                    "Wir unterstützen Ihre Arbeitsprozesse. Barbaric Vakuumheber für die Holzbearbeitung.",
+                    "We support your work processes. Barbaric vacuum lifters for wood processing.",
+                    "Podporujeme vaše pracovní procesy. Vakuové zvedáky Barbaric pro zpracování dřeva."
                   )}
                 </h1>
                 <p className="text-white/70 text-lg leading-relaxed">
                   {tr(
-                    ‘Mit einem Vakuumheber bewegt eine einzige Person schwere Platten sicher und ergonomisch – statt schwerem Heben zu zweit oder zu dritt. So halten Sie Ihr eingespieltes Team gesund und produktiv. Wir helfen Ihnen gerne, das passende System zu finden.’,
-                    ‘With a vacuum lifter, a single person moves heavy panels safely and ergonomically – instead of two or three people lifting together. You keep your experienced team healthy and productive. We’re glad to help you find the right system.’,
-                    ‘S vakuovým zvedákem přesune těžké desky bezpečně a ergonomicky jediný člověk – místo zvedání ve dvou či třech. Udržíte si sehraný tým zdravý a produktivní. Rádi vám pomůžeme najít vhodné řešení.’
+                    "Mit einem Vakuumheber bewegt eine einzige Person schwere Platten sicher und ergonomisch – statt schwerem Heben zu zweit oder zu dritt. So halten Sie Ihr eingespieltes Team gesund und produktiv. Wir helfen Ihnen gerne, das passende System zu finden.",
+                    "With a vacuum lifter, a single person moves heavy panels safely and ergonomically – instead of two or three people lifting together. You keep your experienced team healthy and productive. We are glad to help you find the right system.",
+                    "S vakuovým zvedákem přesune těžké desky bezpečně a ergonomicky jediný člověk – místo zvedání ve dvou či třech. Udržíte si sehraný tým zdravý a produktivní. Rádi vám pomůžeme najít vhodné řešení."
                   )}
                 </p>
               </div>
