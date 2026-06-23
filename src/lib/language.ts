@@ -7,13 +7,17 @@ export interface LanguageRouteConfig {
 
 export const SUPPORTED_LANGUAGES: Language[] = ['de', 'en', 'cz', 'sk', 'hu'];
 /**
- * Sprachen, die indexiert werden sollen. SK ist ausgeschlossen, weil der
- * Content zu >95 % per Fallback aus CZ stammt und Google das als Duplicate
- * Content gewertet hat. SK bleibt in SUPPORTED_LANGUAGES, damit der
- * Sprachwechsler und das App-Routing weiter funktionieren.
+ * Sprachen, die indexiert werden (inkl. hreflang + Sitemap). SK ist jetzt
+ * dabei: UI, Seitentexte (CZ→SK-Wörterbuch in pageTextTranslations.ts),
+ * Route-Metadaten, Produktdaten und Guides sind slowakisch lokalisiert. Über
+ * hreflang ist /sk/ nun als slowakische Regionalvariante ausgewiesen – das
+ * fehlte früher und war der eigentliche Grund für die Duplicate-Wertung.
+ * Offen (Qualitäts-Follow-up): die langen SEO-Content-Blöcke in
+ * data/seo/*SeoContent.ts fallen noch teils auf CZ zurück → schrittweise auf
+ * SK übersetzen.
  */
-export const INDEXABLE_LANGUAGES: Language[] = ['de', 'en', 'cz', 'hu'];
-export const NON_INDEXABLE_LANGUAGES: Language[] = ['sk'];
+export const INDEXABLE_LANGUAGES: Language[] = ['de', 'en', 'cz', 'sk', 'hu'];
+export const NON_INDEXABLE_LANGUAGES: Language[] = [];
 export const DEFAULT_LANGUAGE: Language = 'cz';
 export const HREFLANG_DEFAULT: Language = 'cz';
 export const CANONICAL_DOMAIN = 'https://asamer.cz';
