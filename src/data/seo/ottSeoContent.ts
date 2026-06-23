@@ -439,6 +439,11 @@ The robust construction of the Storm+ is designed for three-shift and continuous
 Storm+ je z vyroby vybavena systemem CombiMelt PUR, ktery umoznuje vodetesne lepene spoje na nejvyssi urovni kvality. Tlakova zona zajisuji rovnomerny pritlak po cele delce hrany, coz je nezbytne pro cistou kvalitu spoju bez bublin pri vysokych rychlostech posuvu. Vybaveni dale zahrnuje frezovaci agregat, oriznute zarizeni, skrabku a zaoblovani rohu AKF.
 
 Robustni konstrukce Storm+ je navrzena pro trismenni a nepretrzity provoz. Tezke litinove tela a precizni vedeni zajisuji stale stejnou kvalitu obrabeni i po letech intenzivniho pouzivani. V kombinaci s vratnymi systemy TRANSlift nebo TRANSedge vznikne kompletni vyrobni linka. Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko a nabizi krome poradenstvi a prodeje take uvedeni do provozu, skoleni a rychle zasobovani nahradnimi dily pro Storm+.`,
+      sk: `OTT Storm+ je vysokovýkonný stroj na olepovanie hrán určený pre priemyselnú nepretržitú prevádzku. S dĺžkou 7,8 metra a rýchlosťami posuvu 12 až 22 m/min je navrhnutá pre vysoký objem výstupu a maximálnu spoľahlivosť. Stroj spracováva hrany s hrúbkou 0,3 až 15 mm na doskách do hrúbky 60 mm a pokrýva tak celú škálu bežných hranových materiálov v priemyselnej výrobe nábytku.
+
+Storm+ je z výroby vybavená systémom CombiMelt PUR, ktorý umožňuje vodotesné lepené spoje na najvyššej úrovni kvality. Tlaková zóna zaisťuje rovnomerný prítlak po celej dĺžke hrany, čo je nevyhnutné pre čistú kvalitu spojov bez bublín pri vysokých rýchlostiach posuvu. Výbava ďalej zahŕňa frézovací agregát, orezávacie zariadenie, škrabku a zaobľovanie rohov AKF.
+
+Robustná konštrukcia Storm+ je navrhnutá pre trojzmennú a nepretržitú prevádzku. Ťažké liatinové telá a precízne vedenia zaisťujú stále rovnakú kvalitu obrábania aj po rokoch intenzívneho používania. V kombinácii s vratnými systémami TRANSlift alebo TRANSedge vznikne kompletná výrobná linka. Asamer je autorizovaný predajca OTT pre Českú republiku, Slovensko a Maďarsko a ponúka okrem poradenstva a predaja aj uvedenie do prevádzky, školenie a rýchle zásobovanie náhradnými dielmi pre Storm+.`,
       hu: `Az OTT Storm+ egy nagy teljesítményu élzárógép, amelyet folyamatos ipari üzemre építettek. 7,8 méteres hosszával és 12-22 m/perc eloretolási sebességgel nagy sorozatteljesítményre és maximális megbízhatóságra tervezték. A gép 0,3-15 mm-es élvastagságot dolgoz fel 60 mm-es lapvastagságig, így lefedi az ipari bútorgyártásban elterjedt összes élanyagot.
 
 A Storm+ gyári kivitelben a CombiMelt PUR rendszerrel van felszerelve, amely a legmagasabb minoségu vízálló ragasztási kötéseket teszi lehetové. A nyomási zóna egyenletes préselonyomást biztosít a teljes élhossz mentén, ami elengedhetetlen a tiszta, buborékmentes kötési minoséghez nagy eloretolási sebességeknél. A felszereltség része továbbá a maróegység, a formatizáló egység, a kaparó és az AKF sarokkerekíto.
@@ -452,12 +457,14 @@ A Storm+ robusztus kivitelezése háromszakos és folyamatos üzemre tervezett. 
           de: 'Fuer industrielle Serienfertigung',
           en: 'For industrial batch production',
           cz: 'Pro prumyslovou seriovou vyrobu',
+          sk: 'Pre priemyselnú sériovú výrobu',
           hu: 'Ipari sorozatgyártáshoz',
         },
         body: {
           de: 'Mit bis zu 22 m/min Vorschub und der robusten Bauweise fuer Dauerbetrieb ist die Storm+ die erste Wahl fuer industrielle Moebelfertiger mit hohem Stueckzahlbedarf. Die Druckzone und das CombiMelt-PUR-System garantieren gleichbleibend hohe Fugenqualitaet auch bei Maximalgeschwindigkeit.',
           en: 'With up to 22 m/min feed speed and robust construction for continuous operation, the Storm+ is the first choice for industrial furniture manufacturers with high volume requirements. The pressure zone and CombiMelt PUR system guarantee consistently high joint quality even at maximum speed.',
           cz: 'S rychlosti posuvu az 22 m/min a robustni konstrukci pro nepretrzity provoz je Storm+ prvni volbou pro prumyslove vyrobce nabytku s vysokymi naroky na objem. Tlakova zona a system CombiMelt PUR zaruci trvale vysokou kvalitu spoju i pri maximalni rychlosti.',
+          sk: 'S rýchlosťou posuvu až 22 m/min a robustnou konštrukciou pre nepretržitú prevádzku je Storm+ prvou voľbou pre priemyselných výrobcov nábytku s vysokými nárokmi na objem. Tlaková zóna a systém CombiMelt PUR zaručia trvalo vysokú kvalitu spojov aj pri maximálnej rýchlosti.',
           hu: 'Akár 22 m/perc eloretolással és a folyamatos üzemre tervezett robusztus kivitelezéssel a Storm+ az elso választás nagy sorozatszámú ipari bútorgyártók számára. A nyomási zóna és a CombiMelt PUR rendszer következetesen magas kötési minoséget biztosít maximális sebességnél is.',
         },
       },
@@ -466,12 +473,14 @@ A Storm+ robusztus kivitelezése háromszakos és folyamatos üzemre tervezett. 
           de: 'Feuchtigkeitsbestaendige Fertigung mit PUR',
           en: 'Moisture-resistant production with PUR',
           cz: 'Vyroba odolna vlhkosti s PUR',
+          sk: 'Výroba odolná vlhkosti s PUR',
           hu: 'Nedvességálló gyártás PUR-ral',
         },
         body: {
           de: 'Die ab Werk integrierte CombiMelt-PUR-Einheit macht die Storm+ zur idealen Maschine fuer Kuechen-, Bad- und Labormoebel. PUR-Klebstoff bildet wasserfeste Fugen, die auch in Feuchtraeumen dauerhaft halten. Im Gegensatz zu EVA-Fugen quillt die PUR-Verbindung nicht auf und bleibt ueber Jahre unsichtbar.',
           en: 'The factory-integrated CombiMelt PUR unit makes the Storm+ the ideal machine for kitchen, bathroom and laboratory furniture. PUR adhesive forms waterproof joints that hold permanently even in wet environments. Unlike EVA joints, the PUR bond does not swell and remains invisible for years.',
           cz: 'Z vyroby integrovana jednotka CombiMelt PUR cini Storm+ idealnim strojem pro kuchynsky, koupelnovy a laboratorni nabytek. PUR lepidlo vytvari vodetesne spoje, ktere drzi trvale i ve vlhkem prostredi. Na rozdil od EVA spoju PUR spoj nenaboba a zustava po leta neviditelny.',
+          sk: 'Z výroby integrovaná jednotka CombiMelt PUR robí zo Storm+ ideálny stroj pre kuchynský, kúpeľňový a laboratórny nábytok. PUR lepidlo vytvára vodotesné spoje, ktoré držia trvalo aj vo vlhkom prostredí. Na rozdiel od EVA spojov PUR spoj nenapučí a zostáva po roky neviditeľný.',
           hu: 'A gyárilag integrált CombiMelt PUR egység a Storm+-t ideális géppé teszi konyha-, fürdoszoba- és laboratóriumi bútorokhoz. A PUR ragasztó vízálló kötéseket képez, amelyek tartósan megmaradnak még nedves környezetben is. Az EVA kötésekkel ellentétben a PUR kötés nem duzzad meg, és éveken át láthatatlan marad.',
         },
       },
@@ -480,12 +489,14 @@ A Storm+ robusztus kivitelezése háromszakos és folyamatos üzemre tervezett. 
           de: 'Komplette Produktionslinie mit Rueckfuehrung',
           en: 'Complete production line with return conveyor',
           cz: 'Kompletni vyrobni linka s vratnym dopravnikem',
+          sk: 'Kompletná výrobná linka s vratným dopravníkom',
           hu: 'Teljes gyártósor visszatéríto szalaggal',
         },
         body: {
           de: 'In Kombination mit TRANSlift oder TRANSedge wird die Storm+ zum Herzstuck einer kompletten Kantenanleimlinie. Der automatische Werkstueckruecklauf ermoeglicht den Betrieb mit nur einem Bediener und maximiert den Durchsatz.',
           en: 'Combined with TRANSlift or TRANSedge, the Storm+ becomes the heart of a complete edgebanding line. Automatic workpiece return enables operation with just one operator and maximizes throughput.',
           cz: 'V kombinaci s TRANSlift nebo TRANSedge se Storm+ stava srdcem kompletni olepovaci linky. Automaticky navrat obrobku umoznuje provoz s jednim operatorem a maximalizuje propustnost.',
+          sk: 'V kombinácii s TRANSlift alebo TRANSedge sa Storm+ stáva srdcom kompletnej olepovacej linky. Automatický návrat obrobku umožňuje prevádzku s jedným operátorom a maximalizuje priepustnosť.',
           hu: 'TRANSlift-tel vagy TRANSedge-dzsel kombinálva a Storm+ egy teljes élzárósor szívévé válik. A munkadarabok automatikus visszajuttatása lehetové teszi az egyszemélyes üzemeltetést és maximalizálja az áteresztoképességet.',
         },
       },
@@ -495,6 +506,7 @@ A Storm+ robusztus kivitelezése háromszakos és folyamatos üzemre tervezett. 
       de: 'Waehlen Sie die Storm+, wenn Sie eine industrielle Kantenanleimmaschine fuer hohe Stueckzahlen und Dauerbetrieb benoetigen. Mit PUR-Ausstattung ab Werk und bis zu 22 m/min Vorschub bietet sie deutlich mehr Leistung als die FlexEdge. Fuer noch groessere Plattenstaerken und Kantendicken bietet die TopEdge weitere Reserven.',
       en: 'Choose the Storm+ if you need an industrial edgebanding machine for high volumes and continuous operation. With factory PUR equipment and up to 22 m/min feed speed, it offers significantly more performance than the FlexEdge. For even larger board thicknesses and edge sizes, the TopEdge provides additional reserves.',
       cz: 'Zvolte Storm+, pokud potrebujete prumyslovou olepovacku hran pro vysoke objemy a nepretrzity provoz. S PUR vybavenim z vyroby a rychlosti posuvu az 22 m/min nabizi vyrazne vyssi vykon nez FlexEdge. Pro jeste vetsi tlousky desek a hran nabizi TopEdge dalsi rezervy.',
+      sk: 'Zvoľte Storm+, ak potrebujete priemyselnú olepovačku hrán pre vysoké objemy a nepretržitú prevádzku. S PUR výbavou z výroby a rýchlosťou posuvu až 22 m/min ponúka výrazne vyšší výkon ako FlexEdge. Pre ešte väčšie hrúbky dosiek a hrán ponúka TopEdge ďalšie rezervy.',
       hu: 'Válassza a Storm+-t, ha nagy sorozatszámú és folyamatos üzemre alkalmas ipari élzárógépre van szüksége. A gyári PUR felszereltséggel és akár 22 m/perc eloretolási sebességgel jelentosen nagyobb teljesítményt nyújt, mint a FlexEdge. Még nagyobb lap- és élvastagságokhoz a TopEdge további tartalékokat kínál.',
     },
 
@@ -504,12 +516,14 @@ A Storm+ robusztus kivitelezése háromszakos és folyamatos üzemre tervezett. 
           de: 'Kann die Storm+ PUR-Klebstoff verarbeiten?',
           en: 'Can the Storm+ process PUR adhesive?',
           cz: 'Muze Storm+ zpracovavat PUR lepidlo?',
+          sk: 'Môže Storm+ spracovávať PUR lepidlo?',
           hu: 'Képes a Storm+ PUR ragasztót feldolgozni?',
         },
         answer: {
           de: 'Ja, die Storm+ ist ab Werk mit dem CombiMelt-PUR-System ausgestattet. Im Gegensatz zu den Einstiegsmodellen ist PUR bei der Storm+ keine kostenpflichtige Option, sondern gehoert zur Serienausstattung.',
           en: 'Yes, the Storm+ comes factory-equipped with the CombiMelt PUR system. Unlike the entry-level models, PUR is not a paid option on the Storm+ but is included as standard equipment.',
           cz: 'Ano, Storm+ je z vyroby vybavena systemem CombiMelt PUR. Na rozdil od vstupnich modelu neni PUR u Storm+ priplatkovou volbou, ale soucasti standardniho vybaveni.',
+          sk: 'Áno, Storm+ je z výroby vybavená systémom CombiMelt PUR. Na rozdiel od vstupných modelov nie je PUR pri Storm+ príplatkovou voľbou, ale súčasťou štandardnej výbavy.',
           hu: 'Igen, a Storm+ gyárilag a CombiMelt PUR rendszerrel van felszerelve. A belépo szintu modellektol eltéroen a Storm+-nál a PUR nem fizetos opció, hanem a szériafelszereltség része.',
         },
       },
@@ -518,12 +532,14 @@ A Storm+ robusztus kivitelezése háromszakos és folyamatos üzemre tervezett. 
           de: 'Wie schnell ist die Storm+ im Vergleich zur Tornado+?',
           en: 'How fast is the Storm+ compared to the Tornado+?',
           cz: 'Jak rychla je Storm+ ve srovnani s Tornado+?',
+          sk: 'Aká rýchla je Storm+ v porovnaní s Tornado+?',
           hu: 'Milyen gyors a Storm+ a Tornado+-hoz képest?',
         },
         answer: {
           de: 'Die Storm+ erreicht bis zu 22 m/min Vorschub gegenueber maximal 18 m/min bei der Tornado+. Das bedeutet ca. 22% mehr Durchsatz bei gleicher Bedieneranzahl.',
           en: 'The Storm+ reaches up to 22 m/min feed speed compared to a maximum of 18 m/min on the Tornado+. This means approximately 22% more throughput with the same number of operators.',
           cz: 'Storm+ dosahuje rychlosti posuvu az 22 m/min oproti maximalnich 18 m/min u Tornado+. To znamena priblizne o 22 % vyssi propustnost se stejnym poctem operatoru.',
+          sk: 'Storm+ dosahuje rýchlosť posuvu až 22 m/min oproti maximálnym 18 m/min pri Tornado+. To znamená približne o 22 % vyššiu priepustnosť s rovnakým počtom operátorov.',
           hu: 'A Storm+ akár 22 m/perc eloretolási sebességet ér el a Tornado+ maximális 18 m/percével szemben. Ez kb. 22%-kal nagyobb áteresztoképességet jelent azonos számú kezelovel.',
         },
       },
@@ -532,12 +548,14 @@ A Storm+ robusztus kivitelezése háromszakos és folyamatos üzemre tervezett. 
           de: 'Welches Rueckfuehrsystem passt zur Storm+?',
           en: 'Which return system fits the Storm+?',
           cz: 'Jaky vratny system se hodi ke Storm+?',
+          sk: 'Aký vratný systém sa hodí k Storm+?',
           hu: 'Milyen visszatéríto rendszer illik a Storm+-hoz?',
         },
         answer: {
           de: 'Fuer die Storm+ empfehlen wir das TRANSlift (vertikale Rueckfuehrung, platzsparend) oder das TRANSedge (speziell fuer Kantenanleimlinien mit hoher Taktrate). Beide Systeme ermoeglichen den vollautomatischen Betrieb.',
           en: 'For the Storm+, we recommend the TRANSlift (vertical return, space-saving) or the TRANSedge (specifically designed for edgebanding lines with high cycle rates). Both systems enable fully automatic operation.',
           cz: 'Pro Storm+ doporucujeme TRANSlift (vertikalni vraceni, prostorove usporne) nebo TRANSedge (specialne navrzeny pro olepovaci linky s vysokou taktovaci frekvenci). Oba systemy umoznuji plne automaticky provoz.',
+          sk: 'Pre Storm+ odporúčame TRANSlift (vertikálne vrátenie, priestorovo úsporné) alebo TRANSedge (špeciálne navrhnutý pre olepovacie linky s vysokou taktovacou frekvenciou). Oba systémy umožňujú plne automatickú prevádzku.',
           hu: 'A Storm+-hoz a TRANSlift-et (függoleges visszatérítés, helytakarékos) vagy a TRANSedge-et (kifejezetten nagy ciklusidoju élzárósorokra tervezett) ajánljuk. Mindkét rendszer teljesen automatikus üzemet tesz lehetové.',
         },
       },
@@ -546,12 +564,14 @@ A Storm+ robusztus kivitelezése háromszakos és folyamatos üzemre tervezett. 
           de: 'Ist die Storm+ fuer den Dreischichtbetrieb geeignet?',
           en: 'Is the Storm+ suitable for three-shift operation?',
           cz: 'Je Storm+ vhodna pro trismenni provoz?',
+          sk: 'Je Storm+ vhodná pre trojzmennú prevádzku?',
           hu: 'Alkalmas a Storm+ háromszakos üzemre?',
         },
         answer: {
           de: 'Ja, die Storm+ ist fuer den industriellen Dauerbetrieb einschliesslich Dreischichtbetrieb konstruiert. Schwere Gusskoerper und praezisionsgeschliffene Fuehrungen garantieren auch unter Dauerbelastung gleichbleibende Qualitaet.',
           en: 'Yes, the Storm+ is built for continuous industrial operation including three-shift production. Heavy cast bodies and precision-ground guides guarantee consistent quality even under constant load.',
           cz: 'Ano, Storm+ je konstruovana pro prumyslovy nepretrzity provoz vcetne trismenneho provozu. Tezke litinove tela a precizne brusene vedeni zaruci stale stejnou kvalitu i pri trvale zatezi.',
+          sk: 'Áno, Storm+ je konštruovaná pre priemyselnú nepretržitú prevádzku vrátane trojzmennej prevádzky. Ťažké liatinové telá a precízne brúsené vedenia zaručia stále rovnakú kvalitu aj pri trvalej záťaži.',
           hu: 'Igen, a Storm+ ipari folyamatos üzemre épült, beleértve a háromszakos üzemet is. A nehéz öntvénytestek és precíziósan köszörült vezetékek folyamatos terhelés mellett is következetes minoséget biztosítanak.',
         },
       },
@@ -580,6 +600,11 @@ For furniture manufacturers who process solid wood edges and real wood profiles 
 StrongEdge je vybavena tezkymi frezovacimi agregaty optimalizovanymi pro zpracovani tlustych masivnich drevenych hran. System CombiMelt PUR je soucasti standardni vybavy a zajisuji vodetesne, vysoce zatizitelne lepene spoje. Tlakova zona, oriznute zarizeni, skrabka a zaoblovani rohu doplnuji vybaveni. Zesiena konstrukce frezovacich a obrabecich agregatu zajisuji, ze i tvrde dreviny jako dub, buk nebo orech jsou zpracovany ciste a precizne.
 
 Pro vyrobce nabytku, kteri krome standardnich ABS hran zpracovavaji take masivni drevene hrany a profily z praveho dreva, nabizi StrongEdge jedinecnou vsestrannost. V kombinaci s vratnymi systemy TRANSlift nebo TRANSedge lze vybudovat vykonnou vyrobni linku. Asamer je autorizovany prodejce OTT pro CZ, SK a HU a rad vam poradi s optimalni konfiguraci StrongEdge pro vase specificke pozadavky ve vyrobe z masivu a dverich.`,
+      sk: `OTT StrongEdge je jediná olepovačka hrán v ponuke OTT schopná spracovávať hrany s hrúbkou až 25 mm. S dĺžkou 8,6 metra a rýchlosťami posuvu 12 až 20 m/min je špeciálne navrhnutá pre profesionálne spracovanie ťažkých a hrubých hrán, aké sú vyžadované pri výrobe nábytku z masívu, výrobe dverí a okien a v kvalitnej interiérovej výstavbe.
+
+StrongEdge je vybavená ťažkými frézovacími agregátmi optimalizovanými pre spracovanie hrubých masívnych drevených hrán. Systém CombiMelt PUR je súčasťou štandardnej výbavy a zaisťuje vodotesné, vysoko zaťažiteľné lepené spoje. Tlaková zóna, orezávacie zariadenie, škrabka a zaobľovanie rohov dopĺňajú výbavu. Zosilnená konštrukcia frézovacích a obrábacích agregátov zaisťuje, že aj tvrdé dreviny ako dub, buk alebo orech sú spracované čisto a precízne.
+
+Pre výrobcov nábytku, ktorí okrem štandardných ABS hrán spracovávajú aj masívne drevené hrany a profily z pravého dreva, ponúka StrongEdge jedinečnú všestrannosť. V kombinácii s vratnými systémami TRANSlift alebo TRANSedge možno vybudovať výkonnú výrobnú linku. Asamer je autorizovaný predajca OTT pre CZ, SK a HU a rád vám poradí s optimálnou konfiguráciou StrongEdge pre vaše špecifické požiadavky vo výrobe z masívu a dverí.`,
       hu: `Az OTT StrongEdge az egyetlen élzárógép az OTT kínálatában, amely akár 25 mm-es élvastagságokat is képes feldolgozni. 8,6 méteres hosszával és 12-20 m/perc eloretolási sebességgel kifejezetten nehéz és vastag élek professzionális feldolgozására tervezték, amilyenekre a tömörfa bútorgyártásban, az ajtó- és ablakgyártásban, valamint a csúcsminoségu belsoépítészetben van szükség.
 
 A StrongEdge nehéz maróegységekkel van felszerelve, amelyeket vastag tömörfa élek feldolgozására optimalizáltak. A CombiMelt PUR rendszer a szériafelszereltség része, és vízálló, nagy terhelhetoségu ragasztási kötéseket biztosít. A nyomási zóna, a formatizáló egység, a kaparó és a sarokkerekíto egészíti ki a felszereltséget. A maró- és megmunkálóegységek megerosített kivitelezése biztosítja, hogy a kemény fafajtákat is, mint a tölgy, a bükk vagy a dió, tisztán és precízen dolgozza fel.
@@ -593,12 +618,14 @@ A standard ABS éleken kívül tömörfa éleket és valódi faprofilokat is fel
           de: 'Massivholzmoebel und Echtholzkanten',
           en: 'Solid wood furniture and real wood edges',
           cz: 'Nabytek z masivu a hrany z praveho dreva',
+          sk: 'Nábytok z masívu a hrany z pravého dreva',
           hu: 'Tömörfa bútorok és valódi fa élek',
         },
         body: {
           de: 'Die StrongEdge verarbeitet Massivholzkanten bis 25 mm Staerke und ist damit die einzige OTT-Maschine fuer schwere Echtholzprofile. Ob Eiche, Buche, Nussbaum oder Ahorn - die schweren Fraesaggregate und die verstaerkte Bauweise sorgen fuer perfekte Ergebnisse auch bei harten Holzarten.',
           en: 'The StrongEdge processes solid wood edges up to 25 mm thick, making it the only OTT machine for heavy real wood profiles. Whether oak, beech, walnut or maple, the heavy-duty milling units and reinforced construction deliver perfect results even with hard wood species.',
           cz: 'StrongEdge zpracovava masivni drevene hrany do tlousky 25 mm a je tak jediny stroj OTT pro tezke profily z praveho dreva. At uz dub, buk, orech nebo javor - tezke frezovaci agregaty a zesiena konstrukce zajisuji perfektni vysledky i u tvrdych drevin.',
+          sk: 'StrongEdge spracováva masívne drevené hrany do hrúbky 25 mm a je tak jediný stroj OTT pre ťažké profily z pravého dreva. Či už dub, buk, orech alebo javor – ťažké frézovacie agregáty a zosilnená konštrukcia zaisťujú perfektné výsledky aj pri tvrdých drevinách.',
           hu: 'A StrongEdge akár 25 mm vastag tömörfa éleket dolgoz fel, így az egyetlen OTT gép a nehéz valódi faprofilokhoz. Legyen szó tölgyrol, bükkrol, diórol vagy juharról, a nehéz maróegységek és a megerosített kivitelezés tökéletes eredményt adnak a kemény fafajtáknál is.',
         },
       },
@@ -607,12 +634,14 @@ A standard ABS éleken kívül tömörfa éleket és valódi faprofilokat is fel
           de: 'Tuer- und Fensterfertigung',
           en: 'Door and window manufacturing',
           cz: 'Vyroba dveri a oken',
+          sk: 'Výroba dverí a okien',
           hu: 'Ajtó- és ablakgyártás',
         },
         body: {
           de: 'Im Tuer- und Fensterbau werden haeufig dicke Kanten und Profile benoetigt. Die StrongEdge bietet mit ihrer Verarbeitungskapazitaet bis 25 mm Kantenstaerke die noetige Reserve fuer diese Anwendungen. In Kombination mit der DoorEdition-Spezialmaschine deckt OTT den gesamten Bereich der Tuerenfertigung ab.',
           en: 'Door and window manufacturing frequently requires thick edges and profiles. The StrongEdge, with its processing capacity up to 25 mm edge thickness, provides the necessary reserve for these applications. Combined with the DoorEdition special machine, OTT covers the entire range of door manufacturing.',
           cz: 'Vyroba dveri a oken casto vyzaduje tluste hrany a profily. StrongEdge se svou kapacitou zpracovani az 25 mm tlousky hrany poskytuje potrebnou rezervu pro tyto aplikace. V kombinaci se specialnim strojem DoorEdition pokryva OTT cely rozsah vyroby dveri.',
+          sk: 'Výroba dverí a okien si často vyžaduje hrubé hrany a profily. StrongEdge so svojou kapacitou spracovania až 25 mm hrúbky hrany poskytuje potrebnú rezervu pre tieto aplikácie. V kombinácii so špeciálnym strojom DoorEdition pokrýva OTT celý rozsah výroby dverí.',
           hu: 'Az ajtó- és ablakgyártáshoz gyakran vastag élekre és profilokra van szükség. A StrongEdge 25 mm-ig terjedo élvastagság-feldolgozási kapacitásával biztosítja a szükséges tartalékot ezekhez az alkalmazásokhoz. A DoorEdition speciális géppel kombinálva az OTT az ajtógyártás teljes területét lefedi.',
         },
       },
@@ -622,6 +651,7 @@ A standard ABS éleken kívül tömörfa éleket és valódi faprofilokat is fel
       de: 'Die StrongEdge ist die richtige Wahl, wenn Sie regelmaessig Massivholzkanten oder dicke Kanten ueber 15 mm verarbeiten. Kein anderes OTT-Modell bietet diese Kapazitaet. Wenn Sie hauptsaechlich duenne ABS- und PVC-Kanten verarbeiten, ist die Storm+ oder FlexEdge die wirtschaftlichere Option.',
       en: 'The StrongEdge is the right choice if you regularly process solid wood edges or thick edges above 15 mm. No other OTT model offers this capacity. If you mainly process thin ABS and PVC edges, the Storm+ or FlexEdge is the more economical option.',
       cz: 'StrongEdge je spravna volba, pokud pravidelne zpracovavate masivni drevene hrany nebo tluste hrany nad 15 mm. Zadny jiny model OTT tuto kapacitu nenabizi. Pokud zpracovavate predevsim tenke ABS a PVC hrany, je Storm+ nebo FlexEdge ekonomictejsi moznosti.',
+      sk: 'StrongEdge je správna voľba, ak pravidelne spracovávate masívne drevené hrany alebo hrubé hrany nad 15 mm. Žiadny iný model OTT túto kapacitu neponúka. Ak spracovávate predovšetkým tenké ABS a PVC hrany, je Storm+ alebo FlexEdge ekonomickejšou možnosťou.',
       hu: 'A StrongEdge a helyes választás, ha rendszeresen dolgoz fel tömörfa éleket vagy 15 mm feletti vastag éleket. Egyetlen másik OTT modell sem kínál ilyen kapacitást. Ha foként vékony ABS- és PVC-éleket dolgoz fel, a Storm+ vagy a FlexEdge gazdaságosabb alternatíva.',
     },
 
@@ -631,12 +661,14 @@ A standard ABS éleken kívül tömörfa éleket és valódi faprofilokat is fel
           de: 'Welche maximale Kantenstaerke verarbeitet die StrongEdge?',
           en: 'What is the maximum edge thickness the StrongEdge can process?',
           cz: 'Jakou maximalni tlousku hran zpracuje StrongEdge?',
+          sk: 'Akú maximálnu hrúbku hrán spracuje StrongEdge?',
           hu: 'Milyen maximális élvastagságot dolgoz fel a StrongEdge?',
         },
         answer: {
           de: 'Die StrongEdge verarbeitet Kantenstaerken bis 25 mm. Sie ist damit die einzige OTT-Kantenanleimmaschine fuer schwere Massivholzkanten und Echtholzprofile.',
           en: 'The StrongEdge processes edge thicknesses up to 25 mm. This makes it the only OTT edgebanding machine for heavy solid wood edges and real wood profiles.',
           cz: 'StrongEdge zpracovava hrany do tlousky 25 mm. Je tak jedinou olepovackou hran OTT pro tezke masivni drevene hrany a profily z praveho dreva.',
+          sk: 'StrongEdge spracováva hrany do hrúbky 25 mm. Je tak jedinou olepovačkou hrán OTT pre ťažké masívne drevené hrany a profily z pravého dreva.',
           hu: 'A StrongEdge akár 25 mm-es élvastagságot dolgoz fel. Így ez az egyetlen OTT élzárógép nehéz tömörfa élekhez és valódi faprofilokhoz.',
         },
       },
@@ -645,12 +677,14 @@ A standard ABS éleken kívül tömörfa éleket és valódi faprofilokat is fel
           de: 'Kann die StrongEdge auch duenne Kanten verarbeiten?',
           en: 'Can the StrongEdge also process thin edges?',
           cz: 'Muze StrongEdge zpracovavat i tenke hrany?',
+          sk: 'Môže StrongEdge spracovávať aj tenké hrany?',
           hu: 'Képes a StrongEdge vékony éleket is feldolgozni?',
         },
         answer: {
           de: 'Ja, die StrongEdge verarbeitet Kantenstaerken ab 0,3 mm. Sie ist damit sowohl fuer duenne ABS- und PVC-Kanten als auch fuer dicke Massivholzkanten einsetzbar und bietet maximale Vielseitigkeit.',
           en: 'Yes, the StrongEdge processes edge thicknesses from 0.3 mm. It is therefore suitable for both thin ABS and PVC edges as well as thick solid wood edges, offering maximum versatility.',
           cz: 'Ano, StrongEdge zpracovava hrany od tlousky 0,3 mm. Je proto vhodna jak pro tenke ABS a PVC hrany, tak pro tluste masivni drevene hrany a nabizi tak maximalni vsestrannost.',
+          sk: 'Áno, StrongEdge spracováva hrany od hrúbky 0,3 mm. Je preto vhodná ako pre tenké ABS a PVC hrany, tak pre hrubé masívne drevené hrany a ponúka tak maximálnu všestrannosť.',
           hu: 'Igen, a StrongEdge 0,3 mm-es élvastagságtól dolgozik. Így mind vékony ABS- és PVC-élekhez, mind vastag tömörfa élekhez használható, maximális sokoldalúságot kínálva.',
         },
       },
@@ -659,12 +693,14 @@ A standard ABS éleken kívül tömörfa éleket és valódi faprofilokat is fel
           de: 'Ist die StrongEdge fuer die Moebelfertigung mit Eiche geeignet?',
           en: 'Is the StrongEdge suitable for furniture production with oak?',
           cz: 'Je StrongEdge vhodna pro vyrobu nabytku z dubu?',
+          sk: 'Je StrongEdge vhodná pre výrobu nábytku z dubu?',
           hu: 'Alkalmas a StrongEdge tölgyfa bútorgyártáshoz?',
         },
         answer: {
           de: 'Ja, die schweren Fraesaggregate der StrongEdge sind speziell fuer die Verarbeitung harter Holzarten wie Eiche, Buche und Nussbaum ausgelegt. Die verstaerkte Bauweise gewaehrleistet saubere Fraesbilder auch bei harten Hoelzern.',
           en: 'Yes, the heavy-duty milling units of the StrongEdge are specifically designed for processing hard wood species such as oak, beech and walnut. The reinforced construction ensures clean milling results even with hard woods.',
           cz: 'Ano, tezke frezovaci agregaty StrongEdge jsou specialne navrzeny pro zpracovani tvrdych drevin jako dub, buk a orech. Zesiena konstrukce zajisuji cisty obraz frezovani i u tvrdych drevin.',
+          sk: 'Áno, ťažké frézovacie agregáty StrongEdge sú špeciálne navrhnuté pre spracovanie tvrdých drevín ako dub, buk a orech. Zosilnená konštrukcia zaisťuje čistý obraz frézovania aj pri tvrdých drevinách.',
           hu: 'Igen, a StrongEdge nehéz maróegységeit kifejezetten kemény fafajták, mint a tölgy, a bükk és a dió feldolgozására tervezték. A megerosített kivitelezés tiszta marási eredményt biztosít kemény fák esetén is.',
         },
       },
@@ -693,6 +729,11 @@ The TopEdge is aimed at large furniture manufacturers, kitchen builders and indu
 S rychlostmi posuvu 12 az 22 m/min a rozsahlym standardnim vybavenim je TopEdge navrzena pro prumyslovy linkovy provoz. CombiMelt PUR, rizeni Beckhoff, frezovaci agregat, oriznute zarizeni, skrabka, profilova skrabka, zaoblovani rohu AKF a tlakova zona jsou vsechny soucasti standardni vybavy. Rizeni Beckhoff umoznuje plnou integraci Prumyslu 4.0 stejne jako u FlexEdge.
 
 TopEdge je urcena pro velke vyrobce nabytku, vyrobce kuchyni a prumyslove provozy kladouci nejvyssi naroky na kvalitu hran, propustnost a spolehlivost. Varianta L s kapacitou tlousky desek 80 mm je v nabidce OTT jednicecna a obsluhuje niky jako tezke pracovni desky, stavbu baru a laboratorni zarizeni. Asamer jako autorizovany prodejce OTT pro CZ, SK a HU radi poradi se vsemi moznostmi konfigurace TopEdge a podpori planovani, instalaci a uvedeni vasi vyrobni linky do provozu.`,
+      sk: `OTT TopEdge je vlajková loď olepovačiek hrán OTT a predstavuje najvyšší výkonnostný stupeň pre priemyselnú výrobu nábytku. K dispozícii v dvoch variantoch – S (9,2 m) a L (10,2 m) – ponúka maximálnu flexibilitu a presnosť. Variant S spracováva dosky do hrúbky 60 mm a hrany do 20 mm, zatiaľ čo variant L zvláda dosky až 80 mm a hrany až 25 mm.
+
+S rýchlosťami posuvu 12 až 22 m/min a rozsiahlou štandardnou výbavou je TopEdge navrhnutá pre priemyselnú linkovú prevádzku. CombiMelt PUR, riadenie Beckhoff, frézovací agregát, orezávacie zariadenie, škrabka, profilová škrabka, zaobľovanie rohov AKF a tlaková zóna sú všetky súčasťou štandardnej výbavy. Riadenie Beckhoff umožňuje plnú integráciu Priemyslu 4.0 rovnako ako pri FlexEdge.
+
+TopEdge je určená pre veľkých výrobcov nábytku, výrobcov kuchýň a priemyselné prevádzky kladúce najvyššie nároky na kvalitu hrán, priepustnosť a spoľahlivosť. Variant L s kapacitou hrúbky dosiek 80 mm je v ponuke OTT jedinečný a obsluhuje niky ako ťažké pracovné dosky, stavbu barov a laboratórne zariadenia. Asamer ako autorizovaný predajca OTT pre CZ, SK a HU rád poradí so všetkými možnosťami konfigurácie TopEdge a podporí plánovanie, inštaláciu a uvedenie vašej výrobnej linky do prevádzky.`,
       hu: `Az OTT TopEdge az OTT élzárógépek zászlóshajója, és a legmagasabb teljesítményszintet képviseli az ipari bútorgyártásban. Két változatban elérheto - S (9,2 m) és L (10,2 m) -, maximális rugalmasságot és precizitást kínál. Az S változat 60 mm-ig terjedo lapvastagságot és 20 mm-ig terjedo élvastagságot dolgoz fel, míg az L változat 80 mm-es lapokat és 25 mm-es éleket is kezel.
 
 A 12-22 m/perc eloretolási sebességekkel és átfogó szériafelszereltséggel a TopEdge ipari sorüzemre tervezett. A CombiMelt PUR, a Beckhoff vezérlés, a maróegység, a formatizáló egység, a kaparó, a profilkaparó, az AKF sarokkerekíto és a nyomási zóna mind a szériafelszereltség része. A Beckhoff vezérlés a FlexEdge-hez hasonlóan teljes Ipar 4.0 integrációt tesz lehetové.
@@ -706,12 +747,14 @@ A TopEdge-et nagy bútorgyártóknak, konyhagyártóknak és ipari üzemeknek sz
           de: 'Industrieller Linienbetrieb mit maximaler Praezision',
           en: 'Industrial line operation with maximum precision',
           cz: 'Prumyslovy linkovy provoz s maximalni preciznosti',
+          sk: 'Priemyselná linková prevádzka s maximálnou presnosťou',
           hu: 'Ipari sorüzem maximális precizitással',
         },
         body: {
           de: 'Die TopEdge ist das Herzstuck industrieller Kantenanleimlinien. Mit bis zu 22 m/min Vorschub, CombiMelt PUR und Beckhoff-Steuerung liefert sie Kantenqualitaet auf hoechstem Niveau im Dauerbetrieb. Die Profilziehklinge ermoeglicht auch die Bearbeitung profilierter Kanten und Postforming-Kanten.',
           en: 'The TopEdge is the centrepiece of industrial edgebanding lines. With up to 22 m/min feed speed, CombiMelt PUR and Beckhoff control, it delivers edge quality at the highest level in continuous operation. The profile scraper blade also enables processing of profiled edges and postforming edges.',
           cz: 'TopEdge je srdcem prumyslovych olepovacich linek. S rychlosti posuvu az 22 m/min, systemem CombiMelt PUR a rizenim Beckhoff dodava kvalitu hran na nejvyssi urovni v nepretrzitem provozu. Profilova skrabka umoznuje take zpracovani profilovanych hran a postformingvych hran.',
+          sk: 'TopEdge je srdcom priemyselných olepovacích liniek. S rýchlosťou posuvu až 22 m/min, systémom CombiMelt PUR a riadením Beckhoff dodáva kvalitu hrán na najvyššej úrovni v nepretržitej prevádzke. Profilová škrabka umožňuje aj spracovanie profilovaných hrán a postformingových hrán.',
           hu: 'A TopEdge az ipari élzárósorok szíve. Akár 22 m/perc eloretolással, CombiMelt PUR-ral és Beckhoff vezérléssel legmagasabb szintu élminoséget szolgáltat folyamatos üzemben. A profilkaparó lehetové teszi profilozott élek és postforming élek megmunkálását is.',
         },
       },
@@ -720,12 +763,14 @@ A TopEdge-et nagy bútorgyártóknak, konyhagyártóknak és ipari üzemeknek sz
           de: 'L-Variante fuer schwere Platten bis 80 mm',
           en: 'L variant for heavy boards up to 80 mm',
           cz: 'Varianta L pro tezke desky do 80 mm',
+          sk: 'Variant L pre ťažké dosky do 80 mm',
           hu: 'L változat 80 mm-ig terjedo nehéz lapokhoz',
         },
         body: {
           de: 'Die TopEdge L ist die einzige OTT-Maschine, die Plattenstaerken bis 80 mm verarbeiten kann. Das macht sie zur idealen Loesung fuer die Fertigung schwerer Arbeitsplatten, Ladentheken, Labormoebel und anderer Produkte aus dicken Traegermaterialien. Mit Kantenstaerken bis 25 mm deckt sie auch schwere Massivholzkanten ab.',
           en: 'The TopEdge L is the only OTT machine that can process board thicknesses up to 80 mm. This makes it the ideal solution for manufacturing heavy worktops, shop counters, laboratory furniture and other products from thick substrate materials. With edge thicknesses up to 25 mm, it also covers heavy solid wood edges.',
           cz: 'TopEdge L je jediny stroj OTT schopny zpracovavat desky do tlousky 80 mm. To z ni cini idealnim resenim pro vyrobu tezkych pracovnich desek, obchodnich pultu, laboratornicyh nabytku a dalsich produktu z tlustych nosnych materialu. S tlouskou hran az 25 mm pokryva i tezke masivni drevene hrany.',
+          sk: 'TopEdge L je jediný stroj OTT schopný spracovávať dosky do hrúbky 80 mm. To z neho robí ideálne riešenie pre výrobu ťažkých pracovných dosiek, obchodných pultov, laboratórneho nábytku a ďalších produktov z hrubých nosných materiálov. S hrúbkou hrán až 25 mm pokrýva aj ťažké masívne drevené hrany.',
           hu: 'A TopEdge L az egyetlen OTT gép, amely 80 mm-ig terjedo lapvastagságot tud feldolgozni. Ez ideális megoldássá teszi a nehéz munkalapok, üzleti pultok, laboratóriumi bútorok és egyéb, vastag hordozóanyagokból készített termékek gyártásához. Akár 25 mm-es élvastagsággal nehéz tömörfa éleket is lefed.',
         },
       },
@@ -734,12 +779,14 @@ A TopEdge-et nagy bútorgyártóknak, konyhagyártóknak és ipari üzemeknek sz
           de: 'Zukunftssichere Investition mit Industrie 4.0',
           en: 'Future-proof investment with Industry 4.0',
           cz: 'Perspektivni investice s Prumyslem 4.0',
+          sk: 'Perspektívna investícia s Priemyslom 4.0',
           hu: 'Jövoálló beruházás Ipar 4.0-val',
         },
         body: {
           de: 'Die serienmaeassige Beckhoff-Steuerung macht die TopEdge zur zukunftssichersten Kantenanleimmaschine im OTT-Portfolio. Ueber OPC-UA koennen Produktionsdaten in Echtzeit an MES- und ERP-Systeme uebertragen werden. Rezeptverwaltung, vorausschauende Wartung und Ferndiagnose sind standardmaeassig moeglich.',
           en: 'The standard Beckhoff control makes the TopEdge the most future-proof edgebanding machine in the OTT portfolio. Via OPC-UA, production data can be transmitted in real time to MES and ERP systems. Recipe management, predictive maintenance and remote diagnostics are available as standard.',
           cz: 'Standardni rizeni Beckhoff cini TopEdge nejperspektivnejsi olepovackou hran v portfoliu OTT. Prostrednictvim OPC-UA lze vyrobni data prenastet v realnem case do systemu MES a ERP. Sprava receptur, prediktivni udrzba a vzdala diagnostika jsou standardne k dispozici.',
+          sk: 'Štandardné riadenie Beckhoff robí z TopEdge najperspektívnejšiu olepovačku hrán v portfóliu OTT. Prostredníctvom OPC-UA možno výrobné dáta prenášať v reálnom čase do systémov MES a ERP. Správa receptúr, prediktívna údržba a vzdialená diagnostika sú štandardne k dispozícii.',
           hu: 'A szériakivitelu Beckhoff vezérlés a TopEdge-et az OTT portfólió legjövoállóbb élzárógépévé teszi. Az OPC-UA révén a gyártási adatok valós idoben továbbíthatók MES- és ERP-rendszerekbe. A receptkezelés, a prediktív karbantartás és a távdiagnosztika szériakivitelben elérheto.',
         },
       },
@@ -749,6 +796,7 @@ A TopEdge-et nagy bútorgyártóknak, konyhagyártóknak és ipari üzemeknek sz
       de: 'Die TopEdge ist die ultimative Wahl fuer industrielle Hochleistungsanwendungen. Waehlen Sie die S-Variante fuer Standard-Plattenstaerken bis 60 mm oder die L-Variante fuer schwere Anwendungen bis 80 mm. Die Investition lohnt sich fuer Betriebe mit hohem Durchsatzbedarf und hoechsten Qualitaetsanspruechen.',
       en: 'The TopEdge is the ultimate choice for industrial high-performance applications. Choose the S variant for standard board thicknesses up to 60 mm or the L variant for heavy applications up to 80 mm. The investment pays off for operations with high throughput requirements and the highest quality demands.',
       cz: 'TopEdge je ultimativni volba pro prumyslove vysokovykonne aplikace. Zvolte variantu S pro standardni tlousky desek do 60 mm nebo variantu L pro tezke aplikace do 80 mm. Investice se vyplati pro provozy s vysokymi naroky na propustnost a nejvyssi pozadavky na kvalitu.',
+      sk: 'TopEdge je ultimátna voľba pre priemyselné vysokovýkonné aplikácie. Zvoľte variant S pre štandardné hrúbky dosiek do 60 mm alebo variant L pre ťažké aplikácie do 80 mm. Investícia sa vyplatí pre prevádzky s vysokými nárokmi na priepustnosť a najvyššími požiadavkami na kvalitu.',
       hu: 'A TopEdge az ultimate választás ipari nagy teljesítményu alkalmazásokhoz. Válassza az S változatot a 60 mm-ig terjedo standard lapvastagságokhoz, vagy az L változatot a 80 mm-ig terjedo nehéz alkalmazásokhoz. A beruházás megtérül azon üzemek számára, amelyeknek nagy áteresztoképességre és legmagasabb minoségi igényekre van szükségük.',
     },
 
@@ -758,12 +806,14 @@ A TopEdge-et nagy bútorgyártóknak, konyhagyártóknak és ipari üzemeknek sz
           de: 'Was ist der Unterschied zwischen TopEdge S und TopEdge L?',
           en: 'What is the difference between TopEdge S and TopEdge L?',
           cz: 'Jaky je rozdil mezi TopEdge S a TopEdge L?',
+          sk: 'Aký je rozdiel medzi TopEdge S a TopEdge L?',
           hu: 'Mi a különbség a TopEdge S és a TopEdge L között?',
         },
         answer: {
           de: 'Die TopEdge S (9,2 m) verarbeitet Platten bis 60 mm und Kanten bis 20 mm. Die TopEdge L (10,2 m) erweitert das Spektrum auf Platten bis 80 mm und Kanten bis 25 mm. Die L-Variante ist fuer besonders schwere Anwendungen wie Arbeitsplatten und Labormoebel gedacht.',
           en: 'The TopEdge S (9.2 m) processes boards up to 60 mm and edges up to 20 mm. The TopEdge L (10.2 m) extends the range to boards up to 80 mm and edges up to 25 mm. The L variant is intended for particularly heavy applications such as worktops and laboratory furniture.',
           cz: 'TopEdge S (9,2 m) zpracovava desky do 60 mm a hrany do 20 mm. TopEdge L (10,2 m) rozsiruje rozsah na desky do 80 mm a hrany do 25 mm. Varianta L je urcena pro obzvlaste tezke aplikace jako pracovni desky a laboratorni nabytek.',
+          sk: 'TopEdge S (9,2 m) spracováva dosky do 60 mm a hrany do 20 mm. TopEdge L (10,2 m) rozširuje rozsah na dosky do 80 mm a hrany do 25 mm. Variant L je určený pre obzvlášť ťažké aplikácie ako pracovné dosky a laboratórny nábytok.',
           hu: 'A TopEdge S (9,2 m) 60 mm-ig terjedo lapokat és 20 mm-ig terjedo éleket dolgoz fel. A TopEdge L (10,2 m) a tartományt 80 mm-ig terjedo lapokra és 25 mm-ig terjedo élekre terjeszti ki. Az L változatot különösen nehéz alkalmazásokra, például munkalapokra és laboratóriumi bútorokra szánták.',
         },
       },
@@ -772,12 +822,14 @@ A TopEdge-et nagy bútorgyártóknak, konyhagyártóknak és ipari üzemeknek sz
           de: 'Verfuegt die TopEdge ueber eine Beckhoff-Steuerung?',
           en: 'Does the TopEdge have a Beckhoff control?',
           cz: 'Ma TopEdge rizeni Beckhoff?',
+          sk: 'Má TopEdge riadenie Beckhoff?',
           hu: 'Rendelkezik a TopEdge Beckhoff vezérléssel?',
         },
         answer: {
           de: 'Ja, die TopEdge ist serienmaeassig mit der Beckhoff-Steuerung und OPC-UA-Schnittstelle ausgestattet. Das ermoeglicht vollstaendige Industrie-4.0-Integration, Fernwartung und Rezeptverwaltung.',
           en: 'Yes, the TopEdge comes standard with the Beckhoff control and OPC-UA interface. This enables full Industry 4.0 integration, remote maintenance and recipe management.',
           cz: 'Ano, TopEdge je standardne vybavena rizenim Beckhoff a rozhranim OPC-UA. To umoznuje plnou integraci Prumyslu 4.0, vzdalenu udrzbu a spravu receptur.',
+          sk: 'Áno, TopEdge je štandardne vybavená riadením Beckhoff a rozhraním OPC-UA. To umožňuje plnú integráciu Priemyslu 4.0, vzdialenú údržbu a správu receptúr.',
           hu: 'Igen, a TopEdge szériakivitelben a Beckhoff vezérléssel és OPC-UA interfésszel van felszerelve. Ez lehetové teszi a teljes Ipar 4.0 integrációt, a távkarbantartást és a receptkezelést.',
         },
       },
@@ -786,12 +838,14 @@ A TopEdge-et nagy bútorgyártóknak, konyhagyártóknak és ipari üzemeknek sz
           de: 'Kann die TopEdge Postforming-Kanten verarbeiten?',
           en: 'Can the TopEdge process postforming edges?',
           cz: 'Muze TopEdge zpracovavat postformingove hrany?',
+          sk: 'Môže TopEdge spracovávať postformingové hrany?',
           hu: 'Képes a TopEdge postforming éleket feldolgozni?',
         },
         answer: {
           de: 'Ja, die TopEdge ist mit einer Profilziehklinge ausgestattet, die auch die Bearbeitung profilierter und Postforming-Kanten ermoeglicht. Das macht sie zur vielseitigsten Flaggschiff-Maschine im OTT-Programm.',
           en: 'Yes, the TopEdge is equipped with a profile scraper blade that also enables processing of profiled and postforming edges. This makes it the most versatile flagship machine in the OTT range.',
           cz: 'Ano, TopEdge je vybavena profilovou skrabkou, ktera umoznuje take zpracovani profilovanych a postformingovych hran. To z ni cini nejvsestrannejsi vlajkovy stroj v nabidce OTT.',
+          sk: 'Áno, TopEdge je vybavená profilovou škrabkou, ktorá umožňuje aj spracovanie profilovaných a postformingových hrán. To z nej robí najvšestrannejší vlajkový stroj v ponuke OTT.',
           hu: 'Igen, a TopEdge profilkaparóval van felszerelve, amely profilozott és postforming élek megmunkálását is lehetové teszi. Ezáltal az OTT kínálat legsokoldalúbb zászlóshajó-gépe.',
         },
       },
@@ -800,12 +854,14 @@ A TopEdge-et nagy bútorgyártóknak, konyhagyártóknak és ipari üzemeknek sz
           de: 'Wie gross muss die Produktionshalle fuer eine TopEdge sein?',
           en: 'How large does the production hall need to be for a TopEdge?',
           cz: 'Jak velka musi byt vyrobni hala pro TopEdge?',
+          sk: 'Aká veľká musí byť výrobná hala pre TopEdge?',
           hu: 'Mekkora gyártócsarnokra van szükség egy TopEdge-hez?',
         },
         answer: {
           de: 'Die TopEdge S benoetigt mindestens 9,2 m Laenge, die L-Variante 10,2 m. In Kombination mit einem Rueckfuehrsystem sollten Sie mindestens die doppelte Laenge plus Nebenflaechen einplanen. Asamer berart Sie gerne bei der Layoutplanung.',
           en: 'The TopEdge S requires at least 9.2 m in length, the L variant 10.2 m. Combined with a return system, you should plan for at least double the length plus ancillary areas. Asamer is happy to advise you on layout planning.',
           cz: 'TopEdge S vyzaduje delku alespon 9,2 m, varianta L 10,2 m. V kombinaci s vratnym systemem byste meli pocitat alespon s dvojnasobnou delkou plus pomocnymi plochami. Asamer vam rad poradi s planovanim dispozice.',
+          sk: 'TopEdge S vyžaduje dĺžku aspoň 9,2 m, variant L 10,2 m. V kombinácii s vratným systémom by ste mali počítať aspoň s dvojnásobnou dĺžkou plus pomocnými plochami. Asamer vám rád poradí s plánovaním dispozície.',
           hu: 'A TopEdge S legalább 9,2 m hosszúságot igényel, az L változat 10,2 m-t. Visszatéríto rendszerrel kombinálva legalább a duplájával plusz mellékterületekkel kell számolni. Az Asamer szívesen nyújt tanácsadást az elrendezés tervezéséhez.',
         },
       },
@@ -834,6 +890,11 @@ In the door edgebanding machine market, there is no comparable product from HOMA
 Stroj disponuje specializovanou technologii skladaciho lepeni, pri ktere je hrana slozena kolem uzke strany dveri a prilepena. Vysledkem je bezesvy, vysoce odolny hranovy spoj splnujici pozadavky vyroby dveri na stabilitu a zivotnost. System CombiMelt PUR zajisuji vodetesne lepene spoje, ktere odolaji i u dveri do vlhkych prostor a extierovych dveri.
 
 Na trhu olepovacich stroju na hrany pro dvere neexistuje v teto cenove kategorii srovnatelny produkt od HOMAG ani jinych vyrobcu. DoorEdition tak vyplnuje jedinecnou niku pro vyrobce dveri hledajici ekonomickou alternativu ke vysocenovym specialnim strojum. Asamer je autorizovany prodejce OTT pro Ceskou republiku, Slovensko a Madarsko a poskytuji podrobne poradenstvi k individualni konfiguraci DoorEdition. Od analyzy potreb pres planovani stroje az po uvedeni do provozu vas provazime celym procesem.`,
+      sk: `OTT DoorEdition je zákazkovo vyrobený stroj na olepovanie hrán navrhnutý pre špecializovanú výrobu dverí. Od dĺžky 8 metrov kombinuje technológiu skladania dverí a obaľovania hrán v jedinom stroji a pokrýva špecifické požiadavky výroby dverí, ktoré štandardné olepovačky hrán nespĺňajú. DoorEdition je individuálne konfigurovaná podľa požiadaviek zákazníka.
+
+Stroj disponuje špecializovanou technológiou skladacieho lepenia, pri ktorej je hrana zložená okolo úzkej strany dverí a prilepená. Výsledkom je bezšvový, vysoko odolný hranový spoj spĺňajúci požiadavky výroby dverí na stabilitu a životnosť. Systém CombiMelt PUR zaisťuje vodotesné lepené spoje, ktoré odolajú aj pri dverách do vlhkých priestorov a exteriérových dverách.
+
+Na trhu strojov na olepovanie hrán pre dvere neexistuje v tejto cenovej kategórii porovnateľný produkt od HOMAG ani iných výrobcov. DoorEdition tak vypĺňa jedinečnú niku pre výrobcov dverí hľadajúcich ekonomickú alternatívu k vysokocenovým špeciálnym strojom. Asamer je autorizovaný predajca OTT pre Českú republiku, Slovensko a Maďarsko a poskytuje podrobné poradenstvo k individuálnej konfigurácii DoorEdition. Od analýzy potrieb cez plánovanie stroja až po uvedenie do prevádzky vás sprevádzame celým procesom.`,
       hu: `Az OTT DoorEdition egy egyedi építésu élzárógép, amelyet speciálisan ajtógyártásra terveztek. 8 métertol kezdodo hosszal egyesíti az ajtóhajtogató és éltekero technológiát egyetlen gépben, lefedve az ajtógyártás speciális követelményeit, amelyeket a standard élzárógépek nem tudnak teljesíteni. A DoorEdition-t egyedileg konfigurálják a vevo igényei szerint.
 
 A gép specializált hajtogatóragasztó technológiával rendelkezik, ahol az él az ajtó keskeny oldala köré van hajtogatva és ragasztva. Az eredmény egy varrat nélküli, rendkívül tartós élkötés, amely megfelel az ajtógyártás stabilitási és élettartam-követelményeinek. A CombiMelt PUR rendszer vízálló ragasztási kötéseket biztosít, amelyek a nedves helyiségek ajtóinál és a kültéri ajtóknál is helytállnak.
@@ -847,12 +908,14 @@ Az ajtó-élzárógépek piacán ebben az árkategóriában nincs összehasonlí
           de: 'Spezialisierte Tuerenfertigung',
           en: 'Specialized door manufacturing',
           cz: 'Specializovana vyroba dveri',
+          sk: 'Špecializovaná výroba dverí',
           hu: 'Specializált ajtógyártás',
         },
         body: {
           de: 'Die DoorEdition ist speziell fuer die Anforderungen der Tuerenfertigung konzipiert. Die Faltleimtechnik erzeugt nahtlose Kantenverbindungen, die den mechanischen Belastungen von Tueren standhalten. Von Zimmerturen bis zu Schallschutztueren bietet die DoorEdition eine Loesung fuer verschiedene Tuertypen.',
           en: 'The DoorEdition is specifically designed for the requirements of door manufacturing. The fold-gluing technology creates seamless edge joints that withstand the mechanical stresses of doors. From interior doors to soundproofing doors, the DoorEdition offers solutions for various door types.',
           cz: 'DoorEdition je specialne navrzena pro pozadavky vyroby dveri. Technologie skladaciho lepeni vytvari bezesve hranove spoje odolne mechanickemu namahani dveri. Od interierovych dveri po protihlukove dvere nabizi DoorEdition reseni pro ruzne typy dveri.',
+          sk: 'DoorEdition je špeciálne navrhnutá pre požiadavky výroby dverí. Technológia skladacieho lepenia vytvára bezšvové hranové spoje odolné mechanickému namáhaniu dverí. Od interiérových dverí po protihlukové dvere ponúka DoorEdition riešenie pre rôzne typy dverí.',
           hu: 'A DoorEdition-t kifejezetten az ajtógyártás követelményeihez tervezték. A hajtogatóragasztó technológia varrat nélküli élkötéseket hoz létre, amelyek ellenállnak az ajtók mechanikai igénybevételének. A beltéri ajtóktól a hangszigetelt ajtókig a DoorEdition megoldást kínál különbözo ajtótípusokhoz.',
         },
       },
@@ -861,12 +924,14 @@ Az ajtó-élzárógépek piacán ebben az árkategóriában nincs összehasonlí
           de: 'Wirtschaftliche Alternative zu Hochpreismaschinen',
           en: 'Economical alternative to premium machines',
           cz: 'Ekonomicka alternativa ke vysocenovym strojum',
+          sk: 'Ekonomická alternatíva k vysokocenovým strojom',
           hu: 'Gazdaságos alternatíva a prémium kategóriás gépekhez',
         },
         body: {
           de: 'Im Markt fuer Tueren-Kantenanleimmaschinen bietet die DoorEdition eine einzigartige Preisposition. Waehrend HOMAG und andere Hersteller in dieser Nische deutlich teurere Loesungen anbieten, ermoeglicht die DoorEdition den Einstieg in die maschinelle Tuerenfertigung zu einem attraktiven Investitionsvolumen.',
           en: 'In the door edgebanding machine market, the DoorEdition occupies a unique price position. While HOMAG and other manufacturers offer significantly more expensive solutions in this niche, the DoorEdition enables entry into machine-based door production at an attractive investment level.',
           cz: 'Na trhu olepovacich stroju na hrany pro dvere zaujima DoorEdition jedinecnou cenovou pozici. Zatimco HOMAG a dalsi vyrobci nabizeji v teto nice vyrazne drazsi reseni, DoorEdition umoznuje vstup do strojni vyroby dveri pri atraktivnim objemu investice.',
+          sk: 'Na trhu strojov na olepovanie hrán pre dvere zaujíma DoorEdition jedinečnú cenovú pozíciu. Zatiaľ čo HOMAG a ďalší výrobcovia ponúkajú v tejto nike výrazne drahšie riešenia, DoorEdition umožňuje vstup do strojnej výroby dverí pri atraktívnom objeme investície.',
           hu: 'Az ajtó-élzárógépek piacán a DoorEdition egyedi árpozíciót foglal el. Míg a HOMAG és más gyártók ebben a rést jelentosen drágább megoldásokat kínálnak, a DoorEdition vonzó beruházási volumen mellett teszi lehetové a gépi ajtógyártásba való belépést.',
         },
       },
@@ -876,6 +941,7 @@ Az ajtó-élzárógépek piacán ebben az árkategóriában nincs összehasonlí
       de: 'Die DoorEdition ist die einzige Wahl im OTT-Programm fuer spezialisierte Tuerfalt- und Umleimtechnik. Wenn Sie hauptsaechlich Tueren produzieren und eine wirtschaftliche Maschine suchen, gibt es in dieser Preisklasse keine Alternative. Kontaktieren Sie Asamer fuer eine individuelle Beratung.',
       en: 'The DoorEdition is the only choice in the OTT range for specialized door fold and edge wrapping technology. If you primarily produce doors and need an economical machine, there is no alternative at this price point. Contact Asamer for individual consultation.',
       cz: 'DoorEdition je jedinou volbou v nabidce OTT pro specializovanou technologii skladani a obalovani hran dveri. Pokud prevazne vyrabite dvere a hledate ekonomicky stroj, v teto cenove kategorii neexistuje alternativa. Kontaktujte Asamer pro individualni poradenstvi.',
+      sk: 'DoorEdition je jedinou voľbou v ponuke OTT pre špecializovanú technológiu skladania a obaľovania hrán dverí. Ak prevažne vyrábate dvere a hľadáte ekonomický stroj, v tejto cenovej kategórii neexistuje alternatíva. Kontaktujte Asamer pre individuálne poradenstvo.',
       hu: 'A DoorEdition az egyetlen választás az OTT kínálatában a specializált ajtóhajtogató és éltekero technológia terén. Ha foként ajtókat gyárt és gazdaságos gépet keres, ebben az árkategóriában nincs alternatíva. Vegye fel a kapcsolatot az Asamerrel egyéni tanácsadásért.',
     },
 
@@ -885,12 +951,14 @@ Az ajtó-élzárógépek piacán ebben az árkategóriában nincs összehasonlí
           de: 'Was unterscheidet die DoorEdition von einer Standard-Kantenanleimmaschine?',
           en: 'What sets the DoorEdition apart from a standard edgebanding machine?',
           cz: 'Cim se DoorEdition lisi od standardni olepovacky hran?',
+          sk: 'Čím sa DoorEdition líši od štandardnej olepovačky hrán?',
           hu: 'Miben különbözik a DoorEdition egy standard élzárógéptol?',
         },
         answer: {
           de: 'Die DoorEdition verfuegt ueber eine spezielle Tuerfalt- und Umleimtechnik, die Kanten um die Schmalseite der Tuer faltet und verleimt. Dieses Verfahren ist mit Standard-Kantenanleimmaschinen nicht moeglich.',
           en: 'The DoorEdition features specialized door fold and edge wrapping technology that folds edges around the narrow side of the door and bonds them. This process is not possible with standard edgebanding machines.',
           cz: 'DoorEdition disponuje specializovanou technologii skladani a obalovani hran dveri, ktera sklada hrany kolem uzke strany dveri a lepi je. Tento proces neni mozny se standardnimi olepovackami hran.',
+          sk: 'DoorEdition disponuje špecializovanou technológiou skladania a obaľovania hrán dverí, ktorá skladá hrany okolo úzkej strany dverí a lepí ich. Tento proces nie je možný so štandardnými olepovačkami hrán.',
           hu: 'A DoorEdition specializált ajtóhajtogató és éltekero technológiával rendelkezik, amely az éleket az ajtó keskeny oldala köré hajtogatja és ragasztja. Ez az eljárás standard élzárógépekkel nem lehetséges.',
         },
       },
@@ -899,12 +967,14 @@ Az ajtó-élzárógépek piacán ebben az árkategóriában nincs összehasonlí
           de: 'Gibt es ein vergleichbares Produkt von HOMAG?',
           en: 'Is there a comparable product from HOMAG?',
           cz: 'Existuje srovnatelny produkt od HOMAG?',
+          sk: 'Existuje porovnateľný produkt od HOMAG?',
           hu: 'Van összehasonlítható termék a HOMAG-tól?',
         },
         answer: {
           de: 'Nein, in der Preisklasse der DoorEdition gibt es kein vergleichbares HOMAG-Produkt fuer die Tuerenolepierung. Die DoorEdition besetzt eine einzigartige Marktnische.',
           en: 'No, there is no comparable HOMAG product for door edgebanding at the DoorEdition price point. The DoorEdition occupies a unique market niche.',
           cz: 'Ne, v cenove kategorii DoorEdition neexistuje srovnatelny produkt HOMAG pro olepovani dveri. DoorEdition zaujima jedinecnou trzni niku.',
+          sk: 'Nie, v cenovej kategórii DoorEdition neexistuje porovnateľný produkt HOMAG pre olepovanie dverí. DoorEdition zaujíma jedinečnú trhovú niku.',
           hu: 'Nem, a DoorEdition árkategóriájában nincs összehasonlítható HOMAG termék ajtó-élzáráshoz. A DoorEdition egyedülálló piaci rést foglal el.',
         },
       },
@@ -913,12 +983,14 @@ Az ajtó-élzárógépek piacán ebben az árkategóriában nincs összehasonlí
           de: 'Wird die DoorEdition individuell konfiguriert?',
           en: 'Is the DoorEdition individually configured?',
           cz: 'Je DoorEdition individualne konfigurovana?',
+          sk: 'Je DoorEdition individuálne konfigurovaná?',
           hu: 'Egyedileg konfigurálják a DoorEdition-t?',
         },
         answer: {
           de: 'Ja, jede DoorEdition wird nach den individuellen Anforderungen des Kunden konfiguriert. Asamer berart Sie zur optimalen Ausstattung fuer Ihre Tueren-Produktion und begleitet Sie von der Planung bis zur Inbetriebnahme.',
           en: 'Yes, each DoorEdition is configured according to the individual requirements of the customer. Asamer advises you on the optimal equipment for your door production and guides you from planning to commissioning.',
           cz: 'Ano, kazda DoorEdition je konfigurovana podle individualnich pozadavku zakaznika. Asamer vam poradi s optimalnim vybavenim pro vasi vyrobu dveri a provazi vas od planovani az po uvedeni do provozu.',
+          sk: 'Áno, každá DoorEdition je konfigurovaná podľa individuálnych požiadaviek zákazníka. Asamer vám poradí s optimálnou výbavou pre vašu výrobu dverí a sprevádza vás od plánovania až po uvedenie do prevádzky.',
           hu: 'Igen, minden DoorEdition-t a vevo egyedi igényei szerint konfigurálnak. Az Asamer tanácsot ad az ajtógyártásához szükséges optimális felszereltséghez, és a tervezéstol az üzembe helyezésig végigkíséri Önt.',
         },
       },
