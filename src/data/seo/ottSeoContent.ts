@@ -1486,6 +1486,11 @@ A distinctive feature of the OTT machine range is the consistent upgrade path. O
 Olepovacky hran OTT pokryvaji siroke vykonove spektrum: rychlosti posuvu 12 az 22 m/min, tlousky hran 0,3 az 25 mm a tlousky desek az 80 mm. At uz remeslna dilna s kusovou vyrobou nebo prumyslovy provoz s nepretrzitym trismenniym provozem - OTT nabizi pro kazdou potrebu spravny stroj. Vsechny modely mohou byt vybaveny systemem CombiMelt PUR pro vodetesne lepene spoje a technologii nulove spary bluEdge HyFuse.
 
 Vyraznym rysem rady stroju OTT je pruchodna moznost dovybaveni. Provozy mohou zacit se vstupnim modelem a pozdeji dovybavit lepici technologii, rizeni a obrabeci agregaty. Modely jako FlexEdge a TopEdge nabizeji se standardnim rizenim Beckhoff a rozhranim OPC-UA plnou schopnost Prumyslu 4.0. Asamer vas podpoeuji v celem regionu CZ, SK a HU poradensttvim, prodejem, instalaci, skolenim a servisem nahradnich dilu.`,
+      sk: `Olepovačky hrán OTT Paul sú prvou voľbou pre náročné stolárske dielne a výrobcov nábytku v Českej republike, na Slovensku a v Maďarsku. Asamer je autorizovaný predajca OTT pre región CZ/SK/HU a ponúka celú škálu olepovačiek hrán OTT – od kompaktného vstupného modelu Pacific+ až po vlajkovú loď TopEdge.
+
+Olepovačky hrán OTT pokrývajú široké výkonové spektrum: rýchlosti posuvu 12 až 22 m/min, hrúbky hrán 0,3 až 25 mm a hrúbky dosiek až 80 mm. Či už remeselná dielňa s kusovou výrobou alebo priemyselná prevádzka s nepretržitým trojzmenným režimom – OTT ponúka pre každú potrebu správny stroj. Všetky modely môžu byť vybavené systémom CombiMelt PUR pre vodotesné lepené spoje a technológiou nulovej škáry bluEdge HyFuse.
+
+Výrazným znakom radu strojov OTT je priechodná možnosť dovybavenia. Prevádzky môžu začať so vstupným modelom a neskôr dovybaviť lepiacu technológiu, riadenie a obrábacie agregáty. Modely ako FlexEdge a TopEdge ponúkajú so štandardným riadením Beckhoff a rozhraním OPC-UA plnú schopnosť Priemyslu 4.0. Asamer vás podporuje v celom regióne CZ, SK a HU poradenstvom, predajom, inštaláciou, školením a servisom náhradných dielov.`,
       hu: `Az OTT Paul élzárógépek a Csehországban, Szlovákiában és Magyarországon muködo igényes asztalosmuhelyek és bútorgyártók elso választásai. Az Asamer a CZ/SK/HU régió hivatalos OTT viszonteladója, és az OTT élzárógépek teljes kínálatát kínálja - a kompakt belépo szintu Pacific+-tól a zászlóshajó TopEdge-ig.
 
 Az OTT élzárógépek széles teljesítménytartományt fednek le: eloretolási sebesség 12-tol 22 m/percig, élvastagság 0,3-tól 25 mm-ig, és lapvastagság 80 mm-ig. Legyen szó egyedi gyártású kézmuves muhelyrol vagy háromszakos folyamatos üzemu ipari üzemrol, az OTT minden igényre a megfelelo gépet kínálja. Minden modell felszerelheto a CombiMelt PUR rendszerrel a vízálló ragasztási kötésekhez, valamint a bluEdge HyFuse fugamentes technológiával.
@@ -1499,12 +1504,14 @@ Az OTT gépcsalád jellegzetessége a következetes utólagos felszerelési lehe
           de: 'OTT Kantenanleimmaschinen im Ueberblick',
           en: 'OTT edgebanding machines overview',
           cz: 'Prehled olepovacek hran OTT',
+          sk: 'Prehľad olepovačiek hrán OTT',
           hu: 'OTT élzárógépek áttekintése',
         },
         body: {
           de: 'Das OTT-Programm umfasst sieben Kantenanleimmaschinen-Modelle: Pacific+ (Einstieg, 5,7 m), Tornado+ (bewaeahrt, 6,2 m), FlexEdge (Industrie 4.0, 7,1 m), Storm+ (Profi, 7,8 m), StrongEdge (schwere Kanten, 8,6 m), TopEdge S/L (Flaggschiff, 9,2-10,2 m) und die DoorEdition (Tuerenspezialist, ab 8 m). Jedes Modell ist auf ein spezifisches Anforderungsprofil zugeschnitten.',
           en: 'The OTT programme comprises seven edgebanding machine models: Pacific+ (entry-level, 5.7 m), Tornado+ (proven, 6.2 m), FlexEdge (Industry 4.0, 7.1 m), Storm+ (professional, 7.8 m), StrongEdge (heavy edges, 8.6 m), TopEdge S/L (flagship, 9.2-10.2 m) and the DoorEdition (door specialist, from 8 m). Each model is tailored to a specific requirement profile.',
           cz: 'Program OTT zahrnuje sedm modelu olepovacek hran: Pacific+ (vstupni, 5,7 m), Tornado+ (osvedceny, 6,2 m), FlexEdge (Prumysl 4.0, 7,1 m), Storm+ (profesionalni, 7,8 m), StrongEdge (tezke hrany, 8,6 m), TopEdge S/L (vlajkova lod, 9,2-10,2 m) a DoorEdition (specialista na dvere, od 8 m). Kazdy model je prizpusoben specifickemu profilu pozadavku.',
+          sk: 'Program OTT zahŕňa sedem modelov olepovačiek hrán: Pacific+ (vstupný, 5,7 m), Tornado+ (osvedčený, 6,2 m), FlexEdge (Priemysel 4.0, 7,1 m), Storm+ (profesionálny, 7,8 m), StrongEdge (ťažké hrany, 8,6 m), TopEdge S/L (vlajková loď, 9,2 – 10,2 m) a DoorEdition (špecialista na dvere, od 8 m). Každý model je prispôsobený špecifickému profilu požiadaviek.',
           hu: 'Az OTT kínálat hét élzárógép-modellt tartalmaz: Pacific+ (belépo szintu, 5,7 m), Tornado+ (bevált, 6,2 m), FlexEdge (Ipar 4.0, 7,1 m), Storm+ (professzionális, 7,8 m), StrongEdge (nehéz élekhez, 8,6 m), TopEdge S/L (zászlóshajó, 9,2-10,2 m) és a DoorEdition (ajtóspecialista, 8 m-tol). Minden modell egy adott igényprofilhoz szabott.',
         },
       },
@@ -1513,12 +1520,14 @@ Az OTT gépcsalád jellegzetessége a következetes utólagos felszerelési lehe
           de: 'Klebetechnologie: EVA, PUR und Nullfuge',
           en: 'Adhesive technology: EVA, PUR and zero glue line',
           cz: 'Lepici technologie: EVA, PUR a nulova spara',
+          sk: 'Lepiaca technológia: EVA, PUR a nulová škára',
           hu: 'Ragasztási technológia: EVA, PUR és fugamentes',
         },
         body: {
           de: 'OTT bietet drei Klebetechnologie-Stufen: EVA (Standard, bewaeahrt und wirtschaftlich), PUR (wasserbestaendig, hitzebestaendig, nahezu unsichtbar) und bluEdge HyFuse (Nullfuge, kein Klebstoff, vollstaendig unsichtbar). Das CombiMelt-System ermoeglicht den schnellen Wechsel zwischen EVA und PUR. Alle Technologien sind nachruestbar.',
           en: 'OTT offers three adhesive technology tiers: EVA (standard, proven and economical), PUR (water-resistant, heat-resistant, virtually invisible) and bluEdge HyFuse (zero joint, no adhesive, completely invisible). The CombiMelt system enables fast switching between EVA and PUR. All technologies are retrofittable.',
           cz: 'OTT nabizi tri urovne lepici technologie: EVA (standard, osvedcena a ekonomicka), PUR (odolna vode, odolna teplu, prakticky neviditelna) a bluEdge HyFuse (nulova spara, zadne lepidlo, zcela neviditelna). System CombiMelt umoznuje rychle prepinani mezi EVA a PUR. Vsechny technologie jsou dodatecne montovatelne.',
+          sk: 'OTT ponúka tri úrovne lepiacej technológie: EVA (štandard, osvedčená a ekonomická), PUR (odolná vode, odolná teplu, prakticky neviditeľná) a bluEdge HyFuse (nulová škára, žiadne lepidlo, úplne neviditeľná). Systém CombiMelt umožňuje rýchle prepínanie medzi EVA a PUR. Všetky technológie sú dodatočne montovateľné.',
           hu: 'Az OTT három ragasztási technológiai szintet kínál: EVA (standard, bevált és gazdaságos), PUR (vízálló, hoálló, gyakorlatilag láthatatlan) és bluEdge HyFuse (fugamentes, ragasztó nélküli, teljesen láthatatlan). A CombiMelt rendszer lehetové teszi a gyors váltást EVA és PUR között. Minden technológia utólag felszerelheto.',
         },
       },
@@ -1527,12 +1536,14 @@ Az OTT gépcsalád jellegzetessége a következetes utólagos felszerelési lehe
           de: 'Materialkompatibilitaet und Anwendungsbereiche',
           en: 'Material compatibility and application areas',
           cz: 'Kompatibilita materialu a oblasti pouziti',
+          sk: 'Kompatibilita materiálov a oblasti použitia',
           hu: 'Anyag-kompatibilitás és alkalmazási területek',
         },
         body: {
           de: 'OTT-Kantenanleimmaschinen verarbeiten alle gaengigen Kantenmaterialien: ABS, PVC, PP, Melamin, Furnier, Massivholz und CPL. Die Einsatzbereiche reichen von der Moebelproduktion ueber den Kuechenbau und Ladenbau bis zur Tuerenherstellung und zum Innenausbau. Dank der Kantenstaerken bis 25 mm (StrongEdge, TopEdge L) sind auch schwere Massivholzprofile moeglich.',
           en: 'OTT edgebanding machines process all common edge materials: ABS, PVC, PP, melamine, veneer, solid wood and CPL. Application areas range from furniture production through kitchen and shopfitting to door manufacturing and interior construction. With edge thicknesses up to 25 mm (StrongEdge, TopEdge L), even heavy solid wood profiles are possible.',
           cz: 'Olepovacky hran OTT zpracovavaji vsechny bezne hranove materialy: ABS, PVC, PP, melamin, dyhu, masivni drevo a CPL. Oblasti pouziti sahaji od vyroby nabytku pres kuchynsky a obchodni zastavbu az po vyrobu dveri a interierovou vystavbu. Diky tlouskam hran az 25 mm (StrongEdge, TopEdge L) jsou mozne i tezke masivni drevene profily.',
+          sk: 'Olepovačky hrán OTT spracúvajú všetky bežné hranové materiály: ABS, PVC, PP, melamín, dyhu, masívne drevo a CPL. Oblasti použitia siahajú od výroby nábytku cez kuchynskú a obchodnú zástavbu až po výrobu dverí a interiérovú výstavbu. Vďaka hrúbkam hrán až 25 mm (StrongEdge, TopEdge L) sú možné aj ťažké masívne drevené profily.',
           hu: 'Az OTT élzárógépek minden elterjedt élanyagot feldolgoznak: ABS, PVC, PP, melamin, furnér, tömörfa és CPL. Az alkalmazási területek a bútorgyártástól a konyha- és üzletberendezés-gyártáson át az ajtógyártásig és belsoépítészetig terjednek. A 25 mm-es (StrongEdge, TopEdge L) élvastagságoknak köszönhetoen nehéz tömörfa profilok is megmunkálhatók.',
         },
       },
@@ -1541,12 +1552,14 @@ Az OTT gépcsalád jellegzetessége a következetes utólagos felszerelési lehe
           de: 'Kaufberatung: Die richtige OTT-Maschine waehlen',
           en: 'Buying guide: choosing the right OTT machine',
           cz: 'Pruvodce nakupem: vyber spravneho stroje OTT',
+          sk: 'Sprievodca nákupom: výber správneho stroja OTT',
           hu: 'Vásárlási útmutató: a megfelelo OTT-gép kiválasztása',
         },
         body: {
           de: 'Die Wahl der richtigen Kantenanleimmaschine haengt von Ihren spezifischen Anforderungen ab: Stueckzahlbedarf, Kantenstaerken, Plattenstaerken, benoetigte Klebetechnologie und Budget. Fuer Handwerksbetriebe empfehlen wir Pacific+ oder Tornado+. Fuer mittlere Betriebe mit Digitalisierungsbedarf die FlexEdge. Fuer industrielle Fertigung Storm+ oder TopEdge. Asamer berart Sie gerne persoenlich.',
           en: 'Choosing the right edgebanding machine depends on your specific requirements: volume demand, edge thicknesses, board thicknesses, required adhesive technology and budget. For craft workshops, we recommend the Pacific+ or Tornado+. For medium operations with digitalisation needs, the FlexEdge. For industrial production, the Storm+ or TopEdge. Asamer is happy to advise you personally.',
           cz: 'Vyber spravne olepovacky hran zavisi na vasich specifickych pozadavcich: objem vyroby, tlousky hran, tlousky desek, pozadovana lepici technologie a rozpocet. Pro remeslne dilny doporucujeme Pacific+ nebo Tornado+. Pro stredni provozy s potrebou digitalizace FlexEdge. Pro prumyslovou vyrobu Storm+ nebo TopEdge. Asamer vam rad poradi osobne.',
+          sk: 'Výber správnej olepovačky hrán závisí od vašich špecifických požiadaviek: objem výroby, hrúbky hrán, hrúbky dosiek, požadovaná lepiaca technológia a rozpočet. Pre remeselné dielne odporúčame Pacific+ alebo Tornado+. Pre stredné prevádzky s potrebou digitalizácie FlexEdge. Pre priemyselnú výrobu Storm+ alebo TopEdge. Asamer vám rád poradí osobne.',
           hu: 'A megfelelo élzárógép kiválasztása az Ön egyedi igényeitol függ: darabszámigény, élvastagságok, lapvastagságok, szükséges ragasztási technológia és költségvetés. Kézmuves muhelyeknek a Pacific+-t vagy Tornado+-t ajánljuk. Közepes méretu, digitalizációt igénylo üzemeknek a FlexEdge-et. Ipari gyártáshoz a Storm+-t vagy TopEdge-et. Az Asamer szívesen ad személyes tanácsadást.',
         },
       },
@@ -1558,12 +1571,14 @@ Az OTT gépcsalád jellegzetessége a következetes utólagos felszerelési lehe
           de: 'Welche ist die beste OTT-Kantenanleimmaschine fuer kleine Tischlereien?',
           en: 'Which is the best OTT edgebanding machine for small workshops?',
           cz: 'Ktera je nejlepsi olepovacka hran OTT pro male truhlarstvi?',
+          sk: 'Ktorá je najlepšia olepovačka hrán OTT pre malé stolárstvo?',
           hu: 'Melyik a legjobb OTT élzárógép kis asztalosmuhelyek számára?',
         },
         answer: {
           de: 'Fuer kleine Tischlereien empfehlen wir die Pacific+ (5,7 m, 18 m/min) als kompaktes Einstiegsmodell oder die Tornado+ (6,2 m, 12-18 m/min) als bewaehrtesten Allrounder.',
           en: 'For small workshops, we recommend the Pacific+ (5.7 m, 18 m/min) as a compact entry model or the Tornado+ (6.2 m, 12-18 m/min) as the most proven all-rounder.',
           cz: 'Pro male truhlarske dilny doporucujeme Pacific+ (5,7 m, 18 m/min) jako kompaktni vstupni model nebo Tornado+ (6,2 m, 12-18 m/min) jako nejosvedcenejsi univerzalni reseni.',
+          sk: 'Pre malé stolárske dielne odporúčame Pacific+ (5,7 m, 18 m/min) ako kompaktný vstupný model alebo Tornado+ (6,2 m, 12 – 18 m/min) ako najosvedčenejšie univerzálne riešenie.',
           hu: 'Kis asztalosmuhelyek számára a Pacific+-t (5,7 m, 18 m/perc) ajánljuk kompakt belépo szintu modellként, vagy a Tornado+-t (6,2 m, 12-18 m/perc) a legbeváltabb mindenesként.',
         },
       },
@@ -1572,12 +1587,14 @@ Az OTT gépcsalád jellegzetessége a következetes utólagos felszerelési lehe
           de: 'Koennen OTT-Kantenanleimmaschinen PUR-Klebstoff verarbeiten?',
           en: 'Can OTT edgebanding machines process PUR adhesive?',
           cz: 'Mohou olepovacky hran OTT zpracovavat PUR lepidlo?',
+          sk: 'Dokážu olepovačky hrán OTT spracovať PUR lepidlo?',
           hu: 'Képesek az OTT élzárógépek PUR ragasztó feldolgozására?',
         },
         answer: {
           de: 'Ja, alle OTT-Modelle sind mit dem CombiMelt-System fuer PUR-Verarbeitung erhaeltlich oder nachruestbar. Die Storm+ und TopEdge haben PUR serienmaeassig, bei den anderen Modellen ist es eine Option.',
           en: 'Yes, all OTT models are available with or can be retrofitted with the CombiMelt system for PUR processing. The Storm+ and TopEdge include PUR as standard, while on other models it is an option.',
           cz: 'Ano, vsechny modely OTT jsou k dispozici se systemem CombiMelt pro zpracovani PUR nebo je lze dovybavit. Storm+ a TopEdge maji PUR standardne, u ostatnich modelu je to volba.',
+          sk: 'Áno, všetky modely OTT sú k dispozícii so systémom CombiMelt na spracovanie PUR alebo ich možno dovybaviť. Storm+ a TopEdge majú PUR štandardne, pri ostatných modeloch je to voľba.',
           hu: 'Igen, minden OTT-modell elérheto vagy utólag felszerelheto a CombiMelt rendszerrel PUR-feldolgozáshoz. A Storm+ és TopEdge szériakivitelben tartalmaz PUR-t, a többi modellnél ez opció.',
         },
       },
@@ -1586,12 +1603,14 @@ Az OTT gépcsalád jellegzetessége a következetes utólagos felszerelési lehe
           de: 'Wer ist der OTT-Haendler fuer Tschechien und die Slowakei?',
           en: 'Who is the OTT dealer for the Czech Republic and Slovakia?',
           cz: 'Kdo je prodejcem OTT pro Ceskou republiku a Slovensko?',
+          sk: 'Kto je predajcom OTT pre Českú republiku a Slovensko?',
           hu: 'Ki az OTT viszonteladója Csehországban és Szlovákiában?',
         },
         answer: {
           de: 'Asamer ist der autorisierte OTT-Haendler fuer Tschechien (CZ), die Slowakei (SK) und Ungarn (HU). Wir bieten Beratung, Verkauf, Installation, Schulung und Ersatzteilservice fuer alle OTT-Produkte.',
           en: 'Asamer is the authorized OTT dealer for the Czech Republic (CZ), Slovakia (SK) and Hungary (HU). We provide consultation, sales, installation, training and spare parts service for all OTT products.',
           cz: 'Asamer je autorizovany prodejce OTT pro Ceskou republiku (CZ), Slovensko (SK) a Madarsko (HU). Poskytujeme poradenstvi, prodej, instalaci, skoleni a servis nahradnich dilu pro vsechny produkty OTT.',
+          sk: 'Asamer je autorizovaný predajca OTT pre Českú republiku (CZ), Slovensko (SK) a Maďarsko (HU). Poskytujeme poradenstvo, predaj, inštaláciu, školenie a servis náhradných dielov pre všetky produkty OTT.',
           hu: 'Az Asamer a hivatalos OTT viszonteladó Csehország (CZ), Szlovákia (SK) és Magyarország (HU) számára. Tanácsadást, értékesítést, telepítést, oktatást és alkatrészszervizt kínálunk minden OTT-termékhez.',
         },
       },
@@ -1600,12 +1619,14 @@ Az OTT gépcsalád jellegzetessége a következetes utólagos felszerelési lehe
           de: 'Was kostet eine OTT-Kantenanleimmaschine?',
           en: 'What does an OTT edgebanding machine cost?',
           cz: 'Kolik stoji olepovacka hran OTT?',
+          sk: 'Koľko stojí olepovačka hrán OTT?',
           hu: 'Mennyibe kerül egy OTT élzárógép?',
         },
         answer: {
           de: 'Der Preis haengt vom Modell und der Ausstattung ab. Kontaktieren Sie Asamer fuer ein individuelles Angebot. Wir erstellen Ihnen gerne eine massgeschneiderte Konfiguration fuer Ihren Bedarf.',
           en: 'The price depends on the model and equipment. Contact Asamer for an individual quotation. We are happy to create a customized configuration for your needs.',
           cz: 'Cena zavisi na modelu a vybaveni. Kontaktujte Asamer pro individualni nabidku. Radi vam pripravime konfiguraci na miru vasim potrebam.',
+          sk: 'Cena závisí od modelu a výbavy. Kontaktujte Asamer pre individuálnu ponuku. Radi vám pripravíme konfiguráciu na mieru vašim potrebám.',
           hu: 'Az ár a modelltol és a felszereltségtol függ. Keresse az Asamert egyéni árajánlatért. Szívesen készítünk testreszabott konfigurációt az Ön igényeihez.',
         },
       },
