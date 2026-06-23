@@ -80,16 +80,16 @@ const GuideVacuumLifterPage = () => {
                 <div className="accent-line mb-6" />
                 <h1 className="text-section font-display font-light text-white mb-6">
                   {tr(
-                    'Nicht entlassen — entlasten. Barbaric Vakuumheber für die Holzbearbeitung.',
-                    'Don’t lay off — lighten the load. Barbaric vacuum lifters for wood processing.',
-                    'Nepropouštějte — ulevte. Vakuové zvedáky Barbaric pro zpracování dřeva.'
+                    ‘Wir unterstützen Ihre Arbeitsprozesse. Barbaric Vakuumheber für die Holzbearbeitung.’,
+                    ‘We support your work processes. Barbaric vacuum lifters for wood processing.’,
+                    ‘Podporujeme vaše pracovní procesy. Vakuové zvedáky Barbaric pro zpracování dřeva.’
                   )}
                 </h1>
                 <p className="text-white/70 text-lg leading-relaxed">
                   {tr(
-                    'Mit einem Vakuumheber bewegt eine einzige Person schwere Platten sicher und ergonomisch – statt schwerem Heben zu zweit oder zu dritt. So halten Sie Ihr eingespieltes Team gesund und produktiv, statt Personal abzubauen. Wir helfen Ihnen gerne, das passende System zu finden.',
-                    'With a vacuum lifter, a single person moves heavy panels safely and ergonomically – instead of two or three people lifting together. You keep your experienced team healthy and productive instead of cutting staff. We’re glad to help you find the right system.',
-                    'S vakuovým zvedákem přesune těžké desky bezpečně a ergonomicky jediný člověk – místo zvedání ve dvou či třech. Udržíte si sehraný tým zdravý a produktivní, místo propouštění. Rádi vám pomůžeme najít vhodné řešení.'
+                    ‘Mit einem Vakuumheber bewegt eine einzige Person schwere Platten sicher und ergonomisch – statt schwerem Heben zu zweit oder zu dritt. So halten Sie Ihr eingespieltes Team gesund und produktiv. Wir helfen Ihnen gerne, das passende System zu finden.’,
+                    ‘With a vacuum lifter, a single person moves heavy panels safely and ergonomically – instead of two or three people lifting together. You keep your experienced team healthy and productive. We’re glad to help you find the right system.’,
+                    ‘S vakuovým zvedákem přesune těžké desky bezpečně a ergonomicky jediný člověk – místo zvedání ve dvou či třech. Udržíte si sehraný tým zdravý a produktivní. Rádi vám pomůžeme najít vhodné řešení.’
                   )}
                 </p>
               </div>
@@ -229,7 +229,7 @@ const GuideVacuumLifterPage = () => {
                 <ul className="space-y-2 text-white/70 text-sm">
                   <li className="flex items-start gap-2"><ShieldCheck className="w-4 h-4 text-primary mt-0.5 shrink-0" />{tr('Einhaltung von Lastgrenzen beim manuellen Handling', 'Compliance with manual handling load limits', 'Dodržení hmotnostních limitů při ruční manipulaci')}</li>
                   <li className="flex items-start gap-2"><ShieldCheck className="w-4 h-4 text-primary mt-0.5 shrink-0" />{tr('Weniger Ausfälle, gleichbleibende Qualität', 'Fewer absences, consistent quality', 'Méně absencí, stálá kvalita')}</li>
-                  <li className="flex items-start gap-2"><ShieldCheck className="w-4 h-4 text-primary mt-0.5 shrink-0" />{tr('Team entlasten statt Personal abbauen', 'Relieve the team instead of cutting staff', 'Odlehčit týmu místo propouštění')}</li>
+                  <li className="flex items-start gap-2"><ShieldCheck className="w-4 h-4 text-primary mt-0.5 shrink-0" />{tr('Team ergonomisch entlasten und langfristig binden', 'Ergonomic relief and long-term team retention', 'Ergonomické odlehčení a dlouhodobé udržení týmu')}</li>
                 </ul>
               </div>
 
