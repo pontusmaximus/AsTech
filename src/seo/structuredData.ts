@@ -226,16 +226,14 @@ export const itemListSchema = (
   '@type': 'ItemList',
   name,
   numberOfItems: items.length,
-  itemListElement: items.map(({ name: itemName, url, image, description }, index) => ({
+  // Summary-page-Format (ListItem + url). Bewusst KEINE verschachtelten Product-
+  // Objekte: Produkte ohne Preis/Bewertung würden sonst als "ungültige
+  // Produkt-Snippets" in der Search Console gemeldet.
+  itemListElement: items.map(({ name: itemName, url }, index) => ({
     '@type': 'ListItem',
     position: index + 1,
-    item: {
-      '@type': 'Product',
-      name: itemName,
-      url,
-      ...(image && { image }),
-      ...(description && { description }),
-    },
+    name: itemName,
+    url,
   })),
 });
 
