@@ -30,8 +30,7 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
   const metaForLang = routeConfig?.meta[lang] ?? getFallbackMeta(lang) ?? getFallbackMeta(DEFAULT_LANGUAGE);
   const title = overrides.title ?? metaForLang.title;
   const description = overrides.description ?? metaForLang.description;
-  const keywords = overrides.keywords ?? metaForLang.keywords;
-  const image = overrides.image ?? routeConfig?.image ?? DEFAULT_OG_IMAGE;
+  const image = overrides.image ?? DEFAULT_OG_IMAGE;
   const canonical = buildCanonicalUrl(lang, slug);
   const effectiveRobots = NON_INDEXABLE_LANGUAGES.includes(lang) ? 'noindex,follow' : robots;
 
@@ -39,7 +38,6 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
     <Helmet prioritizeSeoTags>
       <title>{title}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords.join(', ')} />}
       <meta name="robots" content={effectiveRobots} />
 
       <link rel="canonical" href={canonical} />

@@ -2,7 +2,7 @@ import type { Language } from '../i18n';
 import { DEFAULT_LANGUAGE } from '../lib/language';
 import { SLUG_TRANSLATIONS } from '../lib/slugs';
 
-export const DEFAULT_OG_IMAGE = 'https://asamer.cz/images/automation-robot.jpg';
+export const DEFAULT_OG_IMAGE = 'https://asamer.cz/brand/png/social/asamer-og-image.png';
 
 export type SeoRouteKey =
   | 'home'
@@ -173,7 +173,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     image: 'https://www.barbaric.at/fileadmin/_processed_/1/1/csm_CSF_Multilevel-Wegerer-7837_web_9285d8be71.png',
     meta: createMeta({
       de: {
-        title: 'Barbaric Automatisierung & Plattenhandling – Händler CZ, SK, HU | Asamer',
+        title: 'Barbaric Plattenhandling & Automatisierung | Asamer',
         description:
           'Barbaric Plattenhandling & Automatisierung – Asamer Händler für CZ, SK & HU. Flächenlager, LCV Beschickung, Nesting Picker, Returnsysteme.',
         keywords: ['BARBARIC', 'Flächenlager', 'Beschickung', 'Nesting', 'Returnsystem', 'Automatisierung', 'Asamer'],
@@ -244,19 +244,19 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     slug: '/ima-schelling',
     meta: createMeta({
       de: {
-        title: 'IMA Schelling Plattenaufteilsägen Service – 30+ Jahre Erfahrung | Asamer',
+        title: 'IMA Schelling Plattensägen-Service | Asamer',
         description:
-          'Service für IMA Schelling Plattenaufteilsägen in CZ, SK & HU: Wartung, Reparatur, Ersatzteile, Schulung. Erfahrenes Team mit über 30 Jahren IMA Schelling Praxis – HKL, FH, FK, VH, VKS Baureihen.',
+          'Service für IMA Schelling Plattensägen in CZ, SK & HU: Wartung, Reparatur, Ersatzteile, Schulung. Über 30 Jahre Erfahrung – HKL, FH, FK, VH, VKS.',
         keywords: ['IMA Schelling', 'Plattenaufteilsäge', 'Service', 'Wartung', 'Reparatur', 'Ersatzteile', 'HKL', 'FH', 'FK', 'VKS', 'Asamer'],
       },
       en: {
-        title: 'IMA Schelling Panel Saw Service – 30+ years of experience | Asamer',
+        title: 'IMA Schelling Panel Saw Service | Asamer',
         description:
-          'Service for IMA Schelling panel saws in CZ, SK & HU: maintenance, repair, spare parts, training. Experienced team with 30+ years on IMA Schelling – HKL, FH, FK, VH, VKS series.',
+          'Service for IMA Schelling panel saws in CZ, SK & HU: maintenance, repair, spare parts, training. 30+ years of experience – HKL, FH, FK, VKS.',
         keywords: ['IMA Schelling', 'Panel saw', 'Service', 'Maintenance', 'Repair', 'Spare parts', 'HKL', 'FH', 'FK', 'VKS', 'Asamer'],
       },
       cz: {
-        title: 'Servis formátovacích pil IMA Schelling – 30+ let zkušeností | Asamer',
+        title: 'Servis formátovacích pil IMA Schelling | Asamer',
         description:
           'Servis formátovacích pil IMA Schelling pro CZ, SK a HU: údržba, opravy, náhradní díly, školení. Tým s více než 30 lety praxe – řady HKL, FH, FK, VH, VKS.',
         keywords: ['IMA Schelling', 'Formátovací pila', 'Servis', 'Údržba', 'Opravy', 'Náhradní díly', 'HKL', 'FH', 'FK', 'VKS', 'Asamer'],
@@ -280,13 +280,13 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     slugByLang: SLUG_TRANSLATIONS['/financovani'],
     meta: createMeta({
       de: {
-        title: 'Maschinenfinanzierung – Raiffeisen Leasing, Förderung & Ratenkauf | Asamer',
+        title: 'Maschinenfinanzierung – Leasing & Förderung | Asamer',
         description:
           'Maschinen finanzieren mit Raiffeisen Leasing: Finanzierungsleasing, Ratenkauf und EU-Förderung. Asamer Technologie – kostenlose Beratung für CZ, SK, HU.',
         keywords: ['Finanzierung', 'Raiffeisen Leasing', 'Förderung', 'Leasing', 'Maschinen'],
       },
       en: {
-        title: 'Machine Financing – Raiffeisen Leasing, EU Grants & Installments | Asamer',
+        title: 'Machine Financing – Leasing & EU Grants | Asamer',
         description:
           'Finance new or used machines via Raiffeisen Leasing, installment purchase and EU grants. Asamer Technologie – free consultation for CZ, SK, HU.',
         keywords: ['Financing', 'Raiffeisen Leasing', 'EU Grants', 'Leasing', 'Machinery'],
@@ -749,19 +749,19 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     slugByLang: SLUG_TRANSLATIONS['/ratgeber/formatsaege-aluminium-vs-holz'],
     meta: createMeta({
       de: {
-        title: 'Plattensäge für Holz oder Alu? Mayer Kappa vs Advanced Line | Asamer',
+        title: 'Plattensäge Holz oder Alu? Mayer Kappa vs Advanced | Asamer',
         description:
           'Plattensäge für Holz oder Aluminium – welche Formatsäge passt? Vergleich Mayer Kappa Automatic vs Advanced Line: Sägeblatt, Vorschub, Toleranzen, Kühlung.',
         keywords: ['Plattensäge', 'Formatsäge', 'Aluminium', 'Holz', 'Mayer Kappa', 'Mayer Advanced Line', 'Asamer'],
       },
       en: {
-        title: 'Panel Saw for Wood vs Aluminium – Mayer Kappa vs Advanced Line | Asamer',
+        title: 'Panel Saw: Wood vs Aluminium – Mayer Kappa | Asamer',
         description:
           'Panel saw for wood or aluminium – which one fits? Comparison of Mayer Kappa Automatic and Advanced Line: blade, feed, tolerances, coolant, pressure beam.',
         keywords: ['Panel saw', 'Aluminium', 'Wood', 'Mayer Kappa', 'Mayer Advanced Line', 'Sizing saw', 'Asamer'],
       },
       cz: {
-        title: 'Formátovací pila na hliník nebo dřevo? Mayer Kappa vs Advanced Line | Asamer',
+        title: 'Formátovací pila: hliník nebo dřevo? Mayer Kappa | Asamer',
         description:
           'Formátovací pila na hliník nebo dřevo – kterou zvolit? Srovnání Mayer Kappa Automatic a Advanced Line: pilový kotouč, posuv, tolerance, chlazení.',
         keywords: ['Formátovací pila', 'Hliník', 'Dřevo', 'Mayer Kappa', 'Mayer Advanced Line', 'Nářezové centrum', 'Asamer'],
@@ -785,7 +785,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     slugByLang: SLUG_TRANSLATIONS['/ratgeber/foerderung-holzbearbeitung-cz-2026'],
     meta: createMeta({
       de: {
-        title: 'Förderung Holzbearbeitung CZ 2026 – OP TAK, NRB, InvestEU | Asamer',
+        title: 'Förderung Holzbearbeitung CZ 2026 – OP TAK, NRB | Asamer',
         description:
           'Förderung für Holzbearbeitungsmaschinen in Tschechien 2026: OP TAK Technologie, NRB Investitionskredite, InvestEU. Förderquoten, Timing, Dokumente.',
         keywords: ['Förderung CZ 2026', 'OP TAK', 'NRB', 'InvestEU', 'Holzbearbeitung', 'Dotace stroje', 'Asamer'],

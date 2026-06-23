@@ -1,6 +1,6 @@
 import { CANONICAL_DOMAIN } from '../lib/language';
 
-const LOGO_URL = `${CANONICAL_DOMAIN}/asamer-logo.png`;
+const LOGO_URL = `${CANONICAL_DOMAIN}/brand/png/horizontal/asamer-logo-horizontal.png`;
 const ORG_ID = `${CANONICAL_DOMAIN}/#organization`;
 
 export const organizationSchema = () => ({
@@ -216,14 +216,6 @@ export const websiteSchema = () => ({
   description: 'Exklusiver OTT-Vertriebspartner und autorisierter Händler für Mayer, BARBARIC und Gannomat in CZ, SK und HU. Maschinen, Automatisierung und Service.',
   publisher: { '@id': ORG_ID },
   inLanguage: ['de', 'en', 'cs', 'sk', 'hu'],
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${CANONICAL_DOMAIN}/cz/?q={search_term_string}`,
-    },
-    'query-input': 'required name=search_term_string',
-  },
 });
 
 export const itemListSchema = (

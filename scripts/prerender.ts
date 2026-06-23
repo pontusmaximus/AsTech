@@ -16,7 +16,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SEO_ROUTES, getSlugForLang } from '../src/seo/routes';
+import { SEO_ROUTES, getSlugForLang, DEFAULT_OG_IMAGE } from '../src/seo/routes';
 import type { SeoRouteKey } from '../src/seo/routes';
 import {
   buildLocalizedPath,
@@ -39,7 +39,7 @@ import { MAYER_PRODUCT_SEO, MAYER_CATEGORY_SEO } from '../src/data/seo/mayerSeoC
 import { BARBARIC_PRODUCT_SEO, BARBARIC_CATEGORY_SEO } from '../src/data/seo/barbaricSeoContent';
 import { GANNOMAT_PRODUCT_SEO, GANNOMAT_CATEGORY_SEO } from '../src/data/seo/gannomatSeoContent';
 import type { ProductSeoContent, CategorySeoContent, MultiLangText } from '../src/data/seo/types';
-import { faqPageSchema, productSchema, howToSchema, itemListSchema, type ProductSchemaInput } from '../src/seo/structuredData';
+import { faqPageSchema, productSchema, howToSchema, itemListSchema, organizationSchema, websiteSchema, localBusinessSchemas, breadcrumbSchema, type ProductSchemaInput } from '../src/seo/structuredData';
 import { EDGEBANDER_GUIDE } from '../src/data/guides/edgebanderGuide';
 import { HUB_GUIDES, HUB_FAQ_CATEGORIES, HUB_FAQ_FLAT } from '../src/data/hub/ratgeberFaqHub';
 import type { Language } from '../src/i18n';
@@ -89,6 +89,12 @@ interface PageMeta {
   canonical: string;
   alternates: { hreflang: string; href: string }[];
   xDefaultHref: string;
+  /** Absolute OG/Twitter image URL */
+  image: string;
+  /** Image dimensions, only when known (branded 1200×630). */
+  imageDims?: { w: number; h: number };
+  /** Extra JSON-LD injected into <head> (survives the React mount). */
+  headLd?: string;
   /** Visible body content for Google */
   bodyContent: string;
 }
@@ -99,6 +105,22 @@ interface PageMeta {
 
 const escHtml = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+const jsonLdScript = (obj: object) => `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
+
+/** OG-Bild-URL absolut machen (externe URLs unveraendert, lokale Pfade mit Domain). */
+const absImg = (src?: string) => (!src ? DEFAULT_OG_IMAGE : src.startsWith('http') ? src : `${CANONICAL_DOMAIN}${src}`);
+
+/** BreadcrumbList-JSON-LD aus denselben Crumbs wie die HTML-Breadcrumb. */
+const breadcrumbLd = (crumbs: { label: string; href: string }[], canonical: string) =>
+  jsonLdScript(
+    breadcrumbSchema(
+      crumbs.map((c) => ({
+        name: c.label,
+        url: c.href === '#' ? canonical : c.href.startsWith('http') ? c.href : `${CANONICAL_DOMAIN}${c.href}`,
+      })),
+    ),
+  );
 
 /** Build breadcrumb HTML: Home > Brand > Product */
 const breadcrumb = (items: { label: string; href: string }[]) =>
@@ -191,13 +213,14 @@ const GUIDE_LABELS = {
 } as const;
 
 /** Voller Body fuer den Anchor-Artikel "Jakou olepovačku hran koupit?". */
-function guideEdgebanderBody(lang: Language, title: string): string {
+function guideEdgebanderBody(lang: Language, title: string, canonical: string): string {
   const homePath = buildLocalizedPath(lang, '/');
-  const crumbs = breadcrumb([
+  const crumbItems = [
     { label: T.home[lang], href: homePath },
     { label: GUIDE_LABELS.guides[lang], href: homePath },
     { label: title.split('|')[0].split('–')[0].trim(), href: '#' },
-  ]);
+  ];
+  const crumbs = breadcrumb(crumbItems);
 
   const lead = `<p>${escHtml(mlGuide(EDGEBANDER_GUIDE.lead, lang))}</p>`;
 
@@ -223,7 +246,7 @@ function guideEdgebanderBody(lang: Language, title: string): string {
     EDGEBANDER_GUIDE.howTo.map((s) => ({ name: mlGuide(s.name, lang), text: mlGuide(s.text, lang) })),
   ))}</script>`;
 
-  return [crumbs, `<h1>${escHtml(title)}</h1>`, lead, decision, usedVsNew, purVsEva, service, faqHtml, faqLd, howToLd].join('\n');
+  return [crumbs, breadcrumbLd(crumbItems, canonical), `<h1>${escHtml(title)}</h1>`, lead, decision, usedVsNew, purVsEva, service, faqHtml, faqLd, howToLd].join('\n');
 }
 
 const HUB_LABELS = {
@@ -233,12 +256,13 @@ const HUB_LABELS = {
 } as const;
 
 /** Voller Hub-Body fuer "Ratgeber & FAQ". */
-function ratgeberFaqHubBody(lang: Language, title: string, description: string): string {
+function ratgeberFaqHubBody(lang: Language, title: string, description: string, canonical: string): string {
   const homePath = buildLocalizedPath(lang, '/');
-  const crumbs = breadcrumb([
+  const crumbItems = [
     { label: T.home[lang], href: homePath },
     { label: title.split('|')[0].split('–')[0].trim(), href: '#' },
-  ]);
+  ];
+  const crumbs = breadcrumb(crumbItems);
 
   const head = `<h1>${escHtml(title)}</h1><p>${escHtml(description)}</p>`;
 
@@ -273,7 +297,7 @@ function ratgeberFaqHubBody(lang: Language, title: string, description: string):
     HUB_FAQ_FLAT.map((f) => ({ question: mlGuide(f.question, lang), answer: mlGuide(f.answer, lang) })),
   ))}</script>`;
 
-  return [crumbs, head, cards, faqWrap, itemListLd, faqLd].join('\n');
+  return [crumbs, breadcrumbLd(crumbItems, canonical), head, cards, faqWrap, itemListLd, faqLd].join('\n');
 }
 
 /** Build static page body content. Brand-Hub-Seiten erhalten zusaetzlich
@@ -285,6 +309,7 @@ function staticPageBody(
   lang: Language,
   title: string,
   description: string,
+  canonical: string,
   categorySeoContents: CategorySeoContent[] = [],
 ): string {
   const homePath = buildLocalizedPath(lang, '/');
@@ -320,14 +345,15 @@ function staticPageBody(
 
   // Anchor-Guide "Jakou olepovacku hran koupit?" — vollstaendiger Body inkl. FAQ + HowTo JSON-LD.
   if (key === 'guideEdgebander') {
-    return guideEdgebanderBody(lang, title);
+    return guideEdgebanderBody(lang, title, canonical);
   }
 
   // Hub "Ratgeber & FAQ" — Cards fuer 5 Ratgeber + 18 FAQ-Items in 5 Kategorien.
   if (key === 'faq') {
-    return ratgeberFaqHubBody(lang, title, description);
+    return ratgeberFaqHubBody(lang, title, description, canonical);
   }
 
+  if (key !== 'home') parts.push(breadcrumbLd(crumbs, canonical));
   return parts.join('\n');
 }
 
@@ -358,6 +384,7 @@ function productPageBody(
 
   const parts: string[] = [
     breadcrumb(crumbs),
+    breadcrumbLd(crumbs, productLd.url),
     `<h1>${escHtml(brand)} ${escHtml(productName)}</h1>`,
     `<p><strong>${escHtml(tagline)}</strong></p>`,
     `<p>${escHtml(description)}</p>`,
@@ -413,20 +440,31 @@ for (const [key, config] of Object.entries(SEO_ROUTES)) {
   for (const lang of SUPPORTED_LANGUAGES) {
     const langSlug = getSlugForLang(config, lang);
     const path = buildLocalizedPath(lang, langSlug);
+    const canonical = `${CANONICAL_DOMAIN}${path}`;
     const meta = config.meta[lang];
     const alternates = makeAlternates((al) => buildLocalizedPath(al, getSlugForLang(config, al)));
     const xDefaultHref = buildCanonicalUrl(HREFLANG_DEFAULT, getSlugForLang(config, HREFLANG_DEFAULT));
     const hubSeo = HUB_CATEGORY_SEO[key as SeoRouteKey] ?? [];
+    // Org + WebSite + LocalBusiness in den <head> (ueberlebt den React-Mount).
+    const headLd =
+      key === 'home'
+        ? [organizationSchema(), websiteSchema(), ...localBusinessSchemas()].map(jsonLdScript).join('\n    ')
+        : key === 'contact'
+          ? localBusinessSchemas().map(jsonLdScript).join('\n    ')
+          : undefined;
 
     pages.push({
       path,
       lang,
       title: meta.title,
       description: meta.description,
-      canonical: `${CANONICAL_DOMAIN}${path}`,
+      canonical,
       alternates,
       xDefaultHref,
-      bodyContent: staticPageBody(key as SeoRouteKey, lang, meta.title, meta.description, hubSeo),
+      image: DEFAULT_OG_IMAGE,
+      imageDims: { w: 1200, h: 630 },
+      headLd,
+      bodyContent: staticPageBody(key as SeoRouteKey, lang, meta.title, meta.description, canonical, hubSeo),
     });
   }
 }
@@ -446,6 +484,7 @@ for (const product of OTT_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
+      image: absImg(product.image),
       bodyContent: productPageBody(lang, 'OTT', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/ott', OTT_PRODUCT_SEO[product.slug], {
         image: product.image,
         slug: product.slug,
@@ -472,6 +511,7 @@ for (const product of MAYER_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
+      image: absImg(product.image),
       bodyContent: productPageBody(lang, 'Mayer', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/mayer', MAYER_PRODUCT_SEO[product.slug], {
         image: product.image,
         slug: product.slug,
@@ -498,6 +538,7 @@ for (const product of BARBARIC_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
+      image: absImg(product.image),
       bodyContent: productPageBody(lang, 'BARBARIC', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/barbaric', BARBARIC_PRODUCT_SEO[product.slug], {
         image: product.image,
         slug: product.slug,
@@ -524,6 +565,7 @@ for (const product of GANNOMAT_PRODUCTS) {
       description: product.seoDescription[lang],
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
+      image: absImg(product.image),
       bodyContent: productPageBody(lang, 'Gannomat', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/gannomat', GANNOMAT_PRODUCT_SEO[product.slug], {
         image: product.image,
         slug: product.slug,
@@ -602,6 +644,7 @@ for (const machine of USED_MACHINES) {
       description,
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates, xDefaultHref,
+      image: absImg(Array.isArray(machine.images) ? machine.images[0] : machine.images),
       bodyContent: breadcrumbParts.join('\n'),
     });
   }
@@ -620,6 +663,10 @@ for (const page of pages) {
   const xDefaultTag = `<link rel="alternate" hreflang="x-default" href="${page.xDefaultHref}" data-rh="true"/>`;
 
   const robotsContent = NON_INDEXABLE_LANGUAGES.includes(page.lang) ? 'noindex,follow' : 'index,follow';
+  const ogImageType = page.image.endsWith('.png') ? 'image/png' : 'image/jpeg';
+  const ogImageDims = page.imageDims
+    ? `\n    <meta property="og:image:width" content="${page.imageDims.w}" data-rh="true"/>\n    <meta property="og:image:height" content="${page.imageDims.h}" data-rh="true"/>`
+    : '';
   const seoHead = `
     <title data-rh="true">${escHtml(page.title)}</title>
     <meta name="description" content="${escHtml(page.description)}" data-rh="true"/>
@@ -632,10 +679,15 @@ for (const page of pages) {
     <meta property="og:description" content="${escHtml(page.description)}" data-rh="true"/>
     <meta property="og:url" content="${page.canonical}" data-rh="true"/>
     <meta property="og:site_name" content="Asamer Technologie" data-rh="true"/>
-    <meta property="og:image" content="${CANONICAL_DOMAIN}/images/automation-robot.jpg" data-rh="true"/>
-    <meta property="og:image:width" content="1200" data-rh="true"/>
-    <meta property="og:image:height" content="630" data-rh="true"/>
-    <meta property="og:locale" content="${languageToHreflang(page.lang)}" data-rh="true"/>`;
+    <meta property="og:image" content="${page.image}" data-rh="true"/>
+    <meta property="og:image:secure_url" content="${page.image}" data-rh="true"/>
+    <meta property="og:image:type" content="${ogImageType}" data-rh="true"/>
+    <meta property="og:image:alt" content="${escHtml(page.title)}" data-rh="true"/>${ogImageDims}
+    <meta property="og:locale" content="${languageToHreflang(page.lang)}" data-rh="true"/>
+    <meta name="twitter:card" content="summary_large_image" data-rh="true"/>
+    <meta name="twitter:title" content="${escHtml(page.title)}" data-rh="true"/>
+    <meta name="twitter:description" content="${escHtml(page.description)}" data-rh="true"/>
+    <meta name="twitter:image" content="${page.image}" data-rh="true"/>`;
 
   // Replace lang attribute
   let html = template.replace('<html lang="cs">', `<html lang="${languageToHreflang(page.lang)}">`);
@@ -646,8 +698,8 @@ for (const page of pages) {
   // Remove the generic meta description (handles both & and &amp;)
   html = html.replace(/<meta name="description" content="Asamer Technologie .+?" \/>/, '');
 
-  // Inject SEO tags before </head>
-  html = html.replace('</head>', `${seoHead}\n  </head>`);
+  // Inject SEO tags + sitewide JSON-LD before </head>
+  html = html.replace('</head>', `${seoHead}\n    ${page.headLd ?? ''}\n  </head>`);
 
   // Inject visible body content inside #root
   // This content is visible to Google crawlers but gets replaced when React mounts
