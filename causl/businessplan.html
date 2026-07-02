@@ -152,6 +152,14 @@
   .disclaimer{font-size:.8rem;color:var(--text-4);line-height:1.7;font-weight:300}
   .disclaimer strong{color:var(--text-3)}
 
+  sup.ref{font-size:.6em;font-weight:600;line-height:0}
+  sup.ref a{color:var(--primary-light);text-decoration:none;padding:0 .06em}
+  sup.ref a:hover{text-decoration:underline}
+  ol.quellen{margin:1.25rem 0 0;padding-left:1.4rem}
+  ol.quellen li{color:var(--text-2);font-size:.86rem;font-weight:300;margin-bottom:.85rem;line-height:1.55}
+  ol.quellen li::marker{color:var(--primary-light);font-family:'Space Grotesk';font-weight:500}
+  ol.quellen li .src-label{color:#fff;font-weight:500}
+  ol.quellen li a{color:var(--primary-light);word-break:break-word}
   footer{background:var(--footer);border-top:1px solid var(--border);padding:3rem 0;margin-top:2rem}
   .toc{list-style:none;columns:2;column-gap:2rem}
   .toc li{margin-bottom:.5rem;break-inside:avoid}
@@ -227,6 +235,7 @@
     <li><a href="#invest"><span class="kicker-num">10</span>Beteiligung für Kanzleien</a></li>
     <li><a href="#recht"><span class="kicker-num">11</span>Rechtlicher Rahmen (AT)</a></li>
     <li><a href="#roadmap"><span class="kicker-num">12</span>Roadmap &amp; Meilensteine</a></li>
+    <li><a href="#quellen"><span class="kicker-num">13</span>Quellen &amp; Belege</a></li>
   </ul>
 </section>
 
@@ -235,12 +244,12 @@
   <span class="eyebrow">01 · Executive Summary</span>
   <h2 class="section-title">Ein enges Gebiet, mit Tiefe verteidigt</h2>
   <div class="accent-line"></div>
-  <p>Der Markt für juristische KI ist explodiert. Der europäische Marktführer <strong>Legora</strong> wird nach seiner Series‑D (2026) mit rund <strong>5,6 Mrd. USD</strong> bewertet — bei etwa <strong>100 Mio. USD ARR</strong>. Legoras Stärke ist zugleich seine Angriffsfläche: Es bedient <em>jedes</em> Rechtsgebiet in <em>ganz</em> Europa und ist damit in keinem einzelnen Gebiet der Beste.</p>
+  <p>Der Markt für juristische KI ist explodiert. Der europäische Marktführer <strong>Legora</strong> wird nach seiner Series‑D (2026) mit rund <strong>5,6 Mrd. USD</strong> bewertet<sup class="ref"><a href="#q1">1</a></sup> — bei etwa <strong>100 Mio. USD ARR</strong><sup class="ref"><a href="#q2">2</a></sup>. Legoras Stärke ist zugleich seine Angriffsfläche: Es bedient <em>jedes</em> Rechtsgebiet in <em>ganz</em> Europa und ist damit in keinem einzelnen Gebiet der Beste.</p>
   <p><strong>Causl KI</strong> besetzt bewusst die Gegenposition: eine KI ausschließlich für <strong>Arbeits- und Sozialrecht</strong> im DACH-Raum — trainiert und kuratiert auf ASVG, ArbVG, AngG, AVRAG, GlBG, ArbIG, Kollektivverträge, VwGH-/OGH-Judikatur und die Praxis der Sozialversicherungsträger. Nicht breiter als der Wettbewerb, sondern in genau diesem Feld spürbar besser.</p>
   <div class="grid grid-4" style="margin-top:2rem">
-    <div class="card"><div class="num">7.265</div><div class="label">Rechtsanwält:innen in Österreich (31.12.2025)</div></div>
+    <div class="card"><div class="num">7.265</div><div class="label">Rechtsanwält:innen in Österreich (31.12.2025)<sup class="ref"><a href="#q6">6</a></sup></div>
     <div class="card"><div class="num">~185k</div><div class="label">Anwält:innen im DACH-Raum als Gesamtmarkt</div></div>
-    <div class="card"><div class="num">56×</div><div class="label">ARR-Multiple, mit dem Legora derzeit bewertet wird</div></div>
+    <div class="card"><div class="num">56×</div><div class="label">ARR-Multiple, mit dem Legora derzeit bewertet wird<sup class="ref"><a href="#q1">1</a><a href="#q2">2</a></sup></div>
     <div class="card"><div class="num">€4,1M</div><div class="label">Österreich-Ziel-ARR Jahr 5 (konservativ, flacher Start)</div></div>
   </div>
   <div class="callout">
@@ -257,7 +266,7 @@
   <div class="grid grid-3">
     <div class="card"><h4>Zu generisch</h4><p>Breitband-KI kennt „Arbeitsrecht" abstrakt, aber nicht den anwendbaren Kollektivvertrag, nicht die aktuelle OGH-Linie zur Kündigungsanfechtung, nicht die ASVG-Beitragslogik.</p></div>
     <div class="card"><h4>Halluzinationsrisiko</h4><p>Bei Fristen, Anfechtungstatbeständen und Beitragsgrundlagen ist eine erfundene Fundstelle ein Haftungsfall — kein „Verbesserungsvorschlag".</p></div>
-    <div class="card"><h4>Zu teuer für Spezialisten</h4><p>Legoras Modell (10‑Seat-Minimum, ~30k USD Einstieg) passt für Großkanzleien — nicht für die vielen mittelständischen Arbeitsrechts-Boutiquen und HR-Rechtsabteilungen.</p></div>
+    <div class="card"><h4>Zu teuer für Spezialisten</h4><p>Legoras Modell (10‑Seat-Minimum, ~30k USD Einstieg)<sup class="ref"><a href="#q3">3</a></sup> passt für Großkanzleien — nicht für die vielen mittelständischen Arbeitsrechts-Boutiquen und HR-Rechtsabteilungen.</p></div>
   </div>
   <p style="margin-top:1.5rem">Die Marktlücke ist damit strukturell: Der Marktführer <strong>kann</strong> nicht beliebig tief in ein einzelnes Gebiet gehen, ohne seine Breite zu verwässern. Ein fokussierter Anbieter kann genau das — und wird dafür in der Nische bezahlt.</p>
 </section>
@@ -292,7 +301,7 @@
         <li>Enterprise-Fokus, Großkanzleien</li>
         <li>10‑Seat-Minimum, ~30k USD Einstieg</li>
         <li>Generalist — in keinem Gebiet der Tiefste</li>
-        <li>~5,6 Mrd. USD Bewertung, ~100M USD ARR</li>
+        <li>~5,6 Mrd. USD Bewertung, ~100M USD ARR<sup class="ref"><a href="#q1">1</a><a href="#q2">2</a></sup></li>
       </ul>
     </div>
     <div class="card" style="border-color:rgba(0,72,153,.4)">
@@ -314,7 +323,7 @@
   <span class="eyebrow">05 · Markt &amp; Nachfrage</span>
   <h2 class="section-title">Wie groß ist die Nachfrage wirklich?</h2>
   <div class="accent-line"></div>
-  <p>Wir modellieren den Markt bottom-up: Nutzer × realistischer Abo-Preis. Als Referenz für die Zahlungsbereitschaft dient Legora selbst — ~3.000 USD/Nutzer/Jahr Listenpreis, Enterprise bis 5.000–8.000 USD/Sitz.</p>
+  <p>Wir modellieren den Markt bottom-up: Nutzer × realistischer Abo-Preis. Als Referenz für die Zahlungsbereitschaft dient Legora selbst — ~3.000 USD/Nutzer/Jahr Listenpreis, Enterprise bis 5.000–8.000 USD/Sitz.<sup class="ref"><a href="#q3">3</a></sup></p>
   <div class="grid grid-3">
     <div class="card">
       <span class="badge b-cyan">TAM</span>
@@ -334,10 +343,10 @@
   </div>
   <h3>Belastbare Eckdaten</h3>
   <ul class="check">
-    <li><strong>7.265</strong> Rechtsanwält:innen in Österreich (Stand 31.12.2025, ÖRAK) plus 2.370 Rechtsanwaltsanwärter:innen.</li>
+    <li><strong>7.265</strong> Rechtsanwält:innen in Österreich (Stand 31.12.2025, ÖRAK) plus 2.370 Rechtsanwaltsanwärter:innen.<sup class="ref"><a href="#q6">6</a></sup></li>
     <li><strong>~185.000</strong> Anwält:innen im DACH-Raum insgesamt — Arbeitsrecht ist eines der verbreitetsten Praxisfelder und in nahezu jeder Wirtschaftskanzlei präsent.</li>
     <li>Dazu jede größere <strong>Personal- und Rechtsabteilung</strong>: Arbeitsrecht wird intern täglich gebraucht (Verträge, Beendigungen, Betriebsvereinbarungen, Compliance).</li>
-    <li>Über <strong>70 %</strong> der im Future‑Law Legal‑Tech‑Barometer 2025 Befragten sehen KI als Chance; juristische Recherche ist der größte Anwendungsbereich — genau Causls Kerndisziplin.</li>
+    <li>Über <strong>70 %</strong> der im Future‑Law Legal‑Tech‑Barometer 2025 Befragten sehen KI als Chance; juristische Recherche ist der größte Anwendungsbereich — genau Causls Kerndisziplin.<sup class="ref"><a href="#q7">7</a></sup></li>
   </ul>
 </section>
 
@@ -386,13 +395,13 @@
   </div>
 
   <h3>Qualitäts-KPIs — benchmarkt an den Marktführern</h3>
-  <p>Wir versprechen kein „gutes Gefühl", sondern messbare Ziele. Als Referenz dienen die einzigen belastbaren, unabhängigen Benchmarks der Branche: die <strong>Stanford-RegLab-Studie</strong> (Halluzinationsraten führender Legal-AI-Tools) und der <strong>Vals Legal AI Report</strong> (Genauigkeit vs. Anwalts-Baseline). Der entscheidende Vorteil eines Spezialisten: In <em>einer</em> engen Domäne sind niedrigere Halluzination und höhere Genauigkeit erreichbar als bei jedem Generalisten.</p>
+  <p>Wir versprechen kein „gutes Gefühl", sondern messbare Ziele. Als Referenz dienen die einzigen belastbaren, unabhängigen Benchmarks der Branche: die <strong>Stanford-RegLab-Studie</strong> (Halluzinationsraten führender Legal-AI-Tools)<sup class="ref"><a href="#q9">9</a></sup> und der <strong>Vals Legal AI Report</strong> (Genauigkeit vs. Anwalts-Baseline)<sup class="ref"><a href="#q10">10</a></sup>. Der entscheidende Vorteil eines Spezialisten: In <em>einer</em> engen Domäne sind niedrigere Halluzination und höhere Genauigkeit erreichbar als bei jedem Generalisten.</p>
   <div class="table-scroll">
     <table>
       <thead><tr><th>KPI</th><th>Marktführer / Referenz</th><th>Causl-Zielwert</th></tr></thead>
       <tbody>
-        <tr class="row-accent"><td><strong>Fachliche Antwortgenauigkeit</strong><br><span style="color:var(--text-3);font-size:.82rem">Arbeits-/Sozialrecht</span></td><td>Anwalts-Baseline 70,1 % · Harvey bis 94,8 % (Vals, breit)</td><td><strong>≥ 92 %</strong> in der Domäne</td></tr>
-        <tr><td><strong>Fundstellen-Treue / Halluzinationsrate</strong></td><td>Lexis+ AI 17 % · Westlaw AI 33 % · GPT-4 43 % (Stanford)</td><td><strong>&lt; 5 %</strong> — jede Antwort mit verifizierbarer Quelle</td></tr>
+        <tr class="row-accent"><td><strong>Fachliche Antwortgenauigkeit</strong><br><span style="color:var(--text-3);font-size:.82rem">Arbeits-/Sozialrecht</span></td><td>Anwalts-Baseline 70,1 % · Harvey bis 94,8 % (Vals, breit)<sup class="ref"><a href="#q10">10</a></sup></td><td><strong>≥ 92 %</strong> in der Domäne</td></tr>
+        <tr><td><strong>Fundstellen-Treue / Halluzinationsrate</strong></td><td>Lexis+ AI 17 % · Westlaw AI 33 % · GPT-4 43 % (Stanford)<sup class="ref"><a href="#q9">9</a></sup></td><td><strong>&lt; 5 %</strong> — jede Antwort mit verifizierbarer Quelle</td></tr>
         <tr><td><strong>Entwurfs-Übernahmequote</strong><br><span style="color:var(--text-3);font-size:.82rem">Anwendbarkeit als HR-Tool</span></td><td>— (kein Marktstandard; Chatbots liefern keine übernahmefähigen Entwürfe)</td><td><strong>≥ 70 %</strong> ohne inhaltliche Korrektur nutzbar</td></tr>
         <tr><td><strong>Rechen-Korrektheit</strong><br><span style="color:var(--text-3);font-size:.82rem">Fristen, Ansprüche, KV, ASVG</span></td><td>generelle LLMs: unzuverlässig bei Rechenlogik</td><td><strong>≥ 98 %</strong></td></tr>
         <tr><td><strong>Aktualität der Wissensbasis</strong></td><td>—</td><td>KV-/Judikatur-Stand <strong>≤ 30 Tage</strong></td></tr>
@@ -435,9 +444,9 @@
   <div class="accent-line"></div>
   <p>Software-Unternehmen werden nicht nach Gewinn, sondern nach <strong>ARR × Multiple</strong> bewertet. Der Multiple hängt an Wachstum, Verteidigbarkeit und Marktgröße. Die Referenzpunkte aus dem Legal-AI-Markt:</p>
   <div class="grid grid-3">
-    <div class="card"><div class="num">56×</div><div class="label"><strong>Legora</strong> — 5,6 Mrd. USD Bewertung bei ~100M USD ARR (2026)</div></div>
-    <div class="card"><div class="num">~37×</div><div class="label"><strong>Harvey</strong> — 11 Mrd. USD bei ~300M USD ARR (2026)</div></div>
-    <div class="card"><div class="num">15–30×</div><div class="label"><strong>Vertikale AI-SaaS</strong> — typische ARR-Multiples in Wachstumsrunden</div></div>
+    <div class="card"><div class="num">56×</div><div class="label"><strong>Legora</strong> — 5,6 Mrd. USD Bewertung bei ~100M USD ARR (2026)<sup class="ref"><a href="#q1">1</a><a href="#q2">2</a></sup></div></div>
+    <div class="card"><div class="num">~37×</div><div class="label"><strong>Harvey</strong> — 11 Mrd. USD bei ~300M USD ARR (2026)<sup class="ref"><a href="#q4">4</a></sup></div></div>
+    <div class="card"><div class="num">15–30×</div><div class="label"><strong>Vertikale AI-SaaS</strong> — typische ARR-Multiples in Wachstumsrunden<sup class="ref"><a href="#q5">5</a></sup></div></div>
   </div>
   <h3>Bewertungsszenarien Causl KI im Jahr 5</h3>
   <p>Angewandt auf das Ziel-ARR von <strong>~€23M</strong> — bewusst vom hypergewachsenen Marktführer-Multiple heruntergerechnet:</p>
@@ -462,7 +471,7 @@
   <span class="eyebrow">Der Partnerschafts-Case</span>
   <h2 class="section-title">Österreich zuerst, als HR-Tool — konservativ mit 7× bewertet</h2>
   <div class="accent-line"></div>
-  <p>Wir müssen für den Einstieg <strong>nicht</strong> den hypergewachsenen Legora-Multiple (56×) bemühen. Es genügt der <strong>belegte, reife Legal-Tech-Multiple von 7× Umsatz</strong>. Die These ist bewusst bodenständig: Wenn wir es <strong>als Partnerschaft</strong> schaffen, die <strong>österreichischen Kunden zuerst</strong> zu gewinnen — positioniert als praktisches <strong>HR-Tool</strong> für Kanzleien und Personal-/Rechtsabteilungen —, entsteht daraus ein handfester Ziel-Unternehmenswert. Diesen rechnen wir aber ehrlich auf heute zurück — mit eingepreistem Risiko — und geben die Unternehmenswert-Anteile (UWA) zu dieser risiko-adjustierten Bewertung aus, nicht zum Zielwert.</p>
+  <p>Wir müssen für den Einstieg <strong>nicht</strong> den hypergewachsenen Legora-Multiple (56×) bemühen. Es genügt der <strong>belegte, reife Legal-Tech-Multiple von 7× Umsatz</strong>.<sup class="ref"><a href="#q5">5</a></sup> Die These ist bewusst bodenständig: Wenn wir es <strong>als Partnerschaft</strong> schaffen, die <strong>österreichischen Kunden zuerst</strong> zu gewinnen — positioniert als praktisches <strong>HR-Tool</strong> für Kanzleien und Personal-/Rechtsabteilungen —, entsteht daraus ein handfester Ziel-Unternehmenswert. Diesen rechnen wir aber ehrlich auf heute zurück — mit eingepreistem Risiko — und geben die Unternehmenswert-Anteile (UWA) zu dieser risiko-adjustierten Bewertung aus, nicht zum Zielwert.</p>
 
   <div class="callout">
     <p><strong>Der Flywheel:</strong> Die beteiligten Kanzleien sind nicht nur Investoren — sie sind zugleich die <em>ersten Kunden</em> und der <em>Vertriebskanal</em>. Mit euren Mandaten, HR-Kontakten und Netzwerken baut ihr die österreichische Kundenbasis auf, die den Umsatz erzeugt. Über die UWA haltet ihr an genau dem Wert, den ihr selbst mitschafft. Ihr kauft euch nicht in eine Hoffnung ein, sondern in ein Ergebnis, das ihr direkt beeinflusst.</p>
@@ -579,14 +588,14 @@
   <span class="eyebrow">10 · Beteiligung</span>
   <h2 class="section-title">Wie Kanzleien investieren &amp; Partner werden</h2>
   <div class="accent-line"></div>
-  <p>Causl KI ist ein <strong>Technologieunternehmen, keine Rechtsanwaltsgesellschaft</strong>. Die berufsrechtlichen Beteiligungsschranken der Rechtsanwaltsordnung (insb. §&nbsp;21c RAO) gelten daher <strong>nicht</strong> — Kanzleien und einzelne Rechtsanwält:innen dürfen sich frei beteiligen. Als Gesellschaftsform ist die seit 1.&nbsp;1.&nbsp;2024 verfügbare <strong>Flexible Kapitalgesellschaft (FlexCo)</strong> vorgesehen: gezielt für Start-ups mit mehreren Kapitalgeber:innen gebaut.</p>
+  <p>Causl KI ist ein <strong>Technologieunternehmen, keine Rechtsanwaltsgesellschaft</strong>. Die berufsrechtlichen Beteiligungsschranken der Rechtsanwaltsordnung (insb. §&nbsp;21c RAO) gelten daher <strong>nicht</strong> — Kanzleien und einzelne Rechtsanwält:innen dürfen sich frei beteiligen.<sup class="ref"><a href="#q11">11</a></sup> Als Gesellschaftsform ist die seit 1.&nbsp;1.&nbsp;2024 verfügbare <strong>Flexible Kapitalgesellschaft (FlexCo)</strong> vorgesehen: gezielt für Start-ups mit mehreren Kapitalgeber:innen gebaut.<sup class="ref"><a href="#q8">8</a></sup></p>
 
   <h3>Vier Wege der Beteiligung</h3>
   <div class="grid grid-2">
     <div class="card">
       <span class="badge b-primary">Weg 1</span>
       <h4>Eigenkapital — Unternehmenswert-Anteile</h4>
-      <p>Die FlexCo erlaubt <strong>Unternehmenswert-Anteile</strong> bis zu 24,99 % des Stammkapitals: Beteiligung am Gewinn und Liquidationserlös, <em>ohne</em> Stimmrecht und ohne operative Mitverwaltung. Übertragung formerleichtert (Notariatsakt nicht erforderlich). Ideal für Kanzleien, die Kapital und Rendite wollen, aber nicht mitgeschäftsführen.</p>
+      <p>Die FlexCo erlaubt <strong>Unternehmenswert-Anteile</strong> bis zu 24,99 % des Stammkapitals<sup class="ref"><a href="#q8">8</a></sup>: Beteiligung am Gewinn und Liquidationserlös, <em>ohne</em> Stimmrecht und ohne operative Mitverwaltung. Übertragung formerleichtert (Notariatsakt nicht erforderlich). Ideal für Kanzleien, die Kapital und Rendite wollen, aber nicht mitgeschäftsführen.</p>
     </div>
     <div class="card">
       <span class="badge b-green">Weg 2</span>
@@ -620,8 +629,8 @@
   <h2 class="section-title">Sauber nach österreichischem Recht</h2>
   <div class="accent-line"></div>
   <div class="grid grid-2">
-    <div class="card"><h4>Keine RAO-Sperre</h4><p>§&nbsp;21c RAO beschränkt nur Beteiligungen an <em>Rechtsanwaltsgesellschaften</em>. Causl KI ist ein reines Softwareunternehmen — Kanzleien dürfen ohne berufsrechtliche Schranke Anteile halten.</p></div>
-    <div class="card"><h4>Kapitalmarktrecht</h4><p>Dieses Dokument ist <strong>kein öffentliches Angebot</strong> i.S.d. KMG 2019 / EU-Prospekt-VO. Beteiligungen erfolgen im Rahmen der Prospekt­ausnahmen (u.&nbsp;a. Angebot an qualifizierte Anleger, an unter 150 Personen je Mitgliedstaat, Volumen unter der Prospektschwelle bzw. nach AltFG).</p></div>
+    <div class="card"><h4>Keine RAO-Sperre</h4><p>§&nbsp;21c RAO beschränkt nur Beteiligungen an <em>Rechtsanwaltsgesellschaften</em>. Causl KI ist ein reines Softwareunternehmen — Kanzleien dürfen ohne berufsrechtliche Schranke Anteile halten.<sup class="ref"><a href="#q11">11</a></sup></p></div>
+    <div class="card"><h4>Kapitalmarktrecht</h4><p>Dieses Dokument ist <strong>kein öffentliches Angebot</strong> i.S.d. KMG 2019 / EU-Prospekt-VO. Beteiligungen erfolgen im Rahmen der Prospekt­ausnahmen (u.&nbsp;a. Angebot an qualifizierte Anleger, an unter 150 Personen je Mitgliedstaat, Volumen unter der Prospektschwelle bzw. nach AltFG).<sup class="ref"><a href="#q11">11</a></sup></p></div>
     <div class="card"><h4>Datenschutz &amp; Verschwiegenheit</h4><p>Verarbeitung DSGVO-konform; Auftrags­verarbeitung mit Kanzleien vertraglich geregelt. Die anwaltliche Verschwiegenheit (§&nbsp;9 RAO) bleibt jederzeit gewahrt.</p></div>
     <div class="card"><h4>Kein Rechtsdienstleister</h4><p>Causl KI liefert Fachinformation und Entwurfsunterstützung, ersetzt aber keine anwaltliche Beratung. Die berufsrechtliche Letztverantwortung verbleibt bei der Rechtsanwält:in.</p></div>
   </div>
@@ -647,6 +656,28 @@
     <div class="card"><span class="badge b-purple">Phase 3</span><h4>2028–2029</h4><p>HR-Tool-Rollout AT, Marktdurchdringung, Kurs auf Break-even (~Jahr 4).</p></div>
     <div class="card"><span class="badge b-cyan">Phase 4</span><h4>ab 2030</h4><p>AT-Marktführer erreicht (~€4M ARR, ~€29M Zielwert). DACH-Expansion als Upside.</p></div>
   </div>
+</section>
+
+<!-- 13 QUELLEN -->
+<section id="quellen">
+  <span class="eyebrow">13 · Quellen &amp; Belege</span>
+  <h2 class="section-title">Jede Kennzahl belegt</h2>
+  <div class="accent-line"></div>
+  <p>Alle im Dokument mit einer hochgestellten Ziffer markierten Zahlen sind hier mit Primär- bzw. anerkannten Branchenquellen hinterlegt (Stand der Recherche: Juli 2026). Marktzahlen unterliegen laufender Veränderung; Bewertungen sind zeitpunktbezogen.</p>
+  <ol class="quellen">
+    <li id="q1"><span class="src-label">Legora – Bewertung 5,6 Mrd. USD (Series D, 2026).</span> Legora Newsroom, „Legora raises $550 million Series D" — <a href="https://legora.com/newsroom/legora-raises-550-million-series-d-to-fuel-us-growth" target="_blank" rel="noopener">legora.com</a>; TechCrunch, 30.04.2026 — <a href="https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" target="_blank" rel="noopener">techcrunch.com</a></li>
+    <li id="q2"><span class="src-label">Legora – ~100 Mio. USD ARR (April 2026; €50M Ende 2025, €3M Ende 2024).</span> Legora Newsroom, „…past $100 million in ARR" — <a href="https://legora.com/newsroom/legal-teams-adoption-of-ai-propels-legora-past-100-million-in-annual-recurring-revenue" target="_blank" rel="noopener">legora.com</a>; Sacra — <a href="https://sacra.com/c/legora/" target="_blank" rel="noopener">sacra.com/c/legora</a></li>
+    <li id="q3"><span class="src-label">Legora – Preise (~3.000 USD/Sitz/Jahr, 10-Sitze-Minimum, Enterprise 5.000–8.000 USD/Sitz).</span> LawXY, „Legora Pricing 2026" — <a href="https://www.lawxyai.com/articles/legora-pricing-2026-real-costs-hidden-fees-better-alternatives" target="_blank" rel="noopener">lawxyai.com</a>; Vaquill, „How Much Does Legora Cost? 2026" — <a href="https://www.vaquill.ai/blog/how-much-does-legora-cost-2026" target="_blank" rel="noopener">vaquill.ai</a></li>
+    <li id="q4"><span class="src-label">Harvey – 11 Mrd. USD Bewertung bei ~300 Mio. USD ARR (2026).</span> Harvey, „Harvey Raises at $11 Billion Valuation" — <a href="https://www.harvey.ai/blog/harvey-raises-at-dollar11-billion-valuation-to-scale-agents-across-law-firms-and-enterprises" target="_blank" rel="noopener">harvey.ai</a>; CNBC, 25.03.2026 — <a href="https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html" target="_blank" rel="noopener">cnbc.com</a></li>
+    <li id="q5"><span class="src-label">Multiples – Legal-Tech ~7× Umsatz; vertikale AI-SaaS 15–30× ARR.</span> saas.group, „AI valuation multiples 2025" — <a href="https://saas.group/blog/ai-valuation-multiples-most-valuable-industries-in-2025/" target="_blank" rel="noopener">saas.group</a>; Aventis Advisors, „AI Valuation Multiples" — <a href="https://aventis-advisors.com/ai-valuation-multiples/" target="_blank" rel="noopener">aventis-advisors.com</a></li>
+    <li id="q6"><span class="src-label">Österreich – 7.265 Rechtsanwält:innen (Stand 31.12.2025) + 2.370 Anwärter:innen.</span> Österreichischer Rechtsanwaltskammertag (ÖRAK), „Strukturen, Daten, Fakten" — <a href="https://www.oerak.at/strukturen-daten-fakten/" target="_blank" rel="noopener">oerak.at</a></li>
+    <li id="q7"><span class="src-label">Future-Law Legal-Tech-Barometer 2025 – &gt;70 % sehen KI als Chance; Recherche größter Anwendungsbereich.</span> Future-Law, „Legal Tech Map Austria 2025" — <a href="https://future-law.eu/basic-knowledge/legal-tech-map-austria-2025/" target="_blank" rel="noopener">future-law.eu</a></li>
+    <li id="q8"><span class="src-label">FlexCo / Unternehmenswert-Anteile (bis 24,99 %; Mindeststammkapital €10.000; seit 1.1.2024).</span> WKO, „Flexible Kapitalgesellschaft (FlexKapG)" — <a href="https://www.wko.at/gruendung/flexible-kapitalgesellschaft-flexkapg-" target="_blank" rel="noopener">wko.at</a>; TPA, „FlexCo – die neue Rechtsform" — <a href="https://www.tpa-group.at/news/flexco-flexible-kapitalgesellschaft-die-neue-rechtsform/" target="_blank" rel="noopener">tpa-group.at</a></li>
+    <li id="q9"><span class="src-label">Halluzinationsraten Legal-AI (Lexis+ AI 17 %, Westlaw AI 33 %, GPT-4 43 %).</span> Stanford HAI, „AI on Trial: Legal Models Hallucinate…" — <a href="https://hai.stanford.edu/news/ai-trial-legal-models-hallucinate-1-out-6-or-more-benchmarking-queries" target="_blank" rel="noopener">hai.stanford.edu</a>; Stanford RegLab, „Hallucination-Free?" (JELS 2024/25) — <a href="https://reglab.stanford.edu/publications/hallucination-free-assessing-the-reliability-of-leading-ai-legal-research-tools/" target="_blank" rel="noopener">reglab.stanford.edu</a></li>
+    <li id="q10"><span class="src-label">Vals Legal AI Report (Feb. 2025) – Genauigkeit: Harvey bis 94,8 %, Anwalts-Baseline 70,1 %.</span> Artificial Lawyer — <a href="https://www.artificiallawyer.com/2025/02/27/vals-publishes-results-of-first-legal-ai-benchmark-study/" target="_blank" rel="noopener">artificiallawyer.com</a>; Vals AI, VLAIR — <a href="https://www.vals.ai/industry-reports/vlair-2-27-25" target="_blank" rel="noopener">vals.ai</a></li>
+    <li id="q11"><span class="src-label">Rechtsgrundlagen Österreich – RAO (§ 21c), KMG 2019, AltFG, FlexKapGG.</span> Rechtsinformationssystem des Bundes (RIS) — <a href="https://www.ris.bka.gv.at/" target="_blank" rel="noopener">ris.bka.gv.at</a> (konsolidiertes Bundesrecht)</li>
+  </ol>
+  <p class="disclaimer" style="margin-top:1.5rem">Sekundärquellen (Branchenmedien, Marktdaten-Anbieter wie Sacra) geben teils Schätzungen wieder; wo verfügbar, ist zusätzlich die Primärquelle (Unternehmens-Newsroom, wissenschaftliche Studie, Behörde) angeführt. Die rechtlichen Aussagen sind keine Rechtsberatung; maßgeblich ist der jeweils geltende Gesetzestext laut RIS.</p>
 </section>
 
 </div><!-- /wrap -->
