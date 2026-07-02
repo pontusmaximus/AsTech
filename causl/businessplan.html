@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Causl KI — Business Plan &amp; Beteiligungsangebot für Kanzleien</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --primary:#004899;
+    --primary-light:#0066cc;
+    --primary-dark:#003366;
+    --bg:#0a0a0f;
+    --bg-elevated:#12121a;
+    --card:#1a1a25;
+    --footer:#050508;
+    --text:#ffffff;
+    --text-2:rgba(255,255,255,.72);
+    --text-3:rgba(255,255,255,.5);
+    --text-4:rgba(255,255,255,.32);
+    --border:rgba(255,255,255,.08);
+    --card-border:rgba(255,255,255,.06);
+    --divider:rgba(255,255,255,.1);
+    --ease:cubic-bezier(.16,1,.3,1);
+    --radius-sm:.5rem;
+    --radius-lg:1.25rem;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'DM Sans',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .grid-bg{
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+    background-size:56px 56px;
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 40%,transparent 100%);
+  }
+  .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 1.5rem}
+  h1,h2,h3,h4{font-family:'Space Grotesk','DM Sans',sans-serif;letter-spacing:-.02em}
+  .display{font-weight:300;font-size:clamp(2.4rem,7vw,5rem);line-height:1.04}
+  .section-title{font-weight:300;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin-bottom:.5rem}
+  h3{font-weight:500;font-size:clamp(1.15rem,2vw,1.5rem);margin:2rem 0 .75rem}
+  h4{font-weight:500;font-size:1.05rem;margin:1.25rem 0 .5rem}
+  p{color:var(--text-2);margin-bottom:1rem;font-weight:300}
+  strong{color:var(--text);font-weight:500}
+  .accent-line{width:60px;height:2px;background:var(--primary);margin:1.25rem 0 1.75rem}
+  .eyebrow{font-family:'Space Grotesk';text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--primary-light);font-weight:500}
+  a{color:var(--primary-light);text-decoration:none}
+
+  /* NAV */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,10,15,.85);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{max-width:1080px;margin:0 auto;padding:.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:.6rem;font-family:'Space Grotesk';font-weight:600;font-size:1.15rem;letter-spacing:-.01em;color:#fff}
+  .logo{width:34px;height:34px}
+  .nav-links{display:flex;gap:1.5rem}
+  .nav-links a{color:var(--text-3);font-size:.85rem;transition:color .25s var(--ease)}
+  .nav-links a:hover{color:#fff}
+  @media(max-width:820px){.nav-links{display:none}}
+
+  /* HERO */
+  header.hero{padding:6rem 0 4rem;position:relative}
+  .hero-glow{position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,72,153,.28),transparent 60%);filter:blur(40px);z-index:0;pointer-events:none}
+  .hero .wrap{position:relative;z-index:2}
+  .hero p.lead{font-size:clamp(1.05rem,2vw,1.4rem);color:var(--text-2);max-width:640px;margin-top:1.5rem;font-weight:300}
+  .pill{display:inline-block;padding:.4rem .9rem;border:1px solid var(--border);border-radius:999px;font-size:.75rem;color:var(--text-2);margin-bottom:1.5rem;background:rgba(255,255,255,.02)}
+  .doc-meta{display:flex;flex-wrap:wrap;gap:2rem;margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--divider)}
+  .doc-meta div span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--text-4)}
+  .doc-meta div strong{font-family:'Space Grotesk';font-size:.95rem}
+
+  /* SECTIONS */
+  section{padding:4rem 0;border-top:1px solid var(--divider);position:relative}
+  section.first{border-top:none}
+
+  /* CARDS */
+  .card{
+    background:linear-gradient(145deg,#1a1a25,#12121a);
+    border:1px solid var(--card-border);
+    border-radius:var(--radius-lg);
+    padding:1.75rem;transition:.4s var(--ease);
+  }
+  .card:hover{border-color:rgba(0,72,153,.4);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.4)}
+  .grid{display:grid;gap:1.25rem}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:820px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+  .card .num{font-family:'Space Grotesk';font-weight:300;font-size:2.4rem;color:#fff;line-height:1;margin-bottom:.4rem}
+  .card .num small{font-size:1rem;color:var(--primary-light)}
+  .card .label{font-size:.85rem;color:var(--text-3)}
+  .card h4{margin-top:0}
+  .card p{font-size:.92rem;margin-bottom:0}
+
+  /* BADGES */
+  .badge{display:inline-block;padding:.2rem .6rem;border-radius:.4rem;font-size:.68rem;font-weight:600;font-family:'Space Grotesk';letter-spacing:.05em;text-transform:uppercase;color:#fff}
+  .b-primary{background:var(--primary)}
+  .b-green{background:#10b981}
+  .b-purple{background:#a855f7}
+  .b-amber{background:#d97706}
+  .b-cyan{background:#0891b2}
+
+  /* TABLE */
+  .table-scroll{overflow-x:auto;border-radius:var(--radius-lg);border:1px solid var(--card-border);margin:1.5rem 0}
+  table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:640px}
+  th,td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid var(--divider)}
+  th{background:var(--bg-elevated);font-family:'Space Grotesk';font-weight:500;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3)}
+  td{color:var(--text-2);font-weight:300}
+  td strong{color:#fff}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:rgba(255,255,255,.02)}
+  .row-accent td{background:rgba(0,72,153,.08)}
+  .row-accent:hover td{background:rgba(0,72,153,.12)}
+
+  /* LISTS */
+  ul.check{list-style:none;margin:1rem 0}
+  ul.check li{position:relative;padding-left:1.75rem;margin-bottom:.65rem;color:var(--text-2);font-weight:300}
+  ul.check li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:2px;background:var(--primary-light);box-shadow:0 0 10px rgba(0,72,153,.6)}
+  ul.plain{list-style:none;margin:.5rem 0}
+  ul.plain li{position:relative;padding-left:1.2rem;margin-bottom:.5rem;color:var(--text-2);font-weight:300;font-size:.95rem}
+  ul.plain li::before{content:"—";position:absolute;left:0;color:var(--primary-light)}
+
+  /* CALLOUT */
+  .callout{border-left:2px solid var(--primary);background:rgba(0,72,153,.06);padding:1.25rem 1.5rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:1.5rem 0}
+  .callout p{margin-bottom:0;color:var(--text-2)}
+  .callout strong{color:#fff}
+
+  /* CTA */
+  .cta-box{background:linear-gradient(145deg,rgba(0,72,153,.18),rgba(0,72,153,.04));border:1px solid rgba(0,72,153,.35);border-radius:var(--radius-lg);padding:2.5rem;text-align:center;box-shadow:0 0 60px rgba(0,72,153,.15)}
+  .btn{display:inline-block;padding:.9rem 2rem;border-radius:var(--radius-sm);font-weight:500;font-size:.95rem;transition:.3s var(--ease);cursor:pointer;font-family:'DM Sans'}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-primary:hover{background:var(--primary-light);box-shadow:0 8px 18px rgba(0,72,153,.3);transform:translateY(-1px)}
+  .btn-outline{background:transparent;border:1px solid rgba(255,255,255,.2);color:#fff;margin-left:.75rem}
+  .btn-outline:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.4)}
+
+  /* COMPARISON columns */
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+  @media(max-width:820px){.vs{grid-template-columns:1fr}}
+  .vs .card h4{display:flex;align-items:center;gap:.5rem}
+
+  /* Disclaimer */
+  .disclaimer{font-size:.8rem;color:var(--text-4);line-height:1.7;font-weight:300}
+  .disclaimer strong{color:var(--text-3)}
+
+  footer{background:var(--footer);border-top:1px solid var(--border);padding:3rem 0;margin-top:2rem}
+  .toc{list-style:none;columns:2;column-gap:2rem}
+  .toc li{margin-bottom:.5rem;break-inside:avoid}
+  .toc a{color:var(--text-2);font-size:.9rem}
+  .toc a:hover{color:#fff}
+  @media(max-width:600px){.toc{columns:1}}
+  .kicker-num{font-family:'Space Grotesk';color:var(--primary-light);font-weight:500;font-size:.9rem;margin-right:.5rem}
+  @media print{
+    .grid-bg,.hero-glow,nav{display:none}
+    body{background:#fff;color:#111}
+    .card{background:#f7f9fc;border-color:#e2e8f0}
+  }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 8L16 20L6 32" stroke="#004899" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 8L28 20L18 32" stroke="#004899" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+      </svg>
+      Causl<span style="color:var(--primary-light)">KI</span>
+    </div>
+    <div class="nav-links">
+      <a href="#summary">Summary</a>
+      <a href="#markt">Markt</a>
+      <a href="#modell">Modell</a>
+      <a href="#bewertung">Bewertung</a>
+      <a href="#invest">Beteiligung</a>
+      <a href="#recht">Rechtliches</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <span class="pill">Vertraulicher Business Plan · Version 1.0 · Juli 2026</span>
+    <h1 class="display">Die spezialisierte KI für<br>Arbeits- &amp; Sozialrecht.</h1>
+    <div class="accent-line"></div>
+    <p class="lead">Legora deckt alles ab — ganz Europa, jedes Rechtsgebiet. <strong>Causl KI</strong> macht das Gegenteil: ein einziges Rechtsgebiet, aber tiefer, präziser und verlässlicher als jedes horizontale Werkzeug. Dieses Dokument richtet sich an Kanzleien, die als <strong>Partner und Investoren</strong> von Beginn an dabei sein wollen.</p>
+    <div class="doc-meta">
+      <div><span>Vehikel</span><strong>Causl KI FlexCo i.G.</strong></div>
+      <div><span>Rechtsrahmen</span><strong>Österreichisches Recht</strong></div>
+      <div><span>Fokus</span><strong>Arbeits- &amp; Sozialrecht</strong></div>
+      <div><span>Adressat</span><strong>Kanzleien &amp; Rechtsabteilungen</strong></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- INHALT -->
+<section class="first" id="inhalt">
+  <span class="eyebrow">Inhalt</span>
+  <h2 class="section-title">Struktur dieses Dokuments</h2>
+  <div class="accent-line"></div>
+  <ul class="toc">
+    <li><a href="#summary"><span class="kicker-num">01</span>Executive Summary</a></li>
+    <li><a href="#problem"><span class="kicker-num">02</span>Problem &amp; Marktlücke</a></li>
+    <li><a href="#loesung"><span class="kicker-num">03</span>Die Lösung: Causl KI</a></li>
+    <li><a href="#position"><span class="kicker-num">04</span>Positionierung vs. Legora</a></li>
+    <li><a href="#markt"><span class="kicker-num">05</span>Markt &amp; Nachfrage</a></li>
+    <li><a href="#modell"><span class="kicker-num">06</span>Geschäftsmodell &amp; Preise</a></li>
+    <li><a href="#finanzen"><span class="kicker-num">07</span>Finanzplan 5 Jahre</a></li>
+    <li><a href="#bewertung"><span class="kicker-num">08</span>Unternehmensbewertung</a></li>
+    <li><a href="#zielgruppe"><span class="kicker-num">09</span>Zielgruppen-Strategie</a></li>
+    <li><a href="#invest"><span class="kicker-num">10</span>Beteiligung für Kanzleien</a></li>
+    <li><a href="#recht"><span class="kicker-num">11</span>Rechtlicher Rahmen (AT)</a></li>
+    <li><a href="#roadmap"><span class="kicker-num">12</span>Roadmap &amp; Meilensteine</a></li>
+  </ul>
+</section>
+
+<!-- 01 SUMMARY -->
+<section id="summary">
+  <span class="eyebrow">01 · Executive Summary</span>
+  <h2 class="section-title">Ein enges Gebiet, mit Tiefe verteidigt</h2>
+  <div class="accent-line"></div>
+  <p>Der Markt für juristische KI ist explodiert. Der europäische Marktführer <strong>Legora</strong> wird nach seiner Series‑D (2026) mit rund <strong>5,6 Mrd. USD</strong> bewertet — bei etwa <strong>100 Mio. USD ARR</strong>. Legoras Stärke ist zugleich seine Angriffsfläche: Es bedient <em>jedes</em> Rechtsgebiet in <em>ganz</em> Europa und ist damit in keinem einzelnen Gebiet der Beste.</p>
+  <p><strong>Causl KI</strong> besetzt bewusst die Gegenposition: eine KI ausschließlich für <strong>Arbeits- und Sozialrecht</strong> im DACH-Raum — trainiert und kuratiert auf ASVG, ArbVG, AngG, AVRAG, GlBG, ArbIG, Kollektivverträge, VwGH-/OGH-Judikatur und die Praxis der Sozialversicherungsträger. Nicht breiter als der Wettbewerb, sondern in genau diesem Feld spürbar besser.</p>
+  <div class="grid grid-4" style="margin-top:2rem">
+    <div class="card"><div class="num">7.265</div><div class="label">Rechtsanwält:innen in Österreich (31.12.2025)</div></div>
+    <div class="card"><div class="num">~185k</div><div class="label">Anwält:innen im DACH-Raum als Gesamtmarkt</div></div>
+    <div class="card"><div class="num">56×</div><div class="label">ARR-Multiple, mit dem Legora derzeit bewertet wird</div></div>
+    <div class="card"><div class="num">€23M</div><div class="label">Ziel-ARR Causl KI im Jahr 5 (Basisszenario)</div></div>
+  </div>
+  <div class="callout">
+    <p><strong>Die Investment-These in einem Satz:</strong> Wer heute zu einem Bruchteil von Legoras Bewertung in einen fokussierten Marktführer für DACH-Arbeitsrecht einsteigt, kauft sich Zugang zu genau der Vertikalen, in der spezialisierte KI die höchste Zahlungsbereitschaft und die stärkste Verteidigungslinie hat.</p>
+  </div>
+</section>
+
+<!-- 02 PROBLEM -->
+<section id="problem">
+  <span class="eyebrow">02 · Problem &amp; Marktlücke</span>
+  <h2 class="section-title">Breite KI scheitert an der Tiefe des Arbeitsrechts</h2>
+  <div class="accent-line"></div>
+  <p>Arbeits- und Sozialrecht ist eines der beratungsintensivsten, praxisdichtesten und zugleich fehleranfälligsten Rechtsgebiete. Es lebt von Kollektivverträgen, ständiger Judikatur-Fortentwicklung, sozialversicherungsrechtlichen Feinheiten und knappen Fristen. Genau hier zeigen horizontale Werkzeuge ihre Schwächen:</p>
+  <div class="grid grid-3">
+    <div class="card"><h4>Zu generisch</h4><p>Breitband-KI kennt „Arbeitsrecht" abstrakt, aber nicht den anwendbaren Kollektivvertrag, nicht die aktuelle OGH-Linie zur Kündigungsanfechtung, nicht die ASVG-Beitragslogik.</p></div>
+    <div class="card"><h4>Halluzinationsrisiko</h4><p>Bei Fristen, Anfechtungstatbeständen und Beitragsgrundlagen ist eine erfundene Fundstelle ein Haftungsfall — kein „Verbesserungsvorschlag".</p></div>
+    <div class="card"><h4>Zu teuer für Spezialisten</h4><p>Legoras Modell (10‑Seat-Minimum, ~30k USD Einstieg) passt für Großkanzleien — nicht für die vielen mittelständischen Arbeitsrechts-Boutiquen und HR-Rechtsabteilungen.</p></div>
+  </div>
+  <p style="margin-top:1.5rem">Die Marktlücke ist damit strukturell: Der Marktführer <strong>kann</strong> nicht beliebig tief in ein einzelnes Gebiet gehen, ohne seine Breite zu verwässern. Ein fokussierter Anbieter kann genau das — und wird dafür in der Nische bezahlt.</p>
+</section>
+
+<!-- 03 LÖSUNG -->
+<section id="loesung">
+  <span class="eyebrow">03 · Die Lösung</span>
+  <h2 class="section-title">Causl KI — der Fachassistent, kein Alleskönner</h2>
+  <div class="accent-line"></div>
+  <p>Causl KI ist ein KI-Arbeitsplatz ausschließlich für Arbeits- und Sozialrecht. Jede Funktion ist auf die tatsächlichen Arbeitsschritte einer Arbeitsrechts-Kanzlei bzw. einer HR-Rechtsabteilung zugeschnitten.</p>
+  <div class="grid grid-2">
+    <div class="card"><span class="badge b-primary">Kernmodul</span><h4>Kuratierte Wissensbasis</h4><p>Laufend gepflegte Anbindung an Gesetzestext, Kollektivverträge, Sozialversicherungs­recht und Höchstgerichts­judikatur mit belastbaren, verlinkten Fundstellen — Antworten mit Zitat statt ohne.</p></div>
+    <div class="card"><span class="badge b-green">Draft</span><h4>Schriftsatz- &amp; Vertragsentwürfe</h4><p>Dienstverträge, Kündigungen, Entlassungen, Anfechtungsklagen, Aufhebungs­vereinbarungen — vorbefüllt aus dem einschlägigen KV und der aktuellen Rechtslage.</p></div>
+    <div class="card"><span class="badge b-purple">Prüfen</span><h4>Fristen- &amp; Anspruchsrechner</h4><p>Kündigungs­fristen, Abfertigung „alt/neu", Urlaubsersatzleistung, Beitrags­grundlagen — nachvollziehbar gerechnet, nicht geschätzt.</p></div>
+    <div class="card"><span class="badge b-cyan">Analyse</span><h4>Dokumenten- &amp; Aktenanalyse</h4><p>Bestehende Verträge und KV auf Risiken, Unwirksamkeiten und Handlungsbedarf prüfen — mit Gegenüberstellung zur aktuellen Judikatur.</p></div>
+  </div>
+  <div class="callout">
+    <p><strong>Warum besser als eine Breitband-KI?</strong> Weil Datenkuratierung, Prompt-Logik, Prüf-Guardrails und Evaluierung ausschließlich für <em>ein</em> Gebiet gebaut werden. Tiefe entsteht nicht durch ein größeres Modell, sondern durch domänenspezifische Daten, Fachredaktion und Tests — genau das lässt sich in einer Nische leisten und in der Breite nicht.</p>
+  </div>
+</section>
+
+<!-- 04 POSITIONIERUNG -->
+<section id="position">
+  <span class="eyebrow">04 · Positionierung</span>
+  <h2 class="section-title">Legora geht in die Breite. Wir gehen in die Tiefe.</h2>
+  <div class="accent-line"></div>
+  <div class="vs">
+    <div class="card">
+      <h4><span class="badge b-amber">Legora</span> Der horizontale Riese</h4>
+      <ul class="plain">
+        <li>Alle Rechtsgebiete, ganz Europa</li>
+        <li>Enterprise-Fokus, Großkanzleien</li>
+        <li>10‑Seat-Minimum, ~30k USD Einstieg</li>
+        <li>Generalist — in keinem Gebiet der Tiefste</li>
+        <li>~5,6 Mrd. USD Bewertung, ~100M USD ARR</li>
+      </ul>
+    </div>
+    <div class="card" style="border-color:rgba(0,72,153,.4)">
+      <h4><span class="badge b-primary">Causl KI</span> Der vertikale Spezialist</h4>
+      <ul class="plain">
+        <li>Nur Arbeits- &amp; Sozialrecht, DACH</li>
+        <li>Boutiquen, Mittelstand &amp; HR-Rechtsabteilungen</li>
+        <li>Ab 1 Nutzer, transparenter Monatspreis</li>
+        <li>Spezialist — in genau diesem Gebiet der Beste</li>
+        <li>Verteidigt durch Daten, Fachredaktion, Fokus</li>
+      </ul>
+    </div>
+  </div>
+  <p style="margin-top:1.5rem">Das ist kein Frontalangriff auf Legora, sondern eine <strong>komplementäre Nische</strong>. Selbst eine Kanzlei, die Legora einsetzt, hat einen rationalen Grund, für Arbeitsrecht das schärfere Werkzeug zu nutzen. Vertikale KI verdrängt derzeit reihenweise horizontale Anbieter, weil Domänentiefe der eigentliche Wettbewerbsvorteil ist.</p>
+</section>
+
+<!-- 05 MARKT -->
+<section id="markt">
+  <span class="eyebrow">05 · Markt &amp; Nachfrage</span>
+  <h2 class="section-title">Wie groß ist die Nachfrage wirklich?</h2>
+  <div class="accent-line"></div>
+  <p>Wir modellieren den Markt bottom-up: Nutzer × realistischer Abo-Preis. Als Referenz für die Zahlungsbereitschaft dient Legora selbst — ~3.000 USD/Nutzer/Jahr Listenpreis, Enterprise bis 5.000–8.000 USD/Sitz.</p>
+  <div class="grid grid-3">
+    <div class="card">
+      <span class="badge b-cyan">TAM</span>
+      <div class="num" style="margin-top:.75rem">~€225M<small>/Jahr</small></div>
+      <p>Gesamter adressierbarer DACH-Softwaremarkt für Arbeits-/Sozialrecht: ~90.000 Fachanwender (Anwält:innen, In-house, HR-Legal) × ~€2.500/Sitz/Jahr.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-purple">SAM</span>
+      <div class="num" style="margin-top:.75rem">~€60M<small>/Jahr</small></div>
+      <p>Realistisch erreichbar: arbeitsrechtlich fokussierte Kanzleien &amp; Rechtsabteilungen in AT + früh erschließbarem DACH.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-primary">SOM</span>
+      <div class="num" style="margin-top:.75rem">~€23M<small>/Jahr</small></div>
+      <p>In 5 Jahren erreichbarer Anteil (≈ Ziel-ARR Jahr 5), rund 10 % des SAM — ambitioniert, aber belegbar.</p>
+    </div>
+  </div>
+  <h3>Belastbare Eckdaten</h3>
+  <ul class="check">
+    <li><strong>7.265</strong> Rechtsanwält:innen in Österreich (Stand 31.12.2025, ÖRAK) plus 2.370 Rechtsanwaltsanwärter:innen.</li>
+    <li><strong>~185.000</strong> Anwält:innen im DACH-Raum insgesamt — Arbeitsrecht ist eines der verbreitetsten Praxisfelder und in nahezu jeder Wirtschaftskanzlei präsent.</li>
+    <li>Dazu jede größere <strong>Personal- und Rechtsabteilung</strong>: Arbeitsrecht wird intern täglich gebraucht (Verträge, Beendigungen, Betriebsvereinbarungen, Compliance).</li>
+    <li>Über <strong>70 %</strong> der im Future‑Law Legal‑Tech‑Barometer 2025 Befragten sehen KI als Chance; juristische Recherche ist der größte Anwendungsbereich — genau Causls Kerndisziplin.</li>
+  </ul>
+</section>
+
+<!-- 06 MODELL -->
+<section id="modell">
+  <span class="eyebrow">06 · Geschäftsmodell</span>
+  <h2 class="section-title">Wie Causl KI Geld verdient</h2>
+  <div class="accent-line"></div>
+  <p>SaaS-Abonnement pro Nutzer/Monat, jährlich abgerechnet, mit optionaler nutzungsabhängiger Komponente für rechenintensive Agenten-Läufe. Bewusst unter Legora positioniert für den Einstieg, aber mit Premium-Aufschlag für die Fachtiefe.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Tarif</th><th>Zielgruppe</th><th>Preis / Nutzer / Monat</th><th>Mindestnutzer</th><th>ARR pro Kunde (Ø)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Solo</strong></td><td>Einzelanwält:in</td><td>€149</td><td>1</td><td>~€1.800</td></tr>
+        <tr class="row-accent"><td><strong>Kanzlei</strong></td><td>Arbeitsrechts-Boutique / Team</td><td>€249</td><td>3</td><td>~€12.000</td></tr>
+        <tr><td><strong>Corporate</strong></td><td>HR- &amp; Rechtsabteilung</td><td>€349</td><td>5</td><td>~€21.000</td></tr>
+        <tr><td><strong>Enterprise</strong></td><td>Konzern / Großkanzlei</td><td>individuell</td><td>10+</td><td>€40.000+</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid grid-3">
+    <div class="card"><h4>Wiederkehrend</h4><p>Planbare Jahresabos → hohe Net Revenue Retention, weil das Werkzeug in den täglichen Workflow eingebettet ist.</p></div>
+    <div class="card"><h4>Skalierbar</h4><p>Software-Marge: Grenzkosten je zusätzlichem Nutzer minimal. Content-Pflege ist Fixkosten, kein Kostenblock pro Kunde.</p></div>
+    <div class="card"><h4>Verteidigt</h4><p>Wechselkosten steigen mit Vorlagen, Aktenhistorie und Team-Wissen im System — plus Datenmoat aus der Fachredaktion.</p></div>
+  </div>
+</section>
+
+<!-- 07 FINANZEN -->
+<section id="finanzen">
+  <span class="eyebrow">07 · Finanzplan</span>
+  <h2 class="section-title">Der Weg zur Wirtschaftlichkeit</h2>
+  <div class="accent-line"></div>
+  <p>Konservatives Basisszenario, DACH-Rollout. Annahme: schrittwachsende Kundenzahl, steigender Ø‑Auftragswert (mehr Sitze pro Kunde), typische SaaS-Bruttomarge 80–85 %.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Jahr</th><th>Kunden</th><th>Ø Sitze</th><th>Ø ACV</th><th>ARR</th><th>Meilenstein</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Jahr 1</strong></td><td>40</td><td>4</td><td>€11k</td><td><strong>€0,44M</strong></td><td>Produkt-Markt-Fit AT, erste Design-Partner</td></tr>
+        <tr><td><strong>Jahr 2</strong></td><td>140</td><td>4,5</td><td>€13k</td><td><strong>€1,8M</strong></td><td>Marktführung AT-Arbeitsrecht, Start DE</td></tr>
+        <tr class="row-accent"><td><strong>Jahr 3</strong></td><td>380</td><td>5</td><td>€15k</td><td><strong>€5,7M</strong></td><td>Break-even in Sicht, DE-Skalierung</td></tr>
+        <tr><td><strong>Jahr 4</strong></td><td>750</td><td>5,5</td><td>€17k</td><td><strong>€12,7M</strong></td><td>Profitabel, CH-Eintritt</td></tr>
+        <tr><td><strong>Jahr 5</strong></td><td>1.300</td><td>6</td><td>€18k</td><td><strong>€23,4M</strong></td><td>DACH-Marktführer in der Vertikale</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <p><strong>Wann wird es wirtschaftlich?</strong> Der Fixkostenblock (Fachredaktion, Modell-/Infrastrukturkosten, kleines Team) ist weitgehend unabhängig von der Kundenzahl. Ab dem Punkt, an dem der jährliche Deckungsbeitrag diesen Block übersteigt — im Modell rund um <strong>Jahr 3 bei ~€5–6M ARR</strong> — kippt das Unternehmen in die Profitabilität. Jeder weitere Kunde ist danach überproportional wertsteigernd.</p>
+  </div>
+</section>
+
+<!-- 08 BEWERTUNG -->
+<section id="bewertung">
+  <span class="eyebrow">08 · Unternehmensbewertung</span>
+  <h2 class="section-title">Wie viel ist so ein Unternehmen wert?</h2>
+  <div class="accent-line"></div>
+  <p>Software-Unternehmen werden nicht nach Gewinn, sondern nach <strong>ARR × Multiple</strong> bewertet. Der Multiple hängt an Wachstum, Verteidigbarkeit und Marktgröße. Die Referenzpunkte aus dem Legal-AI-Markt:</p>
+  <div class="grid grid-3">
+    <div class="card"><div class="num">56×</div><div class="label"><strong>Legora</strong> — 5,6 Mrd. USD Bewertung bei ~100M USD ARR (2026)</div></div>
+    <div class="card"><div class="num">~37×</div><div class="label"><strong>Harvey</strong> — 11 Mrd. USD bei ~300M USD ARR (2026)</div></div>
+    <div class="card"><div class="num">15–30×</div><div class="label"><strong>Vertikale AI-SaaS</strong> — typische ARR-Multiples in Wachstumsrunden</div></div>
+  </div>
+  <h3>Bewertungsszenarien Causl KI im Jahr 5</h3>
+  <p>Angewandt auf das Ziel-ARR von <strong>~€23M</strong> — bewusst vom hypergewachsenen Marktführer-Multiple heruntergerechnet:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Szenario</th><th>ARR-Multiple</th><th>Bewertung Jahr 5</th><th>Logik</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Konservativ</strong></td><td>8×</td><td><strong>~€185M</strong></td><td>Reifer Legal-Tech-Multiple, ohne KI-Prämie</td></tr>
+        <tr class="row-accent"><td><strong>Basis</strong></td><td>15×</td><td><strong>~€350M</strong></td><td>Unteres Ende vertikaler AI-SaaS</td></tr>
+        <tr><td><strong>Bull</strong></td><td>30×</td><td><strong>~€700M</strong></td><td>Wachstumsstarker Nischenführer mit Daten-Moat</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <p><strong>Der Hebel für frühe Partner:</strong> Der Wert entsteht aus dem Zusammenspiel von <em>vielen wiederkehrenden, relativ teuren Abos</em> und einem hohen Multiple. Ein Kunde mit €15k ACV ist bei einem 15×-Multiple im Unternehmenswert rund <strong>€225.000</strong> „wert". Genau deshalb ist jede früh gewonnene Kanzlei nicht nur Umsatz, sondern ein Vielfaches davon an Enterprise Value — und der Einstieg heute erfolgt zu einem Bruchteil der späteren Bewertung.</p>
+  </div>
+  <p class="disclaimer">Sämtliche Bewertungen sind modellhafte Szenarien auf Basis öffentlich berichteter Vergleichswerte (Legora, Harvey) und keine Zusicherung künftiger Werte. Multiples schwanken markt- und phasenabhängig erheblich.</p>
+</section>
+
+<!-- 09 ZIELGRUPPE -->
+<section id="zielgruppe">
+  <span class="eyebrow">09 · Zielgruppen-Strategie</span>
+  <h2 class="section-title">Wie man Kanzleien &amp; Corporates am besten gewinnt</h2>
+  <div class="accent-line"></div>
+  <p>Zwei Segmente, zwei Ansprachen — aber ein gemeinsames Nutzenversprechen: mehr Fälle in weniger Zeit, mit belegbarer Fachqualität.</p>
+  <div class="vs">
+    <div class="card">
+      <h4><span class="badge b-primary">Segment A</span> Kanzleien</h4>
+      <ul class="plain">
+        <li><strong>Einstieg über Boutiquen:</strong> arbeitsrechtlich spezialisierte Kanzleien haben den akutesten Bedarf und die kürzeste Entscheidung.</li>
+        <li><strong>Verkauft wird Zeit &amp; Mandantenzufriedenheit:</strong> mehr abrechenbare Fälle, weniger Rechercheaufwand.</li>
+        <li><strong>Kanal:</strong> Rechtsanwaltskammer, Fachgruppen, Legal-Tech-Konferenzen (Future‑Law DACH), Empfehlung.</li>
+        <li><strong>Land &amp; Expand:</strong> Solo/Team-Einstieg, dann Ausrollen auf die ganze Kanzlei.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4><span class="badge b-cyan">Segment B</span> Corporates</h4>
+      <ul class="plain">
+        <li><strong>HR- &amp; Rechtsabteilungen:</strong> Arbeitsrecht wird täglich intern gebraucht — hohe Frequenz, klarer ROI.</li>
+        <li><strong>Verkauft wird Risiko­reduktion &amp; Kostenersparnis:</strong> weniger externe Mandate für Standardfragen.</li>
+        <li><strong>Kanal:</strong> HR-/Legal-Netzwerke, direkter Vertrieb, Referenzkunden.</li>
+        <li><strong>Höherer ACV:</strong> größere Teams, längere Vertragslaufzeiten.</li>
+      </ul>
+    </div>
+  </div>
+  <h3>Go-to-Market in drei Stufen</h3>
+  <ul class="check">
+    <li><strong>Design-Partner (Monat 0–6):</strong> 5–10 handverlesene Kanzleien als Mitgestalter — sie liefern Fachfeedback und Referenz, erhalten Vorzugskonditionen und optional Anteile.</li>
+    <li><strong>Referenz &amp; Reputation (Monat 6–18):</strong> Fallstudien, Fachvorträge, Kammer-Kooperationen — Vertrauen ist im Rechtsmarkt die härteste Währung.</li>
+    <li><strong>Skalierung (ab Monat 18):</strong> vertriebsgetriebener DACH-Rollout auf Basis der bewiesenen Boutique-Erfolge.</li>
+  </ul>
+</section>
+
+<!-- 10 INVEST -->
+<section id="invest">
+  <span class="eyebrow">10 · Beteiligung</span>
+  <h2 class="section-title">Wie Kanzleien investieren &amp; Partner werden</h2>
+  <div class="accent-line"></div>
+  <p>Causl KI ist ein <strong>Technologieunternehmen, keine Rechtsanwaltsgesellschaft</strong>. Die berufsrechtlichen Beteiligungsschranken der Rechtsanwaltsordnung (insb. §&nbsp;21c RAO) gelten daher <strong>nicht</strong> — Kanzleien und einzelne Rechtsanwält:innen dürfen sich frei beteiligen. Als Gesellschaftsform ist die seit 1.&nbsp;1.&nbsp;2024 verfügbare <strong>Flexible Kapitalgesellschaft (FlexCo)</strong> vorgesehen: gezielt für Start-ups mit mehreren Kapitalgeber:innen gebaut.</p>
+
+  <h3>Vier Wege der Beteiligung</h3>
+  <div class="grid grid-2">
+    <div class="card">
+      <span class="badge b-primary">Weg 1</span>
+      <h4>Eigenkapital — Unternehmenswert-Anteile</h4>
+      <p>Die FlexCo erlaubt <strong>Unternehmenswert-Anteile</strong> bis zu 24,99 % des Stammkapitals: Beteiligung am Gewinn und Liquidationserlös, <em>ohne</em> Stimmrecht und ohne operative Mitverwaltung. Übertragung formerleichtert (Notariatsakt nicht erforderlich). Ideal für Kanzleien, die Kapital und Rendite wollen, aber nicht mitgeschäftsführen.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-green">Weg 2</span>
+      <h4>Ordentlicher Geschäftsanteil</h4>
+      <p>Volle Gesellschafterstellung mit Stimm- und Informationsrechten für Partner, die strategisch mitgestalten wollen — z.&nbsp;B. als Lead-Investor einer Kanzleigruppe. Mindeststammkapital der FlexCo: €&nbsp;10.000.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-purple">Weg 3</span>
+      <h4>Wandeldarlehen (Convertible)</h4>
+      <p>Darlehen mit Wandlungsrecht in Anteile bei der nächsten Finanzierungsrunde — schnell, mit Bewertungsabschlag (Discount) als Frühzeichner-Prämie. Geringer Formaufwand, klare Konditionen.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-cyan">Weg 4</span>
+      <h4>Design-Partner (Sweat/Data Equity)</h4>
+      <p>Fachliche Mitarbeit — Kuratierung, Testing, anonymisierte Musterfälle, Referenz — gegen Anteile oder dauerhafte Vorzugskonditionen. Voraussetzung: Wahrung der anwaltlichen Verschwiegenheit (§&nbsp;9 RAO) und der DSGVO; es fließen keine Mandantendaten ohne Rechtsgrundlage.</p>
+    </div>
+  </div>
+
+  <div class="cta-box" style="margin-top:2.5rem">
+    <span class="eyebrow">Nächster Schritt</span>
+    <h3 style="margin-top:.5rem;font-size:1.6rem">Als Partner der ersten Stunde einsteigen</h3>
+    <p style="max-width:520px;margin:1rem auto 1.75rem">Wir öffnen eine erste Beteiligungsrunde für ausgewählte Kanzleien. Interesse ist unverbindlich — der nächste Schritt ist ein vertrauliches Gespräch und die Übergabe der vollständigen Unterlagen.</p>
+    <a href="#" class="btn btn-primary">Gespräch vereinbaren</a>
+    <a href="#recht" class="btn btn-outline">Rechtliche Hinweise</a>
+  </div>
+</section>
+
+<!-- 11 RECHT -->
+<section id="recht">
+  <span class="eyebrow">11 · Rechtlicher Rahmen</span>
+  <h2 class="section-title">Sauber nach österreichischem Recht</h2>
+  <div class="accent-line"></div>
+  <div class="grid grid-2">
+    <div class="card"><h4>Keine RAO-Sperre</h4><p>§&nbsp;21c RAO beschränkt nur Beteiligungen an <em>Rechtsanwaltsgesellschaften</em>. Causl KI ist ein reines Softwareunternehmen — Kanzleien dürfen ohne berufsrechtliche Schranke Anteile halten.</p></div>
+    <div class="card"><h4>Kapitalmarktrecht</h4><p>Dieses Dokument ist <strong>kein öffentliches Angebot</strong> i.S.d. KMG 2019 / EU-Prospekt-VO. Beteiligungen erfolgen im Rahmen der Prospekt­ausnahmen (u.&nbsp;a. Angebot an qualifizierte Anleger, an unter 150 Personen je Mitgliedstaat, Volumen unter der Prospektschwelle bzw. nach AltFG).</p></div>
+    <div class="card"><h4>Datenschutz &amp; Verschwiegenheit</h4><p>Verarbeitung DSGVO-konform; Auftrags­verarbeitung mit Kanzleien vertraglich geregelt. Die anwaltliche Verschwiegenheit (§&nbsp;9 RAO) bleibt jederzeit gewahrt.</p></div>
+    <div class="card"><h4>Kein Rechtsdienstleister</h4><p>Causl KI liefert Fachinformation und Entwurfsunterstützung, ersetzt aber keine anwaltliche Beratung. Die berufsrechtliche Letztverantwortung verbleibt bei der Rechtsanwält:in.</p></div>
+  </div>
+
+  <h3>Rechtliche Hinweise &amp; Risikohinweis</h3>
+  <p class="disclaimer">
+    <strong>Vertraulichkeit.</strong> Dieses Dokument ist ausschließlich für den adressierten Empfänger bestimmt und vertraulich zu behandeln.<br><br>
+    <strong>Kein Angebot, kein Prospekt.</strong> Dieser Business Plan dient allein der ersten, unverbindlichen Information. Er stellt weder ein Angebot noch eine Einladung zur Zeichnung oder zum Erwerb von Wertpapieren oder Veranlagungen dar und ist kein Prospekt i.S.d. Kapitalmarktgesetzes 2019 (KMG), der Verordnung (EU) 2017/1129 oder des Alternativfinanzierungsgesetzes (AltFG). Eine allfällige Beteiligung erfolgt ausschließlich auf Grundlage gesonderter, rechtsverbindlicher Vertrags- und Zeichnungsunterlagen.<br><br>
+    <strong>Keine Anlage-, Rechts- oder Steuerberatung.</strong> Die Inhalte ersetzen keine individuelle Beratung. Interessent:innen sollten vor einer Entscheidung eigene rechtliche, steuerliche und wirtschaftliche Beratung einholen.<br><br>
+    <strong>Zukunftsbezogene Aussagen &amp; Risikohinweis.</strong> Markt-, Umsatz- und Bewertungsangaben beruhen auf Annahmen und öffentlich zugänglichen Vergleichswerten (u.&nbsp;a. Legora, Harvey) und sind Schätzungen, keine Zusicherungen. Eine Beteiligung an einem jungen Unternehmen ist mit erheblichen Risiken bis zum <strong>Totalverlust</strong> des eingesetzten Kapitals verbunden; Anteile sind illiquide und nicht ohne Weiteres veräußerbar.<br><br>
+    <strong>Anwendbares Recht.</strong> Es gilt österreichisches Recht; Gerichtsstand ist der Sitz der Gesellschaft.
+  </p>
+</section>
+
+<!-- 12 ROADMAP -->
+<section id="roadmap">
+  <span class="eyebrow">12 · Roadmap</span>
+  <h2 class="section-title">Meilensteine</h2>
+  <div class="accent-line"></div>
+  <div class="grid grid-4">
+    <div class="card"><span class="badge b-green">Phase 1</span><h4>Q3–Q4 2026</h4><p>Gründung FlexCo, Design-Partner-Runde, MVP Arbeitsrecht AT, erste Beteiligungen.</p></div>
+    <div class="card"><span class="badge b-primary">Phase 2</span><h4>2027</h4><p>Produkt-Markt-Fit AT, 40+ zahlende Kunden, Ausbau Sozialrecht &amp; Judikatur-Modul.</p></div>
+    <div class="card"><span class="badge b-purple">Phase 3</span><h4>2028</h4><p>Markteintritt Deutschland, Skalierung Vertrieb, Kurs auf Break-even.</p></div>
+    <div class="card"><span class="badge b-cyan">Phase 4</span><h4>2029–2031</h4><p>DACH-Marktführerschaft in der Vertikale, Profitabilität, Bewertungsziel €185–700M.</p></div>
+  </div>
+</section>
+
+</div><!-- /wrap -->
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="margin-bottom:1rem">
+      <svg class="logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 8L16 20L6 32" stroke="#004899" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 8L28 20L18 32" stroke="#004899" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+      </svg>
+      Causl<span style="color:var(--primary-light)">KI</span>
+    </div>
+    <p style="font-size:.85rem;max-width:560px">Die spezialisierte KI für Arbeits- und Sozialrecht im DACH-Raum. Business Plan &amp; Beteiligungsangebot für Kanzleien — vertraulich, Version 1.0, Juli 2026.</p>
+    <p style="font-size:.78rem;color:var(--text-4);margin-top:1.5rem">© 2026 Causl KI FlexCo i.G. · Alle Angaben ohne Gewähr · Kein öffentliches Angebot i.S.d. KMG 2019.</p>
+  </div>
+</footer>
+
+</body>
+</html>
