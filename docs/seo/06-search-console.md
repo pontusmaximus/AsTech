@@ -20,9 +20,11 @@ Actions. Jetzt drei Workflows.
 | Auslöser | Was läuft | Gegen was |
 |---|---|---|
 | Pull Request | `generate:vercel --check`, `build`, `seo:404-safety --fail`, `seo:audit --fail`, `seo:i18n` | den frisch gebauten `dist/` |
-| Vercel-Deployment fertig | `seo:audit --fail --base <preview-url>` | das Preview-Deployment des PR |
+| Vercel-Deployment fertig | `seo:audit --fail --base <preview-url>` | das Preview-Deployment des PR ¹ |
 | täglich 05:30 UTC | `seo:audit --fail --base https://asamer.cz` | die Produktion |
 | manuell | wie beim Pull Request | |
+
+¹ Braucht `VERCEL_AUTOMATION_BYPASS_SECRET`, solange Deployment Protection aktiv ist — siehe unten.
 
 Der PR-Lauf braucht **kein Deployment und keine Secrets**. Der dist-Modus des Audits bildet die
 Vercel-Auslieferungsreihenfolge nach (Redirects → Datei → Rewrite → 404) und kann deshalb schon
@@ -30,14 +32,25 @@ vor dem Deploy sagen, was live passieren wird.
 
 **Der Preview-Lauf** hängt an Vercels `deployment_status`-Event und prüft, sobald das Preview
 steht, genau die Dinge, die ein dist-Lauf nur nachbilden kann: echte Statuscodes, echte
-Weiterleitungen, die tatsächlich entfernte Catch-all-Regel. Damit ist Masterplan-Kriterium 1.1
-(*„`/quatsch` gibt 404"*) vor dem Merge belegt statt erst danach.
+Weiterleitungen, die tatsächlich entfernte Catch-all-Regel. Damit lässt sich Masterplan-Kriterium
+1.1 (*„`/quatsch` gibt 404"*) vor dem Merge belegen statt erst danach.
 
-Zwei Vorkehrungen: Antwortet das Preview nicht mit 200 auf `/sitemap.xml` — bei aktivierter Vercel
-Deployment Protection ist das eine 401 —, wird der Lauf mit einem Hinweis übersprungen statt als
-Fehlschlag gewertet. Das ist eine Projekteinstellung, kein Fehler des PR. Und die www-Prüfung läuft
-**nur**, wenn der Audit gegen `asamer.cz` selbst geht: sie testet die Vercel-Domain-Konfiguration,
-und ein PR darf nicht an einem Produktionsproblem scheitern, mit dem er nichts zu tun hat.
+**Aktuell läuft er allerdings nicht durch, und das ist wichtig zu wissen:** dieses Projekt hat
+Vercel Deployment Protection aktiv. Das Preview antwortet auf `/sitemap.xml` mit einer **302** auf
+den SSO-Login, und der Audit wird übersprungen.
+
+> **Für Max, ein Handgriff:** Vercel → Projekt → Settings → Deployment Protection → *Protection
+> Bypass for Automation* aktivieren, das erzeugte Secret als Repository-Secret
+> `VERCEL_AUTOMATION_BYPASS_SECRET` hinterlegen. Danach prüft jeder PR sein eigenes Preview live.
+
+Der Skip ist bewusst eine **Warnung**, keine stille Notiz. Ein grüner Haken, der nichts gemessen
+hat, ist irreführender als gar keiner — und genau diesen Fehler hätte die erste Fassung gemacht:
+der Job lief 25 Sekunden, meldete „success" und hatte keine einzige URL angefasst. Aus demselben
+Grund bricht `scripts/seo-audit.ts` jetzt mit Exit 2 ab, wenn die Sitemap null URLs liefert.
+
+Die www-Prüfung läuft **nur**, wenn der Audit gegen `asamer.cz` selbst geht: sie testet die
+Vercel-Domain-Konfiguration, und ein PR darf nicht an einem Produktionsproblem scheitern, mit dem
+er nichts zu tun hat.
 
 Der Produktionslauf fängt, was auch ein Preview-Lauf nicht abdeckt: die Domain-Konfiguration und
 die www-Weiterleitung. Bei Fehlschlag legt er ein Issue mit dem vollständigen Bericht an — und
@@ -115,6 +128,15 @@ Sitemap-URLs je Sprache — und benennt im Report selbst, dass das **nicht** die
 ist. Eine Seite kann indexiert sein und in dieser Woche trotzdem keine Impression bekommen. Als
 Trend taugt die Zahl, als Absolutwert nicht. Für die echte Quote bleibt der Blick in die Oberfläche
 oder der Bulk Data Export.
+
+### Geschützte Deployments allgemein
+
+`scripts/seo-audit.ts` schickt Zusatz-Header, wenn sie gesetzt sind:
+
+| Variable | Wirkung |
+|---|---|
+| `VERCEL_AUTOMATION_BYPASS_SECRET` | setzt `x-vercel-protection-bypass` und `x-vercel-set-bypass-cookie` |
+| `SEO_AUDIT_HEADERS` | beliebige Header als JSON-Objekt, z. B. `{"Authorization":"Basic …"}` |
 
 ### Einrichtung — für Max
 

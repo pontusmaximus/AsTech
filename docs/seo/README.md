@@ -66,6 +66,11 @@ npm run generate:vercel          # vercel.json aus config/redirects.manual.json 
 
 Gesammelt aus allen Phasen — nichts davon lässt sich aus dem Repo erledigen.
 
+**Vercel**
+- *Protection Bypass for Automation* aktivieren und das Secret als
+  `VERCEL_AUTOMATION_BYPASS_SECRET` im Repository hinterlegen — sonst überspringt der
+  Preview-Audit jeden PR, weil Deployment Protection mit 302 antwortet
+
 **Search Console**
 - Sitemap `https://www.asamer.cz/sitemap.xml` entfernen
 - „Fehlerbehebung überprüfen" je Kategorie anstoßen — die 134 noindex-Seiten **sofort**, der Rest

@@ -60,6 +60,35 @@ const resolvePath = (p: string) => (isAbsolute(p) ? p : join(repoRoot, p));
 const REPORT_PATH = resolvePath(flag('report') ?? `docs/seo/reports/audit-${MODE}.md`);
 const JSON_PATH = flag('json') ? resolvePath(flag('json')!) : null;
 const CONCURRENCY = Number(flag('concurrency') ?? 12);
+/**
+ * Zusätzliche Header für alle HTTP-Anfragen.
+ *
+ * Gebraucht für geschützte Deployments: Vercel Deployment Protection beantwortet
+ * jede Anfrage an ein Preview mit einer 302 auf den SSO-Login. Ein
+ * Automation-Bypass-Secret (Vercel: Settings → Deployment Protection →
+ * Protection Bypass for Automation) hebt das für Maschinen auf.
+ *
+ * `SEO_AUDIT_HEADERS` nimmt beliebige Header als JSON-Objekt entgegen;
+ * `VERCEL_AUTOMATION_BYPASS_SECRET` ist die Abkürzung für den Vercel-Fall.
+ */
+const EXTRA_HEADERS: Record<string, string> = (() => {
+  const headers: Record<string, string> = {};
+  const bypass = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
+  if (bypass) {
+    headers['x-vercel-protection-bypass'] = bypass;
+    headers['x-vercel-set-bypass-cookie'] = 'samesitenone';
+  }
+  const raw = process.env.SEO_AUDIT_HEADERS;
+  if (raw) {
+    try {
+      Object.assign(headers, JSON.parse(raw) as Record<string, string>);
+    } catch {
+      console.warn('SEO_AUDIT_HEADERS ist kein gültiges JSON — wird ignoriert.');
+    }
+  }
+  return headers;
+})();
+
 const ALLOWED_CHECKS = new Set(
   (flag('allow') ?? '')
     .split(',')
@@ -114,7 +143,7 @@ const router = new VercelRouter(loadVercelConfig(join(repoRoot, 'vercel.json')))
  */
 async function get(pathname: string): Promise<Fetched> {
   if (MODE === 'http') {
-    const res = await fetch(`${BASE}${pathname}`, { redirect: 'manual' });
+    const res = await fetch(`${BASE}${pathname}`, { redirect: 'manual', headers: EXTRA_HEADERS });
     const status = res.status;
     if (status >= 300 && status < 400) {
       return { status, html: '', location: res.headers.get('location') ?? undefined, via: 'http' };
@@ -252,7 +281,7 @@ interface SitemapEntry {
 async function readSitemap(): Promise<SitemapEntry[]> {
   const xml =
     MODE === 'http'
-      ? await (await fetch(`${BASE}/sitemap.xml`)).text()
+      ? await (await fetch(`${BASE}/sitemap.xml`, { headers: EXTRA_HEADERS })).text()
       : readFileSync(join(DIST_DIR, 'sitemap.xml'), 'utf-8');
 
   return [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((m) => {
@@ -431,7 +460,7 @@ async function auditNegatives(): Promise<void> {
       add('/404.html', '404-seite', 'error', 'dist/404.html ohne noindex');
     }
   } else {
-    const res = await fetch(`${BASE}/404.html`);
+    const res = await fetch(`${BASE}/404.html`, { headers: EXTRA_HEADERS });
     const html = await res.text();
     if (res.status !== 200 && res.status !== 404) {
       add('/404.html', '404-seite', 'error', `Statuscode ${res.status}`);
@@ -459,7 +488,7 @@ async function auditNegatives(): Promise<void> {
   if (againstCanonicalDomain) {
     for (const p of ['/', '/cz', '/cz/ott', '/cz/barbaric/buffer-dilu/pbx']) {
       try {
-        const res = await fetch(`https://www.asamer.cz${p}`, { redirect: 'manual' });
+        const res = await fetch(`https://www.asamer.cz${p}`, { redirect: 'manual', headers: EXTRA_HEADERS });
         const loc = res.headers.get('location') ?? '';
         if (res.status !== 301 && res.status !== 308) {
           add(`https://www.asamer.cz${p}`, 'www', 'error', `Statuscode ${res.status} statt 301`);
@@ -497,6 +526,15 @@ async function main() {
   const urls = sitemap.map((e) => e.loc).slice(0, LIMIT);
 
   console.log(`SEO-Audit · Modus ${MODE}${BASE ? ` (${BASE})` : ` (${DIST_DIR})`} · ${urls.length} URLs`);
+  if (Object.keys(EXTRA_HEADERS).length > 0) {
+    console.log(`  Zusatz-Header aktiv: ${Object.keys(EXTRA_HEADERS).join(', ')}`);
+  }
+
+  // Ein Lauf über null URLs waere ein gruener Haken ohne Aussage. Lieber laut scheitern.
+  if (urls.length === 0) {
+    console.error('Die Sitemap enthaelt keine URLs — es wurde nichts geprueft.');
+    process.exit(2);
+  }
 
   /* --- Sitemap selbst --- */
   const lastmods = new Set(sitemap.map((e) => e.lastmod));

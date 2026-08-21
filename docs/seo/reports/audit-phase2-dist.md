@@ -1,6 +1,6 @@
 # SEO-Audit — dist/
 
-Erzeugt von `scripts/seo-audit.ts` · 605 URLs · 1.1s · Schwelle 250 Wörter
+Erzeugt von `scripts/seo-audit.ts` · 605 URLs · 1.0s · Schwelle 250 Wörter
 
 **70 Fehler, 126 Warnungen.**
 

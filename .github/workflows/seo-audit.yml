@@ -103,25 +103,35 @@ jobs:
         id: reach
         env:
           PREVIEW_URL: ${{ github.event.deployment_status.environment_url }}
+          BYPASS: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
         run: |
           if [ -z "$PREVIEW_URL" ]; then
             echo "code=none" >> "$GITHUB_OUTPUT"
-            echo "::notice::Kein environment_url im Event — Live-Audit uebersprungen."
+            echo "::warning::Kein environment_url im Event — Live-Audit uebersprungen, es wurde nichts geprueft."
             exit 0
           fi
-          code=$(curl -s -o /dev/null -w '%{http_code}' "$PREVIEW_URL/sitemap.xml")
+          code=$(curl -s -o /dev/null -w '%{http_code}' \
+            ${BYPASS:+-H "x-vercel-protection-bypass: $BYPASS"} \
+            "$PREVIEW_URL/sitemap.xml")
           echo "code=$code" >> "$GITHUB_OUTPUT"
           if [ "$code" != "200" ]; then
-            # Vercel Deployment Protection antwortet mit 401. Das ist eine
-            # Projekteinstellung, kein Fehler dieses PR — deshalb Hinweis
-            # statt Fehlschlag.
-            echo "::notice::Preview antwortet mit $code auf /sitemap.xml (Deployment Protection?) — Live-Audit uebersprungen."
+            # Vercel Deployment Protection antwortet mit 302 auf den SSO-Login.
+            # Aufhebbar ueber "Protection Bypass for Automation" — das Secret
+            # gehoert als VERCEL_AUTOMATION_BYPASS_SECRET ins Repository.
+            # Bewusst eine Warnung, keine Notiz: ein gruener Haken, der nichts
+            # gemessen hat, ist irrefuehrender als gar keiner.
+            if [ -z "$BYPASS" ]; then
+              echo "::warning::Preview antwortet mit $code auf /sitemap.xml und es ist kein VERCEL_AUTOMATION_BYPASS_SECRET gesetzt. Live-Audit uebersprungen — es wurde nichts geprueft. Secret setzen: Vercel → Settings → Deployment Protection → Protection Bypass for Automation."
+            else
+              echo "::warning::Preview antwortet trotz gesetztem Bypass-Secret mit $code auf /sitemap.xml. Live-Audit uebersprungen — es wurde nichts geprueft."
+            fi
           fi
 
       - name: SEO-Invarianten gegen das Preview
         if: steps.reach.outputs.code == '200'
         env:
           PREVIEW_URL: ${{ github.event.deployment_status.environment_url }}
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
         run: |
           npm run seo:audit -- \
             --base "$PREVIEW_URL" \
