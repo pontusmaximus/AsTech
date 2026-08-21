@@ -235,3 +235,87 @@ Browser angezeigt — aber er ist jetzt für Google sichtbar, und damit zählt e
 - Entscheidung: Kontaktseiten inhaltlich ausbauen oder bei 200 Wörtern belassen?
 - Nach dem Deploy: Search Console → „Gecrawlt – zurzeit nicht indexiert" (49) und „Gefunden –
   zurzeit nicht indexiert" (244) auf „Fehlerbehebung überprüfen" setzen (Masterplan 7.4)
+
+---
+
+## Nachtrag: drei Defekte aus dem ersten Lighthouse-Lauf
+
+Der neu eingerichtete Lighthouse-Lauf (Masterplan 7.6) hat unmittelbar drei Dinge aufgedeckt,
+die vorher niemand sehen konnte. Alle drei sind behoben.
+
+### 1. Jeder Head-Tag stand nach dem Hydrieren doppelt im Dokument
+
+Gemessen im gerenderten DOM von `/cz`:
+
+| Tag | vorher | nachher |
+|---|---:|---:|
+| `<title>` | 2 | **1** |
+| `<meta name="description">` | 2 | **1** |
+| `<link rel="canonical">` | 2 | **1** |
+| `hreflang`-Links | 12 | **6** |
+| `<meta name="robots">` | 2 | **1** |
+
+Ursache: **react-helmet-async 3 räumt die serverseitig gesetzten Tags unter React 19 nicht mehr
+weg.** Es rendert seine eigenen Tags über Reacts Head-Hoisting, statt den DOM zu manipulieren —
+und die vom Prerender geschriebenen `data-rh="true"`-Tags bleiben daneben stehen. Dasselbe
+Verhalten, das schon verhindert hat, dass der Server-Context gefüllt wird (siehe oben).
+
+Behoben in `src/main.tsx`: die prerenderten Head-Tags werden entfernt, bevor React mountet.
+`data-rh="true"` setzt ausschließlich `scripts/prerender.ts`, Helmet markiert seine Tags unter
+React 19 nicht mehr so — der Selektor trifft also genau die richtigen.
+
+Der Defekt ist älter als dieser Branch: der frühere Prerenderer hat dieselben `data-rh`-Tags
+geschrieben. Nur ist er nie aufgefallen, weil niemand den gerenderten DOM geprüft hat.
+
+### 2. Ein Viertel jeder Seite war Entwickler-Metadaten
+
+`kimi-plugin-inspect-react` stand ohne Bedingung in den Vite-Plugins und hat auch im
+Produktions-Build an jedes Element ein `code-path="src/…"`-Attribut geschrieben:
+
+```
+363 Attribute pro Seite · 15.836 von 67.173 Bytes = 24 %
+über 605 Seiten rund 9,5 MB, die Google mitlädt
+```
+
+Nebenbei standen die internen Dateipfade im öffentlichen HTML.
+
+Behoben: `command === 'serve' && inspectAttr()` — das Plugin läuft nur noch im Dev-Server, wo es
+hingehört. `/cz/index.html` ist damit von 67 KB auf 52 KB geschrumpft.
+
+### 3. Die Lighthouse-Konfiguration hat die falschen Seiten gemessen
+
+Mein eigener Fehler: `staticDistDir` serviert Dateipfade, und die URLs standen entsprechend auf
+`/cz/index.html`. Der React-Router kennt diesen Pfad nicht — er hat für jede gemessene Seite die
+**404-Seite** über den prerenderten Inhalt gerendert. Gemessen wurde also nicht die Startseite,
+sondern die `NotFoundPage`.
+
+Behoben: `startServerCommand` mit einem http-server, der saubere URLs auflöst, und die URLs
+entsprechend auf `/cz`, `/cz/ott`, … umgestellt.
+
+### Ergebnis
+
+Lighthouse auf `/cz`, Desktop-Preset:
+
+| Kategorie | vor den Fixes | nach den Fixes |
+|---|---:|---:|
+| **SEO** | 0,92 | **1,00** |
+| Accessibility | 0,86 | 0,90 |
+| Best Practices | — | 0,96 |
+| Performance | — | 0,84 |
+
+Der SEO-Wert lag bei 0,92, weil Lighthouse *„Document doesn't have a `<title>` element"* meldete —
+die 404-Seite setzte einen leeren Titel, und der stand im DOM vor dem echten.
+
+### Was offen bleibt: Accessibility
+
+Vier Befunde bleiben, alle in Navigation und Footer:
+
+- `color-contrast` — mehrere Elemente im Footer (`text-white/55`, `text-[10px]`)
+- `heading-order` — im Footer folgt `<h4>` direkt auf die `<h1>` der Seite
+- `target-size` — Touch-Ziele zu klein oder zu eng
+- `label-content-name-mismatch` — Logo-Links in Nav und Footer, sichtbarer Text und
+  `aria-label` stimmen nicht überein
+
+Hier bewusst **nicht** angefasst: Kontrast und Zielgrößen sind Design-Entscheidungen, und
+Barrierefreiheit steht im SEO-Masterplan nicht auf der Liste. Der Lighthouse-Lauf misst sie ab
+sofort bei jedem Pull Request mit — als Grundlage für eine eigene Runde, wenn sie gewünscht ist.

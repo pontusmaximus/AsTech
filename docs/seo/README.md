@@ -40,6 +40,11 @@ nicht auffallen. Erklärung in [`02-rendering.md`](02-rendering.md).
 
 ² 15 Seiten mit dreifacher `<h1>` wurden durch die SSR-Umstellung aufgedeckt und behoben.
 
+Drei weitere Defekte hat der erste Lighthouse-Lauf sichtbar gemacht — doppelte Head-Tags nach dem
+Hydrieren, 24 % Entwickler-Metadaten in jeder ausgelieferten Seite, und eine Lighthouse-Konfiguration,
+die die 404-Seite statt der echten Seiten gemessen hat. Alle behoben, Einzelheiten im Nachtrag von
+[`02-rendering.md`](02-rendering.md). Lighthouse-SEO-Score auf `/cz`: **1,00**.
+
 Die verbleibenden 70 Fehler sind 65 × `language` (wartet auf die Übersetzungen aus Phase 3) und
 5 × `body-words` (Kontaktseiten mit ~200 Wörtern — eine bewusste Entscheidung, siehe
 [`02-rendering.md`](02-rendering.md)).

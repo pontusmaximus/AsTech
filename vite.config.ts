@@ -5,10 +5,17 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vite.dev/config/
-export default defineConfig(({ mode, isSsrBuild }) => ({
+export default defineConfig(({ command, mode, isSsrBuild }) => ({
   base: '/',
   plugins: [
-    inspectAttr(),
+    /*
+     * Nur im Dev-Server. Das Plugin schreibt `code-path="src/…"`-Attribute an
+     * jedes Element — im Produktions-Build waren das 363 Attribute und 15,8 KB
+     * pro Seite, also rund ein Viertel jeder ausgelieferten Datei, und ueber
+     * alle 605 Seiten etwa 9,5 MB, die Google mitlaedt. Nebenbei standen die
+     * internen Dateipfade im oeffentlichen HTML.
+     */
+    command === 'serve' && inspectAttr(),
     react(),
     mode === 'analyze' &&
       visualizer({
