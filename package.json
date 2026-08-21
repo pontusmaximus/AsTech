@@ -12,7 +12,9 @@
     "vercel:preview": "vercel",
     "vercel:prod": "vercel --prod",
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
-    "analyze": "vite build --mode analyze"
+    "analyze": "vite build --mode analyze",
+    "seo:audit": "tsx scripts/seo-audit.ts",
+    "seo:i18n": "tsx scripts/i18n-coverage.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

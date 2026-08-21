@@ -198,7 +198,7 @@ Vollständiger Befund:
 - `useInView` / `react-intersection-observer` — nicht installiert
 - `IntersectionObserver` — 2 Treffer, beide Scrollspy für die Kategorie-Navigation auf Marken-Hubs (`CategoryNav.tsx`, `CategorySidebar.tsx`). Sie markieren den aktiven Menüpunkt, sie mounten keinen Inhalt.
 - Animation: `gsap` + `@studio-freight/lenis` (Smooth Scroll) + `split-type`
-- `React.lazy` in `App.tsx` für 23 Seitенkomponenten — relevant fürs Bundle, nicht für den Prerender (der Prerenderer führt kein JS aus)
+- `React.lazy` in `App.tsx` für 23 Seitenkomponenten — relevant fürs Bundle, nicht für den Prerender (der Prerenderer führt kein JS aus)
 
 Der **Gegenbeweis-Fall** aus Abschnitt 2.3 („Inhalte per `useEffect`-Fetch nachgeladen") trifft ebenfalls nicht zu: es gibt keinen Laufzeit-Datenfetch für Seiteninhalte, alle Inhalte sind statisch im Bundle.
 
