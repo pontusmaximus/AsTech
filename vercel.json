@@ -4,188 +4,2571 @@
   "outputDirectory": "dist",
   "trailingSlash": false,
   "redirects": [
-    { "source": "/de/financovani", "destination": "https://asamer.cz/de/finanzierung", "permanent": true },
-    { "source": "/en/financovani", "destination": "https://asamer.cz/en/financing", "permanent": true },
-    { "source": "/sk/financovani", "destination": "https://asamer.cz/sk/financovanie", "permanent": true },
-    { "source": "/hu/financovani", "destination": "https://asamer.cz/hu/finanszirozas", "permanent": true },
-
-    { "source": "/de/reseni", "destination": "https://asamer.cz/de/loesungen", "permanent": true },
-    { "source": "/en/reseni", "destination": "https://asamer.cz/en/solutions", "permanent": true },
-    { "source": "/sk/reseni", "destination": "https://asamer.cz/sk/riesenia", "permanent": true },
-    { "source": "/hu/reseni", "destination": "https://asamer.cz/hu/megoldasok", "permanent": true },
-
-    { "source": "/de/servis", "destination": "https://asamer.cz/de/service", "permanent": true },
-    { "source": "/en/servis", "destination": "https://asamer.cz/en/service", "permanent": true },
-    { "source": "/hu/servis", "destination": "https://asamer.cz/hu/szerviz", "permanent": true },
-
-    { "source": "/de/pouzite-stroje", "destination": "https://asamer.cz/de/gebrauchtmaschinen", "permanent": true },
-    { "source": "/en/pouzite-stroje", "destination": "https://asamer.cz/en/used-machines", "permanent": true },
-    { "source": "/hu/pouzite-stroje", "destination": "https://asamer.cz/hu/hasznalt-gepek", "permanent": true },
-
-    { "source": "/en/kontakt", "destination": "https://asamer.cz/en/contact", "permanent": true },
-    { "source": "/hu/kontakt", "destination": "https://asamer.cz/hu/kapcsolat", "permanent": true },
-
-    { "source": "/de/imprint", "destination": "https://asamer.cz/de/impressum", "permanent": true },
-    { "source": "/hu/imprint", "destination": "https://asamer.cz/hu/impresszum", "permanent": true },
-
-    { "source": "/cz/finanzierung", "destination": "https://asamer.cz/cz/financovani", "permanent": true },
-    { "source": "/cz/loesungen", "destination": "https://asamer.cz/cz/reseni", "permanent": true },
-    { "source": "/cz/service", "destination": "https://asamer.cz/cz/servis", "permanent": true },
-    { "source": "/cz/impressum", "destination": "https://asamer.cz/cz/imprint", "permanent": true },
-    { "source": "/cz/gebrauchtmaschinen", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
-
-    { "source": "/de/ott/olepovacky-hran/:model", "destination": "https://asamer.cz/de/ott/kantenanleimmaschinen/:model", "permanent": true },
-    { "source": "/en/ott/olepovacky-hran/:model", "destination": "https://asamer.cz/en/ott/edgebanding-machines/:model", "permanent": true },
-    { "source": "/hu/ott/olepovacky-hran/:model", "destination": "https://asamer.cz/hu/ott/elzarogepek/:model", "permanent": true },
-
-    { "source": "/de/ott/zpetne-dopravnikove-systemy/:model", "destination": "https://asamer.cz/de/ott/ruecktransportsysteme/:model", "permanent": true },
-    { "source": "/en/ott/zpetne-dopravnikove-systemy/:model", "destination": "https://asamer.cz/en/ott/return-systems/:model", "permanent": true },
-    { "source": "/sk/ott/zpetne-dopravnikove-systemy/:model", "destination": "https://asamer.cz/sk/ott/spetne-dopravnikove-systemy/:model", "permanent": true },
-    { "source": "/hu/ott/zpetne-dopravnikove-systemy/:model", "destination": "https://asamer.cz/hu/ott/visszafutoszalagok/:model", "permanent": true },
-
-    { "source": "/de/ott/lepici-technologie/:model", "destination": "https://asamer.cz/de/ott/klebetechnologie/:model", "permanent": true },
-    { "source": "/en/ott/lepici-technologie/:model", "destination": "https://asamer.cz/en/ott/gluing-technology/:model", "permanent": true },
-    { "source": "/sk/ott/lepici-technologie/:model", "destination": "https://asamer.cz/sk/ott/lepiaca-technologia/:model", "permanent": true },
-    { "source": "/hu/ott/lepici-technologie/:model", "destination": "https://asamer.cz/hu/ott/ragasztasi-technologia/:model", "permanent": true },
-
-    { "source": "/de/ott/kantenanleimmaschinen/transcompact", "destination": "https://asamer.cz/de/ott/ruecktransportsysteme/transcompact", "permanent": true },
-    { "source": "/de/ott/kantenanleimmaschinen/translift", "destination": "https://asamer.cz/de/ott/ruecktransportsysteme/translift", "permanent": true },
-    { "source": "/de/ott/kantenanleimmaschinen/transedge", "destination": "https://asamer.cz/de/ott/ruecktransportsysteme/transedge", "permanent": true },
-    { "source": "/en/ott/edgebanding-machines/transcompact", "destination": "https://asamer.cz/en/ott/return-systems/transcompact", "permanent": true },
-    { "source": "/en/ott/edgebanding-machines/translift", "destination": "https://asamer.cz/en/ott/return-systems/translift", "permanent": true },
-    { "source": "/en/ott/edgebanding-machines/transedge", "destination": "https://asamer.cz/en/ott/return-systems/transedge", "permanent": true },
-    { "source": "/cz/ott/olepovacky-hran/transcompact", "destination": "https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy/transcompact", "permanent": true },
-    { "source": "/cz/ott/olepovacky-hran/translift", "destination": "https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy/translift", "permanent": true },
-    { "source": "/cz/ott/olepovacky-hran/transedge", "destination": "https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy/transedge", "permanent": true },
-    { "source": "/sk/ott/olepovacky-hran/transcompact", "destination": "https://asamer.cz/sk/ott/spetne-dopravnikove-systemy/transcompact", "permanent": true },
-    { "source": "/sk/ott/olepovacky-hran/translift", "destination": "https://asamer.cz/sk/ott/spetne-dopravnikove-systemy/translift", "permanent": true },
-    { "source": "/sk/ott/olepovacky-hran/transedge", "destination": "https://asamer.cz/sk/ott/spetne-dopravnikove-systemy/transedge", "permanent": true },
-    { "source": "/hu/ott/elzarogepek/transcompact", "destination": "https://asamer.cz/hu/ott/visszafutoszalagok/transcompact", "permanent": true },
-    { "source": "/hu/ott/elzarogepek/translift", "destination": "https://asamer.cz/hu/ott/visszafutoszalagok/translift", "permanent": true },
-    { "source": "/hu/ott/elzarogepek/transedge", "destination": "https://asamer.cz/hu/ott/visszafutoszalagok/transedge", "permanent": true },
-    { "source": "/de/ott/kantenanleimmaschinen/combimelt", "destination": "https://asamer.cz/de/ott/klebetechnologie/combimelt", "permanent": true },
-    { "source": "/de/ott/kantenanleimmaschinen/bluedge", "destination": "https://asamer.cz/de/ott/klebetechnologie/bluedge", "permanent": true },
-    { "source": "/en/ott/edgebanding-machines/combimelt", "destination": "https://asamer.cz/en/ott/gluing-technology/combimelt", "permanent": true },
-    { "source": "/en/ott/edgebanding-machines/bluedge", "destination": "https://asamer.cz/en/ott/gluing-technology/bluedge", "permanent": true },
-    { "source": "/cz/ott/olepovacky-hran/combimelt", "destination": "https://asamer.cz/cz/ott/lepici-technologie/combimelt", "permanent": true },
-    { "source": "/cz/ott/olepovacky-hran/bluedge", "destination": "https://asamer.cz/cz/ott/lepici-technologie/bluedge", "permanent": true },
-    { "source": "/sk/ott/olepovacky-hran/combimelt", "destination": "https://asamer.cz/sk/ott/lepiaca-technologia/combimelt", "permanent": true },
-    { "source": "/sk/ott/olepovacky-hran/bluedge", "destination": "https://asamer.cz/sk/ott/lepiaca-technologia/bluedge", "permanent": true },
-    { "source": "/hu/ott/elzarogepek/combimelt", "destination": "https://asamer.cz/hu/ott/ragasztasi-technologia/combimelt", "permanent": true },
-    { "source": "/hu/ott/elzarogepek/bluedge", "destination": "https://asamer.cz/hu/ott/ragasztasi-technologia/bluedge", "permanent": true },
-
-    { "source": "/de/mayer/horizontalni-formatovaci-pily/:m", "destination": "https://asamer.cz/de/mayer/horizontale-plattensaegen/:m", "permanent": true },
-    { "source": "/en/mayer/horizontalni-formatovaci-pily/:m", "destination": "https://asamer.cz/en/mayer/horizontal-panel-saws/:m", "permanent": true },
-    { "source": "/sk/mayer/horizontalni-formatovaci-pily/:m", "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pilyy/:m", "permanent": true },
-    { "source": "/hu/mayer/horizontalni-formatovaci-pily/:m", "destination": "https://asamer.cz/hu/mayer/horizontalis-lapszabo-furesz/:m", "permanent": true },
-
-    { "source": "/de/mayer/formatovaci-pily-hlinik-plasty/:m", "destination": "https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff/:m", "permanent": true },
-    { "source": "/en/mayer/formatovaci-pily-hlinik-plasty/:m", "destination": "https://asamer.cz/en/mayer/panel-saws-aluminium-plastics/:m", "permanent": true },
-    { "source": "/sk/mayer/formatovaci-pily-hlinik-plasty/:m", "destination": "https://asamer.cz/sk/mayer/formatovacie-pily-hlinik-plasty/:m", "permanent": true },
-    { "source": "/hu/mayer/formatovaci-pily-hlinik-plasty/:m", "destination": "https://asamer.cz/hu/mayer/lapszabo-furesz-aluminium-manyag/:m", "permanent": true },
-
-    { "source": "/de/mayer/prumyslova-reseni/:m", "destination": "https://asamer.cz/de/mayer/industrieloesungen/:m", "permanent": true },
-    { "source": "/en/mayer/prumyslova-reseni/:m", "destination": "https://asamer.cz/en/mayer/industrial-solutions/:m", "permanent": true },
-    { "source": "/sk/mayer/prumyslova-reseni/:m", "destination": "https://asamer.cz/sk/mayer/priemyselne-riesenia/:m", "permanent": true },
-    { "source": "/hu/mayer/prumyslova-reseni/:m", "destination": "https://asamer.cz/hu/mayer/ipari-megoldasok/:m", "permanent": true },
-
-    { "source": "/de/barbaric/skladovani-desek/:m", "destination": "https://asamer.cz/de/barbaric/flaechenlager/:m", "permanent": true },
-    { "source": "/en/barbaric/skladovani-desek/:m", "destination": "https://asamer.cz/en/barbaric/panel-storage/:m", "permanent": true },
-    { "source": "/sk/barbaric/skladovani-desek/:m", "destination": "https://asamer.cz/sk/barbaric/skladovanie-dosok/:m", "permanent": true },
-    { "source": "/hu/barbaric/skladovani-desek/:m", "destination": "https://asamer.cz/hu/barbaric/lapraktarozas/:m", "permanent": true },
-
-    { "source": "/de/barbaric/podavaci-systemy/:m", "destination": "https://asamer.cz/de/barbaric/beschickung/:m", "permanent": true },
-    { "source": "/en/barbaric/podavaci-systemy/:m", "destination": "https://asamer.cz/en/barbaric/feeding-systems/:m", "permanent": true },
-    { "source": "/sk/barbaric/podavaci-systemy/:m", "destination": "https://asamer.cz/sk/barbaric/podavacie-systemy/:m", "permanent": true },
-    { "source": "/hu/barbaric/podavaci-systemy/:m", "destination": "https://asamer.cz/hu/barbaric/adagolo-rendszer/:m", "permanent": true },
-
-    { "source": "/de/barbaric/navratove-systemy/:m", "destination": "https://asamer.cz/de/barbaric/returnsysteme/:m", "permanent": true },
-    { "source": "/en/barbaric/navratove-systemy/:m", "destination": "https://asamer.cz/en/barbaric/return-systems/:m", "permanent": true },
-    { "source": "/hu/barbaric/navratove-systemy/:m", "destination": "https://asamer.cz/hu/barbaric/visszafuto-rendszer/:m", "permanent": true },
-
-    { "source": "/de/barbaric/buffer-dilu/:m", "destination": "https://asamer.cz/de/barbaric/teilepuffer/:m", "permanent": true },
-    { "source": "/en/barbaric/buffer-dilu/:m", "destination": "https://asamer.cz/en/barbaric/parts-buffer/:m", "permanent": true },
-    { "source": "/sk/barbaric/buffer-dilu/:m", "destination": "https://asamer.cz/sk/barbaric/buffer-dielov/:m", "permanent": true },
-    { "source": "/hu/barbaric/buffer-dilu/:m", "destination": "https://asamer.cz/hu/barbaric/reszpuffer/:m", "permanent": true },
-
-    { "source": "/de/barbaric/handling-dveri/:m", "destination": "https://asamer.cz/de/barbaric/tuerenhandling/:m", "permanent": true },
-    { "source": "/en/barbaric/handling-dveri/:m", "destination": "https://asamer.cz/en/barbaric/door-handling/:m", "permanent": true },
-    { "source": "/hu/barbaric/handling-dveri/:m", "destination": "https://asamer.cz/hu/barbaric/ajto-kezeles/:m", "permanent": true },
-
-    { "source": "/de/barbaric/stitkovani/:m", "destination": "https://asamer.cz/de/barbaric/labeling/:m", "permanent": true },
-    { "source": "/en/barbaric/stitkovani/:m", "destination": "https://asamer.cz/en/barbaric/labeling/:m", "permanent": true },
-    { "source": "/sk/barbaric/stitkovani/:m", "destination": "https://asamer.cz/sk/barbaric/stitkovanie/:m", "permanent": true },
-    { "source": "/hu/barbaric/stitkovani/:m", "destination": "https://asamer.cz/hu/barbaric/cimkenyomtatas/:m", "permanent": true },
-
-    { "source": "/de/gannomat/vrtaci-lepici-kolkovaci-stroje/:m", "destination": "https://asamer.cz/de/gannomat/bohr-beleim-duebeleintreibmaschinen/:m", "permanent": true },
-    { "source": "/en/gannomat/vrtaci-lepici-kolkovaci-stroje/:m", "destination": "https://asamer.cz/en/gannomat/drill-glue-dowel-inserting-machines/:m", "permanent": true },
-    { "source": "/sk/gannomat/vrtaci-lepici-kolkovaci-stroje/:m", "destination": "https://asamer.cz/sk/gannomat/vrtacie-lepiace-kolkovacie-stroje/:m", "permanent": true },
-    { "source": "/hu/gannomat/vrtaci-lepici-kolkovaci-stroje/:m", "destination": "https://asamer.cz/hu/gannomat/furo-ragaszto-csapozo-gepek/:m", "permanent": true },
-
-    { "source": "/de/gannomat/kolkovaci-vrtacky/:m", "destination": "https://asamer.cz/de/gannomat/duebelbohrmaschinen/:m", "permanent": true },
-    { "source": "/en/gannomat/kolkovaci-vrtacky/:m", "destination": "https://asamer.cz/en/gannomat/dowel-boring-machines/:m", "permanent": true },
-    { "source": "/sk/gannomat/kolkovaci-vrtacky/:m", "destination": "https://asamer.cz/sk/gannomat/kolkovacie-vrtacky/:m", "permanent": true },
-    { "source": "/hu/gannomat/kolkovaci-vrtacky/:m", "destination": "https://asamer.cz/hu/gannomat/csap-furo-gepek/:m", "permanent": true },
-
-    { "source": "/de/gannomat/radove-vrtacky/:m", "destination": "https://asamer.cz/de/gannomat/lochreihenbohrmaschinen/:m", "permanent": true },
-    { "source": "/en/gannomat/radove-vrtacky/:m", "destination": "https://asamer.cz/en/gannomat/row-boring-machines/:m", "permanent": true },
-    { "source": "/hu/gannomat/radove-vrtacky/:m", "destination": "https://asamer.cz/hu/gannomat/soros-furo-gepek/:m", "permanent": true },
-
-    { "source": "/de/gannomat/lepici-systemy/:m", "destination": "https://asamer.cz/de/gannomat/beleimmaschinen/:m", "permanent": true },
-    { "source": "/en/gannomat/lepici-systemy/:m", "destination": "https://asamer.cz/en/gannomat/gluing-systems/:m", "permanent": true },
-    { "source": "/sk/gannomat/lepici-systemy/:m", "destination": "https://asamer.cz/sk/gannomat/lepiace-systemy/:m", "permanent": true },
-    { "source": "/hu/gannomat/lepici-systemy/:m", "destination": "https://asamer.cz/hu/gannomat/ragaszto-rendszer/:m", "permanent": true },
-
-    { "source": "/de/gannomat/kolkovaci-stroje-dvere-okna/:m", "destination": "https://asamer.cz/de/gannomat/duebeleintreibmaschinen-tueren-fenster/:m", "permanent": true },
-    { "source": "/en/gannomat/kolkovaci-stroje-dvere-okna/:m", "destination": "https://asamer.cz/en/gannomat/dowel-inserters-doors-windows/:m", "permanent": true },
-    { "source": "/sk/gannomat/kolkovaci-stroje-dvere-okna/:m", "destination": "https://asamer.cz/sk/gannomat/kolkovacie-stroje-dvere-okna/:m", "permanent": true },
-    { "source": "/hu/gannomat/kolkovaci-stroje-dvere-okna/:m", "destination": "https://asamer.cz/hu/gannomat/csapozo-gepek-ajto-ablak/:m", "permanent": true },
-
-    { "source": "/de/gannomat/obrabeci-centra/:m", "destination": "https://asamer.cz/de/gannomat/bearbeitungszentren/:m", "permanent": true },
-    { "source": "/en/gannomat/obrabeci-centra/:m", "destination": "https://asamer.cz/en/gannomat/machining-centers/:m", "permanent": true },
-    { "source": "/sk/gannomat/obrabeci-centra/:m", "destination": "https://asamer.cz/sk/gannomat/obrabacie-centra/:m", "permanent": true },
-    { "source": "/hu/gannomat/obrabeci-centra/:m", "destination": "https://asamer.cz/hu/gannomat/megmunkalo-kozpontok/:m", "permanent": true },
-
-    { "source": "/de/gannomat/vrtacky-na-kovani/:m", "destination": "https://asamer.cz/de/gannomat/beschlaege-bohrmaschinen/:m", "permanent": true },
-    { "source": "/en/gannomat/vrtacky-na-kovani/:m", "destination": "https://asamer.cz/en/gannomat/fitting-boring-machines/:m", "permanent": true },
-    { "source": "/sk/gannomat/vrtacky-na-kovani/:m", "destination": "https://asamer.cz/sk/gannomat/vrtacky-na-kovanie/:m", "permanent": true },
-    { "source": "/hu/gannomat/vrtacky-na-kovani/:m", "destination": "https://asamer.cz/hu/gannomat/vasalatfuro-gepek/:m", "permanent": true },
-
-    { "source": "/de/gannomat/korpusove-lisy/:m", "destination": "https://asamer.cz/de/gannomat/korpuspressen/:m", "permanent": true },
-    { "source": "/en/gannomat/korpusove-lisy/:m", "destination": "https://asamer.cz/en/gannomat/carcass-presses/:m", "permanent": true },
-    { "source": "/hu/gannomat/korpusove-lisy/:m", "destination": "https://asamer.cz/hu/gannomat/korpusz-presek/:m", "permanent": true },
-
-    { "source": "/de/gannomat/ramove-vrtacky/:m", "destination": "https://asamer.cz/de/gannomat/rahmenduebel-maschinen/:m", "permanent": true },
-    { "source": "/en/gannomat/ramove-vrtacky/:m", "destination": "https://asamer.cz/en/gannomat/frame-dowel-machines/:m", "permanent": true },
-    { "source": "/hu/gannomat/ramove-vrtacky/:m", "destination": "https://asamer.cz/hu/gannomat/keret-csapozo-gepek/:m", "permanent": true },
-
-    { "source": "/de/gannomat/vrtacky-na-zavesy/:m", "destination": "https://asamer.cz/de/gannomat/ecklager-bohrmaschinen/:m", "permanent": true },
-    { "source": "/en/gannomat/vrtacky-na-zavesy/:m", "destination": "https://asamer.cz/en/gannomat/corner-hinge-machines/:m", "permanent": true },
-    { "source": "/hu/gannomat/vrtacky-na-zavesy/:m", "destination": "https://asamer.cz/hu/gannomat/sarokpant-furo-gepek/:m", "permanent": true },
-
-    { "source": "/finanzierung", "destination": "https://asamer.cz/cz/financovani", "permanent": true },
-    { "source": "/loesungen", "destination": "https://asamer.cz/cz/reseni", "permanent": true },
-    { "source": "/service", "destination": "https://asamer.cz/cz/servis", "permanent": true },
-    { "source": "/impressum", "destination": "https://asamer.cz/cz/imprint", "permanent": true },
-
-    { "source": "/products/olepovacky-ott/:slug*", "destination": "https://asamer.cz/cz/ott", "permanent": true },
-    { "source": "/products/kolikovaci-stroje-gannomat/:slug*", "destination": "https://asamer.cz/cz/gannomat", "permanent": true },
-    { "source": "/products/korpusove-lisy-gannomat/:slug*", "destination": "https://asamer.cz/cz/gannomat", "permanent": true },
-    { "source": "/products/manipulatory-barbaric/:slug*", "destination": "https://asamer.cz/cz/barbaric", "permanent": true },
-    { "source": "/products/pily-schelling/:slug*", "destination": "https://asamer.cz/cz/ima-schelling", "permanent": true },
-    { "source": "/products/tech-uzly-a-linky-ima-schelling/:slug*", "destination": "https://asamer.cz/cz/ima-schelling", "permanent": true },
-    { "source": "/products/pily-altendorf/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
-    { "source": "/products/pily-streibeg/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
-    { "source": "/products/susarny-dreva/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
-    { "source": "/products/sesivacky-dyh-kuper/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
-    { "source": "/products/dyhovaci-lisy-langzauner/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
-    { "source": "/products/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
-    { "source": "/second-hand/:slug*", "destination": "https://asamer.cz/cz/pouzite-stroje", "permanent": true },
-    { "source": "/servis/:slug*", "destination": "https://asamer.cz/cz/servis", "permanent": true },
-    { "source": "/about/:slug*", "destination": "https://asamer.cz/cz/kontakt", "permanent": true },
-    { "source": "/xylexpo-2024/:slug*", "destination": "https://asamer.cz/cz", "permanent": true },
-    { "source": "/ligna-2024/:slug*", "destination": "https://asamer.cz/cz", "permanent": true },
-
+    {
+      "source": "/:l1(de|en|cz|sk|hu)/:l2(de|en|cz|sk|hu)/:l3(de|en|cz|sk|hu)/:rest*",
+      "destination": "https://asamer.cz/:l1/:rest*",
+      "permanent": true
+    },
+    {
+      "source": "/:l1(de|en|cz|sk|hu)/:l2(de|en|cz|sk|hu)/:rest*",
+      "destination": "https://asamer.cz/:l1/:rest*",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "https://asamer.cz/cz",
+      "permanent": true
+    },
+    {
+      "source": "/finanzierung",
+      "destination": "https://asamer.cz/cz/financovani",
+      "permanent": true
+    },
+    {
+      "source": "/loesungen",
+      "destination": "https://asamer.cz/cz/reseni",
+      "permanent": true
+    },
+    {
+      "source": "/service",
+      "destination": "https://asamer.cz/cz/servis",
+      "permanent": true
+    },
+    {
+      "source": "/impressum",
+      "destination": "https://asamer.cz/cz/imprint",
+      "permanent": true
+    },
+    {
+      "source": "/products/olepovacky-ott/:slug*",
+      "destination": "https://asamer.cz/cz/ott",
+      "permanent": true
+    },
+    {
+      "source": "/products/kolikovaci-stroje-gannomat/:slug*",
+      "destination": "https://asamer.cz/cz/gannomat",
+      "permanent": true
+    },
+    {
+      "source": "/products/korpusove-lisy-gannomat/:slug*",
+      "destination": "https://asamer.cz/cz/gannomat",
+      "permanent": true
+    },
+    {
+      "source": "/products/manipulatory-barbaric/:slug*",
+      "destination": "https://asamer.cz/cz/barbaric",
+      "permanent": true
+    },
+    {
+      "source": "/products/pily-schelling/:slug*",
+      "destination": "https://asamer.cz/cz/ima-schelling",
+      "permanent": true
+    },
+    {
+      "source": "/products/tech-uzly-a-linky-ima-schelling/:slug*",
+      "destination": "https://asamer.cz/cz/ima-schelling",
+      "permanent": true
+    },
+    {
+      "source": "/products/pily-altendorf/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/pily-streibeg/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/susarny-dreva/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/sesivacky-dyh-kuper/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/dyhovaci-lisy-langzauner/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/second-hand/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/servis/:slug*",
+      "destination": "https://asamer.cz/cz/servis",
+      "permanent": true
+    },
+    {
+      "source": "/about/:slug*",
+      "destination": "https://asamer.cz/cz/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/xylexpo-2024/:slug*",
+      "destination": "https://asamer.cz/cz",
+      "permanent": true
+    },
+    {
+      "source": "/ligna-2024/:slug*",
+      "destination": "https://asamer.cz/cz",
+      "permanent": true
+    },
+    {
+      "source": "/adatvedelem",
+      "destination": "https://asamer.cz/cz/ochrana-osobnich-udaju",
+      "permanent": true
+    },
+    {
+      "source": "/agb",
+      "destination": "https://asamer.cz/cz/obchodni-podminky",
+      "permanent": true
+    },
+    {
+      "source": "/altalanos-szerzodesi-feltetelek",
+      "destination": "https://asamer.cz/cz/obchodni-podminky",
+      "permanent": true
+    },
+    {
+      "source": "/barbaric",
+      "destination": "https://asamer.cz/cz/barbaric",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "https://asamer.cz/cz/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/datenschutz",
+      "destination": "https://asamer.cz/cz/ochrana-osobnich-udaju",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "https://asamer.cz/cz/faq",
+      "permanent": true
+    },
+    {
+      "source": "/financing",
+      "destination": "https://asamer.cz/cz/financovani",
+      "permanent": true
+    },
+    {
+      "source": "/financovani",
+      "destination": "https://asamer.cz/cz/financovani",
+      "permanent": true
+    },
+    {
+      "source": "/financovanie",
+      "destination": "https://asamer.cz/cz/financovani",
+      "permanent": true
+    },
+    {
+      "source": "/finanszirozas",
+      "destination": "https://asamer.cz/cz/financovani",
+      "permanent": true
+    },
+    {
+      "source": "/gannomat",
+      "destination": "https://asamer.cz/cz/gannomat",
+      "permanent": true
+    },
+    {
+      "source": "/gebrauchtmaschinen",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/guide/choose-edgebander",
+      "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/guide/funding-woodworking-machines-cz-2026",
+      "destination": "https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/guide/panel-saw-aluminium-vs-wood",
+      "destination": "https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/guide/pur-vs-eva",
+      "destination": "https://asamer.cz/cz/pruvodce/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/guide/vacuum-lifter-wood",
+      "destination": "https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz",
+      "permanent": true
+    },
+    {
+      "source": "/guide/warehouse-automation",
+      "destination": "https://asamer.cz/cz/pruvodce/automatizace-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/hasznalt-gepek",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/impresszum",
+      "destination": "https://asamer.cz/cz/imprint",
+      "permanent": true
+    },
+    {
+      "source": "/imprint",
+      "destination": "https://asamer.cz/cz/imprint",
+      "permanent": true
+    },
+    {
+      "source": "/kapcsolat",
+      "destination": "https://asamer.cz/cz/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt",
+      "destination": "https://asamer.cz/cz/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/mayer",
+      "destination": "https://asamer.cz/cz/mayer",
+      "permanent": true
+    },
+    {
+      "source": "/megoldasok",
+      "destination": "https://asamer.cz/cz/reseni",
+      "permanent": true
+    },
+    {
+      "source": "/obchodne-podmienky",
+      "destination": "https://asamer.cz/cz/obchodni-podminky",
+      "permanent": true
+    },
+    {
+      "source": "/obchodni-podminky",
+      "destination": "https://asamer.cz/cz/obchodni-podminky",
+      "permanent": true
+    },
+    {
+      "source": "/ochrana-osobnich-udaju",
+      "destination": "https://asamer.cz/cz/ochrana-osobnich-udaju",
+      "permanent": true
+    },
+    {
+      "source": "/ochrana-osobnych-udajov",
+      "destination": "https://asamer.cz/cz/ochrana-osobnich-udaju",
+      "permanent": true
+    },
+    {
+      "source": "/ott",
+      "destination": "https://asamer.cz/cz/ott",
+      "permanent": true
+    },
+    {
+      "source": "/pouzite-stroje",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "https://asamer.cz/cz/ochrana-osobnich-udaju",
+      "permanent": true
+    },
+    {
+      "source": "/pruvodce/automatizace-skladu",
+      "destination": "https://asamer.cz/cz/pruvodce/automatizace-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "destination": "https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "destination": "https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/pruvodce/pur-vs-eva",
+      "destination": "https://asamer.cz/cz/pruvodce/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/pruvodce/vakuovy-zvedak-holz",
+      "destination": "https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz",
+      "permanent": true
+    },
+    {
+      "source": "/pruvodce/vyber-olepovacky-hran",
+      "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/ratgeber/foerderung-holzbearbeitung-cz-2026",
+      "destination": "https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/ratgeber/formatsaege-aluminium-vs-holz",
+      "destination": "https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/ratgeber/kantenanleimmaschine-waehlen",
+      "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/ratgeber/lagerautomatisierung",
+      "destination": "https://asamer.cz/cz/pruvodce/automatizace-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/ratgeber/pur-vs-eva",
+      "destination": "https://asamer.cz/cz/pruvodce/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/ratgeber/vakuumheber-holz",
+      "destination": "https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz",
+      "permanent": true
+    },
+    {
+      "source": "/reseni",
+      "destination": "https://asamer.cz/cz/reseni",
+      "permanent": true
+    },
+    {
+      "source": "/riesenia",
+      "destination": "https://asamer.cz/cz/reseni",
+      "permanent": true
+    },
+    {
+      "source": "/servis",
+      "destination": "https://asamer.cz/cz/servis",
+      "permanent": true
+    },
+    {
+      "source": "/solutions",
+      "destination": "https://asamer.cz/cz/reseni",
+      "permanent": true
+    },
+    {
+      "source": "/sprievodca/automatizacia-skladu",
+      "destination": "https://asamer.cz/cz/pruvodce/automatizace-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/sprievodca/dotacie-stroje-cz-2026",
+      "destination": "https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/sprievodca/formatovacia-pila-hlinik-vs-drevo",
+      "destination": "https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/sprievodca/pur-vs-eva",
+      "destination": "https://asamer.cz/cz/pruvodce/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/sprievodca/vakuovy-zdvihak-drevo",
+      "destination": "https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz",
+      "permanent": true
+    },
+    {
+      "source": "/sprievodca/vyber-olepovacky-hran",
+      "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/szerviz",
+      "destination": "https://asamer.cz/cz/servis",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "https://asamer.cz/cz/obchodni-podminky",
+      "permanent": true
+    },
+    {
+      "source": "/used-machines",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/utmutato/elzarogep-valasztas",
+      "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/utmutato/formatizalo-furesz-aluminium-vs-fa",
+      "destination": "https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/utmutato/pur-vs-eva",
+      "destination": "https://asamer.cz/cz/pruvodce/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/utmutato/raktarautomatizalas",
+      "destination": "https://asamer.cz/cz/pruvodce/automatizace-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/utmutato/tamogatasok-csehorszag-2026",
+      "destination": "https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/utmutato/vakuumemelo-fa",
+      "destination": "https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz",
+      "permanent": true
+    },
+    {
+      "source": "/de/:wrong(financing|financovani|financovanie|finanszirozas)",
+      "destination": "https://asamer.cz/de/finanzierung",
+      "permanent": true
+    },
+    {
+      "source": "/en/:wrong(finanzierung|financovani|financovanie|finanszirozas)",
+      "destination": "https://asamer.cz/en/financing",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:wrong(finanzierung|financing|financovanie|finanszirozas)",
+      "destination": "https://asamer.cz/cz/financovani",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:wrong(finanzierung|financing|financovani|finanszirozas)",
+      "destination": "https://asamer.cz/sk/financovanie",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:wrong(finanzierung|financing|financovani|financovanie)",
+      "destination": "https://asamer.cz/hu/finanszirozas",
+      "permanent": true
+    },
+    {
+      "source": "/de/:wrong(solutions|reseni|riesenia|megoldasok)",
+      "destination": "https://asamer.cz/de/loesungen",
+      "permanent": true
+    },
+    {
+      "source": "/en/:wrong(loesungen|reseni|riesenia|megoldasok)",
+      "destination": "https://asamer.cz/en/solutions",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:wrong(loesungen|solutions|riesenia|megoldasok)",
+      "destination": "https://asamer.cz/cz/reseni",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:wrong(loesungen|solutions|reseni|megoldasok)",
+      "destination": "https://asamer.cz/sk/riesenia",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:wrong(loesungen|solutions|reseni|riesenia)",
+      "destination": "https://asamer.cz/hu/megoldasok",
+      "permanent": true
+    },
+    {
+      "source": "/de/:wrong(servis|szerviz)",
+      "destination": "https://asamer.cz/de/service",
+      "permanent": true
+    },
+    {
+      "source": "/en/:wrong(servis|szerviz)",
+      "destination": "https://asamer.cz/en/service",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:wrong(service|szerviz)",
+      "destination": "https://asamer.cz/cz/servis",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:wrong(service|szerviz)",
+      "destination": "https://asamer.cz/sk/servis",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:wrong(service|servis)",
+      "destination": "https://asamer.cz/hu/szerviz",
+      "permanent": true
+    },
+    {
+      "source": "/de/:wrong(used-machines|pouzite-stroje|hasznalt-gepek)",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/en/:wrong(gebrauchtmaschinen|pouzite-stroje|hasznalt-gepek)",
+      "destination": "https://asamer.cz/en/used-machines",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:wrong(gebrauchtmaschinen|used-machines|hasznalt-gepek)",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:wrong(gebrauchtmaschinen|used-machines|hasznalt-gepek)",
+      "destination": "https://asamer.cz/sk/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:wrong(gebrauchtmaschinen|used-machines|pouzite-stroje)",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/de/:wrong(contact|kapcsolat)",
+      "destination": "https://asamer.cz/de/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/en/:wrong(kontakt|kapcsolat)",
+      "destination": "https://asamer.cz/en/contact",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:wrong(contact|kapcsolat)",
+      "destination": "https://asamer.cz/cz/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:wrong(contact|kapcsolat)",
+      "destination": "https://asamer.cz/sk/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:wrong(kontakt|contact)",
+      "destination": "https://asamer.cz/hu/kapcsolat",
+      "permanent": true
+    },
+    {
+      "source": "/de/:wrong(imprint|impresszum)",
+      "destination": "https://asamer.cz/de/impressum",
+      "permanent": true
+    },
+    {
+      "source": "/en/:wrong(impressum|impresszum)",
+      "destination": "https://asamer.cz/en/imprint",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:wrong(impressum|impresszum)",
+      "destination": "https://asamer.cz/cz/imprint",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:wrong(impressum|impresszum)",
+      "destination": "https://asamer.cz/sk/imprint",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:wrong(impressum|imprint)",
+      "destination": "https://asamer.cz/hu/impresszum",
+      "permanent": true
+    },
+    {
+      "source": "/de/:wrong(privacy|ochrana-osobnich-udaju|ochrana-osobnych-udajov|adatvedelem)",
+      "destination": "https://asamer.cz/de/datenschutz",
+      "permanent": true
+    },
+    {
+      "source": "/en/:wrong(datenschutz|ochrana-osobnich-udaju|ochrana-osobnych-udajov|adatvedelem)",
+      "destination": "https://asamer.cz/en/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:wrong(datenschutz|privacy|ochrana-osobnych-udajov|adatvedelem)",
+      "destination": "https://asamer.cz/cz/ochrana-osobnich-udaju",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:wrong(datenschutz|privacy|ochrana-osobnich-udaju|adatvedelem)",
+      "destination": "https://asamer.cz/sk/ochrana-osobnych-udajov",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:wrong(datenschutz|privacy|ochrana-osobnich-udaju|ochrana-osobnych-udajov)",
+      "destination": "https://asamer.cz/hu/adatvedelem",
+      "permanent": true
+    },
+    {
+      "source": "/de/:wrong(terms|obchodni-podminky|obchodne-podmienky|altalanos-szerzodesi-feltetelek)",
+      "destination": "https://asamer.cz/de/agb",
+      "permanent": true
+    },
+    {
+      "source": "/en/:wrong(agb|obchodni-podminky|obchodne-podmienky|altalanos-szerzodesi-feltetelek)",
+      "destination": "https://asamer.cz/en/terms",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:wrong(agb|terms|obchodne-podmienky|altalanos-szerzodesi-feltetelek)",
+      "destination": "https://asamer.cz/cz/obchodni-podminky",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:wrong(agb|terms|obchodni-podminky|altalanos-szerzodesi-feltetelek)",
+      "destination": "https://asamer.cz/sk/obchodne-podmienky",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:wrong(agb|terms|obchodni-podminky|obchodne-podmienky)",
+      "destination": "https://asamer.cz/hu/altalanos-szerzodesi-feltetelek",
+      "permanent": true
+    },
+    {
+      "source": "/de/guide/pur-vs-eva",
+      "destination": "https://asamer.cz/de/ratgeber/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/de/pruvodce/pur-vs-eva",
+      "destination": "https://asamer.cz/de/ratgeber/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/de/sprievodca/pur-vs-eva",
+      "destination": "https://asamer.cz/de/ratgeber/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/de/utmutato/pur-vs-eva",
+      "destination": "https://asamer.cz/de/ratgeber/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/en/ratgeber/pur-vs-eva",
+      "destination": "https://asamer.cz/en/guide/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/en/pruvodce/pur-vs-eva",
+      "destination": "https://asamer.cz/en/guide/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/en/sprievodca/pur-vs-eva",
+      "destination": "https://asamer.cz/en/guide/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/en/utmutato/pur-vs-eva",
+      "destination": "https://asamer.cz/en/guide/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ratgeber/pur-vs-eva",
+      "destination": "https://asamer.cz/cz/pruvodce/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/cz/guide/pur-vs-eva",
+      "destination": "https://asamer.cz/cz/pruvodce/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/cz/sprievodca/pur-vs-eva",
+      "destination": "https://asamer.cz/cz/pruvodce/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/cz/utmutato/pur-vs-eva",
+      "destination": "https://asamer.cz/cz/pruvodce/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ratgeber/pur-vs-eva",
+      "destination": "https://asamer.cz/sk/sprievodca/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/sk/guide/pur-vs-eva",
+      "destination": "https://asamer.cz/sk/sprievodca/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/sk/pruvodce/pur-vs-eva",
+      "destination": "https://asamer.cz/sk/sprievodca/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/sk/utmutato/pur-vs-eva",
+      "destination": "https://asamer.cz/sk/sprievodca/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ratgeber/pur-vs-eva",
+      "destination": "https://asamer.cz/hu/utmutato/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/hu/guide/pur-vs-eva",
+      "destination": "https://asamer.cz/hu/utmutato/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/hu/pruvodce/pur-vs-eva",
+      "destination": "https://asamer.cz/hu/utmutato/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/hu/sprievodca/pur-vs-eva",
+      "destination": "https://asamer.cz/hu/utmutato/pur-vs-eva",
+      "permanent": true
+    },
+    {
+      "source": "/de/guide/choose-edgebander",
+      "destination": "https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen",
+      "permanent": true
+    },
+    {
+      "source": "/de/pruvodce/vyber-olepovacky-hran",
+      "destination": "https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen",
+      "permanent": true
+    },
+    {
+      "source": "/de/sprievodca/vyber-olepovacky-hran",
+      "destination": "https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen",
+      "permanent": true
+    },
+    {
+      "source": "/de/utmutato/elzarogep-valasztas",
+      "destination": "https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen",
+      "permanent": true
+    },
+    {
+      "source": "/en/ratgeber/kantenanleimmaschine-waehlen",
+      "destination": "https://asamer.cz/en/guide/choose-edgebander",
+      "permanent": true
+    },
+    {
+      "source": "/en/pruvodce/vyber-olepovacky-hran",
+      "destination": "https://asamer.cz/en/guide/choose-edgebander",
+      "permanent": true
+    },
+    {
+      "source": "/en/sprievodca/vyber-olepovacky-hran",
+      "destination": "https://asamer.cz/en/guide/choose-edgebander",
+      "permanent": true
+    },
+    {
+      "source": "/en/utmutato/elzarogep-valasztas",
+      "destination": "https://asamer.cz/en/guide/choose-edgebander",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ratgeber/kantenanleimmaschine-waehlen",
+      "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/cz/guide/choose-edgebander",
+      "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/cz/sprievodca/vyber-olepovacky-hran",
+      "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/cz/utmutato/elzarogep-valasztas",
+      "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ratgeber/kantenanleimmaschine-waehlen",
+      "destination": "https://asamer.cz/sk/sprievodca/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/guide/choose-edgebander",
+      "destination": "https://asamer.cz/sk/sprievodca/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/pruvodce/vyber-olepovacky-hran",
+      "destination": "https://asamer.cz/sk/sprievodca/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/utmutato/elzarogep-valasztas",
+      "destination": "https://asamer.cz/sk/sprievodca/vyber-olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ratgeber/kantenanleimmaschine-waehlen",
+      "destination": "https://asamer.cz/hu/utmutato/elzarogep-valasztas",
+      "permanent": true
+    },
+    {
+      "source": "/hu/guide/choose-edgebander",
+      "destination": "https://asamer.cz/hu/utmutato/elzarogep-valasztas",
+      "permanent": true
+    },
+    {
+      "source": "/hu/pruvodce/vyber-olepovacky-hran",
+      "destination": "https://asamer.cz/hu/utmutato/elzarogep-valasztas",
+      "permanent": true
+    },
+    {
+      "source": "/hu/sprievodca/vyber-olepovacky-hran",
+      "destination": "https://asamer.cz/hu/utmutato/elzarogep-valasztas",
+      "permanent": true
+    },
+    {
+      "source": "/de/guide/warehouse-automation",
+      "destination": "https://asamer.cz/de/ratgeber/lagerautomatisierung",
+      "permanent": true
+    },
+    {
+      "source": "/de/pruvodce/automatizace-skladu",
+      "destination": "https://asamer.cz/de/ratgeber/lagerautomatisierung",
+      "permanent": true
+    },
+    {
+      "source": "/de/sprievodca/automatizacia-skladu",
+      "destination": "https://asamer.cz/de/ratgeber/lagerautomatisierung",
+      "permanent": true
+    },
+    {
+      "source": "/de/utmutato/raktarautomatizalas",
+      "destination": "https://asamer.cz/de/ratgeber/lagerautomatisierung",
+      "permanent": true
+    },
+    {
+      "source": "/en/ratgeber/lagerautomatisierung",
+      "destination": "https://asamer.cz/en/guide/warehouse-automation",
+      "permanent": true
+    },
+    {
+      "source": "/en/pruvodce/automatizace-skladu",
+      "destination": "https://asamer.cz/en/guide/warehouse-automation",
+      "permanent": true
+    },
+    {
+      "source": "/en/sprievodca/automatizacia-skladu",
+      "destination": "https://asamer.cz/en/guide/warehouse-automation",
+      "permanent": true
+    },
+    {
+      "source": "/en/utmutato/raktarautomatizalas",
+      "destination": "https://asamer.cz/en/guide/warehouse-automation",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ratgeber/lagerautomatisierung",
+      "destination": "https://asamer.cz/cz/pruvodce/automatizace-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/cz/guide/warehouse-automation",
+      "destination": "https://asamer.cz/cz/pruvodce/automatizace-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/cz/sprievodca/automatizacia-skladu",
+      "destination": "https://asamer.cz/cz/pruvodce/automatizace-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/cz/utmutato/raktarautomatizalas",
+      "destination": "https://asamer.cz/cz/pruvodce/automatizace-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ratgeber/lagerautomatisierung",
+      "destination": "https://asamer.cz/sk/sprievodca/automatizacia-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/sk/guide/warehouse-automation",
+      "destination": "https://asamer.cz/sk/sprievodca/automatizacia-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/sk/pruvodce/automatizace-skladu",
+      "destination": "https://asamer.cz/sk/sprievodca/automatizacia-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/sk/utmutato/raktarautomatizalas",
+      "destination": "https://asamer.cz/sk/sprievodca/automatizacia-skladu",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ratgeber/lagerautomatisierung",
+      "destination": "https://asamer.cz/hu/utmutato/raktarautomatizalas",
+      "permanent": true
+    },
+    {
+      "source": "/hu/guide/warehouse-automation",
+      "destination": "https://asamer.cz/hu/utmutato/raktarautomatizalas",
+      "permanent": true
+    },
+    {
+      "source": "/hu/pruvodce/automatizace-skladu",
+      "destination": "https://asamer.cz/hu/utmutato/raktarautomatizalas",
+      "permanent": true
+    },
+    {
+      "source": "/hu/sprievodca/automatizacia-skladu",
+      "destination": "https://asamer.cz/hu/utmutato/raktarautomatizalas",
+      "permanent": true
+    },
+    {
+      "source": "/de/guide/panel-saw-aluminium-vs-wood",
+      "destination": "https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz",
+      "permanent": true
+    },
+    {
+      "source": "/de/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "destination": "https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz",
+      "permanent": true
+    },
+    {
+      "source": "/de/sprievodca/formatovacia-pila-hlinik-vs-drevo",
+      "destination": "https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz",
+      "permanent": true
+    },
+    {
+      "source": "/de/utmutato/formatizalo-furesz-aluminium-vs-fa",
+      "destination": "https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz",
+      "permanent": true
+    },
+    {
+      "source": "/en/ratgeber/formatsaege-aluminium-vs-holz",
+      "destination": "https://asamer.cz/en/guide/panel-saw-aluminium-vs-wood",
+      "permanent": true
+    },
+    {
+      "source": "/en/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "destination": "https://asamer.cz/en/guide/panel-saw-aluminium-vs-wood",
+      "permanent": true
+    },
+    {
+      "source": "/en/sprievodca/formatovacia-pila-hlinik-vs-drevo",
+      "destination": "https://asamer.cz/en/guide/panel-saw-aluminium-vs-wood",
+      "permanent": true
+    },
+    {
+      "source": "/en/utmutato/formatizalo-furesz-aluminium-vs-fa",
+      "destination": "https://asamer.cz/en/guide/panel-saw-aluminium-vs-wood",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ratgeber/formatsaege-aluminium-vs-holz",
+      "destination": "https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/cz/guide/panel-saw-aluminium-vs-wood",
+      "destination": "https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/cz/sprievodca/formatovacia-pila-hlinik-vs-drevo",
+      "destination": "https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/cz/utmutato/formatizalo-furesz-aluminium-vs-fa",
+      "destination": "https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ratgeber/formatsaege-aluminium-vs-holz",
+      "destination": "https://asamer.cz/sk/sprievodca/formatovacia-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/sk/guide/panel-saw-aluminium-vs-wood",
+      "destination": "https://asamer.cz/sk/sprievodca/formatovacia-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/sk/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "destination": "https://asamer.cz/sk/sprievodca/formatovacia-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/sk/utmutato/formatizalo-furesz-aluminium-vs-fa",
+      "destination": "https://asamer.cz/sk/sprievodca/formatovacia-pila-hlinik-vs-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ratgeber/formatsaege-aluminium-vs-holz",
+      "destination": "https://asamer.cz/hu/utmutato/formatizalo-furesz-aluminium-vs-fa",
+      "permanent": true
+    },
+    {
+      "source": "/hu/guide/panel-saw-aluminium-vs-wood",
+      "destination": "https://asamer.cz/hu/utmutato/formatizalo-furesz-aluminium-vs-fa",
+      "permanent": true
+    },
+    {
+      "source": "/hu/pruvodce/formatovaci-pila-hlinik-vs-drevo",
+      "destination": "https://asamer.cz/hu/utmutato/formatizalo-furesz-aluminium-vs-fa",
+      "permanent": true
+    },
+    {
+      "source": "/hu/sprievodca/formatovacia-pila-hlinik-vs-drevo",
+      "destination": "https://asamer.cz/hu/utmutato/formatizalo-furesz-aluminium-vs-fa",
+      "permanent": true
+    },
+    {
+      "source": "/de/guide/funding-woodworking-machines-cz-2026",
+      "destination": "https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/de/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "destination": "https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/de/sprievodca/dotacie-stroje-cz-2026",
+      "destination": "https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/de/utmutato/tamogatasok-csehorszag-2026",
+      "destination": "https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/en/ratgeber/foerderung-holzbearbeitung-cz-2026",
+      "destination": "https://asamer.cz/en/guide/funding-woodworking-machines-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/en/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "destination": "https://asamer.cz/en/guide/funding-woodworking-machines-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/en/sprievodca/dotacie-stroje-cz-2026",
+      "destination": "https://asamer.cz/en/guide/funding-woodworking-machines-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/en/utmutato/tamogatasok-csehorszag-2026",
+      "destination": "https://asamer.cz/en/guide/funding-woodworking-machines-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ratgeber/foerderung-holzbearbeitung-cz-2026",
+      "destination": "https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/cz/guide/funding-woodworking-machines-cz-2026",
+      "destination": "https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/cz/sprievodca/dotacie-stroje-cz-2026",
+      "destination": "https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/cz/utmutato/tamogatasok-csehorszag-2026",
+      "destination": "https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ratgeber/foerderung-holzbearbeitung-cz-2026",
+      "destination": "https://asamer.cz/sk/sprievodca/dotacie-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/sk/guide/funding-woodworking-machines-cz-2026",
+      "destination": "https://asamer.cz/sk/sprievodca/dotacie-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/sk/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "destination": "https://asamer.cz/sk/sprievodca/dotacie-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/sk/utmutato/tamogatasok-csehorszag-2026",
+      "destination": "https://asamer.cz/sk/sprievodca/dotacie-stroje-cz-2026",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ratgeber/foerderung-holzbearbeitung-cz-2026",
+      "destination": "https://asamer.cz/hu/utmutato/tamogatasok-csehorszag-2026",
+      "permanent": true
+    },
+    {
+      "source": "/hu/guide/funding-woodworking-machines-cz-2026",
+      "destination": "https://asamer.cz/hu/utmutato/tamogatasok-csehorszag-2026",
+      "permanent": true
+    },
+    {
+      "source": "/hu/pruvodce/dotace-drevoobrabeci-stroje-cz-2026",
+      "destination": "https://asamer.cz/hu/utmutato/tamogatasok-csehorszag-2026",
+      "permanent": true
+    },
+    {
+      "source": "/hu/sprievodca/dotacie-stroje-cz-2026",
+      "destination": "https://asamer.cz/hu/utmutato/tamogatasok-csehorszag-2026",
+      "permanent": true
+    },
+    {
+      "source": "/de/guide/vacuum-lifter-wood",
+      "destination": "https://asamer.cz/de/ratgeber/vakuumheber-holz",
+      "permanent": true
+    },
+    {
+      "source": "/de/pruvodce/vakuovy-zvedak-holz",
+      "destination": "https://asamer.cz/de/ratgeber/vakuumheber-holz",
+      "permanent": true
+    },
+    {
+      "source": "/de/sprievodca/vakuovy-zdvihak-drevo",
+      "destination": "https://asamer.cz/de/ratgeber/vakuumheber-holz",
+      "permanent": true
+    },
+    {
+      "source": "/de/utmutato/vakuumemelo-fa",
+      "destination": "https://asamer.cz/de/ratgeber/vakuumheber-holz",
+      "permanent": true
+    },
+    {
+      "source": "/en/ratgeber/vakuumheber-holz",
+      "destination": "https://asamer.cz/en/guide/vacuum-lifter-wood",
+      "permanent": true
+    },
+    {
+      "source": "/en/pruvodce/vakuovy-zvedak-holz",
+      "destination": "https://asamer.cz/en/guide/vacuum-lifter-wood",
+      "permanent": true
+    },
+    {
+      "source": "/en/sprievodca/vakuovy-zdvihak-drevo",
+      "destination": "https://asamer.cz/en/guide/vacuum-lifter-wood",
+      "permanent": true
+    },
+    {
+      "source": "/en/utmutato/vakuumemelo-fa",
+      "destination": "https://asamer.cz/en/guide/vacuum-lifter-wood",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ratgeber/vakuumheber-holz",
+      "destination": "https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz",
+      "permanent": true
+    },
+    {
+      "source": "/cz/guide/vacuum-lifter-wood",
+      "destination": "https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz",
+      "permanent": true
+    },
+    {
+      "source": "/cz/sprievodca/vakuovy-zdvihak-drevo",
+      "destination": "https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz",
+      "permanent": true
+    },
+    {
+      "source": "/cz/utmutato/vakuumemelo-fa",
+      "destination": "https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ratgeber/vakuumheber-holz",
+      "destination": "https://asamer.cz/sk/sprievodca/vakuovy-zdvihak-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/sk/guide/vacuum-lifter-wood",
+      "destination": "https://asamer.cz/sk/sprievodca/vakuovy-zdvihak-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/sk/pruvodce/vakuovy-zvedak-holz",
+      "destination": "https://asamer.cz/sk/sprievodca/vakuovy-zdvihak-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/sk/utmutato/vakuumemelo-fa",
+      "destination": "https://asamer.cz/sk/sprievodca/vakuovy-zdvihak-drevo",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ratgeber/vakuumheber-holz",
+      "destination": "https://asamer.cz/hu/utmutato/vakuumemelo-fa",
+      "permanent": true
+    },
+    {
+      "source": "/hu/guide/vacuum-lifter-wood",
+      "destination": "https://asamer.cz/hu/utmutato/vakuumemelo-fa",
+      "permanent": true
+    },
+    {
+      "source": "/hu/pruvodce/vakuovy-zvedak-holz",
+      "destination": "https://asamer.cz/hu/utmutato/vakuumemelo-fa",
+      "permanent": true
+    },
+    {
+      "source": "/hu/sprievodca/vakuovy-zdvihak-drevo",
+      "destination": "https://asamer.cz/hu/utmutato/vakuumemelo-fa",
+      "permanent": true
+    },
+    {
+      "source": "/de/ott/:wrong(edgebanding-machines|olepovacky-hran|elzarogepek)",
+      "destination": "https://asamer.cz/de/ott/kantenanleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/ott/:wrong(edgebanding-machines|olepovacky-hran|elzarogepek)/:model",
+      "destination": "https://asamer.cz/de/ott/kantenanleimmaschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/ott/:wrong(kantenanleimmaschinen|olepovacky-hran|elzarogepek)",
+      "destination": "https://asamer.cz/en/ott/edgebanding-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/ott/:wrong(kantenanleimmaschinen|olepovacky-hran|elzarogepek)/:model",
+      "destination": "https://asamer.cz/en/ott/edgebanding-machines/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ott/:wrong(kantenanleimmaschinen|edgebanding-machines|elzarogepek)",
+      "destination": "https://asamer.cz/cz/ott/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ott/:wrong(kantenanleimmaschinen|edgebanding-machines|elzarogepek)/:model",
+      "destination": "https://asamer.cz/cz/ott/olepovacky-hran/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ott/:wrong(kantenanleimmaschinen|edgebanding-machines|elzarogepek)",
+      "destination": "https://asamer.cz/sk/ott/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ott/:wrong(kantenanleimmaschinen|edgebanding-machines|elzarogepek)/:model",
+      "destination": "https://asamer.cz/sk/ott/olepovacky-hran/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ott/:wrong(kantenanleimmaschinen|edgebanding-machines|olepovacky-hran)",
+      "destination": "https://asamer.cz/hu/ott/elzarogepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ott/:wrong(kantenanleimmaschinen|edgebanding-machines|olepovacky-hran)/:model",
+      "destination": "https://asamer.cz/hu/ott/elzarogepek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/ott/:wrong(gluing-technology|lepici-technologie|lepiaca-technologia|ragasztasi-technologia)",
+      "destination": "https://asamer.cz/de/ott/klebetechnologie",
+      "permanent": true
+    },
+    {
+      "source": "/de/ott/:wrong(gluing-technology|lepici-technologie|lepiaca-technologia|ragasztasi-technologia)/:model",
+      "destination": "https://asamer.cz/de/ott/klebetechnologie/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/ott/:wrong(klebetechnologie|lepici-technologie|lepiaca-technologia|ragasztasi-technologia)",
+      "destination": "https://asamer.cz/en/ott/gluing-technology",
+      "permanent": true
+    },
+    {
+      "source": "/en/ott/:wrong(klebetechnologie|lepici-technologie|lepiaca-technologia|ragasztasi-technologia)/:model",
+      "destination": "https://asamer.cz/en/ott/gluing-technology/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ott/:wrong(klebetechnologie|gluing-technology|lepiaca-technologia|ragasztasi-technologia)",
+      "destination": "https://asamer.cz/cz/ott/lepici-technologie",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ott/:wrong(klebetechnologie|gluing-technology|lepiaca-technologia|ragasztasi-technologia)/:model",
+      "destination": "https://asamer.cz/cz/ott/lepici-technologie/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ott/:wrong(klebetechnologie|gluing-technology|lepici-technologie|ragasztasi-technologia)",
+      "destination": "https://asamer.cz/sk/ott/lepiaca-technologia",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ott/:wrong(klebetechnologie|gluing-technology|lepici-technologie|ragasztasi-technologia)/:model",
+      "destination": "https://asamer.cz/sk/ott/lepiaca-technologia/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ott/:wrong(klebetechnologie|gluing-technology|lepici-technologie|lepiaca-technologia)",
+      "destination": "https://asamer.cz/hu/ott/ragasztasi-technologia",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ott/:wrong(klebetechnologie|gluing-technology|lepici-technologie|lepiaca-technologia)/:model",
+      "destination": "https://asamer.cz/hu/ott/ragasztasi-technologia/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/ott/:wrong(return-systems|zpetne-dopravnikove-systemy|spetne-dopravnikove-systemy|visszafutoszalagok)",
+      "destination": "https://asamer.cz/de/ott/ruecktransportsysteme",
+      "permanent": true
+    },
+    {
+      "source": "/de/ott/:wrong(return-systems|zpetne-dopravnikove-systemy|spetne-dopravnikove-systemy|visszafutoszalagok)/:model",
+      "destination": "https://asamer.cz/de/ott/ruecktransportsysteme/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/ott/:wrong(ruecktransportsysteme|zpetne-dopravnikove-systemy|spetne-dopravnikove-systemy|visszafutoszalagok)",
+      "destination": "https://asamer.cz/en/ott/return-systems",
+      "permanent": true
+    },
+    {
+      "source": "/en/ott/:wrong(ruecktransportsysteme|zpetne-dopravnikove-systemy|spetne-dopravnikove-systemy|visszafutoszalagok)/:model",
+      "destination": "https://asamer.cz/en/ott/return-systems/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ott/:wrong(ruecktransportsysteme|return-systems|spetne-dopravnikove-systemy|visszafutoszalagok)",
+      "destination": "https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy",
+      "permanent": true
+    },
+    {
+      "source": "/cz/ott/:wrong(ruecktransportsysteme|return-systems|spetne-dopravnikove-systemy|visszafutoszalagok)/:model",
+      "destination": "https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ott/:wrong(ruecktransportsysteme|return-systems|zpetne-dopravnikove-systemy|visszafutoszalagok)",
+      "destination": "https://asamer.cz/sk/ott/spetne-dopravnikove-systemy",
+      "permanent": true
+    },
+    {
+      "source": "/sk/ott/:wrong(ruecktransportsysteme|return-systems|zpetne-dopravnikove-systemy|visszafutoszalagok)/:model",
+      "destination": "https://asamer.cz/sk/ott/spetne-dopravnikove-systemy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ott/:wrong(ruecktransportsysteme|return-systems|zpetne-dopravnikove-systemy|spetne-dopravnikove-systemy)",
+      "destination": "https://asamer.cz/hu/ott/visszafutoszalagok",
+      "permanent": true
+    },
+    {
+      "source": "/hu/ott/:wrong(ruecktransportsysteme|return-systems|zpetne-dopravnikove-systemy|spetne-dopravnikove-systemy)/:model",
+      "destination": "https://asamer.cz/hu/ott/visszafutoszalagok/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/:wrong(horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)",
+      "destination": "https://asamer.cz/de/mayer/horizontale-plattensaegen",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/:wrong(horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)/:model",
+      "destination": "https://asamer.cz/de/mayer/horizontale-plattensaegen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/:wrong(horizontale-plattensaegen|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)",
+      "destination": "https://asamer.cz/en/mayer/horizontal-panel-saws",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/:wrong(horizontale-plattensaegen|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)/:model",
+      "destination": "https://asamer.cz/en/mayer/horizontal-panel-saws/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)",
+      "destination": "https://asamer.cz/cz/mayer/horizontalni-formatovaci-pily",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)/:model",
+      "destination": "https://asamer.cz/cz/mayer/horizontalni-formatovaci-pily/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalis-lapszabo-furesz)",
+      "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pilyy",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalis-lapszabo-furesz)/:model",
+      "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pilyy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy)",
+      "destination": "https://asamer.cz/hu/mayer/horizontalis-lapszabo-furesz",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy)/:model",
+      "destination": "https://asamer.cz/hu/mayer/horizontalis-lapszabo-furesz/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/:wrong(panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)",
+      "destination": "https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/:wrong(panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)/:model",
+      "destination": "https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/:wrong(plattensaegen-aluminium-kunststoff|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)",
+      "destination": "https://asamer.cz/en/mayer/panel-saws-aluminium-plastics",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/:wrong(plattensaegen-aluminium-kunststoff|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)/:model",
+      "destination": "https://asamer.cz/en/mayer/panel-saws-aluminium-plastics/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)",
+      "destination": "https://asamer.cz/cz/mayer/formatovaci-pily-hlinik-plasty",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)/:model",
+      "destination": "https://asamer.cz/cz/mayer/formatovaci-pily-hlinik-plasty/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)",
+      "destination": "https://asamer.cz/sk/mayer/formatovacie-pily-hlinik-plasty",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)/:model",
+      "destination": "https://asamer.cz/sk/mayer/formatovacie-pily-hlinik-plasty/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty)",
+      "destination": "https://asamer.cz/hu/mayer/lapszabo-furesz-aluminium-manyag",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty)/:model",
+      "destination": "https://asamer.cz/hu/mayer/lapszabo-furesz-aluminium-manyag/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/:wrong(industrial-solutions|prumyslova-reseni|priemyselne-riesenia|ipari-megoldasok)",
+      "destination": "https://asamer.cz/de/mayer/industrieloesungen",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/:wrong(industrial-solutions|prumyslova-reseni|priemyselne-riesenia|ipari-megoldasok)/:model",
+      "destination": "https://asamer.cz/de/mayer/industrieloesungen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/:wrong(industrieloesungen|prumyslova-reseni|priemyselne-riesenia|ipari-megoldasok)",
+      "destination": "https://asamer.cz/en/mayer/industrial-solutions",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/:wrong(industrieloesungen|prumyslova-reseni|priemyselne-riesenia|ipari-megoldasok)/:model",
+      "destination": "https://asamer.cz/en/mayer/industrial-solutions/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/:wrong(industrieloesungen|industrial-solutions|priemyselne-riesenia|ipari-megoldasok)",
+      "destination": "https://asamer.cz/cz/mayer/prumyslova-reseni",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/:wrong(industrieloesungen|industrial-solutions|priemyselne-riesenia|ipari-megoldasok)/:model",
+      "destination": "https://asamer.cz/cz/mayer/prumyslova-reseni/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/:wrong(industrieloesungen|industrial-solutions|prumyslova-reseni|ipari-megoldasok)",
+      "destination": "https://asamer.cz/sk/mayer/priemyselne-riesenia",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/:wrong(industrieloesungen|industrial-solutions|prumyslova-reseni|ipari-megoldasok)/:model",
+      "destination": "https://asamer.cz/sk/mayer/priemyselne-riesenia/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/:wrong(industrieloesungen|industrial-solutions|prumyslova-reseni|priemyselne-riesenia)",
+      "destination": "https://asamer.cz/hu/mayer/ipari-megoldasok",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/:wrong(industrieloesungen|industrial-solutions|prumyslova-reseni|priemyselne-riesenia)/:model",
+      "destination": "https://asamer.cz/hu/mayer/ipari-megoldasok/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(panel-storage|skladovani-desek|skladovanie-dosok|lapraktarozas)",
+      "destination": "https://asamer.cz/de/barbaric/flaechenlager",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(panel-storage|skladovani-desek|skladovanie-dosok|lapraktarozas)/:model",
+      "destination": "https://asamer.cz/de/barbaric/flaechenlager/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(flaechenlager|skladovani-desek|skladovanie-dosok|lapraktarozas)",
+      "destination": "https://asamer.cz/en/barbaric/panel-storage",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(flaechenlager|skladovani-desek|skladovanie-dosok|lapraktarozas)/:model",
+      "destination": "https://asamer.cz/en/barbaric/panel-storage/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(flaechenlager|panel-storage|skladovanie-dosok|lapraktarozas)",
+      "destination": "https://asamer.cz/cz/barbaric/skladovani-desek",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(flaechenlager|panel-storage|skladovanie-dosok|lapraktarozas)/:model",
+      "destination": "https://asamer.cz/cz/barbaric/skladovani-desek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(flaechenlager|panel-storage|skladovani-desek|lapraktarozas)",
+      "destination": "https://asamer.cz/sk/barbaric/skladovanie-dosok",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(flaechenlager|panel-storage|skladovani-desek|lapraktarozas)/:model",
+      "destination": "https://asamer.cz/sk/barbaric/skladovanie-dosok/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(flaechenlager|panel-storage|skladovani-desek|skladovanie-dosok)",
+      "destination": "https://asamer.cz/hu/barbaric/lapraktarozas",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(flaechenlager|panel-storage|skladovani-desek|skladovanie-dosok)/:model",
+      "destination": "https://asamer.cz/hu/barbaric/lapraktarozas/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(feeding-systems|podavaci-systemy|podavacie-systemy|adagolo-rendszer)",
+      "destination": "https://asamer.cz/de/barbaric/beschickung",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(feeding-systems|podavaci-systemy|podavacie-systemy|adagolo-rendszer)/:model",
+      "destination": "https://asamer.cz/de/barbaric/beschickung/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(beschickung|podavaci-systemy|podavacie-systemy|adagolo-rendszer)",
+      "destination": "https://asamer.cz/en/barbaric/feeding-systems",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(beschickung|podavaci-systemy|podavacie-systemy|adagolo-rendszer)/:model",
+      "destination": "https://asamer.cz/en/barbaric/feeding-systems/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(beschickung|feeding-systems|podavacie-systemy|adagolo-rendszer)",
+      "destination": "https://asamer.cz/cz/barbaric/podavaci-systemy",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(beschickung|feeding-systems|podavacie-systemy|adagolo-rendszer)/:model",
+      "destination": "https://asamer.cz/cz/barbaric/podavaci-systemy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(beschickung|feeding-systems|podavaci-systemy|adagolo-rendszer)",
+      "destination": "https://asamer.cz/sk/barbaric/podavacie-systemy",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(beschickung|feeding-systems|podavaci-systemy|adagolo-rendszer)/:model",
+      "destination": "https://asamer.cz/sk/barbaric/podavacie-systemy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(beschickung|feeding-systems|podavaci-systemy|podavacie-systemy)",
+      "destination": "https://asamer.cz/hu/barbaric/adagolo-rendszer",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(beschickung|feeding-systems|podavaci-systemy|podavacie-systemy)/:model",
+      "destination": "https://asamer.cz/hu/barbaric/adagolo-rendszer/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(return-systems|navratove-systemy|visszafuto-rendszer)",
+      "destination": "https://asamer.cz/de/barbaric/returnsysteme",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(return-systems|navratove-systemy|visszafuto-rendszer)/:model",
+      "destination": "https://asamer.cz/de/barbaric/returnsysteme/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(returnsysteme|navratove-systemy|visszafuto-rendszer)",
+      "destination": "https://asamer.cz/en/barbaric/return-systems",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(returnsysteme|navratove-systemy|visszafuto-rendszer)/:model",
+      "destination": "https://asamer.cz/en/barbaric/return-systems/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(returnsysteme|return-systems|visszafuto-rendszer)",
+      "destination": "https://asamer.cz/cz/barbaric/navratove-systemy",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(returnsysteme|return-systems|visszafuto-rendszer)/:model",
+      "destination": "https://asamer.cz/cz/barbaric/navratove-systemy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(returnsysteme|return-systems|visszafuto-rendszer)",
+      "destination": "https://asamer.cz/sk/barbaric/navratove-systemy",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(returnsysteme|return-systems|visszafuto-rendszer)/:model",
+      "destination": "https://asamer.cz/sk/barbaric/navratove-systemy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(returnsysteme|return-systems|navratove-systemy)",
+      "destination": "https://asamer.cz/hu/barbaric/visszafuto-rendszer",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(returnsysteme|return-systems|navratove-systemy)/:model",
+      "destination": "https://asamer.cz/hu/barbaric/visszafuto-rendszer/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(parts-buffer|buffer-dilu|buffer-dielov|reszpuffer)",
+      "destination": "https://asamer.cz/de/barbaric/teilepuffer",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(parts-buffer|buffer-dilu|buffer-dielov|reszpuffer)/:model",
+      "destination": "https://asamer.cz/de/barbaric/teilepuffer/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(teilepuffer|buffer-dilu|buffer-dielov|reszpuffer)",
+      "destination": "https://asamer.cz/en/barbaric/parts-buffer",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(teilepuffer|buffer-dilu|buffer-dielov|reszpuffer)/:model",
+      "destination": "https://asamer.cz/en/barbaric/parts-buffer/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(teilepuffer|parts-buffer|buffer-dielov|reszpuffer)",
+      "destination": "https://asamer.cz/cz/barbaric/buffer-dilu",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(teilepuffer|parts-buffer|buffer-dielov|reszpuffer)/:model",
+      "destination": "https://asamer.cz/cz/barbaric/buffer-dilu/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(teilepuffer|parts-buffer|buffer-dilu|reszpuffer)",
+      "destination": "https://asamer.cz/sk/barbaric/buffer-dielov",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(teilepuffer|parts-buffer|buffer-dilu|reszpuffer)/:model",
+      "destination": "https://asamer.cz/sk/barbaric/buffer-dielov/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(teilepuffer|parts-buffer|buffer-dilu|buffer-dielov)",
+      "destination": "https://asamer.cz/hu/barbaric/reszpuffer",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(teilepuffer|parts-buffer|buffer-dilu|buffer-dielov)/:model",
+      "destination": "https://asamer.cz/hu/barbaric/reszpuffer/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(door-handling|handling-dveri|ajto-kezeles)",
+      "destination": "https://asamer.cz/de/barbaric/tuerenhandling",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(door-handling|handling-dveri|ajto-kezeles)/:model",
+      "destination": "https://asamer.cz/de/barbaric/tuerenhandling/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(tuerenhandling|handling-dveri|ajto-kezeles)",
+      "destination": "https://asamer.cz/en/barbaric/door-handling",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(tuerenhandling|handling-dveri|ajto-kezeles)/:model",
+      "destination": "https://asamer.cz/en/barbaric/door-handling/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(tuerenhandling|door-handling|ajto-kezeles)",
+      "destination": "https://asamer.cz/cz/barbaric/handling-dveri",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(tuerenhandling|door-handling|ajto-kezeles)/:model",
+      "destination": "https://asamer.cz/cz/barbaric/handling-dveri/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(tuerenhandling|door-handling|ajto-kezeles)",
+      "destination": "https://asamer.cz/sk/barbaric/handling-dveri",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(tuerenhandling|door-handling|ajto-kezeles)/:model",
+      "destination": "https://asamer.cz/sk/barbaric/handling-dveri/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(tuerenhandling|door-handling|handling-dveri)",
+      "destination": "https://asamer.cz/hu/barbaric/ajto-kezeles",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(tuerenhandling|door-handling|handling-dveri)/:model",
+      "destination": "https://asamer.cz/hu/barbaric/ajto-kezeles/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(stitkovani|stitkovanie|cimkenyomtatas)",
+      "destination": "https://asamer.cz/de/barbaric/labeling",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(stitkovani|stitkovanie|cimkenyomtatas)/:model",
+      "destination": "https://asamer.cz/de/barbaric/labeling/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(stitkovani|stitkovanie|cimkenyomtatas)",
+      "destination": "https://asamer.cz/en/barbaric/labeling",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(stitkovani|stitkovanie|cimkenyomtatas)/:model",
+      "destination": "https://asamer.cz/en/barbaric/labeling/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(labeling|stitkovanie|cimkenyomtatas)",
+      "destination": "https://asamer.cz/cz/barbaric/stitkovani",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(labeling|stitkovanie|cimkenyomtatas)/:model",
+      "destination": "https://asamer.cz/cz/barbaric/stitkovani/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(labeling|stitkovani|cimkenyomtatas)",
+      "destination": "https://asamer.cz/sk/barbaric/stitkovanie",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(labeling|stitkovani|cimkenyomtatas)/:model",
+      "destination": "https://asamer.cz/sk/barbaric/stitkovanie/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(labeling|stitkovani|stitkovanie)",
+      "destination": "https://asamer.cz/hu/barbaric/cimkenyomtatas",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(labeling|stitkovani|stitkovanie)/:model",
+      "destination": "https://asamer.cz/hu/barbaric/cimkenyomtatas/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(vacuum-lifters-uniwood|vakuove-zvedaky-uniwood|vakuove-zdvihaky-uniwood|vakuumemelok-uniwood)",
+      "destination": "https://asamer.cz/de/barbaric/vakuumheber-uniwood",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(vacuum-lifters-uniwood|vakuove-zvedaky-uniwood|vakuove-zdvihaky-uniwood|vakuumemelok-uniwood)/:model",
+      "destination": "https://asamer.cz/de/barbaric/vakuumheber-uniwood/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(vakuumheber-uniwood|vakuove-zvedaky-uniwood|vakuove-zdvihaky-uniwood|vakuumemelok-uniwood)",
+      "destination": "https://asamer.cz/en/barbaric/vacuum-lifters-uniwood",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(vakuumheber-uniwood|vakuove-zvedaky-uniwood|vakuove-zdvihaky-uniwood|vakuumemelok-uniwood)/:model",
+      "destination": "https://asamer.cz/en/barbaric/vacuum-lifters-uniwood/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(vakuumheber-uniwood|vacuum-lifters-uniwood|vakuove-zdvihaky-uniwood|vakuumemelok-uniwood)",
+      "destination": "https://asamer.cz/cz/barbaric/vakuove-zvedaky-uniwood",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(vakuumheber-uniwood|vacuum-lifters-uniwood|vakuove-zdvihaky-uniwood|vakuumemelok-uniwood)/:model",
+      "destination": "https://asamer.cz/cz/barbaric/vakuove-zvedaky-uniwood/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(vakuumheber-uniwood|vacuum-lifters-uniwood|vakuove-zvedaky-uniwood|vakuumemelok-uniwood)",
+      "destination": "https://asamer.cz/sk/barbaric/vakuove-zdvihaky-uniwood",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(vakuumheber-uniwood|vacuum-lifters-uniwood|vakuove-zvedaky-uniwood|vakuumemelok-uniwood)/:model",
+      "destination": "https://asamer.cz/sk/barbaric/vakuove-zdvihaky-uniwood/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(vakuumheber-uniwood|vacuum-lifters-uniwood|vakuove-zvedaky-uniwood|vakuove-zdvihaky-uniwood)",
+      "destination": "https://asamer.cz/hu/barbaric/vakuumemelok-uniwood",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(vakuumheber-uniwood|vacuum-lifters-uniwood|vakuove-zvedaky-uniwood|vakuove-zdvihaky-uniwood)/:model",
+      "destination": "https://asamer.cz/hu/barbaric/vakuumemelok-uniwood/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(special-lifters|specialni-zvedaky|specialne-zdvihaky|specialis-emelok)",
+      "destination": "https://asamer.cz/de/barbaric/spezialhebegeraete",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(special-lifters|specialni-zvedaky|specialne-zdvihaky|specialis-emelok)/:model",
+      "destination": "https://asamer.cz/de/barbaric/spezialhebegeraete/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(spezialhebegeraete|specialni-zvedaky|specialne-zdvihaky|specialis-emelok)",
+      "destination": "https://asamer.cz/en/barbaric/special-lifters",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(spezialhebegeraete|specialni-zvedaky|specialne-zdvihaky|specialis-emelok)/:model",
+      "destination": "https://asamer.cz/en/barbaric/special-lifters/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(spezialhebegeraete|special-lifters|specialne-zdvihaky|specialis-emelok)",
+      "destination": "https://asamer.cz/cz/barbaric/specialni-zvedaky",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(spezialhebegeraete|special-lifters|specialne-zdvihaky|specialis-emelok)/:model",
+      "destination": "https://asamer.cz/cz/barbaric/specialni-zvedaky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(spezialhebegeraete|special-lifters|specialni-zvedaky|specialis-emelok)",
+      "destination": "https://asamer.cz/sk/barbaric/specialne-zdvihaky",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(spezialhebegeraete|special-lifters|specialni-zvedaky|specialis-emelok)/:model",
+      "destination": "https://asamer.cz/sk/barbaric/specialne-zdvihaky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(spezialhebegeraete|special-lifters|specialni-zvedaky|specialne-zdvihaky)",
+      "destination": "https://asamer.cz/hu/barbaric/specialis-emelok",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(spezialhebegeraete|special-lifters|specialni-zvedaky|specialne-zdvihaky)/:model",
+      "destination": "https://asamer.cz/hu/barbaric/specialis-emelok/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(special-traverses|specialni-traverzy|specialne-traverzy|specialis-keresztgerendak)",
+      "destination": "https://asamer.cz/de/barbaric/sondertraversen",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(special-traverses|specialni-traverzy|specialne-traverzy|specialis-keresztgerendak)/:model",
+      "destination": "https://asamer.cz/de/barbaric/sondertraversen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(sondertraversen|specialni-traverzy|specialne-traverzy|specialis-keresztgerendak)",
+      "destination": "https://asamer.cz/en/barbaric/special-traverses",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(sondertraversen|specialni-traverzy|specialne-traverzy|specialis-keresztgerendak)/:model",
+      "destination": "https://asamer.cz/en/barbaric/special-traverses/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(sondertraversen|special-traverses|specialne-traverzy|specialis-keresztgerendak)",
+      "destination": "https://asamer.cz/cz/barbaric/specialni-traverzy",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(sondertraversen|special-traverses|specialne-traverzy|specialis-keresztgerendak)/:model",
+      "destination": "https://asamer.cz/cz/barbaric/specialni-traverzy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(sondertraversen|special-traverses|specialni-traverzy|specialis-keresztgerendak)",
+      "destination": "https://asamer.cz/sk/barbaric/specialne-traverzy",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(sondertraversen|special-traverses|specialni-traverzy|specialis-keresztgerendak)/:model",
+      "destination": "https://asamer.cz/sk/barbaric/specialne-traverzy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(sondertraversen|special-traverses|specialni-traverzy|specialne-traverzy)",
+      "destination": "https://asamer.cz/hu/barbaric/specialis-keresztgerendak",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(sondertraversen|special-traverses|specialni-traverzy|specialne-traverzy)/:model",
+      "destination": "https://asamer.cz/hu/barbaric/specialis-keresztgerendak/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(crane-rail-systems|jerabove-kolejnicove-systemy|zeriavove-kolajnicove-systemy|daruzo-sinrendszerek)",
+      "destination": "https://asamer.cz/de/barbaric/kran-schienensysteme",
+      "permanent": true
+    },
+    {
+      "source": "/de/barbaric/:wrong(crane-rail-systems|jerabove-kolejnicove-systemy|zeriavove-kolajnicove-systemy|daruzo-sinrendszerek)/:model",
+      "destination": "https://asamer.cz/de/barbaric/kran-schienensysteme/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(kran-schienensysteme|jerabove-kolejnicove-systemy|zeriavove-kolajnicove-systemy|daruzo-sinrendszerek)",
+      "destination": "https://asamer.cz/en/barbaric/crane-rail-systems",
+      "permanent": true
+    },
+    {
+      "source": "/en/barbaric/:wrong(kran-schienensysteme|jerabove-kolejnicove-systemy|zeriavove-kolajnicove-systemy|daruzo-sinrendszerek)/:model",
+      "destination": "https://asamer.cz/en/barbaric/crane-rail-systems/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(kran-schienensysteme|crane-rail-systems|zeriavove-kolajnicove-systemy|daruzo-sinrendszerek)",
+      "destination": "https://asamer.cz/cz/barbaric/jerabove-kolejnicove-systemy",
+      "permanent": true
+    },
+    {
+      "source": "/cz/barbaric/:wrong(kran-schienensysteme|crane-rail-systems|zeriavove-kolajnicove-systemy|daruzo-sinrendszerek)/:model",
+      "destination": "https://asamer.cz/cz/barbaric/jerabove-kolejnicove-systemy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(kran-schienensysteme|crane-rail-systems|jerabove-kolejnicove-systemy|daruzo-sinrendszerek)",
+      "destination": "https://asamer.cz/sk/barbaric/zeriavove-kolajnicove-systemy",
+      "permanent": true
+    },
+    {
+      "source": "/sk/barbaric/:wrong(kran-schienensysteme|crane-rail-systems|jerabove-kolejnicove-systemy|daruzo-sinrendszerek)/:model",
+      "destination": "https://asamer.cz/sk/barbaric/zeriavove-kolajnicove-systemy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(kran-schienensysteme|crane-rail-systems|jerabove-kolejnicove-systemy|zeriavove-kolajnicove-systemy)",
+      "destination": "https://asamer.cz/hu/barbaric/daruzo-sinrendszerek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/barbaric/:wrong(kran-schienensysteme|crane-rail-systems|jerabove-kolejnicove-systemy|zeriavove-kolajnicove-systemy)/:model",
+      "destination": "https://asamer.cz/hu/barbaric/daruzo-sinrendszerek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(drill-glue-dowel-inserting-machines|vrtaci-lepici-kolkovaci-stroje|vrtacie-lepiace-kolkovacie-stroje|furo-ragaszto-csapozo-gepek)",
+      "destination": "https://asamer.cz/de/gannomat/bohr-beleim-duebeleintreibmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(drill-glue-dowel-inserting-machines|vrtaci-lepici-kolkovaci-stroje|vrtacie-lepiace-kolkovacie-stroje|furo-ragaszto-csapozo-gepek)/:model",
+      "destination": "https://asamer.cz/de/gannomat/bohr-beleim-duebeleintreibmaschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(bohr-beleim-duebeleintreibmaschinen|vrtaci-lepici-kolkovaci-stroje|vrtacie-lepiace-kolkovacie-stroje|furo-ragaszto-csapozo-gepek)",
+      "destination": "https://asamer.cz/en/gannomat/drill-glue-dowel-inserting-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(bohr-beleim-duebeleintreibmaschinen|vrtaci-lepici-kolkovaci-stroje|vrtacie-lepiace-kolkovacie-stroje|furo-ragaszto-csapozo-gepek)/:model",
+      "destination": "https://asamer.cz/en/gannomat/drill-glue-dowel-inserting-machines/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(bohr-beleim-duebeleintreibmaschinen|drill-glue-dowel-inserting-machines|vrtacie-lepiace-kolkovacie-stroje|furo-ragaszto-csapozo-gepek)",
+      "destination": "https://asamer.cz/cz/gannomat/vrtaci-lepici-kolkovaci-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(bohr-beleim-duebeleintreibmaschinen|drill-glue-dowel-inserting-machines|vrtacie-lepiace-kolkovacie-stroje|furo-ragaszto-csapozo-gepek)/:model",
+      "destination": "https://asamer.cz/cz/gannomat/vrtaci-lepici-kolkovaci-stroje/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(bohr-beleim-duebeleintreibmaschinen|drill-glue-dowel-inserting-machines|vrtaci-lepici-kolkovaci-stroje|furo-ragaszto-csapozo-gepek)",
+      "destination": "https://asamer.cz/sk/gannomat/vrtacie-lepiace-kolkovacie-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(bohr-beleim-duebeleintreibmaschinen|drill-glue-dowel-inserting-machines|vrtaci-lepici-kolkovaci-stroje|furo-ragaszto-csapozo-gepek)/:model",
+      "destination": "https://asamer.cz/sk/gannomat/vrtacie-lepiace-kolkovacie-stroje/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(bohr-beleim-duebeleintreibmaschinen|drill-glue-dowel-inserting-machines|vrtaci-lepici-kolkovaci-stroje|vrtacie-lepiace-kolkovacie-stroje)",
+      "destination": "https://asamer.cz/hu/gannomat/furo-ragaszto-csapozo-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(bohr-beleim-duebeleintreibmaschinen|drill-glue-dowel-inserting-machines|vrtaci-lepici-kolkovaci-stroje|vrtacie-lepiace-kolkovacie-stroje)/:model",
+      "destination": "https://asamer.cz/hu/gannomat/furo-ragaszto-csapozo-gepek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(dowel-inserters-doors-windows|kolkovaci-stroje-dvere-okna|kolkovacie-stroje-dvere-okna|csapozo-gepek-ajto-ablak)",
+      "destination": "https://asamer.cz/de/gannomat/duebeleintreibmaschinen-tueren-fenster",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(dowel-inserters-doors-windows|kolkovaci-stroje-dvere-okna|kolkovacie-stroje-dvere-okna|csapozo-gepek-ajto-ablak)/:model",
+      "destination": "https://asamer.cz/de/gannomat/duebeleintreibmaschinen-tueren-fenster/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(duebeleintreibmaschinen-tueren-fenster|kolkovaci-stroje-dvere-okna|kolkovacie-stroje-dvere-okna|csapozo-gepek-ajto-ablak)",
+      "destination": "https://asamer.cz/en/gannomat/dowel-inserters-doors-windows",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(duebeleintreibmaschinen-tueren-fenster|kolkovaci-stroje-dvere-okna|kolkovacie-stroje-dvere-okna|csapozo-gepek-ajto-ablak)/:model",
+      "destination": "https://asamer.cz/en/gannomat/dowel-inserters-doors-windows/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(duebeleintreibmaschinen-tueren-fenster|dowel-inserters-doors-windows|kolkovacie-stroje-dvere-okna|csapozo-gepek-ajto-ablak)",
+      "destination": "https://asamer.cz/cz/gannomat/kolkovaci-stroje-dvere-okna",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(duebeleintreibmaschinen-tueren-fenster|dowel-inserters-doors-windows|kolkovacie-stroje-dvere-okna|csapozo-gepek-ajto-ablak)/:model",
+      "destination": "https://asamer.cz/cz/gannomat/kolkovaci-stroje-dvere-okna/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(duebeleintreibmaschinen-tueren-fenster|dowel-inserters-doors-windows|kolkovaci-stroje-dvere-okna|csapozo-gepek-ajto-ablak)",
+      "destination": "https://asamer.cz/sk/gannomat/kolkovacie-stroje-dvere-okna",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(duebeleintreibmaschinen-tueren-fenster|dowel-inserters-doors-windows|kolkovaci-stroje-dvere-okna|csapozo-gepek-ajto-ablak)/:model",
+      "destination": "https://asamer.cz/sk/gannomat/kolkovacie-stroje-dvere-okna/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(duebeleintreibmaschinen-tueren-fenster|dowel-inserters-doors-windows|kolkovaci-stroje-dvere-okna|kolkovacie-stroje-dvere-okna)",
+      "destination": "https://asamer.cz/hu/gannomat/csapozo-gepek-ajto-ablak",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(duebeleintreibmaschinen-tueren-fenster|dowel-inserters-doors-windows|kolkovaci-stroje-dvere-okna|kolkovacie-stroje-dvere-okna)/:model",
+      "destination": "https://asamer.cz/hu/gannomat/csapozo-gepek-ajto-ablak/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(machining-centers|obrabeci-centra|obrabacie-centra|megmunkalo-kozpontok)",
+      "destination": "https://asamer.cz/de/gannomat/bearbeitungszentren",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(machining-centers|obrabeci-centra|obrabacie-centra|megmunkalo-kozpontok)/:model",
+      "destination": "https://asamer.cz/de/gannomat/bearbeitungszentren/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(bearbeitungszentren|obrabeci-centra|obrabacie-centra|megmunkalo-kozpontok)",
+      "destination": "https://asamer.cz/en/gannomat/machining-centers",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(bearbeitungszentren|obrabeci-centra|obrabacie-centra|megmunkalo-kozpontok)/:model",
+      "destination": "https://asamer.cz/en/gannomat/machining-centers/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(bearbeitungszentren|machining-centers|obrabacie-centra|megmunkalo-kozpontok)",
+      "destination": "https://asamer.cz/cz/gannomat/obrabeci-centra",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(bearbeitungszentren|machining-centers|obrabacie-centra|megmunkalo-kozpontok)/:model",
+      "destination": "https://asamer.cz/cz/gannomat/obrabeci-centra/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(bearbeitungszentren|machining-centers|obrabeci-centra|megmunkalo-kozpontok)",
+      "destination": "https://asamer.cz/sk/gannomat/obrabacie-centra",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(bearbeitungszentren|machining-centers|obrabeci-centra|megmunkalo-kozpontok)/:model",
+      "destination": "https://asamer.cz/sk/gannomat/obrabacie-centra/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(bearbeitungszentren|machining-centers|obrabeci-centra|obrabacie-centra)",
+      "destination": "https://asamer.cz/hu/gannomat/megmunkalo-kozpontok",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(bearbeitungszentren|machining-centers|obrabeci-centra|obrabacie-centra)/:model",
+      "destination": "https://asamer.cz/hu/gannomat/megmunkalo-kozpontok/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(fitting-boring-machines|vrtacky-na-kovani|vrtacky-na-kovanie|vasalatfuro-gepek)",
+      "destination": "https://asamer.cz/de/gannomat/beschlaege-bohrmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(fitting-boring-machines|vrtacky-na-kovani|vrtacky-na-kovanie|vasalatfuro-gepek)/:model",
+      "destination": "https://asamer.cz/de/gannomat/beschlaege-bohrmaschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(beschlaege-bohrmaschinen|vrtacky-na-kovani|vrtacky-na-kovanie|vasalatfuro-gepek)",
+      "destination": "https://asamer.cz/en/gannomat/fitting-boring-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(beschlaege-bohrmaschinen|vrtacky-na-kovani|vrtacky-na-kovanie|vasalatfuro-gepek)/:model",
+      "destination": "https://asamer.cz/en/gannomat/fitting-boring-machines/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(beschlaege-bohrmaschinen|fitting-boring-machines|vrtacky-na-kovanie|vasalatfuro-gepek)",
+      "destination": "https://asamer.cz/cz/gannomat/vrtacky-na-kovani",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(beschlaege-bohrmaschinen|fitting-boring-machines|vrtacky-na-kovanie|vasalatfuro-gepek)/:model",
+      "destination": "https://asamer.cz/cz/gannomat/vrtacky-na-kovani/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(beschlaege-bohrmaschinen|fitting-boring-machines|vrtacky-na-kovani|vasalatfuro-gepek)",
+      "destination": "https://asamer.cz/sk/gannomat/vrtacky-na-kovanie",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(beschlaege-bohrmaschinen|fitting-boring-machines|vrtacky-na-kovani|vasalatfuro-gepek)/:model",
+      "destination": "https://asamer.cz/sk/gannomat/vrtacky-na-kovanie/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(beschlaege-bohrmaschinen|fitting-boring-machines|vrtacky-na-kovani|vrtacky-na-kovanie)",
+      "destination": "https://asamer.cz/hu/gannomat/vasalatfuro-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(beschlaege-bohrmaschinen|fitting-boring-machines|vrtacky-na-kovani|vrtacky-na-kovanie)/:model",
+      "destination": "https://asamer.cz/hu/gannomat/vasalatfuro-gepek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(carcass-presses|korpusove-lisy|korpusz-presek)",
+      "destination": "https://asamer.cz/de/gannomat/korpuspressen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(carcass-presses|korpusove-lisy|korpusz-presek)/:model",
+      "destination": "https://asamer.cz/de/gannomat/korpuspressen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(korpuspressen|korpusove-lisy|korpusz-presek)",
+      "destination": "https://asamer.cz/en/gannomat/carcass-presses",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(korpuspressen|korpusove-lisy|korpusz-presek)/:model",
+      "destination": "https://asamer.cz/en/gannomat/carcass-presses/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(korpuspressen|carcass-presses|korpusz-presek)",
+      "destination": "https://asamer.cz/cz/gannomat/korpusove-lisy",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(korpuspressen|carcass-presses|korpusz-presek)/:model",
+      "destination": "https://asamer.cz/cz/gannomat/korpusove-lisy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(korpuspressen|carcass-presses|korpusz-presek)",
+      "destination": "https://asamer.cz/sk/gannomat/korpusove-lisy",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(korpuspressen|carcass-presses|korpusz-presek)/:model",
+      "destination": "https://asamer.cz/sk/gannomat/korpusove-lisy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(korpuspressen|carcass-presses|korpusove-lisy)",
+      "destination": "https://asamer.cz/hu/gannomat/korpusz-presek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(korpuspressen|carcass-presses|korpusove-lisy)/:model",
+      "destination": "https://asamer.cz/hu/gannomat/korpusz-presek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(dowel-boring-machines|kolkovaci-vrtacky|kolkovacie-vrtacky|csap-furo-gepek)",
+      "destination": "https://asamer.cz/de/gannomat/duebelbohrmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(dowel-boring-machines|kolkovaci-vrtacky|kolkovacie-vrtacky|csap-furo-gepek)/:model",
+      "destination": "https://asamer.cz/de/gannomat/duebelbohrmaschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(duebelbohrmaschinen|kolkovaci-vrtacky|kolkovacie-vrtacky|csap-furo-gepek)",
+      "destination": "https://asamer.cz/en/gannomat/dowel-boring-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(duebelbohrmaschinen|kolkovaci-vrtacky|kolkovacie-vrtacky|csap-furo-gepek)/:model",
+      "destination": "https://asamer.cz/en/gannomat/dowel-boring-machines/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovacie-vrtacky|csap-furo-gepek)",
+      "destination": "https://asamer.cz/cz/gannomat/kolkovaci-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovacie-vrtacky|csap-furo-gepek)/:model",
+      "destination": "https://asamer.cz/cz/gannomat/kolkovaci-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovaci-vrtacky|csap-furo-gepek)",
+      "destination": "https://asamer.cz/sk/gannomat/kolkovacie-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovaci-vrtacky|csap-furo-gepek)/:model",
+      "destination": "https://asamer.cz/sk/gannomat/kolkovacie-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovaci-vrtacky|kolkovacie-vrtacky)",
+      "destination": "https://asamer.cz/hu/gannomat/csap-furo-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovaci-vrtacky|kolkovacie-vrtacky)/:model",
+      "destination": "https://asamer.cz/hu/gannomat/csap-furo-gepek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(row-boring-machines|radove-vrtacky|soros-furo-gepek)",
+      "destination": "https://asamer.cz/de/gannomat/lochreihenbohrmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(row-boring-machines|radove-vrtacky|soros-furo-gepek)/:model",
+      "destination": "https://asamer.cz/de/gannomat/lochreihenbohrmaschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(lochreihenbohrmaschinen|radove-vrtacky|soros-furo-gepek)",
+      "destination": "https://asamer.cz/en/gannomat/row-boring-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(lochreihenbohrmaschinen|radove-vrtacky|soros-furo-gepek)/:model",
+      "destination": "https://asamer.cz/en/gannomat/row-boring-machines/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|soros-furo-gepek)",
+      "destination": "https://asamer.cz/cz/gannomat/radove-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|soros-furo-gepek)/:model",
+      "destination": "https://asamer.cz/cz/gannomat/radove-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|soros-furo-gepek)",
+      "destination": "https://asamer.cz/sk/gannomat/radove-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|soros-furo-gepek)/:model",
+      "destination": "https://asamer.cz/sk/gannomat/radove-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|radove-vrtacky)",
+      "destination": "https://asamer.cz/hu/gannomat/soros-furo-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|radove-vrtacky)/:model",
+      "destination": "https://asamer.cz/hu/gannomat/soros-furo-gepek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(gluing-systems|lepici-systemy|lepiace-systemy|ragaszto-rendszer)",
+      "destination": "https://asamer.cz/de/gannomat/beleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(gluing-systems|lepici-systemy|lepiace-systemy|ragaszto-rendszer)/:model",
+      "destination": "https://asamer.cz/de/gannomat/beleimmaschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(beleimmaschinen|lepici-systemy|lepiace-systemy|ragaszto-rendszer)",
+      "destination": "https://asamer.cz/en/gannomat/gluing-systems",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(beleimmaschinen|lepici-systemy|lepiace-systemy|ragaszto-rendszer)/:model",
+      "destination": "https://asamer.cz/en/gannomat/gluing-systems/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(beleimmaschinen|gluing-systems|lepiace-systemy|ragaszto-rendszer)",
+      "destination": "https://asamer.cz/cz/gannomat/lepici-systemy",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(beleimmaschinen|gluing-systems|lepiace-systemy|ragaszto-rendszer)/:model",
+      "destination": "https://asamer.cz/cz/gannomat/lepici-systemy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(beleimmaschinen|gluing-systems|lepici-systemy|ragaszto-rendszer)",
+      "destination": "https://asamer.cz/sk/gannomat/lepiace-systemy",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(beleimmaschinen|gluing-systems|lepici-systemy|ragaszto-rendszer)/:model",
+      "destination": "https://asamer.cz/sk/gannomat/lepiace-systemy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(beleimmaschinen|gluing-systems|lepici-systemy|lepiace-systemy)",
+      "destination": "https://asamer.cz/hu/gannomat/ragaszto-rendszer",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(beleimmaschinen|gluing-systems|lepici-systemy|lepiace-systemy)/:model",
+      "destination": "https://asamer.cz/hu/gannomat/ragaszto-rendszer/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(frame-dowel-machines|ramove-vrtacky|keret-csapozo-gepek)",
+      "destination": "https://asamer.cz/de/gannomat/rahmenduebel-maschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(frame-dowel-machines|ramove-vrtacky|keret-csapozo-gepek)/:model",
+      "destination": "https://asamer.cz/de/gannomat/rahmenduebel-maschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(rahmenduebel-maschinen|ramove-vrtacky|keret-csapozo-gepek)",
+      "destination": "https://asamer.cz/en/gannomat/frame-dowel-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(rahmenduebel-maschinen|ramove-vrtacky|keret-csapozo-gepek)/:model",
+      "destination": "https://asamer.cz/en/gannomat/frame-dowel-machines/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keret-csapozo-gepek)",
+      "destination": "https://asamer.cz/cz/gannomat/ramove-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keret-csapozo-gepek)/:model",
+      "destination": "https://asamer.cz/cz/gannomat/ramove-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keret-csapozo-gepek)",
+      "destination": "https://asamer.cz/sk/gannomat/ramove-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keret-csapozo-gepek)/:model",
+      "destination": "https://asamer.cz/sk/gannomat/ramove-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|ramove-vrtacky)",
+      "destination": "https://asamer.cz/hu/gannomat/keret-csapozo-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|ramove-vrtacky)/:model",
+      "destination": "https://asamer.cz/hu/gannomat/keret-csapozo-gepek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(corner-hinge-machines|vrtacky-na-zavesy|sarokpant-furo-gepek)",
+      "destination": "https://asamer.cz/de/gannomat/ecklager-bohrmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/:wrong(corner-hinge-machines|vrtacky-na-zavesy|sarokpant-furo-gepek)/:model",
+      "destination": "https://asamer.cz/de/gannomat/ecklager-bohrmaschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(ecklager-bohrmaschinen|vrtacky-na-zavesy|sarokpant-furo-gepek)",
+      "destination": "https://asamer.cz/en/gannomat/corner-hinge-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/:wrong(ecklager-bohrmaschinen|vrtacky-na-zavesy|sarokpant-furo-gepek)/:model",
+      "destination": "https://asamer.cz/en/gannomat/corner-hinge-machines/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(ecklager-bohrmaschinen|corner-hinge-machines|sarokpant-furo-gepek)",
+      "destination": "https://asamer.cz/cz/gannomat/vrtacky-na-zavesy",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/:wrong(ecklager-bohrmaschinen|corner-hinge-machines|sarokpant-furo-gepek)/:model",
+      "destination": "https://asamer.cz/cz/gannomat/vrtacky-na-zavesy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(ecklager-bohrmaschinen|corner-hinge-machines|sarokpant-furo-gepek)",
+      "destination": "https://asamer.cz/sk/gannomat/vrtacky-na-zavesy",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/:wrong(ecklager-bohrmaschinen|corner-hinge-machines|sarokpant-furo-gepek)/:model",
+      "destination": "https://asamer.cz/sk/gannomat/vrtacky-na-zavesy/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(ecklager-bohrmaschinen|corner-hinge-machines|vrtacky-na-zavesy)",
+      "destination": "https://asamer.cz/hu/gannomat/sarokpant-furo-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/:wrong(ecklager-bohrmaschinen|corner-hinge-machines|vrtacky-na-zavesy)/:model",
+      "destination": "https://asamer.cz/hu/gannomat/sarokpant-furo-gepek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/:wrong(used-machines|pouzite-stroje|hasznalt-gepek)/:slug",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/en/:wrong(gebrauchtmaschinen|pouzite-stroje|hasznalt-gepek)/:slug",
+      "destination": "https://asamer.cz/en/used-machines/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:wrong(gebrauchtmaschinen|used-machines|hasznalt-gepek)/:slug",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:wrong(gebrauchtmaschinen|used-machines|hasznalt-gepek)/:slug",
+      "destination": "https://asamer.cz/sk/pouzite-stroje/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:wrong(gebrauchtmaschinen|used-machines|pouzite-stroje)/:slug",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek/:slug",
+      "permanent": true
+    },
     {
       "source": "/:path(.*)",
       "has": [
@@ -196,23 +2579,6 @@
       ],
       "destination": "https://asamer.cz/:path",
       "permanent": true
-    },
-    {
-      "source": "/:path(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.asamer.net"
-        }
-      ],
-      "destination": "https://asamer.cz/:path",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }

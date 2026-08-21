@@ -2,6 +2,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SEO_ROUTES, getSlugForLang } from '../src/seo/routes';
+import type { SeoRouteKey } from '../src/seo/routes';
+import { buildLastmodTable, staticKey, productKey, usedMachineKey } from './content-lastmod';
 import {
   buildLocalizedPath,
   CANONICAL_DOMAIN,
@@ -23,19 +25,37 @@ const __dirname = dirname(__filename);
 const publicDir = join(__dirname, '..', 'public');
 const sitemapPath = join(publicDir, 'sitemap.xml');
 
-const today = new Date().toISOString();
+/**
+ * Echtes Aenderungsdatum je Seite statt Build-Zeitstempel (Masterplan 1.5).
+ * Ein `lastmod`, das fuer alle 605 URLs gleich ist und sich bei jedem Deploy
+ * aendert, wertet Google nicht aus.
+ */
+const lastmod = buildLastmodTable({
+  routeKeys: Object.keys(SEO_ROUTES) as SeoRouteKey[],
+  products: [
+    ...OTT_PRODUCTS.map((p) => ({ brand: 'ott', slug: p.slug })),
+    ...MAYER_PRODUCTS.map((p) => ({ brand: 'mayer', slug: p.slug })),
+    ...BARBARIC_PRODUCTS.map((p) => ({ brand: 'barbaric', slug: p.slug })),
+    ...GANNOMAT_PRODUCTS.map((p) => ({ brand: 'gannomat', slug: p.slug })),
+  ],
+  usedMachineSlugs: USED_MACHINES.map((m) => m.slug),
+});
+
+/** Rueckfallwert, falls fuer eine Seite kein Datum ermittelbar war. */
+const FALLBACK_LASTMOD = new Date().toISOString();
 
 type SitemapEntry = {
   lang: Language;
   url: string;
   canonicalSlug: string;
+  lastmod: string;
   alternates: { lang: Language; url: string }[];
   defaultUrl: string;
 };
 const entries: SitemapEntry[] = [];
 
 // Static page entries
-Object.values(SEO_ROUTES).forEach((config) => {
+Object.entries(SEO_ROUTES).forEach(([routeKey, config]) => {
   INDEXABLE_LANGUAGES.forEach((lang) => {
     const langSlug = getSlugForLang(config, lang);
     const localizedPath = buildLocalizedPath(lang, langSlug);
@@ -48,6 +68,7 @@ Object.values(SEO_ROUTES).forEach((config) => {
       lang,
       url: `${CANONICAL_DOMAIN}${localizedPath}`,
       canonicalSlug: config.slug,
+      lastmod: lastmod.get(staticKey(routeKey as SeoRouteKey)),
       alternates,
       defaultUrl,
     });
@@ -67,6 +88,7 @@ OTT_PRODUCTS.forEach((product) => {
       lang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`,
       canonicalSlug: `/ott/${product.slug}`,
+      lastmod: lastmod.get(productKey('ott', product.slug)),
       alternates,
       defaultUrl,
     });
@@ -86,6 +108,7 @@ MAYER_PRODUCTS.forEach((product) => {
       lang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`,
       canonicalSlug: `/mayer/${product.slug}`,
+      lastmod: lastmod.get(productKey('mayer', product.slug)),
       alternates,
       defaultUrl,
     });
@@ -105,6 +128,7 @@ BARBARIC_PRODUCTS.forEach((product) => {
       lang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`,
       canonicalSlug: `/barbaric/${product.slug}`,
+      lastmod: lastmod.get(productKey('barbaric', product.slug)),
       alternates,
       defaultUrl,
     });
@@ -124,6 +148,7 @@ GANNOMAT_PRODUCTS.forEach((product) => {
       lang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`,
       canonicalSlug: `/gannomat/${product.slug}`,
+      lastmod: lastmod.get(productKey('gannomat', product.slug)),
       alternates,
       defaultUrl,
     });
@@ -144,6 +169,7 @@ USED_MACHINES.forEach((machine) => {
       lang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, machinePath)}`,
       canonicalSlug: `/pouzite-stroje/${machine.slug}`,
+      lastmod: lastmod.get(usedMachineKey(machine.slug)),
       alternates,
       defaultUrl,
     });
@@ -165,7 +191,7 @@ const getChangefreq = (canonicalSlug: string): string => {
 
 const xmlEntries = entries
   .sort((a, b) => a.url.localeCompare(b.url))
-  .map(({ lang, url, canonicalSlug, alternates, defaultUrl }) => {
+  .map(({ lang, url, canonicalSlug, lastmod: entryLastmod, alternates, defaultUrl }) => {
     const altLinks = alternates.map(
       (alt) => `    <xhtml:link rel="alternate" hreflang="${languageToHreflang(alt.lang)}" href="${alt.url}"/>`,
     );
@@ -173,7 +199,7 @@ const xmlEntries = entries
 
     return `  <url>
     <loc>${url}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${entryLastmod || FALLBACK_LASTMOD}</lastmod>
     <changefreq>${getChangefreq(canonicalSlug)}</changefreq>
     <priority>${getPriority(lang, canonicalSlug)}</priority>
 ${altLinks.join('\n')}
@@ -192,4 +218,11 @@ mkdirSync(publicDir, { recursive: true });
 writeFileSync(sitemapPath, xml.trim() + '\n', 'utf8');
 
 // eslint-disable-next-line no-console
-console.log(`Sitemap generated with ${entries.length} entries at ${sitemapPath}`);
+console.log(
+  `Sitemap generated with ${entries.length} entries at ${sitemapPath} ` +
+    `(lastmod aus ${lastmod.source}, ${lastmod.distinctDates} unterschiedliche Datumswerte)`,
+);
+const undated = entries.filter((e) => !e.lastmod).length;
+if (undated > 0) {
+  console.warn(`  Warnung: ${undated} Eintraege ohne ermitteltes Aenderungsdatum — Rueckfall auf Build-Zeitstempel.`);
+}

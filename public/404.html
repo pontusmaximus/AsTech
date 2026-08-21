@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <title>404 – Stránka nenalezena | Asamer Technologie</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/brand/png/favicon/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/brand/png/favicon/favicon-16.png" />
+    <meta name="theme-color" content="#004899" />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --fg: #101418;
+        --muted: #5a6672;
+        --line: #e3e7ec;
+        --brand: #004899;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0d1117;
+          --fg: #eef2f6;
+          --muted: #9aa7b4;
+          --line: #232b34;
+          --brand: #4d94ff;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 44rem; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+      .logo { height: 2rem; margin-bottom: 3rem; }
+      .code { font-size: 0.8125rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.5rem; }
+      h1 { font-size: clamp(1.6rem, 4vw, 2.25rem); line-height: 1.2; margin: 0 0 0.75rem; }
+      p { margin: 0 0 1rem; color: var(--muted); }
+      .langs { margin: 2.5rem 0 0; padding: 0; list-style: none; }
+      .langs > li { border-top: 1px solid var(--line); padding: 1.25rem 0; }
+      .langs h2 { font-size: 1rem; margin: 0 0 0.25rem; font-weight: 600; color: var(--fg); }
+      .links { margin: 1.75rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+      .links a { color: var(--brand); text-decoration: none; font-weight: 500; }
+      .links a:hover { text-decoration: underline; }
+      .home { display: inline-block; margin-top: 1.5rem; color: var(--brand); font-weight: 600; text-decoration: none; }
+      .home:hover { text-decoration: underline; }
+      [hidden] { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <img class="logo" src="/asamer-header-logo.svg" alt="Asamer Technologie" />
+      <p class="code">Error 404</p>
+
+      <!--
+        Ohne JavaScript sind alle fünf Sprachfassungen sichtbar. Das Skript unten
+        blendet anhand des Sprachpräfixes im Pfad die passende ein. Der Statuscode
+        kommt von Vercel (404), nicht von dieser Seite.
+      -->
+      <ul class="langs" id="langs">
+        <li data-lang="cz">
+          <h2>Stránka nenalezena</h2>
+          <p>Tato adresa neexistuje nebo byla přesunuta. Zkuste jednu z níže uvedených značek nebo přejděte na úvodní stránku.</p>
+          <a class="home" href="/cz">Zpět na úvodní stránku</a>
+        </li>
+        <li data-lang="sk">
+          <h2>Stránka sa nenašla</h2>
+          <p>Táto adresa neexistuje alebo bola presunutá. Skúste jednu z nižšie uvedených značiek alebo prejdite na úvodnú stránku.</p>
+          <a class="home" href="/sk">Späť na úvodnú stránku</a>
+        </li>
+        <li data-lang="de">
+          <h2>Seite nicht gefunden</h2>
+          <p>Diese Adresse gibt es nicht oder sie wurde verschoben. Nutzen Sie eine der Marken unten oder gehen Sie zur Startseite.</p>
+          <a class="home" href="/de">Zurück zur Startseite</a>
+        </li>
+        <li data-lang="en">
+          <h2>Page not found</h2>
+          <p>This address does not exist or has been moved. Try one of the brands below or head back to the start page.</p>
+          <a class="home" href="/en">Back to the start page</a>
+        </li>
+        <li data-lang="hu">
+          <h2>Az oldal nem található</h2>
+          <p>Ez a cím nem létezik, vagy áthelyezték. Próbálja meg az alábbi márkák egyikét, vagy lépjen a kezdőoldalra.</p>
+          <a class="home" href="/hu">Vissza a kezdőoldalra</a>
+        </li>
+      </ul>
+
+      <ul class="links" id="brands">
+        <li><a href="/cz/ott" data-slug="ott">OTT</a></li>
+        <li><a href="/cz/mayer" data-slug="mayer">Mayer</a></li>
+        <li><a href="/cz/barbaric" data-slug="barbaric">Barbaric</a></li>
+        <li><a href="/cz/gannomat" data-slug="gannomat">Gannomat</a></li>
+        <li><a href="/cz/ima-schelling" data-slug="ima-schelling">IMA Schelling</a></li>
+      </ul>
+    </div>
+
+    <script>
+      (function () {
+        var supported = ['cz', 'sk', 'de', 'en', 'hu'];
+        var seg = window.location.pathname.split('/')[1];
+        var lang = supported.indexOf(seg) >= 0 ? seg : 'cz';
+
+        var items = document.querySelectorAll('#langs > li');
+        for (var i = 0; i < items.length; i++) {
+          items[i].hidden = items[i].getAttribute('data-lang') !== lang;
+        }
+        document.documentElement.lang = lang === 'cz' ? 'cs' : lang;
+
+        var links = document.querySelectorAll('#brands a');
+        for (var j = 0; j < links.length; j++) {
+          links[j].setAttribute('href', '/' + lang + '/' + links[j].getAttribute('data-slug'));
+        }
+      })();
+    </script>
+  </body>
+</html>

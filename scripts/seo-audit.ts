@@ -406,6 +406,24 @@ async function auditNegatives(): Promise<void> {
     add(probe, 'soft-404', 'error', `unbekannte URL liefert ${r404.status} statt 404${cause}`);
   }
 
+  // Die 404-Seite selbst muss existieren und darf nicht indexiert werden.
+  if (MODE === 'dist') {
+    const file = join(DIST_DIR, '404.html');
+    if (!existsSync(file)) {
+      add('/404.html', '404-seite', 'error', 'dist/404.html fehlt — Vercel liefert dann seine Standardseite aus');
+    } else if (!/<meta[^>]+name\s*=\s*"robots"[^>]+noindex/i.test(readFileSync(file, 'utf-8'))) {
+      add('/404.html', '404-seite', 'error', 'dist/404.html ohne noindex');
+    }
+  } else {
+    const res = await fetch(`${BASE}/404.html`);
+    const html = await res.text();
+    if (res.status !== 200 && res.status !== 404) {
+      add('/404.html', '404-seite', 'error', `Statuscode ${res.status}`);
+    } else if (!/<meta[^>]+name\s*=\s*"robots"[^>]+noindex/i.test(html)) {
+      add('/404.html', '404-seite', 'error', 'ohne noindex');
+    }
+  }
+
   for (const p of ['/cz/cz/pruvodce/vyber-olepovacky-hran', '/cz/cz', '/sk/sk/servis']) {
     const r = await get(p);
     if (r.status !== 301 && r.status !== 308) {

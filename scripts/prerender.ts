@@ -41,7 +41,7 @@ import { GANNOMAT_PRODUCT_SEO, GANNOMAT_CATEGORY_SEO } from '../src/data/seo/gan
 import type { ProductSeoContent, CategorySeoContent, MultiLangText } from '../src/data/seo/types';
 import { faqPageSchema, productSchema, howToSchema, itemListSchema, organizationSchema, websiteSchema, localBusinessSchemas, breadcrumbSchema, type ProductSchemaInput } from '../src/seo/structuredData';
 import { EDGEBANDER_GUIDE } from '../src/data/guides/edgebanderGuide';
-import { HUB_GUIDES, HUB_FAQ_CATEGORIES, HUB_FAQ_FLAT } from '../src/data/hub/ratgeberFaqHub';
+import { HUB_GUIDES, HUB_FAQ_CATEGORIES, HUB_FAQ_FLAT, hubGuideSlug } from '../src/data/hub/ratgeberFaqHub';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -268,7 +268,7 @@ function ratgeberFaqHubBody(lang: Language, title: string, description: string, 
 
   const cards = `<section><h2>${escHtml(HUB_LABELS.guidesH2[lang])}</h2><ul>${HUB_GUIDES
     .map((g) => {
-      const href = buildLocalizedPath(lang, g.slugByLang[lang]);
+      const href = buildLocalizedPath(lang, hubGuideSlug(g, lang));
       const t = mlGuide(g.title, lang);
       const b = mlGuide(g.blurb, lang);
       return `<li><a href="${href}"><strong>${escHtml(t)}</strong></a> – ${escHtml(b)} <em>(${g.readingTimeMin} ${escHtml(HUB_LABELS.readMin[lang])})</em></li>`;
@@ -288,7 +288,7 @@ function ratgeberFaqHubBody(lang: Language, title: string, description: string, 
     HUB_LABELS.guidesH2[lang],
     HUB_GUIDES.map((g) => ({
       name: mlGuide(g.title, lang),
-      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, g.slugByLang[lang])}`,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, hubGuideSlug(g, lang))}`,
       description: mlGuide(g.blurb, lang),
     })),
   ))}</script>`;

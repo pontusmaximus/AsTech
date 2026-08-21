@@ -12,6 +12,8 @@
     "vercel:preview": "vercel",
     "vercel:prod": "vercel --prod",
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
+    "generate:vercel": "tsx scripts/generate-vercel-config.ts",
+    "seo:404-safety": "tsx scripts/check-404-safety.ts",
     "analyze": "vite build --mode analyze",
     "seo:audit": "tsx scripts/seo-audit.ts",
     "seo:i18n": "tsx scripts/i18n-coverage.ts"
