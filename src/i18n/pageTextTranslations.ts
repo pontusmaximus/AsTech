@@ -527,10 +527,41 @@ export const pageHuTranslations: Record<string, string> = {
   "Zero-joint technology": "Nulla-csuklós technológia",
 };
 
+/**
+ * Fehlende Schluessel sichtbar machen (Masterplan 3.3 Punkt 2).
+ *
+ * Der Fallback ist bewusst nicht scharf gestellt — eine Seite, die im Browser
+ * abstuerzt, weil ein Wort fehlt, waere schlimmer als eine, die tschechisch
+ * statt slowakisch anzeigt. Aber still darf er nicht mehr sein: genau die
+ * Stille hat dazu gefuehrt, dass 85 % der Woerterbucheintraege veraltet sind,
+ * ohne dass es jemand bemerkt hat.
+ *
+ * Im Development-Build wird jeder fehlende Schluessel einmal gemeldet.
+ * Den vollstaendigen Report liefert `npm run seo:i18n`.
+ */
+const reportedMisses = new Set<string>();
+
+const reportMiss = (locale: 'sk' | 'hu', key: string): void => {
+  if (!import.meta.env?.DEV) return;
+  const id = `${locale}:${key}`;
+  if (reportedMisses.has(id)) return;
+  reportedMisses.add(id);
+  // eslint-disable-next-line no-console
+  console.warn(
+    `[i18n] Kein ${locale.toUpperCase()}-Eintrag fuer "${key}" — es wird der ` +
+      `${locale === 'sk' ? 'tschechische' : 'englische'} Quelltext ausgeliefert. ` +
+      `Vollstaendiger Report: npm run seo:i18n`,
+  );
+};
+
 export const translatePageText = (locale: 'sk' | 'hu', en: string, cz: string): string => {
   if (locale === 'sk') {
-    return pageSkTranslations[cz] ?? cz;
+    const hit = pageSkTranslations[cz];
+    if (hit === undefined) reportMiss('sk', cz);
+    return hit ?? cz;
   }
 
-  return pageHuTranslations[en] ?? en;
+  const hit = pageHuTranslations[en];
+  if (hit === undefined) reportMiss('hu', en);
+  return hit ?? en;
 };
