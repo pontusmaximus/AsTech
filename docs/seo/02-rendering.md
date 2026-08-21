@@ -292,18 +292,22 @@ sondern die `NotFoundPage`.
 Behoben: `startServerCommand` mit einem http-server, der saubere URLs auflöst, und die URLs
 entsprechend auf `/cz/`, `/cz/ott/`, … umgestellt.
 
-Beim Nachprüfen kamen zwei weitere Fehler in derselben Datei heraus, beide von mir:
+Beim Nachprüfen kam ein weiterer Fehler in derselben Datei heraus:
 
-- **`--silent` am http-server unterdrückt auch die Startmeldung.** Damit konnte
-  `startServerReadyPattern: "Available on"` nie greifen, und Lighthouse CI wartete auf einen
-  Server, den es für nicht gestartet hielt. Schalter entfernt, `-c-1` gegen Cache-Effekte ergänzt.
-- **Der Schrägstrich am Ende fehlte.** `http-server` leitet `/cz` mit 302 auf `/cz/` um, Vercel
-  nicht — gemessen wurde also lokal eine Weiterleitung, die es in Produktion gar nicht gibt.
+**Der Schrägstrich am Ende fehlte.** `http-server` leitet `/cz` mit 302 auf `/cz/` um, Vercel
+nicht — gemessen wurde also eine Weiterleitung, die es in Produktion gar nicht gibt. Belegt im
+CI-Protokoll: Lighthouse hat als gemessene Adresse `…/cz/ott/` ausgegeben, obwohl in der
+Konfiguration `…/cz/ott` stand. URLs entsprechend angepasst.
 
-Beides wäre in der CI nicht aufgefallen, weil ein hängender oder umgeleiteter Lauf trotzdem einen
-grünen Haken produziert. Deshalb steht jetzt auch `chromeFlags: --no-sandbox` in der Konfiguration:
-damit läuft sie in Containern ohne User-Namespaces und ist außerhalb der CI überhaupt prüfbar.
-Der vollständige Lauf — 5 URLs × 3 Durchläufe — ist so einmal lokal durchgegangen.
+Dazu zwei Änderungen, die keine Fehler behoben haben, aber die Konfiguration prüfbar machen:
+`chromeFlags: --no-sandbox` lässt den Lauf in Containern ohne User-Namespaces starten, und `-c-1`
+schaltet den Cache-Header des lokalen Servers ab, damit die drei Durchläufe je URL vergleichbar
+bleiben. Der `--silent`-Schalter ist mitentfallen; er hatte allerdings **keine** schädliche
+Wirkung — die CI-Protokolle der Läufe davor zeigen vollständige Messungen aller fünf URLs.
+
+Der vollständige Lauf — 5 URLs × 3 Durchläufe — ist danach einmal lokal durchgegangen. Das war
+der eigentliche Gewinn: die vorherigen Fassungen dieser Datei ließen sich außerhalb der CI gar
+nicht ausführen, und deshalb ist der `/cz/index.html`-Fehler drei Läufe lang unbemerkt geblieben.
 
 ### Ergebnis
 
