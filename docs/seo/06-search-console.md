@@ -20,6 +20,7 @@ Actions. Jetzt drei Workflows.
 | Auslöser | Was läuft | Gegen was |
 |---|---|---|
 | Pull Request | `generate:vercel --check`, `build`, `seo:404-safety --fail`, `seo:audit --fail`, `seo:i18n` | den frisch gebauten `dist/` |
+| Vercel-Deployment fertig | `seo:audit --fail --base <preview-url>` | das Preview-Deployment des PR |
 | täglich 05:30 UTC | `seo:audit --fail --base https://asamer.cz` | die Produktion |
 | manuell | wie beim Pull Request | |
 
@@ -27,10 +28,21 @@ Der PR-Lauf braucht **kein Deployment und keine Secrets**. Der dist-Modus des Au
 Vercel-Auslieferungsreihenfolge nach (Redirects → Datei → Rewrite → 404) und kann deshalb schon
 vor dem Deploy sagen, was live passieren wird.
 
-Der Produktionslauf fängt, was ein dist-Lauf grundsätzlich nicht sehen kann: die
-Domain-Konfiguration, die www-Weiterleitung, die echten Statuscodes von Vercel. Bei Fehlschlag legt
-er ein Issue mit dem vollständigen Bericht an — und **kommentiert ein bestehendes offenes Issue,
-statt jeden Tag ein neues anzulegen**, solange derselbe Fehler besteht.
+**Der Preview-Lauf** hängt an Vercels `deployment_status`-Event und prüft, sobald das Preview
+steht, genau die Dinge, die ein dist-Lauf nur nachbilden kann: echte Statuscodes, echte
+Weiterleitungen, die tatsächlich entfernte Catch-all-Regel. Damit ist Masterplan-Kriterium 1.1
+(*„`/quatsch` gibt 404"*) vor dem Merge belegt statt erst danach.
+
+Zwei Vorkehrungen: Antwortet das Preview nicht mit 200 auf `/sitemap.xml` — bei aktivierter Vercel
+Deployment Protection ist das eine 401 —, wird der Lauf mit einem Hinweis übersprungen statt als
+Fehlschlag gewertet. Das ist eine Projekteinstellung, kein Fehler des PR. Und die www-Prüfung läuft
+**nur**, wenn der Audit gegen `asamer.cz` selbst geht: sie testet die Vercel-Domain-Konfiguration,
+und ein PR darf nicht an einem Produktionsproblem scheitern, mit dem er nichts zu tun hat.
+
+Der Produktionslauf fängt, was auch ein Preview-Lauf nicht abdeckt: die Domain-Konfiguration und
+die www-Weiterleitung. Bei Fehlschlag legt er ein Issue mit dem vollständigen Bericht an — und
+**kommentiert ein bestehendes offenes Issue, statt jeden Tag ein neues anzulegen**, solange
+derselbe Fehler besteht.
 
 Zusätzlich zum Audit sind zwei Gates aus Phase 1 verankert:
 

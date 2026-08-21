@@ -50,7 +50,7 @@ Die verbleibenden 70 Fehler sind 65 × `language` (wartet auf die Übersetzungen
 npm run build                    # Sitemap → Daten → tsc → Client → SSR → Prerender
 npm run seo:audit                # SEO-Invarianten, Report-Modus
 npm run seo:audit -- --fail --allow language,body-words     # Gate-Modus wie in CI
-npm run seo:audit -- --base https://asamer.cz               # gegen die Produktion
+npm run seo:audit -- --base https://asamer.cz               # gegen die Produktion oder ein Preview
 npm run seo:404-safety           # 2.669 routerseitig erreichbare Pfade, 0 Lücken
 npm run seo:i18n                 # Übersetzungslücken SK/HU
 npm run seo:gsc                  # Search-Console-Wochenreport (braucht Service-Account)

@@ -42,7 +42,7 @@
 
 import { createSign } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { dirname, isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { INDEXABLE_LANGUAGES } from '../src/lib/language';
 import clusterConfig from '../config/keyword-cluster.json';
@@ -486,8 +486,9 @@ async function main() {
   }
   L.push('');
 
-  const out = flag('out')
-    ? join(repoRoot, flag('out')!)
+  const outFlag = flag('out');
+  const out = outFlag
+    ? (isAbsolute(outFlag) ? outFlag : join(repoRoot, outFlag))
     : join(repoRoot, `docs/seo/reports/${year}-KW${String(week).padStart(2, '0')}.md`);
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, L.join('\n'), 'utf-8');

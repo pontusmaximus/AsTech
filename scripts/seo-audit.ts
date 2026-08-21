@@ -27,7 +27,7 @@
  */
 
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { dirname, isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CANONICAL_DOMAIN, INDEXABLE_LANGUAGES, languageToHreflang, isSupportedLanguage } from '../src/lib/language';
 import { checkLanguage } from './seo-lang-markers';
@@ -54,8 +54,11 @@ const MODE: 'dist' | 'http' = BASE ? 'http' : 'dist';
 const FAIL_MODE = bool('fail');
 const MIN_WORDS = Number(flag('min-words') ?? 250);
 const LIMIT = flag('limit') ? Number(flag('limit')) : Infinity;
-const REPORT_PATH = join(repoRoot, flag('report') ?? `docs/seo/reports/audit-${MODE}.md`);
-const JSON_PATH = flag('json') ? join(repoRoot, flag('json')!) : null;
+/** Pfadangaben duerfen relativ zum Repo-Wurzelverzeichnis oder absolut sein. */
+const resolvePath = (p: string) => (isAbsolute(p) ? p : join(repoRoot, p));
+
+const REPORT_PATH = resolvePath(flag('report') ?? `docs/seo/reports/audit-${MODE}.md`);
+const JSON_PATH = flag('json') ? resolvePath(flag('json')!) : null;
 const CONCURRENCY = Number(flag('concurrency') ?? 12);
 const ALLOWED_CHECKS = new Set(
   (flag('allow') ?? '')
@@ -444,7 +447,16 @@ async function auditNegatives(): Promise<void> {
     }
   }
 
-  if (MODE === 'http') {
+  // Die www-Weiterleitung kommt aus der Vercel-Domain-Konfiguration, nicht aus
+  // dem Repo. Gegen ein Preview-Deployment geprueft wuerde sie die Produktion
+  // testen — ein PR duerfte daran nicht scheitern. Deshalb nur, wenn der Lauf
+  // ohnehin gegen die kanonische Domain geht.
+  const againstCanonicalDomain = MODE === 'http' && BASE?.replace(/\/$/, '') === CANONICAL_DOMAIN;
+  if (MODE === 'http' && !againstCanonicalDomain) {
+    console.log(`  www-Pruefung uebersprungen — Lauf geht gegen ${BASE}, nicht gegen ${CANONICAL_DOMAIN}.`);
+  }
+
+  if (againstCanonicalDomain) {
     for (const p of ['/', '/cz', '/cz/ott', '/cz/barbaric/buffer-dilu/pbx']) {
       try {
         const res = await fetch(`https://www.asamer.cz${p}`, { redirect: 'manual' });

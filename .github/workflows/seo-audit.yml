@@ -24,6 +24,11 @@ name: SEO-Audit
 on:
   pull_request:
     branches: [main]
+  # Vercel meldet jedes fertige Deployment als deployment_status. Damit laesst
+  # sich das Preview eines PR pruefen, sobald es steht — inklusive der Dinge,
+  # die ein dist-Lauf grundsaetzlich nicht sehen kann: echte Statuscodes,
+  # Weiterleitungen, die entfernte Catch-all-Regel.
+  deployment_status:
   schedule:
     # Täglich 05:30 UTC — nach dem nächtlichen Crawl, vor Arbeitsbeginn.
     - cron: '30 5 * * *'
@@ -75,6 +80,59 @@ jobs:
         with:
           name: seo-berichte
           path: docs/seo/reports/
+          retention-days: 30
+
+  audit-preview:
+    name: Gegen das Preview-Deployment
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Der Commit des Deployments, nicht der Default-Branch.
+          ref: ${{ github.event.deployment.sha }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Erreichbarkeit pruefen
+        id: reach
+        env:
+          PREVIEW_URL: ${{ github.event.deployment_status.environment_url }}
+        run: |
+          if [ -z "$PREVIEW_URL" ]; then
+            echo "code=none" >> "$GITHUB_OUTPUT"
+            echo "::notice::Kein environment_url im Event — Live-Audit uebersprungen."
+            exit 0
+          fi
+          code=$(curl -s -o /dev/null -w '%{http_code}' "$PREVIEW_URL/sitemap.xml")
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" != "200" ]; then
+            # Vercel Deployment Protection antwortet mit 401. Das ist eine
+            # Projekteinstellung, kein Fehler dieses PR — deshalb Hinweis
+            # statt Fehlschlag.
+            echo "::notice::Preview antwortet mit $code auf /sitemap.xml (Deployment Protection?) — Live-Audit uebersprungen."
+          fi
+
+      - name: SEO-Invarianten gegen das Preview
+        if: steps.reach.outputs.code == '200'
+        env:
+          PREVIEW_URL: ${{ github.event.deployment_status.environment_url }}
+        run: |
+          npm run seo:audit -- \
+            --base "$PREVIEW_URL" \
+            --fail --allow "$ALLOWED_CHECKS" \
+            --report docs/seo/reports/audit-preview.md
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.reach.outputs.code == '200'
+        with:
+          name: seo-bericht-preview
+          path: docs/seo/reports/audit-preview.md
           retention-days: 30
 
   audit-production:
