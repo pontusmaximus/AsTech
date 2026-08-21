@@ -23,6 +23,13 @@
  * eine 50-MB-Abhängigkeit. Das JWT wird mit `node:crypto` signiert, der Rest
  * ist `fetch`.
  *
+ * ## Cluster-Verfolgung
+ *
+ * `config/keyword-cluster.json` definiert die Suchanfragen-Cluster aus Masterplan
+ * Phase 5. Der Masterplan verlangt fuer 6.1 ausdruecklich, den Effekt von Phase 2
+ * auf den Lagerautomatisierungs-Cluster zu messen, bevor weitere Arbeit
+ * hineingesteckt wird — der Report weist die Cluster deshalb woechentlich aus.
+ *
  * ## Was hier nicht steht
  *
  * Die Indexierungsdaten pro Sprache (Masterplan 7.3, letzter Punkt) lassen sich
@@ -38,6 +45,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { INDEXABLE_LANGUAGES } from '../src/lib/language';
+import clusterConfig from '../config/keyword-cluster.json';
 import type { Language } from '../src/i18n';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -304,6 +312,39 @@ async function main() {
     .filter((m): m is NonNullable<typeof m> => m !== null && Math.abs(m.diff) > 3)
     .sort((a, b) => a.diff - b.diff);
 
+  /* --- Suchanfragen-Cluster (Masterplan Phase 5) --- */
+  interface ClusterResult {
+    id: string;
+    name: string;
+    note: string;
+    baseline: { impressions: number; clicks: number; period: string };
+    now: Totals;
+    prev: Totals;
+    matched: Row[];
+  }
+
+  const matchCluster = (rows: Row[], queries: string[], prefixes: string[]): Row[] => {
+    const exact = new Set(queries.map((q) => q.toLowerCase()));
+    const lowerPrefixes = prefixes.map((p) => p.toLowerCase());
+    return rows.filter((r) => {
+      const q = r.keys[0].toLowerCase();
+      return exact.has(q) || lowerPrefixes.some((p) => q.startsWith(p));
+    });
+  };
+
+  const clusters: ClusterResult[] = clusterConfig.clusters.map((c) => {
+    const matched = matchCluster(queriesNow, c.queries, c.prefixes);
+    return {
+      id: c.id,
+      name: c.name,
+      note: c.note,
+      baseline: c.baseline,
+      now: sumRows(matched),
+      prev: sumRows(matchCluster(queriesPrev, c.queries, c.prefixes)),
+      matched: matched.sort((a, b) => b.impressions - a.impressions),
+    };
+  });
+
   /* --- Sitemap-Abgleich je Sprache --- */
   const sitemapPath = join(repoRoot, 'public/sitemap.xml');
   const sitemapByLang = new Map<string, number>();
@@ -360,6 +401,45 @@ async function main() {
   L.push('Die Zahl taugt als Trend, nicht als Absolutwert — für die echte Quote bleibt der Blick');
   L.push('in die Oberfläche oder der Bulk Data Export (Masterplan 7.2).');
   L.push('');
+
+  L.push('## Suchanfragen-Cluster');
+  L.push('');
+  L.push('Definiert in `config/keyword-cluster.json`. Der Masterplan verlangt für Phase 5,');
+  L.push('den Effekt von Phase 2 auf den Lagerautomatisierungs-Cluster zu messen, bevor weitere');
+  L.push('Arbeit hineingesteckt wird — diese Tabelle ist die Messung.');
+  L.push('');
+  L.push('| Cluster | Impressionen | Vorwoche | Klicks | Vorwoche | Ø Position | Treffer |');
+  L.push('|---|---:|---:|---:|---:|---:|---:|');
+  for (const c of clusters) {
+    L.push(
+      `| **${c.name}** | ${num(c.now.impressions)} | ${num(c.prev.impressions)} | ` +
+        `${num(c.now.clicks)} | ${num(c.prev.clicks)} | ${c.now.impressions > 0 ? pos(c.now.position) : '—'} | ` +
+        `${c.matched.length} |`,
+    );
+  }
+  L.push('');
+  for (const c of clusters) {
+    L.push(`### ${c.name}`);
+    L.push('');
+    L.push(c.note);
+    L.push('');
+    L.push(
+      `Ausgangswert (${c.baseline.period}, drei Monate): ${num(c.baseline.impressions)} Impressionen, ` +
+        `${num(c.baseline.clicks)} Klicks. Nur zur Einordnung — der Wochenvergleich oben ist die Kennzahl.`,
+    );
+    L.push('');
+    if (c.matched.length === 0) {
+      L.push('Diese Woche keine Treffer.');
+    } else {
+      L.push('| Suchanfrage | Impressionen | Klicks | Position |');
+      L.push('|---|---:|---:|---:|');
+      for (const r of c.matched.slice(0, 25)) {
+        L.push(`| ${r.keys[0]} | ${num(r.impressions)} | ${num(r.clicks)} | ${pos(r.position)} |`);
+      }
+      if (c.matched.length > 25) L.push(`| … | ${c.matched.length - 25} weitere | | |`);
+    }
+    L.push('');
+  }
 
   L.push(`## Arbeitsliste: ≥ 20 Impressionen, 0 Klicks (${zeroClick.length})`);
   L.push('');
@@ -418,6 +498,12 @@ async function main() {
       `${num(totalNow.impressions)} Impressionen (${delta(totalNow.impressions, totalPrev.impressions)})`,
   );
   console.log(`  ${zeroClick.length} Suchanfragen auf der Arbeitsliste, ${newQueries.length} neue`);
+  for (const c of clusters) {
+    console.log(
+      `  Cluster ${c.name}: ${num(c.now.impressions)} Impressionen (Vorwoche ${num(c.prev.impressions)}), ` +
+        `${num(c.now.clicks)} Klicks`,
+    );
+  }
 }
 
 main().catch((e) => {
