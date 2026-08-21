@@ -18,7 +18,8 @@
     "seo:404-safety": "tsx scripts/check-404-safety.ts",
     "analyze": "vite build --mode analyze",
     "seo:audit": "tsx scripts/seo-audit.ts",
-    "seo:i18n": "tsx scripts/i18n-coverage.ts"
+    "seo:i18n": "tsx scripts/i18n-coverage.ts",
+    "seo:gsc": "tsx scripts/gsc-report.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

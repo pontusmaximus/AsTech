@@ -1,0 +1,38 @@
+{
+  "$comment": [
+    "Lighthouse CI (Masterplan 7.6). Core Web Vitals melden in der Search Console derzeit",
+    "'nicht genuegend Nutzungsdaten' — das ist eine Folge des geringen Traffics, kein eigenes",
+    "Problem. Sobald der Traffic steigt, werden Felddaten verfuegbar. Die Messung jetzt schon",
+    "einzurichten ist billiger, als spaeter darauf zu reagieren.",
+    "",
+    "Bewusst ohne harte Assertions: ein Gate, das niemand kalibriert hat, wird beim ersten",
+    "roten Lauf abgeschaltet. Erst eine Weile messen, dann Schwellen setzen."
+  ],
+  "ci": {
+    "collect": {
+      "staticDistDir": "dist",
+      "numberOfRuns": 3,
+      "url": [
+        "http://localhost/cz/index.html",
+        "http://localhost/cz/ott/index.html",
+        "http://localhost/cz/barbaric/podavaci-systemy/lcv-performance/index.html",
+        "http://localhost/cz/pruvodce/automatizace-skladu/index.html",
+        "http://localhost/cz/pouzite-stroje/index.html"
+      ],
+      "settings": {
+        "preset": "desktop"
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["warn", { "minScore": 0.8 }],
+        "categories:accessibility": ["warn", { "minScore": 0.9 }],
+        "categories:seo": ["warn", { "minScore": 0.95 }],
+        "categories:best-practices": ["warn", { "minScore": 0.9 }]
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}

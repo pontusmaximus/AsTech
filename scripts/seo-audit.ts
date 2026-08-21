@@ -16,6 +16,11 @@
  *   --limit <n>         nur die ersten n Sitemap-URLs prüfen (schneller Durchlauf)
  *   --min-words <n>     Schwelle für die Body-Text-Prüfung (Standard 250)
  *   --json <pfad>       Rohbefunde zusätzlich als JSON
+ *   --allow a,b,c       Diese Prüfungen brechen den Gate-Modus nicht (Liste, kommagetrennt).
+ *                       Gedacht für Befunde, die einer noch offenen Phase gehören: so schützt
+ *                       das Gate, was bereits repariert ist, ohne an dem zu scheitern, was
+ *                       noch aussteht. Jeder Eintrag hier ist eine Schuld — beim Abschluss
+ *                       der zugehörigen Phase gehört er entfernt.
  *
  * Der Report-Modus ist der empfohlene Startpunkt (Masterplan Abschnitt 8):
  * erst Baseline messen, nach Phase 1 und 2 auf --fail umstellen.
@@ -52,6 +57,12 @@ const LIMIT = flag('limit') ? Number(flag('limit')) : Infinity;
 const REPORT_PATH = join(repoRoot, flag('report') ?? `docs/seo/reports/audit-${MODE}.md`);
 const JSON_PATH = flag('json') ? join(repoRoot, flag('json')!) : null;
 const CONCURRENCY = Number(flag('concurrency') ?? 12);
+const ALLOWED_CHECKS = new Set(
+  (flag('allow') ?? '')
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean),
+);
 
 /* ------------------------------------------------------------------ */
 /*  Befund-Modell                                                      */
@@ -600,9 +611,20 @@ async function main() {
     console.log(`  ${list[0].severity === 'error' ? '✗' : '!'} ${check.padEnd(22)} ${list.length}`);
   }
 
-  if (FAIL_MODE && errors.length > 0) {
-    console.error(`\nGate-Modus: ${errors.length} Fehler → Exit 1`);
-    process.exit(1);
+  if (FAIL_MODE) {
+    const blocking = errors.filter((f) => !ALLOWED_CHECKS.has(f.check));
+    const tolerated = errors.length - blocking.length;
+    if (tolerated > 0) {
+      console.log(`\n${tolerated} Fehler in geduldeten Prüfungen (--allow ${[...ALLOWED_CHECKS].join(',')})`);
+    }
+    if (blocking.length > 0) {
+      console.error(`\nGate-Modus: ${blocking.length} blockierende Fehler → Exit 1`);
+      const byBlocking = new Map<string, number>();
+      for (const f of blocking) byBlocking.set(f.check, (byBlocking.get(f.check) ?? 0) + 1);
+      for (const [check, n] of byBlocking) console.error(`  ${check}: ${n}`);
+      process.exit(1);
+    }
+    console.log('\nGate-Modus: keine blockierenden Fehler.');
   }
 }
 
