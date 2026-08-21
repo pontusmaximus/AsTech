@@ -546,7 +546,6 @@ const reportMiss = (locale: 'sk' | 'hu', key: string): void => {
   const id = `${locale}:${key}`;
   if (reportedMisses.has(id)) return;
   reportedMisses.add(id);
-  // eslint-disable-next-line no-console
   console.warn(
     `[i18n] Kein ${locale.toUpperCase()}-Eintrag fuer "${key}" — es wird der ` +
       `${locale === 'sk' ? 'tschechische' : 'englische'} Quelltext ausgeliefert. ` +

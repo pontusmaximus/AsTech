@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../App';
 import { buildCanonicalUrl, DEFAULT_LANGUAGE, HREFLANG_DEFAULT, INDEXABLE_LANGUAGES, languageToHreflang, NON_INDEXABLE_LANGUAGES } from '../lib/language';
 import { DEFAULT_OG_IMAGE, getFallbackMeta, getSlugForLang, SEO_ROUTES } from './routes';
-import { articleSchema } from './structuredData';
+import { articleSchema, organizationSchema, websiteSchema, localBusinessSchemas } from './structuredData';
 import { CONTENT_DATES } from './generated/contentDates';
 import type { SeoRouteKey } from './routes';
 import type { Language } from '../i18n';
@@ -51,23 +51,30 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
   const effectiveRobots = NON_INDEXABLE_LANGUAGES.includes(lang) ? 'noindex,follow' : robots;
 
   const dates = routeKey ? CONTENT_DATES[routeKey] : undefined;
-  const schemas =
-    routeKey && GUIDE_ROUTE_KEYS.includes(routeKey)
-      ? [
-          ...structuredData,
-          articleSchema({
-            headline: title.split('|')[0].trim(),
-            description,
-            url: canonical,
-            inLanguage: languageToHreflang(lang),
-            image,
-            datePublished: dates?.published,
-            dateModified: dates?.modified,
-          }),
-        ]
-      : structuredData;
+  const schemas: Array<Record<string, unknown>> = [...structuredData];
+
+  if (routeKey && GUIDE_ROUTE_KEYS.includes(routeKey)) {
+    schemas.push(
+      articleSchema({
+        headline: title.split('|')[0].trim(),
+        description,
+        url: canonical,
+        inLanguage: languageToHreflang(lang),
+        image,
+        datePublished: dates?.published,
+        dateModified: dates?.modified,
+      }),
+    );
+  }
+
+  // Sitewide-Entitaeten auf den Seiten, auf die sie gehoeren. Vorher standen sie
+  // nur im Prerender-Head — damit fehlten sie jedem Crawler, der die Seite
+  // ausfuehrt, und der Prerenderer war eine zweite Quelle dafuer.
+  if (routeKey === 'home') schemas.push(organizationSchema(), websiteSchema(), ...localBusinessSchemas());
+  if (routeKey === 'contact') schemas.push(...localBusinessSchemas());
 
   return (
+    <>
     <Helmet prioritizeSeoTags>
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -119,16 +126,25 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
       <meta name="twitter:image" content={image} />
       <meta name="twitter:url" content={canonical} />
 
-      {schemas
-        .filter(Boolean)
-        .map((schema, index) => (
-          <script
-            key={`ld-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          />
-        ))}
-    </Helmet>
+      </Helmet>
+
+      {/*
+        JSON-LD bewusst *ausserhalb* von Helmet.
+
+        Grund: react-helmet-async 3 fuellt unter React 19 mit
+        `renderToPipeableStream` seinen Server-Context nicht — was in Helmet
+        landet, taucht im prerenderten HTML nicht auf. Ausserhalb gerendert
+        steht es im SSR-Output und damit in der ausgelieferten Datei.
+        JSON-LD im Body ist fuer Google gleichwertig zu JSON-LD im Head.
+      */}
+      {schemas.filter(Boolean).map((schema, index) => (
+        <script
+          key={`ld-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+    </>
   );
 };
 

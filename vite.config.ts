@@ -5,7 +5,7 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ mode, isSsrBuild }) => ({
   base: '/',
   plugins: [
     inspectAttr(),
@@ -23,11 +23,29 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssr: {
+    /**
+     * Fuer den SSR-Build (src/entry-server.tsx) wird alles mitgebuendelt.
+     *
+     * Vite laesst Abhaengigkeiten im SSR-Build normalerweise extern; Node
+     * laedt sie dann selbst. Mehrere Pakete hier (react-helmet-async,
+     * gsap/ScrollTrigger) liefern unter Node ihren CommonJS-Build aus, und ein
+     * `import { X } from '…'` schlaegt dort mit "does not provide an export
+     * named" fehl. Gebuendelt uebernimmt Rollup die Interop, und der
+     * Prerenderer laeuft ohne Sonderfallliste, die bei jeder neuen
+     * Abhaengigkeit nachgepflegt werden muesste.
+     */
+    noExternal: true,
+  },
   build: {
     chunkSizeWarningLimit: 700,
     rollupOptions: {
       output: {
-        manualChunks: {
+        // Die Chunk-Aufteilung gilt nur fuer den Browser-Build. Im SSR-Build
+        // (src/entry-server.tsx, Grundlage des Prerenderings) sind react &
+        // Co. externe Module — Rollup bricht ab, wenn sie dort in
+        // manualChunks auftauchen.
+        manualChunks: isSsrBuild ? undefined : {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'helmet': ['react-helmet-async'],
           'forms': ['react-hook-form', '@hookform/resolvers', 'zod'],

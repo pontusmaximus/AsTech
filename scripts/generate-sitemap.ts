@@ -217,7 +217,6 @@ ${xmlEntries}
 mkdirSync(publicDir, { recursive: true });
 writeFileSync(sitemapPath, xml.trim() + '\n', 'utf8');
 
-// eslint-disable-next-line no-console
 console.log(
   `Sitemap generated with ${entries.length} entries at ${sitemapPath} ` +
     `(lastmod aus ${lastmod.source}, ${lastmod.distinctDates} unterschiedliche Datumswerte)`,

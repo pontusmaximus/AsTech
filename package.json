@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:sitemap && npm run generate:dates && tsc -b && vite build && npm run prerender",
+    "build": "npm run generate:sitemap && npm run generate:dates && tsc -b && vite build && npm run build:ssr && npm run prerender",
+    "build:ssr": "vite build --ssr src/entry-server.tsx --outDir dist-ssr",
     "prerender": "tsx scripts/prerender.ts",
     "lint": "eslint .",
     "preview": "vite preview",
