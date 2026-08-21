@@ -290,18 +290,31 @@ Mein eigener Fehler: `staticDistDir` serviert Dateipfade, und die URLs standen e
 sondern die `NotFoundPage`.
 
 Behoben: `startServerCommand` mit einem http-server, der saubere URLs auflöst, und die URLs
-entsprechend auf `/cz`, `/cz/ott`, … umgestellt.
+entsprechend auf `/cz/`, `/cz/ott/`, … umgestellt.
+
+Beim Nachprüfen kamen zwei weitere Fehler in derselben Datei heraus, beide von mir:
+
+- **`--silent` am http-server unterdrückt auch die Startmeldung.** Damit konnte
+  `startServerReadyPattern: "Available on"` nie greifen, und Lighthouse CI wartete auf einen
+  Server, den es für nicht gestartet hielt. Schalter entfernt, `-c-1` gegen Cache-Effekte ergänzt.
+- **Der Schrägstrich am Ende fehlte.** `http-server` leitet `/cz` mit 302 auf `/cz/` um, Vercel
+  nicht — gemessen wurde also lokal eine Weiterleitung, die es in Produktion gar nicht gibt.
+
+Beides wäre in der CI nicht aufgefallen, weil ein hängender oder umgeleiteter Lauf trotzdem einen
+grünen Haken produziert. Deshalb steht jetzt auch `chromeFlags: --no-sandbox` in der Konfiguration:
+damit läuft sie in Containern ohne User-Namespaces und ist außerhalb der CI überhaupt prüfbar.
+Der vollständige Lauf — 5 URLs × 3 Durchläufe — ist so einmal lokal durchgegangen.
 
 ### Ergebnis
 
-Lighthouse auf `/cz`, Desktop-Preset:
+Lighthouse, Desktop-Preset, Median aus drei Durchläufen:
 
-| Kategorie | vor den Fixes | nach den Fixes |
-|---|---:|---:|
-| **SEO** | 0,92 | **1,00** |
-| Accessibility | 0,86 | 0,90 |
-| Best Practices | — | 0,96 |
-| Performance | — | 0,84 |
+| Seite | Performance | Accessibility | Best Practices | SEO |
+|---|---:|---:|---:|---:|
+| `/cz/` | 0,83 | 0,90 | 0,96 | **1,00** |
+| `/cz/barbaric/podavaci-systemy/lcv-performance/` | 0,79 | 0,95 | 0,96 | **1,00** |
+
+Vor den Fixes lag der SEO-Wert bei 0,92 und Accessibility bei 0,86.
 
 Der SEO-Wert lag bei 0,92, weil Lighthouse *„Document doesn't have a `<title>` element"* meldete —
 die 404-Seite setzte einen leeren Titel, und der stand im DOM vor dem echten.

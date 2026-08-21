@@ -34,3 +34,6 @@ dist/
 .vercel
 .claude/
 dist-ssr/
+
+# Lighthouse CI
+.lighthouseci/
