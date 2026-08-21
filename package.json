@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:sitemap && tsc -b && vite build && npm run prerender",
+    "build": "npm run generate:sitemap && npm run generate:dates && tsc -b && vite build && npm run prerender",
     "prerender": "tsx scripts/prerender.ts",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -13,6 +13,7 @@
     "vercel:prod": "vercel --prod",
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
     "generate:vercel": "tsx scripts/generate-vercel-config.ts",
+    "generate:dates": "tsx scripts/generate-content-dates.ts",
     "seo:404-safety": "tsx scripts/check-404-safety.ts",
     "analyze": "vite build --mode analyze",
     "seo:audit": "tsx scripts/seo-audit.ts",

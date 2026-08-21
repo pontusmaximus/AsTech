@@ -1,4 +1,5 @@
 import { CANONICAL_DOMAIN } from '../lib/language';
+import organizationProfiles from '../../config/organization-profiles.json';
 
 const LOGO_URL = `${CANONICAL_DOMAIN}/brand/png/horizontal/asamer-logo-horizontal.png`;
 const ORG_ID = `${CANONICAL_DOMAIN}/#organization`;
@@ -14,9 +15,32 @@ export const organizationSchema = () => ({
   description: 'Exklusiver OTT-Vertriebspartner und autorisierter Händler für Mayer, BARBARIC und Gannomat in CZ, SK und HU.',
   foundingDate: '1994',
   numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 10, maxValue: 50 },
-  sameAs: [
-    'https://www.linkedin.com/company/asamer-technologie',
+  /**
+   * Gepflegt in `config/organization-profiles.json` — dort steht auch, welche
+   * Profile noch fehlen. Bewusst ausgelagert, damit eine gepruefte URL ohne
+   * Code-Aenderung nachgetragen werden kann.
+   */
+  sameAs: organizationProfiles.sameAs,
+  /**
+   * Register-Identifikatoren aus dem eigenen Impressum (src/pages/ImprintPage.tsx).
+   * Sie sind der Hebel gegen den Markensuche-Befund aus Masterplan 4.3: die Suche
+   * nach "asamer" wird von anderen Asamer-Unternehmen belegt, und eindeutige
+   * Register-IDs sind das staerkste Signal, das Google zur Entitaetsunterscheidung
+   * heranzieht.
+   */
+  vatID: 'ATU72811406',
+  taxID: 'ATU72811406',
+  identifier: [
+    { '@type': 'PropertyValue', name: 'Firmenbuchnummer', value: 'FN 481620 s' },
+    { '@type': 'PropertyValue', name: 'Firmenbuchgericht', value: 'Landesgericht Wels' },
   ],
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Salzburgerstrasse 73',
+    addressLocality: 'Lambach',
+    postalCode: '4650',
+    addressCountry: 'AT',
+  },
   areaServed: [
     { '@type': 'Country', name: 'Czech Republic', sameAs: 'https://en.wikipedia.org/wiki/Czech_Republic' },
     { '@type': 'Country', name: 'Slovakia', sameAs: 'https://en.wikipedia.org/wiki/Slovakia' },
@@ -94,6 +118,14 @@ export const localBusinessSchemas = () => [
     '@type': 'LocalBusiness',
     '@id': `${CANONICAL_DOMAIN}/#brno`,
     name: 'ASAMER s.r.o.',
+    // Firmierung und Register-IDs wie im Impressum.
+    legalName: 'ASAMER spol. s r.o.',
+    vatID: 'CZ60699761',
+    taxID: '60699761',
+    identifier: [
+      { '@type': 'PropertyValue', name: 'IČO', value: '60699761' },
+      { '@type': 'PropertyValue', name: 'Obchodní rejstřík', value: 'Krajský soud v Brně, oddíl C, vložka 14536' },
+    ],
     image: LOGO_URL,
     parentOrganization: { '@id': ORG_ID },
     address: {
@@ -146,6 +178,8 @@ export interface ProductSchemaInput {
   description: string;
   brand: string;
   url: string;
+  /** Modellbezeichnung. Bei Katalogprodukten identisch mit `name` ohne Markenpraefix. */
+  model?: string;
   image?: string | string[];
   category?: string;
   manufacturer?: string;
@@ -177,6 +211,7 @@ export const productSchema = (input: ProductSchemaInput) => {
     manufacturer: { '@type': 'Organization', name: input.manufacturer ?? input.brand },
     itemCondition: condition,
     ...(images && { image: images }),
+    ...(input.model && { model: input.model }),
     ...(input.category && { category: input.category }),
     ...(input.sku && { sku: input.sku }),
     ...(input.productionDate && { productionDate: input.productionDate }),
@@ -252,4 +287,46 @@ export const howToSchema = (
     name: stepName,
     text,
   })),
+});
+
+/**
+ * Article fuer die Ratgeberseiten (Masterplan 4.2 Punkt 3).
+ *
+ * `author` ist die Organisation, nicht eine Person — die Ratgeber sind
+ * Unternehmenspublikationen ohne namentliche Autorenschaft.
+ * `datePublished` wird weggelassen, wenn es nicht belastbar aus der
+ * Git-Historie ableitbar ist (siehe src/seo/generated/contentDates.ts).
+ * Die bestehende FAQPage bleibt daneben bestehen.
+ */
+export const articleSchema = (input: {
+  headline: string;
+  description: string;
+  url: string;
+  inLanguage: string;
+  image?: string;
+  datePublished?: string;
+  dateModified?: string;
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: input.headline,
+  description: input.description,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': input.url },
+  url: input.url,
+  inLanguage: input.inLanguage,
+  // Vollstaendiges Organization-Objekt statt reiner @id-Referenz: das
+  // Organization-Schema steht nur auf Start- und Kontaktseite im Head, auf
+  // einer Ratgeberseite liefe die Referenz sonst ins Leere und Google meldete
+  // ein fehlendes `author.name`. Die @id bleibt fuer die Graph-Verknuepfung drin.
+  author: { '@type': 'Organization', '@id': ORG_ID, name: 'Asamer Technologie GmbH', url: CANONICAL_DOMAIN },
+  publisher: {
+    '@type': 'Organization',
+    '@id': ORG_ID,
+    name: 'Asamer Technologie GmbH',
+    url: CANONICAL_DOMAIN,
+    logo: { '@type': 'ImageObject', url: LOGO_URL },
+  },
+  ...(input.image && { image: input.image.startsWith('http') ? input.image : `${CANONICAL_DOMAIN}${input.image}` }),
+  ...(input.datePublished && { datePublished: input.datePublished }),
+  ...(input.dateModified && { dateModified: input.dateModified }),
 });

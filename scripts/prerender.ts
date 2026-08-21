@@ -40,6 +40,9 @@ import { BARBARIC_PRODUCT_SEO, BARBARIC_CATEGORY_SEO } from '../src/data/seo/bar
 import { GANNOMAT_PRODUCT_SEO, GANNOMAT_CATEGORY_SEO } from '../src/data/seo/gannomatSeoContent';
 import type { ProductSeoContent, CategorySeoContent, MultiLangText } from '../src/data/seo/types';
 import { faqPageSchema, productSchema, howToSchema, itemListSchema, organizationSchema, websiteSchema, localBusinessSchemas, breadcrumbSchema, type ProductSchemaInput } from '../src/seo/structuredData';
+import { catalogProductSchema } from '../src/seo/productLd';
+import { articleSchema } from '../src/seo/structuredData';
+import { CONTENT_DATES } from '../src/seo/generated/contentDates';
 import { EDGEBANDER_GUIDE } from '../src/data/guides/edgebanderGuide';
 import { HUB_GUIDES, HUB_FAQ_CATEGORIES, HUB_FAQ_FLAT, hubGuideSlug } from '../src/data/hub/ratgeberFaqHub';
 import type { Language } from '../src/i18n';
@@ -300,6 +303,30 @@ function ratgeberFaqHubBody(lang: Language, title: string, description: string, 
   return [crumbs, breadcrumbLd(crumbItems, canonical), head, cards, faqWrap, itemListLd, faqLd].join('\n');
 }
 
+/** Routen, die als `Article` ausgezeichnet werden. */
+const GUIDE_ROUTE_KEYS: SeoRouteKey[] = [
+  'guidePurVsEva',
+  'guideEdgebander',
+  'guideWarehouseAutomation',
+  'guidePanelSawComparison',
+  'guideFundingCz',
+  'guideVacuumLifter',
+];
+
+/** Article-JSON-LD einer Ratgeberseite. Daten aus der Git-Historie. */
+const guideArticleLd = (key: SeoRouteKey, lang: Language, title: string, description: string, canonical: string) => {
+  const dates = CONTENT_DATES[key];
+  return articleSchema({
+    headline: title.split('|')[0].trim(),
+    description,
+    url: canonical,
+    inLanguage: languageToHreflang(lang),
+    image: DEFAULT_OG_IMAGE,
+    datePublished: dates?.published,
+    dateModified: dates?.modified,
+  });
+};
+
 /** Build static page body content. Brand-Hub-Seiten erhalten zusaetzlich
  *  alle CategorySeoContent-Bloecke (longInhalt + FAQ pro Kategorie) plus
  *  ein kombiniertes FAQ-JSON-LD-Schema.
@@ -325,6 +352,11 @@ function staticPageBody(
   parts.push(`<h1>${escHtml(title)}</h1>`);
   parts.push(`<p>${escHtml(description)}</p>`);
 
+  // Ratgeberseiten zusaetzlich als Article auszeichnen (Masterplan 4.2 Punkt 3).
+  if (GUIDE_ROUTE_KEYS.includes(key)) {
+    parts.push(jsonLdScript(guideArticleLd(key, lang, title, description, canonical)));
+  }
+
   if (key === 'home') {
     parts.push(`<p>${escHtml(T.dealer[lang])}</p>`);
     // Link to all manufacturers
@@ -344,8 +376,10 @@ function staticPageBody(
   }
 
   // Anchor-Guide "Jakou olepovacku hran koupit?" — vollstaendiger Body inkl. FAQ + HowTo JSON-LD.
+  // Eigener Body-Builder, deshalb wird das Article-Schema hier erneut angehaengt:
+  // `parts` wird in diesem Zweig verworfen.
   if (key === 'guideEdgebander') {
-    return guideEdgebanderBody(lang, title, canonical);
+    return [guideEdgebanderBody(lang, title, canonical), jsonLdScript(guideArticleLd(key, lang, title, description, canonical))].join('\n');
   }
 
   // Hub "Ratgeber & FAQ" — Cards fuer 5 Ratgeber + 18 FAQ-Items in 5 Kategorien.
@@ -390,6 +424,23 @@ function productPageBody(
     `<p>${escHtml(description)}</p>`,
     `<p><a href="mailto:office@asamer.net">${escHtml(T.contact[lang])}</a></p>`,
   ];
+
+  // Product-JSON-LD auf jeder Katalogseite (Masterplan 4.2). Steht vor dem
+  // SEO-Block, damit es auch dann ausgeliefert wird, wenn fuer ein Produkt
+  // (noch) kein ProductSeoContent existiert.
+  parts.push(
+    jsonLdScript(
+      catalogProductSchema({
+        brand,
+        name: productName,
+        slug: productLd.slug,
+        description: productLd.seoDescription,
+        categoryLabel,
+        image: productLd.image,
+        url: productLd.url,
+      }),
+    ),
+  );
 
   if (seoContent) {
     parts.push(productFaqJsonLd(seoContent, lang));

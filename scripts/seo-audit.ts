@@ -375,10 +375,12 @@ async function auditPage(loc: string): Promise<PageResult | null> {
   const types = ldTypes(html);
   const isProduct = /\/(ott|mayer|barbaric|gannomat)\/[^/]+\/[^/]+$/.test(pathname);
   const isHome = /^\/[a-z]{2}$/.test(pathname);
+  const isGuide = /\/(ratgeber|guide|pruvodce|sprievodca|utmutato)\//.test(pathname);
   if (isProduct && !types.includes('Product')) add(loc, 'json-ld', 'error', 'Produktseite ohne Product-Schema');
   if (isProduct && !types.includes('BreadcrumbList')) add(loc, 'json-ld', 'error', 'Produktseite ohne BreadcrumbList');
   if (isHome && !types.includes('Organization')) add(loc, 'json-ld', 'error', 'Sprachstartseite ohne Organization');
   if (isHome && !types.includes('WebSite')) add(loc, 'json-ld', 'error', 'Sprachstartseite ohne WebSite');
+  if (isGuide && !types.includes('Article')) add(loc, 'json-ld', 'error', 'Ratgeberseite ohne Article-Schema');
 
   return {
     url: loc,

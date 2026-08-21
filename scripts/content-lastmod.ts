@@ -95,6 +95,24 @@ const git = (args: string[]): string => {
 
 export const hasGit = (): boolean => git(['rev-parse', '--git-dir']) !== '';
 
+const isShallow = (): boolean => git(['rev-parse', '--is-shallow-repository']) === 'true';
+
+/**
+ * Datum des aeltesten *verfuegbaren* Commits.
+ *
+ * In einem flachen Klon ist das die Grenze der Historie, nicht der Projektstart.
+ * Jede Datei, die schon vor dieser Grenze existierte, sieht in `git log --reverse`
+ * so aus, als waere sie an genau diesem Tag entstanden. Ein `datePublished` daraus
+ * waere schlicht falsch — deshalb wird es in dem Fall weggelassen.
+ */
+let historyBoundary: string | null = null;
+const boundaryDate = (): string => {
+  if (historyBoundary === null) {
+    historyBoundary = isShallow() ? (git(['log', '--reverse', '--format=%cI']).split('\n')[0]?.trim() ?? '') : '';
+  }
+  return historyBoundary;
+};
+
 /**
  * Ab wann ist ein Git-Ergebnis brauchbar?
  *
@@ -116,6 +134,28 @@ const fileDate = (path: string): string => {
   return iso;
 };
 
+const firstDateCache = new Map<string, string>();
+
+/** Datum des ersten Commits, der die Datei angelegt hat — Naeherung fuer `datePublished`. */
+const firstDate = (path: string): string => {
+  const cached = firstDateCache.get(path);
+  if (cached !== undefined) return cached;
+  const log = git(['log', '--reverse', '--format=%cI', '--', path]);
+  const iso = log.split('\n')[0]?.trim() ?? '';
+  firstDateCache.set(path, iso);
+  return iso;
+};
+
+/** Aeltester Zeitstempel aller beitragenden Dateien. */
+const oldest = (paths: string[]): string => {
+  let best = '';
+  for (const p of paths) {
+    const d = firstDate(p);
+    if (d && (!best || d < best)) best = d;
+  }
+  return best;
+};
+
 /** Jüngster Zeitstempel aller beitragenden Dateien. */
 const newest = (paths: string[]): string => {
   let best = '';
@@ -135,6 +175,27 @@ export type LastmodKey = string;
 export const staticKey = (route: SeoRouteKey): LastmodKey => `static:${route}`;
 export const productKey = (brand: string, slug: string): LastmodKey => `product:${brand}:${slug}`;
 export const usedMachineKey = (slug: string): LastmodKey => `used:${slug}`;
+
+/**
+ * Veroeffentlichungs- und Aenderungsdatum je statischer Route.
+ * Genutzt fuer das `Article`-Schema der Ratgeberseiten (Masterplan 4.2 Punkt 3).
+ * `published` ist das Datum des ersten Commits der Seitenkomponente — die beste
+ * Naeherung, die das Repo hergibt, und ehrlicher als ein erfundenes Datum.
+ */
+export function routeDates(route: SeoRouteKey): { published: string; modified: string } {
+  const sources = STATIC_SOURCES[route] ?? [ROUTE_META];
+  // Route-Metadaten fliessen nicht in `published` ein: routes.ts existiert seit
+  // dem ersten Commit und wuerde jede Seite auf denselben Tag datieren.
+  const contentSources = sources.filter((p) => p !== ROUTE_META);
+  const published = oldest(contentSources.length > 0 ? contentSources : sources);
+  const boundary = boundaryDate();
+  return {
+    // Faellt das ermittelte Datum mit der Historiengrenze zusammen, ist es nicht
+    // belastbar — dann lieber kein datePublished als ein falsches.
+    published: boundary && published === boundary ? '' : published,
+    modified: newest(sources),
+  };
+}
 
 type Snapshot = { $comment?: unknown; generatedFrom?: string; entries: Record<string, string> };
 

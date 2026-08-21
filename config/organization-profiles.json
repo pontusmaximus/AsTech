@@ -1,0 +1,22 @@
+{
+  "$comment": [
+    "sameAs-Profile fuer das Organization-Schema (Masterplan 4.2 Punkt 2 und 4.3).",
+    "Hier gehoeren ausschliesslich URLs hinein, die tatsaechlich existieren und auf die Asamer",
+    "Technologie GmbH bzw. ASAMER spol. s r.o. verweisen. Eine erfundene oder geratene URL ist",
+    "schaedlicher als ein fehlender Eintrag: Google nutzt sameAs zur Entitaetszuordnung, und ein",
+    "toter Link stuetzt die Zuordnung nicht, sondern schwaecht sie.",
+    "",
+    "Noch offen — Eintraege ergaenzen, sobald die URL geprueft ist (siehe docs/seo/04-strukturierte-daten.md):",
+    "  - Tschechisches Handelsregister (justice.cz / ARES), IČO 60699761",
+    "  - Oesterreichisches Firmenbuch, FN 481620 s, Landesgericht Wels",
+    "  - Haendlerprofil bei OTT (Paul OTT GmbH)",
+    "  - Haendlerprofil bei Mayer (Mayer Maschinenbau GmbH)",
+    "  - Haendlerprofil bei BARBARIC",
+    "  - Haendlerprofil bei Gannomat",
+    "  - Haendlerprofil bei IMA Schelling",
+    "  - Google-Unternehmensprofil des CZ-Standorts, sobald angelegt und verifiziert"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/asamer-technologie"
+  ]
+}
