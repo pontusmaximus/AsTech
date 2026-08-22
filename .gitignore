@@ -37,3 +37,11 @@ dist-ssr/
 
 # Lighthouse CI
 .lighthouseci/
+
+# Standard-Ausgabepfade des SEO-Audits.
+# Ad-hoc-Laeufe ohne --report schreiben hierhin; der committete Nachweis sind
+# die benannten Berichte je Phase (audit-baseline-*, audit-phase1-*, …).
+docs/seo/reports/audit-dist.md
+docs/seo/reports/audit-http.md
+docs/seo/reports/audit-preview.md
+docs/seo/reports/audit-produktion.md
