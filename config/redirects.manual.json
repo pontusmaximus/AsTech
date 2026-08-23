@@ -1,0 +1,139 @@
+{
+  "$comment": [
+    "Von Hand gepflegte Weiterleitungen. Alles hier drin ueberlebt `npm run generate:vercel` unveraendert.",
+    "Hierher gehoeren: alte URL-Strukturen aus dem Relaunch, Fremddomains, Einzelfaelle aus der Search Console.",
+    "NICHT hierher gehoeren: Sprach-Slug-Varianten, Kategorie-Slug-Varianten, doppelte Sprachpraefixe und",
+    "sprachlose Legacy-Slugs — die erzeugt scripts/generate-vercel-config.ts aus src/lib/slugs.ts und den",
+    "Produktdaten, damit sie nicht auseinanderlaufen koennen.",
+    "Reihenfolge zaehlt: Vercel nimmt die erste passende Regel. Host-Regeln (:path(.*)) stehen deshalb zuletzt."
+  ],
+  "redirects": [
+    {
+      "source": "/finanzierung",
+      "destination": "https://asamer.cz/cz/financovani",
+      "permanent": true
+    },
+    {
+      "source": "/loesungen",
+      "destination": "https://asamer.cz/cz/reseni",
+      "permanent": true
+    },
+    {
+      "source": "/service",
+      "destination": "https://asamer.cz/cz/servis",
+      "permanent": true
+    },
+    {
+      "source": "/impressum",
+      "destination": "https://asamer.cz/cz/imprint",
+      "permanent": true
+    },
+    {
+      "source": "/products/olepovacky-ott/:slug*",
+      "destination": "https://asamer.cz/cz/ott",
+      "permanent": true
+    },
+    {
+      "source": "/products/kolikovaci-stroje-gannomat/:slug*",
+      "destination": "https://asamer.cz/cz/gannomat",
+      "permanent": true
+    },
+    {
+      "source": "/products/korpusove-lisy-gannomat/:slug*",
+      "destination": "https://asamer.cz/cz/gannomat",
+      "permanent": true
+    },
+    {
+      "source": "/products/manipulatory-barbaric/:slug*",
+      "destination": "https://asamer.cz/cz/barbaric",
+      "permanent": true
+    },
+    {
+      "source": "/products/pily-schelling/:slug*",
+      "destination": "https://asamer.cz/cz/ima-schelling",
+      "permanent": true
+    },
+    {
+      "source": "/products/tech-uzly-a-linky-ima-schelling/:slug*",
+      "destination": "https://asamer.cz/cz/ima-schelling",
+      "permanent": true
+    },
+    {
+      "source": "/products/pily-altendorf/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/pily-streibeg/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/susarny-dreva/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/sesivacky-dyh-kuper/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/dyhovaci-lisy-langzauner/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/second-hand/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/servis/:slug*",
+      "destination": "https://asamer.cz/cz/servis",
+      "permanent": true
+    },
+    {
+      "source": "/about/:slug*",
+      "destination": "https://asamer.cz/cz/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/xylexpo-2024/:slug*",
+      "destination": "https://asamer.cz/cz",
+      "permanent": true
+    },
+    {
+      "source": "/ligna-2024/:slug*",
+      "destination": "https://asamer.cz/cz",
+      "permanent": true
+    },
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "asamer.net"
+        }
+      ],
+      "destination": "https://asamer.cz/:path",
+      "permanent": true
+    },
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.asamer.net"
+        }
+      ],
+      "destination": "https://asamer.cz/:path",
+      "permanent": true
+    }
+  ]
+}

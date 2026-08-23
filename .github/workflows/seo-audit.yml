@@ -1,0 +1,236 @@
+# SEO-Invarianten als CI-Gate (Masterplan 7.1).
+#
+# Zwei Läufe mit unterschiedlichem Zweck:
+#
+#   pull_request  → gegen den frisch gebauten `dist/`-Ordner. Braucht kein
+#                   Deployment und keine Secrets, läuft in unter zwei Minuten
+#                   und blockt Regressionen, bevor sie live gehen.
+#   schedule      → täglich gegen die Produktion. Fängt, was ein dist-Lauf
+#                   nicht sehen kann: Domain-Konfiguration, www-Weiterleitung,
+#                   Statuscodes von Vercel.
+#
+# Zur `--allow`-Liste: sie nennt die Prüfungen, deren Befunde zu einer noch
+# offenen Phase gehören. Das Gate schützt damit alles, was bereits repariert
+# ist, ohne an dem zu scheitern, was noch aussteht. Jeder Eintrag ist eine
+# Schuld und gehört beim Abschluss der Phase entfernt:
+#
+#   language     → Phase 3, wartet auf die HU/SK-Übersetzungen
+#   body-words   → fünf Kontaktseiten mit ~200 Wörtern, siehe docs/seo/02-rendering.md
+#
+# Sind beide erledigt, wird `--allow` gestrichen und das Gate ist vollständig.
+
+name: SEO-Audit
+
+on:
+  pull_request:
+    branches: [main]
+  # Vercel meldet jedes fertige Deployment als deployment_status. Damit laesst
+  # sich das Preview eines PR pruefen, sobald es steht — inklusive der Dinge,
+  # die ein dist-Lauf grundsaetzlich nicht sehen kann: echte Statuscodes,
+  # Weiterleitungen, die entfernte Catch-all-Regel.
+  deployment_status:
+  schedule:
+    # Täglich 05:30 UTC — nach dem nächtlichen Crawl, vor Arbeitsbeginn.
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  ALLOWED_CHECKS: language,body-words
+
+jobs:
+  audit-build:
+    name: Gegen den Build
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Volle Historie: scripts/content-lastmod.ts leitet daraus die
+          # <lastmod>-Daten der Sitemap ab. Ein flacher Klon fällt auf den
+          # committeten Snapshot zurück — funktioniert, misst aber nichts.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: vercel.json ist aktuell
+        run: npm run generate:vercel -- --check
+
+      - name: Build
+        run: npm run build
+
+      - name: Keine erreichbare Route wird zur 404
+        run: npm run seo:404-safety -- --fail
+
+      - name: SEO-Invarianten
+        run: npm run seo:audit -- --fail --allow "$ALLOWED_CHECKS"
+
+      - name: i18n-Abdeckung (nur Bericht)
+        run: npm run seo:i18n
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seo-berichte
+          path: docs/seo/reports/
+          retention-days: 30
+
+  audit-preview:
+    name: Gegen das Preview-Deployment
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Der Commit des Deployments, nicht der Default-Branch.
+          ref: ${{ github.event.deployment.sha }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Erreichbarkeit pruefen
+        id: reach
+        env:
+          PREVIEW_URL: ${{ github.event.deployment_status.environment_url }}
+          BYPASS: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+        run: |
+          if [ -z "$PREVIEW_URL" ]; then
+            echo "code=none" >> "$GITHUB_OUTPUT"
+            echo "::warning::Kein environment_url im Event — Live-Audit uebersprungen, es wurde nichts geprueft."
+            exit 0
+          fi
+          code=$(curl -s -o /dev/null -w '%{http_code}' \
+            ${BYPASS:+-H "x-vercel-protection-bypass: $BYPASS"} \
+            "$PREVIEW_URL/sitemap.xml")
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" != "200" ]; then
+            # Vercel Deployment Protection antwortet mit 302 auf den SSO-Login.
+            # Aufhebbar ueber "Protection Bypass for Automation" — das Secret
+            # gehoert als VERCEL_AUTOMATION_BYPASS_SECRET ins Repository.
+            # Bewusst eine Warnung, keine Notiz: ein gruener Haken, der nichts
+            # gemessen hat, ist irrefuehrender als gar keiner.
+            if [ -z "$BYPASS" ]; then
+              echo "::warning::Preview antwortet mit $code auf /sitemap.xml und es ist kein VERCEL_AUTOMATION_BYPASS_SECRET gesetzt. Live-Audit uebersprungen — es wurde nichts geprueft. Secret setzen: Vercel → Settings → Deployment Protection → Protection Bypass for Automation."
+            else
+              echo "::warning::Preview antwortet trotz gesetztem Bypass-Secret mit $code auf /sitemap.xml. Live-Audit uebersprungen — es wurde nichts geprueft."
+            fi
+          fi
+
+      - name: SEO-Invarianten gegen das Preview
+        if: steps.reach.outputs.code == '200'
+        env:
+          PREVIEW_URL: ${{ github.event.deployment_status.environment_url }}
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+        run: |
+          npm run seo:audit -- \
+            --base "$PREVIEW_URL" \
+            --fail --allow "$ALLOWED_CHECKS" \
+            --report docs/seo/reports/audit-preview.md
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.reach.outputs.code == '200'
+        with:
+          name: seo-bericht-preview
+          path: docs/seo/reports/audit-preview.md
+          retention-days: 30
+
+  audit-production:
+    name: Gegen die Produktion
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: SEO-Invarianten gegen asamer.cz
+        id: audit
+        run: |
+          npm run seo:audit -- \
+            --base https://asamer.cz \
+            --fail --allow "$ALLOWED_CHECKS" \
+            --report docs/seo/reports/audit-produktion.md
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seo-bericht-produktion
+          path: docs/seo/reports/audit-produktion.md
+          retention-days: 90
+
+      - name: Issue bei Fehlschlag
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = 'docs/seo/reports/audit-produktion.md';
+            let report = 'Kein Bericht erzeugt — der Lauf ist vor dem Schreiben abgebrochen.';
+            if (fs.existsSync(path)) {
+              report = fs.readFileSync(path, 'utf8');
+              // Issue-Body ist auf 65.536 Zeichen begrenzt.
+              if (report.length > 55000) {
+                report = report.slice(0, 55000) + '\n\n…gekürzt. Vollständiger Bericht im Workflow-Artefakt.';
+              }
+            }
+            const today = new Date().toISOString().slice(0, 10);
+            const title = `SEO-Audit gegen die Produktion fehlgeschlagen (${today})`;
+
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'seo-audit',
+            });
+
+            const body = [
+              `Der tägliche SEO-Audit gegen https://asamer.cz hat blockierende Fehler gemeldet.`,
+              ``,
+              `[Workflow-Lauf](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`,
+              ``,
+              `Geduldete Prüfungen in diesem Lauf: \`${process.env.ALLOWED_CHECKS}\``,
+              ``,
+              `<details><summary>Vollständiger Bericht</summary>`,
+              ``,
+              report,
+              ``,
+              `</details>`,
+            ].join('\n');
+
+            if (existing.data.length > 0) {
+              // Offenes Issue vorhanden: kommentieren statt ein zweites anlegen,
+              // sonst entsteht bei einem länger bestehenden Fehler jeden Tag eins.
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.data[0].number,
+                body: `Weiterhin fehlgeschlagen am ${today}.\n\n${body}`,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['seo-audit'],
+              });
+            }

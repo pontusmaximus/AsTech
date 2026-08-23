@@ -1,0 +1,78 @@
+{
+  "$comment": [
+    "Suchanfragen-Cluster fuer den Wochenreport (Masterplan Phase 5).",
+    "",
+    "Der Masterplan schreibt fuer 6.1 ausdruecklich: 'Miss den Effekt von Phase 2 auf diesen",
+    "Cluster, bevor du weitere Arbeit hineinsteckst.' Genau dafuer ist diese Datei da — sie",
+    "definiert, was gemessen wird, und scripts/gsc-report.ts weist die Cluster woechentlich aus.",
+    "",
+    "Die 'baseline'-Werte stammen aus dem GSC-Zeitraum 19.05.-18.08.2026 (drei Monate) und",
+    "dienen nur der Einordnung. Der Wochenreport vergleicht Woche gegen Vorwoche, nicht gegen",
+    "diese Zahlen — drei Monate und sieben Tage sind nicht vergleichbar.",
+    "",
+    "'queries' wird gegen den exakten Suchanfragen-Text abgeglichen, 'prefixes' gegen den",
+    "Anfang (fuer Varianten, die im Long Tail dazukommen)."
+  ],
+  "clusters": [
+    {
+      "id": "lagerautomatisierung-cz",
+      "name": "Lagerautomatisierung Tschechien",
+      "note": "Groesster ungenutzter Hebel der Domain. Zustaendige Seiten: /cz/pruvodce/automatizace-skladu und /cz/barbaric/podavaci-systemy/lcv-performance. Beide lieferten vor Phase 2 nur H1 und Description aus.",
+      "baseline": { "impressions": 600, "clicks": 0, "period": "2026-05-19..2026-08-18" },
+      "queries": [
+        "lcv",
+        "automatizace skladu",
+        "automatizace skladů",
+        "automatické skladovací systémy",
+        "automatický sklad",
+        "automatický skladový systém",
+        "automatizace ve skladu",
+        "automatický skladovací systém",
+        "automatizace skladu nářadí",
+        "automatické naskladňování zboží"
+      ],
+      "prefixes": ["automatizace sklad", "automatick" ]
+    },
+    {
+      "id": "null-klick-gute-position",
+      "name": "Null Klicks trotz guter Position",
+      "note": "Position 3-8 bei null Klicks: das ist ein Snippet-Problem, kein Ranking-Problem. Nach Phase 2 und 4 neu messen — dann sollten die Snippets automatisch besser werden.",
+      "baseline": { "impressions": 161, "clicks": 0, "period": "2026-05-19..2026-08-18" },
+      "queries": [
+        "kantenanleimmaschine storm",
+        "automatické naskladňování zboží",
+        "barbaric",
+        "eva pur",
+        "pur technologie",
+        "gannomat",
+        "systemlösung transcompact",
+        "hran"
+      ],
+      "prefixes": []
+    },
+    {
+      "id": "finanzierung-cz",
+      "name": "Finanzierung Tschechien",
+      "note": "Liegt brach. Das Ratgeberformat traegt nachweislich (/cz/pruvodce/pur-vs-eva ist die staerkste Nicht-Startseite der Domain) — ein Leasing-Ratgeber im selben Format ist der naheliegende naechste Schritt.",
+      "baseline": { "impressions": 58, "clicks": 0, "period": "2026-05-19..2026-08-18" },
+      "queries": ["leasing na stroje", "financování strojů", "zpětný leasing strojů"],
+      "prefixes": ["leasing", "financování stroj", "zpětný leasing"]
+    },
+    {
+      "id": "kategorien-hu",
+      "name": "Ungarische Kategoriebegriffe",
+      "note": "In drei Monaten haben ungarische Nutzer die Website ueber genau zehn Suchanfragen gefunden, neun davon Marken- oder Modellnamen. Diese Kategoriebegriffe sind der Zielzustand — sie tauchen erst auf, wenn die HU-Uebersetzungen aus Phase 3 stehen.",
+      "baseline": { "impressions": 3, "clicks": 0, "period": "2026-05-19..2026-08-18" },
+      "queries": [
+        "élzárógép",
+        "raktárautomatizálás",
+        "lapszabászgép",
+        "cnc megmunkálóközpont",
+        "gépfinanszírozás",
+        "használt famegmunkáló gépek",
+        "egyedi szerelőállomás"
+      ],
+      "prefixes": ["élzár", "raktár", "lapszabász", "famegmunkál"]
+    }
+  ]
+}

@@ -5,14 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:sitemap && tsc -b && vite build && npm run prerender",
+    "build": "npm run generate:sitemap && npm run generate:dates && tsc -b && vite build && npm run build:ssr && npm run prerender",
+    "build:ssr": "vite build --ssr src/entry-server.tsx --outDir dist-ssr",
     "prerender": "tsx scripts/prerender.ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "vercel:preview": "vercel",
     "vercel:prod": "vercel --prod",
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
-    "analyze": "vite build --mode analyze"
+    "generate:vercel": "tsx scripts/generate-vercel-config.ts",
+    "generate:dates": "tsx scripts/generate-content-dates.ts",
+    "seo:404-safety": "tsx scripts/check-404-safety.ts",
+    "analyze": "vite build --mode analyze",
+    "seo:audit": "tsx scripts/seo-audit.ts",
+    "seo:i18n": "tsx scripts/i18n-coverage.ts",
+    "seo:gsc": "tsx scripts/gsc-report.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

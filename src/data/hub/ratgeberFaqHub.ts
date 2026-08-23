@@ -12,6 +12,7 @@
 
 import type { MultiLangText } from '../seo/types';
 import type { Language } from '../../i18n';
+import { localizeSlug, SLUG_TRANSLATIONS } from '../../lib/slugs';
 import { EDGEBANDER_GUIDE } from '../guides/edgebanderGuide';
 
 export interface HubFaqItem {
@@ -27,8 +28,13 @@ export interface HubFaqCategory {
 }
 
 export interface HubGuideCard {
-  /** Slug map per language (no /lang prefix). */
-  slugByLang: Record<Language, string>;
+  /**
+   * Kanonischer (CZ-)Slug aus `SLUG_TRANSLATIONS`. Die Sprachvarianten werden
+   * daraus abgeleitet — bewusst nicht noch einmal per Hand gepflegt.
+   * Frueher stand hier eine eigene `slugByLang`-Tabelle; sie war an fuenf
+   * Stellen von `src/lib/slugs.ts` abgewichen und erzeugte tote Hub-Links.
+   */
+  canonicalSlug: string;
   title: MultiLangText;
   blurb: MultiLangText;
   /** Reading time in minutes (rough). */
@@ -41,13 +47,7 @@ export interface HubGuideCard {
 
 export const HUB_GUIDES: HubGuideCard[] = [
   {
-    slugByLang: {
-      cz: '/pruvodce/vyber-olepovacky-hran',
-      sk: '/sprievodca/vyber-olepovacky-hran',
-      de: '/ratgeber/kantenanleimmaschine-waehlen',
-      en: '/guide/choose-edgebander',
-      hu: '/utmutato/elzarogep-valasztas',
-    },
+    canonicalSlug: '/ratgeber/kantenanleimmaschine-waehlen',
     title: {
       cz: 'Jakou olepovačku hran koupit?',
       sk: 'Akú olepovačku hrán kúpiť?',
@@ -65,13 +65,7 @@ export const HUB_GUIDES: HubGuideCard[] = [
     readingTimeMin: 8,
   },
   {
-    slugByLang: {
-      cz: '/pruvodce/pur-vs-eva',
-      sk: '/sprievodca/pur-vs-eva',
-      de: '/ratgeber/pur-vs-eva',
-      en: '/guide/pur-vs-eva',
-      hu: '/utmutato/pur-vs-eva',
-    },
+    canonicalSlug: '/ratgeber/pur-vs-eva',
     title: {
       cz: 'PUR vs EVA – jaké lepidlo zvolit?',
       sk: 'PUR vs EVA – aké lepidlo zvoliť?',
@@ -89,13 +83,7 @@ export const HUB_GUIDES: HubGuideCard[] = [
     readingTimeMin: 5,
   },
   {
-    slugByLang: {
-      cz: '/pruvodce/formatovaci-pila-hlinik-vs-drevo',
-      sk: '/sprievodca/formatovacia-pila-hlinik-vs-drevo',
-      de: '/ratgeber/formatsaege-aluminium-vs-holz',
-      en: '/guide/panel-saw-aluminium-vs-wood',
-      hu: '/utmutato/formatumfuresz-aluminium-vs-fa',
-    },
+    canonicalSlug: '/ratgeber/formatsaege-aluminium-vs-holz',
     title: {
       cz: 'Formátovací pila: hliník vs dřevo',
       sk: 'Formátovacia píla: hliník vs drevo',
@@ -113,13 +101,7 @@ export const HUB_GUIDES: HubGuideCard[] = [
     readingTimeMin: 6,
   },
   {
-    slugByLang: {
-      cz: '/pruvodce/automatizace-skladu',
-      sk: '/sprievodca/automatizacia-skladu',
-      de: '/ratgeber/lagerautomatisierung',
-      en: '/guide/warehouse-automation',
-      hu: '/utmutato/raktarautomatizalas',
-    },
+    canonicalSlug: '/ratgeber/lagerautomatisierung',
     title: {
       cz: 'Automatizace skladu – kdy se vyplatí?',
       sk: 'Automatizácia skladu – kedy sa oplatí?',
@@ -137,13 +119,7 @@ export const HUB_GUIDES: HubGuideCard[] = [
     readingTimeMin: 6,
   },
   {
-    slugByLang: {
-      cz: '/pruvodce/dotace-drevoobrabeni-cz-2026',
-      sk: '/sprievodca/dotacie-drevoobrabanie-2026',
-      de: '/ratgeber/foerderung-holzbearbeitung-cz-2026',
-      en: '/guide/funding-woodworking-cz-2026',
-      hu: '/utmutato/tamogatas-faipari-2026',
-    },
+    canonicalSlug: '/ratgeber/foerderung-holzbearbeitung-cz-2026',
     title: {
       cz: 'Dotace na stroje 2026 (ČR)',
       sk: 'Dotácie na stroje 2026',
@@ -161,13 +137,7 @@ export const HUB_GUIDES: HubGuideCard[] = [
     readingTimeMin: 7,
   },
   {
-    slugByLang: {
-      cz: '/pruvodce/vakuovy-zvedak-holz',
-      sk: '/sprievodca/vakuovy-zdvihak-drevo',
-      de: '/ratgeber/vakuumheber-holz',
-      en: '/guide/vacuum-lifter-wood',
-      hu: '/utmutato/vakuumemelo-fa',
-    },
+    canonicalSlug: '/pruvodce/vakuovy-zvedak-holz',
     title: {
       cz: 'Vakuové zvedáky: 1 člověk místo 3',
       sk: 'Vákuové zdviháky: 1 človek namiesto 3',
@@ -185,6 +155,20 @@ export const HUB_GUIDES: HubGuideCard[] = [
     readingTimeMin: 4,
   },
 ];
+
+/**
+ * Sprachvariante des Guide-Slugs. Einzige Quelle ist `SLUG_TRANSLATIONS`,
+ * damit Hub-Links und Router-Routen nicht auseinanderlaufen koennen.
+ */
+export const hubGuideSlug = (guide: HubGuideCard, lang: Language): string =>
+  localizeSlug(guide.canonicalSlug, lang);
+
+// Baut der Build ohne diesen Fehler durch, kann kein Hub-Link ins Leere zeigen.
+for (const guide of HUB_GUIDES) {
+  if (!SLUG_TRANSLATIONS[guide.canonicalSlug]) {
+    throw new Error(`ratgeberFaqHub: unbekannter canonicalSlug "${guide.canonicalSlug}" — nicht in SLUG_TRANSLATIONS`);
+  }
+}
 
 /* ------------------------------------------------------------------ */
 /*  FAQ-Items (CZ-fuehrend)                                            */

@@ -173,7 +173,12 @@ const LEGACY_SLUGS = [
   'altalanos-szerzodesi-feltetelek',
 ];
 
-const AppRoutes = () => {
+/**
+ * Routenbaum ohne Router-Wrapper. Exportiert, damit der SSR-Einstieg
+ * (`src/entry-server.tsx`) denselben Baum in einem MemoryRouter rendern kann —
+ * derselbe Code, den auch der Browser ausfuehrt, ohne zweite Wahrheit.
+ */
+export const AppRoutes = () => {
   const legacyRedirects = LEGACY_SLUGS.map((slug) => (
     <Route
       key={slug}

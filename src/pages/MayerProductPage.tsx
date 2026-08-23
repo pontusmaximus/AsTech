@@ -7,6 +7,7 @@ import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
 import { breadcrumbSchema } from '../seo/structuredData';
+import { catalogProductSchema } from '../seo/productLd';
 import SeoHead from '../seo/SeoHead';
 import {
   buildLocalizedPath, CANONICAL_DOMAIN,
@@ -71,6 +72,18 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
     { name: 'Mayer', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/mayer')}` },
     { name: product.name, url: productUrl },
   ]);
+
+  // Product-JSON-LD identisch zum Prerender-Output (src/seo/productLd.ts),
+  // damit JS-ausfuehrende Crawler dasselbe sehen wie Googlebot ohne JS.
+  const productLd = catalogProductSchema({
+    brand: 'Mayer',
+    name: product.name,
+    slug: product.slug,
+    description: product.seoDescription[lang],
+    categoryLabel,
+    image: product.image,
+    url: productUrl,
+  });
   const specRows: { label: string; value: string }[] = [];
   if (product.specs.cuttingLength) specRows.push({ label: tr('Schnittlänge', 'Cutting length', 'Délka řezu'), value: product.specs.cuttingLength });
   if (product.specs.cuttingHeight) specRows.push({ label: tr('Schnitthöhe', 'Cutting height', 'Výška řezu'), value: product.specs.cuttingHeight });
@@ -86,7 +99,7 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
         overrides={{ title: product.seoTitle[lang], description: product.seoDescription[lang], image: product.image, slug: productPath, keywords: product.seoKeywords?.[lang] }}
         buildAlternateSlug={(al) => buildMayerProductPath(al, product)}
         ogType="product"
-        structuredData={[breadcrumbs]}
+        structuredData={[breadcrumbs, productLd]}
       />
 
       <div className="bg-dark min-h-screen pt-24 sm:pt-28 md:pt-32 pb-20">

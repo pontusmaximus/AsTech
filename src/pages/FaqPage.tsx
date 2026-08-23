@@ -6,7 +6,7 @@ import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { faqPageSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
-import { HUB_GUIDES, HUB_FAQ_CATEGORIES, HUB_FAQ_FLAT } from '../data/hub/ratgeberFaqHub';
+import { HUB_GUIDES, HUB_FAQ_CATEGORIES, HUB_FAQ_FLAT, hubGuideSlug } from '../data/hub/ratgeberFaqHub';
 import type { MultiLangText } from '../data/seo/types';
 import type { Language } from '../i18n';
 
@@ -43,7 +43,7 @@ const FaqPage = () => {
     tr('Ratgeber', 'Guides', 'Průvodci', 'Sprievodcovia', 'Útmutatók'),
     HUB_GUIDES.map((g) => ({
       name: ml(g.title, lang),
-      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, g.slugByLang[lang])}`,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, hubGuideSlug(g, lang))}`,
       description: ml(g.blurb, lang),
     })),
   );
@@ -88,8 +88,8 @@ const FaqPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {HUB_GUIDES.map((g) => (
                 <Link
-                  key={g.slugByLang.cz}
-                  to={buildPath(g.slugByLang[lang])}
+                  key={g.canonicalSlug}
+                  to={buildPath(g.canonicalSlug)}
                   className="group rounded-2xl border border-white/10 bg-dark-card p-6 hover:border-primary/40 hover:bg-dark-elevated transition-colors flex flex-col"
                 >
                   <h3 className="text-lg font-medium text-white mb-2 group-hover:text-primary transition-colors">

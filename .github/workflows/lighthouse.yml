@@ -1,0 +1,42 @@
+# Lighthouse CI (Masterplan 7.6).
+#
+# Laeuft gegen den statischen Build, nicht gegen ein Deployment — damit ist er
+# unabhaengig von Vercel-Preview-URLs und Secrets und misst genau die Dateien,
+# die dieser PR erzeugt.
+#
+# Die Schwellen in .lighthouserc.json stehen bewusst auf "warn": ein Gate, das
+# niemand kalibriert hat, wird beim ersten roten Lauf abgeschaltet. Erst eine
+# Weile messen, dann Schwellen setzen und auf "error" stellen.
+
+name: Lighthouse
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./.lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true

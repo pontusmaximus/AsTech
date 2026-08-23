@@ -83,11 +83,18 @@ const HeroSection = ({
           <div className={`absolute inset-0 z-10 flex pb-16 px-6 ${
             headlineAlign === 'right' ? 'items-end justify-end pr-16' : 'items-end justify-center'
           }`}>
-            <h1 className={`page-header text-5xl lg:text-6xl font-display font-bold leading-[1.1] whitespace-pre-line ${
+            {/*
+              Kein <h1>: die Headline steht hier zweimal im DOM (Desktop- und
+              Mobil-Variante), und ManufacturerIntro traegt die eigentliche
+              Seiten-H1. Drei H1 pro Marken-Hub waren die Folge — sichtbar
+              geworden, seit der Prerender die echte Seite ausliefert statt
+              eines nachgebauten Bodys. Optik unveraendert.
+            */}
+            <p className={`page-header text-5xl lg:text-6xl font-display font-bold leading-[1.1] whitespace-pre-line ${
               headlineAlign === 'right' ? 'text-right' : 'text-center'
             }`} style={{ color: headlineColor }}>
               {headline}
-            </h1>
+            </p>
           </div>
         )}
       </div>
@@ -105,9 +112,9 @@ const HeroSection = ({
                 </div>
               )}
               {headline && (
-                <h1 className="text-2xl sm:text-3xl font-display font-bold leading-[1.1] whitespace-pre-line text-right" style={{ color: headlineColor }}>
+                <p className="text-2xl sm:text-3xl font-display font-bold leading-[1.1] whitespace-pre-line text-right" style={{ color: headlineColor }}>
                   {headline}
-                </h1>
+                </p>
               )}
             </div>
           </div>

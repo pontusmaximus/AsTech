@@ -1,23 +1,43 @@
 /**
- * Build-time prerendering: generates static HTML files for each route
- * with correct meta tags AND visible body content so that Google sees
- * real content without executing JavaScript.
+ * Build-Time-Prerendering (Masterplan Phase 2).
  *
- * Runs AFTER `vite build`. For each of the ~435 routes it:
- *  1. Reads the built dist/index.html as a template
- *  2. Injects correct <title>, <meta>, <link canonical>, <link hreflang>
- *  3. Injects visible body content (h1, breadcrumbs, description)
- *  4. Writes to dist/{route}/index.html
+ * Fuer jede der 605 Routen wird eine statische `dist/{pfad}/index.html`
+ * geschrieben, die den vollstaendigen Seiteninhalt enthaelt — ohne dass ein
+ * Crawler JavaScript ausfuehren muss.
  *
- * The body content is hidden via CSS (display:none) when JS loads and
- * React takes over the #root element, so users never see a flash.
+ * ## Was sich gegenueber der Vorversion geaendert hat
+ *
+ * Vorher war dieses Skript ein String-Template-Injektor: es baute den
+ * sichtbaren Text jeder Seite *von Hand* nach, mit einem eigenen Builder je
+ * Seitentyp. Fuer Produktdetailseiten, die vier Marken-Hubs, den Ratgeber-Hub
+ * und einen einzelnen Guide gab es solche Builder — fuer alles andere nicht.
+ * Startseite, Loesungen, Service, Finanzierung, Kontakt, Gebrauchtmaschinen,
+ * IMA Schelling, fuenf Ratgeber und die Rechtstexte lieferten deshalb nur
+ * H1 und Meta-Description aus: 145 von 605 Seiten unter 250 Woertern,
+ * 76 davon unter 50.
+ *
+ * Jetzt kommt der Body aus `src/entry-server.tsx` — demselben React-Baum, den
+ * auch der Browser rendert. Damit kann eine Seite nicht mehr Inhalt haben, den
+ * der Prerenderer nicht kennt: die Fehlerklasse ist geschlossen statt einzeln
+ * abgearbeitet.
+ *
+ * ## Warum der Head trotzdem hier entsteht
+ *
+ * react-helmet-async 3 fuellt unter React 19 im Streaming-Rendering seinen
+ * Server-Context nicht — was in `<Helmet>` steht, taucht im SSR-Output nicht
+ * auf. Die Meta-Tags werden deshalb weiterhin hier erzeugt, aus denselben
+ * Datenquellen, aus denen auch `SeoHead` liest (`SEO_ROUTES`, Produktdaten,
+ * `src/lib/language.ts`). Der SEO-Audit prueft das Ergebnis gegen die
+ * Invarianten aus Masterplan 7.1.
+ *
+ * Das JSON-LD rendert `SeoHead` bewusst ausserhalb von Helmet und kommt
+ * deshalb mit dem SSR-Body mit.
  */
 
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SEO_ROUTES, getSlugForLang, DEFAULT_OG_IMAGE } from '../src/seo/routes';
-import type { SeoRouteKey } from '../src/seo/routes';
 import {
   buildLocalizedPath,
   buildCanonicalUrl,
@@ -28,57 +48,25 @@ import {
   HREFLANG_DEFAULT,
   languageToHreflang,
 } from '../src/lib/language';
-import { OTT_PRODUCTS, buildOttProductPath, OTT_CATEGORY_LABELS } from '../src/data/ottProducts';
-import { MAYER_PRODUCTS, buildMayerProductPath, MAYER_CATEGORY_LABELS } from '../src/data/mayerProducts';
-import { BARBARIC_PRODUCTS, buildBarbaricProductPath, BARBARIC_CATEGORY_LABELS } from '../src/data/barbaricProducts';
-import { GANNOMAT_PRODUCTS, buildGannomatProductPath, GANNOMAT_CATEGORY_LABELS } from '../src/data/gannomatProducts';
+import { OTT_PRODUCTS, buildOttProductPath } from '../src/data/ottProducts';
+import { MAYER_PRODUCTS, buildMayerProductPath } from '../src/data/mayerProducts';
+import { BARBARIC_PRODUCTS, buildBarbaricProductPath } from '../src/data/barbaricProducts';
+import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannomatProducts';
 import { USED_MACHINES } from '../src/data/usedMachines';
 import { localizeSlug } from '../src/lib/slugs';
-import { OTT_PRODUCT_SEO, OTT_CATEGORY_SEO } from '../src/data/seo/ottSeoContent';
-import { MAYER_PRODUCT_SEO, MAYER_CATEGORY_SEO } from '../src/data/seo/mayerSeoContent';
-import { BARBARIC_PRODUCT_SEO, BARBARIC_CATEGORY_SEO } from '../src/data/seo/barbaricSeoContent';
-import { GANNOMAT_PRODUCT_SEO, GANNOMAT_CATEGORY_SEO } from '../src/data/seo/gannomatSeoContent';
-import type { ProductSeoContent, CategorySeoContent, MultiLangText } from '../src/data/seo/types';
-import { faqPageSchema, productSchema, howToSchema, itemListSchema, organizationSchema, websiteSchema, localBusinessSchemas, breadcrumbSchema, type ProductSchemaInput } from '../src/seo/structuredData';
-import { EDGEBANDER_GUIDE } from '../src/data/guides/edgebanderGuide';
-import { HUB_GUIDES, HUB_FAQ_CATEGORIES, HUB_FAQ_FLAT } from '../src/data/hub/ratgeberFaqHub';
 import type { Language } from '../src/i18n';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '..', 'dist');
+const ssrEntry = join(__dirname, '..', 'dist-ssr', 'entry-server.js');
 const template = readFileSync(join(distDir, 'index.html'), 'utf-8');
 
-/* ------------------------------------------------------------------ */
-/*  Translations for static labels                                     */
-/* ------------------------------------------------------------------ */
-
-const T = {
-  home: { de: 'Startseite', en: 'Home', cz: 'Domů', sk: 'Domov', hu: 'Főoldal' },
-  products: { de: 'Produkte', en: 'Products', cz: 'Produkty', sk: 'Produkty', hu: 'Termékek' },
-  contact: { de: 'Kontakt aufnehmen', en: 'Get in touch', cz: 'Kontaktujte nás', sk: 'Kontaktujte nás', hu: 'Lépjen kapcsolatba' },
-  dealer: { de: 'Autorisierter Händler für Zentraleuropa', en: 'Authorized dealer for Central Europe', cz: 'Autorizovaný prodejce pro střední Evropu', sk: 'Autorizovaný predajca pre strednú Európu', hu: 'Hivatalos viszonteladó Közép-Európában' },
-  sectionDetail: { de: 'Im Detail', en: 'In Detail', cz: 'Podrobnosti', sk: 'Podrobnosti', hu: 'Részletek' },
-  sectionApplications: { de: 'Einsatzbereiche', en: 'Applications', cz: 'Oblasti nasazení', sk: 'Oblasti nasadenia', hu: 'Alkalmazási területek' },
-  sectionBuyingAdvice: { de: 'Kaufberatung', en: 'Buying Guide', cz: 'Nákupní poradce', sk: 'Nákupný poradca', hu: 'Vásárlási tanácsadó' },
-  sectionFaq: { de: 'Häufige Fragen', en: 'FAQ', cz: 'Časté dotazy', sk: 'Časté otázky', hu: 'Gyakori kérdések' },
-} as const;
-
-/**
- * Sprach-Resolver mit Fallback — identisch zur ml()-Funktion in
- * src/components/seo/ProductSeoBlock.tsx, damit Prerender und Client
- * den gleichen Text zeigen.
- */
-const ml = (obj: MultiLangText, lang: Language): string => {
-  if (lang === 'sk') return obj.sk ?? obj.cz;
-  if (lang === 'hu') return obj.hu ?? obj.en;
-  if (lang === 'de') return obj.de;
-  if (lang === 'cz') return obj.cz;
-  return obj.en;
+const { render } = (await import(ssrEntry)) as {
+  render: (path: string) => Promise<{ html: string; errors: string[] }>;
 };
 
 /* ------------------------------------------------------------------ */
-/*  Types                                                              */
+/*  Seitenliste                                                        */
 /* ------------------------------------------------------------------ */
 
 interface PageMeta {
@@ -89,485 +77,87 @@ interface PageMeta {
   canonical: string;
   alternates: { hreflang: string; href: string }[];
   xDefaultHref: string;
-  /** Absolute OG/Twitter image URL */
+  /** Absolute OG/Twitter-Bild-URL. */
   image: string;
-  /** Image dimensions, only when known (branded 1200×630). */
+  /** Bildmasse, nur wenn bekannt (gebrandetes 1200x630). */
   imageDims?: { w: number; h: number };
-  /** Extra JSON-LD injected into <head> (survives the React mount). */
-  headLd?: string;
-  /** Visible body content for Google */
-  bodyContent: string;
 }
-
-/* ------------------------------------------------------------------ */
-/*  Body content builders                                              */
-/* ------------------------------------------------------------------ */
 
 const escHtml = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-const jsonLdScript = (obj: object) => `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
-
 /** OG-Bild-URL absolut machen (externe URLs unveraendert, lokale Pfade mit Domain). */
 const absImg = (src?: string) => (!src ? DEFAULT_OG_IMAGE : src.startsWith('http') ? src : `${CANONICAL_DOMAIN}${src}`);
 
-/** BreadcrumbList-JSON-LD aus denselben Crumbs wie die HTML-Breadcrumb. */
-const breadcrumbLd = (crumbs: { label: string; href: string }[], canonical: string) =>
-  jsonLdScript(
-    breadcrumbSchema(
-      crumbs.map((c) => ({
-        name: c.label,
-        url: c.href === '#' ? canonical : c.href.startsWith('http') ? c.href : `${CANONICAL_DOMAIN}${c.href}`,
-      })),
-    ),
-  );
-
-/** Build breadcrumb HTML: Home > Brand > Product */
-const breadcrumb = (items: { label: string; href: string }[]) =>
-  `<nav aria-label="Breadcrumb"><ol>${items.map((it, i) =>
-    `<li>${i < items.length - 1 ? `<a href="${it.href}">${escHtml(it.label)}</a>` : `<span>${escHtml(it.label)}</span>`}</li>`
-  ).join(' › ')}</ol></nav>`;
-
-/** Split text on double-newlines and wrap each paragraph in <p>. */
-const paragraphs = (text: string): string =>
-  text.split(/\n{2,}/).map((p) => `<p>${escHtml(p.trim())}</p>`).join('\n');
-
-/** FAQ als native <details>/<summary> (kein JS noetig). JSON-LD wird separat erzeugt. */
-const renderFaq = (items: ProductSeoContent['faq'], lang: Language, heading: string): string => {
-  if (!items || items.length === 0) return '';
-  const details = items
-    .map(
-      (it) => `<details><summary>${escHtml(ml(it.question, lang))}</summary><p>${escHtml(ml(it.answer, lang))}</p></details>`,
-    )
-    .join('\n');
-  return `<section><h2>${escHtml(heading)}</h2>${details}</section>`;
-};
-
-/** Rendert ProductSeoContent als indexierbares HTML fuer Googlebot (ohne JS). */
-const renderProductSeo = (content: ProductSeoContent, lang: Language): string => {
-  const parts: string[] = [];
-  parts.push(
-    `<section><h2>${escHtml(T.sectionDetail[lang])}</h2>${paragraphs(ml(content.longDescription, lang))}</section>`,
-  );
-  if (content.applicationSections.length > 0) {
-    const sections = content.applicationSections
-      .map((s) => `<article><h3>${escHtml(ml(s.heading, lang))}</h3><p>${escHtml(ml(s.body, lang))}</p></article>`)
-      .join('\n');
-    parts.push(`<section><h2>${escHtml(T.sectionApplications[lang])}</h2>${sections}</section>`);
-  }
-  parts.push(
-    `<section><h2>${escHtml(T.sectionBuyingAdvice[lang])}</h2><p>${escHtml(ml(content.buyingAdvice, lang))}</p></section>`,
-  );
-  parts.push(renderFaq(content.faq, lang, T.sectionFaq[lang]));
-  return parts.join('\n');
-};
-
-/** Rendert CategorySeoContent als indexierbares HTML. */
-const renderCategorySeo = (content: CategorySeoContent, lang: Language): string => {
-  const parts: string[] = [];
-  parts.push(`<section>${paragraphs(ml(content.introExpanded, lang))}</section>`);
-  if (content.sections.length > 0) {
-    const sections = content.sections
-      .map((s) => `<article><h3>${escHtml(ml(s.heading, lang))}</h3><p>${escHtml(ml(s.body, lang))}</p></article>`)
-      .join('\n');
-    parts.push(`<section>${sections}</section>`);
-  }
-  parts.push(renderFaq(content.faq, lang, T.sectionFaq[lang]));
-  return parts.join('\n');
-};
-
-/** Sammelt FAQ-Items aus ProductSeoContent und baut JSON-LD-Script. */
-const productFaqJsonLd = (content: ProductSeoContent | undefined, lang: Language): string => {
-  if (!content || content.faq.length === 0) return '';
-  const schema = faqPageSchema(content.faq.map((f) => ({ question: ml(f.question, lang), answer: ml(f.answer, lang) })));
-  return `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
-};
-
-/** Sammelt FAQ-Items aus mehreren CategorySeoContents und baut kombiniertes JSON-LD. */
-const categoriesFaqJsonLd = (contents: CategorySeoContent[], lang: Language): string => {
-  const allFaqs = contents.flatMap((c) => c.faq);
-  if (allFaqs.length === 0) return '';
-  const schema = faqPageSchema(allFaqs.map((f) => ({ question: ml(f.question, lang), answer: ml(f.answer, lang) })));
-  return `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
-};
-
-/** Baut Product-JSON-LD-Script. Sichtbar fuer AI-Crawler im statischen HTML. */
-const productJsonLd = (input: ProductSchemaInput): string => {
-  return `<script type="application/ld+json">${JSON.stringify(productSchema(input))}</script>`;
-};
-
-/** Sprach-Resolver fuer den Edgebander-Guide (sk → cz, hu → en Fallback). */
-const mlGuide = (txt: { de: string; en: string; cz: string; sk?: string; hu?: string }, lang: Language): string => {
-  if (lang === 'sk') return txt.sk ?? txt.cz;
-  if (lang === 'hu') return txt.hu ?? txt.en;
-  if (lang === 'de') return txt.de;
-  if (lang === 'cz') return txt.cz;
-  return txt.en;
-};
-
-const GUIDE_LABELS = {
-  guides: { de: 'Ratgeber', en: 'Guides', cz: 'Průvodce', sk: 'Sprievodca', hu: 'Útmutatók' },
-  decisionH2: { de: 'Vier Kriterien für die Entscheidung', en: 'Four decision criteria', cz: 'Čtyři kritéria pro rozhodnutí', sk: 'Štyri kritériá pre rozhodnutie', hu: 'Négy döntési szempont' },
-  faqH2: { de: 'Häufige Fragen', en: 'Frequently asked questions', cz: 'Časté dotazy', sk: 'Časté otázky', hu: 'Gyakori kérdések' },
-  howToTitle: { de: 'Welche Kantenanleimmaschine kaufen', en: 'Which edgebander to buy', cz: 'Jakou olepovačku hran koupit', sk: 'Akú olepovačku hrán kúpiť', hu: 'Milyen élzárógépet vegyek' },
-} as const;
-
-/** Voller Body fuer den Anchor-Artikel "Jakou olepovačku hran koupit?". */
-function guideEdgebanderBody(lang: Language, title: string, canonical: string): string {
-  const homePath = buildLocalizedPath(lang, '/');
-  const crumbItems = [
-    { label: T.home[lang], href: homePath },
-    { label: GUIDE_LABELS.guides[lang], href: homePath },
-    { label: title.split('|')[0].split('–')[0].trim(), href: '#' },
-  ];
-  const crumbs = breadcrumb(crumbItems);
-
-  const lead = `<p>${escHtml(mlGuide(EDGEBANDER_GUIDE.lead, lang))}</p>`;
-
-  const decision = `<section><h2>${escHtml(GUIDE_LABELS.decisionH2[lang])}</h2>${EDGEBANDER_GUIDE.decisionCriteria
-    .map((c) => `<article><h3>${escHtml(mlGuide(c.question, lang))}</h3><p>${escHtml(mlGuide(c.body, lang))}</p></article>`)
-    .join('\n')}</section>`;
-
-  const usedVsNew = `<section><h2>${escHtml(mlGuide(EDGEBANDER_GUIDE.usedVsNew.heading, lang))}</h2><p>${escHtml(mlGuide(EDGEBANDER_GUIDE.usedVsNew.body, lang))}</p></section>`;
-
-  const purVsEva = `<section><h2>${escHtml(mlGuide(EDGEBANDER_GUIDE.purVsEva.heading, lang))}</h2><p>${escHtml(mlGuide(EDGEBANDER_GUIDE.purVsEva.body, lang))}</p></section>`;
-
-  const service = `<section><h2>${escHtml(mlGuide(EDGEBANDER_GUIDE.service.heading, lang))}</h2><p>${escHtml(mlGuide(EDGEBANDER_GUIDE.service.body, lang))}</p></section>`;
-
-  const faqHtml = `<section><h2>${escHtml(GUIDE_LABELS.faqH2[lang])}</h2>${EDGEBANDER_GUIDE.faq
-    .map((f) => `<details><summary>${escHtml(mlGuide(f.question, lang))}</summary><p>${escHtml(mlGuide(f.answer, lang))}</p></details>`)
-    .join('\n')}</section>`;
-
-  const faqLd = `<script type="application/ld+json">${JSON.stringify(faqPageSchema(EDGEBANDER_GUIDE.faq.map((f) => ({ question: mlGuide(f.question, lang), answer: mlGuide(f.answer, lang) }))))}</script>`;
-
-  const howToLd = `<script type="application/ld+json">${JSON.stringify(howToSchema(
-    GUIDE_LABELS.howToTitle[lang],
-    mlGuide(EDGEBANDER_GUIDE.lead, lang),
-    EDGEBANDER_GUIDE.howTo.map((s) => ({ name: mlGuide(s.name, lang), text: mlGuide(s.text, lang) })),
-  ))}</script>`;
-
-  return [crumbs, breadcrumbLd(crumbItems, canonical), `<h1>${escHtml(title)}</h1>`, lead, decision, usedVsNew, purVsEva, service, faqHtml, faqLd, howToLd].join('\n');
-}
-
-const HUB_LABELS = {
-  guidesH2:  { de: 'Ratgeber',          en: 'Guides',         cz: 'Průvodci',       sk: 'Sprievodcovia',  hu: 'Útmutatók' },
-  faqH2:     { de: 'Häufige Fragen',    en: 'Frequently asked questions', cz: 'Časté dotazy',  sk: 'Časté otázky',   hu: 'Gyakori kérdések' },
-  readMin:   { de: 'Min. Lesezeit',     en: 'min read',       cz: 'min čtení',      sk: 'min čítania',    hu: 'perc olvasás' },
-} as const;
-
-/** Voller Hub-Body fuer "Ratgeber & FAQ". */
-function ratgeberFaqHubBody(lang: Language, title: string, description: string, canonical: string): string {
-  const homePath = buildLocalizedPath(lang, '/');
-  const crumbItems = [
-    { label: T.home[lang], href: homePath },
-    { label: title.split('|')[0].split('–')[0].trim(), href: '#' },
-  ];
-  const crumbs = breadcrumb(crumbItems);
-
-  const head = `<h1>${escHtml(title)}</h1><p>${escHtml(description)}</p>`;
-
-  const cards = `<section><h2>${escHtml(HUB_LABELS.guidesH2[lang])}</h2><ul>${HUB_GUIDES
-    .map((g) => {
-      const href = buildLocalizedPath(lang, g.slugByLang[lang]);
-      const t = mlGuide(g.title, lang);
-      const b = mlGuide(g.blurb, lang);
-      return `<li><a href="${href}"><strong>${escHtml(t)}</strong></a> – ${escHtml(b)} <em>(${g.readingTimeMin} ${escHtml(HUB_LABELS.readMin[lang])})</em></li>`;
-    })
-    .join('\n')}</ul></section>`;
-
-  const faqSections = HUB_FAQ_CATEGORIES.map((cat) => {
-    const items = cat.items
-      .map((it) => `<details><summary>${escHtml(mlGuide(it.question, lang))}</summary><p>${escHtml(mlGuide(it.answer, lang))}</p></details>`)
-      .join('\n');
-    return `<section id="${cat.id}"><h3>${escHtml(mlGuide(cat.name, lang))}</h3>${items}</section>`;
-  }).join('\n');
-
-  const faqWrap = `<section><h2>${escHtml(HUB_LABELS.faqH2[lang])}</h2>${faqSections}</section>`;
-
-  const itemListLd = `<script type="application/ld+json">${JSON.stringify(itemListSchema(
-    HUB_LABELS.guidesH2[lang],
-    HUB_GUIDES.map((g) => ({
-      name: mlGuide(g.title, lang),
-      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, g.slugByLang[lang])}`,
-      description: mlGuide(g.blurb, lang),
-    })),
-  ))}</script>`;
-
-  const faqLd = `<script type="application/ld+json">${JSON.stringify(faqPageSchema(
-    HUB_FAQ_FLAT.map((f) => ({ question: mlGuide(f.question, lang), answer: mlGuide(f.answer, lang) })),
-  ))}</script>`;
-
-  return [crumbs, breadcrumbLd(crumbItems, canonical), head, cards, faqWrap, itemListLd, faqLd].join('\n');
-}
-
-/** Build static page body content. Brand-Hub-Seiten erhalten zusaetzlich
- *  alle CategorySeoContent-Bloecke (longInhalt + FAQ pro Kategorie) plus
- *  ein kombiniertes FAQ-JSON-LD-Schema.
+/**
+ * Nur indexierbare Sprachen als hreflang-Alternates. Steht `NON_INDEXABLE_LANGUAGES`
+ * wieder auf einem Wert, faellt die betroffene Sprache hier automatisch heraus.
  */
-function staticPageBody(
-  key: SeoRouteKey,
-  lang: Language,
-  title: string,
-  description: string,
-  canonical: string,
-  categorySeoContents: CategorySeoContent[] = [],
-): string {
-  const homePath = buildLocalizedPath(lang, '/');
-  const homeLabel = T.home[lang];
-
-  const crumbs = [{ label: homeLabel, href: homePath }];
-  if (key !== 'home') {
-    crumbs.push({ label: title.split('|')[0].split('–')[0].trim(), href: '#' });
-  }
-
-  const parts: string[] = [];
-  if (key !== 'home') parts.push(breadcrumb(crumbs));
-  parts.push(`<h1>${escHtml(title)}</h1>`);
-  parts.push(`<p>${escHtml(description)}</p>`);
-
-  if (key === 'home') {
-    parts.push(`<p>${escHtml(T.dealer[lang])}</p>`);
-    // Link to all manufacturers
-    const brands = ['OTT', 'Mayer', 'Barbaric', 'Gannomat'];
-    const brandSlugs = ['/ott', '/mayer', '/barbaric', '/gannomat'];
-    parts.push(`<ul>${brands.map((b, i) =>
-      `<li><a href="${buildLocalizedPath(lang, brandSlugs[i])}">${b}</a></li>`
-    ).join('')}</ul>`);
-  }
-
-  // Brand-Hub: CategorySeoContent pro Kategorie ausgeben + gesammeltes FAQ-Schema.
-  if (categorySeoContents.length > 0) {
-    parts.push(categoriesFaqJsonLd(categorySeoContents, lang));
-    for (const content of categorySeoContents) {
-      parts.push(renderCategorySeo(content, lang));
-    }
-  }
-
-  // Anchor-Guide "Jakou olepovacku hran koupit?" — vollstaendiger Body inkl. FAQ + HowTo JSON-LD.
-  if (key === 'guideEdgebander') {
-    return guideEdgebanderBody(lang, title, canonical);
-  }
-
-  // Hub "Ratgeber & FAQ" — Cards fuer 5 Ratgeber + 18 FAQ-Items in 5 Kategorien.
-  if (key === 'faq') {
-    return ratgeberFaqHubBody(lang, title, description, canonical);
-  }
-
-  if (key !== 'home') parts.push(breadcrumbLd(crumbs, canonical));
-  return parts.join('\n');
-}
-
-/** Build product page body content. Wenn ProductSeoContent vorhanden ist,
- *  wird der komplette keyword-reiche Block (longDescription, Anwendungen,
- *  Kaufberatung, FAQ) plus JSON-LD inline eingebunden.
- */
-function productPageBody(
-  lang: Language,
-  brand: string,
-  productName: string,
-  categoryLabel: string,
-  description: string,
-  tagline: string,
-  brandSlug: string,
-  seoContent: ProductSeoContent | undefined,
-  productLd: { image?: string; slug: string; url: string; manufacturer?: string; seoDescription: string },
-): string {
-  const homePath = buildLocalizedPath(lang, '/');
-  const brandPath = buildLocalizedPath(lang, brandSlug);
-
-  const crumbs = [
-    { label: T.home[lang], href: homePath },
-    { label: brand, href: brandPath },
-    { label: categoryLabel, href: brandPath },
-    { label: productName, href: '#' },
-  ];
-
-  const parts: string[] = [
-    breadcrumb(crumbs),
-    breadcrumbLd(crumbs, productLd.url),
-    `<h1>${escHtml(brand)} ${escHtml(productName)}</h1>`,
-    `<p><strong>${escHtml(tagline)}</strong></p>`,
-    `<p>${escHtml(description)}</p>`,
-    `<p><a href="mailto:office@asamer.net">${escHtml(T.contact[lang])}</a></p>`,
-  ];
-
-  if (seoContent) {
-    parts.push(productFaqJsonLd(seoContent, lang));
-    parts.push(renderProductSeo(seoContent, lang));
-  }
-
-  return parts.join('\n');
-}
-
-/* ------------------------------------------------------------------ */
-/*  Collect all pages                                                  */
-/* ------------------------------------------------------------------ */
-
-const pages: PageMeta[] = [];
-
 function makeAlternates(buildPath: (lang: Language) => string) {
-  // Nur indexierbare Sprachen als hreflang-Alternates ausgeben — SK ist
-  // explizit ausgeschlossen (siehe INDEXABLE_LANGUAGES in lib/language.ts).
   return INDEXABLE_LANGUAGES.map((al) => ({
     hreflang: languageToHreflang(al),
     href: `${CANONICAL_DOMAIN}${buildPath(al)}`,
   }));
 }
 
-// Map von Brand-Hub-Key zu allen CategorySeoContents. Wird genutzt, damit
-// Brand-Hub-Seiten (/ott, /mayer, /barbaric, /gannomat) den kompletten
-// keyword-reichen Kategorie-Inhalt (longIntro + FAQ je Kategorie) im
-// statischen HTML mitliefern.
-const HUB_CATEGORY_SEO: Partial<Record<SeoRouteKey, CategorySeoContent[]>> = {
-  ott: Object.values(OTT_CATEGORY_SEO),
-  mayer: Object.values(MAYER_CATEGORY_SEO),
-  barbaric: Object.values(BARBARIC_CATEGORY_SEO),
-  gannomat: Object.values(GANNOMAT_CATEGORY_SEO),
-};
+const pages: PageMeta[] = [];
 
-// 1. Static pages from SEO_ROUTES
-for (const [key, config] of Object.entries(SEO_ROUTES)) {
+// 1. Statische Seiten aus SEO_ROUTES
+for (const config of Object.values(SEO_ROUTES)) {
   for (const lang of SUPPORTED_LANGUAGES) {
-    const langSlug = getSlugForLang(config, lang);
-    const path = buildLocalizedPath(lang, langSlug);
-    const canonical = `${CANONICAL_DOMAIN}${path}`;
+    const path = buildLocalizedPath(lang, getSlugForLang(config, lang));
     const meta = config.meta[lang];
-    const alternates = makeAlternates((al) => buildLocalizedPath(al, getSlugForLang(config, al)));
-    const xDefaultHref = buildCanonicalUrl(HREFLANG_DEFAULT, getSlugForLang(config, HREFLANG_DEFAULT));
-    const hubSeo = HUB_CATEGORY_SEO[key as SeoRouteKey] ?? [];
-    // Org + WebSite + LocalBusiness in den <head> (ueberlebt den React-Mount).
-    const headLd =
-      key === 'home'
-        ? [organizationSchema(), websiteSchema(), ...localBusinessSchemas()].map(jsonLdScript).join('\n    ')
-        : key === 'contact'
-          ? localBusinessSchemas().map(jsonLdScript).join('\n    ')
-          : undefined;
-
     pages.push({
       path,
       lang,
       title: meta.title,
       description: meta.description,
-      canonical,
-      alternates,
-      xDefaultHref,
+      canonical: `${CANONICAL_DOMAIN}${path}`,
+      alternates: makeAlternates((al) => buildLocalizedPath(al, getSlugForLang(config, al))),
+      xDefaultHref: buildCanonicalUrl(HREFLANG_DEFAULT, getSlugForLang(config, HREFLANG_DEFAULT)),
       image: DEFAULT_OG_IMAGE,
       imageDims: { w: 1200, h: 630 },
-      headLd,
-      bodyContent: staticPageBody(key as SeoRouteKey, lang, meta.title, meta.description, canonical, hubSeo),
     });
   }
 }
 
-// 2. OTT product pages
-for (const product of OTT_PRODUCTS) {
-  for (const lang of SUPPORTED_LANGUAGES) {
-    const productPath = buildOttProductPath(lang, product);
-    const path = buildLocalizedPath(lang, productPath);
-    const alternates = makeAlternates((al) => buildLocalizedPath(al, buildOttProductPath(al, product)));
-    const xDefaultHref = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildOttProductPath(HREFLANG_DEFAULT, product))}`;
-    const categoryLabel = OTT_CATEGORY_LABELS[product.category][lang];
+// 2.-5. Produktdetailseiten je Marke
+const productCatalogs = [
+  { products: OTT_PRODUCTS, buildPath: buildOttProductPath },
+  { products: MAYER_PRODUCTS, buildPath: buildMayerProductPath },
+  { products: BARBARIC_PRODUCTS, buildPath: buildBarbaricProductPath },
+  { products: GANNOMAT_PRODUCTS, buildPath: buildGannomatProductPath },
+] as const;
 
-    pages.push({
-      path, lang,
-      title: product.seoTitle[lang],
-      description: product.seoDescription[lang],
-      canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates, xDefaultHref,
-      image: absImg(product.image),
-      bodyContent: productPageBody(lang, 'OTT', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/ott', OTT_PRODUCT_SEO[product.slug], {
-        image: product.image,
-        slug: product.slug,
-        url: `${CANONICAL_DOMAIN}${path}`,
-        manufacturer: 'Paul OTT GmbH',
-        seoDescription: product.seoDescription[lang],
-      }),
-    });
+for (const catalog of productCatalogs) {
+  for (const product of catalog.products) {
+    for (const lang of SUPPORTED_LANGUAGES) {
+      const build = (al: Language) => buildLocalizedPath(al, catalog.buildPath(al, product as never));
+      const path = build(lang);
+      pages.push({
+        path,
+        lang,
+        title: product.seoTitle[lang],
+        description: product.seoDescription[lang],
+        canonical: `${CANONICAL_DOMAIN}${path}`,
+        alternates: makeAlternates(build),
+        xDefaultHref: `${CANONICAL_DOMAIN}${build(HREFLANG_DEFAULT)}`,
+        image: absImg(product.image),
+      });
+    }
   }
 }
 
-// 3. Mayer product pages
-for (const product of MAYER_PRODUCTS) {
-  for (const lang of SUPPORTED_LANGUAGES) {
-    const productPath = buildMayerProductPath(lang, product);
-    const path = buildLocalizedPath(lang, productPath);
-    const alternates = makeAlternates((al) => buildLocalizedPath(al, buildMayerProductPath(al, product)));
-    const xDefaultHref = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildMayerProductPath(HREFLANG_DEFAULT, product))}`;
-    const categoryLabel = MAYER_CATEGORY_LABELS[product.category][lang];
+// 6. Gebrauchtmaschinen-Detailseiten
+const machineLabel: Record<Language, string> = {
+  de: 'Gebrauchtmaschine',
+  en: 'Used machine',
+  cz: 'Použitý stroj',
+  sk: 'Použitý stroj',
+  hu: 'Használt gép',
+};
 
-    pages.push({
-      path, lang,
-      title: product.seoTitle[lang],
-      description: product.seoDescription[lang],
-      canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates, xDefaultHref,
-      image: absImg(product.image),
-      bodyContent: productPageBody(lang, 'Mayer', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/mayer', MAYER_PRODUCT_SEO[product.slug], {
-        image: product.image,
-        slug: product.slug,
-        url: `${CANONICAL_DOMAIN}${path}`,
-        manufacturer: 'Mayer Maschinenbau GmbH',
-        seoDescription: product.seoDescription[lang],
-      }),
-    });
-  }
-}
-
-// 4. Barbaric product pages
-for (const product of BARBARIC_PRODUCTS) {
-  for (const lang of SUPPORTED_LANGUAGES) {
-    const productPath = buildBarbaricProductPath(lang, product);
-    const path = buildLocalizedPath(lang, productPath);
-    const alternates = makeAlternates((al) => buildLocalizedPath(al, buildBarbaricProductPath(al, product)));
-    const xDefaultHref = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildBarbaricProductPath(HREFLANG_DEFAULT, product))}`;
-    const categoryLabel = BARBARIC_CATEGORY_LABELS[product.category][lang];
-
-    pages.push({
-      path, lang,
-      title: product.seoTitle[lang],
-      description: product.seoDescription[lang],
-      canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates, xDefaultHref,
-      image: absImg(product.image),
-      bodyContent: productPageBody(lang, 'BARBARIC', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/barbaric', BARBARIC_PRODUCT_SEO[product.slug], {
-        image: product.image,
-        slug: product.slug,
-        url: `${CANONICAL_DOMAIN}${path}`,
-        manufacturer: 'BARBARIC GmbH',
-        seoDescription: product.seoDescription[lang],
-      }),
-    });
-  }
-}
-
-// 5. Gannomat product pages
-for (const product of GANNOMAT_PRODUCTS) {
-  for (const lang of SUPPORTED_LANGUAGES) {
-    const productPath = buildGannomatProductPath(lang, product);
-    const path = buildLocalizedPath(lang, productPath);
-    const alternates = makeAlternates((al) => buildLocalizedPath(al, buildGannomatProductPath(al, product)));
-    const xDefaultHref = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildGannomatProductPath(HREFLANG_DEFAULT, product))}`;
-    const categoryLabel = GANNOMAT_CATEGORY_LABELS[product.category][lang];
-
-    pages.push({
-      path, lang,
-      title: product.seoTitle[lang],
-      description: product.seoDescription[lang],
-      canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates, xDefaultHref,
-      image: absImg(product.image),
-      bodyContent: productPageBody(lang, 'Gannomat', product.name, categoryLabel, product.description[lang], product.tagline[lang], '/gannomat', GANNOMAT_PRODUCT_SEO[product.slug], {
-        image: product.image,
-        slug: product.slug,
-        url: `${CANONICAL_DOMAIN}${path}`,
-        manufacturer: 'Gannomat GmbH',
-        seoDescription: product.seoDescription[lang],
-      }),
-    });
-  }
-}
-
-// 6. Used machine detail pages
+/** Sprach-Resolver mit denselben Fallbacks wie `ml()` in der App (sk -> cz, hu -> en). */
 const mlText = (obj: { de: string; en: string; cz: string; sk?: string; hu?: string }, lang: Language): string => {
   if (lang === 'sk') return obj.sk ?? obj.cz;
   if (lang === 'hu') return obj.hu ?? obj.en;
@@ -578,90 +168,85 @@ const mlText = (obj: { de: string; en: string; cz: string; sk?: string; hu?: str
 
 for (const machine of USED_MACHINES) {
   for (const lang of SUPPORTED_LANGUAGES) {
-    const buildUsedMachinePath = (al: Language) => `${localizeSlug('/pouzite-stroje', al)}/${machine.slug}`;
-    const machinePath = buildUsedMachinePath(lang);
-    const path = buildLocalizedPath(lang, machinePath);
-    const alternates = makeAlternates((al) => buildLocalizedPath(al, buildUsedMachinePath(al)));
-    const xDefaultHref = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildUsedMachinePath(HREFLANG_DEFAULT))}`;
-
-    const machineLabel = { de: 'Gebrauchtmaschine', en: 'Used machine', cz: 'Použitý stroj', sk: 'Použitý stroj', hu: 'Használt gép' };
-    const title = `${machine.manufacturer} ${machine.name} – ${machineLabel[lang]} | Asamer`;
-    const description = mlText(machine.shortDescription, lang);
-
-    const homePath = buildLocalizedPath(lang, '/');
-    const categoryPath = buildLocalizedPath(lang, localizeSlug('/pouzite-stroje', lang));
-    const homeLabel = T.home[lang];
-    const detailUrl = `${CANONICAL_DOMAIN}${path}`;
-    const breadcrumbParts = [
-      breadcrumb([
-        { label: homeLabel, href: homePath },
-        { label: machineLabel[lang], href: categoryPath },
-        { label: `${machine.manufacturer} ${machine.name}`, href: '#' },
-      ]),
-      `<h1>${escHtml(`${machine.manufacturer} ${machine.name}`)}</h1>`,
-      `<p>${escHtml(description)}</p>`,
-      machine.longDescription ? `<p>${escHtml(mlText(machine.longDescription, lang))}</p>` : '',
-      `<p><a href="mailto:office@asamer.net">${escHtml(T.contact[lang])}</a></p>`,
-      (typeof machine.price === 'number'
-        ? productJsonLd({
-            name: `${machine.manufacturer} ${machine.name}`,
-            description,
-            brand: machine.manufacturer,
-            category: machineLabel[lang],
-            image: machine.images,
-            sku: machine.slug,
-            url: detailUrl,
-            itemCondition: 'used',
-            ...(typeof machine.year === 'number' ? { productionDate: String(machine.year) } : {}),
-            offers: {
-              price: machine.price,
-              priceCurrency: machine.priceCurrency ?? 'EUR',
-              availability: machine.status === 'sold' ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
-              url: detailUrl,
-            },
-          })
-        : ''),
-      machine.faq && machine.faq.length > 0
-        ? `<script type="application/ld+json">${JSON.stringify(faqPageSchema(machine.faq.map((f) => ({ question: mlText(f.question, lang), answer: mlText(f.answer, lang) }))))}</script>`
-        : '',
-    ].filter(Boolean);
-
+    const build = (al: Language) => buildLocalizedPath(al, `${localizeSlug('/pouzite-stroje', al)}/${machine.slug}`);
+    const path = build(lang);
     pages.push({
-      path, lang,
-      title,
-      description,
+      path,
+      lang,
+      title: `${machine.manufacturer} ${machine.name} – ${machineLabel[lang]} | Asamer`,
+      description: mlText(machine.shortDescription, lang),
       canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates, xDefaultHref,
+      alternates: makeAlternates(build),
+      xDefaultHref: `${CANONICAL_DOMAIN}${build(HREFLANG_DEFAULT)}`,
       image: absImg(Array.isArray(machine.images) ? machine.images[0] : machine.images),
-      bodyContent: breadcrumbParts.join('\n'),
     });
   }
 }
 
 /* ------------------------------------------------------------------ */
-/*  Generate HTML files                                                */
+/*  Guard: Sitemap und Prerender muessen deckungsgleich sein           */
+/* ------------------------------------------------------------------ */
+/*
+ * Masterplan 2.3 Punkt 3 und 4. Sitemap und Prerender lesen dieselben
+ * Datenquellen, aber ueber zwei getrennte Schleifen — bisher stimmten die
+ * Zahlen nur zufaellig ueberein. Diese Pruefung macht daraus eine Garantie,
+ * und *nur* mit dieser Garantie ist das Entfernen des Catch-all-Rewrites aus
+ * Phase 1.1 sicher: eine Sitemap-URL ohne Datei waere sonst ab sofort eine 404.
+ */
+
+const sitemapPath = join(__dirname, '..', 'public', 'sitemap.xml');
+if (!existsSync(sitemapPath)) {
+  console.error(`Sitemap nicht gefunden: ${sitemapPath} — erst \`npm run generate:sitemap\` ausfuehren.`);
+  process.exit(1);
+}
+
+const sitemapPaths = new Set(
+  [...readFileSync(sitemapPath, 'utf-8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) =>
+    m[1].replace(CANONICAL_DOMAIN, ''),
+  ),
+);
+const prerenderPaths = new Set(pages.map((p) => p.path));
+
+const missingFile = [...sitemapPaths].filter((p) => !prerenderPaths.has(p));
+const missingSitemap = [...prerenderPaths].filter((p) => !sitemapPaths.has(p));
+
+if (missingFile.length > 0 || missingSitemap.length > 0) {
+  console.error('Sitemap und Prerender laufen auseinander:');
+  for (const p of missingFile.slice(0, 20)) {
+    console.error(`  in der Sitemap, aber nicht prerendert: ${p}`);
+  }
+  for (const p of missingSitemap.slice(0, 20)) {
+    console.error(`  prerendert, aber nicht in der Sitemap: ${p}`);
+  }
+  const rest = missingFile.length + missingSitemap.length - Math.min(20, missingFile.length) - Math.min(20, missingSitemap.length);
+  if (rest > 0) {
+    console.error(`  … und ${rest} weitere`);
+  }
+  process.exit(1);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Head bauen                                                         */
 /* ------------------------------------------------------------------ */
 
-let count = 0;
-
-for (const page of pages) {
+function buildHead(page: PageMeta): string {
   const hreflangTags = page.alternates
     .map((a) => `<link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" data-rh="true"/>`)
     .join('\n    ');
-  const xDefaultTag = `<link rel="alternate" hreflang="x-default" href="${page.xDefaultHref}" data-rh="true"/>`;
-
   const robotsContent = NON_INDEXABLE_LANGUAGES.includes(page.lang) ? 'noindex,follow' : 'index,follow';
   const ogImageType = page.image.endsWith('.png') ? 'image/png' : 'image/jpeg';
   const ogImageDims = page.imageDims
-    ? `\n    <meta property="og:image:width" content="${page.imageDims.w}" data-rh="true"/>\n    <meta property="og:image:height" content="${page.imageDims.h}" data-rh="true"/>`
+    ? `\n    <meta property="og:image:width" content="${page.imageDims.w}" data-rh="true"/>` +
+      `\n    <meta property="og:image:height" content="${page.imageDims.h}" data-rh="true"/>`
     : '';
-  const seoHead = `
+
+  return `
     <title data-rh="true">${escHtml(page.title)}</title>
     <meta name="description" content="${escHtml(page.description)}" data-rh="true"/>
     <meta name="robots" content="${robotsContent}" data-rh="true"/>
     <link rel="canonical" href="${page.canonical}" data-rh="true"/>
     ${hreflangTags}
-    ${xDefaultTag}
+    <link rel="alternate" hreflang="x-default" href="${page.xDefaultHref}" data-rh="true"/>
     <meta property="og:type" content="website" data-rh="true"/>
     <meta property="og:title" content="${escHtml(page.title)}" data-rh="true"/>
     <meta property="og:description" content="${escHtml(page.description)}" data-rh="true"/>
@@ -676,32 +261,99 @@ for (const page of pages) {
     <meta name="twitter:title" content="${escHtml(page.title)}" data-rh="true"/>
     <meta name="twitter:description" content="${escHtml(page.description)}" data-rh="true"/>
     <meta name="twitter:image" content="${page.image}" data-rh="true"/>`;
+}
 
-  // Replace lang attribute
+/* ------------------------------------------------------------------ */
+/*  Schreiben                                                          */
+/* ------------------------------------------------------------------ */
+
+/** Wortzahl des sichtbaren Textes — dieselbe Messung wie im SEO-Audit. */
+const wordCount = (html: string): number =>
+  html
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(' ')
+    .filter(Boolean).length;
+
+/**
+ * Untergrenze fuer den Body-Text. Faellt eine Seite darunter, hat das SSR
+ * vermutlich den Suspense-Fallback oder eine Weiterleitung gerendert statt der
+ * Seite. Der Build meldet das, statt es stillschweigend auszuliefern.
+ */
+const MIN_WORDS = 120;
+
+/** Gleichzeitige SSR-Laeufe. Rendern ist CPU-gebunden, mehr bringt nichts. */
+const CONCURRENCY = 8;
+
+let written = 0;
+const thin: { path: string; words: number }[] = [];
+const failed: { path: string; error: string }[] = [];
+
+async function renderPage(page: PageMeta): Promise<void> {
+  let body: string;
+  try {
+    const result = await render(page.path);
+    if (result.errors.length > 0) {
+      failed.push({ path: page.path, error: result.errors.join(' | ') });
+    }
+    body = result.html;
+  } catch (e) {
+    failed.push({ path: page.path, error: e instanceof Error ? e.message : String(e) });
+    return;
+  }
+
+  const words = wordCount(body);
+  if (words < MIN_WORDS) thin.push({ path: page.path, words });
+
   let html = template.replace('<html lang="cs">', `<html lang="${languageToHreflang(page.lang)}">`);
-
-  // Remove the static <title>
   html = html.replace(/<title>Asamer Technologie GmbH<\/title>/, '');
-
-  // Remove the generic meta description (handles both & and &amp;)
   html = html.replace(/<meta name="description" content="Asamer Technologie .+?" \/>/, '');
+  html = html.replace('</head>', `${buildHead(page)}\n  </head>`);
+  html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
 
-  // Inject SEO tags + sitewide JSON-LD before </head>
-  html = html.replace('</head>', `${seoHead}\n    ${page.headLd ?? ''}\n  </head>`);
-
-  // Inject visible body content inside #root
-  // This content is visible to Google crawlers but gets replaced when React mounts
-  html = html.replace(
-    '<div id="root"></div>',
-    `<div id="root">\n${page.bodyContent}\n</div>`,
-  );
-
-  // Write to dist/{path}/index.html
   const filePath = join(distDir, page.path, 'index.html');
   mkdirSync(dirname(filePath), { recursive: true });
   writeFileSync(filePath, html, 'utf-8');
-  count++;
+  written += 1;
 }
 
-// eslint-disable-next-line no-console
-console.log(`Prerendered ${count} pages (with body content) to ${distDir}`);
+const started = Date.now();
+let next = 0;
+await Promise.all(
+  Array.from({ length: Math.min(CONCURRENCY, pages.length) }, async () => {
+    for (;;) {
+      const i = next++;
+      if (i >= pages.length) return;
+      await renderPage(pages[i]);
+    }
+  }),
+);
+
+const seconds = ((Date.now() - started) / 1000).toFixed(1);
+console.log(`Prerendered ${written} von ${pages.length} Seiten in ${seconds}s nach ${distDir}`);
+
+if (thin.length > 0) {
+  console.warn(`  Warnung: ${thin.length} Seiten unter ${MIN_WORDS} Woertern Body-Text:`);
+  for (const t of thin.slice(0, 20)) {
+    console.warn(`    ${String(t.words).padStart(4)}  ${t.path}`);
+  }
+  if (thin.length > 20) {
+    console.warn(`    … und ${thin.length - 20} weitere`);
+  }
+}
+
+if (failed.length > 0) {
+  console.error(`  ${failed.length} Seiten mit Render-Fehlern:`);
+  for (const f of failed.slice(0, 20)) {
+    console.error(`    ${f.path}: ${f.error}`);
+  }
+  process.exit(1);
+}
+
+if (written !== pages.length) {
+  console.error(`  Nur ${written} von ${pages.length} Seiten geschrieben.`);
+  process.exit(1);
+}
