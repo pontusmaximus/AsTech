@@ -314,15 +314,24 @@ async function main() {
   const sa = loadServiceAccount();
   const token = await getAccessToken(sa);
 
-  const [queriesNow, queriesPrev, pagesNow, pagesPrev] = await Promise.all([
+  const [queriesNow, queriesPrev, pagesNow, pagesPrev, totalsNow, totalsPrev] = await Promise.all([
     query(token, { ...period(startDate, endDate), dimensions: ['query'], type: 'web' }),
     query(token, { ...period(prevStart, prevEnd), dimensions: ['query'], type: 'web' }),
     query(token, { ...period(startDate, endDate), dimensions: ['page'], type: 'web' }),
     query(token, { ...period(prevStart, prevEnd), dimensions: ['page'], type: 'web' }),
+    // Ohne Dimension: die einzige Abfrage, die echte Gesamtwerte liefert.
+    query(token, { ...period(startDate, endDate), dimensions: [], type: 'web' }),
+    query(token, { ...period(prevStart, prevEnd), dimensions: [], type: 'web' }),
   ]);
 
-  const totalNow = sumRows(queriesNow);
-  const totalPrev = sumRows(queriesPrev);
+  // Die Gesamtzeile darf NICHT aus den Suchanfragen summiert werden: Google
+  // laesst Anfragen unterhalb einer Datenschutzschwelle ganz weg. Bei dieser
+  // Domain fehlt so der Grossteil — die erste Fassung meldete 265 statt 847
+  // Impressionen. Die Seitenebene kennt die Schwelle nicht, die dimensionslose
+  // Abfrage auch nicht.
+  const totalNow = sumRows(totalsNow);
+  const totalPrev = sumRows(totalsPrev);
+  const queriesTotalNow = sumRows(queriesNow);
 
   /* --- je Sprachpräfix --- */
   const byLang = new Map<string, { now: Row[]; prev: Row[] }>();
@@ -428,6 +437,16 @@ async function main() {
   L.push('');
   L.push('Die Durchschnittsposition ist nach Impressionen gewichtet — ungewichtet zählte eine');
   L.push('Suchanfrage mit einer Impression genauso viel wie eine mit 500.');
+  L.push('');
+  L.push(
+    `**Warum die Suchanfragen-Tabellen sich nicht auf diese Summe addieren:** Google lässt ` +
+      `Suchanfragen unterhalb einer Datenschutzschwelle ganz weg. Über die Dimension ` +
+      `\`query\` sind in dieser Woche nur ${num(queriesTotalNow.impressions)} der ` +
+      `${num(totalNow.impressions)} Impressionen sichtbar ` +
+      `(${pct(totalNow.impressions === 0 ? 0 : queriesTotalNow.impressions / totalNow.impressions)}). ` +
+      `Die Zeile oben stammt deshalb aus einer Abfrage ohne Dimension, die diese Beschränkung ` +
+      `nicht hat. Für die Sprach- und Seitentabellen gilt sie ebenfalls nicht.`,
+  );
   L.push('');
 
   L.push('## Je Sprachpräfix');
