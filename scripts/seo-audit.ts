@@ -76,7 +76,11 @@ const EXTRA_HEADERS: Record<string, string> = (() => {
   const bypass = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
   if (bypass) {
     headers['x-vercel-protection-bypass'] = bypass;
-    headers['x-vercel-set-bypass-cookie'] = 'samesitenone';
+    // Bewusst OHNE `x-vercel-set-bypass-cookie`: der Header laesst Vercel mit
+    // einer Weiterleitung antworten, die ein Cookie setzt. Ein Browser merkt
+    // es sich, `fetch` nicht — die naechste Anfrage fordert das Cookie erneut
+    // an, und der Lauf endet in "redirect count exceeded". Der Bypass-Header
+    // allein genuegt und wird bei jeder Anfrage ohnehin mitgeschickt.
   }
   const raw = process.env.SEO_AUDIT_HEADERS;
   if (raw) {
