@@ -97,6 +97,45 @@ interface ServiceAccount {
   private_key: string;
 }
 
+/** Gibt den dekodierten Text zurueck, wenn `value` base64-kodiertes JSON ist. */
+function decodeBase64Json(value: string): string | null {
+  if (!/^[A-Za-z0-9+/\s]+={0,2}$/.test(value)) return null;
+  try {
+    const decoded = Buffer.from(value, 'base64').toString('utf-8').trim();
+    return decoded.startsWith('{') ? decoded : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Beschreibt, *warum* die Zugangsdaten nicht lesbar sind, ohne sie preiszugeben.
+ * Ein blosses "kein gueltiges JSON" laesst denjenigen, der das Secret gesetzt
+ * hat, im Dunkeln — und der Wert ist maskiert, also auch im Log nicht nachlesbar.
+ * Erstes und letztes Zeichen sowie die Laenge verraten nichts Schuetzenswertes,
+ * beantworten aber die Frage, ob zu wenig, zu viel oder das Falsche drinsteht.
+ */
+function describeBadCredentials(value: string): string {
+  const hint = (() => {
+    if (value.length === 0) return 'Der Wert ist leer.';
+    if (value.startsWith('AIza')) {
+      return 'Das sieht nach einem API-Schluessel aus. Gebraucht wird die JSON-Schluesseldatei ' +
+        'eines Dienstkontos (beginnt mit {"type": "service_account", …}).';
+    }
+    if (!value.startsWith('{')) {
+      return `Der Wert beginnt mit "${value.slice(0, 1)}" statt mit "{". Es muss der komplette ` +
+        'Dateiinhalt sein, von der ersten geschweiften Klammer bis zur letzten.';
+    }
+    if (!value.endsWith('}')) {
+      return 'Der Wert beginnt mit "{", endet aber nicht mit "}" — offenbar abgeschnitten.';
+    }
+    return 'Anfang und Ende stimmen, der Inhalt dazwischen ist beschaedigt — vermutlich beim ' +
+      'Kopieren umgebrochen. Notfalls base64-kodiert hinterlegen, das wird ebenfalls akzeptiert.';
+  })();
+
+  return `Zugangsdaten sind kein gültiges JSON (${value.length} Zeichen). ${hint}`;
+}
+
 function loadServiceAccount(): ServiceAccount {
   const inline = process.env.GSC_SERVICE_ACCOUNT_JSON;
   const file = process.env.GSC_SERVICE_ACCOUNT_KEY_FILE;
@@ -114,11 +153,20 @@ function loadServiceAccount(): ServiceAccount {
     );
   }
 
+  // BOM und Leerraum abschneiden: manche Editoren haengen beim Kopieren beides
+  // an, und im GitHub-Secret sieht man das nicht.
+  const cleaned = raw.replace(/^\uFEFF/, '').trim();
+
+  // Ein mehrzeiliger Schluessel wird beim Einfuegen gelegentlich verstuemmelt.
+  // Deshalb wird auch eine base64-kodierte Fassung angenommen — der uebliche
+  // Ausweg, wenn die Oberflaeche mit Zeilenumbruechen nicht klarkommt.
+  const text = cleaned.startsWith('{') ? cleaned : (decodeBase64Json(cleaned) ?? cleaned);
+
   let parsed: Partial<ServiceAccount>;
   try {
-    parsed = JSON.parse(raw) as Partial<ServiceAccount>;
+    parsed = JSON.parse(text) as Partial<ServiceAccount>;
   } catch {
-    throw new Error('Zugangsdaten sind kein gültiges JSON.');
+    throw new Error(describeBadCredentials(cleaned));
   }
   if (!parsed.client_email || !parsed.private_key) {
     throw new Error('Zugangsdaten unvollständig: client_email und private_key werden gebraucht.');
