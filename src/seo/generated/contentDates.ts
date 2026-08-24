@@ -33,7 +33,7 @@ export const CONTENT_DATES: Partial<Record<SeoRouteKey, ContentDates>> = {
   home: { modified: '2026-08-24T23:04:57+00:00' },
   imaSchelling: { modified: '2026-08-24T23:04:57+00:00' },
   imprint: { modified: '2026-08-24T23:04:57+00:00' },
-  mayer: { modified: '2026-08-24T23:04:57+00:00' },
+  mayer: { modified: '2026-08-24T23:15:32+00:00' },
   ott: { modified: '2026-08-24T23:04:57+00:00' },
   privacy: { modified: '2026-08-24T23:04:57+00:00' },
   service: { modified: '2026-08-24T23:04:57+00:00' },
