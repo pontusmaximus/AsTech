@@ -38,10 +38,48 @@ export interface SeoRouteConfig {
   slugByLang?: Partial<Record<Language, string>>;
   image?: string;
   meta: Record<Language, RouteMeta>;
+  /**
+   * Sprachen, in denen es diese Seite nicht geben soll.
+   *
+   * Gedacht fuer Inhalte, die nur einen Markt betreffen — eine Seite ueber
+   * tschechische Foerderprogramme hat unter `/hu/` nichts zu suchen. Wirkt an
+   * vier Stellen gleichzeitig, sonst widersprechen sie sich:
+   *   1. `generate-sitemap.ts` laesst die Sprache aus (auch als hreflang-Alternate)
+   *   2. `prerender.ts` erzeugt keine Datei — sonst laege eine Waise im dist
+   *   3. `SeoHead` nimmt sie aus den hreflang-Alternates
+   *   4. `generate-vercel-config.ts` leitet die URL per 301 auf `excludeRedirect`
+   *
+   * Ohne 1 und 3 stuende eine URL in Sitemap und hreflang, die 301 antwortet —
+   * genau der Fehler, den `seo:audit` als `status` meldet.
+   */
+  excludeLangs?: Language[];
+  /**
+   * Kanonischer Zielpfad (sprachneutral, wie die Schluessel in `SLUG_TRANSLATIONS`)
+   * fuer die 301 der ausgeschlossenen Sprachen. Pflicht, sobald `excludeLangs`
+   * gesetzt ist — eine ausgeschlossene Seite darf nicht ins Leere laufen.
+   */
+  excludeRedirect?: string;
 }
 
 export const getSlugForLang = (config: SeoRouteConfig, lang: Language): string =>
   config.slugByLang?.[lang] ?? config.slug;
+
+/** Gibt es diese Seite in dieser Sprache? Siehe `excludeLangs`. */
+export const isRouteAvailable = (config: SeoRouteConfig, lang: Language): boolean =>
+  !config.excludeLangs?.includes(lang);
+
+/**
+ * Gibt es die Seite zu diesem kanonischen Slug in dieser Sprache?
+ *
+ * Fuer Stellen, die eine Seite ueber ihren Slug verlinken statt ueber ihren
+ * `SeoRouteKey` — etwa die Ratgeber-Karten im FAQ-Hub. Slugs ohne eigene
+ * SEO-Route gelten als verfuegbar: `excludeLangs` ist die Ausnahme, nicht die
+ * Regel, und ein unbekannter Slug soll hier nichts verschwinden lassen.
+ */
+export const isSlugAvailable = (canonicalSlug: string, lang: Language): boolean => {
+  const config = Object.values(SEO_ROUTES).find((c) => c.slug === canonicalSlug);
+  return config ? isRouteAvailable(config, lang) : true;
+};
 
 type FullMetaInput = {
   de: RouteMeta;
@@ -783,6 +821,12 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
   guideFundingCz: {
     slug: '/ratgeber/foerderung-holzbearbeitung-cz-2026',
     slugByLang: SLUG_TRANSLATIONS['/ratgeber/foerderung-holzbearbeitung-cz-2026'],
+    // Tschechische Foerderprogramme (OP TAK, NRB) auf der ungarischen
+    // Sprachversion: fuer ungarische Sucher wertlos und ein Themen-Fremdkoerper
+    // im /hu/-Verzeichnis. Bis es einen eigenen HU-Foerderratgeber gibt, geht
+    // die URL auf die ungarische Finanzierungsseite.
+    excludeLangs: ['hu'],
+    excludeRedirect: '/financovani',
     meta: createMeta({
       de: {
         title: 'Förderung Holzbearbeitung CZ 2026 – OP TAK, NRB | Asamer',

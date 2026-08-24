@@ -26,6 +26,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SUPPORTED_LANGUAGES, CANONICAL_DOMAIN, DEFAULT_LANGUAGE } from '../src/lib/language';
 import { SLUG_TRANSLATIONS, getAllSlugVariants, localizeSlug } from '../src/lib/slugs';
+import { SEO_ROUTES, getSlugForLang } from '../src/seo/routes';
 import { OTT_PRODUCTS, OTT_CATEGORY_SLUG_VARIANTS, getOttCategorySlug } from '../src/data/ottProducts';
 import { MAYER_PRODUCTS, MAYER_CATEGORY_SLUG_VARIANTS, getMayerCategorySlug } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, BARBARIC_CATEGORY_SLUG_VARIANTS, getBarbaricCategorySlug } from '../src/data/barbaricProducts';
@@ -197,6 +198,32 @@ for (const brand of brands) {
         permanent: true,
       });
     }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  6a. Seiten, die es in einer Sprache nicht geben soll               */
+/* ------------------------------------------------------------------ */
+
+/**
+ * `excludeLangs` in `SEO_ROUTES` nimmt eine Seite aus Sitemap, Prerender und
+ * hreflang. Damit die URL nicht einfach 404 liefert — sie war bis eben
+ * erreichbar —, bekommt sie hier ihre 301 auf `excludeRedirect`.
+ */
+for (const config of Object.values(SEO_ROUTES)) {
+  if (!config.excludeLangs?.length) continue;
+  if (!config.excludeRedirect) {
+    throw new Error(
+      `Route "${config.slug}" hat excludeLangs ohne excludeRedirect — ` +
+        'die ausgeschlossene Sprache liefe auf eine 404.',
+    );
+  }
+  for (const lang of config.excludeLangs) {
+    addRule({
+      source: `/${lang}${getSlugForLang(config, lang)}`,
+      destination: abs(`/${lang}${localizeSlug(config.excludeRedirect, lang)}`),
+      permanent: true,
+    });
   }
 }
 

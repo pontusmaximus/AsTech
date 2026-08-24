@@ -1,7 +1,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SEO_ROUTES, getSlugForLang } from '../src/seo/routes';
+import { SEO_ROUTES, getSlugForLang, isRouteAvailable } from '../src/seo/routes';
 import type { SeoRouteKey } from '../src/seo/routes';
 import { buildLastmodTable, staticKey, productKey, usedMachineKey } from './content-lastmod';
 import {
@@ -57,9 +57,12 @@ const entries: SitemapEntry[] = [];
 // Static page entries
 Object.entries(SEO_ROUTES).forEach(([routeKey, config]) => {
   INDEXABLE_LANGUAGES.forEach((lang) => {
+    // Sprachen, die diese Seite nicht haben sollen, kommen weder als eigener
+    // Eintrag noch als hreflang-Alternate vor: die URL antwortet mit 301.
+    if (!isRouteAvailable(config, lang)) return;
     const langSlug = getSlugForLang(config, lang);
     const localizedPath = buildLocalizedPath(lang, langSlug);
-    const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
+    const alternates = INDEXABLE_LANGUAGES.filter((altLang) => isRouteAvailable(config, altLang)).map((altLang) => ({
       lang: altLang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, getSlugForLang(config, altLang))}`,
     }));

@@ -2545,6 +2545,11 @@
       "permanent": true
     },
     {
+      "source": "/hu/utmutato/tamogatasok-csehorszag-2026",
+      "destination": "https://asamer.cz/hu/finanszirozas",
+      "permanent": true
+    },
+    {
       "source": "/de/gannomat/soros-furo-gepek",
       "destination": "https://asamer.cz/de/gannomat/lochreihenbohrmaschinen",
       "permanent": true

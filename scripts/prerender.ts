@@ -37,7 +37,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SEO_ROUTES, getSlugForLang, DEFAULT_OG_IMAGE } from '../src/seo/routes';
+import { SEO_ROUTES, getSlugForLang, isRouteAvailable, DEFAULT_OG_IMAGE } from '../src/seo/routes';
 import {
   buildLocalizedPath,
   buildCanonicalUrl,
@@ -93,8 +93,11 @@ const absImg = (src?: string) => (!src ? DEFAULT_OG_IMAGE : src.startsWith('http
  * Nur indexierbare Sprachen als hreflang-Alternates. Steht `NON_INDEXABLE_LANGUAGES`
  * wieder auf einem Wert, faellt die betroffene Sprache hier automatisch heraus.
  */
-function makeAlternates(buildPath: (lang: Language) => string) {
-  return INDEXABLE_LANGUAGES.map((al) => ({
+function makeAlternates(
+  buildPath: (lang: Language) => string,
+  isAvailable: (lang: Language) => boolean = () => true,
+) {
+  return INDEXABLE_LANGUAGES.filter(isAvailable).map((al) => ({
     hreflang: languageToHreflang(al),
     href: `${CANONICAL_DOMAIN}${buildPath(al)}`,
   }));
@@ -105,6 +108,10 @@ const pages: PageMeta[] = [];
 // 1. Statische Seiten aus SEO_ROUTES
 for (const config of Object.values(SEO_ROUTES)) {
   for (const lang of SUPPORTED_LANGUAGES) {
+    // Ausgeschlossene Sprache: keine Datei erzeugen. Sonst laege im dist eine
+    // Seite, die per 301 gar nicht erreichbar ist -- und der 404-Sicherheits-
+    // nachweis haette sie als "vorhanden" gezaehlt.
+    if (!isRouteAvailable(config, lang)) continue;
     const path = buildLocalizedPath(lang, getSlugForLang(config, lang));
     const meta = config.meta[lang];
     pages.push({
@@ -113,7 +120,10 @@ for (const config of Object.values(SEO_ROUTES)) {
       title: meta.title,
       description: meta.description,
       canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates: makeAlternates((al) => buildLocalizedPath(al, getSlugForLang(config, al))),
+      alternates: makeAlternates(
+        (al) => buildLocalizedPath(al, getSlugForLang(config, al)),
+        (al) => isRouteAvailable(config, al),
+      ),
       xDefaultHref: buildCanonicalUrl(HREFLANG_DEFAULT, getSlugForLang(config, HREFLANG_DEFAULT)),
       image: DEFAULT_OG_IMAGE,
       imageDims: { w: 1200, h: 630 },
