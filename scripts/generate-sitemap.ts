@@ -18,6 +18,7 @@ import { BARBARIC_PRODUCTS, buildBarbaricProductPath } from '../src/data/barbari
 import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannomatProducts';
 import { USED_MACHINES } from '../src/data/usedMachines';
 import { localizeSlug } from '../src/lib/slugs';
+import { ALL_CATEGORY_REFS, buildCategoryPath } from '../src/data/brandCatalogs';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -74,6 +75,26 @@ Object.entries(SEO_ROUTES).forEach(([routeKey, config]) => {
       lastmod: lastmod.get(staticKey(routeKey as SeoRouteKey)),
       alternates,
       defaultUrl,
+    });
+  });
+});
+
+// Kategorieseiten je Marke
+ALL_CATEGORY_REFS.forEach((ref) => {
+  INDEXABLE_LANGUAGES.forEach((lang) => {
+    const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
+      lang: altLang,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, buildCategoryPath(ref, altLang))}`,
+    }));
+    entries.push({
+      lang,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildCategoryPath(ref, lang))}`,
+      canonicalSlug: `/${ref.brand}/${ref.category}`,
+      // Eine Kategorieseite aendert sich, wenn sich ihre Produktdaten aendern.
+      // Die liegen in derselben Datei wie die der Marke, deshalb deren Datum.
+      lastmod: lastmod.get(staticKey(ref.brand as SeoRouteKey)),
+      alternates,
+      defaultUrl: `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildCategoryPath(ref, HREFLANG_DEFAULT))}`,
     });
   });
 });

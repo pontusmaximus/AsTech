@@ -96,14 +96,14 @@ export const MAYER_CATEGORY_SHORT: Record<MayerCategory, Record<Language, string
     en: 'Horizontal Panel Saw',
     cz: 'Horizontální formátovací pila',
     sk: 'Horizontálna formátovacia píla',
-    hu: 'Horizontális lapszabó fűrész',
+    hu: 'Táblafelosztó gép',
   },
   advanced: {
     de: 'Plattensäge Aluminium & Kunststoff',
     en: 'Panel Saw Aluminium & Plastics',
     cz: 'Formátovací pila hliník & plasty',
     sk: 'Formátovacia píla hliník & plasty',
-    hu: 'Lapszabó fűrész alumínium & műanyag',
+    hu: 'Alumínium és műanyag daraboló gép',
   },
   industrial: {
     de: 'Industrielösung',

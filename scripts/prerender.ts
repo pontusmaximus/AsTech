@@ -38,6 +38,8 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SEO_ROUTES, getSlugForLang, isRouteAvailable, DEFAULT_OG_IMAGE } from '../src/seo/routes';
+import { ALL_CATEGORY_REFS, buildCategoryPath } from '../src/data/brandCatalogs';
+import { getCategoryMeta } from '../src/seo/categoryMeta';
 import {
   buildLocalizedPath,
   buildCanonicalUrl,
@@ -125,6 +127,26 @@ for (const config of Object.values(SEO_ROUTES)) {
         (al) => isRouteAvailable(config, al),
       ),
       xDefaultHref: buildCanonicalUrl(HREFLANG_DEFAULT, getSlugForLang(config, HREFLANG_DEFAULT)),
+      image: DEFAULT_OG_IMAGE,
+      imageDims: { w: 1200, h: 630 },
+    });
+  }
+}
+
+// 1b. Kategorieseiten je Marke
+for (const ref of ALL_CATEGORY_REFS) {
+  for (const lang of SUPPORTED_LANGUAGES) {
+    const build = (al: Language) => buildLocalizedPath(al, buildCategoryPath(ref, al));
+    const path = build(lang);
+    const meta = getCategoryMeta(ref, lang);
+    pages.push({
+      path,
+      lang,
+      title: meta.title,
+      description: meta.description,
+      canonical: `${CANONICAL_DOMAIN}${path}`,
+      alternates: makeAlternates(build),
+      xDefaultHref: `${CANONICAL_DOMAIN}${build(HREFLANG_DEFAULT)}`,
       image: DEFAULT_OG_IMAGE,
       imageDims: { w: 1200, h: 630 },
     });
