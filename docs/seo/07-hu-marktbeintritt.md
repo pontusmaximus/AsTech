@@ -208,19 +208,66 @@ Seite 1), „erst ranken lassen, wenn eine ungarische Reaktionszeit belegbar ist
 Das ist eine Geschäftsentscheidung (reale HU-Reaktionsfähigkeit im Service), keine
 SEO-Frage — gehört vor Umsetzung zu Max.
 
-## 5. Akzeptanzkriterien
+## 5. Umsetzungsstand (24.08.2026)
 
-- [ ] `npm run seo:404-safety -- --fail` — 0 Lücken bei den 9 neuen Kategorierouten × 5 Sprachen
-- [ ] `npm run seo:i18n` — HU-Seitentext-Abdeckung steigt sichtbar über die aktuellen 5,4 %
-- [ ] `npm run seo:audit` — `language`-Fehler auf `/hu/`-Seiten sinkt von aktuell 65 (Anteil HU)
-- [ ] Keine H1 auf einer `/hu/`-Seite enthält deutsche oder englische Wörter (deckt sich mit
-      dem offenen Punkt aus `03-sprachversionen.md`)
-- [ ] Alle 301-Regeln aus Phase B im generierten `vercel.json` nachweisbar
+Freigabe für Abschnitt 3 lag vor. Umgesetzt sind Phase A, Phase B, die
+Titles/Descriptions und der terminologische Teil von Phase C.
+
+### Erledigt
+
+| Was | Ergebnis |
+|---|---|
+| **Phase A** — Kategorieseiten | 27 Kategorien × 5 Sprachen = **135 neue Seiten**. Route `<marke>/:category` für alle vier Marken, Inhalte aus den vorhandenen `*SeoContent.ts`. Sitemap 604 → 739. |
+| **Phase B** — Slugs | 6 Kategorie-Slugs umbenannt, alle alten URLs mit 301 in **allen fünf** Sprachen. 514 → 575 Weiterleitungen. |
+| Titles/Descriptions | 12 Seiten mit den recherchierten HU-Werten aus Blatt 4 (10 SEO-Routen + SSK/SSY). |
+| Terminologie | 10 falsche HU-Einträge korrigiert, 8 ergänzt. HU-Seitentext-Abdeckung 5,4 % → 6,6 %. |
+| Tschechische Förderseite | `/hu/utmutato/tamogatasok-csehorszag-2026` → 301 auf `/hu/finanszirozas`. Dafür kann eine Route jetzt Sprachen ausschließen (`excludeLangs`). |
+
+### Akzeptanzkriterien
+
+- [x] `npm run seo:404-safety -- --fail` — **3.284 Pfade, 0 Lücken** (615 neue Kategorie-Slug-Varianten)
+- [x] `npm run seo:i18n` — HU-Seitentext-Abdeckung **5,4 % → 6,6 %**
+- [x] Alle 301-Regeln aus Phase B im generierten `vercel.json` nachweisbar
+- [ ] **`npm run seo:audit` — `language`-Fehler sinkt** — steigt stattdessen von 64 auf 87.
+      Kein Rückschritt: die 135 neuen Seiten haben denselben Wörterbuch-Rückfall wie alle
+      anderen. Der Nenner ist gewachsen, die Ursache unverändert.
+- [ ] **Keine H1 auf einer `/hu/`-Seite enthält deutsche oder englische Wörter** — für die
+      Kategorieseiten erfüllt (H1 = ungarische Kategoriebezeichnung), für die übrigen offen,
+      solange die 683 Seitentext-Schlüssel fehlen.
+
+### Zwei Befunde, die die Recherche nicht hatte
+
+1. **Das HU-Wörterbuch sagt an mehreren Stellen das Falsche**, nicht nur nichts.
+   `"Completely invisible joint"` stand als `"Teljesen láthatatlan ízület"` — `ízület` ist
+   ein anatomisches Gelenk. `"OTT Edgebanders"` als `"OTT Élszalagok"` — das Kantenband,
+   nicht die Maschine. Beides Spuren der einmaligen maschinellen Erzeugung. Zehn solcher
+   Einträge korrigiert; die Datei trug außerdem einen `Auto-generated`-Kopf, obwohl kein
+   Skript sie schreibt.
+
+2. **40 Vorkommen von `lapszabó` in laufendem ungarischem Text**, 34 davon in
+   `mayerProducts.ts`. Das Terminologieblatt nennt den Begriff DIY-konnotiert und schlägt
+   `táblafelosztó` vor. **Nicht umgesetzt**: Ungarisch ist agglutinierend —
+   `lapszabó fűrészekhez` braucht `táblafelosztó gépekhez`, nicht bloß einen Wortaustausch.
+   Das gehört zu einem Muttersprachler, nicht in eine Regex.
+
+### Nicht umgesetzt, bewusst
+
+- **Phase C, der große Teil** — 683 fehlende HU-Seitentexte. Übersetzungsarbeit, keine Mechanik.
+- **Phase D** — die 10 Ratgeberthemen aus Blatt 5. Redaktion.
+- **Phase E** — Service-Silo. Die Recherche selbst setzt einen Vorbehalt (ungarische
+  Reaktionszeit muss belegbar sein) — das ist eine Geschäftsentscheidung.
+- **`gannomat/insertion`-Slug** — die Recherche nennt die Umbenennung ausdrücklich „optional"
+  und empfiehlt stattdessen, Title und H1 auf `tipli` zu drehen.
+- **`barbaric/labeling`** — Blatt 6 führt `címkenyomtatás` unter „vermeiden" (SERP zu 100 %
+  Zebra-/Brother-Shops). Ein besserer Begriff steht dort nicht; das braucht eine Entscheidung.
 
 ## Für Max
 
-- **Freigabe** für Abschnitt 3 (Slugs, Titles/Descriptions, Terminologie) — ohne die steht
-  Phase B und ein Teil von C still.
+- **Übersetzung beauftragen** — 683 HU-Seitentexte. Das ist jetzt der einzige Grund, warum
+  die ungarischen Seiten noch englischen Fließtext zeigen. Vorlage: `i18n-luecken.md`,
+  Terminologie: Blatt 6 der Recherche.
+- **`lapszabó` in 40 Textstellen** (34 in `mayerProducts.ts`) — braucht einen ungarischen
+  Muttersprachler, siehe oben.
 - **Entscheidung Service-Silo** (Phase E): ungarische Reaktionszeit intern klären, bevor
   Redaktionsaufwand hineingeht.
 - **Keyword-Planner-Gegenprüfung** bis 07.09.2026 (Sofortmassnahme #12) — diese Datei liefert
