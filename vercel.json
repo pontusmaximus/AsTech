@@ -1395,103 +1395,103 @@
       "permanent": true
     },
     {
-      "source": "/de/mayer/:wrong(horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)",
+      "source": "/de/mayer/:wrong(horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pily|tablafeloszto-gep)",
       "destination": "https://asamer.cz/de/mayer/horizontale-plattensaegen",
       "permanent": true
     },
     {
-      "source": "/de/mayer/:wrong(horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)/:model",
+      "source": "/de/mayer/:wrong(horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pily|tablafeloszto-gep)/:model",
       "destination": "https://asamer.cz/de/mayer/horizontale-plattensaegen/:model",
       "permanent": true
     },
     {
-      "source": "/en/mayer/:wrong(horizontale-plattensaegen|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)",
+      "source": "/en/mayer/:wrong(horizontale-plattensaegen|horizontalni-formatovaci-pily|horizontalne-formatovacie-pily|tablafeloszto-gep)",
       "destination": "https://asamer.cz/en/mayer/horizontal-panel-saws",
       "permanent": true
     },
     {
-      "source": "/en/mayer/:wrong(horizontale-plattensaegen|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)/:model",
+      "source": "/en/mayer/:wrong(horizontale-plattensaegen|horizontalni-formatovaci-pily|horizontalne-formatovacie-pily|tablafeloszto-gep)/:model",
       "destination": "https://asamer.cz/en/mayer/horizontal-panel-saws/:model",
       "permanent": true
     },
     {
-      "source": "/cz/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)",
+      "source": "/cz/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalne-formatovacie-pily|tablafeloszto-gep)",
       "destination": "https://asamer.cz/cz/mayer/horizontalni-formatovaci-pily",
       "permanent": true
     },
     {
-      "source": "/cz/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalne-formatovacie-pilyy|horizontalis-lapszabo-furesz)/:model",
+      "source": "/cz/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalne-formatovacie-pily|tablafeloszto-gep)/:model",
       "destination": "https://asamer.cz/cz/mayer/horizontalni-formatovaci-pily/:model",
       "permanent": true
     },
     {
-      "source": "/sk/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalis-lapszabo-furesz)",
-      "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pilyy",
+      "source": "/sk/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|tablafeloszto-gep)",
+      "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pily",
       "permanent": true
     },
     {
-      "source": "/sk/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalis-lapszabo-furesz)/:model",
-      "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pilyy/:model",
+      "source": "/sk/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|tablafeloszto-gep)/:model",
+      "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pily/:model",
       "permanent": true
     },
     {
-      "source": "/hu/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy)",
-      "destination": "https://asamer.cz/hu/mayer/horizontalis-lapszabo-furesz",
+      "source": "/hu/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pily)",
+      "destination": "https://asamer.cz/hu/mayer/tablafeloszto-gep",
       "permanent": true
     },
     {
-      "source": "/hu/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pilyy)/:model",
-      "destination": "https://asamer.cz/hu/mayer/horizontalis-lapszabo-furesz/:model",
+      "source": "/hu/mayer/:wrong(horizontale-plattensaegen|horizontal-panel-saws|horizontalni-formatovaci-pily|horizontalne-formatovacie-pily)/:model",
+      "destination": "https://asamer.cz/hu/mayer/tablafeloszto-gep/:model",
       "permanent": true
     },
     {
-      "source": "/de/mayer/:wrong(panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)",
+      "source": "/de/mayer/:wrong(panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|aluminium-muanyag-darabolo-gep)",
       "destination": "https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff",
       "permanent": true
     },
     {
-      "source": "/de/mayer/:wrong(panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)/:model",
+      "source": "/de/mayer/:wrong(panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|aluminium-muanyag-darabolo-gep)/:model",
       "destination": "https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff/:model",
       "permanent": true
     },
     {
-      "source": "/en/mayer/:wrong(plattensaegen-aluminium-kunststoff|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)",
+      "source": "/en/mayer/:wrong(plattensaegen-aluminium-kunststoff|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|aluminium-muanyag-darabolo-gep)",
       "destination": "https://asamer.cz/en/mayer/panel-saws-aluminium-plastics",
       "permanent": true
     },
     {
-      "source": "/en/mayer/:wrong(plattensaegen-aluminium-kunststoff|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)/:model",
+      "source": "/en/mayer/:wrong(plattensaegen-aluminium-kunststoff|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty|aluminium-muanyag-darabolo-gep)/:model",
       "destination": "https://asamer.cz/en/mayer/panel-saws-aluminium-plastics/:model",
       "permanent": true
     },
     {
-      "source": "/cz/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)",
+      "source": "/cz/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovacie-pily-hlinik-plasty|aluminium-muanyag-darabolo-gep)",
       "destination": "https://asamer.cz/cz/mayer/formatovaci-pily-hlinik-plasty",
       "permanent": true
     },
     {
-      "source": "/cz/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovacie-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)/:model",
+      "source": "/cz/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovacie-pily-hlinik-plasty|aluminium-muanyag-darabolo-gep)/:model",
       "destination": "https://asamer.cz/cz/mayer/formatovaci-pily-hlinik-plasty/:model",
       "permanent": true
     },
     {
-      "source": "/sk/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)",
+      "source": "/sk/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|aluminium-muanyag-darabolo-gep)",
       "destination": "https://asamer.cz/sk/mayer/formatovacie-pily-hlinik-plasty",
       "permanent": true
     },
     {
-      "source": "/sk/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|lapszabo-furesz-aluminium-manyag)/:model",
+      "source": "/sk/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|aluminium-muanyag-darabolo-gep)/:model",
       "destination": "https://asamer.cz/sk/mayer/formatovacie-pily-hlinik-plasty/:model",
       "permanent": true
     },
     {
       "source": "/hu/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty)",
-      "destination": "https://asamer.cz/hu/mayer/lapszabo-furesz-aluminium-manyag",
+      "destination": "https://asamer.cz/hu/mayer/aluminium-muanyag-darabolo-gep",
       "permanent": true
     },
     {
       "source": "/hu/mayer/:wrong(plattensaegen-aluminium-kunststoff|panel-saws-aluminium-plastics|formatovaci-pily-hlinik-plasty|formatovacie-pily-hlinik-plasty)/:model",
-      "destination": "https://asamer.cz/hu/mayer/lapszabo-furesz-aluminium-manyag/:model",
+      "destination": "https://asamer.cz/hu/mayer/aluminium-muanyag-darabolo-gep/:model",
       "permanent": true
     },
     {
@@ -2295,103 +2295,103 @@
       "permanent": true
     },
     {
-      "source": "/de/gannomat/:wrong(dowel-boring-machines|kolkovaci-vrtacky|kolkovacie-vrtacky|csap-furo-gepek)",
+      "source": "/de/gannomat/:wrong(dowel-boring-machines|kolkovaci-vrtacky|kolkovacie-vrtacky|tiplifuro-gepek)",
       "destination": "https://asamer.cz/de/gannomat/duebelbohrmaschinen",
       "permanent": true
     },
     {
-      "source": "/de/gannomat/:wrong(dowel-boring-machines|kolkovaci-vrtacky|kolkovacie-vrtacky|csap-furo-gepek)/:model",
+      "source": "/de/gannomat/:wrong(dowel-boring-machines|kolkovaci-vrtacky|kolkovacie-vrtacky|tiplifuro-gepek)/:model",
       "destination": "https://asamer.cz/de/gannomat/duebelbohrmaschinen/:model",
       "permanent": true
     },
     {
-      "source": "/en/gannomat/:wrong(duebelbohrmaschinen|kolkovaci-vrtacky|kolkovacie-vrtacky|csap-furo-gepek)",
+      "source": "/en/gannomat/:wrong(duebelbohrmaschinen|kolkovaci-vrtacky|kolkovacie-vrtacky|tiplifuro-gepek)",
       "destination": "https://asamer.cz/en/gannomat/dowel-boring-machines",
       "permanent": true
     },
     {
-      "source": "/en/gannomat/:wrong(duebelbohrmaschinen|kolkovaci-vrtacky|kolkovacie-vrtacky|csap-furo-gepek)/:model",
+      "source": "/en/gannomat/:wrong(duebelbohrmaschinen|kolkovaci-vrtacky|kolkovacie-vrtacky|tiplifuro-gepek)/:model",
       "destination": "https://asamer.cz/en/gannomat/dowel-boring-machines/:model",
       "permanent": true
     },
     {
-      "source": "/cz/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovacie-vrtacky|csap-furo-gepek)",
+      "source": "/cz/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovacie-vrtacky|tiplifuro-gepek)",
       "destination": "https://asamer.cz/cz/gannomat/kolkovaci-vrtacky",
       "permanent": true
     },
     {
-      "source": "/cz/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovacie-vrtacky|csap-furo-gepek)/:model",
+      "source": "/cz/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovacie-vrtacky|tiplifuro-gepek)/:model",
       "destination": "https://asamer.cz/cz/gannomat/kolkovaci-vrtacky/:model",
       "permanent": true
     },
     {
-      "source": "/sk/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovaci-vrtacky|csap-furo-gepek)",
+      "source": "/sk/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovaci-vrtacky|tiplifuro-gepek)",
       "destination": "https://asamer.cz/sk/gannomat/kolkovacie-vrtacky",
       "permanent": true
     },
     {
-      "source": "/sk/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovaci-vrtacky|csap-furo-gepek)/:model",
+      "source": "/sk/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovaci-vrtacky|tiplifuro-gepek)/:model",
       "destination": "https://asamer.cz/sk/gannomat/kolkovacie-vrtacky/:model",
       "permanent": true
     },
     {
       "source": "/hu/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovaci-vrtacky|kolkovacie-vrtacky)",
-      "destination": "https://asamer.cz/hu/gannomat/csap-furo-gepek",
+      "destination": "https://asamer.cz/hu/gannomat/tiplifuro-gepek",
       "permanent": true
     },
     {
       "source": "/hu/gannomat/:wrong(duebelbohrmaschinen|dowel-boring-machines|kolkovaci-vrtacky|kolkovacie-vrtacky)/:model",
-      "destination": "https://asamer.cz/hu/gannomat/csap-furo-gepek/:model",
+      "destination": "https://asamer.cz/hu/gannomat/tiplifuro-gepek/:model",
       "permanent": true
     },
     {
-      "source": "/de/gannomat/:wrong(row-boring-machines|radove-vrtacky|soros-furo-gepek)",
+      "source": "/de/gannomat/:wrong(row-boring-machines|radove-vrtacky|sorozatfuro-gepek)",
       "destination": "https://asamer.cz/de/gannomat/lochreihenbohrmaschinen",
       "permanent": true
     },
     {
-      "source": "/de/gannomat/:wrong(row-boring-machines|radove-vrtacky|soros-furo-gepek)/:model",
+      "source": "/de/gannomat/:wrong(row-boring-machines|radove-vrtacky|sorozatfuro-gepek)/:model",
       "destination": "https://asamer.cz/de/gannomat/lochreihenbohrmaschinen/:model",
       "permanent": true
     },
     {
-      "source": "/en/gannomat/:wrong(lochreihenbohrmaschinen|radove-vrtacky|soros-furo-gepek)",
+      "source": "/en/gannomat/:wrong(lochreihenbohrmaschinen|radove-vrtacky|sorozatfuro-gepek)",
       "destination": "https://asamer.cz/en/gannomat/row-boring-machines",
       "permanent": true
     },
     {
-      "source": "/en/gannomat/:wrong(lochreihenbohrmaschinen|radove-vrtacky|soros-furo-gepek)/:model",
+      "source": "/en/gannomat/:wrong(lochreihenbohrmaschinen|radove-vrtacky|sorozatfuro-gepek)/:model",
       "destination": "https://asamer.cz/en/gannomat/row-boring-machines/:model",
       "permanent": true
     },
     {
-      "source": "/cz/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|soros-furo-gepek)",
+      "source": "/cz/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|sorozatfuro-gepek)",
       "destination": "https://asamer.cz/cz/gannomat/radove-vrtacky",
       "permanent": true
     },
     {
-      "source": "/cz/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|soros-furo-gepek)/:model",
+      "source": "/cz/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|sorozatfuro-gepek)/:model",
       "destination": "https://asamer.cz/cz/gannomat/radove-vrtacky/:model",
       "permanent": true
     },
     {
-      "source": "/sk/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|soros-furo-gepek)",
+      "source": "/sk/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|sorozatfuro-gepek)",
       "destination": "https://asamer.cz/sk/gannomat/radove-vrtacky",
       "permanent": true
     },
     {
-      "source": "/sk/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|soros-furo-gepek)/:model",
+      "source": "/sk/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|sorozatfuro-gepek)/:model",
       "destination": "https://asamer.cz/sk/gannomat/radove-vrtacky/:model",
       "permanent": true
     },
     {
       "source": "/hu/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|radove-vrtacky)",
-      "destination": "https://asamer.cz/hu/gannomat/soros-furo-gepek",
+      "destination": "https://asamer.cz/hu/gannomat/sorozatfuro-gepek",
       "permanent": true
     },
     {
       "source": "/hu/gannomat/:wrong(lochreihenbohrmaschinen|row-boring-machines|radove-vrtacky)/:model",
-      "destination": "https://asamer.cz/hu/gannomat/soros-furo-gepek/:model",
+      "destination": "https://asamer.cz/hu/gannomat/sorozatfuro-gepek/:model",
       "permanent": true
     },
     {
@@ -2445,53 +2445,53 @@
       "permanent": true
     },
     {
-      "source": "/de/gannomat/:wrong(frame-dowel-machines|ramove-vrtacky|keret-csapozo-gepek)",
+      "source": "/de/gannomat/:wrong(frame-dowel-machines|ramove-vrtacky|keretpresek)",
       "destination": "https://asamer.cz/de/gannomat/rahmenduebel-maschinen",
       "permanent": true
     },
     {
-      "source": "/de/gannomat/:wrong(frame-dowel-machines|ramove-vrtacky|keret-csapozo-gepek)/:model",
+      "source": "/de/gannomat/:wrong(frame-dowel-machines|ramove-vrtacky|keretpresek)/:model",
       "destination": "https://asamer.cz/de/gannomat/rahmenduebel-maschinen/:model",
       "permanent": true
     },
     {
-      "source": "/en/gannomat/:wrong(rahmenduebel-maschinen|ramove-vrtacky|keret-csapozo-gepek)",
+      "source": "/en/gannomat/:wrong(rahmenduebel-maschinen|ramove-vrtacky|keretpresek)",
       "destination": "https://asamer.cz/en/gannomat/frame-dowel-machines",
       "permanent": true
     },
     {
-      "source": "/en/gannomat/:wrong(rahmenduebel-maschinen|ramove-vrtacky|keret-csapozo-gepek)/:model",
+      "source": "/en/gannomat/:wrong(rahmenduebel-maschinen|ramove-vrtacky|keretpresek)/:model",
       "destination": "https://asamer.cz/en/gannomat/frame-dowel-machines/:model",
       "permanent": true
     },
     {
-      "source": "/cz/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keret-csapozo-gepek)",
+      "source": "/cz/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keretpresek)",
       "destination": "https://asamer.cz/cz/gannomat/ramove-vrtacky",
       "permanent": true
     },
     {
-      "source": "/cz/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keret-csapozo-gepek)/:model",
+      "source": "/cz/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keretpresek)/:model",
       "destination": "https://asamer.cz/cz/gannomat/ramove-vrtacky/:model",
       "permanent": true
     },
     {
-      "source": "/sk/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keret-csapozo-gepek)",
+      "source": "/sk/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keretpresek)",
       "destination": "https://asamer.cz/sk/gannomat/ramove-vrtacky",
       "permanent": true
     },
     {
-      "source": "/sk/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keret-csapozo-gepek)/:model",
+      "source": "/sk/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|keretpresek)/:model",
       "destination": "https://asamer.cz/sk/gannomat/ramove-vrtacky/:model",
       "permanent": true
     },
     {
       "source": "/hu/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|ramove-vrtacky)",
-      "destination": "https://asamer.cz/hu/gannomat/keret-csapozo-gepek",
+      "destination": "https://asamer.cz/hu/gannomat/keretpresek",
       "permanent": true
     },
     {
       "source": "/hu/gannomat/:wrong(rahmenduebel-maschinen|frame-dowel-machines|ramove-vrtacky)/:model",
-      "destination": "https://asamer.cz/hu/gannomat/keret-csapozo-gepek/:model",
+      "destination": "https://asamer.cz/hu/gannomat/keretpresek/:model",
       "permanent": true
     },
     {
@@ -2542,6 +2542,306 @@
     {
       "source": "/hu/gannomat/:wrong(ecklager-bohrmaschinen|corner-hinge-machines|vrtacky-na-zavesy)/:model",
       "destination": "https://asamer.cz/hu/gannomat/sarokpant-furo-gepek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/soros-furo-gepek",
+      "destination": "https://asamer.cz/de/gannomat/lochreihenbohrmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/soros-furo-gepek/:model",
+      "destination": "https://asamer.cz/de/gannomat/lochreihenbohrmaschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/soros-furo-gepek",
+      "destination": "https://asamer.cz/en/gannomat/row-boring-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/soros-furo-gepek/:model",
+      "destination": "https://asamer.cz/en/gannomat/row-boring-machines/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/soros-furo-gepek",
+      "destination": "https://asamer.cz/cz/gannomat/radove-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/soros-furo-gepek/:model",
+      "destination": "https://asamer.cz/cz/gannomat/radove-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/soros-furo-gepek",
+      "destination": "https://asamer.cz/sk/gannomat/radove-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/soros-furo-gepek/:model",
+      "destination": "https://asamer.cz/sk/gannomat/radove-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/soros-furo-gepek",
+      "destination": "https://asamer.cz/hu/gannomat/sorozatfuro-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/soros-furo-gepek/:model",
+      "destination": "https://asamer.cz/hu/gannomat/sorozatfuro-gepek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/csap-furo-gepek",
+      "destination": "https://asamer.cz/de/gannomat/duebelbohrmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/csap-furo-gepek/:model",
+      "destination": "https://asamer.cz/de/gannomat/duebelbohrmaschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/csap-furo-gepek",
+      "destination": "https://asamer.cz/en/gannomat/dowel-boring-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/csap-furo-gepek/:model",
+      "destination": "https://asamer.cz/en/gannomat/dowel-boring-machines/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/csap-furo-gepek",
+      "destination": "https://asamer.cz/cz/gannomat/kolkovaci-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/csap-furo-gepek/:model",
+      "destination": "https://asamer.cz/cz/gannomat/kolkovaci-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/csap-furo-gepek",
+      "destination": "https://asamer.cz/sk/gannomat/kolkovacie-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/csap-furo-gepek/:model",
+      "destination": "https://asamer.cz/sk/gannomat/kolkovacie-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/csap-furo-gepek",
+      "destination": "https://asamer.cz/hu/gannomat/tiplifuro-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/csap-furo-gepek/:model",
+      "destination": "https://asamer.cz/hu/gannomat/tiplifuro-gepek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/keret-csapozo-gepek",
+      "destination": "https://asamer.cz/de/gannomat/rahmenduebel-maschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/gannomat/keret-csapozo-gepek/:model",
+      "destination": "https://asamer.cz/de/gannomat/rahmenduebel-maschinen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/keret-csapozo-gepek",
+      "destination": "https://asamer.cz/en/gannomat/frame-dowel-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/gannomat/keret-csapozo-gepek/:model",
+      "destination": "https://asamer.cz/en/gannomat/frame-dowel-machines/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/keret-csapozo-gepek",
+      "destination": "https://asamer.cz/cz/gannomat/ramove-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gannomat/keret-csapozo-gepek/:model",
+      "destination": "https://asamer.cz/cz/gannomat/ramove-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/keret-csapozo-gepek",
+      "destination": "https://asamer.cz/sk/gannomat/ramove-vrtacky",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gannomat/keret-csapozo-gepek/:model",
+      "destination": "https://asamer.cz/sk/gannomat/ramove-vrtacky/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/keret-csapozo-gepek",
+      "destination": "https://asamer.cz/hu/gannomat/keretpresek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gannomat/keret-csapozo-gepek/:model",
+      "destination": "https://asamer.cz/hu/gannomat/keretpresek/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/horizontalis-lapszabo-furesz",
+      "destination": "https://asamer.cz/de/mayer/horizontale-plattensaegen",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/horizontalis-lapszabo-furesz/:model",
+      "destination": "https://asamer.cz/de/mayer/horizontale-plattensaegen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/horizontalis-lapszabo-furesz",
+      "destination": "https://asamer.cz/en/mayer/horizontal-panel-saws",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/horizontalis-lapszabo-furesz/:model",
+      "destination": "https://asamer.cz/en/mayer/horizontal-panel-saws/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/horizontalis-lapszabo-furesz",
+      "destination": "https://asamer.cz/cz/mayer/horizontalni-formatovaci-pily",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/horizontalis-lapszabo-furesz/:model",
+      "destination": "https://asamer.cz/cz/mayer/horizontalni-formatovaci-pily/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/horizontalis-lapszabo-furesz",
+      "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pily",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/horizontalis-lapszabo-furesz/:model",
+      "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pily/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/horizontalis-lapszabo-furesz",
+      "destination": "https://asamer.cz/hu/mayer/tablafeloszto-gep",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/horizontalis-lapszabo-furesz/:model",
+      "destination": "https://asamer.cz/hu/mayer/tablafeloszto-gep/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/lapszabo-furesz-aluminium-manyag",
+      "destination": "https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/lapszabo-furesz-aluminium-manyag/:model",
+      "destination": "https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/lapszabo-furesz-aluminium-manyag",
+      "destination": "https://asamer.cz/en/mayer/panel-saws-aluminium-plastics",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/lapszabo-furesz-aluminium-manyag/:model",
+      "destination": "https://asamer.cz/en/mayer/panel-saws-aluminium-plastics/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/lapszabo-furesz-aluminium-manyag",
+      "destination": "https://asamer.cz/cz/mayer/formatovaci-pily-hlinik-plasty",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/lapszabo-furesz-aluminium-manyag/:model",
+      "destination": "https://asamer.cz/cz/mayer/formatovaci-pily-hlinik-plasty/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/lapszabo-furesz-aluminium-manyag",
+      "destination": "https://asamer.cz/sk/mayer/formatovacie-pily-hlinik-plasty",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/lapszabo-furesz-aluminium-manyag/:model",
+      "destination": "https://asamer.cz/sk/mayer/formatovacie-pily-hlinik-plasty/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/lapszabo-furesz-aluminium-manyag",
+      "destination": "https://asamer.cz/hu/mayer/aluminium-muanyag-darabolo-gep",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/lapszabo-furesz-aluminium-manyag/:model",
+      "destination": "https://asamer.cz/hu/mayer/aluminium-muanyag-darabolo-gep/:model",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/horizontalne-formatovacie-pilyy",
+      "destination": "https://asamer.cz/de/mayer/horizontale-plattensaegen",
+      "permanent": true
+    },
+    {
+      "source": "/de/mayer/horizontalne-formatovacie-pilyy/:model",
+      "destination": "https://asamer.cz/de/mayer/horizontale-plattensaegen/:model",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/horizontalne-formatovacie-pilyy",
+      "destination": "https://asamer.cz/en/mayer/horizontal-panel-saws",
+      "permanent": true
+    },
+    {
+      "source": "/en/mayer/horizontalne-formatovacie-pilyy/:model",
+      "destination": "https://asamer.cz/en/mayer/horizontal-panel-saws/:model",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/horizontalne-formatovacie-pilyy",
+      "destination": "https://asamer.cz/cz/mayer/horizontalni-formatovaci-pily",
+      "permanent": true
+    },
+    {
+      "source": "/cz/mayer/horizontalne-formatovacie-pilyy/:model",
+      "destination": "https://asamer.cz/cz/mayer/horizontalni-formatovaci-pily/:model",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/horizontalne-formatovacie-pilyy",
+      "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pily",
+      "permanent": true
+    },
+    {
+      "source": "/sk/mayer/horizontalne-formatovacie-pilyy/:model",
+      "destination": "https://asamer.cz/sk/mayer/horizontalne-formatovacie-pily/:model",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/horizontalne-formatovacie-pilyy",
+      "destination": "https://asamer.cz/hu/mayer/tablafeloszto-gep",
+      "permanent": true
+    },
+    {
+      "source": "/hu/mayer/horizontalne-formatovacie-pilyy/:model",
+      "destination": "https://asamer.cz/hu/mayer/tablafeloszto-gep/:model",
       "permanent": true
     },
     {

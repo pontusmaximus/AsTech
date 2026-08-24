@@ -11,15 +11,15 @@ const MAYER_CATEGORY_SLUGS: Record<MayerCategory, Record<Language, string>> = {
     de: 'horizontale-plattensaegen',
     en: 'horizontal-panel-saws',
     cz: 'horizontalni-formatovaci-pily',
-    sk: 'horizontalne-formatovacie-pilyy',
-    hu: 'horizontalis-lapszabo-furesz',
+    sk: 'horizontalne-formatovacie-pily',
+    hu: 'tablafeloszto-gep',
   },
   advanced: {
     de: 'plattensaegen-aluminium-kunststoff',
     en: 'panel-saws-aluminium-plastics',
     cz: 'formatovaci-pily-hlinik-plasty',
     sk: 'formatovacie-pily-hlinik-plasty',
-    hu: 'lapszabo-furesz-aluminium-manyag',
+    hu: 'aluminium-muanyag-darabolo-gep',
   },
   industrial: {
     de: 'industrieloesungen',
