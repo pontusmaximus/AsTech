@@ -27,8 +27,8 @@ Widerspruch, der im günstigsten Fall ignoriert und im ungünstigsten als Duplik
 |---|---|---:|---:|---:|
 | A · Datenmodule (`MultiLangText`) | SK | 1254 | 752 | **62.5 %** |
 | A · Datenmodule (`MultiLangText`) | HU | 1891 | 115 | **94.3 %** |
-| B · Seitentexte (`tr()`) | SK | 38 | 682 | **5.3 %** |
-| B · Seitentexte (`tr()`) | HU | 39 | 689 | **5.4 %** |
+| B · Seitentexte (`tr()`) | SK | 39 | 684 | **5.4 %** |
+| B · Seitentexte (`tr()`) | HU | 48 | 683 | **6.6 %** |
 
 ## Eigener Befund: `tr()`-Aufrufe mit dynamischem Text
 
@@ -225,7 +225,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 689: `Want to discuss a financing option for your machine?`
 - Zeile 696: `Free initial consultation with Raiffeisen Leasing – no application, no obligation.`
 
-## `src/pages/GuidePurVsEvaPage.tsx` (126)
+## `src/pages/GuidePurVsEvaPage.tsx` (125)
 
 ### SK — 62 fehlend
 
@@ -292,7 +292,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 560: `Která technologie lepení se hodí pro váš provoz?`
 - Zeile 567: `Poradíme vám s výběrem mezi EVA, PUR a laserem – přesně podle vaší výroby a požadavků.`
 
-### HU — 64 fehlend
+### HU — 63 fehlend
 
 - Zeile 28: `Can you retrofit EVA to PUR?`
 - Zeile 33: `Yes, all OTT machines with the CombiMelt system can be retrofitted to PUR. The upgrade includes a closed adhesive supply system with moisture protection and automatic cleaning. The retrofit can also be performed in the field by an Asamer technician.`
@@ -357,9 +357,8 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 505: `Recommendation by Operation Size`
 - Zeile 560: `Which gluing technology suits your operation?`
 - Zeile 567: `We advise you on choosing between EVA, PUR and laser – tailored to your production and requirements.`
-- Zeile 580: `OTT edgebanders`
 
-## `src/pages/GuidePanelSawComparisonPage.tsx` (121)
+## `src/pages/GuidePanelSawComparisonPage.tsx` (120)
 
 ### SK — 60 fehlend
 
@@ -424,7 +423,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 425: `Asamer poradí s řezáním dřeva i hliníku v CZ, SK a HU – od Kappa Automatic po Advanced Line. Včetně instalace, školení a servisní smlouvy.`
 - Zeile 434: `Poptat poradenství`
 
-### HU — 61 fehlend
+### HU — 60 fehlend
 
 - Zeile 29: `Can I cut wood on an aluminium panel saw?`
 - Zeile 34: `Technically yes, economically no. The Mayer Advanced Line uses slow feeds (1–15 m/min), fine non-ferrous blades and coolant lubrication. Cutting chipboard or HPL would work, but with much lower throughput, higher blade wear and coolant contamination from wood dust. Conversely, a pure Kappa wood machine must not run aluminium, because pressure beam, extraction and blade geometry are not designed for it.`
@@ -486,7 +485,6 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 379: `View all Mayer panel saws`
 - Zeile 418: `Which panel saw fits your material mix?`
 - Zeile 425: `Asamer advises on wood and aluminium sizing in CZ, SK and HU – from Kappa Automatic to Advanced Line. Including installation, training and service contract.`
-- Zeile 438: `Mayer panel saws`
 
 ## `src/pages/ImaSchellingPage.tsx` (103)
 
@@ -702,7 +700,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 479: `We advise you personally – tailored to throughput, space and budget.`
 - Zeile 491: `All OTT edgebanders`
 
-## `src/pages/GuideWarehouseAutomationPage.tsx` (87)
+## `src/pages/GuideWarehouseAutomationPage.tsx` (86)
 
 ### SK — 43 fehlend
 
@@ -750,7 +748,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 384: `Nechte se nezávazně poradit – zanalyzujeme váš materiálový tok a doporučíme vhodný systém BARBARIC.`
 - Zeile 397: `Systémy BARBARIC`
 
-### HU — 44 fehlend
+### HU — 43 fehlend
 
 - Zeile 29: `How much space does an automatic storage system require?`
 - Zeile 34: `Space requirements depend on the system type. A CSF Multilevel uses the full hall height and saves up to 50% floor space. The minimum requirement is approx. 6 × 12 m of floor area for an entry-level system.`
@@ -763,7 +761,6 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 77: `How long does the installation of a storage system take?`
 - Zeile 82: `Installation duration depends on system size. A CSF Professional is typically installed and operational in 2–3 weeks. A CSF Multilevel with full material flow integration requires 4–8 weeks. Asamer plans the installation to minimise disruption to your ongoing production.`
 - Zeile 100: `CSF Panel Storage`
-- Zeile 101: `Panel storage`
 - Zeile 102: `The CSF panel storage is a chaotic storage system for panels and off-cuts. It stores material sorted or mixed and delivers the right panel just-in-time to the saw or CNC machine. Available as CSF Professional (entry-level), CSF Industrial (large-scale) and CSF Multilevel (maximum space utilisation).`
 - Zeile 109: `LCV Panel Feeding`
 - Zeile 110: `Panel feeding`
@@ -885,76 +882,6 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 279: `OTT in Action`
 - Zeile 291: `Advice on OTT edgebanding?`
 
-## `src/pages/GuideVacuumLifterPage.tsx` (62)
-
-### SK — 30 fehlend
-
-- Zeile 39: `Vakuové zvedáky`
-- Zeile 44: `Jaký vakuový zvedák pro jakou hmotnost desky?`
-- Zeile 45: `Řada BARBARIC UniWood pokrývá lehké desky až do cca 250 kg (UWL 3) a do 300 kg – volitelně 500 kg (UWL 3J). Vhodný model doporučíme podle vašich formátů, hmotností a strojů.`
-- Zeile 52: `Lze vakuový zvedák dotovat?`
-- Zeile 53: `Ano. V ČR, SR a Maďarsku je investice často dotovatelná – podle trhu až 50 %. Způsobilost ověříme společně s vámi a na přání zkombinujeme s leasingem.`
-- Zeile 60: `S jakými stroji to funguje?`
-- Zeile 61: `Prakticky se všemi: olepovačka hran, formátovací pila, CNC, lisy i při naskladnění a vyskladnění. Zvedák převezme těžké zvedání, klopení a otáčení desky.`
-- Zeile 82: `Podporujeme vaše pracovní procesy. Vakuové zvedáky Barbaric pro zpracování dřeva.`
-- Zeile 89: `S vakuovým zvedákem přesune těžké desky bezpečně a ergonomicky jediný člověk – místo zvedání ve dvou či třech. Udržíte si sehraný tým zdravý a produktivní. Rádi vám pomůžeme najít vhodné řešení.`
-- Zeile 99: `Vakuový zvedák Barbaric UniWood UWL`
-- Zeile 114: `Rádi vám pomůžeme.`
-- Zeile 117: `Řekněte nám, jaké desky a stroje máte – doporučíme vhodný zvedák a ověříme dotaci. Ozvěte se, nebo nám nechte své číslo a my se vám ozveme.`
-- Zeile 142: `Jak to funguje na vašich strojích`
-- Zeile 151: `Olepovačka hran`
-- Zeile 154: `Jeden člověk zvedne desku ze stohu, naklopí ji o 90° pro podání a převezme hotovou desku při vrácení – bez druhého člověka, který obchází stroj s obrobkem.`
-- Zeile 172: `Formátovací pila`
-- Zeile 175: `Velkoformátové surové desky se ergonomicky pokládají na pilu – i těžké plné desky do 250 kg přesune jeden člověk snadno a bez poškození.`
-- Zeile 193: `CNC, lisy a sklad`
-- Zeile 196: `I při zakládání do CNC a lisů a při naskladnění/vyskladnění: plynulé zvedání (0–10 m/min), klopení o 90° a jednoruční ovládání – bezpečné pro lakované, strukturované i vysoce lesklé povrchy.`
-- Zeile 203: `Všechny vakuové zvedáky Barbaric`
-- Zeile 220: `Chraňte své zaměstnance`
-- Zeile 223: `Těžké, opakované zvedání je nejčastější příčinou poranění zad a ramen. Vakuový zvedák převezme zátěž – snižuje nemocnost a udrží vaše zkušené odborníky dlouhodobě v provozu.`
-- Zeile 230: `Dodržení hmotnostních limitů při ruční manipulaci`
-- Zeile 231: `Méně absencí, stálá kvalita`
-- Zeile 232: `Ergonomické odlehčení a dlouhodobé udržení týmu`
-- Zeile 241: `Rychlá návratnost, vysoká hospodárnost`
-- Zeile 244: `Jeden obsluha zvládne práci dvou až tří lidí – rychleji, bez poškození a bez čekání. Investice se tak rychle vrátí a je vysoce hospodárná.`
-- Zeile 258: `Ověřit dotaci a financování`
-- Zeile 292: `Udržte výrobní tým zdravý – rádi poradíme.`
-- Zeile 295: `Bezplatná konzultace ke vhodnému vakuovému zvedáku a dotaci – osobně a nezávazně.`
-
-### HU — 32 fehlend
-
-- Zeile 39: `Vacuum lifters`
-- Zeile 44: `Which vacuum lifter for which panel weight?`
-- Zeile 45: `The BARBARIC UniWood series covers light panels up to approx. 250 kg (UWL 3) and up to 300 kg – optionally 500 kg (UWL 3J). We recommend the right model based on your panel formats, weights and machines.`
-- Zeile 52: `Can a vacuum lifter be funded?`
-- Zeile 53: `Yes. In CZ, SK and HU the investment is often eligible for funding – up to 50% depending on the market. We check eligibility together with you and combine with leasing on request.`
-- Zeile 60: `Which machines does it work with?`
-- Zeile 61: `With practically all of them: edge banders, panel saws, CNC, presses as well as loading and unloading. The lifter handles the heavy lifting, tilting and turning of the panel.`
-- Zeile 82: `We support your work processes. Barbaric vacuum lifters for wood processing.`
-- Zeile 89: `With a vacuum lifter, a single person moves heavy panels safely and ergonomically – instead of two or three people lifting together. You keep your experienced team healthy and productive. We are glad to help you find the right system.`
-- Zeile 99: `Barbaric UniWood UWL vacuum lifter`
-- Zeile 114: `We’re glad to help.`
-- Zeile 117: `Tell us which panels and machines you work with – we’ll recommend the right lifter and check funding. Get in touch, or leave your number and we’ll call you back.`
-- Zeile 131: `Call us`
-- Zeile 142: `How it works on your machines`
-- Zeile 151: `Edge banding machine`
-- Zeile 154: `One person lifts the panel from the stack, tilts it 90° for infeed and takes the finished part on the return – without a second person carrying the workpiece around the machine.`
-- Zeile 161: `OTT edge banders`
-- Zeile 172: `Panel dividing saw`
-- Zeile 175: `Large-format raw panels are loaded onto the saw ergonomically – even heavy full-size boards up to 250 kg are moved effortlessly and damage-free by one person.`
-- Zeile 193: `CNC, presses & storage`
-- Zeile 196: `Also when feeding CNC machines and presses, and for loading/unloading: stepless lifting (0–10 m/min), 90° tilting and single-hand handle – safe for coated, textured and high-gloss surfaces.`
-- Zeile 203: `All Barbaric vacuum lifters`
-- Zeile 220: `Protect your workers`
-- Zeile 223: `Heavy, repetitive lifting is the most common cause of back and shoulder injuries. The vacuum lifter takes the load off – reducing sick leave and keeping your experienced staff on the team long-term.`
-- Zeile 230: `Compliance with manual handling load limits`
-- Zeile 231: `Fewer absences, consistent quality`
-- Zeile 232: `Ergonomic relief and long-term team retention`
-- Zeile 241: `Fast ROI, highly economical`
-- Zeile 244: `One operator does the work of two to three people – faster, damage-free and without waiting times. The investment pays for itself quickly and is highly economical.`
-- Zeile 258: `Check funding & financing`
-- Zeile 292: `Keep your production team healthy – we’re glad to advise.`
-- Zeile 295: `Free consultation on the right vacuum lifter and funding – personal and without obligation.`
-
 ## `src/pages/GuideFundingCzPage.tsx` (58)
 
 ### SK — 29 fehlend
@@ -1020,6 +947,72 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 294: `Asamer coordinates with local funding consultants in Brno and Prague and aligns OTT, Mayer, Gannomat and BARBARIC projects directly with OP TAK, NRB and leasing. Free initial consultation for CZ, SK and HU.`
 - Zeile 303: `Request funding consultation`
 - Zeile 307: `Financing & leasing`
+
+## `src/pages/GuideVacuumLifterPage.tsx` (58)
+
+### SK — 30 fehlend
+
+- Zeile 39: `Vakuové zvedáky`
+- Zeile 44: `Jaký vakuový zvedák pro jakou hmotnost desky?`
+- Zeile 45: `Řada BARBARIC UniWood pokrývá lehké desky až do cca 250 kg (UWL 3) a do 300 kg – volitelně 500 kg (UWL 3J). Vhodný model doporučíme podle vašich formátů, hmotností a strojů.`
+- Zeile 52: `Lze vakuový zvedák dotovat?`
+- Zeile 53: `Ano. V ČR, SR a Maďarsku je investice často dotovatelná – podle trhu až 50 %. Způsobilost ověříme společně s vámi a na přání zkombinujeme s leasingem.`
+- Zeile 60: `S jakými stroji to funguje?`
+- Zeile 61: `Prakticky se všemi: olepovačka hran, formátovací pila, CNC, lisy i při naskladnění a vyskladnění. Zvedák převezme těžké zvedání, klopení a otáčení desky.`
+- Zeile 82: `Podporujeme vaše pracovní procesy. Vakuové zvedáky Barbaric pro zpracování dřeva.`
+- Zeile 89: `S vakuovým zvedákem přesune těžké desky bezpečně a ergonomicky jediný člověk – místo zvedání ve dvou či třech. Udržíte si sehraný tým zdravý a produktivní. Rádi vám pomůžeme najít vhodné řešení.`
+- Zeile 99: `Vakuový zvedák Barbaric UniWood UWL`
+- Zeile 114: `Rádi vám pomůžeme.`
+- Zeile 117: `Řekněte nám, jaké desky a stroje máte – doporučíme vhodný zvedák a ověříme dotaci. Ozvěte se, nebo nám nechte své číslo a my se vám ozveme.`
+- Zeile 142: `Jak to funguje na vašich strojích`
+- Zeile 151: `Olepovačka hran`
+- Zeile 154: `Jeden člověk zvedne desku ze stohu, naklopí ji o 90° pro podání a převezme hotovou desku při vrácení – bez druhého člověka, který obchází stroj s obrobkem.`
+- Zeile 172: `Formátovací pila`
+- Zeile 175: `Velkoformátové surové desky se ergonomicky pokládají na pilu – i těžké plné desky do 250 kg přesune jeden člověk snadno a bez poškození.`
+- Zeile 193: `CNC, lisy a sklad`
+- Zeile 196: `I při zakládání do CNC a lisů a při naskladnění/vyskladnění: plynulé zvedání (0–10 m/min), klopení o 90° a jednoruční ovládání – bezpečné pro lakované, strukturované i vysoce lesklé povrchy.`
+- Zeile 203: `Všechny vakuové zvedáky Barbaric`
+- Zeile 220: `Chraňte své zaměstnance`
+- Zeile 223: `Těžké, opakované zvedání je nejčastější příčinou poranění zad a ramen. Vakuový zvedák převezme zátěž – snižuje nemocnost a udrží vaše zkušené odborníky dlouhodobě v provozu.`
+- Zeile 230: `Dodržení hmotnostních limitů při ruční manipulaci`
+- Zeile 231: `Méně absencí, stálá kvalita`
+- Zeile 232: `Ergonomické odlehčení a dlouhodobé udržení týmu`
+- Zeile 241: `Rychlá návratnost, vysoká hospodárnost`
+- Zeile 244: `Jeden obsluha zvládne práci dvou až tří lidí – rychleji, bez poškození a bez čekání. Investice se tak rychle vrátí a je vysoce hospodárná.`
+- Zeile 258: `Ověřit dotaci a financování`
+- Zeile 292: `Udržte výrobní tým zdravý – rádi poradíme.`
+- Zeile 295: `Bezplatná konzultace ke vhodnému vakuovému zvedáku a dotaci – osobně a nezávazně.`
+
+### HU — 28 fehlend
+
+- Zeile 44: `Which vacuum lifter for which panel weight?`
+- Zeile 45: `The BARBARIC UniWood series covers light panels up to approx. 250 kg (UWL 3) and up to 300 kg – optionally 500 kg (UWL 3J). We recommend the right model based on your panel formats, weights and machines.`
+- Zeile 52: `Can a vacuum lifter be funded?`
+- Zeile 53: `Yes. In CZ, SK and HU the investment is often eligible for funding – up to 50% depending on the market. We check eligibility together with you and combine with leasing on request.`
+- Zeile 60: `Which machines does it work with?`
+- Zeile 61: `With practically all of them: edge banders, panel saws, CNC, presses as well as loading and unloading. The lifter handles the heavy lifting, tilting and turning of the panel.`
+- Zeile 82: `We support your work processes. Barbaric vacuum lifters for wood processing.`
+- Zeile 89: `With a vacuum lifter, a single person moves heavy panels safely and ergonomically – instead of two or three people lifting together. You keep your experienced team healthy and productive. We are glad to help you find the right system.`
+- Zeile 99: `Barbaric UniWood UWL vacuum lifter`
+- Zeile 114: `We’re glad to help.`
+- Zeile 117: `Tell us which panels and machines you work with – we’ll recommend the right lifter and check funding. Get in touch, or leave your number and we’ll call you back.`
+- Zeile 131: `Call us`
+- Zeile 142: `How it works on your machines`
+- Zeile 154: `One person lifts the panel from the stack, tilts it 90° for infeed and takes the finished part on the return – without a second person carrying the workpiece around the machine.`
+- Zeile 175: `Large-format raw panels are loaded onto the saw ergonomically – even heavy full-size boards up to 250 kg are moved effortlessly and damage-free by one person.`
+- Zeile 193: `CNC, presses & storage`
+- Zeile 196: `Also when feeding CNC machines and presses, and for loading/unloading: stepless lifting (0–10 m/min), 90° tilting and single-hand handle – safe for coated, textured and high-gloss surfaces.`
+- Zeile 203: `All Barbaric vacuum lifters`
+- Zeile 220: `Protect your workers`
+- Zeile 223: `Heavy, repetitive lifting is the most common cause of back and shoulder injuries. The vacuum lifter takes the load off – reducing sick leave and keeping your experienced staff on the team long-term.`
+- Zeile 230: `Compliance with manual handling load limits`
+- Zeile 231: `Fewer absences, consistent quality`
+- Zeile 232: `Ergonomic relief and long-term team retention`
+- Zeile 241: `Fast ROI, highly economical`
+- Zeile 244: `One operator does the work of two to three people – faster, damage-free and without waiting times. The investment pays for itself quickly and is highly economical.`
+- Zeile 258: `Check funding & financing`
+- Zeile 292: `Keep your production team healthy – we’re glad to advise.`
+- Zeile 295: `Free consultation on the right vacuum lifter and funding – personal and without obligation.`
 
 ## `src/pages/ServicePage.tsx` (56)
 
@@ -1433,7 +1426,7 @@ for everyone`
 - Zeile 363: `We will respond with currently available options.`
 - Zeile 364: `Including technical inspection, transport and installation.`
 
-## `src/pages/MayerPage.tsx` (22)
+## `src/pages/MayerPage.tsx` (21)
 
 ### SK — 11 fehlend
 
@@ -1449,12 +1442,11 @@ for everyone`
 - Zeile 140: `Vakuové podávání, sklady a stoly jako doplněk`
 - Zeile 150: `Máte zájem o pily Mayer?`
 
-### HU — 11 fehlend
+### HU — 10 fehlend
 
 - Zeile 22: `Horizontal pressure beam saws for wood`
 - Zeile 23: `For aluminium, non-ferrous metals and plastics`
 - Zeile 24: `Custom cutting solutions`
-- Zeile 55: `Mayer Panel Saws`
 - Zeile 70: `Cutting center`
 - Zeile 81: `Austria · Felder Group · Panel saws`
 - Zeile 83: `Mayer (Felder Group) builds horizontal pressure beam panel saws for wood, plastics and metal processing. The Kappa Automatic range (80–140) specializes in wood and panel materials, while the Advanced Line (100–250) cuts aluminium, non-ferrous metals and plastics. Asamer is an authorized Mayer dealer for CZ, SK and HU with on-site service and spare parts.`
@@ -1514,30 +1506,6 @@ for everyone`
 - Zeile 94: `Note`
 - Zeile 118: `All Mayer products`
 - Zeile 183: `Technical Specifications`
-
-## `src/pages/UsedMachinesPage.tsx` (16)
-
-### SK — 8 fehlend
-
-- Zeile 123: `prodáno`
-- Zeile 123: `k dispozici`
-- Zeile 225: `Vybrané stroje ze skladu. Každá nabídka je technicky ověřena a má jasně uvedený stav.`
-- Zeile 338: `Rok`
-- Zeile 395: `Poptávka`
-- Zeile 409: `Poptat použitý stroj`
-- Zeile 412: `Řekněte nám, jaký stroj hledáte. Ozveme se s dostupnými možnostmi.`
-- Zeile 431: `Zahájit poptávku`
-
-### HU — 8 fehlend
-
-- Zeile 123: `sold`
-- Zeile 123: `available`
-- Zeile 225: `Selected machines from stock. Each offer is technically checked and listed with a clear condition.`
-- Zeile 338: `Year`
-- Zeile 395: `Inquiry`
-- Zeile 409: `Request a used machine`
-- Zeile 412: `Tell us which machine you are looking for. We will respond with available options.`
-- Zeile 431: `Start inquiry`
 
 ## `src/pages/ContactPage.tsx` (14)
 
@@ -1605,6 +1573,28 @@ for everyone`
 - Zeile 240: `Matching system solutions`
 - Zeile 268: `Consulting, quote and installation from a single source.`
 
+## `src/pages/UsedMachinesPage.tsx` (14)
+
+### SK — 7 fehlend
+
+- Zeile 123: `prodáno`
+- Zeile 123: `k dispozici`
+- Zeile 225: `Vybrané stroje ze skladu. Každá nabídka je technicky ověřena a má jasně uvedený stav.`
+- Zeile 338: `Rok`
+- Zeile 409: `Poptat použitý stroj`
+- Zeile 412: `Řekněte nám, jaký stroj hledáte. Ozveme se s dostupnými možnostmi.`
+- Zeile 431: `Zahájit poptávku`
+
+### HU — 7 fehlend
+
+- Zeile 123: `sold`
+- Zeile 123: `available`
+- Zeile 225: `Selected machines from stock. Each offer is technically checked and listed with a clear condition.`
+- Zeile 338: `Year`
+- Zeile 409: `Request a used machine`
+- Zeile 412: `Tell us which machine you are looking for. We will respond with available options.`
+- Zeile 431: `Start inquiry`
+
 ## `src/pages/BarbaricProductPage.tsx` (11)
 
 ### SK — 6 fehlend
@@ -1638,6 +1628,20 @@ for everyone`
 - Zeile 75: `Applications`
 - Zeile 99: `Buying Guide`
 
+## `src/pages/CategoryPage.tsx` (6)
+
+### SK — 3 fehlend
+
+- Zeile 95: `Poptávka`
+- Zeile 150: `Další kategorie`
+- Zeile 177: `Který stroj se hodí do vaší výroby?`
+
+### HU — 3 fehlend
+
+- Zeile 95: `Inquiry`
+- Zeile 150: `More categories`
+- Zeile 177: `Which machine fits your production?`
+
 ## `src/sections/Footer.tsx` (4)
 
 ### SK — 2 fehlend
@@ -1664,11 +1668,11 @@ for everyone`
 
 ### SK — 1 fehlend
 
-- Zeile 35: `Poptávka Asamer`
+- Zeile 36: `Poptávka Asamer`
 
 ### HU — 1 fehlend
 
-- Zeile 35: `Inquiry Asamer`
+- Zeile 36: `Inquiry Asamer`
 
 ## `src/pages/GannomatProductPage.tsx` (2)
 

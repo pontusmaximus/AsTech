@@ -1,5 +1,15 @@
-// Auto-generated from page-level tr(...) strings for SK/HU locales.
-// Product names and manufacturer names are preserved via token protection.
+// Woerterbuecher fuer die SK- und HU-Seitentexte (`tr()`).
+//
+// Einmal maschinell aus den damaligen tr()-Aufrufen erzeugt und seither von
+// Hand gepflegt -- es gibt kein Skript, das diese Datei neu schreibt.
+// `npm run seo:i18n` liest sie nur und meldet, welche Schluessel fehlen.
+//
+// Die maschinelle Herkunft ist den alten Eintraegen anzumerken: "joint" wurde
+// als anatomisches Gelenk uebersetzt ("izulet"), "edgebander" als Kantenband
+// statt als Maschine. Wer hier etwas anfasst, gleicht es mit dem
+// Terminologieblatt der Keyword-Recherche ab
+// (docs/seo/keyword-research/, Blatt 6) -- dort steht je Begriff, welche
+// Form im Markt gesucht wird und welche eine Uebersetzungsspur ist.
 
 export const pageSkTranslations: Record<string, string> = {
   "15 % až 45 %": "15% až 45%",
@@ -300,11 +310,11 @@ export const pageHuTranslations: Record<string, string> = {
   "Chaotic storage possible": "Kaotikus tárolás lehetséges",
   "Check your funding eligibility with Asamer": "Ellenőrizze finanszírozási jogosultságát a Asamer segítségével",
   "Combines EVA and PUR in one system": "Egy rendszerben egyesíti a EVA-t és a PUR-t",
-  "Compact edgebander for craft and carpentry shops": "Kompakt élszalag kézműves és asztalos üzletekhez",
+  "Compact edgebander for craft and carpentry shops": "Kompakt élzárógép kézműves és asztalos üzemekhez",
   "Compact entry-level solution for professional panel cutting": "Kompakt belépő szintű megoldás a professzionális panelvágáshoz",
   "Compact transport system for small to medium operations": "Kompakt szállítórendszer kis és közepes műveletekhez",
   "Company": "Vállalat",
-  "Completely invisible joint": "Teljesen láthatatlan ízület",
+  "Completely invisible joint": "Teljesen láthatatlan fuga",
   "Connection of all process data": "Az összes folyamatadat összekapcsolása",
   "Connection to ERP systems": "Csatlakozás ERP rendszerekhez",
   "Control: radio or cable": "Vezérlés: rádió vagy kábel",
@@ -330,6 +340,7 @@ export const pageHuTranslations: Record<string, string> = {
   "Double feed speed": "Dupla adagolási sebesség",
   "Dual feed": "Kettős táplálás",
   "Dynamic panel allocation": "Dinamikus panelkiosztás",
+  "Edge banding machine": "Élzárógép",
   "Edge thickness: 0.4 - 12 mm": "Élvastagság: 0,4 - 12 mm",
   "Edge thickness: 0.4 - 15 mm": "Élvastagság: 0,4 - 15 mm",
   "Edge thickness: 0.4 - 20 mm": "Élvastagság: 0,4 - 20 mm",
@@ -337,8 +348,8 @@ export const pageHuTranslations: Record<string, string> = {
   "Edge thickness: 0.4 - 5 mm": "Élvastagság: 0,4 - 5 mm",
   "Edge thickness: 0.4 - 8 mm": "Élvastagság: 0,4 - 8 mm",
   "Edge thickness: 1 - 20 mm": "Élvastagság: 1 - 20 mm",
-  "Edgebanding": "Élszalagozás",
-  "Edgebanding Machines": "Élszalagozó gépek",
+  "Edgebanding": "Élzárás",
+  "Edgebanding Machines": "Élzárógépek",
   "Efficiency gains through automated processes and robotic material flows": "A hatékonyság növelése az automatizált folyamatok és a robotizált anyagáramlás révén",
   "Efficient handling of heavy panels with excellent ergonomics and minimal physical effort.": "A nehéz panelek hatékony kezelése kiváló ergonómiával és minimális fizikai erőfeszítéssel.",
   "Electric tilting": "Elektromos billentés",
@@ -362,7 +373,7 @@ export const pageHuTranslations: Record<string, string> = {
   "Feed speed: up to 150 m/min": "Előtolási sebesség: akár 150 m/perc",
   "Feeding & Storage Technology": "Etetési és tárolási technológia",
   "Flagship model for top-level requirements": "Zászlós modell a legmagasabb szintű követelményekhez",
-  "Flexible edgebanding with modular equipment": "Rugalmas élszalagozás moduláris felszereléssel",
+  "Flexible edgebanding with modular equipment": "Rugalmas élzárás moduláris felszereléssel",
   "For companies introducing new products or fundamentally innovating production processes, for example with new materials or higher precision.": "Olyan cégeknek, amelyek új termékeket vezetnek be vagy alapvetően innovatív gyártási folyamatokat hajtanak végre, például új anyagokkal vagy nagyobb pontossággal.",
   "For more than 70 years, Mayer has stood for top quality and precision in panel cutting. The Kappa Automatic and Advanced Line series set standards in the industry.": "A Mayer több mint 70 éve a csúcsminőséget és a precíziót képviseli a panelvágásban.A Kappa Automatic és Advanced Line sorozat mércét állít fel az iparágban.",
   "For over 30 years, your partner for industrial solutions in wood, plastic and metal processing.": "Több mint 30 éve az Ön partnere a fa-, műanyag- és fémfeldolgozás ipari megoldásaiban.",
@@ -420,6 +431,8 @@ export const pageHuTranslations: Record<string, string> = {
   "Maximum precision for industrial series production": "Maximális pontosság ipari sorozatgyártáshoz",
   "Maximum stability for heavy edges": "Maximális stabilitás nehéz élekhez",
   "Mayer Kappa Automatic & Advanced Line. Precise panel saws for wood, plastic, and metal.": "Mayer Kappa Automatic & Advanced Line.Precíz panelfűrészek fához, műanyaghoz és fémhez.",
+  "Mayer Panel Saws": "Mayer táblafelosztó gépek",
+  "Mayer panel saws": "Mayer táblafelosztó gépek",
   "Mayer Saws": "Mayer Fűrészek",
   "Melting tank: 1.5 kg": "Olvasztótartály: 1,5 kg",
   "Melting tank: 2.5 kg": "Olvasztótartály: 2,5 kg",
@@ -433,13 +446,17 @@ export const pageHuTranslations: Record<string, string> = {
   "OP TAK - Innovation & Design": "OP TAK - Innováció és tervezés",
   "operator": "operátor",
   "Optimal space usage through intelligent software": "Optimális helykihasználás intelligens szoftverrel",
-  "OTT Edgebanders": "OTT Élszalagok",
-  "OTT edgebanding technology. Seamless edge joints with PUR gluing systems and LASER Hydrofuse.": "OTT élszalagozási technológia.Zökkenőmentes élkötések PUR ragasztórendszerekkel és LASER Hydrofuse-vel.",
-  "OTT stands for innovative edgebanding technology. PUR gluing systems and LASER Hydrofuse technology create seamless, jointless edge connections.": "A OTT az innovatív élszalagozási technológiát jelenti.A PUR ragasztórendszerek és a LASER Hydrofuse technológia varratmentes, hézagmentes élkapcsolatokat hoz létre.",
-  "OTT the leading edge banding machine": "OTT az élszalagozó gép",
+  "OTT edge banders": "OTT élzárógépek",
+  "OTT Edgebanders": "OTT élzárógépek",
+  "OTT edgebanders": "OTT élzárógépek",
+  "OTT edgebanding technology. Seamless edge joints with PUR gluing systems and LASER Hydrofuse.": "OTT élzárási technológia.Zökkenőmentes élkötések PUR ragasztórendszerekkel és LASER Hydrofuse-vel.",
+  "OTT stands for innovative edgebanding technology. PUR gluing systems and LASER Hydrofuse technology create seamless, jointless edge connections.": "Az OTT az innovatív élzárási technológiát jelenti.A PUR ragasztórendszerek és a LASER Hydrofuse technológia varratmentes, hézagmentes élkapcsolatokat hoz létre.",
+  "OTT the leading edge banding machine": "OTT az élzárógép",
   "Our systems are Industry 4.0 ready. Asamer provides the required interfaces and data protocols so your investment is recognized as digital transformation.": "Rendszereink Industry 4.0 készen állnak.A Asamer biztosítja a szükséges interfészeket és adatprotokollokat, így befektetését digitális átalakításként ismerik el.",
+  "Panel dividing saw": "Táblafelosztó gép",
   "Panel format: up to 4,000 x 2,000 mm": "Panelformátum: legfeljebb 4000 x 2000 mm",
   "Panel format: up to 7,000 x 2,500 mm": "Panelformátum: 7000 x 2500 mm-ig",
+  "Panel storage": "Lapraktár",
   "Panel Storage Systems": "Paneltároló rendszerek",
   "Payload: 150 kg": "Terhelhetőség: 150 kg",
   "Payload: 300 kg": "Terhelhetőség: 300 kg",
@@ -513,6 +530,7 @@ export const pageHuTranslations: Record<string, string> = {
   "Up to 45% funding of eligible costs.": "Az elszámolható költségek legfeljebb 45%-a.",
   "Use state grants and ERDF funds to strengthen your competitiveness with modern CNC technology, automation, and sustainable production.": "Használjon állami támogatásokat és ERFA-forrásokat versenyképességének erősítésére modern CNC technológiával, automatizálással és fenntartható termeléssel.",
   "Vacuum Handling": "Vákuumos kezelés",
+  "Vacuum lifters": "Vákuumemelők",
   "Versatile solution for plastic processing": "Sokoldalú megoldás a műanyagok feldolgozására",
   "Waste recovery measures can also be included in the funding scope.": "A finanszírozás körébe a hulladékhasznosítási intézkedések is beletartozhatnak.",
   "Water and heat resistant": "Víz- és hőálló",
@@ -524,7 +542,7 @@ export const pageHuTranslations: Record<string, string> = {
   "With automatic turning unit for double-sided processing": "Automata forgóegységgel a kétoldalas megmunkáláshoz",
   "With intelligent storage systems and optimized material flows, you significantly reduce storage costs and increase productivity.": "Az intelligens tárolási rendszerekkel és az optimalizált anyagáramlással jelentősen csökkenti a tárolási költségeket és növeli a termelékenységet.",
   "Your advantage": "Az Ön előnye",
-  "Zero-joint technology": "Nulla-csuklós technológia",
+  "Zero-joint technology": "Nullfugás technológia",
 };
 
 /**

@@ -86,9 +86,13 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
     })),
   );
 
+  // Bewusst kein Template-Literal in tr(): ein zur Laufzeit
+  // zusammengesetzter Schluessel trifft nie auf einen Woerterbucheintrag und
+  // bliebe auf SK und HU dauerhaft im englischen Fallback (siehe
+  // docs/seo/03-sprachversionen.md).
   const inquiryMail = buildMailto(
     'office@asamer.net',
-    tr(`Anfrage ${heading}`, `Inquiry ${heading}`, `Poptávka ${heading}`),
+    `${tr('Anfrage', 'Inquiry', 'Poptávka')} ${catalog.label} ${heading}`,
   );
 
   return (
@@ -118,7 +122,7 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
             className="page-header inline-flex items-center gap-2 text-[11px] uppercase tracking-widest text-white/40 hover:text-white/60 transition-colors mb-8"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            {tr(`Alle ${catalog.label} Produkte`, `All ${catalog.label} products`, `Všechny produkty ${catalog.label}`)}
+            {tr('Zurück zur Übersicht', 'Back to overview', 'Zpět na přehled')}
           </Link>
 
           <header className="page-header mb-10 max-w-3xl">

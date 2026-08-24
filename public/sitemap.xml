@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://asamer.cz/cz</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de"/>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric"/>
@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/buffer-dilu</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/teilepuffer"/>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/buffer-dilu/pbx</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/teilepuffer/pbx"/>
@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/handling-dveri</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling"/>
@@ -63,7 +63,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/handling-dveri/csf-industrial-turen</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/csf-industrial-turen"/>
@@ -75,7 +75,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/handling-dveri/drx</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/drx"/>
@@ -87,7 +87,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/handling-dveri/tmp</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/tmp"/>
@@ -99,7 +99,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/jerabove-kolejnicove-systemy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme"/>
@@ -111,7 +111,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/jerabove-kolejnicove-systemy/fachwerksbruecke-2d</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-2d"/>
@@ -123,7 +123,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/jerabove-kolejnicove-systemy/fachwerksbruecke-3d</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-3d"/>
@@ -135,7 +135,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/jerabove-kolejnicove-systemy/ssk-saeulenschwenkkran</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/ssk-saeulenschwenkkran"/>
@@ -147,7 +147,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/jerabove-kolejnicove-systemy/ssy-schienensystem</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/ssy-schienensystem"/>
@@ -159,7 +159,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/navratove-systemy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme"/>
@@ -171,7 +171,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/navratove-systemy/rts-compact</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-compact"/>
@@ -183,7 +183,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/navratove-systemy/rts-industrial</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-industrial"/>
@@ -195,7 +195,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/navratove-systemy/rts-professional</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-professional"/>
@@ -207,7 +207,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/navratove-systemy/teilehandling</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/teilehandling"/>
@@ -219,7 +219,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/nesting-picker</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/nesting-picker"/>
@@ -231,7 +231,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/nesting-picker/nst</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/nesting-picker/nst"/>
@@ -243,7 +243,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/podavaci-systemy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/beschickung"/>
@@ -255,7 +255,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/podavaci-systemy/lcv-performance</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/beschickung/lcv-performance"/>
@@ -267,7 +267,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/skladovani-desek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager"/>
@@ -279,7 +279,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/skladovani-desek/csf-industrial</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-industrial"/>
@@ -291,7 +291,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/skladovani-desek/csf-multilevel</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-multilevel"/>
@@ -303,7 +303,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/skladovani-desek/csf-professional</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-professional"/>
@@ -315,7 +315,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/skladovani-desek/sonderanwendungen</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/sonderanwendungen"/>
@@ -327,7 +327,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/specialni-traverzy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen"/>
@@ -339,7 +339,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/specialni-traverzy/blech-plexiglas-traverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/blech-plexiglas-traverse"/>
@@ -351,7 +351,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/specialni-traverzy/duennplattentraverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/duennplattentraverse"/>
@@ -363,7 +363,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/specialni-traverzy/tuerentraverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/tuerentraverse"/>
@@ -375,7 +375,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/specialni-zvedaky</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete"/>
@@ -387,7 +387,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/specialni-zvedaky/ngr-needlegripper</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/ngr-needlegripper"/>
@@ -399,7 +399,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/specialni-zvedaky/rwl-racklifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/rwl-racklifter"/>
@@ -411,7 +411,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/specialni-zvedaky/swl-griplifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/swl-griplifter"/>
@@ -423,7 +423,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/specialni-zvedaky/swl-planklifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/swl-planklifter"/>
@@ -435,7 +435,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/specialni-zvedaky/uwl-5</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/uwl-5"/>
@@ -447,7 +447,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/stitkovani</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/labeling"/>
@@ -459,7 +459,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/stitkovani/lps</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/labeling/lps"/>
@@ -471,7 +471,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/vakuove-zvedaky-uniwood</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood"/>
@@ -483,7 +483,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/vakuove-zvedaky-uniwood/uwl-1</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1"/>
@@ -495,7 +495,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/vakuove-zvedaky-uniwood/uwl-1s</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1s"/>
@@ -507,7 +507,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/vakuove-zvedaky-uniwood/uwl-3</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3"/>
@@ -519,7 +519,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/vakuove-zvedaky-uniwood/uwl-3j</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3j"/>
@@ -531,7 +531,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric/vakuove-zvedaky-uniwood/uwl-3s</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3s"/>
@@ -543,7 +543,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/faq</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/faq"/>
@@ -555,7 +555,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/financovani</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/finanzierung"/>
@@ -567,7 +567,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat"/>
@@ -579,7 +579,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat/kolkovaci-stroje-dvere-okna</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/duebeleintreibmaschinen-tueren-fenster"/>
@@ -627,7 +627,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat/kolkovaci-vrtacky</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/duebelbohrmaschinen"/>
@@ -663,7 +663,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat/korpusove-lisy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/korpuspressen"/>
@@ -747,7 +747,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat/lepici-systemy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/beleimmaschinen"/>
@@ -783,7 +783,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat/obrabeci-centra</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/bearbeitungszentren"/>
@@ -807,7 +807,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat/radove-vrtacky</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/lochreihenbohrmaschinen"/>
@@ -843,7 +843,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat/ramove-vrtacky</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/rahmenduebel-maschinen"/>
@@ -891,7 +891,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat/vrtaci-lepici-kolkovaci-stroje</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/bohr-beleim-duebeleintreibmaschinen"/>
@@ -951,7 +951,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat/vrtacky-na-kovani</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/beschlaege-bohrmaschinen"/>
@@ -1119,7 +1119,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat/vrtacky-na-zavesy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/ecklager-bohrmaschinen"/>
@@ -1155,7 +1155,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ima-schelling</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ima-schelling"/>
@@ -1167,7 +1167,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/imprint</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/impressum"/>
@@ -1179,7 +1179,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/kontakt</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/kontakt"/>
@@ -1191,7 +1191,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/mayer</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer"/>
@@ -1203,7 +1203,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/mayer/formatovaci-pily-hlinik-plasty</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff"/>
@@ -1287,7 +1287,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/mayer/horizontalni-formatovaci-pily</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/horizontale-plattensaegen"/>
@@ -1347,7 +1347,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/mayer/prumyslova-reseni</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/industrieloesungen"/>
@@ -1371,7 +1371,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/obchodni-podminky</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/agb"/>
@@ -1383,7 +1383,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ochrana-osobnich-udaju</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/datenschutz"/>
@@ -1395,7 +1395,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott"/>
@@ -1407,7 +1407,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/lepici-technologie</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie"/>
@@ -1443,7 +1443,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/olepovacky-hran</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen"/>
@@ -1539,7 +1539,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme"/>
@@ -1587,7 +1587,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pouzite-stroje</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gebrauchtmaschinen"/>
@@ -1683,7 +1683,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/automatizace-skladu</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/lagerautomatisierung"/>
@@ -1695,7 +1695,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026"/>
@@ -1706,7 +1706,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz"/>
@@ -1718,7 +1718,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/pur-vs-eva</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/pur-vs-eva"/>
@@ -1730,7 +1730,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/vakuumheber-holz"/>
@@ -1742,7 +1742,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen"/>
@@ -1754,7 +1754,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/reseni</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/loesungen"/>
@@ -1766,7 +1766,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/servis</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/service"/>
@@ -1778,7 +1778,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de"/>
@@ -1790,7 +1790,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/agb</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/agb"/>
@@ -1802,7 +1802,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric"/>
@@ -1814,7 +1814,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/beschickung</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/beschickung"/>
@@ -1826,7 +1826,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/beschickung/lcv-performance</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/beschickung/lcv-performance"/>
@@ -1838,7 +1838,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/flaechenlager</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager"/>
@@ -1850,7 +1850,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/flaechenlager/csf-industrial</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-industrial"/>
@@ -1862,7 +1862,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/flaechenlager/csf-multilevel</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-multilevel"/>
@@ -1874,7 +1874,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/flaechenlager/csf-professional</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-professional"/>
@@ -1886,7 +1886,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/flaechenlager/sonderanwendungen</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/sonderanwendungen"/>
@@ -1898,7 +1898,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/kran-schienensysteme</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme"/>
@@ -1910,7 +1910,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-2d</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-2d"/>
@@ -1922,7 +1922,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-3d</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-3d"/>
@@ -1934,7 +1934,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/kran-schienensysteme/ssk-saeulenschwenkkran</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/ssk-saeulenschwenkkran"/>
@@ -1946,7 +1946,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/kran-schienensysteme/ssy-schienensystem</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/ssy-schienensystem"/>
@@ -1958,7 +1958,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/labeling</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/labeling"/>
@@ -1970,7 +1970,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/labeling/lps</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/labeling/lps"/>
@@ -1982,7 +1982,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/nesting-picker</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/nesting-picker"/>
@@ -1994,7 +1994,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/nesting-picker/nst</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/nesting-picker/nst"/>
@@ -2006,7 +2006,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/returnsysteme</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme"/>
@@ -2018,7 +2018,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/returnsysteme/rts-compact</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-compact"/>
@@ -2030,7 +2030,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/returnsysteme/rts-industrial</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-industrial"/>
@@ -2042,7 +2042,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/returnsysteme/rts-professional</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-professional"/>
@@ -2054,7 +2054,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/returnsysteme/teilehandling</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/teilehandling"/>
@@ -2066,7 +2066,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/sondertraversen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen"/>
@@ -2078,7 +2078,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/sondertraversen/blech-plexiglas-traverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/blech-plexiglas-traverse"/>
@@ -2090,7 +2090,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/sondertraversen/duennplattentraverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/duennplattentraverse"/>
@@ -2102,7 +2102,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/sondertraversen/tuerentraverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/tuerentraverse"/>
@@ -2114,7 +2114,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/spezialhebegeraete</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete"/>
@@ -2126,7 +2126,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/spezialhebegeraete/ngr-needlegripper</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/ngr-needlegripper"/>
@@ -2138,7 +2138,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/spezialhebegeraete/rwl-racklifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/rwl-racklifter"/>
@@ -2150,7 +2150,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/spezialhebegeraete/swl-griplifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/swl-griplifter"/>
@@ -2162,7 +2162,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/spezialhebegeraete/swl-planklifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/swl-planklifter"/>
@@ -2174,7 +2174,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/spezialhebegeraete/uwl-5</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/uwl-5"/>
@@ -2186,7 +2186,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/teilepuffer</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/teilepuffer"/>
@@ -2198,7 +2198,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/teilepuffer/pbx</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/teilepuffer/pbx"/>
@@ -2210,7 +2210,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/tuerenhandling</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling"/>
@@ -2222,7 +2222,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/tuerenhandling/csf-industrial-turen</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/csf-industrial-turen"/>
@@ -2234,7 +2234,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/tuerenhandling/drx</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/drx"/>
@@ -2246,7 +2246,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/tuerenhandling/tmp</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/tmp"/>
@@ -2258,7 +2258,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/vakuumheber-uniwood</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood"/>
@@ -2270,7 +2270,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1"/>
@@ -2282,7 +2282,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1s</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1s"/>
@@ -2294,7 +2294,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3"/>
@@ -2306,7 +2306,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3j</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3j"/>
@@ -2318,7 +2318,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3s</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3s"/>
@@ -2330,7 +2330,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/datenschutz</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/datenschutz"/>
@@ -2342,7 +2342,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/faq</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/faq"/>
@@ -2354,7 +2354,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/finanzierung</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/finanzierung"/>
@@ -2366,7 +2366,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat"/>
@@ -2378,7 +2378,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat/bearbeitungszentren</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/bearbeitungszentren"/>
@@ -2402,7 +2402,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat/beleimmaschinen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/beleimmaschinen"/>
@@ -2438,7 +2438,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat/beschlaege-bohrmaschinen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/beschlaege-bohrmaschinen"/>
@@ -2606,7 +2606,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat/bohr-beleim-duebeleintreibmaschinen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/bohr-beleim-duebeleintreibmaschinen"/>
@@ -2666,7 +2666,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat/duebelbohrmaschinen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/duebelbohrmaschinen"/>
@@ -2702,7 +2702,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat/duebeleintreibmaschinen-tueren-fenster</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/duebeleintreibmaschinen-tueren-fenster"/>
@@ -2750,7 +2750,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat/ecklager-bohrmaschinen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/ecklager-bohrmaschinen"/>
@@ -2786,7 +2786,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat/korpuspressen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/korpuspressen"/>
@@ -2870,7 +2870,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat/lochreihenbohrmaschinen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/lochreihenbohrmaschinen"/>
@@ -2906,7 +2906,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat/rahmenduebel-maschinen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/rahmenduebel-maschinen"/>
@@ -2954,7 +2954,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gebrauchtmaschinen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gebrauchtmaschinen"/>
@@ -3050,7 +3050,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ima-schelling</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ima-schelling"/>
@@ -3062,7 +3062,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/impressum</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/impressum"/>
@@ -3074,7 +3074,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/kontakt</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/kontakt"/>
@@ -3086,7 +3086,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/loesungen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/loesungen"/>
@@ -3098,7 +3098,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/mayer</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer"/>
@@ -3110,7 +3110,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/mayer/horizontale-plattensaegen</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/horizontale-plattensaegen"/>
@@ -3170,7 +3170,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/mayer/industrieloesungen</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/industrieloesungen"/>
@@ -3194,7 +3194,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff"/>
@@ -3278,7 +3278,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott"/>
@@ -3290,7 +3290,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/kantenanleimmaschinen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen"/>
@@ -3386,7 +3386,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/klebetechnologie</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie"/>
@@ -3422,7 +3422,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/ruecktransportsysteme</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme"/>
@@ -3470,7 +3470,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026"/>
@@ -3481,7 +3481,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz"/>
@@ -3493,7 +3493,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen"/>
@@ -3505,7 +3505,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/lagerautomatisierung</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/lagerautomatisierung"/>
@@ -3517,7 +3517,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/pur-vs-eva</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/pur-vs-eva"/>
@@ -3529,7 +3529,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/vakuumheber-holz</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/vakuumheber-holz"/>
@@ -3541,7 +3541,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/service</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/service"/>
@@ -3553,7 +3553,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de"/>
@@ -3565,7 +3565,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric"/>
@@ -3577,7 +3577,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/crane-rail-systems</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme"/>
@@ -3589,7 +3589,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/crane-rail-systems/fachwerksbruecke-2d</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-2d"/>
@@ -3601,7 +3601,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/crane-rail-systems/fachwerksbruecke-3d</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-3d"/>
@@ -3613,7 +3613,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/crane-rail-systems/ssk-saeulenschwenkkran</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/ssk-saeulenschwenkkran"/>
@@ -3625,7 +3625,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/crane-rail-systems/ssy-schienensystem</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/ssy-schienensystem"/>
@@ -3637,7 +3637,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/door-handling</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling"/>
@@ -3649,7 +3649,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/door-handling/csf-industrial-turen</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/csf-industrial-turen"/>
@@ -3661,7 +3661,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/door-handling/drx</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/drx"/>
@@ -3673,7 +3673,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/door-handling/tmp</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/tmp"/>
@@ -3685,7 +3685,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/feeding-systems</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/beschickung"/>
@@ -3697,7 +3697,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/feeding-systems/lcv-performance</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/beschickung/lcv-performance"/>
@@ -3709,7 +3709,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/labeling</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/labeling"/>
@@ -3721,7 +3721,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/labeling/lps</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/labeling/lps"/>
@@ -3733,7 +3733,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/nesting-picker</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/nesting-picker"/>
@@ -3745,7 +3745,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/nesting-picker/nst</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/nesting-picker/nst"/>
@@ -3757,7 +3757,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/panel-storage</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager"/>
@@ -3769,7 +3769,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/panel-storage/csf-industrial</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-industrial"/>
@@ -3781,7 +3781,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/panel-storage/csf-multilevel</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-multilevel"/>
@@ -3793,7 +3793,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/panel-storage/csf-professional</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-professional"/>
@@ -3805,7 +3805,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/panel-storage/sonderanwendungen</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/sonderanwendungen"/>
@@ -3817,7 +3817,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/parts-buffer</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/teilepuffer"/>
@@ -3829,7 +3829,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/parts-buffer/pbx</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/teilepuffer/pbx"/>
@@ -3841,7 +3841,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/return-systems</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme"/>
@@ -3853,7 +3853,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/return-systems/rts-compact</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-compact"/>
@@ -3865,7 +3865,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/return-systems/rts-industrial</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-industrial"/>
@@ -3877,7 +3877,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/return-systems/rts-professional</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-professional"/>
@@ -3889,7 +3889,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/return-systems/teilehandling</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/teilehandling"/>
@@ -3901,7 +3901,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/special-lifters</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete"/>
@@ -3913,7 +3913,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/special-lifters/ngr-needlegripper</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/ngr-needlegripper"/>
@@ -3925,7 +3925,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/special-lifters/rwl-racklifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/rwl-racklifter"/>
@@ -3937,7 +3937,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/special-lifters/swl-griplifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/swl-griplifter"/>
@@ -3949,7 +3949,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/special-lifters/swl-planklifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/swl-planklifter"/>
@@ -3961,7 +3961,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/special-lifters/uwl-5</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/uwl-5"/>
@@ -3973,7 +3973,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/special-traverses</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen"/>
@@ -3985,7 +3985,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/special-traverses/blech-plexiglas-traverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/blech-plexiglas-traverse"/>
@@ -3997,7 +3997,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/special-traverses/duennplattentraverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/duennplattentraverse"/>
@@ -4009,7 +4009,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/special-traverses/tuerentraverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/tuerentraverse"/>
@@ -4021,7 +4021,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/vacuum-lifters-uniwood</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood"/>
@@ -4033,7 +4033,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/vacuum-lifters-uniwood/uwl-1</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1"/>
@@ -4045,7 +4045,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/vacuum-lifters-uniwood/uwl-1s</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1s"/>
@@ -4057,7 +4057,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/vacuum-lifters-uniwood/uwl-3</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3"/>
@@ -4069,7 +4069,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/vacuum-lifters-uniwood/uwl-3j</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3j"/>
@@ -4081,7 +4081,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric/vacuum-lifters-uniwood/uwl-3s</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3s"/>
@@ -4093,7 +4093,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/contact</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/kontakt"/>
@@ -4105,7 +4105,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/faq</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/faq"/>
@@ -4117,7 +4117,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/financing</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/finanzierung"/>
@@ -4129,7 +4129,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat"/>
@@ -4141,7 +4141,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat/carcass-presses</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/korpuspressen"/>
@@ -4225,7 +4225,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat/corner-hinge-machines</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/ecklager-bohrmaschinen"/>
@@ -4261,7 +4261,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat/dowel-boring-machines</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/duebelbohrmaschinen"/>
@@ -4297,7 +4297,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat/dowel-inserters-doors-windows</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/duebeleintreibmaschinen-tueren-fenster"/>
@@ -4345,7 +4345,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat/drill-glue-dowel-inserting-machines</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/bohr-beleim-duebeleintreibmaschinen"/>
@@ -4405,7 +4405,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat/fitting-boring-machines</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/beschlaege-bohrmaschinen"/>
@@ -4573,7 +4573,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat/frame-dowel-machines</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/rahmenduebel-maschinen"/>
@@ -4621,7 +4621,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat/gluing-systems</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/beleimmaschinen"/>
@@ -4657,7 +4657,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat/machining-centers</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/bearbeitungszentren"/>
@@ -4681,7 +4681,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat/row-boring-machines</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/lochreihenbohrmaschinen"/>
@@ -4717,7 +4717,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/choose-edgebander</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen"/>
@@ -4729,7 +4729,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/funding-woodworking-machines-cz-2026</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026"/>
@@ -4740,7 +4740,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/panel-saw-aluminium-vs-wood</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz"/>
@@ -4752,7 +4752,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/pur-vs-eva</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/pur-vs-eva"/>
@@ -4764,7 +4764,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/vacuum-lifter-wood</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/vakuumheber-holz"/>
@@ -4776,7 +4776,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/warehouse-automation</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/lagerautomatisierung"/>
@@ -4788,7 +4788,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ima-schelling</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ima-schelling"/>
@@ -4800,7 +4800,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/imprint</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/impressum"/>
@@ -4812,7 +4812,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/mayer</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer"/>
@@ -4824,7 +4824,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/mayer/horizontal-panel-saws</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/horizontale-plattensaegen"/>
@@ -4884,7 +4884,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/mayer/industrial-solutions</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/industrieloesungen"/>
@@ -4908,7 +4908,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/mayer/panel-saws-aluminium-plastics</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff"/>
@@ -4992,7 +4992,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott"/>
@@ -5004,7 +5004,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/edgebanding-machines</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen"/>
@@ -5100,7 +5100,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/gluing-technology</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie"/>
@@ -5136,7 +5136,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/return-systems</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme"/>
@@ -5184,7 +5184,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/privacy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/datenschutz"/>
@@ -5196,7 +5196,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/service</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/service"/>
@@ -5208,7 +5208,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/solutions</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/loesungen"/>
@@ -5220,7 +5220,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/terms</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/agb"/>
@@ -5232,7 +5232,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/used-machines</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gebrauchtmaschinen"/>
@@ -5328,7 +5328,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de"/>
@@ -5340,7 +5340,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/adatvedelem</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/datenschutz"/>
@@ -5352,7 +5352,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/altalanos-szerzodesi-feltetelek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/agb"/>
@@ -5364,7 +5364,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric"/>
@@ -5376,7 +5376,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/adagolo-rendszer</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/beschickung"/>
@@ -5388,7 +5388,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/adagolo-rendszer/lcv-performance</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/beschickung/lcv-performance"/>
@@ -5400,7 +5400,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/ajto-kezeles</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling"/>
@@ -5412,7 +5412,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/ajto-kezeles/csf-industrial-turen</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/csf-industrial-turen"/>
@@ -5424,7 +5424,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/ajto-kezeles/drx</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/drx"/>
@@ -5436,7 +5436,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/ajto-kezeles/tmp</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/tmp"/>
@@ -5448,7 +5448,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/cimkenyomtatas</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/labeling"/>
@@ -5460,7 +5460,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/cimkenyomtatas/lps</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/labeling/lps"/>
@@ -5472,7 +5472,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/daruzo-sinrendszerek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme"/>
@@ -5484,7 +5484,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/daruzo-sinrendszerek/fachwerksbruecke-2d</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-2d"/>
@@ -5496,7 +5496,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/daruzo-sinrendszerek/fachwerksbruecke-3d</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-3d"/>
@@ -5508,7 +5508,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/daruzo-sinrendszerek/ssk-saeulenschwenkkran</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/ssk-saeulenschwenkkran"/>
@@ -5520,7 +5520,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/daruzo-sinrendszerek/ssy-schienensystem</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/ssy-schienensystem"/>
@@ -5532,7 +5532,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/lapraktarozas</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager"/>
@@ -5544,7 +5544,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/lapraktarozas/csf-industrial</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-industrial"/>
@@ -5556,7 +5556,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/lapraktarozas/csf-multilevel</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-multilevel"/>
@@ -5568,7 +5568,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/lapraktarozas/csf-professional</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-professional"/>
@@ -5580,7 +5580,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/lapraktarozas/sonderanwendungen</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/sonderanwendungen"/>
@@ -5592,7 +5592,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/nesting-picker</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/nesting-picker"/>
@@ -5604,7 +5604,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/nesting-picker/nst</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/nesting-picker/nst"/>
@@ -5616,7 +5616,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/reszpuffer</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/teilepuffer"/>
@@ -5628,7 +5628,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/reszpuffer/pbx</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/teilepuffer/pbx"/>
@@ -5640,7 +5640,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/specialis-emelok</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete"/>
@@ -5652,7 +5652,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/specialis-emelok/ngr-needlegripper</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/ngr-needlegripper"/>
@@ -5664,7 +5664,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/specialis-emelok/rwl-racklifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/rwl-racklifter"/>
@@ -5676,7 +5676,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/specialis-emelok/swl-griplifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/swl-griplifter"/>
@@ -5688,7 +5688,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/specialis-emelok/swl-planklifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/swl-planklifter"/>
@@ -5700,7 +5700,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/specialis-emelok/uwl-5</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/uwl-5"/>
@@ -5712,7 +5712,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/specialis-keresztgerendak</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen"/>
@@ -5724,7 +5724,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/specialis-keresztgerendak/blech-plexiglas-traverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/blech-plexiglas-traverse"/>
@@ -5736,7 +5736,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/specialis-keresztgerendak/duennplattentraverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/duennplattentraverse"/>
@@ -5748,7 +5748,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/specialis-keresztgerendak/tuerentraverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/tuerentraverse"/>
@@ -5760,7 +5760,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/vakuumemelok-uniwood</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood"/>
@@ -5772,7 +5772,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/vakuumemelok-uniwood/uwl-1</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1"/>
@@ -5784,7 +5784,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/vakuumemelok-uniwood/uwl-1s</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1s"/>
@@ -5796,7 +5796,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/vakuumemelok-uniwood/uwl-3</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3"/>
@@ -5808,7 +5808,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/vakuumemelok-uniwood/uwl-3j</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3j"/>
@@ -5820,7 +5820,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/vakuumemelok-uniwood/uwl-3s</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3s"/>
@@ -5832,7 +5832,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/visszafuto-rendszer</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme"/>
@@ -5844,7 +5844,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/visszafuto-rendszer/rts-compact</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-compact"/>
@@ -5856,7 +5856,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/visszafuto-rendszer/rts-industrial</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-industrial"/>
@@ -5868,7 +5868,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/visszafuto-rendszer/rts-professional</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-professional"/>
@@ -5880,7 +5880,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric/visszafuto-rendszer/teilehandling</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/teilehandling"/>
@@ -5892,7 +5892,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/faq</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/faq"/>
@@ -5904,7 +5904,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/finanszirozas</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/finanzierung"/>
@@ -5916,7 +5916,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat"/>
@@ -5928,7 +5928,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat/csapozo-gepek-ajto-ablak</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/duebeleintreibmaschinen-tueren-fenster"/>
@@ -5976,7 +5976,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat/furo-ragaszto-csapozo-gepek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/bohr-beleim-duebeleintreibmaschinen"/>
@@ -6036,7 +6036,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat/keretpresek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/rahmenduebel-maschinen"/>
@@ -6084,7 +6084,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat/korpusz-presek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/korpuspressen"/>
@@ -6168,7 +6168,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat/megmunkalo-kozpontok</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/bearbeitungszentren"/>
@@ -6192,7 +6192,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat/ragaszto-rendszer</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/beleimmaschinen"/>
@@ -6228,7 +6228,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat/sarokpant-furo-gepek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/ecklager-bohrmaschinen"/>
@@ -6264,7 +6264,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat/sorozatfuro-gepek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/lochreihenbohrmaschinen"/>
@@ -6300,7 +6300,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat/tiplifuro-gepek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/duebelbohrmaschinen"/>
@@ -6336,7 +6336,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat/vasalatfuro-gepek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/beschlaege-bohrmaschinen"/>
@@ -6504,7 +6504,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/hasznalt-gepek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gebrauchtmaschinen"/>
@@ -6600,7 +6600,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ima-schelling</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ima-schelling"/>
@@ -6612,7 +6612,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/impresszum</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/impressum"/>
@@ -6624,7 +6624,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/kapcsolat</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/kontakt"/>
@@ -6636,7 +6636,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/mayer</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer"/>
@@ -6648,7 +6648,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/mayer/aluminium-muanyag-darabolo-gep</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff"/>
@@ -6732,7 +6732,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/mayer/ipari-megoldasok</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/industrieloesungen"/>
@@ -6756,7 +6756,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/mayer/tablafeloszto-gep</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/horizontale-plattensaegen"/>
@@ -6816,7 +6816,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/megoldasok</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/loesungen"/>
@@ -6828,7 +6828,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott"/>
@@ -6840,7 +6840,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/elzarogepek</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen"/>
@@ -6936,7 +6936,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/ragasztasi-technologia</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie"/>
@@ -6972,7 +6972,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/visszafutoszalagok</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme"/>
@@ -7020,7 +7020,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/szerviz</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/service"/>
@@ -7032,7 +7032,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/elzarogep-valasztas</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen"/>
@@ -7044,7 +7044,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/formatizalo-furesz-aluminium-vs-fa</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz"/>
@@ -7056,7 +7056,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/pur-vs-eva</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/pur-vs-eva"/>
@@ -7068,7 +7068,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/raktarautomatizalas</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/lagerautomatisierung"/>
@@ -7080,7 +7080,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/vakuumemelo-fa</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/vakuumheber-holz"/>
@@ -7092,7 +7092,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de"/>
@@ -7104,7 +7104,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric"/>
@@ -7116,7 +7116,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/buffer-dielov</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/teilepuffer"/>
@@ -7128,7 +7128,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/buffer-dielov/pbx</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/teilepuffer/pbx"/>
@@ -7140,7 +7140,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/handling-dveri</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling"/>
@@ -7152,7 +7152,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/handling-dveri/csf-industrial-turen</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/csf-industrial-turen"/>
@@ -7164,7 +7164,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/handling-dveri/drx</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/drx"/>
@@ -7176,7 +7176,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/handling-dveri/tmp</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/tuerenhandling/tmp"/>
@@ -7188,7 +7188,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/navratove-systemy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme"/>
@@ -7200,7 +7200,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/navratove-systemy/rts-compact</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-compact"/>
@@ -7212,7 +7212,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/navratove-systemy/rts-industrial</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-industrial"/>
@@ -7224,7 +7224,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/navratove-systemy/rts-professional</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/rts-professional"/>
@@ -7236,7 +7236,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/navratove-systemy/teilehandling</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/returnsysteme/teilehandling"/>
@@ -7248,7 +7248,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/nesting-picker</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/nesting-picker"/>
@@ -7260,7 +7260,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/nesting-picker/nst</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/nesting-picker/nst"/>
@@ -7272,7 +7272,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/podavacie-systemy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/beschickung"/>
@@ -7284,7 +7284,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/podavacie-systemy/lcv-performance</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/beschickung/lcv-performance"/>
@@ -7296,7 +7296,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/skladovanie-dosok</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager"/>
@@ -7308,7 +7308,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/skladovanie-dosok/csf-industrial</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-industrial"/>
@@ -7320,7 +7320,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/skladovanie-dosok/csf-multilevel</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-multilevel"/>
@@ -7332,7 +7332,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/skladovanie-dosok/csf-professional</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/csf-professional"/>
@@ -7344,7 +7344,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/skladovanie-dosok/sonderanwendungen</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/flaechenlager/sonderanwendungen"/>
@@ -7356,7 +7356,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/specialne-traverzy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen"/>
@@ -7368,7 +7368,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/specialne-traverzy/blech-plexiglas-traverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/blech-plexiglas-traverse"/>
@@ -7380,7 +7380,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/specialne-traverzy/duennplattentraverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/duennplattentraverse"/>
@@ -7392,7 +7392,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/specialne-traverzy/tuerentraverse</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/sondertraversen/tuerentraverse"/>
@@ -7404,7 +7404,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/specialne-zdvihaky</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete"/>
@@ -7416,7 +7416,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/specialne-zdvihaky/ngr-needlegripper</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/ngr-needlegripper"/>
@@ -7428,7 +7428,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/specialne-zdvihaky/rwl-racklifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/rwl-racklifter"/>
@@ -7440,7 +7440,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/specialne-zdvihaky/swl-griplifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/swl-griplifter"/>
@@ -7452,7 +7452,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/specialne-zdvihaky/swl-planklifter</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/swl-planklifter"/>
@@ -7464,7 +7464,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/specialne-zdvihaky/uwl-5</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/spezialhebegeraete/uwl-5"/>
@@ -7476,7 +7476,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/stitkovanie</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/labeling"/>
@@ -7488,7 +7488,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/stitkovanie/lps</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/labeling/lps"/>
@@ -7500,7 +7500,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/vakuove-zdvihaky-uniwood</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood"/>
@@ -7512,7 +7512,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/vakuove-zdvihaky-uniwood/uwl-1</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1"/>
@@ -7524,7 +7524,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/vakuove-zdvihaky-uniwood/uwl-1s</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-1s"/>
@@ -7536,7 +7536,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/vakuove-zdvihaky-uniwood/uwl-3</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3"/>
@@ -7548,7 +7548,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/vakuove-zdvihaky-uniwood/uwl-3j</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3j"/>
@@ -7560,7 +7560,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/vakuove-zdvihaky-uniwood/uwl-3s</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/vakuumheber-uniwood/uwl-3s"/>
@@ -7572,7 +7572,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/zeriavove-kolajnicove-systemy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme"/>
@@ -7584,7 +7584,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/zeriavove-kolajnicove-systemy/fachwerksbruecke-2d</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-2d"/>
@@ -7596,7 +7596,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/zeriavove-kolajnicove-systemy/fachwerksbruecke-3d</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/fachwerksbruecke-3d"/>
@@ -7608,7 +7608,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/zeriavove-kolajnicove-systemy/ssk-saeulenschwenkkran</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/ssk-saeulenschwenkkran"/>
@@ -7620,7 +7620,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric/zeriavove-kolajnicove-systemy/ssy-schienensystem</loc>
-    <lastmod>2026-08-21T09:38:28+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric/kran-schienensysteme/ssy-schienensystem"/>
@@ -7632,7 +7632,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/faq</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/faq"/>
@@ -7644,7 +7644,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/financovanie</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/finanzierung"/>
@@ -7656,7 +7656,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat"/>
@@ -7668,7 +7668,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat/kolkovacie-stroje-dvere-okna</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/duebeleintreibmaschinen-tueren-fenster"/>
@@ -7716,7 +7716,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat/kolkovacie-vrtacky</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/duebelbohrmaschinen"/>
@@ -7752,7 +7752,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat/korpusove-lisy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/korpuspressen"/>
@@ -7836,7 +7836,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat/lepiace-systemy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/beleimmaschinen"/>
@@ -7872,7 +7872,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat/obrabacie-centra</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/bearbeitungszentren"/>
@@ -7896,7 +7896,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat/radove-vrtacky</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/lochreihenbohrmaschinen"/>
@@ -7932,7 +7932,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat/ramove-vrtacky</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/rahmenduebel-maschinen"/>
@@ -7980,7 +7980,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat/vrtacie-lepiace-kolkovacie-stroje</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/bohr-beleim-duebeleintreibmaschinen"/>
@@ -8040,7 +8040,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat/vrtacky-na-kovanie</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/beschlaege-bohrmaschinen"/>
@@ -8208,7 +8208,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat/vrtacky-na-zavesy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat/ecklager-bohrmaschinen"/>
@@ -8244,7 +8244,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ima-schelling</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ima-schelling"/>
@@ -8256,7 +8256,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/imprint</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/impressum"/>
@@ -8268,7 +8268,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/kontakt</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/kontakt"/>
@@ -8280,7 +8280,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/mayer</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer"/>
@@ -8292,7 +8292,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/mayer/formatovacie-pily-hlinik-plasty</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/plattensaegen-aluminium-kunststoff"/>
@@ -8376,7 +8376,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/mayer/horizontalne-formatovacie-pily</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/horizontale-plattensaegen"/>
@@ -8436,7 +8436,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/mayer/priemyselne-riesenia</loc>
-    <lastmod>2026-08-24T23:15:32+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer/industrieloesungen"/>
@@ -8460,7 +8460,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/obchodne-podmienky</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/agb"/>
@@ -8472,7 +8472,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ochrana-osobnych-udajov</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/datenschutz"/>
@@ -8484,7 +8484,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott"/>
@@ -8496,7 +8496,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/lepiaca-technologia</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie"/>
@@ -8532,7 +8532,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/olepovacky-hran</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen"/>
@@ -8628,7 +8628,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/spetne-dopravnikove-systemy</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme"/>
@@ -8676,7 +8676,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/pouzite-stroje</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gebrauchtmaschinen"/>
@@ -8772,7 +8772,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/riesenia</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/loesungen"/>
@@ -8784,7 +8784,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/servis</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/service"/>
@@ -8796,7 +8796,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/automatizacia-skladu</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/lagerautomatisierung"/>
@@ -8808,7 +8808,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/dotacie-stroje-cz-2026</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026"/>
@@ -8819,7 +8819,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/formatovacia-pila-hlinik-vs-drevo</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz"/>
@@ -8831,7 +8831,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/pur-vs-eva</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/pur-vs-eva"/>
@@ -8843,7 +8843,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/vakuovy-zdvihak-drevo</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/vakuumheber-holz"/>
@@ -8855,7 +8855,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/vyber-olepovacky-hran</loc>
-    <lastmod>2026-08-24T23:04:57+00:00</lastmod>
+    <lastmod>2026-08-24T23:19:14+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen"/>
