@@ -6,6 +6,7 @@ import { buildMailto } from '../../lib/email';
 import { trackEvent } from '../../lib/analytics';
 import { HERO_FUNDING } from '../../data/heroFunding';
 import { usePrefersReducedMotion } from '../../hooks/use-prefers-reduced-motion';
+import InnovationDaysLogo from './InnovationDaysLogo';
 
 const SLIDE_COUNT = 3;
 const AUTO_MS = 7000;
@@ -14,14 +15,12 @@ const OTT_IMAGE =
   'https://www.ottpaul.com/fileadmin/_processed_/d/7/csm_translift_storm_system_4f9149b8e4.jpg';
 const VACUUM_IMAGE =
   'https://www.barbaric.at/fileadmin/_processed_/2/9/csm_UWL3-0364_web_7eeaa62d8e.png';
-const HUNGARY_IMAGE =
-  'https://wunderbaresungarn.de/wp-content/uploads/2020/08/balaton-felvidek-szet-gyorgy-hegy-kapolna-keszthelyi-hegyseg-tapolcai-medence-2020aprilis-josef-jordan4-csodalatosbalaton.jpg';
 
 /**
  * Startseiten-Hero als automatische Slideshow.
  * Slide 1: dunkler Hero (Technologie/Lösungen).
  * Slide 2: Barbaric-Vakuumheber – Vollbild-Hintergrundbild, helle Schrift-Zone.
- * Slide 3: „Asamer goes Hungary".
+ * Slide 3: „Innovationstage 2026" – Event-Logo je Sprache + Anmeldung.
  * Animation: horizontaler Swipe (Track) + Content-Fade/Rise + langsamer
  * Ken-Burns-Zoom auf den Bildern. Rein CSS (kein GSAP). Läuft immer automatisch;
  * bei prefers-reduced-motion ohne Bewegung (harter Schnitt, alles sichtbar).
@@ -47,9 +46,9 @@ const HeroSlideshow = () => {
     'office@asamer.net',
     tr('Beratung Vakuumheber Barbaric', 'Vacuum lifter consultation', 'Konzultace vakuový zvedák Barbaric')
   );
-  const hungaryInquiryMail = buildMailto(
-    'max@asamer.net',
-    tr('Anfrage – Asamer goes Hungary', 'Inquiry – Asamer goes Hungary', 'Poptávka – Asamer goes Hungary')
+  const eventInquiryMail = buildMailto(
+    'eli@asamer.net',
+    tr('Anmeldung Innovationstage 2026', 'Registration Innovation Days 2026', 'Registrace Inovační dny 2026')
   );
 
   const heroLines = [
@@ -66,12 +65,37 @@ const HeroSlideshow = () => {
     hu: { line1: 'Támogatjuk az Ön munkafolyamatait', accent: 'Barbaric', post: ' vákuumos anyagmozgatással.' },
   } as const)[lang];
 
-  const hu3 = ({
-    de: { eyebrow: 'Asamer · Neu in Ungarn', body: 'Wir bauen ein neues Vertriebsnetzwerk in Ungarn auf – für bestmöglichen Service, Support und das passende Maschinenportfolio. Wir freuen uns auf Ihre Anfrage.', cta: 'Anfrage senden' },
-    en: { eyebrow: 'Asamer · Now in Hungary', body: 'We’re building a new sales network in Hungary – for the best possible service, support and machine portfolio. We look forward to your inquiry.', cta: 'Send inquiry' },
-    cz: { eyebrow: 'Asamer · Nově v Maďarsku', body: 'Budujeme novou prodejní síť v Maďarsku – pro nejlepší možný servis, podporu a portfolio strojů. Těšíme se na vaši poptávku.', cta: 'Odeslat poptávku' },
-    sk: { eyebrow: 'Asamer · Novo v Maďarsku', body: 'Budujeme novú predajnú sieť v Maďarsku – pre čo najlepší servis, podporu a portfólio strojov. Tešíme sa na váš dopyt.', cta: 'Odoslať dopyt' },
-    hu: { eyebrow: 'Asamer · Már Magyarországon', body: 'Új értékesítési hálózatot építünk Magyarországon – a lehető legjobb szerviz, támogatás és gépportfólió érdekében. Várjuk megkeresését.', cta: 'Ajánlatkérés' },
+  const ev = ({
+    de: {
+      eyebrow: 'Asamer · Innovationstage 2026',
+      headline: 'Willkommen zu unseren Innovationstagen.',
+      body: 'Erleben Sie Holz, Technik und Zukunft live bei uns vor Ort. Melden Sie sich hier bei uns an – wir freuen uns auf Ihren Besuch.',
+      cta: 'Jetzt anmelden',
+    },
+    en: {
+      eyebrow: 'Asamer · Innovation Days 2026',
+      headline: 'Welcome to our Innovation Days.',
+      body: 'Experience wood, technology and the future live on site. Register with us here – we look forward to your visit.',
+      cta: 'Register now',
+    },
+    cz: {
+      eyebrow: 'Asamer · Inovační dny 2026',
+      headline: 'Vítejte na našich Inovačních dnech.',
+      body: 'Zažijte dřevo, techniku a budoucnost naživo u nás. Přihlaste se u nás zde – těšíme se na vaši návštěvu.',
+      cta: 'Přihlásit se',
+    },
+    sk: {
+      eyebrow: 'Asamer · Inovačné dni 2026',
+      headline: 'Vitajte na našich Inovačných dňoch.',
+      body: 'Zažite drevo, techniku a budúcnosť naživo u nás. Prihláste sa u nás tu – tešíme sa na vašu návštevu.',
+      cta: 'Prihlásiť sa',
+    },
+    hu: {
+      eyebrow: 'Asamer · Innovációs Napok 2026',
+      headline: 'Üdvözöljük Innovációs Napjainkon.',
+      body: 'Tapasztalja meg élőben a fát, a technikát és a jövőt nálunk. Jelentkezzen nálunk itt – várjuk látogatását.',
+      cta: 'Jelentkezem',
+    },
   } as const)[lang];
 
   const [active, setActive] = useState(0);
@@ -223,33 +247,41 @@ const HeroSlideshow = () => {
           </div>
         </div>
 
-        {/* ── Slide 3 — Asamer goes Hungary ── */}
+        {/* ── Slide 3 — Innovationstage 2026 ── */}
         <div className="relative w-full shrink-0 flex items-center">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className={kenBurns(2)} style={kenBurnsStyle(HUNGARY_IMAGE)} />
-            <div className="hero-overlay-vertical absolute inset-0" />
-            <div className="hero-overlay-horizontal absolute inset-0" />
-            <div className="absolute inset-0 grid-pattern opacity-40" />
+          <div className="absolute inset-0 overflow-hidden bg-[#eef1f6]">
+            <div className="absolute inset-0 bg-[radial-gradient(130%_100%_at_12%_0%,#ffffff_0%,#f2f4f8_50%,#e3e7ee_100%)]" />
+            {/* dezenter gelber Lichtkegel in Event-Farbe */}
+            <div className="absolute -top-1/3 right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#EFD500]/15 blur-3xl" />
           </div>
 
           <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(2)}`}>
             <div className="max-w-3xl">
-              <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-white/80 font-medium mb-5">
-                {hu3.eyebrow}
+              <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-primary font-medium mb-5">
+                {ev.eyebrow}
               </span>
-              <h2 className="font-display font-bold text-[clamp(2.25rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-white mb-5 sm:mb-6">
-                Asamer goes <span className="text-primary">Hungary</span>.
+
+              <InnovationDaysLogo lang={lang} className="mb-7 sm:mb-9" />
+
+              <h2 className="font-display font-bold text-[clamp(1.75rem,5vw,3.5rem)] leading-[1.08] tracking-[-0.02em] text-[#0f172a] mb-4 sm:mb-5">
+                {ev.headline}
               </h2>
-              <p className="text-base sm:text-lg md:text-2xl text-white/70 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
-                {hu3.body}
+              <p className="text-base sm:text-lg text-[#0f172a]/70 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+                {ev.body}
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
                 <a
-                  href={hungaryInquiryMail}
+                  href={eventInquiryMail}
                   className="btn-primary-dark"
-                  onClick={() => trackEvent('hero_contact_click', { placement: 'home_hero_hungary', lang, target: 'max@asamer.net' })}
+                  onClick={() =>
+                    trackEvent('hero_contact_click', {
+                      placement: 'home_hero_innovationstage',
+                      lang,
+                      target: 'eli@asamer.net',
+                    })
+                  }
                 >
-                  {hu3.cta}
+                  {ev.cta}
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
