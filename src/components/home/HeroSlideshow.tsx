@@ -67,34 +67,39 @@ const HeroSlideshow = () => {
 
   const ev = ({
     de: {
-      eyebrow: 'Asamer · Innovationstage 2026',
+      eyebrow: 'Asamer · Innovationstage 2026 bei OTT Paul',
       headline: 'Willkommen zu unseren Innovationstagen.',
-      body: 'Erleben Sie Holz, Technik und Zukunft live bei uns vor Ort. Melden Sie sich hier bei uns an – wir freuen uns auf Ihren Besuch.',
+      body: 'Wir laden Sie herzlich zu den Innovationstagen 2026 bei OTT Paul ein. Erleben Sie Holz, Technik und Zukunft live vor Ort – melden Sie sich hier bei uns an.',
       cta: 'Jetzt anmelden',
+      teaser: 'Wir laden Sie zu den Innovationstagen 2026 bei OTT Paul ein',
     },
     en: {
-      eyebrow: 'Asamer · Innovation Days 2026',
+      eyebrow: 'Asamer · Innovation Days 2026 at OTT Paul',
       headline: 'Welcome to our Innovation Days.',
-      body: 'Experience wood, technology and the future live on site. Register with us here – we look forward to your visit.',
+      body: 'We warmly invite you to the Innovation Days 2026 at OTT Paul. Experience wood, technology and the future live on site – register with us here.',
       cta: 'Register now',
+      teaser: 'We invite you to the Innovation Days 2026 at OTT Paul',
     },
     cz: {
-      eyebrow: 'Asamer · Inovační dny 2026',
+      eyebrow: 'Asamer · Inovační dny 2026 u OTT Paul',
       headline: 'Vítejte na našich Inovačních dnech.',
-      body: 'Zažijte dřevo, techniku a budoucnost naživo u nás. Přihlaste se u nás zde – těšíme se na vaši návštěvu.',
+      body: 'Srdečně vás zveme na Inovační dny 2026 u OTT Paul. Zažijte dřevo, techniku a budoucnost naživo – přihlaste se u nás zde.',
       cta: 'Přihlásit se',
+      teaser: 'Zveme vás na Inovační dny 2026 u OTT Paul',
     },
     sk: {
-      eyebrow: 'Asamer · Inovačné dni 2026',
+      eyebrow: 'Asamer · Inovačné dni 2026 u OTT Paul',
       headline: 'Vitajte na našich Inovačných dňoch.',
-      body: 'Zažite drevo, techniku a budúcnosť naživo u nás. Prihláste sa u nás tu – tešíme sa na vašu návštevu.',
+      body: 'Srdečne vás pozývame na Inovačné dni 2026 u OTT Paul. Zažite drevo, techniku a budúcnosť naživo – prihláste sa u nás tu.',
       cta: 'Prihlásiť sa',
+      teaser: 'Pozývame vás na Inovačné dni 2026 u OTT Paul',
     },
     hu: {
-      eyebrow: 'Asamer · Innovációs Napok 2026',
+      eyebrow: 'Asamer · Innovációs Napok 2026 az OTT Paulnál',
       headline: 'Üdvözöljük Innovációs Napjainkon.',
-      body: 'Tapasztalja meg élőben a fát, a technikát és a jövőt nálunk. Jelentkezzen nálunk itt – várjuk látogatását.',
+      body: 'Szeretettel meghívjuk Önt a 2026-os Innovációs Napokra az OTT Paulnál. Tapasztalja meg élőben a fát, a technikát és a jövőt – jelentkezzen nálunk itt.',
       cta: 'Jelentkezem',
+      teaser: 'Meghívjuk Önt a 2026-os Innovációs Napokra az OTT Paulnál',
     },
   } as const)[lang];
 
@@ -171,30 +176,45 @@ const HeroSlideshow = () => {
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
+
+              {/* Teaser auf Slide 2 — springt direkt zur Einladung */}
+              <button
+                type="button"
+                onClick={() => {
+                  setActive(1);
+                  trackEvent('hero_teaser_click', { placement: 'home_hero_innovationstage_teaser', lang });
+                }}
+                className="group mt-7 sm:mt-9 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2.5 text-left backdrop-blur-sm transition-colors hover:border-white/30 hover:bg-white/[0.12]"
+              >
+                <span className="h-2 w-2 shrink-0 rounded-full bg-[#EFD500]" />
+                <span className="text-xs sm:text-sm text-white/80">{ev.teaser}</span>
+                <ArrowRight className="w-4 h-4 shrink-0 text-white/50 transition-transform group-hover:translate-x-0.5" />
+              </button>
             </div>
           </div>
         </div>
 
         {/* ── Slide 2 — Innovationstage 2026 ── */}
         <div className="relative w-full shrink-0 flex items-center">
-          <div className="absolute inset-0 overflow-hidden bg-[#c9d1de]">
-            <div className="absolute inset-0 bg-[radial-gradient(130%_100%_at_12%_0%,#dee3ec_0%,#ced5e1_50%,#b9c2d1_100%)]" />
-            {/* gelber Lichtkegel in Event-Farbe – hebt die Logo-Unterzeile ab */}
-            <div className="absolute -top-1/3 right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#EFD500]/25 blur-3xl" />
+          <div className="absolute inset-0 overflow-hidden bg-[#0d1526]">
+            <div className="absolute inset-0 bg-[radial-gradient(130%_100%_at_12%_0%,#1c2942_0%,#101b30_55%,#070d18_100%)]" />
+            {/* gelber Lichtkegel in Event-Farbe */}
+            <div className="absolute -top-1/3 right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#EFD500]/10 blur-3xl" />
+            <div className="absolute inset-0 grid-pattern opacity-40" />
           </div>
 
-          <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(1)}`}>
+          <div className={`hero-event-dark relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(1)}`}>
             <div className="max-w-3xl">
-              <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-primary font-medium mb-5">
+              <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-[#EFD500] font-medium mb-5">
                 {ev.eyebrow}
               </span>
 
               <InnovationDaysLogo lang={lang} className="mb-7 sm:mb-9" />
 
-              <h2 className="font-display font-bold text-[clamp(1.75rem,5vw,3.5rem)] leading-[1.08] tracking-[-0.02em] text-[#0f172a] mb-4 sm:mb-5">
+              <h2 className="font-display font-bold text-[clamp(1.75rem,5vw,3.5rem)] leading-[1.08] tracking-[-0.02em] text-white mb-4 sm:mb-5">
                 {ev.headline}
               </h2>
-              <p className="text-base sm:text-lg text-[#0f172a]/70 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg text-white/70 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
                 {ev.body}
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">

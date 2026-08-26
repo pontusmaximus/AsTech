@@ -30,7 +30,7 @@ export const CONTENT_DATES: Partial<Record<SeoRouteKey, ContentDates>> = {
   guidePurVsEva: { published: '2026-04-08T09:00:22-07:00', modified: '2026-06-26T13:39:10+02:00' },
   guideVacuumLifter: { published: '2026-06-22T15:30:28+02:00', modified: '2026-06-26T13:39:10+02:00' },
   guideWarehouseAutomation: { published: '2026-04-08T09:00:22-07:00', modified: '2026-06-26T13:39:10+02:00' },
-  home: { published: '2026-02-24T00:06:04-08:00', modified: '2026-08-26T17:41:51+02:00' },
+  home: { published: '2026-02-24T00:06:04-08:00', modified: '2026-08-26T17:56:18+02:00' },
   imaSchelling: { published: '2026-04-24T11:50:03+02:00', modified: '2026-06-26T13:39:10+02:00' },
   imprint: { published: '2026-02-24T00:58:29-08:00', modified: '2026-06-26T13:39:10+02:00' },
   mayer: { published: '2026-02-24T00:06:04-08:00', modified: '2026-06-26T13:39:10+02:00' },

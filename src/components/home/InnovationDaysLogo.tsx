@@ -3,8 +3,9 @@ import type { Language } from '../../i18n';
 /**
  * Event-Logo „Innovationstage 2026" als Bild, Sprachzuordnung wie vom Kunden
  * vorgegeben: deutsches Logo für de/en, tschechisches für cz/sk, ungarisches
- * für hu. Die Logos liegen freigestellt als PNG mit Alphakanal vor, damit sie
- * auf jedem Slide-Hintergrund ohne sichtbaren weißen Kasten sitzen.
+ * für hu. Die PNGs sind freigestellt und in der Invers-Fassung abgelegt: weiße
+ * Wortmarke, Chevrons und Unterzeile im Event-Gelb. Auf dem dunklen Slide bleibt
+ * damit auch die gelbe Unterzeile lesbar — auf hellem Grund wäre sie es nicht.
  */
 
 type Variant = { src: string; alt: string };

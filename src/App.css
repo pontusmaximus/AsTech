@@ -791,6 +791,15 @@ html.theme-light .ima-dark-card .text-white\/50 {
   color: rgba(255, 255, 255, 0.55) !important;
 }
 
+/* Innovationstage-Slide liegt dauerhaft auf dunklem Grund — Textfarben im Light-Mode nicht umkehren */
+html.theme-light .hero-event-dark .text-white {
+  color: #ffffff !important;
+}
+
+html.theme-light .hero-event-dark .text-white\/70 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
 html.theme-light .text-white {
   color: #0f172a !important;
 }
