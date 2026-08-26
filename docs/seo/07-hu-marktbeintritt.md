@@ -222,18 +222,20 @@ Titles/Descriptions und der terminologische Teil von Phase C.
 | Titles/Descriptions | 12 Seiten mit den recherchierten HU-Werten aus Blatt 4 (10 SEO-Routen + SSK/SSY). |
 | Terminologie | 10 falsche HU-Einträge korrigiert, 8 ergänzt. HU-Seitentext-Abdeckung 5,4 % → 6,6 %. |
 | Tschechische Förderseite | `/hu/utmutato/tamogatasok-csehorszag-2026` → 301 auf `/hu/finanszirozas`. Dafür kann eine Route jetzt Sprachen ausschließen (`excludeLangs`). |
+| **Phase C** — HU-Seitentexte | Alle **683** fehlenden Schlüssel in `pageHuTranslations` ergänzt. Abdeckung 6,6 % → **100 %**. Maschinell übersetzt, an Blatt 6 ausgerichtet — Lektorat steht aus. |
 
 ### Akzeptanzkriterien
 
 - [x] `npm run seo:404-safety -- --fail` — **3.284 Pfade, 0 Lücken** (615 neue Kategorie-Slug-Varianten)
-- [x] `npm run seo:i18n` — HU-Seitentext-Abdeckung **5,4 % → 6,6 %**
+- [x] `npm run seo:i18n` — HU-Seitentext-Abdeckung **5,4 % → 100 %**
 - [x] Alle 301-Regeln aus Phase B im generierten `vercel.json` nachweisbar
-- [ ] **`npm run seo:audit` — `language`-Fehler sinkt** — steigt stattdessen von 64 auf 87.
-      Kein Rückschritt: die 135 neuen Seiten haben denselben Wörterbuch-Rückfall wie alle
-      anderen. Der Nenner ist gewachsen, die Ursache unverändert.
-- [ ] **Keine H1 auf einer `/hu/`-Seite enthält deutsche oder englische Wörter** — für die
-      Kategorieseiten erfüllt (H1 = ungarische Kategoriebezeichnung), für die übrigen offen,
-      solange die 683 Seitentext-Schlüssel fehlen.
+- [x] **`npm run seo:audit` — `language`-Fehler sinkt** — 87 → **74**, und die Verteilung
+      hat sich geändert: von den 74 liegen **73 auf `/sk/`**, genau eine auf `/hu/`
+      (`/hu/utmutato/elzarogep-valasztas`). Vor Phase C war der Befund umgekehrt. Die
+      verbleibende HU-Seite zieht ihren Text aus `edgebanderGuide.ts` — Ebene A, nicht
+      das Wörterbuch (siehe unten).
+- [x] **Keine H1 auf einer `/hu/`-Seite enthält deutsche oder englische Wörter** — die
+      H1en kommen aus `tr()` bzw. den Kategoriebezeichnungen und sind vollständig ungarisch.
 
 ### Zwei Befunde, die die Recherche nicht hatte
 
@@ -252,7 +254,10 @@ Titles/Descriptions und der terminologische Teil von Phase C.
 
 ### Nicht umgesetzt, bewusst
 
-- **Phase C, der große Teil** — 683 fehlende HU-Seitentexte. Übersetzungsarbeit, keine Mechanik.
+- **115 HU-Einträge auf Ebene A** (`MultiLangText` in den Datenmodulen) — nicht Teil der
+  683. Verteilung: `edgebanderGuide` 49, `ratgeberFaqHub · FAQ` 36,
+  `barbaricSeoContent · Kategorien` 30. Die 49 im Ratgeber sind der Grund, warum
+  `/hu/utmutato/elzarogep-valasztas` als einzige HU-Seite noch englisch dominiert.
 - **Phase D** — die 10 Ratgeberthemen aus Blatt 5. Redaktion.
 - **Phase E** — Service-Silo. Die Recherche selbst setzt einen Vorbehalt (ungarische
   Reaktionszeit muss belegbar sein) — das ist eine Geschäftsentscheidung.
@@ -263,9 +268,11 @@ Titles/Descriptions und der terminologische Teil von Phase C.
 
 ## Für Max
 
-- **Übersetzung beauftragen** — 683 HU-Seitentexte. Das ist jetzt der einzige Grund, warum
-  die ungarischen Seiten noch englischen Fließtext zeigen. Vorlage: `i18n-luecken.md`,
-  Terminologie: Blatt 6 der Recherche.
+- **Lektorat der 683 HU-Seitentexte** — sie sind übersetzt und ausgeliefert, aber
+  maschinell erzeugt. Ein ungarischer Muttersprachler sollte sie gegenlesen, bevor
+  Kampagnenbudget auf die Seiten läuft. Terminologie: Blatt 6 der Recherche.
+- **115 Ebene-A-Einträge** — der Rest, damit auch `/hu/utmutato/elzarogep-valasztas`
+  ungarisch liest. Vorlage: `i18n-luecken.md`, Abschnitt „Ebene A".
 - **`lapszabó` in 40 Textstellen** (34 in `mayerProducts.ts`) — braucht einen ungarischen
   Muttersprachler, siehe oben.
 - **Entscheidung Service-Silo** (Phase E): ungarische Reaktionszeit intern klären, bevor
