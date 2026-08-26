@@ -177,10 +177,10 @@ const HeroSlideshow = () => {
 
         {/* ── Slide 2 — Innovationstage 2026 ── */}
         <div className="relative w-full shrink-0 flex items-center">
-          <div className="absolute inset-0 overflow-hidden bg-[#eef1f6]">
-            <div className="absolute inset-0 bg-[radial-gradient(130%_100%_at_12%_0%,#ffffff_0%,#f2f4f8_50%,#e3e7ee_100%)]" />
-            {/* dezenter gelber Lichtkegel in Event-Farbe */}
-            <div className="absolute -top-1/3 right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#EFD500]/15 blur-3xl" />
+          <div className="absolute inset-0 overflow-hidden bg-[#c9d1de]">
+            <div className="absolute inset-0 bg-[radial-gradient(130%_100%_at_12%_0%,#dee3ec_0%,#ced5e1_50%,#b9c2d1_100%)]" />
+            {/* gelber Lichtkegel in Event-Farbe – hebt die Logo-Unterzeile ab */}
+            <div className="absolute -top-1/3 right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#EFD500]/25 blur-3xl" />
           </div>
 
           <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(1)}`}>
