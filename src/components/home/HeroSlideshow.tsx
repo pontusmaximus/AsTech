@@ -19,8 +19,8 @@ const VACUUM_IMAGE =
 /**
  * Startseiten-Hero als automatische Slideshow.
  * Slide 1: dunkler Hero (Technologie/Lösungen).
- * Slide 2: Barbaric-Vakuumheber – Vollbild-Hintergrundbild, helle Schrift-Zone.
- * Slide 3: „Innovationstage 2026" – Event-Logo je Sprache + Anmeldung.
+ * Slide 2: „Innovationstage 2026" – Event-Logo je Sprache + Anmeldung.
+ * Slide 3: Barbaric-Vakuumheber – Vollbild-Hintergrundbild, helle Schrift-Zone.
  * Animation: horizontaler Swipe (Track) + Content-Fade/Rise + langsamer
  * Ken-Burns-Zoom auf den Bildern. Rein CSS (kein GSAP). Läuft immer automatisch;
  * bei prefers-reduced-motion ohne Bewegung (harter Schnitt, alles sichtbar).
@@ -175,15 +175,56 @@ const HeroSlideshow = () => {
           </div>
         </div>
 
-        {/* ── Slide 2 — Barbaric Vakuumheber, Vollbild-Hintergrundbild ── */}
+        {/* ── Slide 2 — Innovationstage 2026 ── */}
         <div className="relative w-full shrink-0 flex items-center">
           <div className="absolute inset-0 overflow-hidden bg-[#eef1f6]">
-            <div className={kenBurns(1)} style={kenBurnsStyle(VACUUM_IMAGE)} />
+            <div className="absolute inset-0 bg-[radial-gradient(130%_100%_at_12%_0%,#ffffff_0%,#f2f4f8_50%,#e3e7ee_100%)]" />
+            {/* dezenter gelber Lichtkegel in Event-Farbe */}
+            <div className="absolute -top-1/3 right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#EFD500]/15 blur-3xl" />
+          </div>
+
+          <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(1)}`}>
+            <div className="max-w-3xl">
+              <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-primary font-medium mb-5">
+                {ev.eyebrow}
+              </span>
+
+              <InnovationDaysLogo lang={lang} className="mb-7 sm:mb-9" />
+
+              <h2 className="font-display font-bold text-[clamp(1.75rem,5vw,3.5rem)] leading-[1.08] tracking-[-0.02em] text-[#0f172a] mb-4 sm:mb-5">
+                {ev.headline}
+              </h2>
+              <p className="text-base sm:text-lg text-[#0f172a]/70 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+                {ev.body}
+              </p>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+                <a
+                  href={eventInquiryMail}
+                  className="btn-primary-dark"
+                  onClick={() =>
+                    trackEvent('hero_contact_click', {
+                      placement: 'home_hero_innovationstage',
+                      lang,
+                      target: 'eli@asamer.net',
+                    })
+                  }
+                >
+                  {ev.cta}
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* ── Slide 3 — Barbaric Vakuumheber, Vollbild-Hintergrundbild ── */}
+        <div className="relative w-full shrink-0 flex items-center">
+          <div className="absolute inset-0 overflow-hidden bg-[#eef1f6]">
+            <div className={kenBurns(2)} style={kenBurnsStyle(VACUUM_IMAGE)} />
             {/* Lesbarkeits-Verlauf: links deckend hell, rechts Bild sichtbar */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#eef1f6] via-[#eef1f6]/85 to-[#eef1f6]/25" />
           </div>
 
-          <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-10 ${contentClass(1)}`}>
+          <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-10 ${contentClass(2)}`}>
             <div className="max-w-2xl">
               <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-primary font-medium mb-5">
                 {tr('Barbaric · Vakuum-Handling für Holz', 'Barbaric · Vacuum handling for wood', 'Barbaric · Vakuová manipulace se dřevem')}
@@ -247,47 +288,6 @@ const HeroSlideshow = () => {
           </div>
         </div>
 
-        {/* ── Slide 3 — Innovationstage 2026 ── */}
-        <div className="relative w-full shrink-0 flex items-center">
-          <div className="absolute inset-0 overflow-hidden bg-[#eef1f6]">
-            <div className="absolute inset-0 bg-[radial-gradient(130%_100%_at_12%_0%,#ffffff_0%,#f2f4f8_50%,#e3e7ee_100%)]" />
-            {/* dezenter gelber Lichtkegel in Event-Farbe */}
-            <div className="absolute -top-1/3 right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#EFD500]/15 blur-3xl" />
-          </div>
-
-          <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(2)}`}>
-            <div className="max-w-3xl">
-              <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-primary font-medium mb-5">
-                {ev.eyebrow}
-              </span>
-
-              <InnovationDaysLogo lang={lang} className="mb-7 sm:mb-9" />
-
-              <h2 className="font-display font-bold text-[clamp(1.75rem,5vw,3.5rem)] leading-[1.08] tracking-[-0.02em] text-[#0f172a] mb-4 sm:mb-5">
-                {ev.headline}
-              </h2>
-              <p className="text-base sm:text-lg text-[#0f172a]/70 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
-                {ev.body}
-              </p>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-                <a
-                  href={eventInquiryMail}
-                  className="btn-primary-dark"
-                  onClick={() =>
-                    trackEvent('hero_contact_click', {
-                      placement: 'home_hero_innovationstage',
-                      lang,
-                      target: 'eli@asamer.net',
-                    })
-                  }
-                >
-                  {ev.cta}
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* ── Dot-Indikatoren ── */}
