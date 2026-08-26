@@ -6,7 +6,7 @@ import { buildMailto } from '../../lib/email';
 import { trackEvent } from '../../lib/analytics';
 import { HERO_FUNDING } from '../../data/heroFunding';
 import { usePrefersReducedMotion } from '../../hooks/use-prefers-reduced-motion';
-import InnovationDaysLogo from './InnovationDaysLogo';
+import InnovationDaysLogo, { EventChevronMark } from './InnovationDaysLogo';
 
 const SLIDE_COUNT = 3;
 const AUTO_MS = 7000;
@@ -71,6 +71,7 @@ const HeroSlideshow = () => {
       headline: 'Willkommen zu unseren Innovationstagen.',
       body: 'Wir laden Sie herzlich zu den Innovationstagen 2026 bei OTT Paul ein. Erleben Sie Holz, Technik und Zukunft live vor Ort – melden Sie sich hier bei uns an.',
       cta: 'Jetzt anmelden',
+      teaserLabel: 'Einladung',
       teaser: 'Wir laden Sie zu den Innovationstagen 2026 bei OTT Paul ein',
     },
     en: {
@@ -78,6 +79,7 @@ const HeroSlideshow = () => {
       headline: 'Welcome to our Innovation Days.',
       body: 'We warmly invite you to the Innovation Days 2026 at OTT Paul. Experience wood, technology and the future live on site – register with us here.',
       cta: 'Register now',
+      teaserLabel: 'Invitation',
       teaser: 'We invite you to the Innovation Days 2026 at OTT Paul',
     },
     cz: {
@@ -85,6 +87,7 @@ const HeroSlideshow = () => {
       headline: 'Vítejte na našich Inovačních dnech.',
       body: 'Srdečně vás zveme na Inovační dny 2026 u OTT Paul. Zažijte dřevo, techniku a budoucnost naživo – přihlaste se u nás zde.',
       cta: 'Přihlásit se',
+      teaserLabel: 'Pozvánka',
       teaser: 'Zveme vás na Inovační dny 2026 u OTT Paul',
     },
     sk: {
@@ -92,6 +95,7 @@ const HeroSlideshow = () => {
       headline: 'Vitajte na našich Inovačných dňoch.',
       body: 'Srdečne vás pozývame na Inovačné dni 2026 u OTT Paul. Zažite drevo, techniku a budúcnosť naživo – prihláste sa u nás tu.',
       cta: 'Prihlásiť sa',
+      teaserLabel: 'Pozvánka',
       teaser: 'Pozývame vás na Inovačné dni 2026 u OTT Paul',
     },
     hu: {
@@ -99,6 +103,7 @@ const HeroSlideshow = () => {
       headline: 'Üdvözöljük Innovációs Napjainkon.',
       body: 'Szeretettel meghívjuk Önt a 2026-os Innovációs Napokra az OTT Paulnál. Tapasztalja meg élőben a fát, a technikát és a jövőt – jelentkezzen nálunk itt.',
       cta: 'Jelentkezem',
+      teaserLabel: 'Meghívó',
       teaser: 'Meghívjuk Önt a 2026-os Innovációs Napokra az OTT Paulnál',
     },
   } as const)[lang];
@@ -177,18 +182,28 @@ const HeroSlideshow = () => {
                 </a>
               </div>
 
-              {/* Teaser auf Slide 2 — springt direkt zur Einladung */}
+              {/* Teaser auf Slide 2 — Event-Chevron auf Gelb, springt direkt zur Einladung.
+                  `hero-event-dark`, weil die Karte auch im Light-Mode dunkel bleibt. */}
               <button
                 type="button"
                 onClick={() => {
                   setActive(1);
                   trackEvent('hero_teaser_click', { placement: 'home_hero_innovationstage_teaser', lang });
                 }}
-                className="group mt-7 sm:mt-9 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2.5 text-left backdrop-blur-sm transition-colors hover:border-white/30 hover:bg-white/[0.12]"
+                className="hero-event-dark group mt-7 sm:mt-9 inline-flex max-w-full items-stretch overflow-hidden rounded-xl border border-[#EFD500]/40 bg-[#0b1220]/75 text-left shadow-lg shadow-black/25 backdrop-blur-sm transition-colors hover:border-[#EFD500] hover:bg-[#0b1220]/90"
               >
-                <span className="h-2 w-2 shrink-0 rounded-full bg-[#EFD500]" />
-                <span className="text-xs sm:text-sm text-white/80">{ev.teaser}</span>
-                <ArrowRight className="w-4 h-4 shrink-0 text-white/50 transition-transform group-hover:translate-x-0.5" />
+                <span className="flex shrink-0 items-center bg-[#EFD500] px-3 sm:px-3.5">
+                  <EventChevronMark className="h-6 sm:h-7 w-auto text-[#1f2430]" />
+                </span>
+                <span className="flex items-center gap-3 sm:gap-4 px-3.5 sm:px-4 py-2 sm:py-2.5">
+                  <span className="block">
+                    <span className="block text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-[#EFD500]">
+                      {ev.teaserLabel}
+                    </span>
+                    <span className="block text-xs sm:text-sm leading-snug text-white">{ev.teaser}</span>
+                  </span>
+                  <ArrowRight className="w-4 h-4 shrink-0 text-[#EFD500] transition-transform group-hover:translate-x-0.5" />
+                </span>
               </button>
             </div>
           </div>

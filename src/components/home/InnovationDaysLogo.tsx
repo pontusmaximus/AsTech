@@ -31,6 +31,19 @@ const VARIANTS: Record<Language, Variant> = {
   hu: HU,
 };
 
+/**
+ * Chevron-Zeichen des Event-Logos als eigenständige Marke — für kleine Flächen
+ * (Teaser-Badge), wo der volle Schriftzug nicht lesbar wäre. Einfarbig, die
+ * Farbe kommt über `currentColor` vom Elternelement.
+ */
+export const EventChevronMark = ({ className = '' }: { className?: string }) => (
+  <svg viewBox="0 0 100 170" className={className} role="presentation" aria-hidden="true" fill="currentColor">
+    {[0, 45, 90].map((dy) => (
+      <path key={dy} d={`M50 ${dy} L100 ${dy + 50} L100 ${dy + 80} L50 ${dy + 30} L0 ${dy + 80} L0 ${dy + 50} Z`} />
+    ))}
+  </svg>
+);
+
 const InnovationDaysLogo = ({ lang, className = '' }: { lang: Language; className?: string }) => {
   const { src, alt } = VARIANTS[lang];
   return (
