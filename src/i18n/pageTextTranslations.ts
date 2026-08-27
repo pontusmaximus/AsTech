@@ -955,6 +955,7 @@ export const pageHuTranslations: Record<string, string> = {
   "Regional Court Wels": "Welsi Tartományi Bíróság",
   "Register court": "Cégbíróság",
   "Registered": "Bejegyezve",
+  "Registration Innovation Days 2026": "Jelentkezés – Innovációs Napok 2026",
   "Reinforced, profile-safe": "Megerősített, profilkímélő",
   "Related pages": "Kapcsolódó oldalak",
   "Relevant for technological modernization in sawmills and upstream wood-processing operations.": "A fűrészüzemek technológiai korszerűsítésére és az upstream fafeldolgozási műveletekre vonatkozik.",

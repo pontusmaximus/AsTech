@@ -781,16 +781,16 @@ pro každého`
 
 ### SK — 10 fehlend
 
-- Zeile 48: `Konzultace vakuový zvedák Barbaric`
-- Zeile 52: `Poptávka – Asamer goes Hungary`
-- Zeile 56: `Technologie se zkušeností.`
-- Zeile 57: `Řešení s budoucností.`
-- Zeile 103: `Úvodní slideshow`
-- Zeile 165: `Barbaric · Vakuová manipulace se dřevem`
-- Zeile 177: `Myslete na zítřek`
-- Zeile 182: `Jediný člověk snadno přesune velké, těžké desky – ergonomicky, bezpečně a rychle. Ať u okrajovačky, pily nebo jiných strojů: chraňte své odborníky dlouhodobě.`
-- Zeile 211: `Požádat o konzultaci`
-- Zeile 268: `Snímek`
+- Zeile 47: `Konzultace vakuový zvedák Barbaric`
+- Zeile 51: `Registrace Inovační dny 2026`
+- Zeile 55: `Technologie se zkušeností.`
+- Zeile 56: `Řešení s budoucností.`
+- Zeile 137: `Úvodní slideshow`
+- Zeile 265: `Barbaric · Vakuová manipulace se dřevem`
+- Zeile 277: `Myslete na zítřek`
+- Zeile 282: `Jediný člověk snadno přesune velké, těžké desky – ergonomicky, bezpečně a rychle. Ať u okrajovačky, pily nebo jiných strojů: chraňte své odborníky dlouhodobě.`
+- Zeile 311: `Požádat o konzultaci`
+- Zeile 335: `Snímek`
 
 ## `src/pages/ContactPage.tsx` (7)
 
