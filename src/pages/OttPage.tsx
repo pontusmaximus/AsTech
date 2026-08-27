@@ -109,18 +109,18 @@ const OttPage = () => {
 
         {/* ====== 1b. INTRO / DEFINITION-LEAD ====== */}
         <ManufacturerIntro
-          eyebrow={tr('Deutschland · Kantenanleimtechnologie', 'Germany · Edgebanding technology', 'Německo · Olepování hran')}
+          eyebrow={tr('Österreich · Kantenanleimtechnologie', 'Austria · Edgebanding technology', 'Rakousko · Olepování hran')}
           title={tr('OTT Kantenanleimmaschinen', 'OTT Edgebanding Machines', 'OTT olepovačky hran')}
           lead={tr(
-            'OTT Kantenanleimmaschinen zählen zur Spitze beim Bekanten von Möbel- und Plattenteilen – von der kompakten Pacific+ (18 m/min) bis zur industriellen TopEdge mit PUR, EVA und bluEdge HyFuse Lasertechnologie. OTT ist ein deutscher Hersteller von Kantenanleimmaschinen für die Holz- und Möbelindustrie. Asamer ist exklusiver OTT-Vertriebspartner für CZ, SK und HU mit lokalem Service und Softwareintegration über die offene OPC-UA-Schnittstelle.',
-            'OTT edgebanding machines are among the best for banding furniture and board panels – from the compact Pacific+ (18 m/min) to the industrial TopEdge with PUR, EVA and bluEdge HyFuse laser technology. OTT is a German manufacturer of edgebanding machines for the wood and furniture industry. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.',
-            'Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse. OTT je německý výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.',
+            'OTT Kantenanleimmaschinen zählen zur Spitze beim Bekanten von Möbel- und Plattenteilen – von der kompakten Pacific+ (18 m/min) bis zur industriellen TopEdge mit PUR, EVA und bluEdge HyFuse Lasertechnologie. OTT ist ein österreichischer Hersteller von Kantenanleimmaschinen für die Holz- und Möbelindustrie. Asamer ist exklusiver OTT-Vertriebspartner für CZ, SK und HU mit lokalem Service und Softwareintegration über die offene OPC-UA-Schnittstelle.',
+            'OTT edgebanding machines are among the best for banding furniture and board panels – from the compact Pacific+ (18 m/min) to the industrial TopEdge with PUR, EVA and bluEdge HyFuse laser technology. OTT is an Austrian manufacturer of edgebanding machines for the wood and furniture industry. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.',
+            'Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse. OTT je rakouský výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.',
           )}
           facts={[
             {
               icon: Factory,
               label: tr('Herkunft', 'Origin', 'Původ'),
-              value: tr('Made in Germany', 'Made in Germany', 'Made in Germany'),
+              value: tr('Made in Austria', 'Made in Austria', 'Made in Austria'),
             },
             {
               icon: Handshake,
