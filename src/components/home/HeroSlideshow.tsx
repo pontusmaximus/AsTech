@@ -6,6 +6,7 @@ import { buildMailto } from '../../lib/email';
 import { trackEvent } from '../../lib/analytics';
 import { HERO_FUNDING } from '../../data/heroFunding';
 import { usePrefersReducedMotion } from '../../hooks/use-prefers-reduced-motion';
+import InnovationDaysLogo, { EventChevronMark } from './InnovationDaysLogo';
 
 const SLIDE_COUNT = 3;
 const AUTO_MS = 7000;
@@ -14,14 +15,12 @@ const OTT_IMAGE =
   'https://www.ottpaul.com/fileadmin/_processed_/d/7/csm_translift_storm_system_4f9149b8e4.jpg';
 const VACUUM_IMAGE =
   'https://www.barbaric.at/fileadmin/_processed_/2/9/csm_UWL3-0364_web_7eeaa62d8e.png';
-const HUNGARY_IMAGE =
-  'https://wunderbaresungarn.de/wp-content/uploads/2020/08/balaton-felvidek-szet-gyorgy-hegy-kapolna-keszthelyi-hegyseg-tapolcai-medence-2020aprilis-josef-jordan4-csodalatosbalaton.jpg';
 
 /**
  * Startseiten-Hero als automatische Slideshow.
  * Slide 1: dunkler Hero (Technologie/Lösungen).
- * Slide 2: Barbaric-Vakuumheber – Vollbild-Hintergrundbild, helle Schrift-Zone.
- * Slide 3: „Asamer goes Hungary".
+ * Slide 2: „Innovationstage 2026" – Event-Logo je Sprache + Anmeldung.
+ * Slide 3: Barbaric-Vakuumheber – Vollbild-Hintergrundbild, helle Schrift-Zone.
  * Animation: horizontaler Swipe (Track) + Content-Fade/Rise + langsamer
  * Ken-Burns-Zoom auf den Bildern. Rein CSS (kein GSAP). Läuft immer automatisch;
  * bei prefers-reduced-motion ohne Bewegung (harter Schnitt, alles sichtbar).
@@ -47,9 +46,9 @@ const HeroSlideshow = () => {
     'office@asamer.net',
     tr('Beratung Vakuumheber Barbaric', 'Vacuum lifter consultation', 'Konzultace vakuový zvedák Barbaric')
   );
-  const hungaryInquiryMail = buildMailto(
-    'max@asamer.net',
-    tr('Anfrage – Asamer goes Hungary', 'Inquiry – Asamer goes Hungary', 'Poptávka – Asamer goes Hungary')
+  const eventInquiryMail = buildMailto(
+    'eli@asamer.net',
+    tr('Anmeldung Innovationstage 2026', 'Registration Innovation Days 2026', 'Registrace Inovační dny 2026')
   );
 
   const heroLines = [
@@ -66,12 +65,47 @@ const HeroSlideshow = () => {
     hu: { line1: 'Támogatjuk az Ön munkafolyamatait', accent: 'Barbaric', post: ' vákuumos anyagmozgatással.' },
   } as const)[lang];
 
-  const hu3 = ({
-    de: { eyebrow: 'Asamer · Neu in Ungarn', body: 'Wir bauen ein neues Vertriebsnetzwerk in Ungarn auf – für bestmöglichen Service, Support und das passende Maschinenportfolio. Wir freuen uns auf Ihre Anfrage.', cta: 'Anfrage senden' },
-    en: { eyebrow: 'Asamer · Now in Hungary', body: 'We’re building a new sales network in Hungary – for the best possible service, support and machine portfolio. We look forward to your inquiry.', cta: 'Send inquiry' },
-    cz: { eyebrow: 'Asamer · Nově v Maďarsku', body: 'Budujeme novou prodejní síť v Maďarsku – pro nejlepší možný servis, podporu a portfolio strojů. Těšíme se na vaši poptávku.', cta: 'Odeslat poptávku' },
-    sk: { eyebrow: 'Asamer · Novo v Maďarsku', body: 'Budujeme novú predajnú sieť v Maďarsku – pre čo najlepší servis, podporu a portfólio strojov. Tešíme sa na váš dopyt.', cta: 'Odoslať dopyt' },
-    hu: { eyebrow: 'Asamer · Már Magyarországon', body: 'Új értékesítési hálózatot építünk Magyarországon – a lehető legjobb szerviz, támogatás és gépportfólió érdekében. Várjuk megkeresését.', cta: 'Ajánlatkérés' },
+  const ev = ({
+    de: {
+      eyebrow: 'Asamer · Innovationstage 2026 bei OTT Paul',
+      headline: 'Willkommen zu unseren Innovationstagen.',
+      body: 'Wir laden Sie herzlich zu den Innovationstagen 2026 bei OTT Paul ein. Erleben Sie Holz, Technik und Zukunft live vor Ort – melden Sie sich hier bei uns an.',
+      cta: 'Jetzt anmelden',
+      teaserLabel: 'Einladung',
+      teaser: 'Wir laden Sie zu den Innovationstagen 2026 bei OTT Paul ein',
+    },
+    en: {
+      eyebrow: 'Asamer · Innovation Days 2026 at OTT Paul',
+      headline: 'Welcome to our Innovation Days.',
+      body: 'We warmly invite you to the Innovation Days 2026 at OTT Paul. Experience wood, technology and the future live on site – register with us here.',
+      cta: 'Register now',
+      teaserLabel: 'Invitation',
+      teaser: 'We invite you to the Innovation Days 2026 at OTT Paul',
+    },
+    cz: {
+      eyebrow: 'Asamer · Inovační dny 2026 u OTT Paul',
+      headline: 'Vítejte na našich Inovačních dnech.',
+      body: 'Srdečně vás zveme na Inovační dny 2026 u OTT Paul. Zažijte dřevo, techniku a budoucnost naživo – přihlaste se u nás zde.',
+      cta: 'Přihlásit se',
+      teaserLabel: 'Pozvánka',
+      teaser: 'Zveme vás na Inovační dny 2026 u OTT Paul',
+    },
+    sk: {
+      eyebrow: 'Asamer · Inovačné dni 2026 u OTT Paul',
+      headline: 'Vitajte na našich Inovačných dňoch.',
+      body: 'Srdečne vás pozývame na Inovačné dni 2026 u OTT Paul. Zažite drevo, techniku a budúcnosť naživo – prihláste sa u nás tu.',
+      cta: 'Prihlásiť sa',
+      teaserLabel: 'Pozvánka',
+      teaser: 'Pozývame vás na Inovačné dni 2026 u OTT Paul',
+    },
+    hu: {
+      eyebrow: 'Asamer · Innovációs Napok 2026 az OTT Paulnál',
+      headline: 'Üdvözöljük Innovációs Napjainkon.',
+      body: 'Szeretettel meghívjuk Önt a 2026-os Innovációs Napokra az OTT Paulnál. Tapasztalja meg élőben a fát, a technikát és a jövőt – jelentkezzen nálunk itt.',
+      cta: 'Jelentkezem',
+      teaserLabel: 'Meghívó',
+      teaser: 'Meghívjuk Önt a 2026-os Innovációs Napokra az OTT Paulnál',
+    },
   } as const)[lang];
 
   const [active, setActive] = useState(0);
@@ -147,19 +181,85 @@ const HeroSlideshow = () => {
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
+
+              {/* Teaser auf Slide 2 — Event-Chevron auf Gelb, springt direkt zur Einladung.
+                  `hero-event-dark`, weil die Karte auch im Light-Mode dunkel bleibt. */}
+              <button
+                type="button"
+                onClick={() => {
+                  setActive(1);
+                  trackEvent('hero_teaser_click', { placement: 'home_hero_innovationstage_teaser', lang });
+                }}
+                className="hero-event-dark group mt-7 sm:mt-9 inline-flex max-w-full items-stretch overflow-hidden rounded-xl border border-[#EFD500]/40 bg-[#0b1220]/75 text-left shadow-lg shadow-black/25 backdrop-blur-sm transition-colors hover:border-[#EFD500] hover:bg-[#0b1220]/90"
+              >
+                <span className="flex shrink-0 items-center bg-[#EFD500] px-3 sm:px-3.5">
+                  <EventChevronMark className="h-6 sm:h-7 w-auto text-[#1f2430]" />
+                </span>
+                <span className="flex items-center gap-3 sm:gap-4 px-3.5 sm:px-4 py-2 sm:py-2.5">
+                  <span className="block">
+                    <span className="block text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-[#EFD500]">
+                      {ev.teaserLabel}
+                    </span>
+                    <span className="block text-xs sm:text-sm leading-snug text-white">{ev.teaser}</span>
+                  </span>
+                  <ArrowRight className="w-4 h-4 shrink-0 text-[#EFD500] transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </button>
             </div>
           </div>
         </div>
 
-        {/* ── Slide 2 — Barbaric Vakuumheber, Vollbild-Hintergrundbild ── */}
+        {/* ── Slide 2 — Innovationstage 2026 ── */}
+        <div className="relative w-full shrink-0 flex items-center">
+          <div className="absolute inset-0 overflow-hidden bg-[#0d1526]">
+            <div className="absolute inset-0 bg-[radial-gradient(130%_100%_at_12%_0%,#1c2942_0%,#101b30_55%,#070d18_100%)]" />
+            {/* gelber Lichtkegel in Event-Farbe */}
+            <div className="absolute -top-1/3 right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#EFD500]/10 blur-3xl" />
+            <div className="absolute inset-0 grid-pattern opacity-40" />
+          </div>
+
+          <div className={`hero-event-dark relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(1)}`}>
+            <div className="max-w-3xl">
+              <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-[#EFD500] font-medium mb-5">
+                {ev.eyebrow}
+              </span>
+
+              <InnovationDaysLogo lang={lang} className="mb-7 sm:mb-9" />
+
+              <h2 className="font-display font-bold text-[clamp(1.75rem,5vw,3.5rem)] leading-[1.08] tracking-[-0.02em] text-white mb-4 sm:mb-5">
+                {ev.headline}
+              </h2>
+              <p className="text-base sm:text-lg text-white/70 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+                {ev.body}
+              </p>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+                <a
+                  href={eventInquiryMail}
+                  className="btn-primary-dark"
+                  onClick={() =>
+                    trackEvent('hero_contact_click', {
+                      placement: 'home_hero_innovationstage',
+                      lang,
+                      target: 'eli@asamer.net',
+                    })
+                  }
+                >
+                  {ev.cta}
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* ── Slide 3 — Barbaric Vakuumheber, Vollbild-Hintergrundbild ── */}
         <div className="relative w-full shrink-0 flex items-center">
           <div className="absolute inset-0 overflow-hidden bg-[#eef1f6]">
-            <div className={kenBurns(1)} style={kenBurnsStyle(VACUUM_IMAGE)} />
+            <div className={kenBurns(2)} style={kenBurnsStyle(VACUUM_IMAGE)} />
             {/* Lesbarkeits-Verlauf: links deckend hell, rechts Bild sichtbar */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#eef1f6] via-[#eef1f6]/85 to-[#eef1f6]/25" />
           </div>
 
-          <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-10 ${contentClass(1)}`}>
+          <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-10 ${contentClass(2)}`}>
             <div className="max-w-2xl">
               <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-primary font-medium mb-5">
                 {tr('Barbaric · Vakuum-Handling für Holz', 'Barbaric · Vacuum handling for wood', 'Barbaric · Vakuová manipulace se dřevem')}
@@ -223,39 +323,6 @@ const HeroSlideshow = () => {
           </div>
         </div>
 
-        {/* ── Slide 3 — Asamer goes Hungary ── */}
-        <div className="relative w-full shrink-0 flex items-center">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className={kenBurns(2)} style={kenBurnsStyle(HUNGARY_IMAGE)} />
-            <div className="hero-overlay-vertical absolute inset-0" />
-            <div className="hero-overlay-horizontal absolute inset-0" />
-            <div className="absolute inset-0 grid-pattern opacity-40" />
-          </div>
-
-          <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(2)}`}>
-            <div className="max-w-3xl">
-              <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-white/80 font-medium mb-5">
-                {hu3.eyebrow}
-              </span>
-              <h2 className="font-display font-bold text-[clamp(2.25rem,8vw,6rem)] leading-[1.05] tracking-[-0.02em] text-white mb-5 sm:mb-6">
-                Asamer goes <span className="text-primary">Hungary</span>.
-              </h2>
-              <p className="text-base sm:text-lg md:text-2xl text-white/70 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
-                {hu3.body}
-              </p>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-                <a
-                  href={hungaryInquiryMail}
-                  className="btn-primary-dark"
-                  onClick={() => trackEvent('hero_contact_click', { placement: 'home_hero_hungary', lang, target: 'max@asamer.net' })}
-                >
-                  {hu3.cta}
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* ── Dot-Indikatoren ── */}
