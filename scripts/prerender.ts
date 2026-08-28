@@ -37,7 +37,9 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SEO_ROUTES, getSlugForLang, DEFAULT_OG_IMAGE } from '../src/seo/routes';
+import { SEO_ROUTES, getSlugForLang, isRouteAvailable, DEFAULT_OG_IMAGE } from '../src/seo/routes';
+import { ALL_CATEGORY_REFS, buildCategoryPath, getBrandCatalog } from '../src/data/brandCatalogs';
+import { getCategoryMeta } from '../src/seo/categoryMeta';
 import {
   buildLocalizedPath,
   buildCanonicalUrl,
@@ -48,9 +50,7 @@ import {
   HREFLANG_DEFAULT,
   languageToHreflang,
 } from '../src/lib/language';
-import { OTT_PRODUCTS, buildOttProductPath, buildOttCategoryPath } from '../src/data/ottProducts';
-import type { OttCategory } from '../src/data/ottProducts';
-import { OTT_CATEGORY_META } from '../src/data/ottCategoryMeta';
+import { OTT_PRODUCTS, buildOttProductPath } from '../src/data/ottProducts';
 import { MAYER_PRODUCTS, buildMayerProductPath } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, buildBarbaricProductPath } from '../src/data/barbaricProducts';
 import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannomatProducts';
@@ -95,8 +95,11 @@ const absImg = (src?: string) => (!src ? DEFAULT_OG_IMAGE : src.startsWith('http
  * Nur indexierbare Sprachen als hreflang-Alternates. Steht `NON_INDEXABLE_LANGUAGES`
  * wieder auf einem Wert, faellt die betroffene Sprache hier automatisch heraus.
  */
-function makeAlternates(buildPath: (lang: Language) => string) {
-  return INDEXABLE_LANGUAGES.map((al) => ({
+function makeAlternates(
+  buildPath: (lang: Language) => string,
+  isAvailable: (lang: Language) => boolean = () => true,
+) {
+  return INDEXABLE_LANGUAGES.filter(isAvailable).map((al) => ({
     hreflang: languageToHreflang(al),
     href: `${CANONICAL_DOMAIN}${buildPath(al)}`,
   }));
@@ -107,6 +110,10 @@ const pages: PageMeta[] = [];
 // 1. Statische Seiten aus SEO_ROUTES
 for (const config of Object.values(SEO_ROUTES)) {
   for (const lang of SUPPORTED_LANGUAGES) {
+    // Ausgeschlossene Sprache: keine Datei erzeugen. Sonst laege im dist eine
+    // Seite, die per 301 gar nicht erreichbar ist -- und der 404-Sicherheits-
+    // nachweis haette sie als "vorhanden" gezaehlt.
+    if (!isRouteAvailable(config, lang)) continue;
     const path = buildLocalizedPath(lang, getSlugForLang(config, lang));
     const meta = config.meta[lang];
     pages.push({
@@ -115,7 +122,10 @@ for (const config of Object.values(SEO_ROUTES)) {
       title: meta.title,
       description: meta.description,
       canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates: makeAlternates((al) => buildLocalizedPath(al, getSlugForLang(config, al))),
+      alternates: makeAlternates(
+        (al) => buildLocalizedPath(al, getSlugForLang(config, al)),
+        (al) => isRouteAvailable(config, al),
+      ),
       xDefaultHref: buildCanonicalUrl(HREFLANG_DEFAULT, getSlugForLang(config, HREFLANG_DEFAULT)),
       image: DEFAULT_OG_IMAGE,
       imageDims: { w: 1200, h: 630 },
@@ -123,22 +133,23 @@ for (const config of Object.values(SEO_ROUTES)) {
   }
 }
 
-// 1b. OTT-Kategorieseiten (/ott/{kategorie-slug})
-for (const category of Object.keys(OTT_CATEGORY_META) as OttCategory[]) {
-  const meta = OTT_CATEGORY_META[category];
-  const firstProduct = OTT_PRODUCTS.find((p) => p.category === category);
+// 1b. Kategorieseiten je Marke
+for (const ref of ALL_CATEGORY_REFS) {
   for (const lang of SUPPORTED_LANGUAGES) {
-    const build = (al: Language) => buildLocalizedPath(al, buildOttCategoryPath(al, category));
+    const build = (al: Language) => buildLocalizedPath(al, buildCategoryPath(ref, al));
     const path = build(lang);
+    const meta = getCategoryMeta(ref, lang);
+    const firstProduct = getBrandCatalog(ref.brand).productsIn(ref.category)[0];
     pages.push({
       path,
       lang,
-      title: meta.seoTitle[lang],
-      description: meta.seoDescription[lang],
+      title: meta.title,
+      description: meta.description,
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates: makeAlternates(build),
       xDefaultHref: `${CANONICAL_DOMAIN}${build(HREFLANG_DEFAULT)}`,
       image: firstProduct ? absImg(firstProduct.image) : DEFAULT_OG_IMAGE,
+      imageDims: { w: 1200, h: 630 },
     });
   }
 }

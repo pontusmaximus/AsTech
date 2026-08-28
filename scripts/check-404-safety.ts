@@ -26,6 +26,7 @@ import { OTT_PRODUCTS, OTT_CATEGORY_SLUG_VARIANTS, getOttCategorySlug } from '..
 import { MAYER_PRODUCTS, MAYER_CATEGORY_SLUG_VARIANTS, getMayerCategorySlug } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, BARBARIC_CATEGORY_SLUG_VARIANTS, getBarbaricCategorySlug } from '../src/data/barbaricProducts';
 import { GANNOMAT_PRODUCTS, GANNOMAT_CATEGORY_SLUG_VARIANTS, getGannomatCategorySlug } from '../src/data/gannomatProducts';
+import { ALL_CATEGORY_REFS, buildCategoryPath, getBrandCatalog } from '../src/data/brandCatalogs';
 import { USED_MACHINES } from '../src/data/usedMachines';
 import { loadVercelConfig, VercelRouter } from './seo-vercel-routes';
 
@@ -56,6 +57,7 @@ type Origin =
   | 'sprachstartseite'
   | 'seiten-slug-variante'
   | 'produkt-kategorie-variante'
+  | 'kategorieseite-slug-variante'
   | 'gebrauchtmaschine-slug-variante';
 
 interface Candidate {
@@ -108,21 +110,6 @@ const brands = [
 ] as const;
 
 for (const brand of brands) {
-  // Kategorie-Übersichtsseiten (bisher nur OTT als Seite ausgebaut; die
-  // Varianten in fremder Sprache fängt eine 301-Regel aus vercel.json ab).
-  if (brand.slug === 'ott') {
-    const ottCategories = [...new Set(brand.products.map((p) => p.category as string))];
-    for (const category of ottCategories) {
-      for (const lang of SUPPORTED_LANGUAGES) {
-        const right = brand.correct(category as never, lang);
-        const target = buildLocalizedPath(lang, `/${brand.slug}/${right}`);
-        const catVariants = SUPPORTED_LANGUAGES.map((l) => brand.correct(category as never, l));
-        for (const variant of new Set(catVariants)) {
-          push(buildLocalizedPath(lang, `/${brand.slug}/${variant}`), 'produkt-kategorie-variante', target);
-        }
-      }
-    }
-  }
   for (const product of brand.products) {
     for (const lang of SUPPORTED_LANGUAGES) {
       const right = brand.correct(product.category as never, lang);
@@ -137,6 +124,25 @@ for (const brand of brands) {
           target,
         );
       }
+    }
+  }
+}
+
+/* --- 5b. Kategorieseiten mit Kategorie-Slug in fremder Sprache ------- */
+/* Seit es Kategorieseiten gibt, ist `/de/ott/elzarogepek` (HU-Slug unter der
+ * deutschen Sprache) ein routerseitig gueltiger Pfad — er lenkt clientseitig
+ * auf `/de/ott/kantenanleimmaschinen`. Ohne serverseitige Regel waere er 404. */
+for (const ref of ALL_CATEGORY_REFS) {
+  const catalog = getBrandCatalog(ref.brand);
+  for (const lang of SUPPORTED_LANGUAGES) {
+    const target = buildLocalizedPath(lang, buildCategoryPath(ref, lang));
+    const variants = new Set(SUPPORTED_LANGUAGES.map((l) => catalog.categorySlug(ref.category, l)));
+    for (const variant of variants) {
+      push(
+        buildLocalizedPath(lang, `/${ref.brand}/${variant}`),
+        'kategorieseite-slug-variante',
+        target,
+      );
     }
   }
 }

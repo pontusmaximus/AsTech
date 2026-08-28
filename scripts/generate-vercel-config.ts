@@ -26,6 +26,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SUPPORTED_LANGUAGES, CANONICAL_DOMAIN, DEFAULT_LANGUAGE } from '../src/lib/language';
 import { SLUG_TRANSLATIONS, getAllSlugVariants, localizeSlug } from '../src/lib/slugs';
+import { SEO_ROUTES, getSlugForLang } from '../src/seo/routes';
 import { OTT_PRODUCTS, OTT_CATEGORY_SLUG_VARIANTS, getOttCategorySlug } from '../src/data/ottProducts';
 import { MAYER_PRODUCTS, MAYER_CATEGORY_SLUG_VARIANTS, getMayerCategorySlug } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, BARBARIC_CATEGORY_SLUG_VARIANTS, getBarbaricCategorySlug } from '../src/data/barbaricProducts';
@@ -197,6 +198,104 @@ for (const brand of brands) {
         permanent: true,
       });
     }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  6a. Seiten, die es in einer Sprache nicht geben soll               */
+/* ------------------------------------------------------------------ */
+
+/**
+ * `excludeLangs` in `SEO_ROUTES` nimmt eine Seite aus Sitemap, Prerender und
+ * hreflang. Damit die URL nicht einfach 404 liefert — sie war bis eben
+ * erreichbar —, bekommt sie hier ihre 301 auf `excludeRedirect`.
+ */
+for (const config of Object.values(SEO_ROUTES)) {
+  if (!config.excludeLangs?.length) continue;
+  if (!config.excludeRedirect) {
+    throw new Error(
+      `Route "${config.slug}" hat excludeLangs ohne excludeRedirect — ` +
+        'die ausgeschlossene Sprache liefe auf eine 404.',
+    );
+  }
+  for (const lang of config.excludeLangs) {
+    addRule({
+      source: `/${lang}${getSlugForLang(config, lang)}`,
+      destination: abs(`/${lang}${localizeSlug(config.excludeRedirect, lang)}`),
+      permanent: true,
+    });
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  6b. Ausgemusterte Kategorie-Slugs                                  */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Kategorie-Slugs, die es einmal gab und die durch einen besseren ersetzt
+ * wurden. Der Block darueber erzeugt nur Regeln fuer Slugs, die noch in
+ * `*_CATEGORY_SLUGS` stehen — ein zurueckgezogener Slug faellt dort heraus und
+ * wuerde ohne diese Liste zu einer 404 auf einer URL, die vorher funktioniert
+ * hat. Genau das verbietet der Masterplan (1.1: alte URLs bekommen 301).
+ *
+ * Bewusst hier statt in `config/redirects.manual.json`: der Zielslug wird aus
+ * denselben Produktdaten abgeleitet wie alles andere. Wird eine Kategorie
+ * spaeter noch einmal umbenannt, zeigt der Eintrag automatisch auf den dann
+ * gueltigen Slug — eine handgepflegte Regel zeigte weiter auf den Zwischenstand.
+ *
+ * Die Regeln gelten fuer alle Sprachen, nicht nur die, in der der Slug lebte:
+ * der Block oben hat bisher jede Sprachvariante auf die richtige umgeleitet,
+ * `/cz/gannomat/soros-furo-gepek` also ebenfalls bedient.
+ */
+interface RetiredCategorySlug {
+  /** Marken-Slug im Pfad, z. B. `gannomat`. */
+  brand: string;
+  /** Der zurueckgezogene Slug. */
+  from: string;
+  /** Kategorie-Schluessel, aus dem der neue Slug je Sprache abgeleitet wird. */
+  category: string;
+}
+
+const RETIRED_CATEGORY_SLUGS: RetiredCategorySlug[] = [
+  // 'soros fúró' liefert in der HU-SERP George Soros und Metallbau-Lehrmaterial.
+  { brand: 'gannomat', from: 'soros-furo-gepek', category: 'rowboring' },
+  // 'csap' ist nicht falsch ('facsap' ist belegtes Synonym), aber der gesuchte
+  // Begriff ist 'tipli'.
+  { brand: 'gannomat', from: 'csap-furo-gepek', category: 'boring' },
+  // Marktbegriff ist 'keretprés', nicht 'keret-csapozó'.
+  { brand: 'gannomat', from: 'keret-csapozo-gepek', category: 'frame' },
+  // 'lapszabó' existiert, ist aber DIY-/Dienstleister-konnotiert; der
+  // Maschinenbegriff ist 'táblafelosztó'.
+  { brand: 'mayer', from: 'horizontalis-lapszabo-furesz', category: 'kappa' },
+  // Dazu ein Tippfehler im alten Slug: 'manyag' statt 'muanyag' (műanyag).
+  { brand: 'mayer', from: 'lapszabo-furesz-aluminium-manyag', category: 'advanced' },
+  // Reiner Tippfehler, doppeltes y.
+  { brand: 'mayer', from: 'horizontalne-formatovacie-pilyy', category: 'kappa' },
+];
+
+const brandBySlug = new Map(brands.map((b) => [b.slug, b]));
+
+for (const retired of RETIRED_CATEGORY_SLUGS) {
+  const brand = brandBySlug.get(retired.brand);
+  if (!brand) throw new Error(`Unbekannte Marke im ausgemusterten Slug: ${retired.brand}`);
+  for (const lang of SUPPORTED_LANGUAGES) {
+    const correct = brand.categorySlug(retired.category as never, lang);
+    if (correct === retired.from) {
+      throw new Error(
+        `Ausgemusterter Slug "${retired.from}" ist in ${lang} noch in Gebrauch — ` +
+          'Eintrag aus RETIRED_CATEGORY_SLUGS entfernen oder Slug umbenennen.',
+      );
+    }
+    addRule({
+      source: `/${lang}/${brand.slug}/${escapeAlt(retired.from)}`,
+      destination: abs(`/${lang}/${brand.slug}/${correct}`),
+      permanent: true,
+    });
+    addRule({
+      source: `/${lang}/${brand.slug}/${escapeAlt(retired.from)}/:model`,
+      destination: abs(`/${lang}/${brand.slug}/${correct}/:model`),
+      permanent: true,
+    });
   }
 }
 

@@ -1,7 +1,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SEO_ROUTES, getSlugForLang } from '../src/seo/routes';
+import { SEO_ROUTES, getSlugForLang, isRouteAvailable } from '../src/seo/routes';
 import type { SeoRouteKey } from '../src/seo/routes';
 import { buildLastmodTable, staticKey, productKey, usedMachineKey } from './content-lastmod';
 import {
@@ -12,14 +12,13 @@ import {
   INDEXABLE_LANGUAGES,
   languageToHreflang,
 } from '../src/lib/language';
-import { OTT_PRODUCTS, buildOttProductPath, buildOttCategoryPath } from '../src/data/ottProducts';
-import type { OttCategory } from '../src/data/ottProducts';
-import { OTT_CATEGORY_META } from '../src/data/ottCategoryMeta';
+import { OTT_PRODUCTS, buildOttProductPath } from '../src/data/ottProducts';
 import { MAYER_PRODUCTS, buildMayerProductPath } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, buildBarbaricProductPath } from '../src/data/barbaricProducts';
 import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannomatProducts';
 import { USED_MACHINES } from '../src/data/usedMachines';
 import { localizeSlug } from '../src/lib/slugs';
+import { ALL_CATEGORY_REFS, buildCategoryPath, getBrandCatalog } from '../src/data/brandCatalogs';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -59,9 +58,12 @@ const entries: SitemapEntry[] = [];
 // Static page entries
 Object.entries(SEO_ROUTES).forEach(([routeKey, config]) => {
   INDEXABLE_LANGUAGES.forEach((lang) => {
+    // Sprachen, die diese Seite nicht haben sollen, kommen weder als eigener
+    // Eintrag noch als hreflang-Alternate vor: die URL antwortet mit 301.
+    if (!isRouteAvailable(config, lang)) return;
     const langSlug = getSlugForLang(config, lang);
     const localizedPath = buildLocalizedPath(lang, langSlug);
-    const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
+    const alternates = INDEXABLE_LANGUAGES.filter((altLang) => isRouteAvailable(config, altLang)).map((altLang) => ({
       lang: altLang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, getSlugForLang(config, altLang))}`,
     }));
@@ -77,28 +79,28 @@ Object.entries(SEO_ROUTES).forEach(([routeKey, config]) => {
   });
 });
 
-// OTT category overview pages (/ott/{localized-category}).
-// lastmod: das juengste Produkt der Kategorie — die Uebersicht aendert sich,
-// wenn sich ihre Produkte aendern.
-(Object.keys(OTT_CATEGORY_META) as OttCategory[]).forEach((category) => {
-  const productDates = OTT_PRODUCTS.filter((p) => p.category === category)
-    .map((p) => lastmod.get(productKey('ott', p.slug)))
+// Kategorieseiten je Marke
+ALL_CATEGORY_REFS.forEach((ref) => {
+  const productDates = getBrandCatalog(ref.brand)
+    .productsIn(ref.category)
+    .map((p) => lastmod.get(productKey(ref.brand, p.slug)))
     .filter((d): d is string => Boolean(d));
-  const categoryLastmod = productDates.length > 0 ? productDates.sort().at(-1)! : lastmod.get(staticKey('ott'));
+  const categoryLastmod =
+    productDates.length > 0 ? productDates.sort().at(-1)! : lastmod.get(staticKey(ref.brand as SeoRouteKey));
   INDEXABLE_LANGUAGES.forEach((lang) => {
-    const categoryPath = buildOttCategoryPath(lang, category);
     const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
       lang: altLang,
-      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, buildOttCategoryPath(altLang, category))}`,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, buildCategoryPath(ref, altLang))}`,
     }));
-    const defaultUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildOttCategoryPath(HREFLANG_DEFAULT, category))}`;
     entries.push({
       lang,
-      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, categoryPath)}`,
-      canonicalSlug: `/ott-category/${category}`,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildCategoryPath(ref, lang))}`,
+      canonicalSlug: `/${ref.brand}/${ref.category}`,
+      // Eine Kategorieseite aendert sich, wenn sich ihre Produkte aendern —
+      // deshalb das juengste Produktdatum der Kategorie, nicht das der Marke.
       lastmod: categoryLastmod,
       alternates,
-      defaultUrl,
+      defaultUrl: `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildCategoryPath(ref, HREFLANG_DEFAULT))}`,
     });
   });
 });

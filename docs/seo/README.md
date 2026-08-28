@@ -16,6 +16,7 @@ Property `sc-domain:asamer.cz` · Branch `claude/seo-masterplan-asamer-eb0d37`
 | [`06-audit-baseline.md`](06-audit-baseline.md) | Phase 6.1 — der Audit-Test und die Baseline vor jeder Änderung. |
 | [`06-search-console.md`](06-search-console.md) | Phase 6 — CI-Gates, Wochenreport, Lighthouse, offene Search-Console-Aufgaben. |
 | [`i18n-luecken.md`](i18n-luecken.md) | Übersetzungsvorlage SK/HU, erzeugt von `npm run seo:i18n`. |
+| [`07-hu-marktbeintritt.md`](07-hu-marktbeintritt.md) | Keyword-Recherche HU gegen den Code geprüft, Umsetzungsplan in fünf Phasen. |
 | [`reports/`](reports/) | Audit-Berichte je Phase, 404-Sicherheitsnachweis, später die Search-Console-Wochenberichte. |
 
 ## Wirkung auf den Audit

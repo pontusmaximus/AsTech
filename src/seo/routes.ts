@@ -38,10 +38,48 @@ export interface SeoRouteConfig {
   slugByLang?: Partial<Record<Language, string>>;
   image?: string;
   meta: Record<Language, RouteMeta>;
+  /**
+   * Sprachen, in denen es diese Seite nicht geben soll.
+   *
+   * Gedacht fuer Inhalte, die nur einen Markt betreffen — eine Seite ueber
+   * tschechische Foerderprogramme hat unter `/hu/` nichts zu suchen. Wirkt an
+   * vier Stellen gleichzeitig, sonst widersprechen sie sich:
+   *   1. `generate-sitemap.ts` laesst die Sprache aus (auch als hreflang-Alternate)
+   *   2. `prerender.ts` erzeugt keine Datei — sonst laege eine Waise im dist
+   *   3. `SeoHead` nimmt sie aus den hreflang-Alternates
+   *   4. `generate-vercel-config.ts` leitet die URL per 301 auf `excludeRedirect`
+   *
+   * Ohne 1 und 3 stuende eine URL in Sitemap und hreflang, die 301 antwortet —
+   * genau der Fehler, den `seo:audit` als `status` meldet.
+   */
+  excludeLangs?: Language[];
+  /**
+   * Kanonischer Zielpfad (sprachneutral, wie die Schluessel in `SLUG_TRANSLATIONS`)
+   * fuer die 301 der ausgeschlossenen Sprachen. Pflicht, sobald `excludeLangs`
+   * gesetzt ist — eine ausgeschlossene Seite darf nicht ins Leere laufen.
+   */
+  excludeRedirect?: string;
 }
 
 export const getSlugForLang = (config: SeoRouteConfig, lang: Language): string =>
   config.slugByLang?.[lang] ?? config.slug;
+
+/** Gibt es diese Seite in dieser Sprache? Siehe `excludeLangs`. */
+export const isRouteAvailable = (config: SeoRouteConfig, lang: Language): boolean =>
+  !config.excludeLangs?.includes(lang);
+
+/**
+ * Gibt es die Seite zu diesem kanonischen Slug in dieser Sprache?
+ *
+ * Fuer Stellen, die eine Seite ueber ihren Slug verlinken statt ueber ihren
+ * `SeoRouteKey` — etwa die Ratgeber-Karten im FAQ-Hub. Slugs ohne eigene
+ * SEO-Route gelten als verfuegbar: `excludeLangs` ist die Ausnahme, nicht die
+ * Regel, und ein unbekannter Slug soll hier nichts verschwinden lassen.
+ */
+export const isSlugAvailable = (canonicalSlug: string, lang: Language): boolean => {
+  const config = Object.values(SEO_ROUTES).find((c) => c.slug === canonicalSlug);
+  return config ? isRouteAvailable(config, lang) : true;
+};
 
 type FullMetaInput = {
   de: RouteMeta;
@@ -125,9 +163,9 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         keywords: ['Mayer', 'Formátovacia píla', 'kappa automatic', 'advanced line', 'Felder Group', 'Asamer', 'nářezové centrum'],
       },
       hu: {
-        title: 'Mayer lapszabó fűrészek – hivatalos viszonteladó | Asamer',
+        title: 'Táblafelosztó gép és lapszabászgép – Mayer | Asamer',
         description:
-          'Mayer lapszabó fűrészek – Asamer hivatalos viszonteladó CZ, SK és HU területén. Kappa Automatic fához, Advanced Line alumíniumhoz és műanyaghoz.',
+          'Mayer kappa automatic nyomógerendás táblafelosztó gépek 80-tól 140-ig, valamint alumínium daraboló gépek. Asamer – hivatalos forgalmazó.',
         keywords: ['Mayer', 'Lapszabó fűrész', 'kappa automatic', 'advanced line', 'Felder Group', 'Asamer', 'vágóközpont'],
       },
     }),
@@ -161,10 +199,10 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         keywords: ['OTT', 'Olepovačka hrán', 'PUR', 'bluEdge', 'HyFuse', 'nulová škára', 'Beckhoff', 'OPC-UA'],
       },
       hu: {
-        title: 'OTT élzárógépek – hivatalos viszonteladó | Asamer',
+        title: 'Ipari élzárógépek – OTT, magyarországi forgalmazó | Asamer',
         description:
-          'OTT élzárógépek – Asamer hivatalos viszonteladó CZ, SK és HU területén. PUR és bluEdge featuring HyFuse technológia. Nyílt Beckhoff OPC-UA interfész.',
-        keywords: ['OTT', 'Élzárógép', 'PUR', 'bluEdge', 'HyFuse', 'nulla ragasztóvonal', 'Beckhoff', 'OPC-UA'],
+          'OTT ipari élzárógépek asztalosüzemtől nagyüzemig: PUR és EVA ragasztás, nullfuga, automata visszaforgatás. Asamer – hivatalos forgalmazó CZ, SK és HU.',
+        keywords: ['OTT', 'Élzárógép', 'PUR', 'bluEdge', 'HyFuse', 'nullfuga', 'Beckhoff', 'OPC-UA'],
       },
     }),
   },
@@ -268,9 +306,9 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         keywords: ['IMA Schelling', 'Formátovacia píla', 'Servis', 'Údržba', 'Opravy', 'Náhradné diely', 'HKL', 'FH', 'FK', 'VKS', 'Asamer'],
       },
       hu: {
-        title: 'IMA Schelling lapszabó fűrész szerviz – 30+ év tapasztalat | Asamer',
+        title: 'Schelling táblafelosztó gép – ipari lapszabászat | Asamer',
         description:
-          'IMA Schelling lapszabó fűrészek szervize CZ, SK és HU területén: karbantartás, javítás, alkatrészek, oktatás. 30+ év tapasztalattal – HKL, FH, FK, VH, VKS sorozatok.',
+          'Schelling ipari táblafelosztó gépek és szabászcellák nagyüzemi bútorgyártáshoz. Tervezés, telepítés és szerviz az Asamer Technologie-tól.',
         keywords: ['IMA Schelling', 'Lapszabó fűrész', 'Szerviz', 'Karbantartás', 'Javítás', 'Alkatrészek', 'HKL', 'FH', 'FK', 'VKS', 'Asamer'],
       },
     }),
@@ -304,9 +342,9 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         keywords: ['Financovanie', 'Tatra Leasing', 'Dotácie', 'Leasing', 'Stroje'],
       },
       hu: {
-        title: 'Gépfinanszírozás – Raiffeisen Lízing, pályázatok és részletfizetés | Asamer',
+        title: 'Faipari gép pályázat és finanszírozás 2026 | Asamer',
         description:
-          'Finanszírozzon gépeket Raiffeisen Lízinggel, részletfizetéssel vagy GINOP Plusz pályázattal. Asamer – ingyenes tanácsadás CZ, SK és HU területén.',
+          'Milyen magyar hitel- és pályázati konstrukció illik egy faipari gépberuházáshoz 2026-ban? Széchenyi MAX+, lízing és Garantiqa a gyakorlatban.',
         keywords: ['Finanszírozás', 'Raiffeisen Lízing', 'Pályázat', 'Lízing', 'Gépek'],
       },
     }),
@@ -340,9 +378,9 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         keywords: ['Riešenia', 'Digitalizácia', 'ERP', 'MES', 'Chytrá výroba'],
       },
       hu: {
-        title: 'Megoldások digitális gyártáshoz és szoftverhez | Asamer',
+        title: 'Faipari gépsor és automatizálás asztalostól nagyüzemig',
         description:
-          'Testreszabott megoldások fa-, műanyag- és fémfeldolgozáshoz – automatizálás, szoftverintegráció és Ipar 4.0 az Asamertől.',
+          'Élzárás, szabászat, fúrás és anyagmozgatás egy rendszerben. Nézze meg, milyen gépsor illik az üzemméretéhez – négy lépésben a megoldásig.',
         keywords: ['Megoldások', 'Digitalizáció', 'ERP', 'MES', 'Ipar 4.0'],
       },
     }),
@@ -376,9 +414,9 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         keywords: ['Servis', 'Podpora', 'Náhradné diely', 'Školenie', 'Automatizácia'],
       },
       hu: {
-        title: 'Szerviz és támogatás | Asamer Technologie',
+        title: 'Faipari gép szerviz és alkatrész – 30 év tapasztalattal',
         description:
-          'Asamer Szerviz – szerelés, sürgősségi szerviz és alkatrész-szállítás OTT, Mayer, BARBARIC, Gannomat és más gyártókhoz.',
+          'Faipari gép szerviz, javítás, beüzemelés és alkatrészellátás Magyarországon. Élzárógép, táblafelosztó és fúrógép szerviz gyors kiszállással.',
         keywords: ['Szerviz', 'Támogatás', 'Alkatrészek', 'Képzés', 'Automatizálás'],
       },
     }),
@@ -413,9 +451,9 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         keywords: ['Použité stroje', 'Repasovanie', 'Drevoobrábacie', 'Asamer'],
       },
       hu: {
-        title: 'Használt gépek és felújítás | Asamer',
+        title: 'Használt faipari gépek Ausztriából – ellenőrzött | Asamer',
         description:
-          'Használt gépek fa- és lapfeldolgozáshoz – műszakilag ellenőrzött ajánlatok az Asamertől.',
+          'Használt élzárógépek, táblafelosztók és szárítókamrák osztrák üzemekből: állapotfelmérés, szállítás, beüzemelés és garancia egy kézből.',
         keywords: ['Használt gépek', 'Felújított', 'Famegmunkálás', 'Asamer'],
       },
     }),
@@ -629,9 +667,9 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         keywords: ['PUR', 'EVA', 'Technológia lepenia', 'Olepovačka hrán', 'OTT', 'Hotmelt'],
       },
       hu: {
-        title: 'PUR vs EVA ragasztó – Ragasztási technológia útmutató | Asamer',
+        title: 'PUR vagy EVA élzárás? Összehasonlítás és költségek',
         description:
-          'PUR vagy EVA ragasztó élzárógépekhez? Ragasztási technológiák összehasonlítása, előnyök és hátrányok, javaslat üzemméret szerint. OTT gépek az Asamertől.',
+          'Mikor éri meg a PUR ragasztó az EVA helyett? Fugakép, vízállóság, tisztítási idő és üzemeltetési költség számokban – gyakorlati útmutató.',
         keywords: ['PUR', 'EVA', 'Ragasztási technológia', 'Élzárógép', 'OTT', 'Hotmelt'],
       },
     }),
@@ -665,9 +703,9 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         keywords: ['Edgebander', 'Buy edgebander', 'OTT', 'Joinery', 'PUR', 'EVA', 'Used edgebander'],
       },
       hu: {
-        title: 'Milyen élzárógépet vegyek? Vásárlási útmutató 2026 | Asamer',
+        title: 'Milyen élzárógépet válasszak? Vásárlási útmutató 2026',
         description:
-          'Milyen élzárógépet vegyek? Vásárlási útmutató üzemméret, anyagok és költségvetés szerint. OTT modellek, használt vs új, PUR vs EVA, GYIK. Asamer – hivatalos OTT-viszonteladó CZ, SK és HU számára.',
+          'Előtolás, aggregátszám, ragasztótípus és üzemméret: hogyan válasszon élzárógépet túlvásárlás nélkül. Döntési táblázat asztalostól nagyüzemig.',
         keywords: ['Élzárógép', 'Milyen élzárógépet', 'OTT', 'Asztalosmühely', 'PUR', 'EVA', 'Használt élzárógép'],
       },
     }),
@@ -737,9 +775,9 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         keywords: ['Automatizácia skladu', 'BARBARIC', 'Plošný sklad', 'ROI', 'Spracovanie dreva'],
       },
       hu: {
-        title: 'Raktárautomatizálás – Mikor éri meg? | Asamer',
+        title: 'Automata lapraktár – mikor térül meg a beruházás?',
         description:
-          'Raktárautomatizálás BARBARIC rendszerekkel: akár -40% raktárköltség, 99,9% készletpontosság. ROI-számítás, alkalmazási területek és rendszerek fafeldolgozáshoz.',
+          'Hány szabászciklustól éri meg az automata lapraktár? Megtérülés, helyigény és személyi megtakarítás valós üzemméretekre lebontva.',
         keywords: ['Raktárautomatizálás', 'BARBARIC', 'Lapraktár', 'ROI', 'Fafeldolgozás'],
       },
     }),
@@ -783,6 +821,12 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
   guideFundingCz: {
     slug: '/ratgeber/foerderung-holzbearbeitung-cz-2026',
     slugByLang: SLUG_TRANSLATIONS['/ratgeber/foerderung-holzbearbeitung-cz-2026'],
+    // Tschechische Foerderprogramme (OP TAK, NRB) auf der ungarischen
+    // Sprachversion: fuer ungarische Sucher wertlos und ein Themen-Fremdkoerper
+    // im /hu/-Verzeichnis. Bis es einen eigenen HU-Foerderratgeber gibt, geht
+    // die URL auf die ungarische Finanzierungsseite.
+    excludeLangs: ['hu'],
+    excludeRedirect: '/financovani',
     meta: createMeta({
       de: {
         title: 'Förderung Holzbearbeitung CZ 2026 – OP TAK, NRB | Asamer',

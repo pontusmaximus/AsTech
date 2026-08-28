@@ -25,10 +25,10 @@ Widerspruch, der im günstigsten Fall ignoriert und im ungünstigsten als Duplik
 
 | Ebene | Sprache | vorhanden | fehlt | Abdeckung |
 |---|---|---:|---:|---:|
-| A · Datenmodule (`MultiLangText`) | SK | 1254 | 752 | **62.5 %** |
+| A · Datenmodule (`MultiLangText`) | SK | 1314 | 692 | **65.5 %** |
 | A · Datenmodule (`MultiLangText`) | HU | 1891 | 115 | **94.3 %** |
-| B · Seitentexte (`tr()`) | SK | 38 | 682 | **5.3 %** |
-| B · Seitentexte (`tr()`) | HU | 39 | 689 | **5.4 %** |
+| B · Seitentexte (`tr()`) | SK | 41 | 694 | **5.6 %** |
+| B · Seitentexte (`tr()`) | HU | 742 | 0 | **100.0 %** |
 
 ## Eigener Befund: `tr()`-Aufrufe mit dynamischem Text
 
@@ -47,9 +47,9 @@ dauerhaft im Fallback, egal wie vollständig die Wörterbücher werden.
 | `src/pages/MayerProductPage.tsx` | 66 | `tr(`Anfrage Mayer ${product.name}`, `Inquiry Mayer ${product.name}`, `Poptávka Mayer ${product.name}`)` |
 | `src/pages/MayerProductPage.tsx` | 133 | `tr( `Die Mayer ${product.name} ist eine ${categoryLabel} für ${product.materials.includes('aluminium')` |
 | `src/pages/MayerProductPage.tsx` | 209 | `tr( `Unser hauseigenes Software-Team verbindet Ihre Mayer ${product.name} nahtlos mit Ihrem ERP-, MES-` |
-| `src/pages/OttProductPage.tsx` | 61 | `tr(`Anfrage OTT ${product.name}`, `Inquiry OTT ${product.name}`, `Poptávka OTT ${product.name}`)` |
-| `src/pages/OttProductPage.tsx` | 130 | `tr( `Die OTT ${product.name} ist eine ${categoryLabel} für ${product.badge === 'EINSTIEG' ? 'kleine un` |
-| `src/pages/OttProductPage.tsx` | 221 | `tr( `Unser Software-Team verbindet die ${product.name} via OPC-UA direkt mit Ihrem ERP/MES – keine` |
+| `src/pages/OttProductPage.tsx` | 91 | `tr(`Anfrage OTT ${product.name}`, `Inquiry OTT ${product.name}`, `Poptávka OTT ${product.name}`)` |
+| `src/pages/OttProductPage.tsx` | 173 | `tr( `Die OTT ${product.name} ist eine ${categoryLabel} für ${audience.de}${product.usp?.[lang] ? ` – $` |
+| `src/pages/OttProductPage.tsx` | 264 | `tr( `Unser Software-Team verbindet die ${product.name} via OPC-UA direkt mit Ihrem ERP/MES – keine` |
 
 ---
 
@@ -59,7 +59,7 @@ Der Schlüssel ist gleichzeitig die Übersetzungsvorlage: SK wird über den **ts
 HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 `src/i18n/pageTextTranslations.ts` besteht aus genau diesem Schlüssel und der Übersetzung.
 
-## `src/pages/FinancingPage.tsx` (158)
+## `src/pages/FinancingPage.tsx` (79)
 
 ### SK — 79 fehlend
 
@@ -143,89 +143,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 689: `Chcete probrat možnosti financování vašeho stroje?`
 - Zeile 696: `Bezplatné úvodní poradenství s Raiffeisen Leasing – bez žádosti, bez závazků.`
 
-### HU — 79 fehlend
-
-- Zeile 26: `Which machines can be financed through Raiffeisen Leasing?`
-- Zeile 31: `All machines from the Asamer portfolio – new and used: OTT edgebanding machines, Mayer saws, BARBARIC handling systems, Gannomat fitting automation, Mühlböck dryers and complete production lines. Raiffeisen Leasing has been financing machinery since 1994 – with insurance directly in the lease rate.`
-- Zeile 38: `What is the difference between finance leasing and operating leasing?`
-- Zeile 43: `With finance leasing the machine becomes your property after the final installment. With operating leasing you return it or extend – lower rates, full lease expense tax-deductible. Raiffeisen Leasing offers both, term 36–72 months.`
-- Zeile 50: `Can used machines also be financed?`
-- Zeile 55: `Yes. Raiffeisen Leasing finances new and used machines. Every used machine from Asamer is technically inspected before financing approval. Leaseback is also possible for machines you already own.`
-- Zeile 62: `What grants are available in the Czech Republic?`
-- Zeile 67: `Main programs: OP TAK – Digitální podnik (25–45%, max. CZK 45M, ERP/MES required), OP TAK – Inovace (15–60%, R&D-based technologies) and NRB Úvěr Expanze (0% interest, up to 50% of costs, 15-year term). Raiffeisen Leasing CZ can combine leasing directly with these programs.`
-- Zeile 74: `What grants are available in Slovakia?`
-- Zeile 79: `Program Slovensko 2021–2027 (up to 50%, max. EUR 2M), SIH guarantee instrument (80% guarantee + 0–30% grant, max. EUR 2.8M) and Slovak Recovery Plan (funding deadline August 2026). Tatra Leasing (Raiffeisen) is the financing partner in Slovakia.`
-- Zeile 86: `What grants are available in Hungary?`
-- Zeile 91: `GINOP Plusz-1.2.4 (50% grant, HUF 5–120M, deadline April 2026), Széchenyi Kártya (3% interest, state-subsidized, budget HUF 2,000B 2026) and MFB development loans. Raiffeisen Leasing Zrt. is the leasing partner in Hungary.`
-- Zeile 98: `How long does financing approval take?`
-- Zeile 103: `Raiffeisen Leasing: 3–7 business days from document submission. Grant programs (OP TAK, GINOP, Program Slovensko): 4–12 weeks depending on the program – Asamer coordinates the application.`
-- Zeile 110: `What do I need to start financing?`
-- Zeile 115: `For an initial assessment we only need: company name and tax ID, machine type and purchase price, preferred term. Detailed documents (balance sheet, P&L) are only required for the formal application with Raiffeisen Leasing.`
-- Zeile 125: `Lease types`
-- Zeile 126: `Finance lease · Operating lease · Leaseback`
-- Zeile 133: `Terms`
-- Zeile 134: `36–72 months`
-- Zeile 137: `Currency`
-- Zeile 138: `EUR or CZK · fixed or floating`
-- Zeile 145: `Down payment`
-- Zeile 146: `Up to 50% of purchase price`
-- Zeile 149: `New + Used`
-- Zeile 150: `Financing of new and used machines`
-- Zeile 157: `Insurance`
-- Zeile 158: `Directly integrable into lease rate`
-- Zeile 165: `Subsidy consulting`
-- Zeile 166: `Raiffeisen Leasing CZ combines leasing with OP TAK / NRB grant programs`
-- Zeile 178: `Finance Lease`
-- Zeile 179: `You use the machine from day one while Raiffeisen Leasing remains the legal owner. Ownership transfers to you after the final installment. Term 36–72 months, fixed monthly rate – predictable costs. Ideal for investments you want to keep long-term.`
-- Zeile 192: `Operating Lease`
-- Zeile 193: `Lower monthly rates, no ownership transfer – the machine is returned or the lease extended at the end. The entire lease expense is tax-deductible as a business cost. Suitable if you want to regularly update technology.`
-- Zeile 206: `Sale & Lease Back`
-- Zeile 207: `You sell an existing machine to Raiffeisen Leasing and lease it back immediately. This frees up tied-up capital – for new investments or working capital – while the machine continues operating at your facility.`
-- Zeile 223: `Choose your machine`
-- Zeile 224: `New or used from the Asamer portfolio. We prepare a quote including financing options.`
-- Zeile 232: `Review financing`
-- Zeile 233: `We review your options with Raiffeisen Leasing: lease type, term, grant combination. Duration: 3–7 business days.`
-- Zeile 241: `Contract & grant application`
-- Zeile 242: `Sign leasing contract. For grant combinations Asamer coordinates the application in parallel.`
-- Zeile 250: `Delivery & commissioning`
-- Zeile 251: `Installation and training by Asamer technicians. Financing is running – you produce.`
-- Zeile 261: `Financing inquiry`
-- Zeile 276: `Machine Financing & Grants 2026`
-- Zeile 281: `Asamer Technology finances woodworking machines (OTT, Mayer, BARBARIC, Gannomat) through Raiffeisen Leasing with 36–72 month terms and supports EU grant applications in CZ, SK and HU. This guide explains the available programs, the application process and which machines are eligible.`
-- Zeile 289: `New or used woodworking machines don't have to be a one-time expense. Together with our partner Raiffeisen Leasing, we offer financing solutions for businesses in CZ, SK and HU – from leasing to installment purchase to EU grant support.`
-- Zeile 308: `Raiffeisen Leasing – Partner Financing`
-- Zeile 311: `As a long-standing partner, Asamer Technologie works with Raiffeisen Leasing – one of the largest leasing providers in Central Europe, present in CZ, SK and HU. This means fast processing, flexible terms and a single point of contact for machine and financing.`
-- Zeile 339: `3 Leasing Models`
-- Zeile 365: `Grants & Subsidies`
-- Zeile 391: `Operational Programme Technology and Application for Competitiveness. Supports production machinery with digital connectivity (ERP/MES integration required). Project budget CZK 2.5–100M, max. grant CZK 45M. Small enterprises receive up to 45%.`
-- Zeile 405: `Supports introducing innovations into production – new machines and technologies based on R&D results. Grant CZK 1–80M. Requirement: proof of innovation.`
-- Zeile 417: `0% interest · up to 50%`
-- Zeile 421: `Interest-free investment loan from the National Development Bank (formerly ČMZRB). Term up to 15 years, covers up to 50% of eligible expenses – machines, production lines, software, premises. For SMEs in all sectors.`
-- Zeile 431: `Raiffeisen Leasing CZ offers its own subsidy consulting and can combine leasing directly with grant programs (OP TAK, NRB) – e.g. 0% interest on the subsidized portion.`
-- Zeile 460: `up to 50%`
-- Zeile 464: `Operational programme for technology investment and machinery purchases. Max. EUR 2M per project. Eligible: machines, software, patents, personnel costs for new employees.`
-- Zeile 476: `80% guarantee + 0–30% grant`
-- Zeile 480: `Slovak Investment Holding guarantees 80% of credit risk at partner banks. Additional grant component 0–30% of loan amount depending on region. Max. loan EUR 2.8M, term up to 10 years. Result: lower interest rates, fewer collateral requirements.`
-- Zeile 492: `Deadline: August 2026`
-- Zeile 496: `Slovak recovery plan (EUR 6.4B). Investment support for machinery and digitalization. All measures must be completed by 31 August 2026.`
-- Zeile 525: `50% non-repayable`
-- Zeile 529: `Investment grant for micro and small enterprises in disadvantaged regions. 50% non-repayable, HUF 5–120M per applicant. Eligible: new machinery (min. 10% of budget), IT systems, premises. Application deadline: 30 April 2026.`
-- Zeile 541: `3% interest – state-subsidized`
-- Zeile 545: `State-subsidized SME credit at a uniform customer rate of 3% p.a. (green bonus: 8% state subsidy). Budget 2026: HUF 2,000B. Usable for machine purchase, fleet, business property. For businesses with at least 1 year of activity.`
-- Zeile 557: `Development bank`
-- Zeile 561: `The state development bank offers subsidized loans for machinery and technology investment, especially for energy efficiency projects. Can be combined with GINOP grants.`
-- Zeile 580: `Process in 4 Steps`
-- Zeile 602: `Frequently Asked Questions`
-- Zeile 626: `Which machines are eligible for grants?`
-- Zeile 629: `In principle all machines from the Asamer portfolio are eligible for grants – the decisive factor is the combination of program, company type and digital connectivity. OTT machines with Beckhoff OPC-UA controls automatically meet the ERP/MES integration requirement for OP TAK.`
-- Zeile 639: `Edgebanding machines: Pacific+, Tornado+, FlexEdge, Storm+, StrongEdge, TopEdge. All with OPC-UA for grant programs requiring digitalization.`
-- Zeile 649: `Panel saws: Kappa Automatic 80–140 and Advanced Line 100–250. For wood, plastics, aluminium and non-ferrous metals.`
-- Zeile 659: `Storage and handling: CSF panel storage, LCV feeding, NST nesting, RTS return transport. Especially eligible due to automation component.`
-- Zeile 669: `Drilling and dowel machines: Selekta, Index, ProTec, Express series. For automated furniture manufacturing.`
-- Zeile 689: `Want to discuss a financing option for your machine?`
-- Zeile 696: `Free initial consultation with Raiffeisen Leasing – no application, no obligation.`
-
-## `src/pages/GuidePurVsEvaPage.tsx` (126)
+## `src/pages/GuidePurVsEvaPage.tsx` (62)
 
 ### SK — 62 fehlend
 
@@ -233,8 +151,8 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 33: `Ano, všechny stroje OTT se systémem CombiMelt lze dodatečně přestavět na PUR. Upgrade zahrnuje uzavřený systém zásobování lepidlem s ochranou proti vlhkosti a automatickým čištěním. Přestavbu může provést technik Asamer přímo u zákazníka.`
 - Zeile 40: `Je PUR dražší v provozu?`
 - Zeile 45: `Náklady na materiál jsou přibližně o 20–30 % vyšší než u EVA, ale lepší kvalita hran a nižší reklamační podíl tyto vícenáklady ve většině provozů vyrovnají. Navíc tenčí lepená spára snižuje spotřebu na obrobek. Pro výrobce kuchyňského a koupelnového nábytku je PUR ekonomicky jednoznačně výhodnější.`
-- Zeile 52: `Které hrany jsou vhodné pro laser?`
-- Zeile 57: `Pro bluEdge HyFuse jsou potřeba speciálně potažené hrany s funkční vrstvou, kterou aktivuje diodový laser. Tyto hrany jsou dostupné od všech velkých výrobců hran (Rehau, Döllken, Ostermann aj.). Standardní hrany bez funkční vrstvy nelze laserem zpracovat.`
+- Zeile 52: `Které hrany jsou vhodné pro bluEdge HyFuse?`
+- Zeile 57: `Pro bluEdge HyFuse jsou potřeba speciálně potažené hrany s funkční vrstvou, kterou aktivuje vodíko-kyslíkový plamen. Tyto hrany jsou dostupné od všech velkých výrobců hran (Rehau, Döllken, Ostermann aj.). Standardní hrany bez funkční vrstvy nelze technologií bluEdge HyFuse zpracovat.`
 - Zeile 64: `Musím se při nákupu hned rozhodnout pro PUR?`
 - Zeile 69: `Ne, díky systému CombiMelt můžete začít s EVA a PUR dodat později, aniž byste museli kupovat nový stroj. Tento modulární koncept je dostupný u všech modelů OTT a dlouhodobě chrání vaši investici.`
 - Zeile 80: `Lepená spára`
@@ -265,7 +183,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 157: `EVA s možností dodatečného PUR → Pacific+`
 - Zeile 167: `PUR doporučeno → FlexEdge nebo Storm+`
 - Zeile 176: `Průmyslový nepřetržitý provoz`
-- Zeile 177: `PUR + Laser → StrongEdge nebo TopEdge`
+- Zeile 177: `PUR + bluEdge HyFuse → StrongEdge nebo TopEdge`
 - Zeile 189: `Poptávka technologie lepení`
 - Zeile 203: `PUR vs EVA – Průvodce technologií lepení`
 - Zeile 210: `PUR a EVA jsou dvě nejdůležitější technologie lepení pro průmyslové olepovačky hran. Tento průvodce vysvětluje rozdíly, výhody a nevýhody a pomůže vám vybrat správný systém pro váš provoz.`
@@ -283,83 +201,16 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 331: `Vodotěsný a tepelně odolný do 150 °C`
 - Zeile 341: `Vyžaduje speciální skladování (ochrana proti vlhkosti)`
 - Zeile 351: `Vyšší náklady na materiál, speciální čištění`
-- Zeile 369: `bluEdge HyFuse – Laserová technologie`
-- Zeile 377: `bluEdge HyFuse je vlastní laserová technologie OTT pro bezešvé olepení hran (Zero-Gap). Diodový laser aktivuje funkční vrstvu na hraně, která splyne s obrobkem bez samostatného lepidla. Výsledkem jsou opticky dokonalé, vodotěsné hrany bez viditelné lepené spáry.`
+- Zeile 369: `bluEdge HyFuse – Technologie nulové spáry`
+- Zeile 377: `bluEdge featuring HyFuse je vlastní technologie nulové spáry od OTT pro bezešvé olepení hran (Zero-Gap). Vodíko-kyslíkový plamen aktivuje funkční vrstvu na hraně, která splyne s obrobkem bez samostatného lepidla. Výsledkem jsou opticky dokonalé, vodotěsné hrany bez viditelné lepené spáry.`
 - Zeile 393: `Srovnávací tabulka`
 - Zeile 470: `Které stroje OTT co podporují?`
 - Zeile 491: `Zobrazit olepovačky hran OTT`
 - Zeile 505: `Doporučení dle velikosti provozu`
 - Zeile 560: `Která technologie lepení se hodí pro váš provoz?`
-- Zeile 567: `Poradíme vám s výběrem mezi EVA, PUR a laserem – přesně podle vaší výroby a požadavků.`
+- Zeile 567: `Poradíme vám s výběrem mezi EVA, PUR a bluEdge HyFuse – přesně podle vaší výroby a požadavků.`
 
-### HU — 64 fehlend
-
-- Zeile 28: `Can you retrofit EVA to PUR?`
-- Zeile 33: `Yes, all OTT machines with the CombiMelt system can be retrofitted to PUR. The upgrade includes a closed adhesive supply system with moisture protection and automatic cleaning. The retrofit can also be performed in the field by an Asamer technician.`
-- Zeile 40: `Is PUR more expensive to operate?`
-- Zeile 45: `Material costs are about 20–30% higher than EVA, but the better edge quality and lower complaint rate offset the extra cost in most operations. In addition, the thinner glue line reduces consumption per workpiece. For kitchen and bathroom furniture manufacturers, PUR is clearly more economical.`
-- Zeile 52: `Which edges are suitable for laser?`
-- Zeile 57: `For bluEdge HyFuse, specially coated edges with a functional layer are required, which is activated by the diode laser. These edges are available from all major edge manufacturers (Rehau, Döllken, Ostermann, etc.). Standard edges without a functional layer cannot be processed with laser.`
-- Zeile 64: `Do I need to decide on PUR when purchasing?`
-- Zeile 69: `No, thanks to CombiMelt you can start with EVA and retrofit PUR later without having to buy a new machine. This modular concept is available on all OTT models and protects your investment long-term.`
-- Zeile 80: `Glue line`
-- Zeile 81: `Visible (0.1–0.2 mm)`
-- Zeile 82: `Nearly invisible`
-- Zeile 83: `None`
-- Zeile 86: `Heat resistance`
-- Zeile 87: `up to 60 °C`
-- Zeile 88: `up to 150 °C`
-- Zeile 92: `Water resistance`
-- Zeile 93: `Limited`
-- Zeile 94: `High`
-- Zeile 95: `Very high`
-- Zeile 98: `Material costs`
-- Zeile 99: `Low`
-- Zeile 100: `Medium`
-- Zeile 104: `Handling`
-- Zeile 105: `Simple`
-- Zeile 110: `Recommendation`
-- Zeile 111: `Standard furniture`
-- Zeile 112: `Kitchen, bathroom, outdoor`
-- Zeile 113: `Premium, Zero-Gap`
-- Zeile 121: `EVA standard, PUR retrofittable (CombiMelt)`
-- Zeile 129: `EVA + PUR (CombiMelt standard)`
-- Zeile 137: `EVA + PUR, bluEdge HyFuse optional`
-- Zeile 145: `EVA + PUR + bluEdge HyFuse`
-- Zeile 156: `Small workshop (1–5 employees)`
-- Zeile 157: `EVA with PUR retrofit option → Pacific+`
-- Zeile 166: `Medium operation (5–20 employees)`
-- Zeile 167: `PUR recommended → FlexEdge or Storm+`
-- Zeile 176: `Industrial continuous operation`
-- Zeile 177: `PUR + Laser → StrongEdge or TopEdge`
-- Zeile 189: `Gluing technology inquiry`
-- Zeile 203: `PUR vs EVA – Guide to Gluing Technology`
-- Zeile 210: `PUR and EVA are the two most important adhesive technologies for industrial edgebanding machines. This guide explains the differences, advantages and disadvantages, and helps you choose the right system for your operation.`
-- Zeile 225: `What is EVA?`
-- Zeile 228: `EVA (ethylene vinyl acetate) is a thermoplastic hot-melt adhesive that has been the standard in edgebanding for decades.`
-- Zeile 239: `Fast curing (a few seconds)`
-- Zeile 249: `Simple handling, no special storage`
-- Zeile 259: `Cost-effective in purchase and consumption`
-- Zeile 269: `Visible glue line (0.1–0.2 mm)`
-- Zeile 279: `Sensitive to heat above 60 °C and moisture`
-- Zeile 297: `What is PUR?`
-- Zeile 300: `PUR (polyurethane reactive adhesive) is a moisture-curing adhesive that creates a waterproof, heat-resistant bond.`
-- Zeile 311: `Reacts with air moisture, irreversible curing`
-- Zeile 321: `Thinner glue line (nearly invisible)`
-- Zeile 331: `Water- and heat-resistant up to 150 °C`
-- Zeile 341: `Requires special storage (moisture-protected)`
-- Zeile 351: `Higher material costs, special cleaning`
-- Zeile 369: `bluEdge HyFuse – Laser Technology`
-- Zeile 377: `bluEdge HyFuse is OTT's proprietary laser technology for seamless edge bonding (Zero-Gap). A diode laser activates the functional layer on the edge, which fuses with the workpiece without separate adhesive. The result is visually perfect, waterproof edges without a visible glue line.`
-- Zeile 393: `Comparison Table`
-- Zeile 470: `Which OTT machines support what?`
-- Zeile 491: `View all OTT edgebanders`
-- Zeile 505: `Recommendation by Operation Size`
-- Zeile 560: `Which gluing technology suits your operation?`
-- Zeile 567: `We advise you on choosing between EVA, PUR and laser – tailored to your production and requirements.`
-- Zeile 580: `OTT edgebanders`
-
-## `src/pages/GuidePanelSawComparisonPage.tsx` (121)
+## `src/pages/GuidePanelSawComparisonPage.tsx` (60)
 
 ### SK — 60 fehlend
 
@@ -424,71 +275,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 425: `Asamer poradí s řezáním dřeva i hliníku v CZ, SK a HU – od Kappa Automatic po Advanced Line. Včetně instalace, školení a servisní smlouvy.`
 - Zeile 434: `Poptat poradenství`
 
-### HU — 61 fehlend
-
-- Zeile 29: `Can I cut wood on an aluminium panel saw?`
-- Zeile 34: `Technically yes, economically no. The Mayer Advanced Line uses slow feeds (1–15 m/min), fine non-ferrous blades and coolant lubrication. Cutting chipboard or HPL would work, but with much lower throughput, higher blade wear and coolant contamination from wood dust. Conversely, a pure Kappa wood machine must not run aluminium, because pressure beam, extraction and blade geometry are not designed for it.`
-- Zeile 41: `What does a panel saw cost?`
-- Zeile 46: `A Mayer Kappa Automatic for wood sizing starts at around EUR 80,000–120,000 depending on blade length and equipment. An Advanced Line for aluminium and composite typically costs 15–25% more due to coolant system, chip conveyor and reinforced pressure beam. Fully automatic models with labelling, angle infeed and buffer can exceed EUR 250,000. Asamer prepares calculated quotes for CZ/SK/HU including installation, training and service contract.`
-- Zeile 53: `What tolerances can be achieved?`
-- Zeile 58: `Mayer Kappa wood machines achieve length and diagonal tolerances of ±0.1 mm over 3000 mm cuts – sufficient for furniture fronts and carcass parts. The Advanced Line is designed for ±0.05 mm, which is required for aluminium facade profiles, PMMA displays and lightweight panels. Tolerance depends not only on the machine but also on material temperature (critical for aluminium), tool condition and clamping.`
-- Zeile 65: `Is the extra cost for the aluminium variant worth it?`
-- Zeile 70: `If your share of aluminium, HPL or composite cuts is below 10%, an Advanced Line rarely pays off – better to outsource or crosscut manually. At 20–30% non-ferrous or engineering plastic share, the machine typically amortises in 2–4 years through avoided scrap, better edge quality and eliminated subcontracting. Asamer provides a product-mix analysis for your operation.`
-- Zeile 77: `Used or new – what makes sense?`
-- Zeile 82: `Used Mayer Kappa machines from recent generations (2015+) offer excellent value if controller, pressure beam and saw unit are verified. For Advanced Line machines we generally recommend new units: coolant, chip handling and blade stabilisation have improved significantly in recent years. Asamer offers inspected used machines with warranty and factory-new units in CZ, SK and HU.`
-- Zeile 93: `Primary material`
-- Zeile 94: `Chipboard, MDF, HPL, solid wood`
-- Zeile 95: `Aluminium, PMMA, composite`
-- Zeile 98: `Saw blade`
-- Zeile 99: `TCT 72–96 teeth, coarse`
-- Zeile 100: `Non-ferrous 96–120 teeth, fine`
-- Zeile 103: `Feed rate`
-- Zeile 108: `Coolant`
-- Zeile 109: `Dry`
-- Zeile 110: `MQL / spray mist`
-- Zeile 113: `Pressure beam`
-- Zeile 114: `Standard`
-- Zeile 115: `Reinforced, profile-safe`
-- Zeile 118: `Tolerance`
-- Zeile 123: `Chip handling`
-- Zeile 124: `Extraction`
-- Zeile 125: `Conveyor + filter`
-- Zeile 132: `> 90% wood / panel materials`
-- Zeile 133: `Mayer Kappa Automatic`
-- Zeile 138: `Mix wood + up to 20% alu/HPL`
-- Zeile 139: `Kappa with add-on or outsource aluminium`
-- Zeile 144: `> 30% aluminium, PMMA, composite`
-- Zeile 145: `Mayer Advanced Line`
-- Zeile 153: `Panel saw inquiry`
-- Zeile 166: `Panel saw aluminium vs wood`
-- Zeile 180: `Panel Saw for Wood or Aluminium – Mayer Kappa vs Advanced Line`
-- Zeile 187: `Panel sizing saws are not universal machines: blade geometry, feed dynamics and coolant decide whether a saw is suitable for wood or for aluminium and plastics. Running both materials on the same machine risks blade breakage, tolerance drift and premature wear. This guide compares the Mayer Kappa Automatic (wood production) with the Mayer Advanced Line (aluminium/composite) and helps you select the right configuration for your material mix in CZ, SK and HU.`
-- Zeile 202: `Key differences at a glance`
-- Zeile 211: `Kappa (Wood)`
-- Zeile 216: `Advanced Line (Alu)`
-- Zeile 269: `Mayer Kappa Automatic – for wood production`
-- Zeile 276: `The Kappa series is designed for high-volume panel sizing in furniture and carcass production. Main blade diameter 400–520 mm, feed up to 120 m/min, cut lengths from 3,200 to 5,600 mm. Typical materials: melamine-faced chipboard, MDF, HDF, HPL on substrate, solid-wood glued board and plywood. The machine runs dry – extraction removes chips. The pressure beam with parametric force protects sensitive decors from marks. With optimised nesting patterns and ERP label integration, the Kappa Automatic is the default choice for Czech, Slovak and Hungarian furniture makers with throughput from 30 panels per shift.`
-- Zeile 284: `Typical applications`
-- Zeile 287: `Kitchen and bathroom carcasses`
-- Zeile 288: `Office furniture, wall units, table parts`
-- Zeile 289: `Door panels and frames for interior doors`
-- Zeile 290: `PUR/EVA-bonded chipboard, no aluminium share`
-- Zeile 302: `Mayer Advanced Line – for aluminium, plastics and composite`
-- Zeile 309: `The Advanced Line shares the Kappa bed but is purpose-built for non-ferrous materials: blades with 96–120 teeth and fine tooth geometry, feeds of 1–15 m/min (depending on thickness), minimum quantity lubrication (MQL) or spray mist, a reinforced pressure beam with profile-safe support, and a chip channel with sieve conveyor and filter unit. Typical applications include aluminium facade elements (ACP/ACM panels), PMMA and polycarbonate displays, thick HPL, lightweight honeycomb panels and composites with plastic cores. The ±0.05 mm tolerance makes the Advanced Line the preferred choice for window, display and composite producers serving CNC facade or machinery supply chains in CZ, SK and HU.`
-- Zeile 317: `Typical materials`
-- Zeile 320: `Aluminium extrusions and hollow profiles`
-- Zeile 321: `ACP/ACM (aluminium composite facade panels)`
-- Zeile 322: `HPL ≥ 10 mm, PMMA, polycarbonate`
-- Zeile 323: `Honeycomb, GRP, CFRP composite`
-- Zeile 335: `Hybrid operation – one machine for both?`
-- Zeile 342: `The temptation to run both materials on one saw is strong. Technically this is only partly possible and economically rarely sensible: wood dust contaminates the coolant of an Advanced Line, aluminium chips clog wood extraction and can ignite on a hot blade. On top of that, changing tooth geometry, feed parameters and pressure beam programme costs 30–60 minutes of downtime per changeover. Shops that rarely cut aluminium are cheaper off with a pure Kappa plus subcontracting the aluminium share, or a table saw workstation with a dedicated crosscut and panel saw for non-ferrous metals. Asamer only recommends hybrid setups when the aluminium share is permanently between 15 and 40% – and then with two separate machines, not one compromise.`
-- Zeile 358: `Choice by primary material`
-- Zeile 379: `View all Mayer panel saws`
-- Zeile 418: `Which panel saw fits your material mix?`
-- Zeile 425: `Asamer advises on wood and aluminium sizing in CZ, SK and HU – from Kappa Automatic to Advanced Line. Including installation, training and service contract.`
-- Zeile 438: `Mayer panel saws`
-
-## `src/pages/ImaSchellingPage.tsx` (103)
+## `src/pages/ImaSchellingPage.tsx` (51)
 
 ### SK — 51 fehlend
 
@@ -544,165 +331,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 465: `Poptat servis`
 - Zeile 478: `Informace o výrobci`
 
-### HU — 52 fehlend
-
-- Zeile 29: `Service inquiry IMA Schelling`
-- Zeile 37: `Service for IMA Schelling panel saws`
-- Zeile 38: `IMA Schelling Panel Saw Service`
-- Zeile 43: `Maintenance, repair, spare parts and operator training for IMA Schelling panel saws (HKL, FH, FK, VH, VKS) – over 30 years of experience.`
-- Zeile 62: `IMA Schelling service offerings`
-- Zeile 64: `Maintenance & inspection`
-- Zeile 65: `Repair & emergency service`
-- Zeile 66: `Spare & wear parts`
-- Zeile 67: `Training & optimization`
-- Zeile 74: `Does Asamer service older IMA Schelling panel saws?`
-- Zeile 79: `Yes. We service both classic pressure-beam saws (HKL, FH, FK series) and modern cutting centers (VH, VKS and newer series). Our technicians have over 30 years of experience with IMA Schelling and IMA, including electrical controls of multiple generations.`
-- Zeile 86: `Which IMA Schelling model series are supported?`
-- Zeile 91: `HKL, FH, FK, FH-3/4/5/6, FK-5/6, VH, VKS and current Schelling series. We also service earlier IMA models (predating the merger into IMA Schelling). For special configurations we check feasibility case by case.`
-- Zeile 98: `Does Asamer also sell new IMA Schelling machines?`
-- Zeile 103: `No. We are an authorized dealer of Mayer Germany (Felder Group) panel sizing saws; for IMA Schelling we focus on service and lifecycle support for existing machines, not sales. If you are planning a new purchase, we are happy to advise independently and compare Mayer with IMA Schelling options. In our used machines section a used Schelling is occasionally on offer.`
-- Zeile 110: `Do you supply original IMA Schelling spare parts?`
-- Zeile 115: `Yes, we source original spare parts as well as high-quality wear parts (saw blades, scoring units, pressure-beam strips, timing belts, sensors). For controls and electronic assemblies we work with the manufacturer or third-party suppliers to keep older machines economically running.`
-- Zeile 127: `No. We are an authorized dealer for Mayer panel saws (Felder Group) and on IMA Schelling we focus on service and lifecycle support for existing installations. If you plan a new purchase, we are happy to advise vendor-neutrally and compare Mayer with IMA Schelling options.`
-- Zeile 139: `Pressure-beam saws (classic)`
-- Zeile 143: `Cutting centers & angular plants`
-- Zeile 160: `Planned maintenance windows, condition checks on saw unit, pressure beam and feed system – keeping your IMA Schelling panel saw running reliably.`
-- Zeile 169: `When production is down, we prioritize your machine immediately: remote diagnostics, on-site service and fast restart – also for older IMA Schelling models.`
-- Zeile 178: `Sourcing of original spare and wear parts for IMA Schelling panel saws – incl. saw blades, control components and mechanical parts.`
-- Zeile 187: `Operator training, optimization projects and consulting to improve cutting performance, dimensional accuracy and machine availability.`
-- Zeile 204: `Asamer Service`
-- Zeile 206: `Panel saws · Service & Lifecycle`
-- Zeile 219: `Panel saw service from experienced hands`
-- Zeile 226: `IMA Schelling is one of the world’s leading panel-saw manufacturers. Asamer has been servicing these machines for more than 30 years – from preventive maintenance to repair, spare parts and operator training. We do not sell new IMA Schelling machines; we focus on service for existing installations in CZ, SK and HU.`
-- Zeile 237: `years IMA Schelling`
-- Zeile 238: `markets (CZ·SK·HU)`
-- Zeile 239: `Emergency hotline`
-- Zeile 250: `Services`
-- Zeile 253: `What we do for your machine`
-- Zeile 300: `Years of practice`
-- Zeile 307: `IMA Schelling experience`
-- Zeile 311: `From the classic pressure-beam saw concept to modern cutting centers – our team knows the mechanical and control-side breadth of the IMA Schelling lines from hundreds of service calls. We translate that experience into fast diagnosis, clean maintenance and honest advice on the next investment step.`
-- Zeile 326: `Model coverage`
-- Zeile 329: `Model series we support`
-- Zeile 336: `Our service covers classic IMA Schelling pressure-beam saws as well as modern cutting centers. Earlier IMA models (predating the merger into IMA Schelling) are also supported.`
-- Zeile 369: `Model names without warranty – for special machines we check serviceability case by case.`
-- Zeile 382: `Frequently asked questions about IMA Schelling service`
-- Zeile 416: `Related pages`
-- Zeile 421: `Service & lifecycle support`
-- Zeile 422: `General service offering`
-- Zeile 426: `Mayer panel saws (sales)`
-- Zeile 427: `New panel saw purchase`
-- Zeile 432: `Answers about service & machines`
-- Zeile 445: `Service request`
-- Zeile 448: `Is your IMA Schelling saw down or not running smoothly?`
-- Zeile 455: `Send us your model and the symptom – we get back within a few hours with concrete next steps.`
-- Zeile 465: `Request service`
-- Zeile 478: `Manufacturer information`
-
-## `src/pages/GuideEdgebanderPage.tsx` (95)
-
-### SK — 47 fehlend
-
-- Zeile 37: `Konzultace olepovačka hran`
-- Zeile 47: `Malá truhlárna`
-- Zeile 52: `VSTUP`
-- Zeile 56: `Malý–Střední`
-- Zeile 61: `STŘED`
-- Zeile 65: `Střední provoz`
-- Zeile 70: `NOVINKA`
-- Zeile 74: `Střední–Velký`
-- Zeile 79: `PROFI`
-- Zeile 83: `Průmysl`
-- Zeile 97: `VLAJKOVÁ LOĎ`
-- Zeile 101: `Výroba dveří`
-- Zeile 106: `SPECIÁL`
-- Zeile 118: `Průvodce`
-- Zeile 119: `Olepovačka hran – výběr`
-- Zeile 126: `Jakou olepovačku hran koupit`
-- Zeile 142: `Jakou olepovačku hran koupit? Průvodce výběrem 2026`
-- Zeile 159: `Čtyři kritéria pro rozhodnutí`
-- Zeile 177: `Malá truhlárna (1–5 zaměstnanců)`
-- Zeile 184: `U malých dílen s 1–5 zaměstnanci je na prvním místě kompaktnost a univerzálnost. Denní průchod se typicky pohybuje mezi 20–80 obrobky, rozmanitost materiálů je vysoká (masivní dřevo, melamin, plast). Stroj musí umožňovat rychlou výměnu hran a pracovat na omezeném prostoru.`
-- Zeile 192: `Naše doporučení: OTT Pacific+`
-- Zeile 195: `S délkou pouhých 5,7 m se vejde do každé dílny. Posuv 18 m/min včetně opracování rohů – nepotřebujete samostatný stroj na zaoblení rohů. Tloušťky hran 0,3–15 mm pokrývají všechny standardní aplikace. S CombiMelt je Pacific+ navíc rozšířitelná o PUR, takže při rostoucích požadavcích nemusíte měnit stroj.`
-- Zeile 207: `Zobrazit Pacific+ na stránce OTT`
-- Zeile 220: `Střední provoz (5–20 zaměstnanců)`
-- Zeile 227: `Střední provozy zpracovávají 80–300 obrobků denně a potřebují vyšší rychlosti posuvu a flexibilitu. Požadavky na kvalitu hran rostou – PUR lepení je stále více vyžadováno trhem, zejména u kuchyňského nábytku.`
-- Zeile 235: `Naše doporučení: OTT FlexEdge nebo Storm+`
-- Zeile 238: `FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 12–20 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost laserové technologie bluEdge HyFuse pro hrany s nulovými spárami.`
-- Zeile 250: `Zobrazit FlexEdge a Storm+ na stránce OTT`
-- Zeile 263: `Průmyslový nepřetržitý provoz (20+ zaměstnanců)`
-- Zeile 270: `Průmyslové provozy s vícesměnným provozem zpracovávají 300+ obrobků na směnu. Rozhoduje spolehlivost, průchodnost a nejvyšší kvalita hran. PUR a laser jsou standardem, automatická výměna hran a napojení na nadřazené systémy jsou nutností.`
-- Zeile 278: `Naše doporučení: OTT StrongEdge nebo TopEdge`
-- Zeile 281: `StrongEdge nabízí délku 7,7 m a posuv 16–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge HyFuse laser a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.`
-- Zeile 293: `Zobrazit StrongEdge a TopEdge na stránce OTT`
-- Zeile 306: `Speciální případ: Výroba dveří`
-- Zeile 313: `Výrobci dveří mají specifické požadavky: těžké obrobky, široké hrany a často nepřetržitá výroba s malým počtem změn formátu. OTT Door Edition je speciálně navržena pro tuto aplikaci – s upraveným vedením obrobků, zesíleným posuvem a optimalizovanou přítlačnou technikou pro masivní dveřní prvky.`
-- Zeile 321: `Pokud se zaměřujete na výrobu dveří, doporučujeme přímou konzultaci – Door Edition se individuálně konfiguruje podle vašeho výrobního profilu.`
-- Zeile 336: `Srovnávací přehled`
-- Zeile 343: `Model`
-- Zeile 346: `Cílová skupina`
-- Zeile 349: `Délka`
-- Zeile 352: `Posuv`
-- Zeile 379: `✓ = Standard · – = Volitelně · ✕ = nedostupné. Všechny údaje bez záruky.`
-- Zeile 402: `Zobrazit ověřené použité stroje`
-- Zeile 423: `Detailní průvodce PUR vs EVA`
-- Zeile 472: `Který stroj se hodí pro váš provoz?`
-- Zeile 479: `Poradíme vám osobně – s ohledem na průchodnost, prostor a rozpočet.`
-- Zeile 491: `Všechny olepovačky hran OTT`
-
-### HU — 48 fehlend
-
-- Zeile 37: `Edgebander consultation`
-- Zeile 47: `Small joinery`
-- Zeile 52: `ENTRY`
-- Zeile 56: `Small–Mid`
-- Zeile 61: `MID`
-- Zeile 65: `Mid-size`
-- Zeile 70: `NEW`
-- Zeile 74: `Mid–Large`
-- Zeile 79: `PRO`
-- Zeile 83: `Industrial`
-- Zeile 97: `FLAGSHIP`
-- Zeile 101: `Door mfg.`
-- Zeile 106: `SPECIAL`
-- Zeile 118: `Guides`
-- Zeile 119: `Buy edgebander`
-- Zeile 126: `Which edgebander to buy`
-- Zeile 142: `Which Edgebander to Buy? Buying Guide 2026`
-- Zeile 159: `Four decision criteria`
-- Zeile 177: `Small Joinery (1–5 Employees)`
-- Zeile 184: `For small workshops with 1–5 employees, compactness and versatility come first. Daily throughput typically ranges from 20–80 workpieces, material variety is high (solid wood, melamine, plastic). The machine must allow quick edge changes and fit into tight spaces.`
-- Zeile 192: `Our recommendation: OTT Pacific+`
-- Zeile 195: `At only 5.7 m in length it fits any workshop. 18 m/min feed rate including corner rounding – no separate corner rounding machine needed. Edge thicknesses from 0.3–15 mm cover all standard applications. With CombiMelt the Pacific+ is also PUR-upgradable, so you won't need to replace the machine as requirements grow.`
-- Zeile 207: `View Pacific+ on the OTT page`
-- Zeile 220: `Mid-size Operation (5–20 Employees)`
-- Zeile 227: `Mid-size operations process 80–300 workpieces daily and need higher feed speeds and flexibility. Edge quality demands are rising – PUR gluing is increasingly required by the market, especially for kitchen furniture.`
-- Zeile 235: `Our recommendation: OTT FlexEdge or Storm+`
-- Zeile 238: `The FlexEdge is OTT's newest machine, bridging the gap between Tornado+ and Storm+. At 7.1 m length, 12–20 m/min feed and Beckhoff 18.5″ control it offers OPC-UA connectivity for ERP integration. The Storm+ additionally provides the option for bluEdge HyFuse laser technology for zero-gap edges.`
-- Zeile 250: `View FlexEdge & Storm+ on the OTT page`
-- Zeile 263: `Industrial Continuous Operation (20+ Employees)`
-- Zeile 270: `Industrial operations running multiple shifts process 300+ workpieces per shift. Reliability, throughput and top edge quality are what count. PUR and laser are standard, automatic edge changes and integration with higher-level systems are mandatory.`
-- Zeile 278: `Our recommendation: OTT StrongEdge or TopEdge`
-- Zeile 281: `The StrongEdge offers 7.7 m length and 16–25 m/min feed – built for industrial continuous operation. The TopEdge flagship combines all available technologies: EVA, PUR, bluEdge HyFuse laser and fully automatic edge magazines. Both machines feature Beckhoff OPC-UA control for seamless Industry 4.0 integration.`
-- Zeile 293: `View StrongEdge & TopEdge on the OTT page`
-- Zeile 306: `Special Case: Door Manufacturing`
-- Zeile 313: `Door manufacturers have specific demands: heavy workpieces, wide edges and often continuous production with few format changes. The OTT Door Edition is purpose-built for this application – with adapted workpiece guidance, reinforced feed and optimized pressure technology for solid door elements.`
-- Zeile 321: `If your focus is door manufacturing, we recommend a direct consultation – the Door Edition is individually configured to your production profile.`
-- Zeile 336: `Comparison Overview`
-- Zeile 343: `Model`
-- Zeile 346: `Target`
-- Zeile 349: `Length`
-- Zeile 352: `Feed`
-- Zeile 379: `✓ = Standard · – = Option · ✕ = not available. All specifications without guarantee.`
-- Zeile 402: `View vetted used machines`
-- Zeile 423: `Read the PUR vs EVA guide`
-- Zeile 448: `Frequently asked questions`
-- Zeile 472: `Which machine fits your operation?`
-- Zeile 479: `We advise you personally – tailored to throughput, space and budget.`
-- Zeile 491: `All OTT edgebanders`
-
-## `src/pages/GuideWarehouseAutomationPage.tsx` (87)
+## `src/pages/GuideWarehouseAutomationPage.tsx` (43)
 
 ### SK — 43 fehlend
 
@@ -750,142 +379,97 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 384: `Nechte se nezávazně poradit – zanalyzujeme váš materiálový tok a doporučíme vhodný systém BARBARIC.`
 - Zeile 397: `Systémy BARBARIC`
 
-### HU — 44 fehlend
-
-- Zeile 29: `How much space does an automatic storage system require?`
-- Zeile 34: `Space requirements depend on the system type. A CSF Multilevel uses the full hall height and saves up to 50% floor space. The minimum requirement is approx. 6 × 12 m of floor area for an entry-level system.`
-- Zeile 41: `Can a BARBARIC system be connected to my existing ERP?`
-- Zeile 46: `Yes, all BARBARIC systems have standardised interfaces for ERP and MES integration. Asamer handles the software integration and establishes communication between storage, saw and your inventory management system.`
-- Zeile 53: `Is step-by-step automation possible?`
-- Zeile 58: `Yes, BARBARIC systems are modular in design. You can start with a single system and later add feeding, return transport or additional storage locations. The control system is designed for expansion from the outset.`
-- Zeile 65: `What panel formats can be stored?`
-- Zeile 70: `BARBARIC systems store all common panel formats up to 2,100 × 6,000 mm with individual panel weights up to 150 kg. Special formats and oversizes can be accommodated through customised storage slots. Off-cut management is handled automatically by the storage software.`
-- Zeile 77: `How long does the installation of a storage system take?`
-- Zeile 82: `Installation duration depends on system size. A CSF Professional is typically installed and operational in 2–3 weeks. A CSF Multilevel with full material flow integration requires 4–8 weeks. Asamer plans the installation to minimise disruption to your ongoing production.`
-- Zeile 100: `CSF Panel Storage`
-- Zeile 101: `Panel storage`
-- Zeile 102: `The CSF panel storage is a chaotic storage system for panels and off-cuts. It stores material sorted or mixed and delivers the right panel just-in-time to the saw or CNC machine. Available as CSF Professional (entry-level), CSF Industrial (large-scale) and CSF Multilevel (maximum space utilisation).`
-- Zeile 109: `LCV Panel Feeding`
-- Zeile 110: `Panel feeding`
-- Zeile 111: `LCV Performance systems feed panel saws fully automatically. They retrieve the right panel from storage and position it precisely on the machine table – no manual handling, no waiting times.`
-- Zeile 118: `NST Nesting & Return Transport`
-- Zeile 119: `Nesting & RTS`
-- Zeile 120: `NST systems (nesting picker) and RTS return transport systems form the connection between CNC machining centres and the rest of the material flow. They pick finished parts, sort offcut panels and feed them back to storage or the next station.`
-- Zeile 130: `Furniture industry`
-- Zeile 131: `Kitchen manufacturers`
-- Zeile 132: `Interior construction`
-- Zeile 133: `Timber construction and door manufacturing`
-- Zeile 139: `Warehouse automation consultation`
-- Zeile 157: `Warehouse Automation – When Does It Pay Off?`
-- Zeile 164: `Warehouse automation refers to the automatic storage and retrieval of panel material through computer-controlled systems. BARBARIC systems reduce storage costs by up to 40%, double picking speed and achieve 99.9% inventory accuracy.`
-- Zeile 179: `What is warehouse automation?`
-- Zeile 187: `In the wood processing industry, hundreds of panels of different materials, thicknesses and formats are moved every day. With manual warehousing, typical problems arise: long search times, material damage from incorrect handling, inventory discrepancies and inefficient use of space. The consequences are production delays, reorders and unnecessary costs.`
-- Zeile 194: `An automatic storage system solves these problems through computer-controlled storage and retrieval. The system knows the exact location of every panel, provides material on demand and documents every operation in real time. Panels are transported carefully, stored sorted or chaotically and delivered just-in-time to the machine.`
-- Zeile 201: `Modern storage systems like the BARBARIC CSF series integrate seamlessly into existing production lines. They communicate via standardised interfaces with saws, CNC machines and ERP systems – from order entry to finished picking without manual intervention.`
-- Zeile 216: `ROI – When Does the Investment Pay Off?`
-- Zeile 231: `Storage costs`
-- Zeile 236: `2× faster`
-- Zeile 239: `Picking speed`
-- Zeile 245: `Inventory accuracy`
-- Zeile 254: `Investing in an automatic storage system pays off from a daily panel throughput of approx. 50 panels. With manual warehousing, employees spend up to 30% of their working time searching, transporting and sorting. An automatic system eliminates these times almost entirely.`
-- Zeile 261: `Typical ROI is 2–4 years. In addition to direct savings in labour costs and material damage, you benefit from better space utilisation – a BARBARIC Multilevel system makes optimal use of hall height and saves up to 50% floor space compared to conventional storage.`
-- Zeile 268: `Through integration with ERP systems, inventory is managed in real time. This eliminates over-ordering and prevents production downtime due to missing materials.`
-- Zeile 282: `BARBARIC Systems Overview`
-- Zeile 320: `Use Cases`
-- Zeile 339: `Frequently Asked Questions About Warehouse Automation`
-- Zeile 377: `Plan your warehouse automation`
-- Zeile 384: `Get a free consultation – we analyse your material flow and recommend the right BARBARIC system.`
-- Zeile 397: `BARBARIC systems`
-
-## `src/pages/OttPage.tsx` (80)
+## `src/pages/GuideEdgebanderPage.tsx` (40)
 
 ### SK — 40 fehlend
 
-- Zeile 38: `Co je olepovačka hran OTT?`
-- Zeile 39: `Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse.`
-- Zeile 46: `Kolik stojí olepovačka hran OTT?`
-- Zeile 47: `Cena olepovačky hran OTT závisí na modelu, výbavě a stupni automatizace. Asamer připraví nezávaznou nabídku na míru a poradí s financováním i dotacemi až 50 %.`
-- Zeile 54: `Jaký je rozdíl mezi lepidlem PUR a EVA?`
-- Zeile 55: `EVA je univerzální tavné lepidlo, PUR vytváří voděodolný spoj bez viditelné spáry. Systém OTT CombiMelt zvládá oba typy lepidla.`
-- Zeile 62: `Nabízíte i použité olepovačky hran OTT?`
-- Zeile 63: `Ano. Asamer nabízí nové i technicky prověřené použité olepovačky hran OTT včetně servisu a montáže v ČR, na Slovensku a v Maďarsku.`
-- Zeile 85: `OTT olepovačky hran`
-- Zeile 101: `Nové standardy pro PUR/EVA`
-- Zeile 112: `Německo · Olepování hran`
-- Zeile 114: `Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse. OTT je německý výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.`
-- Zeile 123: `Made in Germany`
-- Zeile 128: `Exkluzivní prodejce`
-- Zeile 137: `Rozhraní`
-- Zeile 195: `Proč OTT přes Asamer?`
-- Zeile 198: `Vlastnost`
-- Zeile 200: `Konkurence`
-- Zeile 202: `často příplatek`
-- Zeile 203: `PUR`
-- Zeile 203: `dle výrobce`
-- Zeile 204: `ERP`
-- Zeile 204: `často placená`
-- Zeile 205: `Servis CZ/SK/HU`
-- Zeile 205: `na místě`
-- Zeile 205: `často centrální`
-- Zeile 219: `Technologie`
-- Zeile 225: `Patent`
-- Zeile 227: `Top-driven roller · EVA + PUR · méně odpadu · servisní stanice`
-- Zeile 235: `Laser · bez spáry · montovatelná`
-- Zeile 242: `Proč koupit u Asamer?`
-- Zeile 245: `OPC-UA přímo do vašeho ERP/MES – bez vendor lock-in`
-- Zeile 246: `Exkluzivní prodejce CZ/SK/HU`
-- Zeile 246: `Přímý kontakt – bez koncernových oklik`
-- Zeile 247: `Servis a montáž`
-- Zeile 247: `Technici na místě v CZ/SK/HU`
-- Zeile 248: `Rodinný podnik od roku 1963 v Lambachu`
-- Zeile 263: `Časté dotazy k olepovačkám hran OTT`
-- Zeile 279: `OTT v akci`
-- Zeile 291: `Poradenství k OTT?`
+- Zeile 38: `Konzultace olepovačka hran`
+- Zeile 48: `Malá truhlárna`
+- Zeile 56: `Malý–Střední`
+- Zeile 64: `Střední provoz`
+- Zeile 72: `Střední–Velký`
+- Zeile 80: `Průmysl`
+- Zeile 96: `Výroba dveří`
+- Zeile 112: `Průvodce`
+- Zeile 113: `Olepovačka hran – výběr`
+- Zeile 120: `Jakou olepovačku hran koupit`
+- Zeile 136: `Jakou olepovačku hran koupit? Průvodce výběrem 2026`
+- Zeile 153: `Čtyři kritéria pro rozhodnutí`
+- Zeile 171: `Malá truhlárna (1–5 zaměstnanců)`
+- Zeile 178: `U malých dílen s 1–5 zaměstnanci je na prvním místě kompaktnost a univerzálnost. Denní průchod se typicky pohybuje mezi 20–80 obrobky, rozmanitost materiálů je vysoká (masivní dřevo, melamin, plast). Stroj musí umožňovat rychlou výměnu hran a pracovat na omezeném prostoru.`
+- Zeile 186: `Naše doporučení: OTT Pacific+`
+- Zeile 189: `S délkou pouhých 5,7 m se vejde do každé dílny. Posuv 18 m/min včetně opracování rohů – nepotřebujete samostatný stroj na zaoblení rohů. Tloušťky hran 0,3–15 mm pokrývají všechny standardní aplikace. S CombiMelt je Pacific+ navíc rozšířitelná o PUR, takže při rostoucích požadavcích nemusíte měnit stroj.`
+- Zeile 201: `Zobrazit Pacific+ na stránce OTT`
+- Zeile 214: `Střední provoz (5–20 zaměstnanců)`
+- Zeile 221: `Střední provozy zpracovávají 80–300 obrobků denně a potřebují vyšší rychlosti posuvu a flexibilitu. Požadavky na kvalitu hran rostou – PUR lepení je stále více vyžadováno trhem, zejména u kuchyňského nábytku.`
+- Zeile 229: `Naše doporučení: OTT FlexEdge nebo Storm+`
+- Zeile 232: `FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 20–22 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost technologie nulové spáry bluEdge featuring HyFuse pro hrany s nulovými spárami.`
+- Zeile 244: `Zobrazit FlexEdge a Storm+ na stránce OTT`
+- Zeile 257: `Průmyslový nepřetržitý provoz (20+ zaměstnanců)`
+- Zeile 264: `Průmyslové provozy s vícesměnným provozem zpracovávají 300+ obrobků na směnu. Rozhoduje spolehlivost, průchodnost a nejvyšší kvalita hran. PUR a technologie nulové spáry jsou standardem, automatická výměna hran a napojení na nadřazené systémy jsou nutností.`
+- Zeile 272: `Naše doporučení: OTT StrongEdge nebo TopEdge`
+- Zeile 275: `StrongEdge nabízí délku 7,7 m a posuv 22–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge featuring HyFuse a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.`
+- Zeile 287: `Zobrazit StrongEdge a TopEdge na stránce OTT`
+- Zeile 300: `Speciální případ: Výroba dveří`
+- Zeile 307: `Výrobci dveří mají specifické požadavky: těžké obrobky, široké hrany a často nepřetržitá výroba s malým počtem změn formátu. OTT Door Edition je speciálně navržena pro tuto aplikaci – s upraveným vedením obrobků, zesíleným posuvem a optimalizovanou přítlačnou technikou pro masivní dveřní prvky.`
+- Zeile 315: `Pokud se zaměřujete na výrobu dveří, doporučujeme přímou konzultaci – Door Edition se individuálně konfiguruje podle vašeho výrobního profilu.`
+- Zeile 330: `Srovnávací přehled`
+- Zeile 340: `Cílová skupina`
+- Zeile 343: `Délka`
+- Zeile 346: `Posuv`
+- Zeile 367: `✓ = Standard · – = Volitelně · ✕ = nedostupné. Všechny údaje bez záruky.`
+- Zeile 390: `Zobrazit ověřené použité stroje`
+- Zeile 411: `Detailní průvodce PUR vs EVA`
+- Zeile 460: `Který stroj se hodí pro váš provoz?`
+- Zeile 467: `Poradíme vám osobně – s ohledem na průchodnost, prostor a rozpočet.`
+- Zeile 479: `Všechny olepovačky hran OTT`
 
-### HU — 40 fehlend
+## `src/pages/OttPage.tsx` (40)
 
-- Zeile 38: `What is an OTT edgebanding machine?`
-- Zeile 39: `An OTT edgebanding machine applies and flush-trims edge material on furniture and board parts. OTT offers models from the compact Pacific+ to the industrial TopEdge with PUR, EVA and bluEdge HyFuse laser technology.`
-- Zeile 46: `How much does an OTT edgebanding machine cost?`
-- Zeile 47: `The price depends on model, configuration and level of automation. Asamer prepares a tailored, no-obligation quote and advises on financing and grants of up to 50%.`
-- Zeile 54: `What is the difference between PUR and EVA glue?`
-- Zeile 55: `EVA is a universal hot-melt adhesive; PUR creates a waterproof joint with no visible glue line. The OTT CombiMelt system processes both adhesive types.`
-- Zeile 62: `Does Asamer also offer used OTT edgebanding machines?`
-- Zeile 63: `Yes. Asamer offers new and technically inspected used OTT edgebanding machines including service and installation in CZ, SK and HU.`
-- Zeile 85: `OTT Edgebanding Machines`
-- Zeile 101: `New standards for PUR/EVA`
-- Zeile 112: `Germany · Edgebanding technology`
-- Zeile 114: `OTT edgebanding machines are among the best for banding furniture and board panels – from the compact Pacific+ (18 m/min) to the industrial TopEdge with PUR, EVA and bluEdge HyFuse laser technology. OTT is a German manufacturer of edgebanding machines for the wood and furniture industry. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.`
-- Zeile 123: `Made in Germany`
-- Zeile 128: `Exclusive dealer`
-- Zeile 137: `Interface`
-- Zeile 195: `Why OTT via Asamer?`
-- Zeile 198: `Feature`
-- Zeile 200: `Competitors`
-- Zeile 202: `often extra cost`
-- Zeile 203: `PUR specialization`
-- Zeile 203: `depends on brand`
-- Zeile 204: `ERP integration`
-- Zeile 204: `often paid`
-- Zeile 205: `Service CZ/SK/HU`
-- Zeile 205: `on-site`
-- Zeile 205: `often central`
-- Zeile 219: `Technology`
-- Zeile 225: `Patented`
-- Zeile 227: `Top-driven roller · EVA + PUR · less waste · service station`
-- Zeile 235: `Laser activation · no glue joint · retrofittable`
-- Zeile 242: `Why buy from Asamer?`
-- Zeile 245: `OPC-UA directly into your ERP/MES – no vendor lock-in`
-- Zeile 246: `Exclusive dealer CZ/SK/HU`
-- Zeile 246: `Direct contact – no corporate detour`
-- Zeile 247: `Service & installation`
-- Zeile 247: `Technicians on-site in CZ/SK/HU`
-- Zeile 248: `Family business since 1963 in Lambach`
-- Zeile 263: `FAQ on OTT edgebanding machines`
-- Zeile 279: `OTT in Action`
-- Zeile 291: `Advice on OTT edgebanding?`
+### SK — 40 fehlend
 
-## `src/pages/GuideVacuumLifterPage.tsx` (62)
+- Zeile 37: `Co je olepovačka hran OTT?`
+- Zeile 38: `Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse.`
+- Zeile 45: `Kolik stojí olepovačka hran OTT?`
+- Zeile 46: `Cena olepovačky hran OTT závisí na modelu, výbavě a stupni automatizace. Asamer připraví nezávaznou nabídku na míru a poradí s financováním i dotacemi až 50 %.`
+- Zeile 53: `Jaký je rozdíl mezi lepidlem PUR a EVA?`
+- Zeile 54: `EVA je univerzální tavné lepidlo, PUR vytváří voděodolný spoj bez viditelné spáry. Systém OTT CombiMelt zvládá oba typy lepidla.`
+- Zeile 61: `Nabízíte i použité olepovačky hran OTT?`
+- Zeile 62: `Ano. Asamer nabízí nové i technicky prověřené použité olepovačky hran OTT včetně servisu a montáže v ČR, na Slovensku a v Maďarsku.`
+- Zeile 84: `OTT olepovačky hran`
+- Zeile 100: `Nové standardy pro PUR/EVA`
+- Zeile 113: `Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse. OTT je rakouský výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.`
+- Zeile 127: `Exkluzivní prodejce`
+- Zeile 136: `Rozhraní`
+- Zeile 168: `Přehled kategorie`
+- Zeile 206: `modelů v detailu`
+- Zeile 220: `Proč OTT přes Asamer?`
+- Zeile 223: `Vlastnost`
+- Zeile 225: `Konkurence`
+- Zeile 227: `často příplatek`
+- Zeile 228: `PUR`
+- Zeile 228: `dle výrobce`
+- Zeile 229: `ERP`
+- Zeile 229: `často placená`
+- Zeile 230: `Servis CZ/SK/HU`
+- Zeile 230: `na místě`
+- Zeile 230: `často centrální`
+- Zeile 244: `Technologie`
+- Zeile 250: `Patent`
+- Zeile 252: `Top-driven roller · EVA + PUR · méně odpadu · servisní stanice`
+- Zeile 260: `Vodíkový plamen · bez spáry · montovatelná`
+- Zeile 267: `Proč koupit u Asamer?`
+- Zeile 270: `OPC-UA přímo do vašeho ERP/MES – bez vendor lock-in`
+- Zeile 271: `Exkluzivní prodejce CZ/SK/HU`
+- Zeile 271: `Přímý kontakt – bez koncernových oklik`
+- Zeile 272: `Servis a montáž`
+- Zeile 272: `Technici na místě v CZ/SK/HU`
+- Zeile 273: `Rodinný podnik od roku 1963 v Lambachu`
+- Zeile 288: `Časté dotazy k olepovačkám hran OTT`
+- Zeile 304: `OTT v akci`
+- Zeile 316: `Poradenství k OTT?`
+
+## `src/pages/GuideVacuumLifterPage.tsx` (30)
 
 ### SK — 30 fehlend
 
@@ -920,42 +504,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 292: `Udržte výrobní tým zdravý – rádi poradíme.`
 - Zeile 295: `Bezplatná konzultace ke vhodnému vakuovému zvedáku a dotaci – osobně a nezávazně.`
 
-### HU — 32 fehlend
-
-- Zeile 39: `Vacuum lifters`
-- Zeile 44: `Which vacuum lifter for which panel weight?`
-- Zeile 45: `The BARBARIC UniWood series covers light panels up to approx. 250 kg (UWL 3) and up to 300 kg – optionally 500 kg (UWL 3J). We recommend the right model based on your panel formats, weights and machines.`
-- Zeile 52: `Can a vacuum lifter be funded?`
-- Zeile 53: `Yes. In CZ, SK and HU the investment is often eligible for funding – up to 50% depending on the market. We check eligibility together with you and combine with leasing on request.`
-- Zeile 60: `Which machines does it work with?`
-- Zeile 61: `With practically all of them: edge banders, panel saws, CNC, presses as well as loading and unloading. The lifter handles the heavy lifting, tilting and turning of the panel.`
-- Zeile 82: `We support your work processes. Barbaric vacuum lifters for wood processing.`
-- Zeile 89: `With a vacuum lifter, a single person moves heavy panels safely and ergonomically – instead of two or three people lifting together. You keep your experienced team healthy and productive. We are glad to help you find the right system.`
-- Zeile 99: `Barbaric UniWood UWL vacuum lifter`
-- Zeile 114: `We’re glad to help.`
-- Zeile 117: `Tell us which panels and machines you work with – we’ll recommend the right lifter and check funding. Get in touch, or leave your number and we’ll call you back.`
-- Zeile 131: `Call us`
-- Zeile 142: `How it works on your machines`
-- Zeile 151: `Edge banding machine`
-- Zeile 154: `One person lifts the panel from the stack, tilts it 90° for infeed and takes the finished part on the return – without a second person carrying the workpiece around the machine.`
-- Zeile 161: `OTT edge banders`
-- Zeile 172: `Panel dividing saw`
-- Zeile 175: `Large-format raw panels are loaded onto the saw ergonomically – even heavy full-size boards up to 250 kg are moved effortlessly and damage-free by one person.`
-- Zeile 193: `CNC, presses & storage`
-- Zeile 196: `Also when feeding CNC machines and presses, and for loading/unloading: stepless lifting (0–10 m/min), 90° tilting and single-hand handle – safe for coated, textured and high-gloss surfaces.`
-- Zeile 203: `All Barbaric vacuum lifters`
-- Zeile 220: `Protect your workers`
-- Zeile 223: `Heavy, repetitive lifting is the most common cause of back and shoulder injuries. The vacuum lifter takes the load off – reducing sick leave and keeping your experienced staff on the team long-term.`
-- Zeile 230: `Compliance with manual handling load limits`
-- Zeile 231: `Fewer absences, consistent quality`
-- Zeile 232: `Ergonomic relief and long-term team retention`
-- Zeile 241: `Fast ROI, highly economical`
-- Zeile 244: `One operator does the work of two to three people – faster, damage-free and without waiting times. The investment pays for itself quickly and is highly economical.`
-- Zeile 258: `Check funding & financing`
-- Zeile 292: `Keep your production team healthy – we’re glad to advise.`
-- Zeile 295: `Free consultation on the right vacuum lifter and funding – personal and without obligation.`
-
-## `src/pages/GuideFundingCzPage.tsx` (58)
+## `src/pages/GuideFundingCzPage.tsx` (29)
 
 ### SK — 29 fehlend
 
@@ -989,39 +538,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 303: `Poptat dotační poradenství`
 - Zeile 307: `Financování a leasing`
 
-### HU — 29 fehlend
-
-- Zeile 29: `Which machines are eligible for funding?`
-- Zeile 34: `Eligible machines generally include all new CE-certified production machines that demonstrably improve productivity, digitalisation or efficiency. This covers edgebanders (OTT), panel saws (Mayer), dowel inserters (Gannomat), CNC machining centres and full warehouse automation (BARBARIC). Software, training, installation and first tooling are usually co-eligible. Used machines are not eligible under OP TAK – only NRB loans or leasing apply there.`
-- Zeile 41: `Who prepares the funding application?`
-- Zeile 46: `The formal application is submitted by the business owner through the MS2021+ portal of Agentura API. In practice, preparation is usually done by a specialised funding consultant (dotační poradce) who works on success fee in the Czech Republic (typically 3–8% of the awarded amount). Asamer cooperates with vetted partners in Brno and Prague and connects clients including a free project pre-qualification.`
-- Zeile 53: `Can I get used machines funded?`
-- Zeile 58: `Used machines are not eligible under OP TAK Technologie. Alternatives: a subsidised investment loan from Národní rozvojová banka (NRB) – used machines can be financed there if year of manufacture and remaining useful life are documented. There are also leasing programmes (Raiffeisen Leasing, UniCredit Leasing) with state interest subsidy for SMEs. Asamer offers inspected used machines with warranty as an alternative.`
-- Zeile 65: `How long does the funding application take?`
-- Zeile 70: `From first project outline to funding decision (Rozhodnutí o poskytnutí dotace), expect 6–9 months for OP TAK: 2–4 weeks preparation, 4–6 weeks submission window, 4–6 months evaluation by API, then decision. Machines may only be ordered after the application date, otherwise eligibility is lost. Plan delivery times from OTT, Mayer or BARBARIC (4–8 months) against the award date.`
-- Zeile 77: `Can I combine funding with leasing?`
-- Zeile 82: `Yes, OP TAK and NRB loans combine with finance leasing as long as the end-beneficiary retains economic ownership of the machine. Raiffeisen Leasing offers dedicated "dotační leasing" products with bridging finance until the grant is paid out. This way you only need 10–20% equity at delivery instead of 30–40%. Asamer aligns the cash-flow plan directly with your bank and funding consultant.`
-- Zeile 92: `Funding consultation inquiry`
-- Zeile 105: `Woodworking funding CZ 2026`
-- Zeile 119: `Funding for Woodworking Machinery in the Czech Republic 2026`
-- Zeile 126: `In 2026, Czech furniture and woodworking operations can access several parallel funding instruments: the Operační program Technologie a aplikace pro konkurenceschopnost (OP TAK) with up to 60% grant rate for SMEs, subsidised investment loans from Národní rozvojová banka (NRB), and EU-wide programmes under the InvestEU umbrella. This guide shows how to combine these instruments for OTT edgebanders, Mayer panel saws, BARBARIC warehouse automation or Gannomat dowel inserters – and what to observe regarding application, timeline and documentation.`
-- Zeile 142: `OP TAK – Operational Programme Technology and Applications for Competitiveness`
-- Zeile 149: `OP TAK is the main Czech funding instrument for manufacturing SMEs in the 2021–2027 programme period and the key tool for EU co-financed modernisation. The call Technologie – výrobní podniky, relevant for woodworking operations, funds the purchase of new production machines, warehouse automation, industrial software (ERP/MES/CAM), digitalisation and Industry 4.0 solutions. Rate: 45% for medium enterprises and 60% for small enterprises on eligible costs, higher in structurally weaker regions (Karlovy Vary, Ústí nad Labem, Moravskoslezský kraj). Typical project size 1–40 million CZK, in individual cases up to 150 million CZK. Requirements: at least 2 years of business history, positive balance sheet, degree of innovation (e.g. OTT PUR/laser, BARBARIC panel storage, digital nesting production) and sustainability evidence. Machines from OTT, Mayer, Gannomat and BARBARIC regularly meet the technical criteria.`
-- Zeile 164: `Národní rozvojová banka (NRB) – Investment loans`
-- Zeile 171: `NRB (formerly Českomoravská záruční a rozvojová banka) is the state development bank of the Czech Republic. It provides purpose-bound investment loans for machinery and warehouse automation at rates well below commercial banks (typically 4–5% on 7–10-year terms). Particularly attractive are the ENERG programme with up to 10% interest subsidy for energy-efficient projects and the Expanze programme for business expansion. Unlike OP TAK, used machines with documented residual value and inspection report are also eligible. The application process takes 4–8 weeks and can run in parallel with an OP TAK grant, as long as there is no double funding on the same cost element.`
-- Zeile 186: `InvestEU and complementary EU programmes`
-- Zeile 193: `Through the InvestEU guarantee from the European Investment Bank (EIB) and local implementing bodies (in Czechia: NRB, ČSOB, Komerční banka), 2026 opens additional financing instruments with favourable conditions for sustainability and digitalisation investments. Typical levers are an EIB guarantee (reducing equity requirement) and interest bonification for SME projects under the SME Window. Programmes such as Modernizační fond (decarbonisation, energy efficiency) and Nová zelená úsporám Light (smaller renovation projects) are complementary if you invest in both building modernisation and machine replacement.`
-- Zeile 208: `Combined models: grant + loan + leasing`
-- Zeile 215: `In practice, machine investments in CZ are almost always financed from three sources. A typical project edgebander + panel saw + panel storage of CZK 20 million is often structured as: 45% OP TAK grant (CZK 9M) + 35% NRB investment loan (CZK 7M) + 20% finance lease or equity (CZK 4M). Raiffeisen Leasing and UniCredit Leasing offer "dotační leasing" with bridging finance until OP TAK payout. Important: only one funding source may sit on each cost element, so a clean split of line items in the quote is mandatory. Asamer prepares quotes accordingly.`
-- Zeile 230: `Typical timeline and required documentation`
-- Zeile 237: `Plan for 6–9 months from first consultation to funding agreement and a further 4–8 months of machine lead time. Typically required: project description with technical machine spec, three comparable quotes (only one with justification for single source), financial analysis of the last 2–3 fiscal years, cash-flow projection, confirmation of own funds or bank financing commitment, environmental and equality impact statement, and – after approval – compliance with publicity rules (EU / OP TAK plaque on site, notice in quotes and press). Asamer delivers technical machine specification directly in API-compliant format.`
-- Zeile 248: `Details on financing & leasing`
-- Zeile 287: `Check funding potential for your next machine investment`
-- Zeile 294: `Asamer coordinates with local funding consultants in Brno and Prague and aligns OTT, Mayer, Gannomat and BARBARIC projects directly with OP TAK, NRB and leasing. Free initial consultation for CZ, SK and HU.`
-- Zeile 303: `Request funding consultation`
-- Zeile 307: `Financing & leasing`
-
-## `src/pages/ServicePage.tsx` (56)
+## `src/pages/ServicePage.tsx` (28)
 
 ### SK — 28 fehlend
 
@@ -1054,38 +571,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 216: `Servisní poptávka pro plánované zásahy nebo rychlá podpora při poruše.`
 - Zeile 225: `Odeslat servisní poptávku`
 
-### HU — 28 fehlend
-
-- Zeile 27: `Assembly & commissioning`
-- Zeile 28: `Our assembly and service team supports your system from installation to stable day-to-day production.`
-- Zeile 36: `Emergency service with express solutions`
-- Zeile 37: `If production is down, we prioritize your incident immediately and apply clear immediate actions to resume operations as quickly as possible.`
-- Zeile 45: `30 years of experience with leading manufacturers`
-- Zeile 46: `Hands-on project experience with OTT, IMA Schelling, Muehlboeck, and other partners.`
-- Zeile 54: `Preventive maintenance`
-- Zeile 55: `Through planned maintenance windows, condition checks, and spare-part strategy, we sustainably reduce unplanned downtime.`
-- Zeile 65: `Report the incident`
-- Zeile 66: `Call our service hotline (+420 724 056 965) or send an email to office@asamer.net. Describe the issue: machine type, error message and whether production is down. Our dispatcher classifies the incident immediately by urgency.`
-- Zeile 73: `Express remote diagnosis`
-- Zeile 74: `Within 2–4 hours our technician starts phone or remote diagnostics. For OTT machines with Beckhoff controls, access can be via the OPC-UA interface directly. In many cases the issue can already be resolved or narrowed down remotely.`
-- Zeile 81: `Secure spare parts`
-- Zeile 82: `If spare parts are needed, we check availability in our local warehouse. Standard parts for OTT, Mayer, BARBARIC and Gannomat are usually available from stock. For special parts we organize express delivery directly from the manufacturer.`
-- Zeile 89: `Schedule on-site visit`
-- Zeile 90: `If an on-site visit is needed, we schedule a technician within 24–48 hours. Customers with maintenance contracts benefit from shorter response times. The technician brings the identified spare parts and follows a clear service protocol.`
-- Zeile 97: `Restart and documentation`
-- Zeile 98: `After repair the machine is restarted together with your operating staff. We create a complete service report with root cause analysis and recommendations to prevent future failures. If needed we schedule a preventive maintenance appointment on the spot.`
-- Zeile 108: `What to do during production downtime?`
-- Zeile 109: `Step-by-step guide for emergencies during machine downtime. Asamer Technology – service hotline, remote diagnosis and on-site support.`
-- Zeile 119: `Service inquiry Asamer`
-- Zeile 131: `Service when it matters most`
-- Zeile 138: `Our assembly and service team keeps your production running. With 30 years of experience with OTT, IMA Schelling, Muehlboeck, and other manufacturers, we respond to downtime with emergency service and express solutions.`
-- Zeile 172: `When every minute counts, we operate with a clear escalation scheme for the fastest possible restart times. Follow these steps:`
-- Zeile 197: `Service hotline:`
-- Zeile 213: `Request support now`
-- Zeile 216: `Service inquiry for planned interventions or fast support in case of incidents.`
-- Zeile 225: `Send service inquiry`
-
-## `src/pages/SolutionsPage.tsx` (54)
+## `src/pages/SolutionsPage.tsx` (27)
 
 ### SK — 27 fehlend
 
@@ -1117,37 +603,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 162: `Připravíme konkrétní koncept pro váš provoz s jasnou prioritizací investice, přínosu a času realizace.`
 - Zeile 170: `Zahájit projektovou konzultaci`
 
-### HU — 27 fehlend
-
-- Zeile 28: `Joinery & interior fit-out`
-- Zeile 29: `For traditional joineries that want to produce faster and more precisely without rebuilding the entire production right away.`
-- Zeile 35: `Entry setup with high-performance saws and edge solutions`
-- Zeile 36: `Fast commissioning and short training times`
-- Zeile 37: `Scalable for later automation steps`
-- Zeile 42: `Automated cutting operation`
-- Zeile 43: `For high-throughput operations that want to measurably optimize material flow, storage logic, and machine utilization.`
-- Zeile 49: `Integration of storage, cutting, and return flow`
-- Zeile 50: `Fewer manual movements, higher process stability`
-- Zeile 51: `Transparent data base for planning and control`
-- Zeile 56: `Fully automated furniture production`
-- Zeile 57: `For furniture manufacturers that need fully automated lines with repeatable quality and maximum availability.`
-- Zeile 63: `End-to-end concept from material intake to output`
-- Zeile 64: `Interfaces to ERP/MES and production software`
-- Zeile 65: `High cycle performance with stable quality standards`
-- Zeile 71: `Analysis of your current production and target definition`
-- Zeile 72: `Technology concept including automation stages`
-- Zeile 73: `Implementation with assembly, commissioning, and training`
-- Zeile 74: `Operational support with service and optimization`
-- Zeile 79: `Project inquiry solutions`
-- Zeile 86: `Solutions`
-- Zeile 94: `Solutions from joinery to fully automated furniture production`
-- Zeile 101: `We design your line to match your operation: from robust entry solutions to fully connected production systems with Industry 4.0 logic.`
-- Zeile 140: `Our 4-step approach`
-- Zeile 159: `Planning your next expansion step?`
-- Zeile 162: `We create a concrete concept for your operation with clear priorities for investment, benefit, and implementation time.`
-- Zeile 170: `Start project call`
-
-## `src/pages/PrivacyPolicyPage.tsx` (44)
+## `src/pages/PrivacyPolicyPage.tsx` (22)
 
 ### SK — 22 fehlend
 
@@ -1174,32 +630,32 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 219: `Stížnosti můžete podat u rakouského úřadu pro ochranu osobních údajů (dsb.gv.at) nebo u českého Úřadu pro ochranu osobních údajů (uoou.cz).`
 - Zeile 228: `Viz také naše`
 
-### HU — 22 fehlend
+## `src/pages/CategoryPage.tsx` (20)
 
-- Zeile 35: `Privacy Policy`
-- Zeile 38: `Information on the processing of personal data pursuant to Art. 13 GDPR.`
-- Zeile 45: `Last updated:`
-- Zeile 59: `Data Controller`
-- Zeile 91: `Purposes and Legal Bases`
-- Zeile 96: `Providing the website and ensuring IT security (Art. 6(1)(f) GDPR – legitimate interest).`
-- Zeile 103: `Handling inquiries via contact form or email (Art. 6(1)(b) GDPR – pre-contractual steps, or (f)).`
-- Zeile 110: `Analytics and product improvement via Google Analytics 4 and Vercel Analytics (Art. 6(1)(a) GDPR – consent).`
-- Zeile 122: `Hosting & Server Logs`
-- Zeile 125: `The website is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA. When accessed, the server automatically logs access data (truncated IP, timestamp, user agent, referrer) to ensure stability and security. Vercel is covered by the EU-US Data Privacy Framework.`
-- Zeile 138: `Cookies & Consent`
-- Zeile 142: `Necessary cookies are set for technical operation. Functional, analytics and marketing cookies are only activated after your consent. You can withdraw your consent at any time.`
-- Zeile 153: `Open cookie settings`
-- Zeile 162: `Analytics Services`
-- Zeile 169: `Provider: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. IP anonymization is active. Data is only processed with consent (Google Consent Mode v2). Retention: 14 months.`
-- Zeile 179: `Provider: Vercel Inc. Anonymous, aggregated usage statistics without cookies and without fingerprinting.`
-- Zeile 194: `Contact Form & Email`
-- Zeile 198: `When you contact us we process your name, company, email address, phone number and message to handle your inquiry. Data is deleted after processing unless subject to statutory retention (7 years under commercial/tax law).`
-- Zeile 209: `Your Rights`
-- Zeile 212: `You have the right to access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and objection (Art. 21) under the GDPR. You may withdraw consent at any time with future effect (Art. 7(3) GDPR).`
-- Zeile 219: `You can lodge complaints with the Austrian DPA (dsb.gv.at) or the Czech DPA Úřad pro ochranu osobních údajů (uoou.cz).`
-- Zeile 228: `See also our`
+### SK — 20 fehlend
 
-## `src/pages/TermsPage.tsx` (36)
+- Zeile 100: `Průvodce: výběr olepovačky hran`
+- Zeile 101: `Který stroj se hodí do vašeho provozu?`
+- Zeile 108: `Průvodce: PUR vs. EVA`
+- Zeile 109: `Srovnání lepidel pro olepování hran.`
+- Zeile 118: `Průvodce: dřevo nebo hliník`
+- Zeile 119: `Srovnání Kappa a Advanced Line.`
+- Zeile 127: `Průvodce: vakuové zvedáky`
+- Zeile 128: `Jeden místo tří.`
+- Zeile 136: `Průvodce: automatizace skladu`
+- Zeile 137: `Kdy se vyplatí?`
+- Zeile 145: `Použité stroje`
+- Zeile 146: `Prověřené použité stroje se servisem.`
+- Zeile 153: `Financování a dotace`
+- Zeile 154: `Leasing a dotace až 50 %.`
+- Zeile 182: `Poptávka`
+- Zeile 250: `Srovnání modelů`
+- Zeile 256: `Model`
+- Zeile 288: `Další informace`
+- Zeile 309: `Další kategorie`
+- Zeile 336: `Který stroj se hodí do vaší výroby?`
+
+## `src/pages/TermsPage.tsx` (18)
 
 ### SK — 18 fehlend
 
@@ -1222,28 +678,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 161: `Závěrečná ustanovení`
 - Zeile 164: `Pokud jsou jednotlivá ustanovení neúčinná, platnost ostatních ustanovení zůstává nedotčena. Nahradí je ustanovení co nejblíže hospodářskému účelu.`
 
-### HU — 18 fehlend
-
-- Zeile 30: `Terms & Conditions`
-- Zeile 37: `These terms govern the sale, installation and service of industrial machinery in B2B business between Asamer Technologie GmbH / ASAMER spol. s r.o. and commercial customers.`
-- Zeile 57: `Scope`
-- Zeile 61: `These terms apply to all offers, deliveries and services to entrepreneurs within the meaning of § 1 UGB or § 420 of the Czech Civil Code. Customer terms to the contrary apply only with written acceptance. Consumer transactions are excluded.`
-- Zeile 73: `Offer and Conclusion`
-- Zeile 77: `Our offers are non-binding. A contract is only concluded upon our written order confirmation. Images, drawings and technical data in brochures or on the website are indicative; manufacturers (OTT, Mayer/Felder Group, Barbaric, Gannomat) reserve the right to make technical changes.`
-- Zeile 87: `Prices and Payment`
-- Zeile 90: `Prices are net ex-works, plus packaging, transport, insurance and statutory VAT. Payment terms are set out in the offer. Default interest accrues at the statutory rate. Title passes only upon full payment (retention of title).`
-- Zeile 102: `Delivery and Installation`
-- Zeile 106: `Delivery dates are non-binding unless expressly agreed as fixed dates. The customer provides suitable installation conditions (foundation, power, compressed air, extraction) at their own expense. Risk passes to the customer upon handover to the carrier.`
-- Zeile 118: `Warranty`
-- Zeile 122: `Warranty is 12 months from delivery for new machines; for used machines the statutory minimum applies, restricted where permitted. Defects must be notified in writing without undue delay. In case of justified notice of defect we, at our choice, remedy the defect or deliver a replacement. Wear parts are excluded.`
-- Zeile 132: `Liability`
-- Zeile 135: `We are liable without limitation for intent and gross negligence and for injury to life, body or health. Otherwise liability is limited to typical, foreseeable contract damages. Liability for lost profit, production downtime and indirect damages is excluded to the extent permitted by law.`
-- Zeile 147: `Applicable Law and Jurisdiction`
-- Zeile 151: `Contracts with Asamer Technologie GmbH are governed by Austrian law excluding the CISG; venue is Wels. Contracts with ASAMER spol. s r.o. are governed by Czech law; venue is Brno.`
-- Zeile 161: `Final Provisions`
-- Zeile 164: `Should individual provisions be invalid, the validity of the remaining provisions remains unaffected. They are replaced by provisions closest to the economic purpose.`
-
-## `src/components/CookieConsent.tsx` (34)
+## `src/components/CookieConsent.tsx` (17)
 
 ### SK — 17 fehlend
 
@@ -1265,27 +700,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 238: `Umožňují relevantní obsah a měření kampaní napříč kanály.`
 - Zeile 253: `Uložit výběr`
 
-### HU — 17 fehlend
-
-- Zeile 141: `Cookie settings`
-- Zeile 144: `We use cookies to run the website securely and activate optional features like analytics and marketing only with your consent.`
-- Zeile 160: `Necessary only`
-- Zeile 167: `Settings`
-- Zeile 170: `Accept all`
-- Zeile 185: `Cookie preferences`
-- Zeile 188: `You can change your selection at any time.`
-- Zeile 200: `Close`
-- Zeile 206: `Necessary cookies`
-- Zeile 207: `Required for security, language, and core website functions.`
-- Zeile 217: `Functional cookies`
-- Zeile 218: `Store convenience settings and improve usability.`
-- Zeile 227: `Statistics / analytics`
-- Zeile 228: `Help us understand how visitors use the website.`
-- Zeile 237: `Marketing`
-- Zeile 238: `Allow relevant content and campaign measurement across channels.`
-- Zeile 253: `Save selection`
-
-## `src/pages/BarbaricPage.tsx` (33)
+## `src/pages/BarbaricPage.tsx` (17)
 
 ### SK — 17 fehlend
 
@@ -1308,27 +723,7 @@ pro každého`
 - Zeile 135: `Máte zájem o automatizaci BARBARIC?`
 - Zeile 138: `Vakuové zvedáky: 1 místo 3 – zjistit více`
 
-### HU — 16 fehlend
-
-- Zeile 33: `Home`
-- Zeile 50: `BARBARIC Automation & Panel Handling`
-- Zeile 65: `Automation
-for everyone`
-- Zeile 75: `Austria · Warehouse automation & panel handling`
-- Zeile 76: `BARBARIC Warehouse Automation & Panel Handling`
-- Zeile 77: `BARBARIC (Austria) develops systems for automatic panel storage, feeding and return transport in the wood and furniture industry. From CSF panel storage to LCV feeding systems and NST nesting pickers – BARBARIC automates material flow between warehouse, saw and CNC. Asamer is an authorized BARBARIC dealer for CZ, SK and HU with installation, service and ERP integration.`
-- Zeile 83: `Origin`
-- Zeile 84: `Asamer role`
-- Zeile 84: `Authorized dealer`
-- Zeile 85: `Markets`
-- Zeile 86: `Integration`
-- Zeile 86: `Install · Service · ERP`
-- Zeile 114: `View details`
-- Zeile 131: `Products and specifications`
-- Zeile 135: `Interested in BARBARIC automation?`
-- Zeile 138: `Vacuum lifters: 1 instead of 3 – learn more`
-
-## `src/pages/ImprintPage.tsx` (31)
+## `src/pages/ImprintPage.tsx` (16)
 
 ### SK — 16 fehlend
 
@@ -1349,28 +744,11 @@ for everyone`
 - Zeile 195: `Autorské právo`
 - Zeile 199: `Obsah a díla vytvořená provozovatelem stránek podléhají rakouskému autorskému právu. Rozmnožování, úpravy, šíření a jakékoli využití mimo hranice autorského práva vyžaduje písemný souhlas příslušného autora nebo tvůrce. Obrázky produktů a specifikace pocházejí od příslušných výrobců (OTT, Mayer/Felder Group, Barbaric, Gannomat).`
 
-### HU — 15 fehlend
+## `src/pages/Home.tsx` (14)
 
-- Zeile 32: `Imprint`
-- Zeile 35: `Information pursuant to § 5 ECG and § 14 UGB. Disclosure pursuant to § 25 MedienG.`
-- Zeile 59: `Austria`
-- Zeile 63: `Managing Director`
-- Zeile 71: `Commercial register`
-- Zeile 75: `Register court`
-- Zeile 76: `Regional Court Wels`
-- Zeile 120: `Regional Court Brno, Section C, File 14536`
-- Zeile 148: `Business Activity`
-- Zeile 151: `Sales, installation and service of industrial machinery and automation solutions for wood, plastics and metal processing in Central Europe (CZ, SK, HU).`
-- Zeile 157: `Authorized dealer for:`
-- Zeile 179: `Disclaimer`
-- Zeile 183: `The contents of this website have been created with the utmost care. However, we cannot guarantee the accuracy, completeness and timeliness of the contents. As a service provider, we are responsible for our own content on these pages in accordance with general laws. There is no obligation to monitor transmitted or stored third-party information.`
-- Zeile 195: `Copyright`
-- Zeile 199: `The contents and works created by the site operator on these pages are subject to Austrian copyright law. Reproduction, editing, distribution and any kind of exploitation beyond the limits of copyright require the written consent of the respective author or creator. Product images and specifications are from the respective manufacturers (OTT, Mayer/Felder Group, Barbaric, Gannomat).`
+### SK — 14 fehlend
 
-## `src/pages/Home.tsx` (26)
-
-### SK — 13 fehlend
-
+- Zeile 96: `Technologie olepování hran OTT. Bezešvé spoje hran pomocí systémů PUR a bluEdge featuring HyFuse.`
 - Zeile 146: `Kolkování`
 - Zeile 147: `Vrtání a lepení`
 - Zeile 148: `Gannomat: frézování, vrtání, kolíkování, CNC, vakuový lis a další.`
@@ -1385,28 +763,27 @@ for everyone`
 - Zeile 323: `Jeden cíl: férové financování vaší investice`
 - Zeile 405: `Přejít na stránku servisu`
 
-### HU — 13 fehlend
+## `src/pages/MayerPage.tsx` (11)
 
-- Zeile 146: `Dowel Processing`
-- Zeile 147: `Drilling & Gluing`
-- Zeile 148: `Gannomat: milling, drilling, doweling, CNC, vacuum press and more.`
-- Zeile 172: `Funding via grants`
-- Zeile 173: `Use our funding compass.`
-- Zeile 174: `Go to funding compass`
-- Zeile 178: `Funding via leasing`
-- Zeile 179: `Through our partner Raiffeisen Leasing, we ensure fair financing for your project.`
-- Zeile 184: `More about leasing`
-- Zeile 271: `Financing`
-- Zeile 274: `Two clear ways to finance your production investment: grants or leasing.`
-- Zeile 323: `One goal: fair financing for your investment`
-- Zeile 405: `Go to service page`
+### SK — 11 fehlend
 
-## `src/pages/UsedMachineDetailPage.tsx` (24)
+- Zeile 22: `Horizontální pily pro dřevo`
+- Zeile 23: `Pro hliník a plasty`
+- Zeile 24: `Zakázková řezací řešení`
+- Zeile 55: `Mayer formátovací pily`
+- Zeile 70: `Nárezové centrum`
+- Zeile 83: `Mayer (Felder Group) vyrábí horizontální formátovací pily s tlačným trámem pro zpracování dřeva, plastů a kovů. Řada Kappa Automatic (80–140) se specializuje na dřevo a deskové materiály, Advanced Line (100–250) řeže hliník, neželezné kovy a plasty. Asamer je autorizovaný prodejce Mayer pro CZ, SK a HU s lokálním servisem a skladem náhradních dílů.`
+- Zeile 89: `Made in Germany`
+- Zeile 92: `Na místě`
+- Zeile 92: `Servis a náhradní díly`
+- Zeile 140: `Vakuové podávání, sklady a stoly jako doplněk`
+- Zeile 150: `Máte zájem o pily Mayer?`
 
-### SK — 12 fehlend
+## `src/pages/UsedMachineDetailPage.tsx` (11)
+
+### SK — 11 fehlend
 
 - Zeile 75: `Poptávka na použitý stroj`
-- Zeile 82: `Použité stroje`
 - Zeile 128: `Použitý stroj`
 - Zeile 155: `Všechny použité stroje`
 - Zeile 199: `Prodáno`
@@ -1418,128 +795,22 @@ for everyone`
 - Zeile 363: `Ozveme se s aktuálně dostupnými nabídkami.`
 - Zeile 364: `Včetně technické kontroly, dopravy a instalace.`
 
-### HU — 12 fehlend
-
-- Zeile 75: `Used machine inquiry`
-- Zeile 82: `Used machines`
-- Zeile 128: `Used machine`
-- Zeile 155: `All used machines`
-- Zeile 199: `Sold`
-- Zeile 200: `Available`
-- Zeile 203: `Condition`
-- Zeile 210: `Price`
-- Zeile 225: `on request`
-- Zeile 358: `Interested in similar machines?`
-- Zeile 363: `We will respond with currently available options.`
-- Zeile 364: `Including technical inspection, transport and installation.`
-
-## `src/pages/MayerPage.tsx` (22)
-
-### SK — 11 fehlend
-
-- Zeile 22: `Horizontální pily pro dřevo`
-- Zeile 23: `Pro hliník a plasty`
-- Zeile 24: `Zakázková řezací řešení`
-- Zeile 55: `Mayer formátovací pily`
-- Zeile 70: `Nárezové centrum`
-- Zeile 81: `Rakousko · Felder Group · Formátovací pily`
-- Zeile 83: `Mayer (Felder Group) vyrábí horizontální formátovací pily s tlačným trámem pro zpracování dřeva, plastů a kovů. Řada Kappa Automatic (80–140) se specializuje na dřevo a deskové materiály, Advanced Line (100–250) řeže hliník, neželezné kovy a plasty. Asamer je autorizovaný prodejce Mayer pro CZ, SK a HU s lokálním servisem a skladem náhradních dílů.`
-- Zeile 92: `Na místě`
-- Zeile 92: `Servis a náhradní díly`
-- Zeile 140: `Vakuové podávání, sklady a stoly jako doplněk`
-- Zeile 150: `Máte zájem o pily Mayer?`
-
-### HU — 11 fehlend
-
-- Zeile 22: `Horizontal pressure beam saws for wood`
-- Zeile 23: `For aluminium, non-ferrous metals and plastics`
-- Zeile 24: `Custom cutting solutions`
-- Zeile 55: `Mayer Panel Saws`
-- Zeile 70: `Cutting center`
-- Zeile 81: `Austria · Felder Group · Panel saws`
-- Zeile 83: `Mayer (Felder Group) builds horizontal pressure beam panel saws for wood, plastics and metal processing. The Kappa Automatic range (80–140) specializes in wood and panel materials, while the Advanced Line (100–250) cuts aluminium, non-ferrous metals and plastics. Asamer is an authorized Mayer dealer for CZ, SK and HU with on-site service and spare parts.`
-- Zeile 92: `On-site`
-- Zeile 92: `Service & spare parts`
-- Zeile 140: `Vacuum feeding, panel storage and lifting tables as add-on`
-- Zeile 150: `Interested in Mayer panel saws?`
-
-## `src/components/home/HeroSlideshow.tsx` (20)
+## `src/components/home/HeroSlideshow.tsx` (10)
 
 ### SK — 10 fehlend
 
-- Zeile 48: `Konzultace vakuový zvedák Barbaric`
-- Zeile 52: `Poptávka – Asamer goes Hungary`
-- Zeile 56: `Technologie se zkušeností.`
-- Zeile 57: `Řešení s budoucností.`
-- Zeile 103: `Úvodní slideshow`
-- Zeile 165: `Barbaric · Vakuová manipulace se dřevem`
-- Zeile 177: `Myslete na zítřek`
-- Zeile 182: `Jediný člověk snadno přesune velké, těžké desky – ergonomicky, bezpečně a rychle. Ať u okrajovačky, pily nebo jiných strojů: chraňte své odborníky dlouhodobě.`
-- Zeile 211: `Požádat o konzultaci`
-- Zeile 268: `Snímek`
+- Zeile 47: `Konzultace vakuový zvedák Barbaric`
+- Zeile 51: `Registrace Inovační dny 2026`
+- Zeile 55: `Technologie se zkušeností.`
+- Zeile 56: `Řešení s budoucností.`
+- Zeile 142: `Úvodní slideshow`
+- Zeile 274: `Barbaric · Vakuová manipulace se dřevem`
+- Zeile 286: `Myslete na zítřek`
+- Zeile 291: `Jediný člověk snadno přesune velké, těžké desky – ergonomicky, bezpečně a rychle. Ať u okrajovačky, pily nebo jiných strojů: chraňte své odborníky dlouhodobě.`
+- Zeile 320: `Požádat o konzultaci`
+- Zeile 344: `Snímek`
 
-### HU — 10 fehlend
-
-- Zeile 48: `Vacuum lifter consultation`
-- Zeile 52: `Inquiry – Asamer goes Hungary`
-- Zeile 56: `Technology with experience.`
-- Zeile 57: `Solutions with a future.`
-- Zeile 103: `Homepage slideshow`
-- Zeile 165: `Barbaric · Vacuum handling for wood`
-- Zeile 177: `Think about tomorrow`
-- Zeile 182: `A single person moves large, heavy panels effortlessly – ergonomic, safe and fast. Whether at the edgebander, panel saw, or any other machine: protect your skilled workers for the long term.`
-- Zeile 211: `Request consultation`
-- Zeile 268: `Slide`
-
-## `src/pages/MayerProductPage.tsx` (16)
-
-### SK — 7 fehlend
-
-- Zeile 88: `Délka řezu`
-- Zeile 89: `Výška řezu`
-- Zeile 91: `Výkon motoru`
-- Zeile 92: `Průměr kotouče`
-- Zeile 93: `Projekce`
-- Zeile 94: `Poznámka`
-- Zeile 118: `Všechny produkty Mayer`
-
-### HU — 9 fehlend
-
-- Zeile 88: `Cutting length`
-- Zeile 89: `Cutting height`
-- Zeile 90: `Feed speed`
-- Zeile 91: `Motor power`
-- Zeile 92: `Blade diameter`
-- Zeile 93: `Projection`
-- Zeile 94: `Note`
-- Zeile 118: `All Mayer products`
-- Zeile 183: `Technical Specifications`
-
-## `src/pages/UsedMachinesPage.tsx` (16)
-
-### SK — 8 fehlend
-
-- Zeile 123: `prodáno`
-- Zeile 123: `k dispozici`
-- Zeile 225: `Vybrané stroje ze skladu. Každá nabídka je technicky ověřena a má jasně uvedený stav.`
-- Zeile 338: `Rok`
-- Zeile 395: `Poptávka`
-- Zeile 409: `Poptat použitý stroj`
-- Zeile 412: `Řekněte nám, jaký stroj hledáte. Ozveme se s dostupnými možnostmi.`
-- Zeile 431: `Zahájit poptávku`
-
-### HU — 8 fehlend
-
-- Zeile 123: `sold`
-- Zeile 123: `available`
-- Zeile 225: `Selected machines from stock. Each offer is technically checked and listed with a clear condition.`
-- Zeile 338: `Year`
-- Zeile 395: `Inquiry`
-- Zeile 409: `Request a used machine`
-- Zeile 412: `Tell us which machine you are looking for. We will respond with available options.`
-- Zeile 431: `Start inquiry`
-
-## `src/pages/ContactPage.tsx` (14)
+## `src/pages/ContactPage.tsx` (7)
 
 ### SK — 7 fehlend
 
@@ -1551,17 +822,7 @@ for everyone`
 - Zeile 106: `pro stroje`
 - Zeile 132: `pro servisní dotazy`
 
-### HU — 7 fehlend
-
-- Zeile 49: `About us`
-- Zeile 52: `Company information, imprint details, and direct contacts for machinery and service topics.`
-- Zeile 72: `VAT ID`
-- Zeile 73: `Registered`
-- Zeile 97: `Direct contacts`
-- Zeile 106: `for machinery`
-- Zeile 132: `for service inquiries`
-
-## `src/pages/GannomatPage.tsx` (14)
+## `src/pages/GannomatPage.tsx` (7)
 
 ### SK — 7 fehlend
 
@@ -1573,39 +834,43 @@ for everyone`
 - Zeile 81: `Montáž · Školení · Díly`
 - Zeile 132: `Selekta a Index Reihe CNC – naše top doporučení.`
 
-### HU — 7 fehlend
-
-- Zeile 34: `Inquiry Gannomat`
-- Zeile 48: `Gannomat Drilling, Dowel & Fitting Machines`
-- Zeile 70: `Austria · Drilling · Doweling · Fittings`
-- Zeile 72: `Gannomat (Austria) manufactures machines for drilling, dowel insertion, fitting placement and carcass assembly in the furniture industry. The range includes Selekta dowel inserters, Index CNC series, Express fitting machines and Concept carcass presses. Asamer is an authorized Gannomat dealer for CZ, SK and HU with installation, training and spare parts stock.`
-- Zeile 81: `Support`
-- Zeile 81: `Install · Training · Parts`
-- Zeile 132: `Selekta and Index Series CNC – our top recommendation.`
-
-## `src/pages/OttProductPage.tsx` (14)
+## `src/pages/MayerProductPage.tsx` (7)
 
 ### SK — 7 fehlend
 
-- Zeile 84: `Tloušťka hrany`
-- Zeile 85: `Tloušťka obrobku`
-- Zeile 115: `Všechny produkty OTT`
-- Zeile 185: `Vybavení`
-- Zeile 205: `Popis`
-- Zeile 240: `Vhodná systémová řešení`
-- Zeile 268: `Poradenství, nabídka a montáž z jednoho zdroje.`
+- Zeile 88: `Délka řezu`
+- Zeile 89: `Výška řezu`
+- Zeile 91: `Výkon motoru`
+- Zeile 92: `Průměr kotouče`
+- Zeile 93: `Projekce`
+- Zeile 94: `Poznámka`
+- Zeile 118: `Všechny produkty Mayer`
 
-### HU — 7 fehlend
+## `src/pages/OttProductPage.tsx` (7)
 
-- Zeile 84: `Edge thickness`
-- Zeile 85: `Board thickness`
-- Zeile 115: `All OTT products`
-- Zeile 185: `Equipment`
-- Zeile 205: `Description`
-- Zeile 240: `Matching system solutions`
-- Zeile 268: `Consulting, quote and installation from a single source.`
+### SK — 7 fehlend
 
-## `src/pages/BarbaricProductPage.tsx` (11)
+- Zeile 117: `Tloušťka hrany`
+- Zeile 118: `Tloušťka obrobku`
+- Zeile 150: `Všechny produkty OTT`
+- Zeile 228: `Vybavení`
+- Zeile 248: `Popis`
+- Zeile 283: `Vhodná systémová řešení`
+- Zeile 311: `Poradenství, nabídka a montáž z jednoho zdroje.`
+
+## `src/pages/UsedMachinesPage.tsx` (7)
+
+### SK — 7 fehlend
+
+- Zeile 123: `prodáno`
+- Zeile 123: `k dispozici`
+- Zeile 225: `Vybrané stroje ze skladu. Každá nabídka je technicky ověřena a má jasně uvedený stav.`
+- Zeile 338: `Rok`
+- Zeile 409: `Poptat použitý stroj`
+- Zeile 412: `Řekněte nám, jaký stroj hledáte. Ozveme se s dostupnými možnostmi.`
+- Zeile 431: `Zahájit poptávku`
+
+## `src/pages/BarbaricProductPage.tsx` (6)
 
 ### SK — 6 fehlend
 
@@ -1616,15 +881,7 @@ for everyone`
 - Zeile 308: `Máte zájem?`
 - Zeile 310: `Společně s vámi navrhneme optimální řešení pro vaši výrobu.`
 
-### HU — 5 fehlend
-
-- Zeile 210: `All BARBARIC products`
-- Zeile 260: `Specifications`
-- Zeile 282: `Software integration`
-- Zeile 308: `Interested?`
-- Zeile 310: `We work with you to plan the optimal solution for your production.`
-
-## `src/components/seo/ProductSeoBlock.tsx` (6)
+## `src/components/seo/ProductSeoBlock.tsx` (3)
 
 ### SK — 3 fehlend
 
@@ -1632,53 +889,30 @@ for everyone`
 - Zeile 75: `Oblasti nasazení`
 - Zeile 99: `Nákupní poradce`
 
-### HU — 3 fehlend
-
-- Zeile 59: `In Detail`
-- Zeile 75: `Applications`
-- Zeile 99: `Buying Guide`
-
-## `src/sections/Footer.tsx` (4)
+## `src/sections/Footer.tsx` (2)
 
 ### SK — 2 fehlend
 
-- Zeile 94: `Přímý kontakt`
-- Zeile 153: `Gannomat kolkování`
+- Zeile 95: `Přímý kontakt`
+- Zeile 159: `Gannomat kolkování`
 
-### HU — 2 fehlend
-
-- Zeile 94: `Direct contact`
-- Zeile 153: `Gannomat Dowel`
-
-## `src/components/seo/CategorySeoBlock.tsx` (2)
+## `src/components/seo/CategorySeoBlock.tsx` (1)
 
 ### SK — 1 fehlend
 
 - Zeile 71: `Časté dotazy`
 
-### HU — 1 fehlend
-
-- Zeile 71: `FAQ`
-
-## `src/pages/FaqPage.tsx` (2)
+## `src/pages/FaqPage.tsx` (1)
 
 ### SK — 1 fehlend
 
-- Zeile 35: `Poptávka Asamer`
+- Zeile 36: `Poptávka Asamer`
 
-### HU — 1 fehlend
-
-- Zeile 35: `Inquiry Asamer`
-
-## `src/pages/GannomatProductPage.tsx` (2)
+## `src/pages/GannomatProductPage.tsx` (1)
 
 ### SK — 1 fehlend
 
 - Zeile 104: `Všechny produkty Gannomat`
-
-### HU — 1 fehlend
-
-- Zeile 104: `All Gannomat products`
 
 ---
 
@@ -1754,7 +988,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `protec-profit.faq[1].answer` | Ano — standardní import DXF/DWG/STEP. Postprocesor se přizpůsobí vašemu konstrukčnímu softwaru. |
 | `protec-profit.faq[2].question` | Je stroj prachově přívětivý? |
 | `protec-profit.faq[2].answer` | Odsávání je standard — kompatibilní se všemi běžnými odsávacími zařízeními. |
-| `db-21-27-35.longDescription` | Gannomat DB 21-27-35 je klasický kolkovací vrtací stroj pro boky korpusu, záda a další díly nábytku se standardizovanými vzory otvorů. Označení 21-27-35 odkazuj … |
+| `db-21-27-35.longDescription` | Gannomat DB 21-27-35 je klasický kolíkovací vrtací stroj pro boky korpusu, záda a další díly nábytku se standardizovanými vzory otvorů. Označení 21-27-35 odkazu … |
 | `db-21-27-35.applicationSections[0].heading` | Pro standardní výrobu korpusu |
 | `db-21-27-35.applicationSections[0].body` | Ve standardní výrobě kuchyní nebo kancelářského nábytku je 32mm rastr otvorů průmyslovým standardem. Řada DB je optimalizována na tento rastr a dodává potřebné  … |
 | `db-21-27-35.buyingAdvice` | DB 21-27-35 je správnou volbou pro střední výrobu se standardními vzory otvorů. Pro vyšší průtok se vyplatí varianta WA s automatickým podáváním obrobku; při vy … |
@@ -1956,7 +1190,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `buffer.faq[1].answer` | Při téměř stejných dobách taktu spíše ne. Jakmile rozdíl doby taktu překročí 20 % nebo má jedna stanice časté prostoje, má pufr ekonomický smysl. |
 | `buffer.faq[2].question` | Lze TMP kombinovat se stávající linkou? |
 | `buffer.faq[2].answer` | Ano — Barbaric pufrovací dopravníky jsou modulární a lze je integrovat do stávajících linek. Asamer projektuje rozhraní. |
-| `door.introExpanded` | Barbaric systémy manipulace s dveřmi (DRX, CSF Industrial Türen, LPS) automatizují speciální manipulaci s bytovými, pokojovými a průmyslovými dveřmi ve výrobě.  … |
+| `door.introExpanded` | Barbaric systémy manipulace s dveřmi (DRX, CSF Industrial pro dveře, LPS) automatizují speciální manipulaci s bytovými, pokojovými a průmyslovými dveřmi ve výro … |
 | `door.sections[0].heading` | Vakuová manipulace pro jednotlivé dveře |
 | `door.sections[0].body` | Vakuový zvedák DRX bezpečně a šetrně k povrchu manipuluje s jednotlivými dveřmi. Ideální pro truhlářství nebo menší výrobce dveří, kteří nepotřebují plně automa … |
 | `door.sections[1].heading` | Automatický sklad dveří |
@@ -2251,9 +1485,9 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `carcass.faq[1].answer` | 30–120 sekund podle lepidla a velikosti korpusu. |
 | `carcass.faq[2].question` | Integrace do linky? |
 | `carcass.faq[2].answer` | Ano — se Selekta, dopravníkem a vybalovačem jako kompletní linka. |
-| `boring.introExpanded` | Gannomat kolkovací vrtací stroje (DB 21-27-35 a DB 21-27-35 WA) jsou klasické vícevřetenové vrtací stroje pro bočnice korpusu, záda a díly nábytku se standardní … |
-| `boring.sections[0].heading` | Kolkovací vrtací stroj vs. CNC stroj |
-| `boring.sections[0].body` | Kolkovací vrtací stroje jsou optimalizovány pro standardní vzory otvorů — rychlejší a levnější než CNC stroje. Při vysokém počtu variant nebo neobvyklých vrtací … |
+| `boring.introExpanded` | Gannomat kolíkovací vrtací stroje (DB 21-27-35 a DB 21-27-35 WA) jsou klasické vícevřetenové vrtací stroje pro bočnice korpusu, záda a díly nábytku se standardn … |
+| `boring.sections[0].heading` | Kolíkovací vrtací stroj vs. CNC stroj |
+| `boring.sections[0].body` | Kolíkovací vrtací stroje jsou optimalizovány pro standardní vzory otvorů — rychlejší a levnější než CNC stroje. Při vysokém počtu variant nebo neobvyklých vrtac … |
 | `boring.faq[0].question` | Co znamená WA? |
 | `boring.faq[0].answer` | Automatika obrobku — podávání a odběr probíhají automaticky dopravníkem. |
 | `boring.faq[1].question` | Hloubkové dorazy? |
@@ -2317,7 +1551,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `csf-professional.faq[2].answer` | Typická návratnost je jeden až dva roky. Hlavní úspory: odstranění manuální přepravy, méně pracovníků ve skladu, méně poškození desek a lepší přehled o materiál … |
 | `csf-industrial.longDescription` | Barbaric CSF Industrial je vysoce průmyslový sklad desek pro nepřetržitý provoz ve velkých nábytkářských závodech, dodavatelských provozech a zpracovatelích des … |
 | `csf-industrial.applicationSections[0].heading` | Pro průmyslovou výrobu nábytku |
-| `csf-industrial.applicationSections[0].body` | CSF Industrial zásobuje vícesmenné výrobní linky deskovým materiálem. Několik výdejních míst lze obsluhovat paralelně; priorizace probíhá podle ERP řízeného poř … |
+| `csf-industrial.applicationSections[0].body` | CSF Industrial zásobuje vícesměnné výrobní linky deskovým materiálem. Několik výdejních míst lze obsluhovat paralelně; priorizace probíhá podle ERP řízeného poř … |
 | `csf-industrial.applicationSections[1].heading` | Pro zpracovatele desek a zakázkové výrobce |
 | `csf-industrial.applicationSections[1].body` | Zakázkoví výrobci s různorodými deskovými položkami mají obzvlášť prospěch z principu chaotického skladování: každá deska dostane digitální místo nezávislé na d … |
 | `csf-industrial.buyingAdvice` | CSF Industrial je první volbou pro průmyslové nepřetržité provozy s vysokým obratem materiálu a ERP integrací. Pokud váš objem materiálu přesahuje několik tisíc … |
@@ -2350,14 +1584,14 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `rts-professional.faq[1].question` | Jaké jsou prostorové nároky? |
 | `rts-professional.faq[1].answer` | Typicky 2–3 m délky návratu plus vlastní délka olepovačky hran. Při uspořádání do L nebo U lze prostorové nároky optimalizovat. Přesné rozměry vyplývají z rozvr … |
 | `rts-professional.faq[2].question` | Vyplatí se mi RTS? |
-| `rts-professional.faq[2].answer` | Při středním průtoku a dvousmenném provozu se RTS vrátí za 12–24 měsíců díky odlehčení personálu. Asamer rád spočítá ROI s vašimi výrobními čísly. |
+| `rts-professional.faq[2].answer` | Při středním průtoku a dvousměnném provozu se RTS vrátí za 12–24 měsíců díky odlehčení personálu. Asamer rád spočítá ROI s vašimi výrobními čísly. |
 | `uwl-3.longDescription` | Barbaric UWL-3 je vakuový zvedák pro ergonomickou manipulaci s velkými deskovými materiály ve výrobě dřeva a nábytku. Bere desky, dveře nebo pracovní desky bezp … |
 | `uwl-3.applicationSections[0].heading` | Pro příjem zboží a skladovou logistiku |
 | `uwl-3.applicationSections[0].body` | Při vykládání nákladních vozidel nebo stohování deskového materiálu nahrazuje UWL-3 manuální zvedání bezpečným, kontrolovaným vakuovým úchopem. Velké formáty a  … |
 | `uwl-3.applicationSections[1].heading` | Pro zakládání formátovací pily a CNC |
 | `uwl-3.applicationSections[1].body` | U formátovací pily nebo CNC pracovního stolu zrychluje UWL-3 zakládání desek a zajišťuje přesné polohování. Obrobek lze umístit bez manuálního posouvání — zásad … |
 | `uwl-3.buyingAdvice` | UWL-3 je osvědčený standardní model — vhodný pro většinu truhlárenských a nábytkářských provozů s klasickou manipulací s deskami. Pro obzvlášť tenké nebo porézn … |
-| `uwl-3.faq[0].question` | Jaká břemena UWL-3 uzdvihne? |
+| `uwl-3.faq[0].question` | Jaká břemena UWL-3 uzvedne? |
 | `uwl-3.faq[0].answer` | UWL-3 je dimenzován na typická zatížení desek do několika set kilogramů. Přesná nosnost závisí na povrchu desky a konfiguraci přísavkových úchopů. Asamer spočít … |
 | `uwl-3.faq[1].question` | Jak bezpečný je UWL-3 při výpadku proudu? |
 | `uwl-3.faq[1].answer` | UWL-3 drží vakuum po výpadku proudu několik minut přes pufr — dostatečně dlouho k bezpečnému odložení břemena. Navíc jsou k dispozici optická a akustická upozor … |
@@ -2389,7 +1623,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `[0].items[3].question` | Jaký je rozdíl mezi PUR a EVA technologií lepení? |
 | `[0].items[3].answer` | EVA (etylenvinylacetát) je termoplastické tavné lepidlo, které rychle tuhne a snadno se zpracovává. PUR (polyuretanové reaktivní lepidlo) reaguje s vlhkostí a v … |
 | `[0].items[4].question` | Co znamená Zero-Gap? Co je bluEdge HyFuse? |
-| `[0].items[4].answer` | Zero-Gap označuje olepení hrany, kde je lepená spára opticky neviditelná – hrana a deskový materiál splývají bezešvě. bluEdge HyFuse je vlastní laserová technol … |
+| `[0].items[4].answer` | Zero-Gap označuje olepení hrany, kde je lepená spára opticky neviditelná – hrana a deskový materiál splývají bezešvě. bluEdge featuring HyFuse je vlastní techno … |
 | `[1].items[0].question` | Co je OPC-UA a proč je důležité pro integraci ERP? |
 | `[1].items[0].answer` | OPC-UA (Open Platform Communications – Unified Architecture) je otevřený průmyslový standard pro bezpečnou výměnu dat mezi stroji a IT systémy. Všechny stroje O … |
 | `[1].items[2].question` | Může Asamer pomoci s integrací softwaru do nového stroje? |
@@ -2422,7 +1656,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `[0].items[3].question` | What is the difference between PUR and EVA glue technology? |
 | `[0].items[3].answer` | EVA (ethylene vinyl acetate) is a thermoplastic hot-melt adhesive that cures quickly and is easy to process. PUR (polyurethane reactive adhesive) reacts with mo … |
 | `[0].items[4].question` | What does Zero-Gap mean? What is bluEdge HyFuse? |
-| `[0].items[4].answer` | Zero-Gap refers to edge bonding where the glue line is visually invisible – the edge and panel material merge seamlessly. bluEdge HyFuse is OTT's proprietary la … |
+| `[0].items[4].answer` | Zero-Gap refers to edge bonding where the glue line is visually invisible – the edge and panel material merge seamlessly. bluEdge featuring HyFuse is OTT's prop … |
 | `[1].items[0].question` | What is OPC-UA and why is it important for ERP integration? |
 | `[1].items[0].answer` | OPC-UA (Open Platform Communications – Unified Architecture) is an open industrial standard for secure data exchange between machines and IT systems. All OTT ma … |
 | `[1].items[1].question` | Do I need a return system for the edgebander? |
@@ -2450,73 +1684,6 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `[4].items[2].question` | Does Asamer deliver to Hungary and Slovakia? |
 | `[4].items[2].answer` | Yes, Asamer delivers across the entire CZ, SK and HU region. We are the exclusive distribution partner for OTT edgebanding machines. Mayer, BARBARIC and Gannoma … |
 
-## ottSeoContent · Produkte (60)
-
-### SK — 60 fehlend
-
-| Pfad im Modul | ausgelieferter Text |
-|---|---|
-| `combimelt.longDescription` | OTT CombiMelt je kompletni servisni stanice pro zpracovani EVA a PUR lepidel na olepovacich strojich na hrany. Jako externi tavici system jej lze pripojit ke vs … |
-| `combimelt.applicationSections[0].heading` | Dovybaveni PUR pro stavajici stroje OTT |
-| `combimelt.applicationSections[0].body` | CombiMelt lze dovybavit na vsechny olepovacky hran OTT. Provozy, ktere dosud pracovaly pouze s EVA, mohou sve moznosti rozsirit o PUR lepeni, aniz by musely kup … |
-| `combimelt.applicationSections[1].heading` | Vodetesne spoje pro kuchyne a vlhke prostory |
-| `combimelt.applicationSections[1].body` | PUR lepidlo tvrdne reakci se vzdusnou vlhkosti a vytvari trvale vodetesny spoj. U kuchynskeho nabytku a nabytku do vlhkych prostor je PUR lepeni dnes standardem … |
-| `combimelt.buyingAdvice` | CombiMelt je spravna volba, pokud chcete rozsirit svou stavajici olepovacku hran OTT o schopnost PUR, nebo pokud konfigurujete novy stroj s maximalnim prostorem … |
-| `combimelt.faq[0].question` | Lze CombiMelt pripojit k jakekoli olepovacce hran OTT? |
-| `combimelt.faq[0].answer` | Ano, CombiMelt je navrzeny jako externi tavici system pro vsechny olepovacky hran OTT. Lze jej objednat s novymi stroji nebo dovybavit na stavajici. |
-| `combimelt.faq[1].question` | Jaka je vyhoda PUR oproti EVA? |
-| `combimelt.faq[1].answer` | PUR lepidlo vytvari vodetesne, teplotne odolne a prakticky neviditelne lepene spoje. Na rozdil od EVA PUR pri vlhkosti nenaboba a zustava stabilni po leta. PUR  … |
-| `combimelt.faq[2].question` | Jak dlouho trva prepnuti mezi EVA a PUR? |
-| `combimelt.faq[2].answer` | Diky systemu rychle vymeny se dvema oddelenymi nadobami trva prepnuti mezi EVA a PUR pouze nekolik minut. Narocne cisteni nebo proplachovaci procesy jsou do zna … |
-| `bluedge.longDescription` | OTT bluEdge featuring HyFuse je technologie nulove spary od OTT, ktera posouva olepovani hran na zcela novou uroven kvality. Pri tomto postupu se nepouziva zadn … |
-| `bluedge.applicationSections[0].heading` | Premiovy vzhled nabytku s neviditelnou sparou |
-| `bluedge.applicationSections[0].body` | Technologie nulove spary bluEdge vytvari zcela neviditelne spojeni mezi hranou a deskou. Zadny film lepidla, zadna odchylka barvy, zadna viditelna delici linie. … |
-| `bluedge.applicationSections[1].heading` | Dodatecne montovatelna na vsechny modely OTT |
-| `bluedge.applicationSections[1].body` | Laserovou jednotku HyFuse lze integrovat do jakekoli olepovacky hran OTT - od vstupniho modelu Pacific+ az po vlajkovou lod TopEdge. Stavajici provozy tak mohou … |
-| `bluedge.buyingAdvice` | bluEdge featuring HyFuse je volba pro provozy, ktere chteji svym zakaznikum nabidnout premiovou kvalitu hran bez viditelne spary. Technologii lze integrovat jak … |
-| `bluedge.faq[0].question` | Jaky je rozdil mezi bluEdge a PUR lepenim? |
-| `bluedge.faq[0].answer` | U PUR se pouziva lepidlo, ktere vytvari tenkou, ale viditelnou sparu. U bluEdge je funkcni vrstva hrany aktivovana laserem a primo spojena s deskou - zcela bez  … |
-| `bluedge.faq[1].question` | Lze bluEdge dovybavit i na starsi stroje OTT? |
-| `bluedge.faq[1].answer` | Ano, laserova jednotka HyFuse je k dispozici jako moznost dovybaveni pro vsechny olepovacky hran OTT. Asamer overi kompatibilitu a provede dovybaveni primo na m … |
-| `bluedge.faq[2].question` | Ktere hranove materialy jsou kompatibilni s bluEdge? |
-| `bluedge.faq[2].answer` | bluEdge funguje s hranovymi materialy, ktere maji laserove reaktivni funkcni vrstvu. Bezni vyrobci hran jako Rehau, Doellken a Ostermann nabizeji odpovidajici h … |
-| `transcompact.longDescription` | OTT TRANScompact je kompaktni vratny dopravnik s integrovanou funkci otaceni, vyvinuty specialne pro mensi vyrobni linky a dilenske prostory s omezenym mistem.  … |
-| `transcompact.applicationSections[0].heading` | Jednooperatorsky provoz pro male dilny |
-| `transcompact.applicationSections[0].body` | TRANScompact umoznuje provoz olepovacky hran s jednim operatorem. Obrobek je automaticky vracen, takze neni potreba druheho zamestnance pro odebrani dilu. Funkc … |
-| `transcompact.applicationSections[1].heading` | Prostorove usporne reseni pro Pacific+ a Tornado+ |
-| `transcompact.applicationSections[1].body` | TRANScompact byl specialne navrzeny jako doplnek ke kompaktnim modelum OTT Pacific+ a Tornado+. Dohromady tvori prostorove uspornou vyrobni bunku, ktera efektiv … |
-| `transcompact.buyingAdvice` | Zvolte TRANScompact, pokud chcete doplnit Pacific+ nebo Tornado+ kompaktnim, prostorove uspornym vratnym systemem. Pro vyssi taktovaci frekvence nebo vetsi stro … |
-| `transcompact.faq[0].question` | Pro ktere stroje OTT je TRANScompact vhodny? |
-| `transcompact.faq[0].answer` | TRANScompact je obzvlaste vhodny jako doplnek k Pacific+ a Tornado+. V zasade ho lze kombinovat i s dalsimi modely OTT, pokud je prostor omezeny. |
-| `transcompact.faq[1].question` | Muze TRANScompact otacet obrobky? |
-| `transcompact.faq[1].answer` | Ano, TRANScompact disponuje integrovanou funkci otaceni. Obrobek tak muze byt automaticky otocen pro zpracovani dalsi hrany, aniz by operator musel rucne zasaho … |
-| `transcompact.faq[2].question` | Jaky je rozdil mezi TRANScompact a TRANSlift? |
-| `transcompact.faq[2].answer` | TRANScompact je horizontalni vratny system s otacenim pro kompaktni dilny. TRANSlift prepravuje obrobky vertikalne, cimz setri podlahovou plochu, ale vyzaduje v … |
-| `translift.longDescription` | OTT TRANSlift je zvedaci vratny system, ktery prepravuje obrobky vertikalne a tim setri cennou podlahovou plochu. Namisto horizontalniho vraceni obrobku TRANSli … |
-| `translift.applicationSections[0].heading` | Optimalizace prostoru diky vertikalnimu vraceni |
-| `translift.applicationSections[0].body` | TRANSlift vyuziva prostor nad olepovackou hran pro prepravu obrobku. Tim se uvolni podlahova plocha vedle stroje pro jine ucely. Zejmena ve vyrobnich halach s o … |
-| `translift.applicationSections[1].heading` | Pro prumyslove olepovaci linky |
-| `translift.applicationSections[1].body` | Jako vratny system pro profesionalni a vlajkove modely Storm+, StrongEdge a TopEdge je TRANSlift navrzeny pro prumyslovy nepretrzity provoz s vysokymi taktovaci … |
-| `translift.buyingAdvice` | Zvolte TRANSlift, pokud chcete setrit podlahovou plochu a mate dostatecnou vysku stropu. Je to doporucene reseni pro Storm+, StrongEdge a TopEdge. Pro kompaktni … |
-| `translift.faq[0].question` | Jakou vysku stropu vyzaduje TRANSlift? |
-| `translift.faq[0].answer` | Potrebna vyska stropu zavisi na vysce stroje a formatu obrobku. Asamer vam poradi pri planovani dispozice a overi prostorove pozadavky ve vasi vyrobni hale. |
-| `translift.faq[1].question` | Lze TRANSlift pouzivat i s mensimi stroji? |
-| `translift.faq[1].answer` | V zasade ano, ale pro kompaktni modely Pacific+ a Tornado+ doporucujeme TRANScompact jako ekonomictejsi reseni. TRANSlift je primarne navrzeny pro Storm+, Stron … |
-| `translift.faq[2].question` | Opravdu TRANSlift setri podlahovou plochu? |
-| `translift.faq[2].answer` | Ano, protoze obrobky jsou vraceny vertikalne nad strojem, odpada horizontalni vratna draha vedle stroje. V zavislosti na dispozici haly muze TRANSlift snizit po … |
-| `transedge.longDescription` | OTT TRANSedge je specializovany vratny system vyvinuty cileně pro nasazeni v olepovacich linkach s vysokou taktovaci frekvenci. Poskytuje automaticky navrat obr … |
-| `transedge.applicationSections[0].heading` | Optimalizovany pro linky Storm+ a TopEdge |
-| `transedge.applicationSections[0].body` | TRANSedge je navrzeny jako specializovany vratny system pro vysokovykonne modely OTT Storm+ a TopEdge. Prima synchronizace s rizenim stroje umoznuje nejvyssi ta … |
-| `transedge.applicationSections[1].heading` | Jednooperatorsky provoz pri maximalnim vykonu |
-| `transedge.applicationSections[1].body` | Diky plne automatickemu navratu obrobku muze celou olepovaci linku provozovat jediny operator. TRANSedge zajisuje prepravu, polohovani a v pripade potreby i ota … |
-| `transedge.buyingAdvice` | Zvolte TRANSedge, pokud chcete provozovat linku Storm+ nebo TopEdge s maximalnim vykonem a vysokou taktovaci frekvenci. Ve srovnani s TRANSlift nabizi TRANSedge … |
-| `transedge.faq[0].question` | Cim se TRANSedge lisi od TRANSlift? |
-| `transedge.faq[0].answer` | TRANSedge je specialne optimalizovan pro olepovaci linky a primo synchronizovan s rizením stroje. TRANSlift je univerzalnejsi zvedaci vratny system, ktery lze p … |
-| `transedge.faq[1].question` | Lze TRANSedge pouzivat i s FlexEdge? |
-| `transedge.faq[1].answer` | Ano, TRANSedge lze v zasade kombinovat s FlexEdge. Doporucena kombinace je vsak Storm+ nebo TopEdge s TRANSedge pro maximalni vykon. Pro FlexEdge primarne dopor … |
-| `transedge.faq[2].question` | Jaka je maximalni taktovaci frekvence TRANSedge? |
-| `transedge.faq[2].answer` | Taktovaci frekvence TRANSedge se ridi pripojenou olepovackou hran a formatem obrobku. Pri TopEdge s rychlosti posuvu 22 m/min je taktovaci frekvence urcena rych … |
-
 ## edgebanderGuide (49)
 
 ### HU — 49 fehlend
@@ -2529,7 +1696,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `decisionCriteria[1].question` | 2. Which materials and edges will you process? |
 | `decisionCriteria[1].body` | The second criterion is materials: chipboard, MDF, solid wood, plastic, aluminium. For standard ABS and PVC edges up to 3 mm in dry environments, EVA glue is su … |
 | `decisionCriteria[2].question` | 3. What is your production volume? |
-| `decisionCriteria[2].body` | The third criterion is the number of shifts and operating hours. Single-shift operation works with feed speeds of 12–18 m/min. Multi-shift production with 300+  … |
+| `decisionCriteria[2].body` | The third criterion is the number of shifts and operating hours. Single-shift operation works with feed speeds of 18–20 m/min. Multi-shift production with 300+  … |
 | `decisionCriteria[3].question` | 4. What is your budget and TCO? |
 | `decisionCriteria[3].body` | The fourth criterion is total cost of ownership (TCO): purchase price, energy use, glue, maintenance, lifetime and resale value. OTT edgebanders typically last  … |
 | `usedVsNew.heading` | Used vs new edgebander |
@@ -2539,7 +1706,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `service.heading` | Service and availability in CZ, SK and HU |
 | `service.body` | Asamer has been the authorized OTT dealer for the Czech Republic, Slovakia and Hungary since 1991. Our scope: consulting, project planning, delivery, installati … |
 | `faq[0].question` | Which edgebander for a small joinery? |
-| `faq[0].answer` | For small joineries we recommend the OTT Pacific+ (5.7 m, 18 m/min) as a compact entry model or the OTT Tornado+ (6.2 m, 12–18 m/min) for greater flexibility wi … |
+| `faq[0].answer` | For small joineries we recommend the OTT Pacific+ (5.7 m, 18 m/min) as a compact entry model or the OTT Tornado+ (6.2 m, 18–20 m/min) for greater flexibility wi … |
 | `faq[1].question` | What is the difference between a PUR and an EVA edgebander? |
 | `faq[1].answer` | EVA is a thermoplastic glue: fast, cheap, fine for standard edges in dry environments. PUR (polyurethane) makes a waterproof, heat-resistant bond — mandatory fo … |
 | `faq[2].question` | Is it worth buying a used edgebander? |
@@ -2550,8 +1717,8 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `faq[4].answer` | A standard OTT edgebander installation takes 2–5 working days, including commissioning and operator training. Industrial models with ERP integration and multipl … |
 | `faq[5].question` | How long does an edgebander last? |
 | `faq[5].answer` | With proper preventive maintenance OTT edgebanders last 15–25 years. Key drivers: glue quality, regular cleaning of the glue system, replacing worn tooling (cut … |
-| `faq[6].question` | What is bluEdge HyFuse and when do I need it? |
-| `faq[6].answer` | bluEdge HyFuse is a zero-gap laser technology: the edge's functional layer is activated by laser and thermally bonded to the panel without glue. The result is a … |
+| `faq[6].question` | What is bluEdge featuring HyFuse and when do I need it? |
+| `faq[6].answer` | bluEdge featuring HyFuse is a zero glue line technology: the edge's functional layer is activated by a hydrogen-oxygen flame and thermally bonded to the panel w … |
 | `faq[7].question` | Can I integrate an edgebander with my ERP? |
 | `faq[7].answer` | Yes. OTT machines run Beckhoff controllers with OPC-UA — the open standard for ERP/MES integration without vendor lock-in. Asamer has an in-house software team  … |
 | `faq[8].question` | Which edges can an OTT edgebander process? |
@@ -2565,9 +1732,9 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `howTo[0].name` | Define your operation size and daily throughput |
 | `howTo[0].text` | Count your employees and the workpieces processed per day. This number drives the model class (entry / pro / industrial). |
 | `howTo[1].name` | Assess materials and edge types |
-| `howTo[1].text` | Identify edge thickness (0.3–25 mm) and material (ABS, PVC, solid wood). For wet environments choose PUR or bluEdge laser. |
+| `howTo[1].text` | Identify edge thickness (0.3–25 mm) and material (ABS, PVC, solid wood). For wet environments choose PUR or bluEdge featuring HyFuse. |
 | `howTo[2].name` | Set the operating mode and shifts |
-| `howTo[2].text` | Single-shift: 12–18 m/min is enough. Multi-shift: 16–25 m/min, automatic magazines and OPC-UA for ERP integration. |
+| `howTo[2].text` | Single-shift: 18–20 m/min is enough. Multi-shift: 22–25 m/min, automatic magazines and OPC-UA for ERP integration. |
 | `howTo[3].name` | Calculate budget and TCO |
 | `howTo[3].text` | Include purchase price, glue, energy, maintenance and lifetime (15–25 years). On a smaller budget, consider a vetted used machine. |
 | `howTo[4].name` | Request a consultation with Asamer |

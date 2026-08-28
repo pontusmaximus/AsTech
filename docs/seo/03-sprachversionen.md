@@ -211,6 +211,8 @@ Die Tabelle oben ist die vollständige Arbeitsliste. Sobald die Bezeichnungen vo
 - Übersetzungen beauftragen. Vorlage: `docs/seo/i18n-luecken.md`, Priorisierung wie oben.
   Umfang: 1.371 Seitentext-Schlüssel und 867 Datenmodul-Einträge.
 - Fachbegriffe für die 14 Produktbezeichnungen aus 3.4 — in **allen fünf** Sprachen, nicht nur HU.
+  Für HU liegt inzwischen eine Keyword-Recherche mit Terminologie-Vorschlägen vor, siehe
+  [`07-hu-marktbeintritt.md`](07-hu-marktbeintritt.md) — deckt HU ab, CZ/EN/DE/SK weiterhin offen.
 - Entscheidung: Sollen die elf laufzeit-zusammengesetzten `tr()`-Aufrufe auf Platzhalter umgebaut
   werden? Ohne das bleiben die Beschreibungsabsätze der Produktseiten auf SK und HU dauerhaft
   im Fallback.

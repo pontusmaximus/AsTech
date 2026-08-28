@@ -29,7 +29,8 @@
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CANONICAL_DOMAIN, INDEXABLE_LANGUAGES, languageToHreflang, isSupportedLanguage } from '../src/lib/language';
+import { buildLocalizedPath, CANONICAL_DOMAIN, INDEXABLE_LANGUAGES, languageToHreflang, isSupportedLanguage } from '../src/lib/language';
+import { SEO_ROUTES, getSlugForLang, isRouteAvailable } from '../src/seo/routes';
 import { checkLanguage } from './seo-lang-markers';
 import { loadVercelConfig, VercelRouter } from './seo-vercel-routes';
 import type { Language } from '../src/i18n';
@@ -214,6 +215,27 @@ const hreflangsOf = (html: string): { hreflang: string; href: string }[] =>
     .map((m) => ({ hreflang: attr(m[0], 'hreflang') ?? '', href: attr(m[0], 'href') ?? '' }))
     .filter((x) => x.hreflang);
 
+/**
+ * Je URL die hreflang-Sprachen, die dort absichtlich fehlen duerfen.
+ *
+ * Quelle ist `excludeLangs` in `SEO_ROUTES` — dieselbe Angabe, aus der Sitemap,
+ * Prerender und `SeoHead` ihre Sprachliste ableiten. Wuerde der Audit sie nicht
+ * kennen, meldete er genau die Luecke als Fehler, die dort hingehoert.
+ */
+const EMPTY_HREFLANG_SET: ReadonlySet<string> = new Set<string>();
+const EXCUSED_HREFLANGS = new Map<string, ReadonlySet<string>>();
+for (const config of Object.values(SEO_ROUTES)) {
+  if (!config.excludeLangs?.length) continue;
+  const missing: ReadonlySet<string> = new Set(config.excludeLangs.map(languageToHreflang));
+  for (const lang of INDEXABLE_LANGUAGES) {
+    if (!isRouteAvailable(config, lang)) continue;
+    EXCUSED_HREFLANGS.set(
+      `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, getSlugForLang(config, lang))}`,
+      missing,
+    );
+  }
+}
+
 const bodyOf = (html: string): string => {
   const start = html.indexOf('<body');
   if (start < 0) return '';
@@ -393,7 +415,11 @@ async function auditPage(loc: string): Promise<PageResult | null> {
   const alts = hreflangsOf(html);
   const expected = new Set(INDEXABLE_LANGUAGES.map(languageToHreflang));
   const got = new Set(alts.map((a) => a.hreflang));
+  // Eine Seite mit `excludeLangs` gibt es in dieser Sprache nicht; ein hreflang
+  // darauf zeigte auf eine 301. Das Fehlen ist dort also richtig, nicht fehlerhaft.
+  const excused = EXCUSED_HREFLANGS.get(loc) ?? EMPTY_HREFLANG_SET;
   for (const e of expected) {
+    if (excused.has(e)) continue;
     if (!got.has(e)) add(loc, 'hreflang', 'error', `hreflang="${e}" fehlt`);
   }
   const xDefault = alts.filter((a) => a.hreflang === 'x-default');

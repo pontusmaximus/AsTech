@@ -7,6 +7,7 @@ import SeoHead from '../seo/SeoHead';
 import { faqPageSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { HUB_GUIDES, HUB_FAQ_CATEGORIES, HUB_FAQ_FLAT, hubGuideSlug } from '../data/hub/ratgeberFaqHub';
+import { isSlugAvailable } from '../seo/routes';
 import type { MultiLangText } from '../data/seo/types';
 import type { Language } from '../i18n';
 
@@ -35,13 +36,17 @@ const FaqPage = () => {
     tr('Anfrage Asamer', 'Inquiry Asamer', 'Poptávka Asamer'),
   );
 
+  // Ratgeber, die es in dieser Sprache nicht gibt, gehoeren weder in die
+  // Kartenliste noch ins ItemList-Schema: der Link liefe auf eine 301.
+  const guides = HUB_GUIDES.filter((g) => isSlugAvailable(g.canonicalSlug, lang));
+
   const faqLd = faqPageSchema(
     HUB_FAQ_FLAT.map((f) => ({ question: ml(f.question, lang), answer: ml(f.answer, lang) })),
   );
 
   const guideListLd = itemListSchema(
     tr('Ratgeber', 'Guides', 'Průvodci', 'Sprievodcovia', 'Útmutatók'),
-    HUB_GUIDES.map((g) => ({
+    guides.map((g) => ({
       name: ml(g.title, lang),
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, hubGuideSlug(g, lang))}`,
       description: ml(g.blurb, lang),
@@ -86,7 +91,7 @@ const FaqPage = () => {
               {tr('Ratgeber', 'Guides', 'Průvodci', 'Sprievodcovia', 'Útmutatók')}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {HUB_GUIDES.map((g) => (
+              {guides.map((g) => (
                 <Link
                   key={g.canonicalSlug}
                   to={buildPath(g.canonicalSlug)}

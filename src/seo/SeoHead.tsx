@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../App';
 import { buildCanonicalUrl, DEFAULT_LANGUAGE, HREFLANG_DEFAULT, INDEXABLE_LANGUAGES, languageToHreflang, NON_INDEXABLE_LANGUAGES } from '../lib/language';
-import { DEFAULT_OG_IMAGE, getFallbackMeta, getSlugForLang, SEO_ROUTES } from './routes';
+import { DEFAULT_OG_IMAGE, getFallbackMeta, getSlugForLang, isRouteAvailable, SEO_ROUTES } from './routes';
 import { articleSchema, organizationSchema, websiteSchema, localBusinessSchemas } from './structuredData';
 import { CONTENT_DATES } from './generated/contentDates';
 import type { SeoRouteKey } from './routes';
@@ -81,7 +81,11 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
       <meta name="robots" content={effectiveRobots} />
 
       <link rel="canonical" href={canonical} />
-      {INDEXABLE_LANGUAGES.map((indexableLang) => {
+      {INDEXABLE_LANGUAGES.filter((indexableLang) =>
+        // Eine Sprache, die diese Seite nicht hat, darf nicht als hreflang-
+        // Alternate auftauchen: die URL antwortet mit 301.
+        routeConfig ? isRouteAvailable(routeConfig, indexableLang) : true,
+      ).map((indexableLang) => {
         const altSlug = buildAlternateSlug
           ? buildAlternateSlug(indexableLang)
           : routeConfig

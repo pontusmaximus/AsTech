@@ -57,14 +57,14 @@ const GANNOMAT_CATEGORY_SLUGS: Record<GannomatCategory, Record<Language, string>
     en: 'dowel-boring-machines',
     cz: 'kolkovaci-vrtacky',
     sk: 'kolkovacie-vrtacky',
-    hu: 'csap-furo-gepek',
+    hu: 'tiplifuro-gepek',
   },
   rowboring: {
     de: 'lochreihenbohrmaschinen',
     en: 'row-boring-machines',
     cz: 'radove-vrtacky',
     sk: 'radove-vrtacky',
-    hu: 'soros-furo-gepek',
+    hu: 'sorozatfuro-gepek',
   },
   gluing: {
     de: 'beleimmaschinen',
@@ -78,7 +78,7 @@ const GANNOMAT_CATEGORY_SLUGS: Record<GannomatCategory, Record<Language, string>
     en: 'frame-dowel-machines',
     cz: 'ramove-vrtacky',
     sk: 'ramove-vrtacky',
-    hu: 'keret-csapozo-gepek',
+    hu: 'keretpresek',
   },
   cornerhinge: {
     de: 'ecklager-bohrmaschinen',
