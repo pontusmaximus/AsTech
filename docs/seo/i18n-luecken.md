@@ -25,7 +25,7 @@ Widerspruch, der im günstigsten Fall ignoriert und im ungünstigsten als Duplik
 
 | Ebene | Sprache | vorhanden | fehlt | Abdeckung |
 |---|---|---:|---:|---:|
-| A · Datenmodule (`MultiLangText`) | SK | 1314 | 692 | **65.5 %** |
+| A · Datenmodule (`MultiLangText`) | SK | 1518 | 488 | **75.7 %** |
 | A · Datenmodule (`MultiLangText`) | HU | 1891 | 115 | **94.3 %** |
 | B · Seitentexte (`tr()`) | SK | 735 | 0 | **100.0 %** |
 | B · Seitentexte (`tr()`) | HU | 742 | 0 | **100.0 %** |
@@ -429,152 +429,6 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `vacuum-cranes.faq[1].question` | Do we need a foundation? |
 | `vacuum-cranes.faq[2].question` | Automatic or manual? |
 
-## mayerSeoContent · Produkte (139)
-
-### SK — 139 fehlend
-
-| Pfad im Modul | ausgelieferter Text |
-|---|---|
-| `kappa-automatic-80.applicationSections[0].heading` | Pro řezání dřevěných desek v truhlářských dílnách |
-| `kappa-automatic-80.applicationSections[0].body` | kappa automatic 80 je optimální formátovací pila pro truhlárny a nábytkářské dílny, které pravidelně řežou dřevotřísky, MDF desky a překližky na míru. Kompaktní … |
-| `kappa-automatic-80.applicationSections[1].heading` | Pro sériovou výrobu v řemeslných provozech |
-| `kappa-automatic-80.applicationSections[1].body` | Díky rychlosti posuvu až 100 m/min a softwaru pro optimalizaci řezů je kappa automatic 80 ideálně vhodná pro ekonomickou sériovou výrobu v řemeslných provozech. … |
-| `kappa-automatic-80.buyingAdvice` | kappa automatic 80 je správná volba, pokud hledáte kompaktní horizontální formátovací pilu pro dřevěné materiály a převážně zpracováváte desky do tloušťky 80 mm … |
-| `kappa-automatic-80.faq[0].question` | Jaké materiály dokáže kappa automatic 80 řezat? |
-| `kappa-automatic-80.faq[0].answer` | kappa automatic 80 je navržena pro dřevěné materiály jako dřevotřísky, MDF, HDF, překližky, stolařské desky a masivní dřevo. Výška řezu 80 mm umožňuje řezání je … |
-| `kappa-automatic-80.faq[1].question` | Lze kappa automatic 80 obsluhovat jedním operátorem? |
-| `kappa-automatic-80.faq[1].answer` | Ano, těžká ocelová konstrukce s automatickým přítlačným trámem a posuvem materiálu umožňuje plnou obsluhu jedním operátorem. Obsluha naprogramuje řezy na dotyko … |
-| `kappa-automatic-80.faq[2].question` | Jakou rychlost posuvu nabízí kappa automatic 80? |
-| `kappa-automatic-80.faq[2].answer` | Rychlost posuvu je plynule regulovatelná od 5 do 100 m/min, což umožňuje flexibilní přizpůsobení různým materiálům a požadavkům. |
-| `kappa-automatic-80.faq[3].question` | Kde mohu koupit Mayer kappa automatic 80? |
-| `kappa-automatic-80.faq[3].answer` | Asamer je autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko. Nabízíme osobní poradenství, předvedení, dodání, uvedení do provozu a poprodej … |
-| `kappa-automatic-100.longDescription` | Mayer kappa automatic 100 je horizontální formátovací pila s vyšší výbavou, která nabízí více síly, více výkonu a více komfortu oproti vstupnímu modelu. S výško … |
-| `kappa-automatic-100.applicationSections[0].heading` | Profesionální řezání desek ve výrobě nábytku |
-| `kappa-automatic-100.applicationSections[0].body` | kappa automatic 100 je navržena pro výrobce nábytku, kteří řežou vysoké objemy korpusových dílů, front a polic z dřevěných desek. Výška řezu 100 mm umožňuje řez … |
-| `kappa-automatic-100.applicationSections[1].heading` | Interiérové vestavby a výroba prodejen |
-| `kappa-automatic-100.applicationSections[1].body` | V interiérových vestavbách a výrobě prodejen jsou rozhodující přesné řezy a krátké časy přípravy. kappa automatic 100 s připojením k Ardis poskytuje bezešvé dig … |
-| `kappa-automatic-100.buyingAdvice` | Zvolte kappa automatic 100, pokud přerůstáte vstupní model a potřebujete vyšší výšku řezu, více komfortu a modulární optimalizaci řezů. Je ideální pro provozy z … |
-| `kappa-automatic-100.faq[0].question` | Čím se liší kappa automatic 100 od modelu 80? |
-| `kappa-automatic-100.faq[0].answer` | kappa automatic 100 nabízí výšku řezu 100 mm místo 80 mm, modulární optimalizátor řezů a vyšší výbavu s více komfortními funkcemi. Délka řezu zůstává 3 200 mm. |
-| `kappa-automatic-100.faq[1].question` | Může kappa automatic 100 pracovat se softwarem pro optimalizaci řezů? |
-| `kappa-automatic-100.faq[1].answer` | Ano, kappa automatic 100 je kompatibilní se softwarem Ardis pro optimalizaci řezů, který umožňuje automatický výpočet optimálních řezných plánů, snížení odpadu  … |
-| `kappa-automatic-100.faq[2].question` | Pro jaké velikosti provozů je kappa automatic 100 vhodná? |
-| `kappa-automatic-100.faq[2].answer` | kappa automatic 100 je vhodná pro středně velké až velké řemeslné provozy, výrobce nábytku a interiérové firmy s pravidelným řezáním desek a středním průchodem. |
-| `kappa-automatic-120.longDescription` | Mayer kappa automatic 120 je výkonná horizontální formátovací pila pro rychlé a rozměrově přesné řezání jednotlivých desek i balíků desek. S výškou řezu 120 mm  … |
-| `kappa-automatic-120.applicationSections[0].heading` | Řezání balíků pro středně velké série |
-| `kappa-automatic-120.applicationSections[0].body` | S výškou řezu 120 mm umožňuje kappa automatic 120 efektivní řezání balíků desek. Více dřevotřískových nebo MDF desek je zpracováno současně, což výrazně zvyšuje … |
-| `kappa-automatic-120.applicationSections[1].heading` | Velkoformátové desky v interiérových vestavbách |
-| `kappa-automatic-120.applicationSections[1].body` | Rozšířená délka řezu 3 800 mm činí kappa automatic 120 ideálním řešením pro řezání velkoformátových desek používaných v kvalitních interiérových vestavbách, obc … |
-| `kappa-automatic-120.buyingAdvice` | kappa automatic 120 se doporučuje, pokud pravidelně řežete balíky desek do 120 mm a potřebujete rozšířenou délku řezu 3 800 mm. Je střední variantou mezi kompak … |
-| `kappa-automatic-120.faq[0].question` | Jaká je maximální délka řezu kappa automatic 120? |
-| `kappa-automatic-120.faq[0].answer` | kappa automatic 120 nabízí délku řezu 3 800 mm a je tak vhodná i pro velkoformátové desky. |
-| `kappa-automatic-120.faq[1].question` | Může kappa automatic 120 řezat balíky desek? |
-| `kappa-automatic-120.faq[1].answer` | Ano, s výškou řezu 120 mm lze řezat více desek současně v balíku. To výrazně zvyšuje průchodnost a je to zvláště vhodné pro sériovou výrobu. |
-| `kappa-automatic-120.faq[2].question` | Je kappa automatic 120 vhodná pro nábytkářský průmysl? |
-| `kappa-automatic-120.faq[2].answer` | Ano, stroj je ideální pro nábytkářský průmysl a interiérové vestavby. Kombinace výšky řezu 120 mm, délky řezu 3 800 mm a optimalizace řezů pokrývá požadavky mod … |
-| `kappa-automatic-140.longDescription` | Mayer kappa automatic 140 je vlajkovou lodí řady kappa a nabízí maximální výkon pro průmyslovou sériovou výrobu. S impozantní výškou řezu 140 mm a délkou řezu 4 … |
-| `kappa-automatic-140.applicationSections[0].heading` | Průmyslová sériová výroba nábytkových dílů |
-| `kappa-automatic-140.applicationSections[0].body` | kappa automatic 140 je navržena pro průmyslovou velkosériovou výrobu. S výškou řezu 140 mm lze efektivně řezat tlusté balíky desek, zatímco software Ardis minim … |
-| `kappa-automatic-140.applicationSections[1].heading` | Zakázková výroba a velké projekty |
-| `kappa-automatic-140.applicationSections[1].body` | Délka řezu 4 300 mm a výška řezu 140 mm činí kappa automatic 140 ideální pro velké zakázkové projekty, kde je třeba zpracovávat nadrozměrné desky a vysoké objem … |
-| `kappa-automatic-140.applicationSections[2].heading` | Obchod se dřevem a velkoobchod s deskami |
-| `kappa-automatic-140.applicationSections[2].body` | V obchodu se dřevem a velkoobchodu s deskami je kappa automatic 140 ideální pro služby řezání na míru: objednávky zákazníků jsou přijímány digitálně, optimalizá … |
-| `kappa-automatic-140.buyingAdvice` | kappa automatic 140 je správná volba pro průmyslové provozy, které potřebují maximální výšku řezu, maximální délku řezu a nejvyšší průchodnost v řadě kappa. Jak … |
-| `kappa-automatic-140.faq[0].question` | Je kappa automatic 140 nejrychlejší formátovací pilou ve své třídě? |
-| `kappa-automatic-140.faq[0].answer` | S rychlostí posuvu až 100 m/min patří kappa automatic 140 k nejrychlejším formátovacím pilám ve třídě horizontálních pil na dřevěné desky. |
-| `kappa-automatic-140.faq[1].question` | Jakou délku řezu nabízí kappa automatic 140? |
-| `kappa-automatic-140.faq[1].answer` | kappa automatic 140 nabízí délku řezu 4 300 mm, což umožňuje zpracování nadrozměrných a obzvláště dlouhých obrobků. |
-| `kappa-automatic-140.faq[2].question` | Pro jaké odvětví je kappa automatic 140 vhodná? |
-| `kappa-automatic-140.faq[2].answer` | kappa automatic 140 je vhodná pro nábytkářský průmysl, interiérové vestavby, zakázkovou výrobu, obchod se dřevem a všechny provozy s průmyslovým řezáním desek v … |
-| `advanced-line-100.longDescription` | Mayer advanced line 100 je osvědčená klasika mezi formátovacími pilami pro zpracování hliníku, neželezných kovů a plastů. S výkonem motoru 18/24 kW a výškou řez … |
-| `advanced-line-100.applicationSections[0].heading` | Řezání hliníkových kompozitních desek |
-| `advanced-line-100.applicationSections[0].body` | advanced line 100 je přímo předurčena pro řezání hliníkových kompozitních desek (Alucobond, Dibond a podobné). Nízká rychlost posuvu od 0,2 m/min a motor 18/24  … |
-| `advanced-line-100.applicationSections[1].heading` | Zpracování plastových desek |
-| `advanced-line-100.applicationSections[1].body` | Akrylátové sklo (PMMA), polykarbonát, tvrdé PVC a další technické plasty lze na advanced line 100 řezat bez otřepů a bez vytrhávání. Plynule regulovatelná rychl … |
-| `advanced-line-100.applicationSections[2].heading` | Zpracování neželezných kovů |
-| `advanced-line-100.applicationSections[2].body` | Kromě hliníku zpracovává advanced line 100 také mosaz, měď a další neželezné kovy. Konstrukce s nízkými vibracemi a precizní vedení pilového vozíku zaručují pře … |
-| `advanced-line-100.buyingAdvice` | advanced line 100 je vaše volba, pokud hledáte osvědčenou formátovací pilu pro hliník a plasty ve třídě 100 mm. Přesvědčí spolehlivostí a řezy bez vibrací a je  … |
-| `advanced-line-100.faq[0].question` | Může advanced line 100 řezat hliník? |
-| `advanced-line-100.faq[0].answer` | Ano, advanced line 100 je speciálně navržena pro řezání hliníku, hliníkových kompozitních desek a neželezných kovů. Motor 18/24 kW dodává potřebný výkon pro čis … |
-| `advanced-line-100.faq[1].question` | Jakou rychlost posuvu má advanced line 100? |
-| `advanced-line-100.faq[1].answer` | Rychlost posuvu je 0,2 až 60 m/min, plynule regulovatelná. Nízké rychlosti jsou klíčové pro řezy bez otřepů v hliníku a plastech. |
-| `advanced-line-100.faq[2].question` | Jaké plasty může advanced line 100 zpracovávat? |
-| `advanced-line-100.faq[2].answer` | advanced line 100 zpracovává akrylátové sklo (PMMA), polykarbonát, tvrdé PVC, PE, PP a další technické plasty bez otřepů a bez vytrhávání. |
-| `advanced-line-130.longDescription` | Mayer advanced line 130 je všestranná formátovací pila pro hliník, neželezné kovy a plasty s výškou řezu 130 mm a integrovaným odsáváním. Stabilní konstrukce v  … |
-| `advanced-line-130.applicationSections[0].heading` | Stavba fasád z hliníkových kompozitních desek |
-| `advanced-line-130.applicationSections[0].body` | advanced line 130 je ideální pro stavitele fasád řezající hliníkové kompozitní desky jako Alucobond nebo Dibond na míru. Výška řezu 130 mm pojme i tlustší kompo … |
-| `advanced-line-130.applicationSections[1].heading` | Zpracování plastů v průmyslovém měřítku |
-| `advanced-line-130.applicationSections[1].body` | Pro zpracovatele plastů nabízí advanced line 130 kombinaci výkonu, přesnosti a integrovaného odsávání. Masivní plastové bloky z polyethylenu, polyamidu nebo PTF … |
-| `advanced-line-130.buyingAdvice` | advanced line 130 je optimální, pokud potřebujete výšku řezu 130 mm, integrované odsávání a Dual Servo Drive. Nabízí více než model 100 a je kompaktnější než mo … |
-| `advanced-line-130.faq[0].question` | Co je systém Dual Servo Drive u advanced line 130? |
-| `advanced-line-130.faq[0].answer` | Systém Dual Servo Drive sestává ze dvou nezávislých servomotorů, které poskytují absolutní přesnost polohování a programovatelné korekční křivky pro různé mater … |
-| `advanced-line-130.faq[1].question` | Má advanced line 130 integrované odsávání? |
-| `advanced-line-130.faq[1].answer` | Ano, advanced line 130 disponuje integrovaným odsáváním, které udržuje pracovní prostor čistý a splňuje požadavky na bezpečnost práce. |
-| `advanced-line-130.faq[2].question` | Jaký pilový kotouč používá advanced line 130? |
-| `advanced-line-130.faq[2].answer` | advanced line 130 používá pilový kotouč 500 mm s projekcí 142 mm, poháněný motorem 24 kW. |
-| `advanced-line-160.longDescription` | Mayer advanced line 160 je mnohonásobně oceněná vysokovýkonná formátovací pila s PC řízením přes dotykový displej, nabízející výšku řezu 160 mm pro průmyslové z … |
-| `advanced-line-160.applicationSections[0].heading` | Průmyslové zpracování hliníkových desek |
-| `advanced-line-160.applicationSections[0].body` | advanced line 160 je první volbou pro průmyslové zpracovatele hliníku s vysokým průchodem. Motor 35 kW a pilový kotouč 600 mm řežou i tlusté hliníkové desky a k … |
-| `advanced-line-160.applicationSections[1].heading` | Technické plasty a kompozity |
-| `advanced-line-160.applicationSections[1].body` | Kombinace variabilní rychlosti posuvu a programovatelných korekčních křivek činí advanced line 160 ideální pro zpracování technických plastů jako PTFE, PEEK, PO … |
-| `advanced-line-160.buyingAdvice` | advanced line 160 je vaše volba pro průmyslové požadavky na výšku řezu (160 mm), výkon motoru (35 kW) a PC řízení. Hodí se pro provozy zpracovávající hliník, pl … |
-| `advanced-line-160.faq[0].question` | Jaký řídicí systém má advanced line 160? |
-| `advanced-line-160.faq[0].answer` | advanced line 160 disponuje PC řízením s dotykovým displejem, které umožňuje intuitivní plánování zakázek, ukládání řezných plánů a integraci do ERP. |
-| `advanced-line-160.faq[1].question` | Jak výkonný je motor advanced line 160? |
-| `advanced-line-160.faq[1].answer` | advanced line 160 je vybavena motorem 35 kW, který pohání pilový kotouč 600 mm s projekcí 180 mm. |
-| `advanced-line-160.faq[2].question` | Za co byla advanced line 160 oceněna? |
-| `advanced-line-160.faq[2].answer` | advanced line 160 získala mnohonásobná ocenění za inovativní řešení a patenty, včetně systému Dual Servo Drive a PC řízení přes dotykový displej. |
-| `advanced-line-160-turn.longDescription` | Mayer advanced line 160 turn rozšiřuje osvědčenou platformu 160 o automatickou 90° otočnou jednotku a umožňuje tak oboustranné zpracování v jednom průchodu. Tat … |
-| `advanced-line-160-turn.applicationSections[0].heading` | Automatizované podélné a příčné řezy v jednom průchodu |
-| `advanced-line-160-turn.applicationSections[0].body` | Otočná jednotka 90° u advanced line 160 turn umožňuje podélné a příčné řezy bez manuálního přemisťování. Desky jsou automaticky otočeny a polohovány pro další ř … |
-| `advanced-line-160-turn.applicationSections[1].heading` | Zpracování velkých hliníkových formátů |
-| `advanced-line-160-turn.applicationSections[1].body` | Při zpracování velkoformátových hliníkových desek a kompozitů je otočná jednotka obrovskou výhodou: těžké desky nemusí být ručně otáčeny, což zlepšuje ergonomii … |
-| `advanced-line-160-turn.buyingAdvice` | Zvolte advanced line 160 turn, pokud ve vaší výrobě pravidelně potřebujete podélné a příčné řezy na hliníkových nebo plastových deskách a chcete automatizovat o … |
-| `advanced-line-160-turn.faq[0].question` | Co dělá otočná jednotka advanced line 160 turn? |
-| `advanced-line-160-turn.faq[0].answer` | Automatická 90° otočná jednotka otočí obrobky po podélném řezu o 90° a napolohuje je pro příčný řez. Oba směry řezu jsou provedeny v jednom průchodu bez manuáln … |
-| `advanced-line-160-turn.faq[1].question` | Jaký nárůst produktivity přináší otočná jednotka? |
-| `advanced-line-160-turn.faq[1].answer` | Otočná jednotka může zvýšit průchodnost až o 40 %, protože odpadá manuální otáčení a přepolohování desek a materiálový tok probíhá nepřetržitě. |
-| `advanced-line-160-turn.faq[2].question` | Pro jaké materiály je advanced line 160 turn vhodná? |
-| `advanced-line-160-turn.faq[2].answer` | advanced line 160 turn je vhodná pro hliník, hliníkové kompozitní desky, neželezné kovy a plasty všeho druhu, od akrylátového skla přes PVC po technické vysokov … |
-| `advanced-line-200.longDescription` | Mayer advanced line 200 je vysokovýkonná formátovací pila pro velkoformátové obrobky z hliníku, neželezných kovů a plastů. S impozantní výškou řezu 200 mm, délk … |
-| `advanced-line-200.applicationSections[0].heading` | Velkoformátové řezy v dopravním průmyslu |
-| `advanced-line-200.applicationSections[0].body` | V automobilovém, kontejnerovém a dopravním průmyslu se zpracovávají hliníkové desky a plastové panely v nadrozměrných formátech. advanced line 200 s délkou řezu … |
-| `advanced-line-200.applicationSections[1].heading` | Těžká průmyslová výroba |
-| `advanced-line-200.applicationSections[1].body` | Pro těžkou průmyslovou výrobu, kde se masivní hliníkové a plastové bloky řežou na míru, je advanced line 200 zkonstruována se svým motorem 43 kW a těžkým strojn … |
-| `advanced-line-200.buyingAdvice` | advanced line 200 je správný stroj, pokud potřebujete výšku řezu 200 mm, délku řezu 5 600 mm a výkon motoru 43 kW. Hodí se pro průmyslovou výrobu s velkoformáto … |
-| `advanced-line-200.faq[0].question` | Jaká je maximální délka řezu advanced line 200? |
-| `advanced-line-200.faq[0].answer` | advanced line 200 nabízí délku řezu až 5 600 mm, ideální pro nadrozměrné desky v dopravním a kontejnerovém průmyslu. |
-| `advanced-line-200.faq[1].question` | Jaký motor má advanced line 200? |
-| `advanced-line-200.faq[1].answer` | advanced line 200 je vybavena výkonným motorem 43 kW, který pohání pilový kotouč 670 mm s projekcí 215 mm. |
-| `advanced-line-200.faq[2].question` | Pro jaká odvětví je advanced line 200 vhodná? |
-| `advanced-line-200.faq[2].answer` | advanced line 200 je vhodná pro dopravní, automobilový a kontejnerový průmysl, stavbu fasád a všechna odvětví zpracovávající velkoformátové hliníkové nebo plast … |
-| `advanced-line-250.longDescription` | Mayer advanced line 250 je nejsilnější formátovací pila ve své třídě a stanovuje nová měřítka v technologii průmyslového řezání desek s motorem 55/75 kW, průměr … |
-| `advanced-line-250.applicationSections[0].heading` | Těžké obrábění hliníku |
-| `advanced-line-250.applicationSections[0].body` | advanced line 250 byla zkonstruována pro těžké obrábění tlustých hliníkových desek a bloků. Motor 55/75 kW a pilový kotouč 860 mm zvládají tloušťky materiálu až … |
-| `advanced-line-250.applicationSections[1].heading` | Zpracování masivních plastových bloků |
-| `advanced-line-250.applicationSections[1].body` | Masivní plastové bloky z polyethylenu, polyamidu, PTFE a dalších technických plastů vyžadují stroj s výjimečným výkonem. advanced line 250 s výškou řezu 250 mm  … |
-| `advanced-line-250.buyingAdvice` | advanced line 250 je investice pro provozy, které potřebují nejsilnější formátovací pilu ve své třídě. S motorem 55/75 kW a výškou řezu 250 mm neexistují limity … |
-| `advanced-line-250.faq[0].question` | Proč je advanced line 250 nejsilnější ve své třídě? |
-| `advanced-line-250.faq[0].answer` | advanced line 250 kombinuje motor 55/75 kW s pilovým kotoučem 860 mm a projekcí 270 mm, což z ní činí nejvýkonnější formátovací pilu ve své třídě. |
-| `advanced-line-250.faq[1].question` | Jakou výšku řezu nabízí advanced line 250? |
-| `advanced-line-250.faq[1].answer` | advanced line 250 nabízí výšku řezu 250 mm, nejvyšší v řadě Advanced Line a navrženou pro masivní hliníkové a plastové bloky. |
-| `advanced-line-250.faq[2].question` | Může advanced line 250 řezat i plasty? |
-| `advanced-line-250.faq[2].answer` | Ano, advanced line 250 kromě hliníku a neželezných kovů zpracovává i všechny běžné technické plasty jako PE, PA, PTFE, PEEK a sklolamináty. |
-| `winkelanlagen.longDescription` | Mayer Winkelanlagen (úhlové řezací systémy) jsou zakázková průmyslová řezací řešení, která kombinují automatizované podélné a příčné řezy v jednom integrovaném  … |
-| `winkelanlagen.applicationSections[0].heading` | Plně automatizované výrobní linky |
-| `winkelanlagen.applicationSections[0].body` | Úhlové řezací systémy Mayer jsou srdcem plně automatizovaných výrobních linek. Nepřetržitý materiálový tok od přívodu desek přes podélné a příčné řezání po výst … |
-| `winkelanlagen.applicationSections[1].heading` | Integrace do ERP a Průmysl 4.0 |
-| `winkelanlagen.applicationSections[1].body` | Úhlové řezací systémy lze bezešvě integrovat do stávajících ERP systémů, takže objednávky zákazníků jsou přijímány digitálně, automaticky převáděny na optimaliz … |
-| `winkelanlagen.buyingAdvice` | Úhlové řezací systémy Mayer jsou správná investice, pokud chcete plně automatizovat vaši výrobu desek a spojit podélné i příčné řezy v souvislém systému. Každá  … |
-| `winkelanlagen.faq[0].question` | Co jsou úhlové řezací systémy Mayer? |
-| `winkelanlagen.faq[0].answer` | Úhlové řezací systémy Mayer jsou zakázkové průmyslové řezací instalace, které kombinují automatizované podélné a příčné řezy v jednom integrovaném systému. Jsou … |
-| `winkelanlagen.faq[1].question` | Jaké materiály zpracovávají úhlové řezací systémy Mayer? |
-| `winkelanlagen.faq[1].answer` | Úhlové řezací systémy Mayer zpracovávají hliník, neželezné kovy, plasty a dřevěné materiály, podle individuální konfigurace. |
-| `winkelanlagen.faq[2].question` | Lze úhlové řezací systémy integrovat do ERP systémů? |
-| `winkelanlagen.faq[2].answer` | Ano, úhlové řezací systémy Mayer jsou navrženy pro bezešvou integraci do stávajících ERP a výrobních systémů a podporují digitální zpracování zakázek a automati … |
-| `winkelanlagen.faq[3].question` | Jak mohu poptávat úhlový řezací systém u Asamer? |
-| `winkelanlagen.faq[3].answer` | Kontaktujte Asamer pro nezávaznou projektovou konzultaci. Analyzujeme vaše potřeby a nakonfigurujeme úhlový řezací systém individuálně přizpůsobený vašim výrobn … |
-
 ## gannomatSeoContent · Kategorien (94)
 
 ### SK — 94 fehlend
@@ -755,80 +609,6 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `ssk-saeulenschwenkkran.faq[2].question` | Lze SSK otáčet elektricky? |
 | `ssk-saeulenschwenkkran.faq[2].answer` | Standardní SSK se otáčí ručně — břemeno je přitom odlehčeno. Elektromotorické otáčení je dostupné jako volba a doporučuje se u velmi velkých poloměrů nebo těžký … |
 
-## ratgeberFaqHub · FAQ (62)
-
-### SK — 26 fehlend
-
-| Pfad im Modul | ausgelieferter Text |
-|---|---|
-| `[0].items[0].question` | Která olepovačka hran pro začátek? |
-| `[0].items[0].answer` | Pro začátek doporučujeme OTT Pacific+. Nabízí posuv 18 m/min včetně zpracování rohů na pouhých 5,7 m délky. Stroj zvládne tloušťku hran 0,3–15 mm a tloušťku des … |
-| `[0].items[1].question` | Kdy se vyplatí automatizace skladu? |
-| `[0].items[1].answer` | Automatizace skladu se vyplatí od denního průchodu přibližně 50 desek nebo když časy hledání a chyby při kompletaci brzdí produktivitu. Systémy BARBARIC snižují … |
-| `[0].items[3].question` | Jaký je rozdíl mezi PUR a EVA technologií lepení? |
-| `[0].items[3].answer` | EVA (etylenvinylacetát) je termoplastické tavné lepidlo, které rychle tuhne a snadno se zpracovává. PUR (polyuretanové reaktivní lepidlo) reaguje s vlhkostí a v … |
-| `[0].items[4].question` | Co znamená Zero-Gap? Co je bluEdge HyFuse? |
-| `[0].items[4].answer` | Zero-Gap označuje olepení hrany, kde je lepená spára opticky neviditelná – hrana a deskový materiál splývají bezešvě. bluEdge featuring HyFuse je vlastní techno … |
-| `[1].items[0].question` | Co je OPC-UA a proč je důležité pro integraci ERP? |
-| `[1].items[0].answer` | OPC-UA (Open Platform Communications – Unified Architecture) je otevřený průmyslový standard pro bezpečnou výměnu dat mezi stroji a IT systémy. Všechny stroje O … |
-| `[1].items[2].question` | Může Asamer pomoci s integrací softwaru do nového stroje? |
-| `[1].items[2].answer` | Ano, náš softwarový tým propojí váš stroj přes otevřené rozhraní OPC-UA přímo s vaším ERP nebo MES systémem. Integrace zahrnuje výrobní data v reálném čase, aut … |
-| `[2].items[0].question` | Jak rychle přijede technik při poruše stroje? |
-| `[2].items[0].answer` | V případě poruchy náš servisní tým okamžitě priorizuje váš incident. Obvykle zahájíme telefonickou nebo vzdálenou diagnostiku do 2–4 hodin. Pokud je nutný zásah … |
-| `[2].items[1].question` | Které stroje Asamer servisuje? |
-| `[2].items[1].answer` | Servisujeme všechny stroje z našeho aktuálního portfolia: olepovačky hran OTT, formátovací pily Mayer, manipulační a skladové systémy BARBARIC a vrtací a kolkov … |
-| `[3].items[1].question` | Jaké dotační programy existují v roce 2026 pro dřevoobráběcí stroje v ČR? |
-| `[3].items[1].answer` | V České republice je v roce 2026 k dispozici několik programů: OP TAK – Digitální podnik podporuje 25–45 % (max. 45 mil. Kč) při integraci strojů s ERP/MES. OP  … |
-| `[3].items[2].question` | Jak funguje leasing přes Raiffeisen pro stroje? |
-| `[3].items[2].answer` | Raiffeisen Leasing financuje nové i použité stroje s dobou trvání 36–72 měsíců. Volíte mezi finančním leasingem (přechod vlastnictví po poslední splátce) a oper … |
-| `[4].items[0].question` | Na co si dát pozor při nákupu použitých olepovaček hran? |
-| `[4].items[0].answer` | Zkontrolujte stav lepicí jednotky, frézovacích agregátů a posuvného řetězu – to jsou kritické opotřebitelné díly. Požádejte o strojní pas s historií údržby a pr … |
-| `[4].items[1].question` | Poskytuje Asamer záruku na použité stroje? |
-| `[4].items[1].answer` | Ano, každý použitý stroj od Asamer je před prodejem technicky prověřen a případně repasován. V závislosti na stavu a rozsahu repase poskytujeme záruku na prověř … |
-| `[4].items[2].question` | Dodává Asamer i do Maďarska a na Slovensko? |
-| `[4].items[2].answer` | Ano, Asamer dodává do celého regionu CZ, SK a HU. Pro olepovačky hran OTT jsme exkluzivním distribučním partnerem. Mayer, BARBARIC a Gannomat prodáváme jako aut … |
-
-### HU — 36 fehlend
-
-| Pfad im Modul | ausgelieferter Text |
-|---|---|
-| `[0].items[0].question` | Which edgebander for beginners? |
-| `[0].items[0].answer` | For beginners we recommend the OTT Pacific+. It offers 18 m/min feed speed including corner processing in just 5.7 m length. The machine handles edge thicknesse … |
-| `[0].items[1].question` | When does warehouse automation pay off? |
-| `[0].items[1].answer` | Warehouse automation pays off from a daily panel throughput of approx. 50 panels, or when search times and picking errors slow down productivity. BARBARIC syste … |
-| `[0].items[2].question` | Which edges can an OTT edgebander process? |
-| `[0].items[2].answer` | OTT edgebanders handle edges from 0.3 to 25 mm — ABS, PVC, melamine, paper edges, solid wood, aluminium. Maximum thickness depends on the model: Pacific+ and To … |
-| `[0].items[3].question` | What is the difference between PUR and EVA glue technology? |
-| `[0].items[3].answer` | EVA (ethylene vinyl acetate) is a thermoplastic hot-melt adhesive that cures quickly and is easy to process. PUR (polyurethane reactive adhesive) reacts with mo … |
-| `[0].items[4].question` | What does Zero-Gap mean? What is bluEdge HyFuse? |
-| `[0].items[4].answer` | Zero-Gap refers to edge bonding where the glue line is visually invisible – the edge and panel material merge seamlessly. bluEdge featuring HyFuse is OTT's prop … |
-| `[1].items[0].question` | What is OPC-UA and why is it important for ERP integration? |
-| `[1].items[0].answer` | OPC-UA (Open Platform Communications – Unified Architecture) is an open industrial standard for secure data exchange between machines and IT systems. All OTT ma … |
-| `[1].items[1].question` | Do I need a return system for the edgebander? |
-| `[1].items[1].answer` | A return system saves a second operator and lifts productivity significantly. For Pacific+ and Tornado+ we recommend TRANScompact; for Storm+ and StrongEdge, TR … |
-| `[1].items[2].question` | Can Asamer help with software integration of my new machine? |
-| `[1].items[2].answer` | Yes, our software team connects your machine via the open OPC-UA interface directly to your ERP or MES system. Integration includes real-time production data, a … |
-| `[2].items[0].question` | How quickly does a technician arrive during machine failure? |
-| `[2].items[0].answer` | In an emergency our service team prioritizes your incident immediately. Typically we start a phone or remote diagnosis within 2–4 hours. If an on-site visit is  … |
-| `[2].items[1].question` | Which machines does Asamer service? |
-| `[2].items[1].answer` | We service all machines from our current portfolio: OTT edgebanding machines, Mayer panel saws, BARBARIC handling and storage systems, and Gannomat drilling and … |
-| `[2].items[2].question` | How long does an edgebander last? |
-| `[2].items[2].answer` | With proper preventive maintenance OTT edgebanders last 15–25 years. Key drivers: glue quality, regular cleaning of the glue system, replacing worn tooling (cut … |
-| `[2].items[3].question` | How long does an edgebander installation take? |
-| `[2].items[3].answer` | A standard OTT edgebander installation takes 2–5 working days, including commissioning and operator training. Industrial models with ERP integration and multipl … |
-| `[3].items[0].question` | How much does an edgebander cost? |
-| `[3].items[0].answer` | The price of an edgebander depends on the model, configuration and equipment. Entry models (Pacific+) start in the low six-figure EUR range, professional models … |
-| `[3].items[1].question` | What funding programs exist in 2026 for woodworking machines in CZ? |
-| `[3].items[1].answer` | In the Czech Republic several programs are available in 2026: OP TAK – Digitální podnik supports 25–45% (max. CZK 45M) with ERP/MES integration of machines. OP  … |
-| `[3].items[2].question` | How does leasing through Raiffeisen work for machines? |
-| `[3].items[2].answer` | Raiffeisen Leasing finances new and used machines with terms of 36–72 months. You choose between finance leasing (ownership after final installment) and operati … |
-| `[4].items[0].question` | What to look for when buying used edgebanders? |
-| `[4].items[0].answer` | Check the condition of the glue unit, milling aggregates and feed chain – these are the critical wear parts. Ask for the machine passport with maintenance histo … |
-| `[4].items[1].question` | Does Asamer offer warranty on used machines? |
-| `[4].items[1].answer` | Yes, every used machine from Asamer is technically inspected and refurbished if needed before sale. Depending on condition and scope of refurbishment we provide … |
-| `[4].items[2].question` | Does Asamer deliver to Hungary and Slovakia? |
-| `[4].items[2].answer` | Yes, Asamer delivers across the entire CZ, SK and HU region. We are the exclusive distribution partner for OTT edgebanding machines. Mayer, BARBARIC and Gannoma … |
-
 ## edgebanderGuide (49)
 
 ### HU — 49 fehlend
@@ -885,48 +665,45 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `howTo[4].name` | Request a consultation with Asamer |
 | `howTo[4].text` | Asamer prepares an individual offer based on your operation, materials and budget. Consultation in CZ, SK and HU in the local language. |
 
-## mayerSeoContent · Kategorien (39)
+## ratgeberFaqHub · FAQ (36)
 
-### SK — 39 fehlend
+### HU — 36 fehlend
 
 | Pfad im Modul | ausgelieferter Text |
 |---|---|
-| `kappa.introExpanded` | Řada Mayer kappa zahrnuje horizontální formátovací pily speciálně vyvinuté pro řezání dřevěných materiálů. Od kompaktní kappa automatic 80 jako vstupního modelu … |
-| `kappa.sections[0].heading` | Technologie formátovacích pil kappa |
-| `kappa.sections[0].body` | Všechny modely kappa sdílejí stejnou základní technologii: těžká ocelová konstrukce, nový pilový vozík se směrem řezu proti dorazu, dvojitý měřicí systém pro ma … |
-| `kappa.sections[1].heading` | Srovnání modelů: kappa 80 až kappa 140 |
-| `kappa.sections[1].body` | kappa automatic 80 nabízí 80 mm výšku řezu a 3 200 mm délku řezu jako vstupní model. kappa automatic 100 rozšiřuje na 100 mm s modulárním optimalizátorem řezů.  … |
-| `kappa.sections[2].heading` | Software a digitalizace |
-| `kappa.sections[2].body` | Řada kappa podporuje software Ardis pro optimalizaci řezů, který automaticky vypočítává nejefektivnější řezné plány, minimalizuje odpad a umožňuje bezešvé digit … |
-| `kappa.faq[0].question` | Která formátovací pila Mayer kappa je pro mě ta pravá? |
-| `kappa.faq[0].answer` | Volba závisí na vaší požadované výšce řezu, délce řezu a objemu výroby. kappa 80 se hodí pro vstup, kappa 100 a 120 pro střední požadavky a kappa 140 pro průmys … |
-| `kappa.faq[1].question` | Mohu si kappa formátovací pilu koupit u Asamer? |
-| `kappa.faq[1].answer` | Ano, Asamer je autorizovaný prodejce Mayer pro Českou republiku, Slovensko a Maďarsko. Nabízíme kompletní řadu kappa s poradenstvím, dodáním, uvedením do provoz … |
-| `kappa.faq[2].question` | Jaké dřevěné materiály může řada kappa zpracovávat? |
-| `kappa.faq[2].answer` | Řada kappa zpracovává dřevotřísky, MDF, HDF, překližky, multiplex, stolařské desky, masivní dřevo a další dřevěné materiály. |
-| `advanced.introExpanded` | Mayer Advanced Line je řada horizontálních formátovacích pil speciálně vyvinutých pro zpracování hliníku, neželezných kovů, plastů a kompozitů. Řada sahá od osv … |
-| `advanced.sections[0].heading` | Pro jaké materiály je Advanced Line vhodná? |
-| `advanced.sections[0].body` | Advanced Line zpracovává hliník ve všech slitinách a formách (plný materiál, kompozitní desky, profily), neželezné kovy jako mosaz a měď a všechny běžné plasty  … |
-| `advanced.sections[1].heading` | Přehled modelů Advanced Line |
-| `advanced.sections[1].body` | advanced line 100 (18/24 kW, 100 mm) je klasika. advanced line 130 (24 kW, 130 mm) nabízí integrované odsávání a Dual Servo Drive. advanced line 160 (35 kW, 160 … |
-| `advanced.sections[2].heading` | Dual Servo Drive a precizní technologie |
-| `advanced.sections[2].body` | Systém Dual Servo Drive je srdcem Advanced Line a používá dva nezávislé servomotory pro absolutní přesnost polohování. Programovatelné korekční křivky umožňují  … |
-| `advanced.faq[0].question` | Která Advanced Line je vhodná pro hliníkové kompozitní desky? |
-| `advanced.faq[0].answer` | Pro hliníkové kompozitní desky jsou vhodné všechny modely Advanced Line. advanced line 100 je ideální jako vstup, zatímco 130 a 160 s integrovaným odsáváním a v … |
-| `advanced.faq[1].question` | Jaký je rozdíl mezi kappa a Advanced Line? |
-| `advanced.faq[1].answer` | Řada kappa je optimalizována pro dřevěné materiály a nabízí vysoké rychlosti posuvu do 100 m/min. Advanced Line je navržena pro hliník, neželezné kovy a plasty  … |
-| `advanced.faq[2].question` | Nabízí Asamer servis pro Advanced Line? |
-| `advanced.faq[2].answer` | Ano, Asamer je autorizovaný prodejce Mayer a nabízí pro celou řadu Advanced Line poradenství, projektové plánování, dodání, uvedení do provozu, školení a poprod … |
-| `industrial.introExpanded` | Průmyslová řešení Mayer jdou nad rámec jednotlivých formátovacích pil a zahrnují zakázkové úhlové řezací systémy pro plně automatizované výrobní linky. Tyto sys … |
-| `industrial.sections[0].heading` | Co jsou úhlové řezací systémy Mayer? |
-| `industrial.sections[0].body` | Úhlové řezací systémy Mayer jsou plně automatizované řezací instalace, které kombinují podélné a příčné řezy v integrovaném systému. Desky jsou automaticky přiv … |
-| `industrial.sections[1].heading` | Výhody automatizace |
-| `industrial.sections[1].body` | Plná automatizace úhlového řezacího systému dramaticky zvyšuje průchodnost, snižuje potřebu personálu na minimum, eliminuje chyby obsluhy a snižuje odpad materi … |
-| `industrial.sections[2].heading` | Průmysl 4.0 a digitalizace |
-| `industrial.sections[2].body` | Úhlové řezací systémy Mayer jsou připraveny pro koncepty Průmyslu 4.0. Bezešvá integrace do ERP, digitální zpracování zakázek a automatická optimalizace řezů tv … |
-| `industrial.faq[0].question` | Jak dlouho trvá plánování a instalace úhlového řezacího systému? |
-| `industrial.faq[0].answer` | Časový rámec projektu závisí na složitosti instalace. Typicky plánování trvá 2 až 4 měsíce a instalace 2 až 6 týdnů. Asamer provází celým procesem od analýzy po … |
-| `industrial.faq[1].question` | Jaká odvětví používají úhlové řezací systémy Mayer? |
-| `industrial.faq[1].answer` | Úhlové řezací systémy Mayer se používají v nábytkářském průmyslu, stavbě fasád, zpracování hliníku a plastů, dopravním průmyslu a automobilovém průmyslu. |
-| `industrial.faq[2].question` | Může Asamer naplánovat úhlový řezací systém přímo na místě? |
-| `industrial.faq[2].answer` | Ano, Asamer nabízí konzultace a analýzu potřeb přímo na místě. Zaměříme váš výrobní prostor, analyzujeme materiálový tok a vypracujeme koncept úhlového řezacího … |
+| `[0].items[0].question` | Which edgebander for beginners? |
+| `[0].items[0].answer` | For beginners we recommend the OTT Pacific+. It offers 18 m/min feed speed including corner processing in just 5.7 m length. The machine handles edge thicknesse … |
+| `[0].items[1].question` | When does warehouse automation pay off? |
+| `[0].items[1].answer` | Warehouse automation pays off from a daily panel throughput of approx. 50 panels, or when search times and picking errors slow down productivity. BARBARIC syste … |
+| `[0].items[2].question` | Which edges can an OTT edgebander process? |
+| `[0].items[2].answer` | OTT edgebanders handle edges from 0.3 to 25 mm — ABS, PVC, melamine, paper edges, solid wood, aluminium. Maximum thickness depends on the model: Pacific+ and To … |
+| `[0].items[3].question` | What is the difference between PUR and EVA glue technology? |
+| `[0].items[3].answer` | EVA (ethylene vinyl acetate) is a thermoplastic hot-melt adhesive that cures quickly and is easy to process. PUR (polyurethane reactive adhesive) reacts with mo … |
+| `[0].items[4].question` | What does Zero-Gap mean? What is bluEdge HyFuse? |
+| `[0].items[4].answer` | Zero-Gap refers to edge bonding where the glue line is visually invisible – the edge and panel material merge seamlessly. bluEdge featuring HyFuse is OTT's prop … |
+| `[1].items[0].question` | What is OPC-UA and why is it important for ERP integration? |
+| `[1].items[0].answer` | OPC-UA (Open Platform Communications – Unified Architecture) is an open industrial standard for secure data exchange between machines and IT systems. All OTT ma … |
+| `[1].items[1].question` | Do I need a return system for the edgebander? |
+| `[1].items[1].answer` | A return system saves a second operator and lifts productivity significantly. For Pacific+ and Tornado+ we recommend TRANScompact; for Storm+ and StrongEdge, TR … |
+| `[1].items[2].question` | Can Asamer help with software integration of my new machine? |
+| `[1].items[2].answer` | Yes, our software team connects your machine via the open OPC-UA interface directly to your ERP or MES system. Integration includes real-time production data, a … |
+| `[2].items[0].question` | How quickly does a technician arrive during machine failure? |
+| `[2].items[0].answer` | In an emergency our service team prioritizes your incident immediately. Typically we start a phone or remote diagnosis within 2–4 hours. If an on-site visit is  … |
+| `[2].items[1].question` | Which machines does Asamer service? |
+| `[2].items[1].answer` | We service all machines from our current portfolio: OTT edgebanding machines, Mayer panel saws, BARBARIC handling and storage systems, and Gannomat drilling and … |
+| `[2].items[2].question` | How long does an edgebander last? |
+| `[2].items[2].answer` | With proper preventive maintenance OTT edgebanders last 15–25 years. Key drivers: glue quality, regular cleaning of the glue system, replacing worn tooling (cut … |
+| `[2].items[3].question` | How long does an edgebander installation take? |
+| `[2].items[3].answer` | A standard OTT edgebander installation takes 2–5 working days, including commissioning and operator training. Industrial models with ERP integration and multipl … |
+| `[3].items[0].question` | How much does an edgebander cost? |
+| `[3].items[0].answer` | The price of an edgebander depends on the model, configuration and equipment. Entry models (Pacific+) start in the low six-figure EUR range, professional models … |
+| `[3].items[1].question` | What funding programs exist in 2026 for woodworking machines in CZ? |
+| `[3].items[1].answer` | In the Czech Republic several programs are available in 2026: OP TAK – Digitální podnik supports 25–45% (max. CZK 45M) with ERP/MES integration of machines. OP  … |
+| `[3].items[2].question` | How does leasing through Raiffeisen work for machines? |
+| `[3].items[2].answer` | Raiffeisen Leasing finances new and used machines with terms of 36–72 months. You choose between finance leasing (ownership after final installment) and operati … |
+| `[4].items[0].question` | What to look for when buying used edgebanders? |
+| `[4].items[0].answer` | Check the condition of the glue unit, milling aggregates and feed chain – these are the critical wear parts. Ask for the machine passport with maintenance histo … |
+| `[4].items[1].question` | Does Asamer offer warranty on used machines? |
+| `[4].items[1].answer` | Yes, every used machine from Asamer is technically inspected and refurbished if needed before sale. Depending on condition and scope of refurbishment we provide … |
+| `[4].items[2].question` | Does Asamer deliver to Hungary and Slovakia? |
+| `[4].items[2].answer` | Yes, Asamer delivers across the entire CZ, SK and HU region. We are the exclusive distribution partner for OTT edgebanding machines. Mayer, BARBARIC and Gannoma … |
