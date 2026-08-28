@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, CalendarDays } from 'lucide-react';
 import { useLanguage } from '../../App';
 import { translatePageText } from '../../i18n/pageTextTranslations';
 import { buildMailto } from '../../lib/email';
@@ -69,42 +69,47 @@ const HeroSlideshow = () => {
     de: {
       eyebrow: 'Asamer · Innovationstage 2026 bei OTT Paul',
       headline: 'Willkommen zu unseren Innovationstagen.',
-      body: 'Wir laden Sie herzlich zu den Innovationstagen 2026 bei OTT Paul ein. Erleben Sie Holz, Technik und Zukunft live vor Ort – melden Sie sich hier bei uns an.',
+      date: '30.09. – 01.11.2026',
+      body: 'Wir laden Sie herzlich zu den Innovationstagen 2026 bei OTT Paul ein. Lernen Sie die gesamte Produktion und den Betrieb der OTT Paul Kantenanleimmaschinen direkt im Werk kennen – Holz, Technik und Zukunft live vor Ort. Melden Sie sich hier bei uns an.',
       cta: 'Jetzt anmelden',
       teaserLabel: 'Einladung',
-      teaser: 'Wir laden Sie zu den Innovationstagen 2026 bei OTT Paul ein',
+      teaser: 'Innovationstage 2026 bei OTT Paul · 30.09. – 01.11.',
     },
     en: {
       eyebrow: 'Asamer · Innovation Days 2026 at OTT Paul',
       headline: 'Welcome to our Innovation Days.',
-      body: 'We warmly invite you to the Innovation Days 2026 at OTT Paul. Experience wood, technology and the future live on site – register with us here.',
+      date: '30 Sep – 1 Nov 2026',
+      body: 'We warmly invite you to the Innovation Days 2026 at OTT Paul. Get to know the entire production and operation of OTT Paul edgebanding machines directly at the factory – wood, technology and the future live on site. Register with us here.',
       cta: 'Register now',
       teaserLabel: 'Invitation',
-      teaser: 'We invite you to the Innovation Days 2026 at OTT Paul',
+      teaser: 'Innovation Days 2026 at OTT Paul · 30 Sep – 1 Nov',
     },
     cz: {
       eyebrow: 'Asamer · Inovační dny 2026 u OTT Paul',
       headline: 'Vítejte na našich Inovačních dnech.',
-      body: 'Srdečně vás zveme na Inovační dny 2026 u OTT Paul. Zažijte dřevo, techniku a budoucnost naživo – přihlaste se u nás zde.',
+      date: '30. 9. – 1. 11. 2026',
+      body: 'Srdečně vás zveme na Inovační dny 2026 u OTT Paul. Poznejte celou výrobu a provoz olepovaček hran OTT Paul přímo v závodě – dřevo, techniku a budoucnost naživo. Přihlaste se u nás zde.',
       cta: 'Přihlásit se',
       teaserLabel: 'Pozvánka',
-      teaser: 'Zveme vás na Inovační dny 2026 u OTT Paul',
+      teaser: 'Inovační dny 2026 u OTT Paul · 30. 9. – 1. 11.',
     },
     sk: {
       eyebrow: 'Asamer · Inovačné dni 2026 u OTT Paul',
       headline: 'Vitajte na našich Inovačných dňoch.',
-      body: 'Srdečne vás pozývame na Inovačné dni 2026 u OTT Paul. Zažite drevo, techniku a budúcnosť naživo – prihláste sa u nás tu.',
+      date: '30. 9. – 1. 11. 2026',
+      body: 'Srdečne vás pozývame na Inovačné dni 2026 u OTT Paul. Spoznajte celú výrobu a prevádzku olepovačiek hrán OTT Paul priamo v závode – drevo, techniku a budúcnosť naživo. Prihláste sa u nás tu.',
       cta: 'Prihlásiť sa',
       teaserLabel: 'Pozvánka',
-      teaser: 'Pozývame vás na Inovačné dni 2026 u OTT Paul',
+      teaser: 'Inovačné dni 2026 u OTT Paul · 30. 9. – 1. 11.',
     },
     hu: {
       eyebrow: 'Asamer · Innovációs Napok 2026 az OTT Paulnál',
       headline: 'Üdvözöljük Innovációs Napjainkon.',
-      body: 'Szeretettel meghívjuk Önt a 2026-os Innovációs Napokra az OTT Paulnál. Tapasztalja meg élőben a fát, a technikát és a jövőt – jelentkezzen nálunk itt.',
+      date: '2026. 09. 30. – 11. 01.',
+      body: 'Szeretettel meghívjuk Önt a 2026-os Innovációs Napokra az OTT Paulnál. Ismerje meg az OTT Paul élzárógépek teljes gyártását és üzemeltetését közvetlenül a gyárban – fa, technika és jövő élőben. Jelentkezzen nálunk itt.',
       cta: 'Jelentkezem',
       teaserLabel: 'Meghívó',
-      teaser: 'Meghívjuk Önt a 2026-os Innovációs Napokra az OTT Paulnál',
+      teaser: 'Innovációs Napok 2026 az OTT Paulnál · 2026. 09. 30. – 11. 01.',
     },
   } as const)[lang];
 
@@ -229,6 +234,10 @@ const HeroSlideshow = () => {
               <h2 className="font-display font-bold text-[clamp(1.75rem,5vw,3.5rem)] leading-[1.08] tracking-[-0.02em] text-white mb-4 sm:mb-5">
                 {ev.headline}
               </h2>
+              <p className="inline-flex items-center gap-2.5 rounded-full border border-[#EFD500]/40 bg-[#EFD500]/10 px-4 py-1.5 text-sm sm:text-base font-semibold tracking-wide text-[#EFD500] mb-4 sm:mb-5">
+                <CalendarDays className="w-4 h-4 shrink-0" aria-hidden="true" />
+                {ev.date}
+              </p>
               <p className="text-base sm:text-lg text-white/70 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
                 {ev.body}
               </p>
