@@ -62,10 +62,10 @@ export const EDGEBANDER_GUIDE: EdgebanderGuideContent = {
         en: '2. Which materials and edges will you process?',
       },
       body: {
-        cz: 'Druhé kritérium jsou materiály: dřevotříska, MDF, masivní dřevo, plast, hliník. Pro standardní ABS a PVC hrany do 3 mm v suchém prostředí stačí EVA lepidlo. Pro vodotěsné spoje (kuchyně, koupelny, venkovní použití) a hrany nad 3 mm je doporučené PUR nebo bluEdge laser. Tloušťka zpracovávaných hran (od 0,3 do 25 mm) určuje vhodný model.',
-        sk: 'Druhým kritériom sú materiály: drevotrieska, MDF, masívne drevo, plast, hliník. Pre štandardné ABS a PVC hrany do 3 mm v suchom prostredí postačuje EVA lepidlo. Pre vodotesné spoje (kuchyne, kúpeľne, vonkajšie použitie) a hrany nad 3 mm je odporúčané PUR alebo bluEdge laser. Hrúbka spracovávaných hrán (od 0,3 do 25 mm) určuje vhodný model.',
-        de: 'Das zweite Kriterium sind die Materialien: Spanplatte, MDF, Massivholz, Kunststoff, Aluminium. Für Standard-ABS- und -PVC-Kanten bis 3 mm im trockenen Umfeld reicht EVA-Klebstoff. Für wasserdichte Verbindungen (Küche, Bad, Außeneinsatz) und Kanten über 3 mm ist PUR oder bluEdge-Laser empfohlen. Die Kantenstärke (0,3 bis 25 mm) bestimmt das passende Modell.',
-        en: 'The second criterion is materials: chipboard, MDF, solid wood, plastic, aluminium. For standard ABS and PVC edges up to 3 mm in dry environments, EVA glue is sufficient. For waterproof joints (kitchens, bathrooms, outdoor use) and edges above 3 mm, PUR or bluEdge laser is recommended. Edge thickness (0.3 to 25 mm) determines the right model.',
+        cz: 'Druhé kritérium jsou materiály: dřevotříska, MDF, masivní dřevo, plast, hliník. Pro standardní ABS a PVC hrany do 3 mm v suchém prostředí stačí EVA lepidlo. Pro vodotěsné spoje (kuchyně, koupelny, venkovní použití) a hrany nad 3 mm je doporučené PUR nebo bluEdge featuring HyFuse. Tloušťka zpracovávaných hran (od 0,3 do 25 mm) určuje vhodný model.',
+        sk: 'Druhým kritériom sú materiály: drevotrieska, MDF, masívne drevo, plast, hliník. Pre štandardné ABS a PVC hrany do 3 mm v suchom prostredí postačuje EVA lepidlo. Pre vodotesné spoje (kuchyne, kúpeľne, vonkajšie použitie) a hrany nad 3 mm je odporúčané PUR alebo bluEdge featuring HyFuse. Hrúbka spracovávaných hrán (od 0,3 do 25 mm) určuje vhodný model.',
+        de: 'Das zweite Kriterium sind die Materialien: Spanplatte, MDF, Massivholz, Kunststoff, Aluminium. Für Standard-ABS- und -PVC-Kanten bis 3 mm im trockenen Umfeld reicht EVA-Klebstoff. Für wasserdichte Verbindungen (Küche, Bad, Außeneinsatz) und Kanten über 3 mm ist PUR oder bluEdge featuring HyFuse empfohlen. Die Kantenstärke (0,3 bis 25 mm) bestimmt das passende Modell.',
+        en: 'The second criterion is materials: chipboard, MDF, solid wood, plastic, aluminium. For standard ABS and PVC edges up to 3 mm in dry environments, EVA glue is sufficient. For waterproof joints (kitchens, bathrooms, outdoor use) and edges above 3 mm, PUR or bluEdge featuring HyFuse is recommended. Edge thickness (0.3 to 25 mm) determines the right model.',
       },
     },
     {
@@ -106,10 +106,10 @@ export const EDGEBANDER_GUIDE: EdgebanderGuideContent = {
       en: 'Used vs new edgebander',
     },
     body: {
-      cz: 'Použitá olepovačka hran je výhodnou volbou, pokud kombinuje úspory s kvalitou. Použité stroje OTT z renomovaných zdrojů s kompletním servisním záznamem, technickou kontrolou a zárukou nabízí 30–60 % úsporu oproti nové ceně. Nevýhody: omezený výběr modelů a vybavení, případná potřeba modernizace ovládání nebo lepicího systému. Nový stroj má smysl, pokud potřebujete konkrétní konfiguraci, nejnovější technologie (bluEdge laser, OPC-UA) nebo dlouhou plnou záruku. Asamer nabízí ověřené použité stroje OTT i nové instalace s instalací a školením v ČR, SR a Maďarsku.',
-      sk: 'Použitá olepovačka hrán je výhodnou voľbou, ak kombinuje úspory s kvalitou. Použité stroje OTT z renomovaných zdrojov s kompletným servisným záznamom, technickou kontrolou a zárukou ponúkajú 30–60 % úsporu oproti novej cene. Nevýhody: obmedzený výber modelov a vybavenia, prípadná potreba modernizácie ovládania alebo lepiaceho systému. Nový stroj má zmysel, ak potrebujete konkrétnu konfiguráciu, najnovšie technológie (bluEdge laser, OPC-UA) alebo dlhú plnú záruku. Asamer ponúka overené použité stroje OTT aj nové inštalácie s montážou a školením v SR, ČR a Maďarsku.',
-      de: 'Eine gebrauchte Kantenanleimmaschine ist eine gute Wahl, wenn sie Einsparung und Qualität verbindet. Geprüfte OTT-Gebrauchtmaschinen aus seriöser Quelle mit vollständigem Service-Nachweis, technischer Abnahme und Garantie bringen 30–60 % Einsparung gegenüber dem Neupreis. Nachteile: begrenzte Modell- und Ausstattungsauswahl, eventuell Bedarf an Steuerungs- oder Klebstoff-System-Modernisierung. Eine Neumaschine ist sinnvoll, wenn Sie eine bestimmte Konfiguration, neueste Technologien (bluEdge-Laser, OPC-UA) oder volle Garantie benötigen. Asamer bietet geprüfte OTT-Gebrauchtmaschinen ebenso wie Neuinstallationen inklusive Aufstellung und Schulung in CZ, SK und HU.',
-      en: 'A used edgebander is a smart choice when it combines savings with quality. Vetted OTT used machines from a reputable source — with complete service history, technical inspection and warranty — typically save 30–60 % over new. Trade-offs: limited model and equipment choice, sometimes a need to modernise the controls or glue system. A new machine makes sense when you need a specific configuration, the latest technology (bluEdge laser, OPC-UA) or a full warranty. Asamer offers vetted used OTT machines as well as new installations with on-site setup and training in CZ, SK and HU.',
+      cz: 'Použitá olepovačka hran je výhodnou volbou, pokud kombinuje úspory s kvalitou. Použité stroje OTT z renomovaných zdrojů s kompletním servisním záznamem, technickou kontrolou a zárukou nabízí 30–60 % úsporu oproti nové ceně. Nevýhody: omezený výběr modelů a vybavení, případná potřeba modernizace ovládání nebo lepicího systému. Nový stroj má smysl, pokud potřebujete konkrétní konfiguraci, nejnovější technologie (bluEdge featuring HyFuse, OPC-UA) nebo dlouhou plnou záruku. Asamer nabízí ověřené použité stroje OTT i nové instalace s instalací a školením v ČR, SR a Maďarsku.',
+      sk: 'Použitá olepovačka hrán je výhodnou voľbou, ak kombinuje úspory s kvalitou. Použité stroje OTT z renomovaných zdrojov s kompletným servisným záznamom, technickou kontrolou a zárukou ponúkajú 30–60 % úsporu oproti novej cene. Nevýhody: obmedzený výber modelov a vybavenia, prípadná potreba modernizácie ovládania alebo lepiaceho systému. Nový stroj má zmysel, ak potrebujete konkrétnu konfiguráciu, najnovšie technológie (bluEdge featuring HyFuse, OPC-UA) alebo dlhú plnú záruku. Asamer ponúka overené použité stroje OTT aj nové inštalácie s montážou a školením v SR, ČR a Maďarsku.',
+      de: 'Eine gebrauchte Kantenanleimmaschine ist eine gute Wahl, wenn sie Einsparung und Qualität verbindet. Geprüfte OTT-Gebrauchtmaschinen aus seriöser Quelle mit vollständigem Service-Nachweis, technischer Abnahme und Garantie bringen 30–60 % Einsparung gegenüber dem Neupreis. Nachteile: begrenzte Modell- und Ausstattungsauswahl, eventuell Bedarf an Steuerungs- oder Klebstoff-System-Modernisierung. Eine Neumaschine ist sinnvoll, wenn Sie eine bestimmte Konfiguration, neueste Technologien (bluEdge featuring HyFuse, OPC-UA) oder volle Garantie benötigen. Asamer bietet geprüfte OTT-Gebrauchtmaschinen ebenso wie Neuinstallationen inklusive Aufstellung und Schulung in CZ, SK und HU.',
+      en: 'A used edgebander is a smart choice when it combines savings with quality. Vetted OTT used machines from a reputable source — with complete service history, technical inspection and warranty — typically save 30–60 % over new. Trade-offs: limited model and equipment choice, sometimes a need to modernise the controls or glue system. A new machine makes sense when you need a specific configuration, the latest technology (bluEdge featuring HyFuse, OPC-UA) or a full warranty. Asamer offers vetted used OTT machines as well as new installations with on-site setup and training in CZ, SK and HU.',
     },
   },
 
@@ -230,16 +230,16 @@ export const EDGEBANDER_GUIDE: EdgebanderGuideContent = {
     },
     {
       question: {
-        cz: 'Co je technologie bluEdge HyFuse a kdy ji potřebuji?',
-        sk: 'Čo je technológia bluEdge HyFuse a kedy ju potrebujem?',
-        de: 'Was ist bluEdge HyFuse und wann brauche ich es?',
-        en: 'What is bluEdge HyFuse and when do I need it?',
+        cz: 'Co je technologie bluEdge featuring HyFuse a kdy ji potřebuji?',
+        sk: 'Čo je technológia bluEdge featuring HyFuse a kedy ju potrebujem?',
+        de: 'Was ist bluEdge featuring HyFuse und wann brauche ich es?',
+        en: 'What is bluEdge featuring HyFuse and when do I need it?',
       },
       answer: {
-        cz: 'bluEdge HyFuse je laserová technologie nulové spáry: funkční vrstva hrany se aktivuje laserem a tepelně se spojí s deskou bez lepidla. Výsledek je zcela neviditelný spoj odolný proti vodě a teplotě. Volba pro: high-end nábytek, kuchyně, koupelny, exkluzivní zakázky. Vyžaduje speciální laser-reaktivní hrany od dodavatelů Rehau, Doellken nebo Ostermann.',
-        sk: 'bluEdge HyFuse je laserová technológia nulovej špáry: funkčná vrstva hrany sa aktivuje laserom a tepelne sa spojí s doskou bez lepidla. Výsledkom je úplne neviditeľný spoj odolný proti vode a teplote. Voľba pre: high-end nábytok, kuchyne, kúpeľne, exkluzívne zákazky. Vyžaduje špeciálne laser-reaktívne hrany od dodávateľov Rehau, Doellken alebo Ostermann.',
-        de: 'bluEdge HyFuse ist eine Null-Spalt-Lasertechnologie: Die Funktionsschicht der Kante wird per Laser aktiviert und thermisch ohne Klebstoff mit der Platte verbunden. Ergebnis ist eine vollständig unsichtbare Fuge, wasser- und temperaturbeständig. Sinnvoll für High-End-Möbel, Küche, Bad und Premium-Aufträge. Voraussetzung sind laserreaktive Kanten von Rehau, Doellken oder Ostermann.',
-        en: 'bluEdge HyFuse is a zero-gap laser technology: the edge\'s functional layer is activated by laser and thermally bonded to the panel without glue. The result is a completely invisible joint, waterproof and heat-resistant. Right for high-end furniture, kitchens, bathrooms and premium orders. Requires laser-reactive edges from Rehau, Doellken or Ostermann.',
+        cz: 'bluEdge featuring HyFuse je technologie nulové spáry: funkční vrstva hrany se aktivuje vodíko-kyslíkovým plamenem a tepelně se spojí s deskou bez lepidla. Výsledek je zcela neviditelný spoj odolný proti vodě a teplotě. Volba pro: high-end nábytek, kuchyně, koupelny, exkluzivní zakázky. Vyžaduje speciální hrany s funkční vrstvou od dodavatelů Rehau, Doellken nebo Ostermann.',
+        sk: 'bluEdge featuring HyFuse je technológia nulovej škáry: funkčná vrstva hrany sa aktivuje vodíko-kyslíkovým plameňom a tepelne sa spojí s doskou bez lepidla. Výsledkom je úplne neviditeľný spoj odolný proti vode a teplote. Voľba pre: high-end nábytok, kuchyne, kúpeľne, exkluzívne zákazky. Vyžaduje špeciálne hrany s funkčnou vrstvou od dodávateľov Rehau, Doellken alebo Ostermann.',
+        de: 'bluEdge featuring HyFuse ist eine Nullfugentechnologie: Die Funktionsschicht der Kante wird von einer Wasserstoff-Sauerstoff-Flamme aktiviert und thermisch ohne Klebstoff mit der Platte verbunden. Ergebnis ist eine vollständig unsichtbare Fuge, wasser- und temperaturbeständig. Sinnvoll für High-End-Möbel, Küche, Bad und Premium-Aufträge. Voraussetzung sind Kanten mit Funktionsschicht von Rehau, Doellken oder Ostermann.',
+        en: 'bluEdge featuring HyFuse is a zero glue line technology: the edge\'s functional layer is activated by a hydrogen-oxygen flame and thermally bonded to the panel without glue. The result is a completely invisible joint, waterproof and heat-resistant. Right for high-end furniture, kitchens, bathrooms and premium orders. Requires edges with a functional layer from Rehau, Doellken or Ostermann.',
       },
     },
     {
@@ -337,10 +337,10 @@ export const EDGEBANDER_GUIDE: EdgebanderGuideContent = {
         en: 'Assess materials and edge types',
       },
       text: {
-        cz: 'Určete tloušťku hran (0,3–25 mm) a typ materiálu (ABS, PVC, masivní dřevo). Pro vlhká prostředí volte PUR nebo bluEdge laser.',
-        sk: 'Určte hrúbku hrán (0,3–25 mm) a typ materiálu (ABS, PVC, masívne drevo). Pre vlhké prostredia voľte PUR alebo bluEdge laser.',
-        de: 'Bestimmen Sie Kantenstärke (0,3–25 mm) und Material (ABS, PVC, Massivholz). Für feuchte Umgebungen PUR oder bluEdge-Laser.',
-        en: 'Identify edge thickness (0.3–25 mm) and material (ABS, PVC, solid wood). For wet environments choose PUR or bluEdge laser.',
+        cz: 'Určete tloušťku hran (0,3–25 mm) a typ materiálu (ABS, PVC, masivní dřevo). Pro vlhká prostředí volte PUR nebo bluEdge featuring HyFuse.',
+        sk: 'Určte hrúbku hrán (0,3–25 mm) a typ materiálu (ABS, PVC, masívne drevo). Pre vlhké prostredia voľte PUR alebo bluEdge featuring HyFuse.',
+        de: 'Bestimmen Sie Kantenstärke (0,3–25 mm) und Material (ABS, PVC, Massivholz). Für feuchte Umgebungen PUR oder bluEdge featuring HyFuse.',
+        en: 'Identify edge thickness (0.3–25 mm) and material (ABS, PVC, solid wood). For wet environments choose PUR or bluEdge featuring HyFuse.',
       },
     },
     {

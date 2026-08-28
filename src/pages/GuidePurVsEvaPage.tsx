@@ -50,14 +50,14 @@ const GuidePurVsEvaPage = () => {
     },
     {
       question: tr(
-        'Welche Kanten eignen sich für Laser?',
-        'Which edges are suitable for laser?',
-        'Které hrany jsou vhodné pro laser?'
+        'Welche Kanten eignen sich für bluEdge HyFuse?',
+        'Which edges are suitable for bluEdge HyFuse?',
+        'Které hrany jsou vhodné pro bluEdge HyFuse?'
       ),
       answer: tr(
-        'Für bluEdge HyFuse werden speziell beschichtete Kanten mit einer Funktionsschicht benötigt, die durch den Diodenlaser aktiviert wird. Diese Kanten sind von allen großen Kantenherstellern (Rehau, Döllken, Ostermann u. a.) erhältlich. Standardkanten ohne Funktionsschicht können nicht mit Laser verarbeitet werden.',
-        'For bluEdge HyFuse, specially coated edges with a functional layer are required, which is activated by the diode laser. These edges are available from all major edge manufacturers (Rehau, Döllken, Ostermann, etc.). Standard edges without a functional layer cannot be processed with laser.',
-        'Pro bluEdge HyFuse jsou potřeba speciálně potažené hrany s funkční vrstvou, kterou aktivuje diodový laser. Tyto hrany jsou dostupné od všech velkých výrobců hran (Rehau, Döllken, Ostermann aj.). Standardní hrany bez funkční vrstvy nelze laserem zpracovat.'
+        'Für bluEdge HyFuse werden speziell beschichtete Kanten mit einer Funktionsschicht benötigt, die von der Wasserstoff-Sauerstoff-Flamme aktiviert wird. Diese Kanten sind von allen großen Kantenherstellern (Rehau, Döllken, Ostermann u. a.) erhältlich. Standardkanten ohne Funktionsschicht können nicht mit bluEdge HyFuse verarbeitet werden.',
+        'For bluEdge HyFuse, specially coated edges with a functional layer are required, which is activated by the hydrogen-oxygen flame. These edges are available from all major edge manufacturers (Rehau, Döllken, Ostermann, etc.). Standard edges without a functional layer cannot be processed with bluEdge HyFuse.',
+        'Pro bluEdge HyFuse jsou potřeba speciálně potažené hrany s funkční vrstvou, kterou aktivuje vodíko-kyslíkový plamen. Tyto hrany jsou dostupné od všech velkých výrobců hran (Rehau, Döllken, Ostermann aj.). Standardní hrany bez funkční vrstvy nelze technologií bluEdge HyFuse zpracovat.'
       ),
     },
     {
@@ -175,9 +175,9 @@ const GuidePurVsEvaPage = () => {
     {
       size: tr('Industrieller Dauerbetrieb', 'Industrial continuous operation', 'Průmyslový nepřetržitý provoz'),
       rec: tr(
-        'PUR + Laser → StrongEdge oder TopEdge',
-        'PUR + Laser → StrongEdge or TopEdge',
-        'PUR + Laser → StrongEdge nebo TopEdge'
+        'PUR + bluEdge HyFuse → StrongEdge oder TopEdge',
+        'PUR + bluEdge HyFuse → StrongEdge or TopEdge',
+        'PUR + bluEdge HyFuse → StrongEdge nebo TopEdge'
       ),
       color: 'border-orange-500/20 bg-orange-500/5',
       dot: 'bg-orange-400',
@@ -367,17 +367,17 @@ const GuidePurVsEvaPage = () => {
             <div className="max-w-5xl">
               <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-4">
                 {tr(
-                  'bluEdge HyFuse – Lasertechnologie',
-                  'bluEdge HyFuse – Laser Technology',
-                  'bluEdge HyFuse – Laserová technologie'
+                  'bluEdge HyFuse – Nullfugentechnologie',
+                  'bluEdge HyFuse – Zero Glue Line Technology',
+                  'bluEdge HyFuse – Technologie nulové spáry'
                 )}
               </h2>
               <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6">
                 <p className="text-white/80 text-sm leading-relaxed">
                   {tr(
-                    'bluEdge HyFuse ist die OTT-eigene Lasertechnologie für fugenlose Kantenverklebung (Zero-Gap). Ein Diodenlaser aktiviert die Funktionsschicht an der Kante, die ohne separaten Klebstoff mit dem Werkstück verschmilzt. Das Ergebnis sind optisch perfekte, wasserdichte Kanten ohne sichtbare Leimfuge.',
-                    'bluEdge HyFuse is OTT\'s proprietary laser technology for seamless edge bonding (Zero-Gap). A diode laser activates the functional layer on the edge, which fuses with the workpiece without separate adhesive. The result is visually perfect, waterproof edges without a visible glue line.',
-                    'bluEdge HyFuse je vlastní laserová technologie OTT pro bezešvé olepení hran (Zero-Gap). Diodový laser aktivuje funkční vrstvu na hraně, která splyne s obrobkem bez samostatného lepidla. Výsledkem jsou opticky dokonalé, vodotěsné hrany bez viditelné lepené spáry.'
+                    'bluEdge featuring HyFuse ist die OTT-eigene Nullfugentechnologie für fugenlose Kantenverklebung (Zero-Gap). Eine Wasserstoff-Sauerstoff-Flamme aktiviert die Funktionsschicht an der Kante, die ohne separaten Klebstoff mit dem Werkstück verschmilzt. Das Ergebnis sind optisch perfekte, wasserdichte Kanten ohne sichtbare Leimfuge.',
+                    'bluEdge featuring HyFuse is OTT\'s proprietary zero glue line technology for seamless edge bonding (Zero-Gap). A hydrogen-oxygen flame activates the functional layer on the edge, which fuses with the workpiece without separate adhesive. The result is visually perfect, waterproof edges without a visible glue line.',
+                    'bluEdge featuring HyFuse je vlastní technologie nulové spáry od OTT pro bezešvé olepení hran (Zero-Gap). Vodíko-kyslíkový plamen aktivuje funkční vrstvu na hraně, která splyne s obrobkem bez samostatného lepidla. Výsledkem jsou opticky dokonalé, vodotěsné hrany bez viditelné lepené spáry.'
                   )}
                 </p>
               </div>
@@ -565,9 +565,9 @@ const GuidePurVsEvaPage = () => {
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed">
                   {tr(
-                    'Wir beraten Sie bei der Wahl zwischen EVA, PUR und Laser – abgestimmt auf Ihre Produktion und Ihre Anforderungen.',
-                    'We advise you on choosing between EVA, PUR and laser – tailored to your production and requirements.',
-                    'Poradíme vám s výběrem mezi EVA, PUR a laserem – přesně podle vaší výroby a požadavků.'
+                    'Wir beraten Sie bei der Wahl zwischen EVA, PUR und bluEdge HyFuse – abgestimmt auf Ihre Produktion und Ihre Anforderungen.',
+                    'We advise you on choosing between EVA, PUR and bluEdge HyFuse – tailored to your production and requirements.',
+                    'Poradíme vám s výběrem mezi EVA, PUR a bluEdge HyFuse – přesně podle vaší výroby a požadavků.'
                   )}
                 </p>
               </div>

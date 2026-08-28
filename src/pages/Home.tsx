@@ -92,11 +92,11 @@ const Home = () => {
   const solutions: SolutionCard[] = [
     {
       title: tr('Kantenbearbeitung', 'Edgebanding', 'Olepování hran'),
-      subtitle: 'PUR & LASER',
+      subtitle: 'PUR & HyFuse',
       description: tr(
-        'OTT Kantenleimtechnologie. Fugenlose Kantenverbindungen mit PUR-Anleimsystemen und LASER Hydrofuse.',
-        'OTT edgebanding technology. Seamless edge joints with PUR gluing systems and LASER Hydrofuse.',
-        'Technologie olepování hran OTT. Bezešvé spoje hran pomocí systémů PUR a LASER Hydrofuse.'
+        'OTT Kantenleimtechnologie. Fugenlose Kantenverbindungen mit PUR-Anleimsystemen und bluEdge featuring HyFuse.',
+        'OTT edgebanding technology. Seamless edge joints with PUR gluing systems and bluEdge featuring HyFuse.',
+        'Technologie olepování hran OTT. Bezešvé spoje hran pomocí systémů PUR a bluEdge featuring HyFuse.'
       ),
       image: 'https://www.ottpaul.com/fileadmin/_processed_/8/d/csm_entnahme-werkstueck-tornado_2ecb9d3d9c.jpg',
       link: '/ott',

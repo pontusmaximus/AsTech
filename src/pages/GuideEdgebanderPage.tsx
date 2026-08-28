@@ -236,9 +236,9 @@ const GuideEdgebanderPage = () => {
                 </p>
                 <p className="text-white/70 text-sm leading-relaxed">
                   {tr(
-                    'Die FlexEdge ist die neueste OTT-Maschine und schließt die Lücke zwischen Tornado+ und Storm+. Mit 7,1 m Baulänge, 12–20 m/min Vorschub und Beckhoff 18,5″-Steuerung bietet sie OPC-UA-Konnektivität für ERP-Integration. Die Storm+ bietet zusätzlich die Option auf bluEdge HyFuse Lasertechnologie für Zero-Gap-Kanten.',
-                    'The FlexEdge is OTT\'s newest machine, bridging the gap between Tornado+ and Storm+. At 7.1 m length, 12–20 m/min feed and Beckhoff 18.5″ control it offers OPC-UA connectivity for ERP integration. The Storm+ additionally provides the option for bluEdge HyFuse laser technology for zero-gap edges.',
-                    'FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 12–20 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost laserové technologie bluEdge HyFuse pro hrany s nulovými spárami.'
+                    'Die FlexEdge ist die neueste OTT-Maschine und schließt die Lücke zwischen Tornado+ und Storm+. Mit 7,1 m Baulänge, 12–20 m/min Vorschub und Beckhoff 18,5″-Steuerung bietet sie OPC-UA-Konnektivität für ERP-Integration. Die Storm+ bietet zusätzlich die Option auf die Nullfugentechnologie bluEdge featuring HyFuse für Zero-Gap-Kanten.',
+                    'The FlexEdge is OTT\'s newest machine, bridging the gap between Tornado+ and Storm+. At 7.1 m length, 12–20 m/min feed and Beckhoff 18.5″ control it offers OPC-UA connectivity for ERP integration. The Storm+ additionally provides the option for the bluEdge featuring HyFuse zero glue line technology for zero-gap edges.',
+                    'FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 12–20 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost technologie nulové spáry bluEdge featuring HyFuse pro hrany s nulovými spárami.'
                   )}
                 </p>
               </div>
@@ -268,9 +268,9 @@ const GuideEdgebanderPage = () => {
               </h2>
               <p className="text-white/70 text-sm leading-relaxed mb-4">
                 {tr(
-                  'Industriebetriebe mit Mehrschichtbetrieb verarbeiten 300+ Werkstücke pro Schicht. Hier zählen Zuverlässigkeit, Durchsatz und höchste Kantenqualität. PUR und Laser sind Standard, automatische Kantenwechsel und Anbindung an übergeordnete Systeme sind Pflicht.',
-                  'Industrial operations running multiple shifts process 300+ workpieces per shift. Reliability, throughput and top edge quality are what count. PUR and laser are standard, automatic edge changes and integration with higher-level systems are mandatory.',
-                  'Průmyslové provozy s vícesměnným provozem zpracovávají 300+ obrobků na směnu. Rozhoduje spolehlivost, průchodnost a nejvyšší kvalita hran. PUR a laser jsou standardem, automatická výměna hran a napojení na nadřazené systémy jsou nutností.'
+                  'Industriebetriebe mit Mehrschichtbetrieb verarbeiten 300+ Werkstücke pro Schicht. Hier zählen Zuverlässigkeit, Durchsatz und höchste Kantenqualität. PUR und Nullfugentechnik sind Standard, automatische Kantenwechsel und Anbindung an übergeordnete Systeme sind Pflicht.',
+                  'Industrial operations running multiple shifts process 300+ workpieces per shift. Reliability, throughput and top edge quality are what count. PUR and zero glue line technology are standard, automatic edge changes and integration with higher-level systems are mandatory.',
+                  'Průmyslové provozy s vícesměnným provozem zpracovávají 300+ obrobků na směnu. Rozhoduje spolehlivost, průchodnost a nejvyšší kvalita hran. PUR a technologie nulové spáry jsou standardem, automatická výměna hran a napojení na nadřazené systémy jsou nutností.'
                 )}
               </p>
               <div className="border-l-2 border-primary/50 pl-5">
@@ -279,9 +279,9 @@ const GuideEdgebanderPage = () => {
                 </p>
                 <p className="text-white/70 text-sm leading-relaxed">
                   {tr(
-                    'Die StrongEdge bietet 7,7 m Baulänge und 16–25 m/min Vorschub – ausgelegt auf industriellen Dauereinsatz. Die TopEdge als Flaggschiff vereint alle verfügbaren Technologien: EVA, PUR, bluEdge HyFuse Laser und vollautomatische Kantenmagazine. Beide Maschinen verfügen über Beckhoff OPC-UA-Steuerung für nahtlose Industry 4.0 Integration.',
-                    'The StrongEdge offers 7.7 m length and 16–25 m/min feed – built for industrial continuous operation. The TopEdge flagship combines all available technologies: EVA, PUR, bluEdge HyFuse laser and fully automatic edge magazines. Both machines feature Beckhoff OPC-UA control for seamless Industry 4.0 integration.',
-                    'StrongEdge nabízí délku 7,7 m a posuv 16–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge HyFuse laser a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.'
+                    'Die StrongEdge bietet 7,7 m Baulänge und 16–25 m/min Vorschub – ausgelegt auf industriellen Dauereinsatz. Die TopEdge als Flaggschiff vereint alle verfügbaren Technologien: EVA, PUR, bluEdge featuring HyFuse und vollautomatische Kantenmagazine. Beide Maschinen verfügen über Beckhoff OPC-UA-Steuerung für nahtlose Industry 4.0 Integration.',
+                    'The StrongEdge offers 7.7 m length and 16–25 m/min feed – built for industrial continuous operation. The TopEdge flagship combines all available technologies: EVA, PUR, bluEdge featuring HyFuse and fully automatic edge magazines. Both machines feature Beckhoff OPC-UA control for seamless Industry 4.0 integration.',
+                    'StrongEdge nabízí délku 7,7 m a posuv 16–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge featuring HyFuse a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.'
                   )}
                 </p>
               </div>
@@ -352,7 +352,7 @@ const GuideEdgebanderPage = () => {
                       {tr('Vorschub', 'Feed', 'Posuv')}
                     </th>
                     <th className="text-center text-white/50 font-medium px-4 py-3">PUR</th>
-                    <th className="text-center text-white/50 font-medium px-4 py-3">Laser</th>
+                    <th className="text-center text-white/50 font-medium px-4 py-3">bluEdge HyFuse</th>
                     <th className="text-right text-white/50 font-medium px-4 py-3">Badge</th>
                   </tr>
                 </thead>
