@@ -78,7 +78,7 @@ const MayerPage = () => {
 
         {/* INTRO / DEFINITION-LEAD */}
         <ManufacturerIntro
-          eyebrow={tr('Österreich · Felder Group · Plattenaufteilsägen', 'Austria · Felder Group · Panel saws', 'Rakousko · Felder Group · Formátovací pily')}
+          eyebrow={tr('Deutschland · Felder Group · Plattenaufteilsägen', 'Germany · Felder Group · Panel saws', 'Německo · Felder Group · Formátovací pily')}
           title={tr('Mayer Plattenaufteilsägen', 'Mayer Panel Saws', 'Mayer formátovací pily')}
           lead={tr(
             'Mayer (Felder Group) baut horizontale Druckbalken-Plattenaufteilsägen für die Holz-, Kunststoff- und Metallverarbeitung. Die Kappa Automatic-Reihe (80–140) ist auf Holz und Plattenwerkstoffe spezialisiert, die Advanced Line (100–250) schneidet Aluminium, NE-Metalle und Kunststoffe. Asamer ist autorisierter Mayer-Händler für CZ, SK und HU mit Service und Ersatzteillager vor Ort.',
@@ -86,7 +86,7 @@ const MayerPage = () => {
             'Mayer (Felder Group) vyrábí horizontální formátovací pily s tlačným trámem pro zpracování dřeva, plastů a kovů. Řada Kappa Automatic (80–140) se specializuje na dřevo a deskové materiály, Advanced Line (100–250) řeže hliník, neželezné kovy a plasty. Asamer je autorizovaný prodejce Mayer pro CZ, SK a HU s lokálním servisem a skladem náhradních dílů.',
           )}
           facts={[
-            { icon: Factory, label: tr('Herkunft', 'Origin', 'Původ'), value: tr('Made in Austria', 'Made in Austria', 'Made in Austria') },
+            { icon: Factory, label: tr('Herkunft', 'Origin', 'Původ'), value: tr('Made in Germany', 'Made in Germany', 'Made in Germany') },
             { icon: Handshake, label: tr('Asamer-Rolle', 'Asamer role', 'Role Asamer'), value: tr('Autorisierter Händler', 'Authorized dealer', 'Autorizovaný prodejce') },
             { icon: MapPin, label: tr('Märkte', 'Markets', 'Trhy'), value: 'CZ · SK · HU' },
             { icon: Wrench, label: tr('Vor Ort', 'On-site', 'Na místě'), value: tr('Service & Ersatzteile', 'Service & spare parts', 'Servis a náhradní díly') },
