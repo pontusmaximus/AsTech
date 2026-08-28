@@ -27,7 +27,7 @@ Widerspruch, der im günstigsten Fall ignoriert und im ungünstigsten als Duplik
 |---|---|---:|---:|---:|
 | A · Datenmodule (`MultiLangText`) | SK | 1314 | 692 | **65.5 %** |
 | A · Datenmodule (`MultiLangText`) | HU | 1891 | 115 | **94.3 %** |
-| B · Seitentexte (`tr()`) | SK | 41 | 682 | **5.7 %** |
+| B · Seitentexte (`tr()`) | SK | 40 | 683 | **5.5 %** |
 | B · Seitentexte (`tr()`) | HU | 731 | 0 | **100.0 %** |
 
 ## Eigener Befund: `tr()`-Aufrufe mit dynamischem Text
@@ -151,8 +151,8 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 33: `Ano, všechny stroje OTT se systémem CombiMelt lze dodatečně přestavět na PUR. Upgrade zahrnuje uzavřený systém zásobování lepidlem s ochranou proti vlhkosti a automatickým čištěním. Přestavbu může provést technik Asamer přímo u zákazníka.`
 - Zeile 40: `Je PUR dražší v provozu?`
 - Zeile 45: `Náklady na materiál jsou přibližně o 20–30 % vyšší než u EVA, ale lepší kvalita hran a nižší reklamační podíl tyto vícenáklady ve většině provozů vyrovnají. Navíc tenčí lepená spára snižuje spotřebu na obrobek. Pro výrobce kuchyňského a koupelnového nábytku je PUR ekonomicky jednoznačně výhodnější.`
-- Zeile 52: `Které hrany jsou vhodné pro laser?`
-- Zeile 57: `Pro bluEdge HyFuse jsou potřeba speciálně potažené hrany s funkční vrstvou, kterou aktivuje diodový laser. Tyto hrany jsou dostupné od všech velkých výrobců hran (Rehau, Döllken, Ostermann aj.). Standardní hrany bez funkční vrstvy nelze laserem zpracovat.`
+- Zeile 52: `Které hrany jsou vhodné pro bluEdge HyFuse?`
+- Zeile 57: `Pro bluEdge HyFuse jsou potřeba speciálně potažené hrany s funkční vrstvou, kterou aktivuje vodíko-kyslíkový plamen. Tyto hrany jsou dostupné od všech velkých výrobců hran (Rehau, Döllken, Ostermann aj.). Standardní hrany bez funkční vrstvy nelze technologií bluEdge HyFuse zpracovat.`
 - Zeile 64: `Musím se při nákupu hned rozhodnout pro PUR?`
 - Zeile 69: `Ne, díky systému CombiMelt můžete začít s EVA a PUR dodat později, aniž byste museli kupovat nový stroj. Tento modulární koncept je dostupný u všech modelů OTT a dlouhodobě chrání vaši investici.`
 - Zeile 80: `Lepená spára`
@@ -183,7 +183,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 157: `EVA s možností dodatečného PUR → Pacific+`
 - Zeile 167: `PUR doporučeno → FlexEdge nebo Storm+`
 - Zeile 176: `Průmyslový nepřetržitý provoz`
-- Zeile 177: `PUR + Laser → StrongEdge nebo TopEdge`
+- Zeile 177: `PUR + bluEdge HyFuse → StrongEdge nebo TopEdge`
 - Zeile 189: `Poptávka technologie lepení`
 - Zeile 203: `PUR vs EVA – Průvodce technologií lepení`
 - Zeile 210: `PUR a EVA jsou dvě nejdůležitější technologie lepení pro průmyslové olepovačky hran. Tento průvodce vysvětluje rozdíly, výhody a nevýhody a pomůže vám vybrat správný systém pro váš provoz.`
@@ -201,14 +201,14 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 331: `Vodotěsný a tepelně odolný do 150 °C`
 - Zeile 341: `Vyžaduje speciální skladování (ochrana proti vlhkosti)`
 - Zeile 351: `Vyšší náklady na materiál, speciální čištění`
-- Zeile 369: `bluEdge HyFuse – Laserová technologie`
-- Zeile 377: `bluEdge HyFuse je vlastní laserová technologie OTT pro bezešvé olepení hran (Zero-Gap). Diodový laser aktivuje funkční vrstvu na hraně, která splyne s obrobkem bez samostatného lepidla. Výsledkem jsou opticky dokonalé, vodotěsné hrany bez viditelné lepené spáry.`
+- Zeile 369: `bluEdge HyFuse – Technologie nulové spáry`
+- Zeile 377: `bluEdge featuring HyFuse je vlastní technologie nulové spáry od OTT pro bezešvé olepení hran (Zero-Gap). Vodíko-kyslíkový plamen aktivuje funkční vrstvu na hraně, která splyne s obrobkem bez samostatného lepidla. Výsledkem jsou opticky dokonalé, vodotěsné hrany bez viditelné lepené spáry.`
 - Zeile 393: `Srovnávací tabulka`
 - Zeile 470: `Které stroje OTT co podporují?`
 - Zeile 491: `Zobrazit olepovačky hran OTT`
 - Zeile 505: `Doporučení dle velikosti provozu`
 - Zeile 560: `Která technologie lepení se hodí pro váš provoz?`
-- Zeile 567: `Poradíme vám s výběrem mezi EVA, PUR a laserem – přesně podle vaší výroby a požadavků.`
+- Zeile 567: `Poradíme vám s výběrem mezi EVA, PUR a bluEdge HyFuse – přesně podle vaší výroby a požadavků.`
 
 ## `src/pages/GuidePanelSawComparisonPage.tsx` (60)
 
@@ -361,12 +361,12 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 220: `Střední provoz (5–20 zaměstnanců)`
 - Zeile 227: `Střední provozy zpracovávají 80–300 obrobků denně a potřebují vyšší rychlosti posuvu a flexibilitu. Požadavky na kvalitu hran rostou – PUR lepení je stále více vyžadováno trhem, zejména u kuchyňského nábytku.`
 - Zeile 235: `Naše doporučení: OTT FlexEdge nebo Storm+`
-- Zeile 238: `FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 12–20 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost laserové technologie bluEdge HyFuse pro hrany s nulovými spárami.`
+- Zeile 238: `FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 12–20 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost technologie nulové spáry bluEdge featuring HyFuse pro hrany s nulovými spárami.`
 - Zeile 250: `Zobrazit FlexEdge a Storm+ na stránce OTT`
 - Zeile 263: `Průmyslový nepřetržitý provoz (20+ zaměstnanců)`
-- Zeile 270: `Průmyslové provozy s vícesměnným provozem zpracovávají 300+ obrobků na směnu. Rozhoduje spolehlivost, průchodnost a nejvyšší kvalita hran. PUR a laser jsou standardem, automatická výměna hran a napojení na nadřazené systémy jsou nutností.`
+- Zeile 270: `Průmyslové provozy s vícesměnným provozem zpracovávají 300+ obrobků na směnu. Rozhoduje spolehlivost, průchodnost a nejvyšší kvalita hran. PUR a technologie nulové spáry jsou standardem, automatická výměna hran a napojení na nadřazené systémy jsou nutností.`
 - Zeile 278: `Naše doporučení: OTT StrongEdge nebo TopEdge`
-- Zeile 281: `StrongEdge nabízí délku 7,7 m a posuv 16–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge HyFuse laser a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.`
+- Zeile 281: `StrongEdge nabízí délku 7,7 m a posuv 16–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge featuring HyFuse a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.`
 - Zeile 293: `Zobrazit StrongEdge a TopEdge na stránce OTT`
 - Zeile 306: `Speciální případ: Výroba dveří`
 - Zeile 313: `Výrobci dveří mají specifické požadavky: těžké obrobky, široké hrany a často nepřetržitá výroba s malým počtem změn formátu. OTT Door Edition je speciálně navržena pro tuto aplikaci – s upraveným vedením obrobků, zesíleným posuvem a optimalizovanou přítlačnou technikou pro masivní dveřní prvky.`
@@ -436,7 +436,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 ### SK — 38 fehlend
 
 - Zeile 38: `Co je olepovačka hran OTT?`
-- Zeile 39: `Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse.`
+- Zeile 39: `Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse.`
 - Zeile 46: `Kolik stojí olepovačka hran OTT?`
 - Zeile 47: `Cena olepovačky hran OTT závisí na modelu, výbavě a stupni automatizace. Asamer připraví nezávaznou nabídku na míru a poradí s financováním i dotacemi až 50 %.`
 - Zeile 54: `Jaký je rozdíl mezi lepidlem PUR a EVA?`
@@ -445,7 +445,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 63: `Ano. Asamer nabízí nové i technicky prověřené použité olepovačky hran OTT včetně servisu a montáže v ČR, na Slovensku a v Maďarsku.`
 - Zeile 85: `OTT olepovačky hran`
 - Zeile 101: `Nové standardy pro PUR/EVA`
-- Zeile 114: `Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse. OTT je rakouský výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.`
+- Zeile 114: `Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse. OTT je rakouský výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.`
 - Zeile 128: `Exkluzivní prodejce`
 - Zeile 137: `Rozhraní`
 - Zeile 195: `Proč OTT přes Asamer?`
@@ -462,7 +462,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 219: `Technologie`
 - Zeile 225: `Patent`
 - Zeile 227: `Top-driven roller · EVA + PUR · méně odpadu · servisní stanice`
-- Zeile 235: `Laser · bez spáry · montovatelná`
+- Zeile 235: `Vodíkový plamen · bez spáry · montovatelná`
 - Zeile 242: `Proč koupit u Asamer?`
 - Zeile 245: `OPC-UA přímo do vašeho ERP/MES – bez vendor lock-in`
 - Zeile 246: `Exkluzivní prodejce CZ/SK/HU`
@@ -724,10 +724,11 @@ pro každého`
 - Zeile 195: `Autorské právo`
 - Zeile 199: `Obsah a díla vytvořená provozovatelem stránek podléhají rakouskému autorskému právu. Rozmnožování, úpravy, šíření a jakékoli využití mimo hranice autorského práva vyžaduje písemný souhlas příslušného autora nebo tvůrce. Obrázky produktů a specifikace pocházejí od příslušných výrobců (OTT, Mayer/Felder Group, Barbaric, Gannomat).`
 
-## `src/pages/Home.tsx` (13)
+## `src/pages/Home.tsx` (14)
 
-### SK — 13 fehlend
+### SK — 14 fehlend
 
+- Zeile 96: `Technologie olepování hran OTT. Bezešvé spoje hran pomocí systémů PUR a bluEdge featuring HyFuse.`
 - Zeile 146: `Kolkování`
 - Zeile 147: `Vrtání a lepení`
 - Zeile 148: `Gannomat: frézování, vrtání, kolíkování, CNC, vakuový lis a další.`
@@ -1611,7 +1612,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `[0].items[3].question` | Jaký je rozdíl mezi PUR a EVA technologií lepení? |
 | `[0].items[3].answer` | EVA (etylenvinylacetát) je termoplastické tavné lepidlo, které rychle tuhne a snadno se zpracovává. PUR (polyuretanové reaktivní lepidlo) reaguje s vlhkostí a v … |
 | `[0].items[4].question` | Co znamená Zero-Gap? Co je bluEdge HyFuse? |
-| `[0].items[4].answer` | Zero-Gap označuje olepení hrany, kde je lepená spára opticky neviditelná – hrana a deskový materiál splývají bezešvě. bluEdge HyFuse je vlastní laserová technol … |
+| `[0].items[4].answer` | Zero-Gap označuje olepení hrany, kde je lepená spára opticky neviditelná – hrana a deskový materiál splývají bezešvě. bluEdge featuring HyFuse je vlastní techno … |
 | `[1].items[0].question` | Co je OPC-UA a proč je důležité pro integraci ERP? |
 | `[1].items[0].answer` | OPC-UA (Open Platform Communications – Unified Architecture) je otevřený průmyslový standard pro bezpečnou výměnu dat mezi stroji a IT systémy. Všechny stroje O … |
 | `[1].items[2].question` | Může Asamer pomoci s integrací softwaru do nového stroje? |
@@ -1644,7 +1645,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `[0].items[3].question` | What is the difference between PUR and EVA glue technology? |
 | `[0].items[3].answer` | EVA (ethylene vinyl acetate) is a thermoplastic hot-melt adhesive that cures quickly and is easy to process. PUR (polyurethane reactive adhesive) reacts with mo … |
 | `[0].items[4].question` | What does Zero-Gap mean? What is bluEdge HyFuse? |
-| `[0].items[4].answer` | Zero-Gap refers to edge bonding where the glue line is visually invisible – the edge and panel material merge seamlessly. bluEdge HyFuse is OTT's proprietary la … |
+| `[0].items[4].answer` | Zero-Gap refers to edge bonding where the glue line is visually invisible – the edge and panel material merge seamlessly. bluEdge featuring HyFuse is OTT's prop … |
 | `[1].items[0].question` | What is OPC-UA and why is it important for ERP integration? |
 | `[1].items[0].answer` | OPC-UA (Open Platform Communications – Unified Architecture) is an open industrial standard for secure data exchange between machines and IT systems. All OTT ma … |
 | `[1].items[1].question` | Do I need a return system for the edgebander? |
@@ -1705,8 +1706,8 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `faq[4].answer` | A standard OTT edgebander installation takes 2–5 working days, including commissioning and operator training. Industrial models with ERP integration and multipl … |
 | `faq[5].question` | How long does an edgebander last? |
 | `faq[5].answer` | With proper preventive maintenance OTT edgebanders last 15–25 years. Key drivers: glue quality, regular cleaning of the glue system, replacing worn tooling (cut … |
-| `faq[6].question` | What is bluEdge HyFuse and when do I need it? |
-| `faq[6].answer` | bluEdge HyFuse is a zero-gap laser technology: the edge's functional layer is activated by laser and thermally bonded to the panel without glue. The result is a … |
+| `faq[6].question` | What is bluEdge featuring HyFuse and when do I need it? |
+| `faq[6].answer` | bluEdge featuring HyFuse is a zero glue line technology: the edge's functional layer is activated by a hydrogen-oxygen flame and thermally bonded to the panel w … |
 | `faq[7].question` | Can I integrate an edgebander with my ERP? |
 | `faq[7].answer` | Yes. OTT machines run Beckhoff controllers with OPC-UA — the open standard for ERP/MES integration without vendor lock-in. Asamer has an in-house software team  … |
 | `faq[8].question` | Which edges can an OTT edgebander process? |
@@ -1720,7 +1721,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `howTo[0].name` | Define your operation size and daily throughput |
 | `howTo[0].text` | Count your employees and the workpieces processed per day. This number drives the model class (entry / pro / industrial). |
 | `howTo[1].name` | Assess materials and edge types |
-| `howTo[1].text` | Identify edge thickness (0.3–25 mm) and material (ABS, PVC, solid wood). For wet environments choose PUR or bluEdge laser. |
+| `howTo[1].text` | Identify edge thickness (0.3–25 mm) and material (ABS, PVC, solid wood). For wet environments choose PUR or bluEdge featuring HyFuse. |
 | `howTo[2].name` | Set the operating mode and shifts |
 | `howTo[2].text` | Single-shift: 12–18 m/min is enough. Multi-shift: 16–25 m/min, automatic magazines and OPC-UA for ERP integration. |
 | `howTo[3].name` | Calculate budget and TCO |
