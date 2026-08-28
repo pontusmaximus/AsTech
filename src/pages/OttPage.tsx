@@ -175,7 +175,8 @@ const OttPage = () => {
                         to={buildPath(buildOttProductPath(lang, product))}
                         image={product.image}
                         imageAlt={`${product.name} OTT`}
-                        badge={product.badge}
+                        kpiValue={product.specs.feedSpeed}
+                        kpiLabel={tr('Vorschub', 'Feed speed', 'Posuv')}
                         categoryLabel={OTT_CATEGORY_LABELS[c.cat][lang]}
                         name={`${product.name} OTT`}
                         bullets={product.usp ? [product.usp[lang], product.tagline[lang]] : undefined}

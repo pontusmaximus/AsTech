@@ -221,18 +221,27 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
           </header>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-            {products.map((product) => (
-              <ProductCard
-                key={product.slug}
-                to={buildLocalizedPath(lang, catalog.productPath(lang, product))}
-                image={product.image}
-                imageAlt={`${product.name} ${catalog.label}`}
-                categoryLabel={heading}
-                name={`${product.name} ${catalog.label}`}
-                bullets={[product.tagline[lang]]}
-                detailLabel={tr('Details ansehen', 'View details', 'Zobrazit detail')}
-              />
-            ))}
+            {products.map((product) => {
+              // Kennzahl auf der Karte: die erste Vergleichsspalte der Marke.
+              // Bei OTT ist das der Vorschub, bei Mayer die Schnittlaenge —
+              // Marken ohne vergleichbare Felder zeigen schlicht keine.
+              const kpi = catalog.comparison[0];
+              const kpiValue = kpi?.value(product);
+              return (
+                <ProductCard
+                  key={product.slug}
+                  to={buildLocalizedPath(lang, catalog.productPath(lang, product))}
+                  image={product.image}
+                  imageAlt={`${product.name} ${catalog.label}`}
+                  kpiValue={kpiValue}
+                  kpiLabel={kpiValue ? kpi.header[lang] : undefined}
+                  categoryLabel={heading}
+                  name={`${product.name} ${catalog.label}`}
+                  bullets={[product.tagline[lang]]}
+                  detailLabel={tr('Details ansehen', 'View details', 'Zobrazit detail')}
+                />
+              );
+            })}
           </div>
 
           {comparisonRows.length > 1 && (

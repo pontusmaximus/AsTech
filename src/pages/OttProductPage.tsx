@@ -57,9 +57,40 @@ interface DetailProps {
   buildPath: (slug?: string) => string;
 }
 
+/* Zielgruppen-Formulierung je Modell fuer den Definition-Lead (AEO). */
+const AUDIENCE_DEFAULT = {
+  de: 'professionelle Fertigungsbetriebe',
+  en: 'professional manufacturing operations',
+  cz: 'profesionální výrobní provozy',
+};
+
+const AUDIENCE_BY_SLUG: Record<string, { de: string; en: string; cz: string }> = {
+  'pacific-plus': {
+    de: 'kleine und mittlere Tischlereien',
+    en: 'small and medium-sized joineries',
+    cz: 'malé a střední truhlárny',
+  },
+  'tornado-plus': {
+    de: 'mittlere Betriebe mit variantenreicher Fertigung',
+    en: 'mid-sized operations with varied production',
+    cz: 'střední provozy s různorodou výrobou',
+  },
+  flexedge: {
+    de: 'professionelle Betriebe mit steigenden Anforderungen',
+    en: 'professional operations with growing demands',
+    cz: 'profesionální provozy s rostoucími nároky',
+  },
+  topedge: {
+    de: 'industrielle Großbetriebe im Dauerbetrieb',
+    en: 'industrial large-scale continuous operation',
+    cz: 'průmyslové velkoprovozy v nepřetržitém režimu',
+  },
+};
+
 const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
   const inquiryMail = buildMailto('office@asamer.net', tr(`Anfrage OTT ${product.name}`, `Inquiry OTT ${product.name}`, `Poptávka OTT ${product.name}`));
   const categoryLabel = OTT_CATEGORY_LABELS[product.category][lang];
+  const audience = AUDIENCE_BY_SLUG[product.slug] ?? AUDIENCE_DEFAULT;
   const productPath = buildOttProductPath(lang, product);
   const productUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`;
   const categoryPath = buildOttCategoryPath(lang, product.category);
@@ -127,14 +158,22 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
             <div className="flex flex-col justify-center">
               <span className="text-[11px] uppercase tracking-widest text-white/40 mb-3">{categoryLabel}</span>
               <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-2">{product.name} OTT</h1>
+              {product.specs.feedSpeed && (
+                <div className="flex items-baseline gap-2 mb-3">
+                  <span className="text-lg font-semibold text-primary tabular-nums">{product.specs.feedSpeed}</span>
+                  <span className="text-[11px] uppercase tracking-widest text-white/40">
+                    {tr('Vorschub', 'Feed speed', 'Posuv')}
+                  </span>
+                </div>
+              )}
               <p className="text-base text-white/55 mb-3">{product.tagline[lang]}</p>
 
               {/* Definition-Lead for AEO */}
               <p className="text-sm text-white/70 leading-relaxed mb-6 border-l-2 border-primary/40 pl-3">
                 {tr(
-                  `Die OTT ${product.name} ist eine ${categoryLabel} für ${product.badge === 'EINSTIEG' ? 'kleine und mittlere Tischlereien' : product.badge === 'MITTEL' ? 'mittlere Betriebe mit variantenreicher Fertigung' : product.badge === 'NEU' ? 'professionelle Betriebe mit steigenden Anforderungen' : product.badge === 'FLAGGSCHIFF' ? 'industrielle Großbetriebe im Dauerbetrieb' : 'professionelle Fertigungsbetriebe'}${product.usp?.[lang] ? ` – ${product.usp[lang]}` : ''}.`,
-                  `The OTT ${product.name} is an ${categoryLabel.toLowerCase()} for ${product.badge === 'EINSTIEG' ? 'small and medium-sized joineries' : product.badge === 'MITTEL' ? 'mid-sized operations with varied production' : product.badge === 'NEU' ? 'professional operations with growing demands' : product.badge === 'FLAGGSCHIFF' ? 'industrial large-scale continuous operation' : 'professional manufacturing operations'}${product.usp?.[lang] ? ` – ${product.usp[lang]}` : ''}.`,
-                  `OTT ${product.name} je ${categoryLabel.toLowerCase()} pro ${product.badge === 'EINSTIEG' ? 'malé a střední truhlárny' : product.badge === 'MITTEL' ? 'střední provozy s různorodou výrobou' : product.badge === 'NEU' ? 'profesionální provozy s rostoucími nároky' : product.badge === 'FLAGGSCHIFF' ? 'průmyslové velkoprovozy v nepřetržitém režimu' : 'profesionální výrobní provozy'}${product.usp?.[lang] ? ` – ${product.usp[lang]}` : ''}.`,
+                  `Die OTT ${product.name} ist eine ${categoryLabel} für ${audience.de}${product.usp?.[lang] ? ` – ${product.usp[lang]}` : ''}.`,
+                  `The OTT ${product.name} is an ${categoryLabel.toLowerCase()} for ${audience.en}${product.usp?.[lang] ? ` – ${product.usp[lang]}` : ''}.`,
+                  `OTT ${product.name} je ${categoryLabel.toLowerCase()} pro ${audience.cz}${product.usp?.[lang] ? ` – ${product.usp[lang]}` : ''}.`,
                 )}
               </p>
 
