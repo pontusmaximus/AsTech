@@ -13,7 +13,7 @@ import {
   buildLocalizedPath, CANONICAL_DOMAIN,
 } from '../lib/language';
 import {
-  getOttProductBySlug, buildOttProductPath, OTT_CATEGORY_LABELS,
+  getOttProductBySlug, buildOttProductPath, buildOttCategoryPath, OTT_CATEGORY_LABELS,
 } from '../data/ottProducts';
 import type { OttProduct } from '../data/ottProducts';
 import type { Language } from '../i18n';
@@ -62,9 +62,11 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
   const categoryLabel = OTT_CATEGORY_LABELS[product.category][lang];
   const productPath = buildOttProductPath(lang, product);
   const productUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, productPath)}`;
+  const categoryPath = buildOttCategoryPath(lang, product.category);
   const breadcrumbs = breadcrumbSchema([
     { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
     { name: 'OTT', url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/ott')}` },
+    { name: categoryLabel, url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, categoryPath)}` },
     { name: product.name, url: productUrl },
   ]);
 
@@ -106,6 +108,8 @@ const Detail = ({ product, lang, tr, buildPath }: DetailProps) => {
             <Link to={buildPath('/')} className="hover:text-white/60 transition-colors">{tr('Startseite', 'Home', 'Domů')}</Link>
             <span>/</span>
             <Link to={buildPath('/ott')} className="hover:text-white/60 transition-colors">OTT</Link>
+            <span>/</span>
+            <Link to={buildPath(categoryPath)} className="hover:text-white/60 transition-colors">{categoryLabel}</Link>
             <span>/</span>
             <span className="text-white/50">{product.name}</span>
           </nav>

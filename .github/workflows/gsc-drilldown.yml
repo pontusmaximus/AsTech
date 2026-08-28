@@ -1,0 +1,49 @@
+# Ad-hoc-Drilldown in die Search-Console-Daten (manuell gestartet).
+# Schreibt tagesgenaue Verläufe für Suchanfragen-Gruppen und einzelne Seiten
+# ins Log — für die Diagnose von Ranking-Einbrüchen, die der Wochenreport
+# nur aggregiert zeigt. Kein Commit, nur Log-Ausgabe.
+
+name: GSC-Drilldown
+
+on:
+  workflow_dispatch:
+    inputs:
+      regex:
+        description: 'Kommagetrennte RE2-Regexe für Suchanfragen'
+        required: false
+        type: string
+      page:
+        description: 'Kommagetrennte exakte Seiten-URLs'
+        required: false
+        type: string
+      days:
+        description: 'Zeitraum in Tagen (Standard 35)'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  drilldown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Drilldown
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: sc-domain:asamer.cz
+        run: |
+          ARGS=""
+          [ -n "${{ inputs.regex }}" ] && ARGS="$ARGS --regex ${{ inputs.regex }}"
+          [ -n "${{ inputs.page }}" ]  && ARGS="$ARGS --page ${{ inputs.page }}"
+          [ -n "${{ inputs.days }}" ]  && ARGS="$ARGS --days ${{ inputs.days }}"
+          npx tsx scripts/gsc-drilldown.ts $ARGS

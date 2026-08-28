@@ -66,6 +66,22 @@ export interface CatalogProduct {
   seoDescription: Record<Language, string>;
 }
 
+/**
+ * Eine Spalte im Modellvergleich der Kategorieseite.
+ *
+ * Die vier Marken beschreiben ihre Technik unterschiedlich: OTT und Mayer haben
+ * typisierte Felder (`specs.length`, `specs.cuttingLength`), Barbaric und
+ * Gannomat freie Schluessel-Wert-Karten, deren Schluessel je Produkt variieren.
+ * Ueber freie Karten laesst sich keine Tabelle mit gemeinsamen Spalten legen —
+ * deshalb definiert jede Marke selbst, welche Spalten sie hat, und wer keine
+ * definiert, bekommt keinen Vergleich statt einer halbleeren Tabelle.
+ */
+export interface ComparisonColumn {
+  /** Woerterbuch-Schluessel fuer die Spaltenueberschrift: tr(de, en, cz). */
+  header: [de: string, en: string, cz: string];
+  value: (product: CatalogProduct) => string | undefined;
+}
+
 export interface BrandCatalog {
   brand: BrandSlug;
   /** Anzeigename der Marke, so wie er in Titles und Breadcrumbs steht. */
@@ -89,6 +105,8 @@ export interface BrandCatalog {
   productsIn: (category: string) => CatalogProduct[];
   productPath: (lang: Language, product: CatalogProduct) => string;
   categorySeo: (category: string) => CategorySeoContent | undefined;
+  /** Leer, wenn die Marke keine vergleichbaren Felder ueber alle Produkte hat. */
+  comparison: ComparisonColumn[];
 }
 
 /**
@@ -112,6 +130,11 @@ const CATALOGS: Record<BrandSlug, BrandCatalog> = {
     productsIn: (c) => getOttProductsByCategory(c as never),
     productPath: (l, p) => buildOttProductPath(l, p as never),
     categorySeo: (c) => OTT_CATEGORY_SEO[c as never],
+    comparison: [
+      { header: ['Laenge', 'Length', 'Delka'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.length },
+      { header: ['Vorschub', 'Feed', 'Posuv'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.feedSpeed },
+      { header: ['Kantenstaerke', 'Edge thickness', 'Tloustka hrany'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.edgeThickness },
+    ],
   },
   mayer: {
     brand: 'mayer',
@@ -125,6 +148,11 @@ const CATALOGS: Record<BrandSlug, BrandCatalog> = {
     productsIn: (c) => getMayerProductsByCategory(c as never),
     productPath: (l, p) => buildMayerProductPath(l, p as never),
     categorySeo: (c) => MAYER_CATEGORY_SEO[c as never],
+    comparison: [
+      { header: ['Schnittlaenge', 'Cutting length', 'Delka rezu'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.cuttingLength },
+      { header: ['Schnitthoehe', 'Cutting height', 'Vyska rezu'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.cuttingHeight },
+      { header: ['Vorschub', 'Feed', 'Posuv'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.feedSpeed },
+    ],
   },
   barbaric: {
     brand: 'barbaric',
@@ -138,6 +166,7 @@ const CATALOGS: Record<BrandSlug, BrandCatalog> = {
     productsIn: (c) => getBarbaricProductsByCategory(c as never),
     productPath: (l, p) => buildBarbaricProductPath(l, p as never),
     categorySeo: (c) => BARBARIC_CATEGORY_SEO[c as never],
+    comparison: [],
   },
   gannomat: {
     brand: 'gannomat',
@@ -151,6 +180,7 @@ const CATALOGS: Record<BrandSlug, BrandCatalog> = {
     productsIn: (c) => getGannomatProductsByCategory(c as never),
     productPath: (l, p) => buildGannomatProductPath(l, p as never),
     categorySeo: (c) => GANNOMAT_CATEGORY_SEO[c as never],
+    comparison: [],
   },
 };
 

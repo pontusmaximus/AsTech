@@ -18,7 +18,7 @@ import { BARBARIC_PRODUCTS, buildBarbaricProductPath } from '../src/data/barbari
 import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannomatProducts';
 import { USED_MACHINES } from '../src/data/usedMachines';
 import { localizeSlug } from '../src/lib/slugs';
-import { ALL_CATEGORY_REFS, buildCategoryPath } from '../src/data/brandCatalogs';
+import { ALL_CATEGORY_REFS, buildCategoryPath, getBrandCatalog } from '../src/data/brandCatalogs';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -81,6 +81,12 @@ Object.entries(SEO_ROUTES).forEach(([routeKey, config]) => {
 
 // Kategorieseiten je Marke
 ALL_CATEGORY_REFS.forEach((ref) => {
+  const productDates = getBrandCatalog(ref.brand)
+    .productsIn(ref.category)
+    .map((p) => lastmod.get(productKey(ref.brand, p.slug)))
+    .filter((d): d is string => Boolean(d));
+  const categoryLastmod =
+    productDates.length > 0 ? productDates.sort().at(-1)! : lastmod.get(staticKey(ref.brand as SeoRouteKey));
   INDEXABLE_LANGUAGES.forEach((lang) => {
     const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
       lang: altLang,
@@ -90,9 +96,9 @@ ALL_CATEGORY_REFS.forEach((ref) => {
       lang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildCategoryPath(ref, lang))}`,
       canonicalSlug: `/${ref.brand}/${ref.category}`,
-      // Eine Kategorieseite aendert sich, wenn sich ihre Produktdaten aendern.
-      // Die liegen in derselben Datei wie die der Marke, deshalb deren Datum.
-      lastmod: lastmod.get(staticKey(ref.brand as SeoRouteKey)),
+      // Eine Kategorieseite aendert sich, wenn sich ihre Produkte aendern —
+      // deshalb das juengste Produktdatum der Kategorie, nicht das der Marke.
+      lastmod: categoryLastmod,
       alternates,
       defaultUrl: `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildCategoryPath(ref, HREFLANG_DEFAULT))}`,
     });

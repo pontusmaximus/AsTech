@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, BookOpen, Banknote, Recycle } from 'lucide-react';
 import gsap from 'gsap';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
@@ -9,10 +9,12 @@ import CategorySeoBlock from '../components/seo/CategorySeoBlock';
 import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
+import { localizeSlug } from '../lib/slugs';
+import { isSlugAvailable } from '../seo/routes';
 import { buildMailto } from '../lib/email';
 import { getBrandCatalog, buildCategoryPath } from '../data/brandCatalogs';
 import type { BrandSlug, CategoryRef } from '../data/brandCatalogs';
-import { getCategoryMeta, getCategoryHeading } from '../seo/categoryMeta';
+import { getCategoryMeta, getCategoryHeading, getCategoryLead, getCategoryEyebrow } from '../seo/categoryMeta';
 
 /**
  * Kategorieseite einer Marke — `/{lang}/{marke}/{kategorie}`.
@@ -67,6 +69,91 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
   const heading = getCategoryHeading(ref, lang);
   const meta = getCategoryMeta(ref, lang);
   const seoContent = catalog.categorySeo(category);
+  const lead = getCategoryLead(ref, lang);
+  const eyebrow = getCategoryEyebrow(ref, lang);
+
+  // Modellvergleich nur, wo die Marke vergleichbare Felder hat und mindestens
+  // ein Produkt sie auch gefuellt hat — sonst stuende da eine leere Tabelle.
+  const comparisonRows = catalog.comparison.length
+    ? products
+        .map((p) => ({ product: p, cells: catalog.comparison.map((c) => c.value(p)) }))
+        .filter((r) => r.cells.some(Boolean))
+    : [];
+
+  const localPath = (slug: string) => buildLocalizedPath(lang, localizeSlug(slug, lang));
+
+  // Eine Route kann Sprachen ausschliessen (`excludeLangs`). Wird sie hier
+  // trotzdem verlinkt, zeigt die Kachel auf eine 301 — deshalb der Filter,
+  // abgeleitet aus SEO_ROUTES statt aus einer zweiten Liste.
+  const linkable = (canonicalSlug: string) => isSlugAvailable(canonicalSlug, lang);
+
+  // Weiterfuehrende Seiten. Bewusst nur, was thematisch wirklich passt: der
+  // Klebstoff-Ratgeber gehoert zur Kante, der Saegenvergleich zur Platte.
+  const guides = [
+    ...(brand === 'ott'
+      ? [
+          ...(category === 'edgebanding'
+            ? [{
+                icon: BookOpen,
+                slug: '/ratgeber/kantenanleimmaschine-waehlen',
+          to: localPath('/ratgeber/kantenanleimmaschine-waehlen'),
+                title: tr('Ratgeber: Kantenanleimmaschine wählen', 'Guide: choosing an edgebander', 'Průvodce: výběr olepovačky hran'),
+                text: tr('Welche Maschine passt zu Ihrem Betrieb?', 'Which machine fits your operation?', 'Který stroj se hodí do vašeho provozu?'),
+              }]
+            : []),
+          {
+            icon: BookOpen,
+            slug: '/ratgeber/pur-vs-eva',
+          to: localPath('/ratgeber/pur-vs-eva'),
+            title: tr('Ratgeber: PUR vs. EVA', 'Guide: PUR vs. EVA', 'Průvodce: PUR vs. EVA'),
+            text: tr('Der Klebstoff-Vergleich für die Kante.', 'The adhesive comparison for edges.', 'Srovnání lepidel pro olepování hran.'),
+          },
+        ]
+      : []),
+    ...(brand === 'mayer'
+      ? [{
+          icon: BookOpen,
+          slug: '/ratgeber/formatsaege-aluminium-vs-holz',
+          to: localPath('/ratgeber/formatsaege-aluminium-vs-holz'),
+          title: tr('Ratgeber: Holz oder Aluminium', 'Guide: wood or aluminium', 'Průvodce: dřevo nebo hliník'),
+          text: tr('Kappa und Advanced Line im Vergleich.', 'Kappa and Advanced Line compared.', 'Srovnání Kappa a Advanced Line.'),
+        }]
+      : []),
+    ...(brand === 'barbaric' && category === 'vacuum-lifters'
+      ? [{
+          icon: BookOpen,
+          slug: '/pruvodce/vakuovy-zvedak-holz',
+          to: localPath('/pruvodce/vakuovy-zvedak-holz'),
+          title: tr('Ratgeber: Vakuumheber', 'Guide: vacuum lifters', 'Průvodce: vakuové zvedáky'),
+          text: tr('Einer statt drei — ergonomisch heben.', 'One person instead of three.', 'Jeden místo tří.'),
+        }]
+      : []),
+    ...(brand === 'barbaric'
+      ? [{
+          icon: BookOpen,
+          slug: '/ratgeber/lagerautomatisierung',
+          to: localPath('/ratgeber/lagerautomatisierung'),
+          title: tr('Ratgeber: Lagerautomatisierung', 'Guide: warehouse automation', 'Průvodce: automatizace skladu'),
+          text: tr('Ab wann rechnet sie sich?', 'When does it pay off?', 'Kdy se vyplatí?'),
+        }]
+      : []),
+    ...(brand === 'ott' && category === 'edgebanding'
+      ? [{
+          icon: Recycle,
+          slug: '/pouzite-stroje',
+          to: localPath('/pouzite-stroje'),
+          title: tr('Gebrauchte Maschinen', 'Used machines', 'Použité stroje'),
+          text: tr('Geprüfte Gebrauchtmaschinen mit Service.', 'Inspected used machines with service.', 'Prověřené použité stroje se servisem.'),
+        }]
+      : []),
+    {
+      icon: Banknote,
+      slug: '/financovani',
+      to: localPath('/financovani'),
+      title: tr('Finanzierung & Förderung', 'Financing & grants', 'Financování a dotace'),
+      text: tr('Leasing und Förderungen bis 50 %.', 'Leasing and grants up to 50%.', 'Leasing a dotace až 50 %.'),
+    },
+  ].filter((g) => linkable(g.slug));
   const categoryPath = buildCategoryPath(ref, lang);
   const hubPath = buildLocalizedPath(lang, `/${brand}`);
 
@@ -126,8 +213,11 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
           </Link>
 
           <header className="page-header mb-10 max-w-3xl">
+            {eyebrow && (
+              <p className="text-[11px] uppercase tracking-widest text-white/35 mb-3">{eyebrow}</p>
+            )}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white mb-4">{heading}</h1>
-            <p className="text-white/60 text-base leading-relaxed">{meta.description}</p>
+            <p className="text-white/60 text-base leading-relaxed">{lead ?? meta.description}</p>
           </header>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
@@ -144,6 +234,66 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
               />
             ))}
           </div>
+
+          {comparisonRows.length > 1 && (
+            <section className="mb-12">
+              <p className="text-[11px] uppercase tracking-widest text-white/35 mb-4">
+                {tr('Modelle im Vergleich', 'Model comparison', 'Srovnání modelů')}
+              </p>
+              <div className="overflow-x-auto rounded-xl border border-white/10">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-white/[0.04] text-white/50 text-left">
+                      <th className="px-4 py-3 font-normal">{tr('Modell', 'Model', 'Model')}</th>
+                      {catalog.comparison.map((c) => (
+                        <th key={c.header[1]} className="px-4 py-3 font-normal whitespace-nowrap">
+                          {tr(c.header[0], c.header[1], c.header[2])}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {comparisonRows.map((row) => (
+                      <tr key={row.product.slug} className="border-t border-white/5">
+                        <td className="px-4 py-3">
+                          <Link
+                            to={buildLocalizedPath(lang, catalog.productPath(lang, row.product))}
+                            className="text-white/80 hover:text-white transition-colors"
+                          >
+                            {row.product.name}
+                          </Link>
+                        </td>
+                        {row.cells.map((cell, i) => (
+                          <td key={catalog.comparison[i].header[1]} className="px-4 py-3 text-white/50 whitespace-nowrap">
+                            {cell ?? '–'}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          )}
+
+          <nav aria-label={tr('Weiterführend', 'Further reading', 'Další informace')} className="mb-12">
+            <p className="text-[11px] uppercase tracking-widest text-white/35 mb-4">
+              {tr('Weiterführend', 'Further reading', 'Další informace')}
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {guides.map((g) => (
+                <Link
+                  key={g.to}
+                  to={g.to}
+                  className="p-4 rounded-xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] transition-colors"
+                >
+                  <g.icon className="w-4 h-4 text-white/40 mb-2" />
+                  <p className="text-white/80 text-sm mb-1">{g.title}</p>
+                  <p className="text-white/40 text-xs leading-relaxed">{g.text}</p>
+                </Link>
+              ))}
+            </div>
+          </nav>
 
           {/* Nachbarkategorien: haelt die Kategorieebene untereinander verlinkt,
               statt sie nur ueber den Hub erreichbar zu machen. */}

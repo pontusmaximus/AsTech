@@ -21,6 +21,17 @@ import type { Language } from '../i18n';
 import type { CategoryRef } from '../data/brandCatalogs';
 import { getBrandCatalog } from '../data/brandCatalogs';
 import type { RouteMeta } from './routes';
+import { OTT_CATEGORY_META } from '../data/ottCategoryMeta';
+
+/**
+ * Von Hand geschriebene OTT-Kategorietexte in allen fuenf Sprachen — Title,
+ * Description, H1, Eyebrow und Definition-Lead. Sie kamen ueber `main` dazu
+ * (Commit deed297) und sind die einzige Quelle im Projekt, die pro Kategorie
+ * echten redaktionellen Text in allen Sprachen hat. Deshalb schlagen sie die
+ * Formel; nur die aus der Keyword-Recherche belegten HU-Werte stehen darueber.
+ */
+const authoredOtt = (ref: CategoryRef) =>
+  ref.brand === 'ott' ? OTT_CATEGORY_META[ref.category as keyof typeof OTT_CATEGORY_META] : undefined;
 
 /** Schluessel der Override-Tabelle: `marke/kategorie`. */
 const refKey = (ref: CategoryRef): string => `${ref.brand}/${ref.category}`;
@@ -138,8 +149,13 @@ const withModels = (lead: string, models: string[], tail: string): string => {
 
 /** Title und Description einer Kategorieseite. */
 export const getCategoryMeta = (ref: CategoryRef, lang: Language): RouteMeta => {
+  // Reihenfolge: recherchierter Wert (Blatt 4, mit Zielkeyword und Zeichenzahl
+  // belegt) vor redaktionellem Text vor Formel.
   const override = CATEGORY_META_OVERRIDES[refKey(ref)]?.[lang];
   if (override) return override;
+
+  const authored = authoredOtt(ref);
+  if (authored) return { title: authored.seoTitle[lang], description: authored.seoDescription[lang] };
 
   const catalog = getBrandCatalog(ref.brand);
   const label = catalog.categoryTitleLabel(ref.category, lang);
@@ -154,4 +170,17 @@ export const getCategoryMeta = (ref: CategoryRef, lang: Language): RouteMeta => 
 
 /** Ueberschrift der Kategorieseite. Immer die Kategoriebezeichnung, ohne Marke. */
 export const getCategoryHeading = (ref: CategoryRef, lang: Language): string =>
-  getBrandCatalog(ref.brand).categoryTitleLabel(ref.category, lang);
+  authoredOtt(ref)?.h1[lang] ?? getBrandCatalog(ref.brand).categoryTitleLabel(ref.category, lang);
+
+/**
+ * Definition-Lead: beantwortet "Was ist ...?" im ersten Absatz.
+ *
+ * Nur dort vorhanden, wo jemand ihn geschrieben hat. Wo nicht, faellt die Seite
+ * auf die Description zurueck — das ist ein Platzhalter, kein Ziel.
+ */
+export const getCategoryLead = (ref: CategoryRef, lang: Language): string | undefined =>
+  authoredOtt(ref)?.lead[lang];
+
+/** Kleiner Ueberzeiler ueber der H1, z. B. "OTT Paul - Made in Austria". */
+export const getCategoryEyebrow = (ref: CategoryRef, lang: Language): string | undefined =>
+  authoredOtt(ref)?.eyebrow[lang];

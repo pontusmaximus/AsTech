@@ -38,7 +38,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SEO_ROUTES, getSlugForLang, isRouteAvailable, DEFAULT_OG_IMAGE } from '../src/seo/routes';
-import { ALL_CATEGORY_REFS, buildCategoryPath } from '../src/data/brandCatalogs';
+import { ALL_CATEGORY_REFS, buildCategoryPath, getBrandCatalog } from '../src/data/brandCatalogs';
 import { getCategoryMeta } from '../src/seo/categoryMeta';
 import {
   buildLocalizedPath,
@@ -139,6 +139,7 @@ for (const ref of ALL_CATEGORY_REFS) {
     const build = (al: Language) => buildLocalizedPath(al, buildCategoryPath(ref, al));
     const path = build(lang);
     const meta = getCategoryMeta(ref, lang);
+    const firstProduct = getBrandCatalog(ref.brand).productsIn(ref.category)[0];
     pages.push({
       path,
       lang,
@@ -147,7 +148,7 @@ for (const ref of ALL_CATEGORY_REFS) {
       canonical: `${CANONICAL_DOMAIN}${path}`,
       alternates: makeAlternates(build),
       xDefaultHref: `${CANONICAL_DOMAIN}${build(HREFLANG_DEFAULT)}`,
-      image: DEFAULT_OG_IMAGE,
+      image: firstProduct ? absImg(firstProduct.image) : DEFAULT_OG_IMAGE,
       imageDims: { w: 1200, h: 630 },
     });
   }

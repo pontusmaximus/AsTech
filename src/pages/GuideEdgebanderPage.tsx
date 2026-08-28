@@ -7,6 +7,7 @@ import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, faqPageSchema, howToSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { EDGEBANDER_GUIDE } from '../data/guides/edgebanderGuide';
+import { buildOttCategoryPath } from '../data/ottProducts';
 import type { MultiLangText } from '../data/seo/types';
 import type { Language } from '../i18n';
 
@@ -485,7 +486,7 @@ const GuideEdgebanderPage = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  to={buildPath('/ott')}
+                  to={buildPath(buildOttCategoryPath(lang, 'edgebanding'))}
                   className="btn-primary-dark sm:whitespace-nowrap justify-center"
                 >
                   {tr('Alle OTT-Kantenanleimmaschinen', 'All OTT edgebanders', 'Všechny olepovačky hran OTT')}
