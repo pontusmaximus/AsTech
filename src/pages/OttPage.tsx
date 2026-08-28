@@ -37,9 +37,9 @@ const OttPage = () => {
     {
       question: tr('Was ist eine OTT Kantenanleimmaschine?', 'What is an OTT edgebanding machine?', 'Co je olepovačka hran OTT?'),
       answer: tr(
-        'Eine OTT Kantenanleimmaschine trägt Kantenmaterial auf Möbel- und Plattenteile auf und besäumt es bündig. OTT bietet Modelle von der kompakten Pacific+ bis zur industriellen TopEdge mit PUR, EVA und bluEdge HyFuse Lasertechnologie.',
-        'An OTT edgebanding machine applies and flush-trims edge material on furniture and board parts. OTT offers models from the compact Pacific+ to the industrial TopEdge with PUR, EVA and bluEdge HyFuse laser technology.',
-        'Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse.',
+        'Eine OTT Kantenanleimmaschine trägt Kantenmaterial auf Möbel- und Plattenteile auf und besäumt es bündig. OTT bietet Modelle von der kompakten Pacific+ bis zur industriellen TopEdge mit PUR, EVA und der Nullfugentechnologie bluEdge featuring HyFuse.',
+        'An OTT edgebanding machine applies and flush-trims edge material on furniture and board parts. OTT offers models from the compact Pacific+ to the industrial TopEdge with PUR, EVA and the bluEdge featuring HyFuse zero glue line technology.',
+        'Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse.',
       ),
     },
     {
@@ -112,9 +112,9 @@ const OttPage = () => {
           eyebrow={tr('Österreich · Kantenanleimtechnologie', 'Austria · Edgebanding technology', 'Rakousko · Olepování hran')}
           title={tr('OTT Kantenanleimmaschinen', 'OTT Edgebanding Machines', 'OTT olepovačky hran')}
           lead={tr(
-            'OTT Kantenanleimmaschinen zählen zur Spitze beim Bekanten von Möbel- und Plattenteilen – von der kompakten Pacific+ (18 m/min) bis zur industriellen TopEdge mit PUR, EVA und bluEdge HyFuse Lasertechnologie. OTT ist ein österreichischer Hersteller von Kantenanleimmaschinen für die Holz- und Möbelindustrie. Asamer ist exklusiver OTT-Vertriebspartner für CZ, SK und HU mit lokalem Service und Softwareintegration über die offene OPC-UA-Schnittstelle.',
-            'OTT edgebanding machines are among the best for banding furniture and board panels – from the compact Pacific+ (18 m/min) to the industrial TopEdge with PUR, EVA and bluEdge HyFuse laser technology. OTT is an Austrian manufacturer of edgebanding machines for the wood and furniture industry. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.',
-            'Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse. OTT je rakouský výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.',
+            'OTT Kantenanleimmaschinen zählen zur Spitze beim Bekanten von Möbel- und Plattenteilen – von der kompakten Pacific+ (18 m/min) bis zur industriellen TopEdge mit PUR, EVA und der Nullfugentechnologie bluEdge featuring HyFuse. OTT ist ein österreichischer Hersteller von Kantenanleimmaschinen für die Holz- und Möbelindustrie. Asamer ist exklusiver OTT-Vertriebspartner für CZ, SK und HU mit lokalem Service und Softwareintegration über die offene OPC-UA-Schnittstelle.',
+            'OTT edgebanding machines are among the best for banding furniture and board panels – from the compact Pacific+ (18 m/min) to the industrial TopEdge with PUR, EVA and the bluEdge featuring HyFuse zero glue line technology. OTT is an Austrian manufacturer of edgebanding machines for the wood and furniture industry. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.',
+            'Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse. OTT je rakouský výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.',
           )}
           facts={[
             {
@@ -232,7 +232,7 @@ const OttPage = () => {
                     <span className="text-sm font-medium text-white">bluEdge HyFuse</span>
                     <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-400">Zero-Gap</span>
                   </div>
-                  <p className="text-white/35 text-xs">{tr('Laser-Aktivierung · keine Klebefuge · nachrüstbar', 'Laser activation · no glue joint · retrofittable', 'Laser · bez spáry · montovatelná')}</p>
+                  <p className="text-white/35 text-xs">{tr('Wasserstoff-Flamme · keine Klebefuge · nachrüstbar', 'Hydrogen flame · no glue joint · retrofittable', 'Vodíkový plamen · bez spáry · montovatelná')}</p>
                 </div>
               </div>
             </section>

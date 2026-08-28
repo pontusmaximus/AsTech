@@ -203,7 +203,7 @@ const translations: Record<Language, Translations> = {
       },
       edgebanding: {
         title: 'Kantenbearbeitung',
-        description: 'Fugenlose Kantenverbindungen mit PUR-Anleimsystemen und LASER Hydrofuse Technologie von OTT.',
+        description: 'Fugenlose Kantenverbindungen mit PUR-Anleimsystemen und der Nullfugentechnologie bluEdge featuring HyFuse von OTT.',
       },
       handling: {
         title: 'Manipulation & Lager',
@@ -373,7 +373,7 @@ const translations: Record<Language, Translations> = {
       },
       edgebanding: {
         title: 'Edgebanding',
-        description: 'Seamless edge joints with PUR gluing systems and LASER Hydrofuse technology from OTT.',
+        description: 'Seamless edge joints with PUR gluing systems and the bluEdge featuring HyFuse zero glue line technology from OTT.',
       },
       handling: {
         title: 'Handling & Storage',
@@ -543,7 +543,7 @@ const translations: Record<Language, Translations> = {
       },
       edgebanding: {
         title: 'Olepování hran',
-        description: 'Bezspárové spoje hran pomocí PUR lepicích systémů a LASER Hydrofuse technologie od OTT.',
+        description: 'Bezspárové spoje hran pomocí PUR lepicích systémů a technologie nulové spáry bluEdge featuring HyFuse od OTT.',
       },
       handling: {
         title: 'Manipulace a skladování',
@@ -713,7 +713,7 @@ const translations: Record<Language, Translations> = {
       },
       edgebanding: {
         title: 'Élzárás',
-        description: 'Varrat nélküli élkapcsolatok PUR ragasztórendszerekkel és LASER Hydrofuse technológiával OTT-től.',
+        description: 'Varrat nélküli élkapcsolatok PUR ragasztórendszerekkel és az OTT bluEdge featuring HyFuse nulla ragasztóvonal technológiájával.',
       },
       handling: {
         title: 'Kezelés és raktározás',
@@ -883,7 +883,7 @@ const translations: Record<Language, Translations> = {
       },
       edgebanding: {
         title: 'Olepovanie hrán',
-        description: 'Bezšvové spoje hrán pomocou PUR lepiacich systémov a LASER Hydrofuse technológie od OTT.',
+        description: 'Bezšvové spoje hrán pomocou PUR lepiacich systémov a technológie nulovej škáry bluEdge featuring HyFuse od OTT.',
       },
       handling: {
         title: 'Manipulácia a skladovanie',

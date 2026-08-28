@@ -139,32 +139,32 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'OTT Kantenanleimmaschinen – Händler für CZ, SK, HU | Asamer',
         description:
-          'OTT Kantenanleimmaschinen – Asamer autorisierter Händler für CZ, SK & HU. PUR & LASER Hydrofuse. Beckhoff OPC-UA Schnittstelle für Software-Integration.',
-        keywords: ['OTT', 'Kantenanleimmaschine', 'PUR', 'Laser', 'Hydrofuse', 'Beckhoff', 'OPC-UA'],
+          'OTT Kantenanleimmaschinen – Asamer autorisierter Händler für CZ, SK & HU. PUR & bluEdge featuring HyFuse. Beckhoff OPC-UA Schnittstelle für Software-Integration.',
+        keywords: ['OTT', 'Kantenanleimmaschine', 'PUR', 'bluEdge', 'HyFuse', 'Nullfuge', 'Beckhoff', 'OPC-UA'],
       },
       en: {
         title: 'OTT Edgebanding Machines – Dealer CZ, SK, HU | Asamer',
         description:
-          'OTT edgebanding machines – Asamer authorized dealer for CZ, SK & HU. PUR & LASER Hydrofuse technology. Open Beckhoff OPC-UA interface for integration.',
-        keywords: ['OTT', 'Edgebander', 'PUR', 'Laser', 'Hydrofuse', 'Beckhoff', 'OPC-UA'],
+          'OTT edgebanding machines – Asamer authorized dealer for CZ, SK & HU. PUR & bluEdge featuring HyFuse technology. Open Beckhoff OPC-UA interface for integration.',
+        keywords: ['OTT', 'Edgebander', 'PUR', 'bluEdge', 'HyFuse', 'zero glue line', 'Beckhoff', 'OPC-UA'],
       },
       cz: {
         title: 'OTT olepovačky hran – autorizovaný prodejce | Asamer',
         description:
-          'OTT olepovačky hran – Asamer autorizovaný prodejce pro CZ, SK a HU. Technologie PUR a LASER Hydrofuse. Otevřené rozhraní Beckhoff OPC-UA.',
-        keywords: ['OTT', 'Olepovačka hran', 'PUR', 'Laser', 'Hydrofuse', 'Beckhoff', 'OPC-UA'],
+          'OTT olepovačky hran – Asamer autorizovaný prodejce pro CZ, SK a HU. Technologie PUR a bluEdge featuring HyFuse. Otevřené rozhraní Beckhoff OPC-UA.',
+        keywords: ['OTT', 'Olepovačka hran', 'PUR', 'bluEdge', 'HyFuse', 'nulová spára', 'Beckhoff', 'OPC-UA'],
       },
       sk: {
         title: 'OTT olepovačky hrán – autorizovaný predajca | Asamer',
         description:
-          'OTT olepovačky hrán – Asamer autorizovaný predajca pre CZ, SK a HU. Technológia PUR a LASER Hydrofuse. Otvorené rozhranie Beckhoff OPC-UA.',
-        keywords: ['OTT', 'Olepovačka hrán', 'PUR', 'Laser', 'Hydrofuse', 'Beckhoff', 'OPC-UA'],
+          'OTT olepovačky hrán – Asamer autorizovaný predajca pre CZ, SK a HU. Technológia PUR a bluEdge featuring HyFuse. Otvorené rozhranie Beckhoff OPC-UA.',
+        keywords: ['OTT', 'Olepovačka hrán', 'PUR', 'bluEdge', 'HyFuse', 'nulová škára', 'Beckhoff', 'OPC-UA'],
       },
       hu: {
         title: 'OTT élzárógépek – hivatalos viszonteladó | Asamer',
         description:
-          'OTT élzárógépek – Asamer hivatalos viszonteladó CZ, SK és HU területén. PUR és LASER Hydrofuse technológia. Nyílt Beckhoff OPC-UA interfész.',
-        keywords: ['OTT', 'Élzárógép', 'PUR', 'Laser', 'Hydrofuse', 'Beckhoff', 'OPC-UA'],
+          'OTT élzárógépek – Asamer hivatalos viszonteladó CZ, SK és HU területén. PUR és bluEdge featuring HyFuse technológia. Nyílt Beckhoff OPC-UA interfész.',
+        keywords: ['OTT', 'Élzárógép', 'PUR', 'bluEdge', 'HyFuse', 'nulla ragasztóvonal', 'Beckhoff', 'OPC-UA'],
       },
     }),
   },

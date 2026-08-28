@@ -228,9 +228,9 @@ const FAQ_ZERO_GAP: HubFaqItem = {
     cz: 'Co znamená Zero-Gap? Co je bluEdge HyFuse?',
   },
   answer: {
-    de: 'Zero-Gap bezeichnet eine Kantenverklebung, bei der die Leimfuge optisch unsichtbar ist – die Kante und das Plattenmaterial verschmelzen nahtlos. bluEdge HyFuse ist die OTT-eigene Lasertechnologie, die Kanten mittels Diodenlaser aktiviert und ohne separaten Klebstoff verbindet. Das Ergebnis ist eine fugenlose, wasserdichte Kante mit höchster optischer Qualität.',
-    en: 'Zero-Gap refers to edge bonding where the glue line is visually invisible – the edge and panel material merge seamlessly. bluEdge HyFuse is OTT\'s proprietary laser technology that activates edges using a diode laser and bonds them without separate adhesive. The result is a seamless, waterproof edge with the highest visual quality.',
-    cz: 'Zero-Gap označuje olepení hrany, kde je lepená spára opticky neviditelná – hrana a deskový materiál splývají bezešvě. bluEdge HyFuse je vlastní laserová technologie OTT, která aktivuje hrany diodovým laserem a spojuje je bez samostatného lepidla. Výsledkem je bezešvá, vodotěsná hrana s nejvyšší optickou kvalitou.',
+    de: 'Zero-Gap bezeichnet eine Kantenverklebung, bei der die Leimfuge optisch unsichtbar ist – die Kante und das Plattenmaterial verschmelzen nahtlos. bluEdge featuring HyFuse ist die OTT-eigene Nullfugentechnologie: Eine Wasserstoff-Sauerstoff-Flamme aktiviert die Funktionsschicht der Kante, die dann ohne separaten Klebstoff mit der Platte verbunden wird. Das Ergebnis ist eine fugenlose, wasserdichte Kante mit höchster optischer Qualität.',
+    en: 'Zero-Gap refers to edge bonding where the glue line is visually invisible – the edge and panel material merge seamlessly. bluEdge featuring HyFuse is OTT\'s proprietary zero glue line technology: a hydrogen-oxygen flame activates the functional layer of the edge, which is then bonded to the panel without separate adhesive. The result is a seamless, waterproof edge with the highest visual quality.',
+    cz: 'Zero-Gap označuje olepení hrany, kde je lepená spára opticky neviditelná – hrana a deskový materiál splývají bezešvě. bluEdge featuring HyFuse je vlastní technologie nulové spáry od OTT: vodíko-kyslíkový plamen aktivuje funkční vrstvu hrany, která se pak spojí s deskou bez samostatného lepidla. Výsledkem je bezešvá, vodotěsná hrana s nejvyšší optickou kvalitou.',
   },
 };
 
