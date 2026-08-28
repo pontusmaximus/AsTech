@@ -81,8 +81,6 @@ export interface OttProduct {
     feedSpeed?: string;
     notes?: Record<Language, string>;
   };
-  /** Positioning badge: EINSTIEG | MITTEL | PROFI | FLAGGSCHIFF | ADDON | SYSTEM */
-  badge?: string;
   /** Short USP line shown on hub product card */
   usp?: Record<Language, string>;
   /** Equipment list for detail page */
@@ -148,7 +146,6 @@ export const OTT_PRODUCTS: OttProduct[] = [
       sk: 'Pacific+ je perfektné riešenie pre remeselníka a stolársku dielňu. S dĺžkou 5,7 m, hrúbkou hrán 0,3–15 mm a hrúbkou dosiek do 60 mm ponúka flexibilné olepovanie hrán na najmenšom priestore.',
       hu: 'A Pacific+ a tökéletes megoldás kézművesek és asztalosműhelyek számára. 5,7 m hosszával, 0,3–15 mm élvastagságával és akár 60 mm lapvastagságával rugalmas élzárást biztosít a legkisebb helyen.',
     },
-    badge: 'EINSTIEG',
     usp: { de: '18 m/min inkl. Eckenbearbeitung', en: '18 m/min incl. corner processing', cz: '18 m/min vč. zpracování rohů', sk: '18 m/min vrátane spracovania rohov', hu: '18 m/perc sarokmegmunkálással' },
     equipment: ['Fügebearbeitung', 'Kantenmagazin', 'CombiMelt', 'Kappgerät K12', 'Fräsaggregat', 'Radiusziehklinge', 'Eckenrunden AKF'],
     recommended: ['transcompact'],
@@ -206,7 +203,6 @@ export const OTT_PRODUCTS: OttProduct[] = [
       sk: 'Tornado+ presvedčí dĺžkou 6,2 m, hrúbkou hrán 0,3–15 mm a hrúbkou dosiek do 60 mm. Vďaka všestrannej výbave je ideálnou voľbou pre stredné prevádzky.',
       hu: 'A Tornado+ 6,2 m-es hosszával, 0,3–15 mm élvastagságával és akár 60 mm lapvastagságával győz meg. Sokoldalú felszereltsége tökéletes választás változó igényű középüzemek számára.',
     },
-    badge: 'MITTEL',
     usp: { de: 'Bewährtestes Modell der OTT-Serie', en: 'Most proven model in the OTT range', cz: 'Nejověřenější model řady OTT', sk: 'Najoveriteľnejší model radu OTT', hu: 'Az OTT sorozat legbevált modellje' },
     equipment: ['Fügebearbeitung', 'Kantenmagazin', 'CombiMelt', 'Kappgerät', 'Fräsaggregat', 'Ziehklinge'],
     recommended: ['transcompact'],
@@ -221,7 +217,7 @@ export const OTT_PRODUCTS: OttProduct[] = [
       length: '6.2 m',
       edgeThickness: '0.3–15 mm',
       boardThickness: '60 mm',
-      feedSpeed: '12–18 m/min',
+      feedSpeed: '18–20 m/min',
     },
     seoTitle: {
       de: 'Kantenanleimmaschine Tornado+ OTT kaufen – Asamer Händler CZ/SK/HU',
@@ -251,27 +247,26 @@ export const OTT_PRODUCTS: OttProduct[] = [
       hu: 'Rugalmas és professzionális',
     },
     description: {
-      de: 'Die FlexEdge bietet professionelle Kantenbearbeitung mit 7,1 m Baulänge und Vorschubgeschwindigkeiten von 12–20 m/min. Ausgestattet mit Beckhoff 18,5"-Steuerung für maximale Flexibilität und Industrie-4.0-Anbindung.',
-      en: 'The FlexEdge offers professional edgebanding with 7.1 m length and feed speeds of 12–20 m/min. Equipped with a Beckhoff 18.5" control for maximum flexibility and Industry 4.0 connectivity.',
-      cz: 'FlexEdge nabízí profesionální olepování hran s délkou 7,1 m a rychlostí posuvu 12–20 m/min. Vybavena řídicím systémem Beckhoff 18,5" pro maximální flexibilitu a připojení k Průmyslu 4.0.',
-      sk: 'FlexEdge ponúka profesionálne olepovanie hrán s dĺžkou 7,1 m a rýchlosťou posuvu 12–20 m/min. Vybavená riadiacim systémom Beckhoff 18,5" pre maximálnu flexibilitu a pripojenie k Priemyslu 4.0.',
-      hu: 'A FlexEdge professzionális élzárást kínál 7,1 m-es hosszával és 12–20 m/perc előtolási sebességgel. Beckhoff 18,5"-os vezérléssel van felszerelve a maximális rugalmasság és Ipar 4.0 csatlakoztathatóság érdekében.',
+      de: 'Die FlexEdge bietet professionelle Kantenbearbeitung mit 7,1 m Baulänge und Vorschubgeschwindigkeiten von 20–22 m/min. Ausgestattet mit Beckhoff 18,5"-Steuerung für maximale Flexibilität und Industrie-4.0-Anbindung.',
+      en: 'The FlexEdge offers professional edgebanding with 7.1 m length and feed speeds of 20–22 m/min. Equipped with a Beckhoff 18.5" control for maximum flexibility and Industry 4.0 connectivity.',
+      cz: 'FlexEdge nabízí profesionální olepování hran s délkou 7,1 m a rychlostí posuvu 20–22 m/min. Vybavena řídicím systémem Beckhoff 18,5" pro maximální flexibilitu a připojení k Průmyslu 4.0.',
+      sk: 'FlexEdge ponúka profesionálne olepovanie hrán s dĺžkou 7,1 m a rýchlosťou posuvu 20–22 m/min. Vybavená riadiacim systémom Beckhoff 18,5" pre maximálnu flexibilitu a pripojenie k Priemyslu 4.0.',
+      hu: 'A FlexEdge professzionális élzárást kínál 7,1 m-es hosszával és 20–22 m/perc előtolási sebességgel. Beckhoff 18,5"-os vezérléssel van felszerelve a maximális rugalmasság és Ipar 4.0 csatlakoztathatóság érdekében.',
     },
-    badge: 'NEU',
     usp: { de: 'Neueste Maschine – schließt Lücke zwischen Tornado+ und Storm+', en: 'Newest machine – bridges gap between Tornado+ and Storm+', cz: 'Nejnovější stroj – překlenuje mezeru mezi Tornado+ a Storm+', sk: 'Najnovší stroj – preklenuje medzeru medzi Tornado+ a Storm+', hu: 'Legújabb gép – áthidalja a Tornado+ és Storm+ közötti rést' },
     equipment: ['Beckhoff 18,5" Steuerung', 'Fügebearbeitung', 'CombiMelt', 'Fräsaggregat', 'Ziehklinge', 'Eckenrunden'],
     recommended: ['transcompact', 'translift'],
     highlights: {
-      de: ['Beckhoff 18,5" OPC-UA Steuerung serienmäßig', 'Schließt Lücke zwischen Tornado+ und Storm+', 'NEU: Vorschub 12–20 m/min'],
-      en: ['Beckhoff 18.5" OPC-UA control as standard', 'Bridges gap between Tornado+ and Storm+', 'NEW: Feed speed 12–20 m/min'],
-      cz: ['Beckhoff 18,5" OPC-UA řízení standardně', 'Překlenuje mezeru Tornado+ a Storm+', 'NOVÝ: posuv 12–20 m/min'],
-      sk: ['Beckhoff 18,5" OPC-UA riadenie štandardne', 'Preklenuje medzeru Tornado+ a Storm+', 'NOVÝ: posuv 12–20 m/min'],
-      hu: ['Beckhoff 18,5" OPC-UA vezérlés alapfelszerelés', 'Tornado+ és Storm+ közötti rés áthidalása', 'ÚJ: előtolás 12–20 m/perc'],
+      de: ['Beckhoff 18,5" OPC-UA Steuerung serienmäßig', 'Schließt Lücke zwischen Tornado+ und Storm+', 'NEU: Vorschub 20–22 m/min'],
+      en: ['Beckhoff 18.5" OPC-UA control as standard', 'Bridges gap between Tornado+ and Storm+', 'NEW: Feed speed 20–22 m/min'],
+      cz: ['Beckhoff 18,5" OPC-UA řízení standardně', 'Překlenuje mezeru Tornado+ a Storm+', 'NOVÝ: posuv 20–22 m/min'],
+      sk: ['Beckhoff 18,5" OPC-UA riadenie štandardne', 'Preklenuje medzeru Tornado+ a Storm+', 'NOVÝ: posuv 20–22 m/min'],
+      hu: ['Beckhoff 18,5" OPC-UA vezérlés alapfelszerelés', 'Tornado+ és Storm+ közötti rés áthidalása', 'ÚJ: előtolás 20–22 m/perc'],
     },
     specs: {
       length: '7.1 m',
       edgeThickness: '0.3–15 mm',
-      feedSpeed: '12–20 m/min',
+      feedSpeed: '20–22 m/min',
       notes: {
         de: 'Beckhoff 18,5" Steuerung',
         en: 'Beckhoff 18.5" control',
@@ -288,11 +283,11 @@ export const OTT_PRODUCTS: OttProduct[] = [
       hu: 'Élzárógép FlexEdge OTT – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
-      de: 'FlexEdge – professionelle Kantenanleimmaschine mit Beckhoff-Steuerung. 7,1 m, 12–20 m/min Vorschub. Asamer: autorisierter OTT-Händler für CZ, SK & HU.',
-      en: 'FlexEdge – professional edgebander with Beckhoff 18.5" control. 7.1 m, 12–20 m/min feed speed. Asamer: authorized OTT dealer for CZ, SK & HU.',
-      cz: 'FlexEdge – profesionální olepovačka hran s řízením Beckhoff. 7,1 m, posuv 12–20 m/min. Asamer: autorizovaný prodejce OTT pro CZ, SK a HU.',
-      sk: 'FlexEdge – profesionálna olepovačka hrán s riadením Beckhoff. 7,1 m, posuv 12–20 m/min. Asamer: autorizovaný predajca OTT pre CZ, SK a HU.',
-      hu: 'FlexEdge – professzionális élzárógép Beckhoff vezérléssel. 7,1 m, 12–20 m/perc előtolás. Asamer: hivatalos OTT viszonteladó CZ, SK és HU.',
+      de: 'FlexEdge – professionelle Kantenanleimmaschine mit Beckhoff-Steuerung. 7,1 m, 20–22 m/min Vorschub. Asamer: autorisierter OTT-Händler für CZ, SK & HU.',
+      en: 'FlexEdge – professional edgebander with Beckhoff 18.5" control. 7.1 m, 20–22 m/min feed speed. Asamer: authorized OTT dealer for CZ, SK & HU.',
+      cz: 'FlexEdge – profesionální olepovačka hran s řízením Beckhoff. 7,1 m, posuv 20–22 m/min. Asamer: autorizovaný prodejce OTT pro CZ, SK a HU.',
+      sk: 'FlexEdge – profesionálna olepovačka hrán s riadením Beckhoff. 7,1 m, posuv 20–22 m/min. Asamer: autorizovaný predajca OTT pre CZ, SK a HU.',
+      hu: 'FlexEdge – professzionális élzárógép Beckhoff vezérléssel. 7,1 m, 20–22 m/perc előtolás. Asamer: hivatalos OTT viszonteladó CZ, SK és HU.',
     },
   },
   {
@@ -314,22 +309,21 @@ export const OTT_PRODUCTS: OttProduct[] = [
       sk: 'Storm+ spája rýchlosť a spoľahlivosť v 7,8 m dlhom vysokovýkonnom stroji. Hrúbka hrán až 15 mm, hrúbka dosiek do 60 mm a robustná konštrukcia ju robia prvou voľbou pre priemyselnú nepretržitú prevádzku.',
       hu: 'A Storm+ 7,8 m-es nagyteljesítményű gépben egyesíti a sebességet és a megbízhatóságot. A 15 mm-ig terjedő élvastagság, 60 mm-ig terjedő lapvastagság és a robusztus kialakítás az ipari folyamatos üzemeltetés első számú választása.',
     },
-    badge: 'PROFI',
     usp: { de: 'Plattenstärke bis 60 mm – industrieller Dauerbetrieb', en: 'Board thickness up to 60 mm – continuous industrial operation', cz: 'Tloušťka desek do 60 mm – průmyslový nepřetržitý provoz', sk: 'Hrúbka dosiek do 60 mm – priemyselná nepretržitá prevádzka', hu: 'Lapvastagság 60 mm-ig – folyamatos ipari üzem' },
     equipment: ['CombiMelt PUR', 'Fräsaggregat', 'Kappgerät', 'Ziehklinge', 'Eckenrunden AKF', 'Druckzone'],
     recommended: ['translift', 'transedge'],
     highlights: {
-      de: ['Industrieller Dauerbetrieb bis 60 mm Platte', 'Robuste Bauweise für hohe Stückzahlen', 'Vorschub bis 22 m/min'],
-      en: ['Industrial continuous operation up to 60 mm', 'Robust build for high-volume production', 'Feed speed up to 22 m/min'],
-      cz: ['Průmyslový nepřetržitý provoz do 60 mm', 'Robustní konstrukce pro velké série', 'Posuv do 22 m/min'],
-      sk: ['Priemyselná nepretržitá prevádzka do 60 mm', 'Robustná konštrukcia pre veľké série', 'Posuv do 22 m/min'],
-      hu: ['Ipari folyamatos üzem 60 mm-ig', 'Robusztus kialakítás nagy sorozatokhoz', 'Előtolás 22 m/perc-ig'],
+      de: ['Industrieller Dauerbetrieb bis 60 mm Platte', 'Robuste Bauweise für hohe Stückzahlen', 'Vorschub bis 25 m/min'],
+      en: ['Industrial continuous operation up to 60 mm', 'Robust build for high-volume production', 'Feed speed up to 25 m/min'],
+      cz: ['Průmyslový nepřetržitý provoz do 60 mm', 'Robustní konstrukce pro velké série', 'Posuv do 25 m/min'],
+      sk: ['Priemyselná nepretržitá prevádzka do 60 mm', 'Robustná konštrukcia pre veľké série', 'Posuv do 25 m/min'],
+      hu: ['Ipari folyamatos üzem 60 mm-ig', 'Robusztus kialakítás nagy sorozatokhoz', 'Előtolás 25 m/perc-ig'],
     },
     specs: {
       length: '7.8 m',
       edgeThickness: '0.3–15 mm',
       boardThickness: '60 mm',
-      feedSpeed: '12–22 m/min',
+      feedSpeed: '22–25 m/min',
     },
     seoTitle: {
       de: 'Kantenanleimmaschine Storm+ OTT kaufen – Asamer Händler CZ/SK/HU',
@@ -359,27 +353,26 @@ export const OTT_PRODUCTS: OttProduct[] = [
       hu: 'Erős és professzionális',
     },
     description: {
-      de: 'Die StrongEdge ist auf schwere Kanten bis 25 mm ausgelegt. Mit einer Baulänge von 8,6 m und Vorschubgeschwindigkeiten von 12–20 m/min eignet sie sich besonders für den professionellen Möbel- und Innenausbau.',
-      en: 'The StrongEdge is designed for heavy edges up to 25 mm. With a length of 8.6 m and feed speeds of 12–20 m/min, it is particularly suited for professional furniture and interior construction.',
-      cz: 'StrongEdge je navržena pro silné hrany až 25 mm. S délkou 8,6 m a rychlostí posuvu 12–20 m/min je obzvláště vhodná pro profesionální nábytkářství a interiérovou výstavbu.',
-      sk: 'StrongEdge je navrhnutá pre silné hrany až 25 mm. S dĺžkou 8,6 m a rýchlosťou posuvu 12–20 m/min je obzvlášť vhodná pre profesionálne nábytkárstvo a interiérovú výstavbu.',
-      hu: 'A StrongEdge akár 25 mm-es vastag élekhez lett tervezve. 8,6 m-es hosszával és 12–20 m/perc előtolási sebességgel különösen alkalmas professzionális bútor- és belsőépítészeti munkákhoz.',
+      de: 'Die StrongEdge ist auf schwere Kanten bis 25 mm ausgelegt. Mit einer Baulänge von 8,6 m und Vorschubgeschwindigkeiten von 22–25 m/min eignet sie sich besonders für den professionellen Möbel- und Innenausbau.',
+      en: 'The StrongEdge is designed for heavy edges up to 25 mm. With a length of 8.6 m and feed speeds of 22–25 m/min, it is particularly suited for professional furniture and interior construction.',
+      cz: 'StrongEdge je navržena pro silné hrany až 25 mm. S délkou 8,6 m a rychlostí posuvu 22–25 m/min je obzvláště vhodná pro profesionální nábytkářství a interiérovou výstavbu.',
+      sk: 'StrongEdge je navrhnutá pre silné hrany až 25 mm. S dĺžkou 8,6 m a rýchlosťou posuvu 22–25 m/min je obzvlášť vhodná pre profesionálne nábytkárstvo a interiérovú výstavbu.',
+      hu: 'A StrongEdge akár 25 mm-es vastag élekhez lett tervezve. 8,6 m-es hosszával és 22–25 m/perc előtolási sebességgel különösen alkalmas professzionális bútor- és belsőépítészeti munkákhoz.',
     },
-    badge: 'PROFI',
     usp: { de: 'Für Kanten bis 25 mm – ideal für Massivholzprodukte', en: 'For edges up to 25 mm – ideal for solid wood products', cz: 'Pro hrany do 25 mm – ideální pro masivní dřevo', sk: 'Pre hrany do 25 mm – ideálne pre masívne drevo', hu: 'Élekhez 25 mm-ig – ideális tömörfa termékekhez' },
     equipment: ['CombiMelt PUR', 'Schwere Fräsaggregate', 'Kappgerät', 'Ziehklinge', 'Eckenrunden', 'Druckzone'],
     recommended: ['translift', 'transedge'],
     highlights: {
-      de: ['Einzige OTT-Maschine für Kanten bis 25 mm', 'Ideal für Massivholz und Türfronten', 'Vorschub 12–20 m/min'],
-      en: ['Only OTT machine for edges up to 25 mm', 'Ideal for solid wood and door fronts', 'Feed speed 12–20 m/min'],
-      cz: ['Jediný stroj OTT pro hrany do 25 mm', 'Ideální pro masiv a dveřní čela', 'Posuv 12–20 m/min'],
-      sk: ['Jediný stroj OTT pre hrany do 25 mm', 'Ideálne pre masív a dverné čelá', 'Posuv 12–20 m/min'],
-      hu: ['Az egyetlen OTT gép 25 mm-es élekhez', 'Ideális tömörfához és ajtófrontokhoz', 'Előtolás 12–20 m/perc'],
+      de: ['Einzige OTT-Maschine für Kanten bis 25 mm', 'Ideal für Massivholz und Türfronten', 'Vorschub 22–25 m/min'],
+      en: ['Only OTT machine for edges up to 25 mm', 'Ideal for solid wood and door fronts', 'Feed speed 22–25 m/min'],
+      cz: ['Jediný stroj OTT pro hrany do 25 mm', 'Ideální pro masiv a dveřní čela', 'Posuv 22–25 m/min'],
+      sk: ['Jediný stroj OTT pre hrany do 25 mm', 'Ideálne pre masív a dverné čelá', 'Posuv 22–25 m/min'],
+      hu: ['Az egyetlen OTT gép 25 mm-es élekhez', 'Ideális tömörfához és ajtófrontokhoz', 'Előtolás 22–25 m/perc'],
     },
     specs: {
       length: '8.6 m',
       edgeThickness: '0.3–25 mm',
-      feedSpeed: '12–20 m/min',
+      feedSpeed: '22–25 m/min',
     },
     seoTitle: {
       de: 'Kantenanleimmaschine StrongEdge OTT kaufen – Asamer Händler CZ/SK/HU',
@@ -389,11 +382,11 @@ export const OTT_PRODUCTS: OttProduct[] = [
       hu: 'Élzárógép StrongEdge OTT – vásárlás Asamer-en keresztül',
     },
     seoDescription: {
-      de: 'StrongEdge – Kantenanleimmaschine für schwere Kanten bis 25 mm. 8,6 m, 12–20 m/min Vorschub. Asamer: autorisierter OTT-Händler für CZ, SK & HU.',
-      en: 'StrongEdge – edgebander for heavy edges up to 25 mm. 8.6 m, 12–20 m/min feed speed. Asamer: authorized OTT dealer for CZ, SK & HU.',
-      cz: 'StrongEdge – olepovačka hran pro silné hrany do 25 mm. 8,6 m, posuv 12–20 m/min. Asamer: autorizovaný prodejce OTT pro CZ, SK a HU.',
-      sk: 'StrongEdge – olepovačka hrán pre silné hrany do 25 mm. 8,6 m, posuv 12–20 m/min. Asamer: autorizovaný predajca OTT pre CZ, SK a HU.',
-      hu: 'StrongEdge – élzárógép nehéz élekhez 25 mm-ig. 8,6 m, 12–20 m/perc előtolás. Asamer: hivatalos OTT viszonteladó CZ, SK és HU.',
+      de: 'StrongEdge – Kantenanleimmaschine für schwere Kanten bis 25 mm. 8,6 m, 22–25 m/min Vorschub. Asamer: autorisierter OTT-Händler für CZ, SK & HU.',
+      en: 'StrongEdge – edgebander for heavy edges up to 25 mm. 8.6 m, 22–25 m/min feed speed. Asamer: authorized OTT dealer for CZ, SK & HU.',
+      cz: 'StrongEdge – olepovačka hran pro silné hrany do 25 mm. 8,6 m, posuv 22–25 m/min. Asamer: autorizovaný prodejce OTT pro CZ, SK a HU.',
+      sk: 'StrongEdge – olepovačka hrán pre silné hrany do 25 mm. 8,6 m, posuv 22–25 m/min. Asamer: autorizovaný predajca OTT pre CZ, SK a HU.',
+      hu: 'StrongEdge – élzárógép nehéz élekhez 25 mm-ig. 8,6 m, 22–25 m/perc előtolás. Asamer: hivatalos OTT viszonteladó CZ, SK és HU.',
     },
   },
   {
@@ -415,7 +408,6 @@ export const OTT_PRODUCTS: OttProduct[] = [
       sk: 'TopEdge je vlajková loď produktového radu OTT. K dispozícii vo variantoch S a L s dĺžkou 9,2–10,2 m spracováva hrany až 20/25 mm a obrobky do hrúbky 60/80 mm – najvyššia presnosť pre najnáročnejšie požiadavky.',
       hu: 'A TopEdge az OTT termékcsalád zászlóshajója. S és L változatban, 9,2–10,2 m hosszal kapható, akár 20/25 mm-es éleket és 60/80 mm vastag munkadarabokat dolgoz fel – a legmagasabb precizitás a legigényesebb követelményekhez.',
     },
-    badge: 'FLAGGSCHIFF',
     usp: { de: 'S (9,2 m) oder L (10,2 m) – Plattenstärke bis 80 mm', en: 'S (9.2 m) or L (10.2 m) – board thickness up to 80 mm', cz: 'S (9,2 m) nebo L (10,2 m) – tloušťka desek do 80 mm', sk: 'S (9,2 m) alebo L (10,2 m) – hrúbka dosiek do 80 mm', hu: 'S (9,2 m) vagy L (10,2 m) – lapvastagság 80 mm-ig' },
     equipment: ['CombiMelt PUR', 'Beckhoff Steuerung', 'Fräsaggregat', 'Kappgerät', 'Ziehklinge', 'Eckenrunden AKF', 'Druckzone', 'Profilziehklinge'],
     recommended: ['translift', 'transedge'],
@@ -430,7 +422,7 @@ export const OTT_PRODUCTS: OttProduct[] = [
       length: '9.2–10.2 m',
       edgeThickness: '0.3–20/25 mm',
       boardThickness: '60/80 mm',
-      feedSpeed: '12–22 m/min',
+      feedSpeed: '22–25 m/min',
       notes: {
         de: 'S-Variante: bis 60 mm / 20 mm Kante · L-Variante: bis 80 mm / 25 mm Kante',
         en: 'S variant: up to 60 mm / 20 mm edge · L variant: up to 80 mm / 25 mm edge',
@@ -473,7 +465,6 @@ export const OTT_PRODUCTS: OttProduct[] = [
       sk: 'DoorEdition je zákazkové riešenie OTT pre výrobu dverí. Od 8 m dĺžky so špecializovanou technológiou lepenia dverí a skladacích hrán je optimalizovaná pre špecifické požiadavky výroby dverí.',
       hu: 'A DoorEdition egyedi OTT megoldás ajtógyártáshoz. 8 m-es hosszúságtól, speciális ajtó- és hajtogatóragasztási technológiával, az ajtógyártás specifikus követelményeire van optimalizálva.',
     },
-    badge: 'SPEZIAL',
     usp: { de: 'Einzige OTT-Maschine für Türproduktion – kein HOMAG-Pendant in dieser Preisklasse', en: 'Only OTT machine for door production – no HOMAG equivalent at this price point', cz: 'Jediný stroj OTT pro výrobu dveří – bez ekvivalentu HOMAG v této cenové kategorii', sk: 'Jediný stroj OTT pre výrobu dverí – bez ekvivalentu HOMAG v tejto cenovej kategórii', hu: 'Az egyetlen OTT gép ajtógyártáshoz – nincs HOMAG megfelelője ebben az árkategóriában' },
     equipment: ['Tür-Faltleimtechnik', 'CombiMelt PUR', 'Spezial-Fräsaggregat', 'Individuelle Konfiguration'],
     recommended: ['translift'],
@@ -531,7 +522,6 @@ export const OTT_PRODUCTS: OttProduct[] = [
       sk: 'CombiMelt je kompletná servisná stanica pre spracovanie EVA a PUR lepidiel. S dvoma nádobami umožňuje rýchly prechod medzi typmi lepidiel pre vodotesné, čisté lepiace škáry. Ako externý taviaci systém ho možno pripojiť k rôznym olepovačkám OTT.',
       hu: 'A CombiMelt komplett szervizállomás EVA és PUR ragasztók feldolgozásához. Két tartályával lehetővé teszi a gyors váltást ragasztótípusok között vízálló, tiszta ragasztási vonalakhoz. Külső olvasztórendszerként különböző OTT élzárógépekhez csatlakoztatható.',
     },
-    badge: 'ADDON',
     usp: { de: 'Für EVA + PUR – komplette Servicestation erhältlich', en: 'For EVA + PUR – complete service station available', cz: 'Pro EVA + PUR – kompletní servisní stanice', sk: 'Pre EVA + PUR – kompletná servisná stanica', hu: 'EVA + PUR-hoz – komplett szervizállomás' },
     equipment: ['Top-Driven-Roller (patentiert)', 'EVA-Behälter', 'PUR-Behälter', 'Schnellwechselsystem', 'Servicestation'],
     specs: {
@@ -586,7 +576,6 @@ export const OTT_PRODUCTS: OttProduct[] = [
         hu: 'bluEdge featuring HyFuse · élaktiválás hidrogénlánggal · minden OTT modellhez felszerelhető',
       },
     },
-    badge: 'ADDON',
     usp: { de: 'Zero-Gap-Technologie via HyFuse – keine Klebefuge sichtbar', en: 'Zero-gap technology via HyFuse – no glue line visible', cz: 'Zero-gap technologie přes HyFuse – žádná viditelná spára', sk: 'Zero-gap technológia cez HyFuse – žiadna viditeľná škára', hu: 'Zero-gap technológia HyFuse-szal – nincs látható ragasztóvonal' },
     equipment: ['HyFuse Wasserstoff-Brennereinheit', 'Funktionsschicht-Aktivierung', 'Nachrüstbar für alle OTT-Modelle'],
     seoTitle: {
@@ -625,7 +614,6 @@ export const OTT_PRODUCTS: OttProduct[] = [
       sk: 'TRANScompact je kompaktný vratný dopravník s integrovanou funkciou otočenia. Umožňuje krátke vratné dráhy a je ideálny pre menšie výrobné linky s obmedzeným priestorom.',
       hu: 'A TRANScompact kompakt visszaszállító rendszer integrált forgató funkcióval. Rövid visszafutási útvonalakat tesz lehetővé, és ideális kisebb gyártósorokhoz, ahol a hely korlátozott.',
     },
-    badge: 'SYSTEM',
     usp: { de: 'Kompakt mit Drehfunktion – ideal für Pacific+ und Tornado+', en: 'Compact with rotation – ideal for Pacific+ and Tornado+', cz: 'Kompaktní s otočením – ideální pro Pacific+ a Tornado+', sk: 'Kompaktný s otočením – ideálny pre Pacific+ a Tornado+', hu: 'Kompakt forgatóval – ideális Pacific+ és Tornado+ mellé' },
     specs: {
       notes: {
@@ -670,7 +658,6 @@ export const OTT_PRODUCTS: OttProduct[] = [
       sk: 'TRANSlift je zdvíhací vratný systém, ktorý prepravuje obrobky vertikálne. Optimalizuje tok materiálu vo viacúrovňových výrobných linkách a výrazne znižuje nároky na priestor.',
       hu: 'A TRANSlift emelő visszaszállító rendszer, amely függőlegesen szállítja a munkadarabokat. Optimalizálja az anyagáramlást többszintű gyártósorokban, és jelentősen csökkenti a helyigényt.',
     },
-    badge: 'SYSTEM',
     usp: { de: 'Vertikale Rückführung – spart Hallenfläche', en: 'Vertical return – saves floor space', cz: 'Vertikální vracení – šetří podlahovou plochu', sk: 'Vertikálne vracenie – šetrí podlahovú plochu', hu: 'Függőleges visszaszállítás – helytakarékos' },
     specs: {
       notes: {
@@ -715,7 +702,6 @@ export const OTT_PRODUCTS: OttProduct[] = [
       sk: 'TRANSedge je špeciálne optimalizovaný pre olepovacie linky. Ponúka automatické vracenie obrobkov s vysokou taktovacou frekvenciou a bezproblémovú integráciu do existujúcich výrobných procesov.',
       hu: 'A TRANSedge kifejezetten élzáró sorokra van optimalizálva. Automatikus munkadarab-visszaszállítást biztosít magas ütemszámmal és zökkenőmentes integrációt a meglévő gyártási folyamatokba.',
     },
-    badge: 'SYSTEM',
     usp: { de: 'Für Storm+/TopEdge-Linien – hohe Taktrate', en: 'For Storm+/TopEdge lines – high cycle rate', cz: 'Pro linky Storm+/TopEdge – vysoká taktovací frekvence', sk: 'Pre linky Storm+/TopEdge – vysoká taktovacia frekvencia', hu: 'Storm+/TopEdge sorokhoz – magas ütemszám' },
     specs: {
       notes: {

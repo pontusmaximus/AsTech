@@ -4,28 +4,21 @@ export interface ProductCardProps {
   to: string;
   image: string;
   imageAlt: string;
-  badge?: string;
+  /** Kennzahl unter dem Produktnamen, z. B. Vorschub "18 m/min" */
+  kpiLabel?: string;
+  kpiValue?: string;
   categoryLabel?: string;
   name: string;
   bullets?: string[];
   detailLabel: string;
 }
 
-const badgeStyle: Record<string, string> = {
-  NEU: 'bg-emerald-500 text-white',
-  FLAGGSCHIFF: 'bg-primary text-white',
-  SPEZIAL: 'bg-purple-500 text-white',
-  PROFI: 'bg-blue-500 text-white',
-  ADDON: 'bg-amber-600 text-white',
-  SYSTEM: 'bg-cyan-600 text-white',
-  TOP: 'bg-emerald-500 text-white',
-};
-
 const ProductCard = ({
   to,
   image,
   imageAlt,
-  badge,
+  kpiLabel,
+  kpiValue,
   categoryLabel,
   name,
   bullets,
@@ -43,15 +36,6 @@ const ProductCard = ({
         className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]"
         loading="lazy"
       />
-      {badge && (
-        <span
-          className={`absolute top-3 left-3 text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 rounded ${
-            badgeStyle[badge] ?? 'bg-white/15 text-white/70'
-          }`}
-        >
-          {badge}
-        </span>
-      )}
     </div>
 
     {/* Card body */}
@@ -64,6 +48,15 @@ const ProductCard = ({
       <h3 className="text-base font-semibold text-white mb-2 line-clamp-2 leading-snug group-hover:text-primary/90 transition-colors">
         {name}
       </h3>
+
+      {kpiValue && (
+        <div className="flex items-baseline gap-2 mb-3 pb-3 border-b border-white/[0.07]">
+          <span className="text-sm font-semibold text-primary tabular-nums">{kpiValue}</span>
+          {kpiLabel && (
+            <span className="text-[10px] uppercase tracking-widest text-white/35">{kpiLabel}</span>
+          )}
+        </div>
+      )}
 
       {bullets && bullets.length > 0 && (
         <ul className="space-y-1.5 mb-4 flex-1">

@@ -76,10 +76,10 @@ export const EDGEBANDER_GUIDE: EdgebanderGuideContent = {
         en: '3. What is your production volume?',
       },
       body: {
-        cz: 'Třetí kritérium je počet směn a doba provozu. Jednosměnný provoz vystačí s rychlostí posuvu 12–18 m/min. Vícesměnný provoz s 300+ obrobky na směnu vyžaduje 16–25 m/min, automatickou výměnu hran a zásobníky lepidla pro nepřetržitou produkci. Pro průmyslové zákazníky je důležitá také připravenost na ERP/MES integraci přes OPC-UA.',
-        sk: 'Tretím kritériom je počet zmien a doba prevádzky. Jednozmenná prevádzka vystačí s rýchlosťou posuvu 12–18 m/min. Viaczmenná prevádzka s 300+ obrobkami na zmenu vyžaduje 16–25 m/min, automatickú výmenu hrán a zásobníky lepidla pre nepretržitú produkciu. Pre priemyselných zákazníkov je dôležitá tiež pripravenosť na ERP/MES integráciu cez OPC-UA.',
-        de: 'Das dritte Kriterium ist die Schichtzahl und Betriebsdauer. Einschichtbetrieb kommt mit 12–18 m/min Vorschub aus. Mehrschichtbetrieb mit 300+ Werkstücken pro Schicht erfordert 16–25 m/min, automatische Kantenwechsel und Klebstoff-Reservoirs für durchgehende Produktion. Für Industriekunden ist zudem die Anbindung an ERP/MES über OPC-UA wesentlich.',
-        en: 'The third criterion is the number of shifts and operating hours. Single-shift operation works with feed speeds of 12–18 m/min. Multi-shift production with 300+ workpieces per shift requires 16–25 m/min, automatic edge changes and glue reservoirs for continuous production. For industrial customers, ERP/MES integration via OPC-UA is also essential.',
+        cz: 'Třetí kritérium je počet směn a doba provozu. Jednosměnný provoz vystačí s rychlostí posuvu 18–20 m/min. Vícesměnný provoz s 300+ obrobky na směnu vyžaduje 22–25 m/min, automatickou výměnu hran a zásobníky lepidla pro nepřetržitou produkci. Pro průmyslové zákazníky je důležitá také připravenost na ERP/MES integraci přes OPC-UA.',
+        sk: 'Tretím kritériom je počet zmien a doba prevádzky. Jednozmenná prevádzka vystačí s rýchlosťou posuvu 18–20 m/min. Viaczmenná prevádzka s 300+ obrobkami na zmenu vyžaduje 22–25 m/min, automatickú výmenu hrán a zásobníky lepidla pre nepretržitú produkciu. Pre priemyselných zákazníkov je dôležitá tiež pripravenosť na ERP/MES integráciu cez OPC-UA.',
+        de: 'Das dritte Kriterium ist die Schichtzahl und Betriebsdauer. Einschichtbetrieb kommt mit 18–20 m/min Vorschub aus. Mehrschichtbetrieb mit 300+ Werkstücken pro Schicht erfordert 22–25 m/min, automatische Kantenwechsel und Klebstoff-Reservoirs für durchgehende Produktion. Für Industriekunden ist zudem die Anbindung an ERP/MES über OPC-UA wesentlich.',
+        en: 'The third criterion is the number of shifts and operating hours. Single-shift operation works with feed speeds of 18–20 m/min. Multi-shift production with 300+ workpieces per shift requires 22–25 m/min, automatic edge changes and glue reservoirs for continuous production. For industrial customers, ERP/MES integration via OPC-UA is also essential.',
       },
     },
     {
@@ -152,10 +152,10 @@ export const EDGEBANDER_GUIDE: EdgebanderGuideContent = {
         en: 'Which edgebander for a small joinery?',
       },
       answer: {
-        cz: 'Pro malé truhlárny doporučujeme OTT Pacific+ (5,7 m, 18 m/min) jako kompaktní vstupní model, nebo OTT Tornado+ (6,2 m, 12–18 m/min) pro vyšší flexibilitu s možností PUR. Oba modely se vejdou do dílny do 30 m² a zvládnou 20–80 obrobků denně.',
-        sk: 'Pre malé stolárstva odporúčame OTT Pacific+ (5,7 m, 18 m/min) ako kompaktný vstupný model alebo OTT Tornado+ (6,2 m, 12–18 m/min) pre vyššiu flexibilitu s možnosťou PUR. Oba modely sa zmestia do dielne do 30 m² a zvládnu 20–80 obrobkov denne.',
-        de: 'Für kleine Tischlereien empfehlen wir die OTT Pacific+ (5,7 m, 18 m/min) als kompakten Einstieg oder die OTT Tornado+ (6,2 m, 12–18 m/min) für höhere Flexibilität mit PUR-Option. Beide Modelle passen in eine Werkstatt bis 30 m² und schaffen 20–80 Werkstücke pro Tag.',
-        en: 'For small joineries we recommend the OTT Pacific+ (5.7 m, 18 m/min) as a compact entry model or the OTT Tornado+ (6.2 m, 12–18 m/min) for greater flexibility with a PUR option. Both fit a workshop of up to 30 m² and handle 20–80 workpieces per day.',
+        cz: 'Pro malé truhlárny doporučujeme OTT Pacific+ (5,7 m, 18 m/min) jako kompaktní vstupní model, nebo OTT Tornado+ (6,2 m, 18–20 m/min) pro vyšší flexibilitu s možností PUR. Oba modely se vejdou do dílny do 30 m² a zvládnou 20–80 obrobků denně.',
+        sk: 'Pre malé stolárstva odporúčame OTT Pacific+ (5,7 m, 18 m/min) ako kompaktný vstupný model alebo OTT Tornado+ (6,2 m, 18–20 m/min) pre vyššiu flexibilitu s možnosťou PUR. Oba modely sa zmestia do dielne do 30 m² a zvládnu 20–80 obrobkov denne.',
+        de: 'Für kleine Tischlereien empfehlen wir die OTT Pacific+ (5,7 m, 18 m/min) als kompakten Einstieg oder die OTT Tornado+ (6,2 m, 18–20 m/min) für höhere Flexibilität mit PUR-Option. Beide Modelle passen in eine Werkstatt bis 30 m² und schaffen 20–80 Werkstücke pro Tag.',
+        en: 'For small joineries we recommend the OTT Pacific+ (5.7 m, 18 m/min) as a compact entry model or the OTT Tornado+ (6.2 m, 18–20 m/min) for greater flexibility with a PUR option. Both fit a workshop of up to 30 m² and handle 20–80 workpieces per day.',
       },
     },
     {
@@ -351,10 +351,10 @@ export const EDGEBANDER_GUIDE: EdgebanderGuideContent = {
         en: 'Set the operating mode and shifts',
       },
       text: {
-        cz: 'Jednosměnný provoz: 12–18 m/min stačí. Vícesměnný: 16–25 m/min, automatické zásobníky a OPC-UA pro ERP integraci.',
-        sk: 'Jednozmenná prevádzka: 12–18 m/min postačuje. Viaczmenná: 16–25 m/min, automatické zásobníky a OPC-UA pre ERP integráciu.',
-        de: 'Einschicht: 12–18 m/min reichen. Mehrschicht: 16–25 m/min, automatische Magazine und OPC-UA für ERP-Anbindung.',
-        en: 'Single-shift: 12–18 m/min is enough. Multi-shift: 16–25 m/min, automatic magazines and OPC-UA for ERP integration.',
+        cz: 'Jednosměnný provoz: 18–20 m/min stačí. Vícesměnný: 22–25 m/min, automatické zásobníky a OPC-UA pro ERP integraci.',
+        sk: 'Jednozmenná prevádzka: 18–20 m/min postačuje. Viaczmenná: 22–25 m/min, automatické zásobníky a OPC-UA pre ERP integráciu.',
+        de: 'Einschicht: 18–20 m/min reichen. Mehrschicht: 22–25 m/min, automatische Magazine und OPC-UA für ERP-Anbindung.',
+        en: 'Single-shift: 18–20 m/min is enough. Multi-shift: 22–25 m/min, automatic magazines and OPC-UA for ERP integration.',
       },
     },
     {
