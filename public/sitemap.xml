@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://asamer.cz/cz</loc>
-    <lastmod>2026-08-26T18:06:31+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de"/>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/barbaric</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric"/>
@@ -411,7 +411,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/faq</loc>
-    <lastmod>2026-08-21T09:28:54Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/faq"/>
@@ -423,7 +423,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/financovani</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/finanzierung"/>
@@ -435,7 +435,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/gannomat</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat"/>
@@ -903,7 +903,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ima-schelling</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ima-schelling"/>
@@ -915,7 +915,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/imprint</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/impressum"/>
@@ -927,7 +927,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/kontakt</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/kontakt"/>
@@ -939,7 +939,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/mayer</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer"/>
@@ -1083,7 +1083,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/obchodni-podminky</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/agb"/>
@@ -1095,7 +1095,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ochrana-osobnich-udaju</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/datenschutz"/>
@@ -1107,7 +1107,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott"/>
@@ -1118,8 +1118,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott"/>
   </url>
   <url>
+    <loc>https://asamer.cz/cz/ott/lepici-technologie</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/gluing-technology"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/lepici-technologie"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/lepiaca-technologia"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/ragasztasi-technologia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/lepici-technologie"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/cz/ott/lepici-technologie/bluedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie/bluedge"/>
@@ -1131,7 +1143,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/lepici-technologie/combimelt</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie/combimelt"/>
@@ -1142,8 +1154,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/lepici-technologie/combimelt"/>
   </url>
   <url>
+    <loc>https://asamer.cz/cz/ott/olepovacky-hran</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/edgebanding-machines"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/olepovacky-hran"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/olepovacky-hran"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/elzarogepek"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/olepovacky-hran"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/cz/ott/olepovacky-hran/door-edition</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/door-edition"/>
@@ -1155,7 +1179,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/olepovacky-hran/flexedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/flexedge"/>
@@ -1167,7 +1191,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/olepovacky-hran/pacific-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/pacific-plus"/>
@@ -1179,7 +1203,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/olepovacky-hran/storm-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/storm-plus"/>
@@ -1191,7 +1215,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/olepovacky-hran/strongedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/strongedge"/>
@@ -1203,7 +1227,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/olepovacky-hran/topedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/topedge"/>
@@ -1215,7 +1239,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/olepovacky-hran/tornado-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/tornado-plus"/>
@@ -1226,8 +1250,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/olepovacky-hran/tornado-plus"/>
   </url>
   <url>
+    <loc>https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/return-systems"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/spetne-dopravnikove-systemy"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/visszafutoszalagok"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy/transcompact</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/transcompact"/>
@@ -1239,7 +1275,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy/transedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/transedge"/>
@@ -1251,7 +1287,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy/translift</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/translift"/>
@@ -1263,7 +1299,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pouzite-stroje</loc>
-    <lastmod>2026-08-11T22:07:16+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gebrauchtmaschinen"/>
@@ -1359,7 +1395,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/automatizace-skladu</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/lagerautomatisierung"/>
@@ -1371,7 +1407,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/dotace-drevoobrabeci-stroje-cz-2026</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026"/>
@@ -1383,7 +1419,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/formatovaci-pila-hlinik-vs-drevo</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz"/>
@@ -1395,7 +1431,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/pur-vs-eva</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/pur-vs-eva"/>
@@ -1407,7 +1443,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/vakuovy-zvedak-holz</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/vakuumheber-holz"/>
@@ -1419,7 +1455,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen"/>
@@ -1431,7 +1467,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/reseni</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/loesungen"/>
@@ -1443,7 +1479,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/cz/servis</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/service"/>
@@ -1455,7 +1491,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de</loc>
-    <lastmod>2026-08-26T18:06:31+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de"/>
@@ -1467,7 +1503,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/agb</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/agb"/>
@@ -1479,7 +1515,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/barbaric</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric"/>
@@ -1875,7 +1911,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/datenschutz</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/datenschutz"/>
@@ -1887,7 +1923,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/faq</loc>
-    <lastmod>2026-08-21T09:28:54Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/faq"/>
@@ -1899,7 +1935,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/finanzierung</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/finanzierung"/>
@@ -1911,7 +1947,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gannomat</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat"/>
@@ -2379,7 +2415,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/gebrauchtmaschinen</loc>
-    <lastmod>2026-08-11T22:07:16+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gebrauchtmaschinen"/>
@@ -2475,7 +2511,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ima-schelling</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ima-schelling"/>
@@ -2487,7 +2523,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/impressum</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/impressum"/>
@@ -2499,7 +2535,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/kontakt</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/kontakt"/>
@@ -2511,7 +2547,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/loesungen</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/loesungen"/>
@@ -2523,7 +2559,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/mayer</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer"/>
@@ -2667,7 +2703,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott"/>
@@ -2678,8 +2714,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott"/>
   </url>
   <url>
+    <loc>https://asamer.cz/de/ott/kantenanleimmaschinen</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/edgebanding-machines"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/olepovacky-hran"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/olepovacky-hran"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/elzarogepek"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/olepovacky-hran"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/de/ott/kantenanleimmaschinen/door-edition</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/door-edition"/>
@@ -2691,7 +2739,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/kantenanleimmaschinen/flexedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/flexedge"/>
@@ -2703,7 +2751,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/kantenanleimmaschinen/pacific-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/pacific-plus"/>
@@ -2715,7 +2763,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/kantenanleimmaschinen/storm-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/storm-plus"/>
@@ -2727,7 +2775,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/kantenanleimmaschinen/strongedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/strongedge"/>
@@ -2739,7 +2787,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/kantenanleimmaschinen/topedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/topedge"/>
@@ -2751,7 +2799,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/kantenanleimmaschinen/tornado-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/tornado-plus"/>
@@ -2762,8 +2810,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/olepovacky-hran/tornado-plus"/>
   </url>
   <url>
+    <loc>https://asamer.cz/de/ott/klebetechnologie</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/gluing-technology"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/lepici-technologie"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/lepiaca-technologia"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/ragasztasi-technologia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/lepici-technologie"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/de/ott/klebetechnologie/bluedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie/bluedge"/>
@@ -2775,7 +2835,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/klebetechnologie/combimelt</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie/combimelt"/>
@@ -2786,8 +2846,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/lepici-technologie/combimelt"/>
   </url>
   <url>
+    <loc>https://asamer.cz/de/ott/ruecktransportsysteme</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/return-systems"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/spetne-dopravnikove-systemy"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/visszafutoszalagok"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/de/ott/ruecktransportsysteme/transcompact</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/transcompact"/>
@@ -2799,7 +2871,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/ruecktransportsysteme/transedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/transedge"/>
@@ -2811,7 +2883,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ott/ruecktransportsysteme/translift</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/translift"/>
@@ -2823,7 +2895,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026"/>
@@ -2835,7 +2907,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz"/>
@@ -2847,7 +2919,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen"/>
@@ -2859,7 +2931,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/lagerautomatisierung</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/lagerautomatisierung"/>
@@ -2871,7 +2943,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/pur-vs-eva</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/pur-vs-eva"/>
@@ -2883,7 +2955,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/ratgeber/vakuumheber-holz</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/vakuumheber-holz"/>
@@ -2895,7 +2967,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/de/service</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/service"/>
@@ -2907,7 +2979,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en</loc>
-    <lastmod>2026-08-26T18:06:31+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de"/>
@@ -2919,7 +2991,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/barbaric</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric"/>
@@ -3315,7 +3387,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/contact</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/kontakt"/>
@@ -3327,7 +3399,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/faq</loc>
-    <lastmod>2026-08-21T09:28:54Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/faq"/>
@@ -3339,7 +3411,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/financing</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/finanzierung"/>
@@ -3351,7 +3423,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/gannomat</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat"/>
@@ -3819,7 +3891,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/choose-edgebander</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen"/>
@@ -3831,7 +3903,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/funding-woodworking-machines-cz-2026</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026"/>
@@ -3843,7 +3915,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/panel-saw-aluminium-vs-wood</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz"/>
@@ -3855,7 +3927,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/pur-vs-eva</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/pur-vs-eva"/>
@@ -3867,7 +3939,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/vacuum-lifter-wood</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/vakuumheber-holz"/>
@@ -3879,7 +3951,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/guide/warehouse-automation</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/lagerautomatisierung"/>
@@ -3891,7 +3963,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ima-schelling</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ima-schelling"/>
@@ -3903,7 +3975,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/imprint</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/impressum"/>
@@ -3915,7 +3987,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/mayer</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer"/>
@@ -4059,7 +4131,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott"/>
@@ -4070,8 +4142,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott"/>
   </url>
   <url>
+    <loc>https://asamer.cz/en/ott/edgebanding-machines</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/edgebanding-machines"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/olepovacky-hran"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/olepovacky-hran"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/elzarogepek"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/olepovacky-hran"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/en/ott/edgebanding-machines/door-edition</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/door-edition"/>
@@ -4083,7 +4167,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/edgebanding-machines/flexedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/flexedge"/>
@@ -4095,7 +4179,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/edgebanding-machines/pacific-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/pacific-plus"/>
@@ -4107,7 +4191,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/edgebanding-machines/storm-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/storm-plus"/>
@@ -4119,7 +4203,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/edgebanding-machines/strongedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/strongedge"/>
@@ -4131,7 +4215,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/edgebanding-machines/topedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/topedge"/>
@@ -4143,7 +4227,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/edgebanding-machines/tornado-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/tornado-plus"/>
@@ -4154,8 +4238,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/olepovacky-hran/tornado-plus"/>
   </url>
   <url>
+    <loc>https://asamer.cz/en/ott/gluing-technology</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/gluing-technology"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/lepici-technologie"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/lepiaca-technologia"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/ragasztasi-technologia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/lepici-technologie"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/en/ott/gluing-technology/bluedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie/bluedge"/>
@@ -4167,7 +4263,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/gluing-technology/combimelt</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie/combimelt"/>
@@ -4178,8 +4274,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/lepici-technologie/combimelt"/>
   </url>
   <url>
+    <loc>https://asamer.cz/en/ott/return-systems</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/return-systems"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/spetne-dopravnikove-systemy"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/visszafutoszalagok"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/en/ott/return-systems/transcompact</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/transcompact"/>
@@ -4191,7 +4299,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/return-systems/transedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/transedge"/>
@@ -4203,7 +4311,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/ott/return-systems/translift</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/translift"/>
@@ -4215,7 +4323,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/privacy</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/datenschutz"/>
@@ -4227,7 +4335,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/service</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/service"/>
@@ -4239,7 +4347,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/solutions</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/loesungen"/>
@@ -4251,7 +4359,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/terms</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/agb"/>
@@ -4263,7 +4371,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/en/used-machines</loc>
-    <lastmod>2026-08-11T22:07:16+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gebrauchtmaschinen"/>
@@ -4359,7 +4467,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu</loc>
-    <lastmod>2026-08-26T18:06:31+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de"/>
@@ -4371,7 +4479,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/adatvedelem</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/datenschutz"/>
@@ -4383,7 +4491,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/altalanos-szerzodesi-feltetelek</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/agb"/>
@@ -4395,7 +4503,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/barbaric</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric"/>
@@ -4791,7 +4899,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/faq</loc>
-    <lastmod>2026-08-21T09:28:54Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/faq"/>
@@ -4803,7 +4911,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/finanszirozas</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/finanzierung"/>
@@ -4815,7 +4923,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/gannomat</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat"/>
@@ -5283,7 +5391,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/hasznalt-gepek</loc>
-    <lastmod>2026-08-11T22:07:16+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gebrauchtmaschinen"/>
@@ -5379,7 +5487,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ima-schelling</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ima-schelling"/>
@@ -5391,7 +5499,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/impresszum</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/impressum"/>
@@ -5403,7 +5511,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/kapcsolat</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/kontakt"/>
@@ -5415,7 +5523,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/mayer</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer"/>
@@ -5559,7 +5667,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/megoldasok</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/loesungen"/>
@@ -5571,7 +5679,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott"/>
@@ -5582,8 +5690,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott"/>
   </url>
   <url>
+    <loc>https://asamer.cz/hu/ott/elzarogepek</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/edgebanding-machines"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/olepovacky-hran"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/olepovacky-hran"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/elzarogepek"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/olepovacky-hran"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/hu/ott/elzarogepek/door-edition</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/door-edition"/>
@@ -5595,7 +5715,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/elzarogepek/flexedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/flexedge"/>
@@ -5607,7 +5727,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/elzarogepek/pacific-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/pacific-plus"/>
@@ -5619,7 +5739,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/elzarogepek/storm-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/storm-plus"/>
@@ -5631,7 +5751,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/elzarogepek/strongedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/strongedge"/>
@@ -5643,7 +5763,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/elzarogepek/topedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/topedge"/>
@@ -5655,7 +5775,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/elzarogepek/tornado-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/tornado-plus"/>
@@ -5666,8 +5786,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/olepovacky-hran/tornado-plus"/>
   </url>
   <url>
+    <loc>https://asamer.cz/hu/ott/ragasztasi-technologia</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/gluing-technology"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/lepici-technologie"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/lepiaca-technologia"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/ragasztasi-technologia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/lepici-technologie"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/hu/ott/ragasztasi-technologia/bluedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie/bluedge"/>
@@ -5679,7 +5811,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/ragasztasi-technologia/combimelt</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie/combimelt"/>
@@ -5690,8 +5822,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/lepici-technologie/combimelt"/>
   </url>
   <url>
+    <loc>https://asamer.cz/hu/ott/visszafutoszalagok</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/return-systems"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/spetne-dopravnikove-systemy"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/visszafutoszalagok"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/hu/ott/visszafutoszalagok/transcompact</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/transcompact"/>
@@ -5703,7 +5847,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/visszafutoszalagok/transedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/transedge"/>
@@ -5715,7 +5859,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/ott/visszafutoszalagok/translift</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/translift"/>
@@ -5727,7 +5871,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/szerviz</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/service"/>
@@ -5739,7 +5883,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/elzarogep-valasztas</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen"/>
@@ -5751,7 +5895,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/formatizalo-furesz-aluminium-vs-fa</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz"/>
@@ -5763,7 +5907,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/pur-vs-eva</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/pur-vs-eva"/>
@@ -5775,7 +5919,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/raktarautomatizalas</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/lagerautomatisierung"/>
@@ -5787,7 +5931,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/tamogatasok-csehorszag-2026</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026"/>
@@ -5799,7 +5943,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/hu/utmutato/vakuumemelo-fa</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/vakuumheber-holz"/>
@@ -5811,7 +5955,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk</loc>
-    <lastmod>2026-08-26T18:06:31+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de"/>
@@ -5823,7 +5967,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/barbaric</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/barbaric"/>
@@ -6219,7 +6363,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/faq</loc>
-    <lastmod>2026-08-21T09:28:54Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/faq"/>
@@ -6231,7 +6375,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/financovanie</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/finanzierung"/>
@@ -6243,7 +6387,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/gannomat</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gannomat"/>
@@ -6711,7 +6855,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ima-schelling</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ima-schelling"/>
@@ -6723,7 +6867,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/imprint</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/impressum"/>
@@ -6735,7 +6879,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/kontakt</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/kontakt"/>
@@ -6747,7 +6891,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/mayer</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/mayer"/>
@@ -6891,7 +7035,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/obchodne-podmienky</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/agb"/>
@@ -6903,7 +7047,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ochrana-osobnych-udajov</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/datenschutz"/>
@@ -6915,7 +7059,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott"/>
@@ -6926,8 +7070,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott"/>
   </url>
   <url>
+    <loc>https://asamer.cz/sk/ott/lepiaca-technologia</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/gluing-technology"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/lepici-technologie"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/lepiaca-technologia"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/ragasztasi-technologia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/lepici-technologie"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/sk/ott/lepiaca-technologia/bluedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie/bluedge"/>
@@ -6939,7 +7095,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/lepiaca-technologia/combimelt</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/klebetechnologie/combimelt"/>
@@ -6950,8 +7106,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/lepici-technologie/combimelt"/>
   </url>
   <url>
+    <loc>https://asamer.cz/sk/ott/olepovacky-hran</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/edgebanding-machines"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/olepovacky-hran"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/olepovacky-hran"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/elzarogepek"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/olepovacky-hran"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/sk/ott/olepovacky-hran/door-edition</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/door-edition"/>
@@ -6963,7 +7131,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/olepovacky-hran/flexedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/flexedge"/>
@@ -6975,7 +7143,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/olepovacky-hran/pacific-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/pacific-plus"/>
@@ -6987,7 +7155,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/olepovacky-hran/storm-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/storm-plus"/>
@@ -6999,7 +7167,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/olepovacky-hran/strongedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/strongedge"/>
@@ -7011,7 +7179,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/olepovacky-hran/topedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/topedge"/>
@@ -7023,7 +7191,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/olepovacky-hran/tornado-plus</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/kantenanleimmaschinen/tornado-plus"/>
@@ -7034,8 +7202,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/olepovacky-hran/tornado-plus"/>
   </url>
   <url>
+    <loc>https://asamer.cz/sk/ott/spetne-dopravnikove-systemy</loc>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asamer.cz/en/ott/return-systems"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://asamer.cz/sk/ott/spetne-dopravnikove-systemy"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://asamer.cz/hu/ott/visszafutoszalagok"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asamer.cz/cz/ott/zpetne-dopravnikove-systemy"/>
+  </url>
+  <url>
     <loc>https://asamer.cz/sk/ott/spetne-dopravnikove-systemy/transcompact</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/transcompact"/>
@@ -7047,7 +7227,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/spetne-dopravnikove-systemy/transedge</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/transedge"/>
@@ -7059,7 +7239,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/ott/spetne-dopravnikove-systemy/translift</loc>
-    <lastmod>2026-08-21T09:38:28Z</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ott/ruecktransportsysteme/translift"/>
@@ -7071,7 +7251,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/pouzite-stroje</loc>
-    <lastmod>2026-08-11T22:07:16+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/gebrauchtmaschinen"/>
@@ -7167,7 +7347,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/riesenia</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/loesungen"/>
@@ -7179,7 +7359,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/servis</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/service"/>
@@ -7191,7 +7371,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/automatizacia-skladu</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/lagerautomatisierung"/>
@@ -7203,7 +7383,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/dotacie-stroje-cz-2026</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/foerderung-holzbearbeitung-cz-2026"/>
@@ -7215,7 +7395,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/formatovacia-pila-hlinik-vs-drevo</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/formatsaege-aluminium-vs-holz"/>
@@ -7227,7 +7407,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/pur-vs-eva</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/pur-vs-eva"/>
@@ -7239,7 +7419,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/vakuovy-zdvihak-drevo</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/vakuumheber-holz"/>
@@ -7251,7 +7431,7 @@
   </url>
   <url>
     <loc>https://asamer.cz/sk/sprievodca/vyber-olepovacky-hran</loc>
-    <lastmod>2026-06-26T13:39:10+02:00</lastmod>
+    <lastmod>2026-08-28T03:01:45+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://asamer.cz/de/ratgeber/kantenanleimmaschine-waehlen"/>

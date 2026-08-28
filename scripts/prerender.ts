@@ -48,7 +48,9 @@ import {
   HREFLANG_DEFAULT,
   languageToHreflang,
 } from '../src/lib/language';
-import { OTT_PRODUCTS, buildOttProductPath } from '../src/data/ottProducts';
+import { OTT_PRODUCTS, buildOttProductPath, buildOttCategoryPath } from '../src/data/ottProducts';
+import type { OttCategory } from '../src/data/ottProducts';
+import { OTT_CATEGORY_META } from '../src/data/ottCategoryMeta';
 import { MAYER_PRODUCTS, buildMayerProductPath } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, buildBarbaricProductPath } from '../src/data/barbaricProducts';
 import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannomatProducts';
@@ -117,6 +119,26 @@ for (const config of Object.values(SEO_ROUTES)) {
       xDefaultHref: buildCanonicalUrl(HREFLANG_DEFAULT, getSlugForLang(config, HREFLANG_DEFAULT)),
       image: DEFAULT_OG_IMAGE,
       imageDims: { w: 1200, h: 630 },
+    });
+  }
+}
+
+// 1b. OTT-Kategorieseiten (/ott/{kategorie-slug})
+for (const category of Object.keys(OTT_CATEGORY_META) as OttCategory[]) {
+  const meta = OTT_CATEGORY_META[category];
+  const firstProduct = OTT_PRODUCTS.find((p) => p.category === category);
+  for (const lang of SUPPORTED_LANGUAGES) {
+    const build = (al: Language) => buildLocalizedPath(al, buildOttCategoryPath(al, category));
+    const path = build(lang);
+    pages.push({
+      path,
+      lang,
+      title: meta.seoTitle[lang],
+      description: meta.seoDescription[lang],
+      canonical: `${CANONICAL_DOMAIN}${path}`,
+      alternates: makeAlternates(build),
+      xDefaultHref: `${CANONICAL_DOMAIN}${build(HREFLANG_DEFAULT)}`,
+      image: firstProduct ? absImg(firstProduct.image) : DEFAULT_OG_IMAGE,
     });
   }
 }

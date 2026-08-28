@@ -28,6 +28,7 @@ const TermsPage = lazy(() => import('./pages/TermsPage'));
 const UsedMachinesPage = lazy(() => import('./pages/UsedMachinesPage'));
 const UsedMachineDetailPage = lazy(() => import('./pages/UsedMachineDetailPage'));
 const OttProductPage = lazy(() => import('./pages/OttProductPage'));
+const OttCategoryPage = lazy(() => import('./pages/OttCategoryPage'));
 const MayerProductPage = lazy(() => import('./pages/MayerProductPage'));
 const BarbaricProductPage = lazy(() => import('./pages/BarbaricProductPage'));
 const GannomatPage = lazy(() => import('./pages/GannomatPage'));
@@ -196,6 +197,7 @@ export const AppRoutes = () => {
         <Route path="mayer" element={<MayerPage />} />
         <Route path="mayer/:category/:model" element={<LocalizedMayerProductRoute />} />
         <Route path="ott" element={<OttPage />} />
+        <Route path="ott/:category" element={<OttCategoryPage />} />
         <Route path="ott/:category/:model" element={<LocalizedOttProductRoute />} />
         <Route path="barbaric" element={<BarbaricPage />} />
         <Route path="barbaric/:category/:model" element={<LocalizedBarbaricProductRoute />} />

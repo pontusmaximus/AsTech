@@ -48,6 +48,10 @@ export const findOttCategoryBySlug = (slug: string): OttCategory | undefined => 
   return undefined;
 };
 
+/** Build the full path for a category overview page: /ott/{localized-category} */
+export const buildOttCategoryPath = (lang: Language, category: OttCategory): string =>
+  `/ott/${OTT_CATEGORY_SLUGS[category][lang]}`;
+
 /** Build the full path for a product: /ott/{localized-category}/{model} */
 export const buildOttProductPath = (lang: Language, product: OttProduct): string =>
   `/ott/${OTT_CATEGORY_SLUGS[product.category][lang]}/${product.slug}`;

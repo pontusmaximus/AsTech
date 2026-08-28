@@ -108,6 +108,21 @@ const brands = [
 ] as const;
 
 for (const brand of brands) {
+  // Kategorie-Übersichtsseiten (bisher nur OTT als Seite ausgebaut; die
+  // Varianten in fremder Sprache fängt eine 301-Regel aus vercel.json ab).
+  if (brand.slug === 'ott') {
+    const ottCategories = [...new Set(brand.products.map((p) => p.category as string))];
+    for (const category of ottCategories) {
+      for (const lang of SUPPORTED_LANGUAGES) {
+        const right = brand.correct(category as never, lang);
+        const target = buildLocalizedPath(lang, `/${brand.slug}/${right}`);
+        const catVariants = SUPPORTED_LANGUAGES.map((l) => brand.correct(category as never, l));
+        for (const variant of new Set(catVariants)) {
+          push(buildLocalizedPath(lang, `/${brand.slug}/${variant}`), 'produkt-kategorie-variante', target);
+        }
+      }
+    }
+  }
   for (const product of brand.products) {
     for (const lang of SUPPORTED_LANGUAGES) {
       const right = brand.correct(product.category as never, lang);

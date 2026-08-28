@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowUpRight, Flame, Droplets, Monitor, Wrench, Flag, Check, X, AlertTriangle, MapPin, Factory, Handshake, Network } from 'lucide-react';
 import ProductCard from '../components/manufacturer/ProductCard';
 import gsap from 'gsap';
@@ -12,10 +13,8 @@ import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, itemListSchema, faqPageSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
-import { getOttProductsByCategory, buildOttProductPath, OTT_CATEGORY_LABELS } from '../data/ottProducts';
+import { getOttProductsByCategory, buildOttProductPath, buildOttCategoryPath, OTT_CATEGORY_LABELS } from '../data/ottProducts';
 import type { OttCategory } from '../data/ottProducts';
-import { OTT_CATEGORY_SEO } from '../data/seo/ottSeoContent';
-import CategorySeoBlock from '../components/seo/CategorySeoBlock';
 
 const OttPage = () => {
   const { lang, buildPath } = useLanguage();
@@ -159,7 +158,16 @@ const OttPage = () => {
 
               {/* Product categories */}
               {categoryData.map((c) => (
-                <CategorySection key={c.cat} id={c.cat} label={OTT_CATEGORY_LABELS[c.cat][lang]} productCount={c.products.length}>
+                <CategorySection
+                  key={c.cat}
+                  id={c.cat}
+                  label={OTT_CATEGORY_LABELS[c.cat][lang]}
+                  productCount={c.products.length}
+                  moreLink={{
+                    to: buildPath(buildOttCategoryPath(lang, c.cat)),
+                    label: tr('Kategorie-Übersicht', 'Category overview', 'Přehled kategorie'),
+                  }}
+                >
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {c.products.map((product) => (
                       <ProductCard
@@ -181,10 +189,26 @@ const OttPage = () => {
           </div>
         </div>
 
-        {/* ====== 2b. SEO Content (per-category) ====== */}
-        {categoryData.map((c) => OTT_CATEGORY_SEO[c.cat] && (
-          <CategorySeoBlock key={`seo-${c.cat}`} content={OTT_CATEGORY_SEO[c.cat]} lang={lang} tr={tr} />
-        ))}
+        {/* ====== 2b. Kategorie-Übersichtsseiten ======
+            Die ausführlichen Kategorie-SEO-Inhalte wohnen auf den eigenen
+            Kategorieseiten (/ott/{kategorie}) — hier nur die Wegweiser. */}
+        <div className="container-wide pb-4">
+          <div className="grid sm:grid-cols-3 gap-3 max-w-4xl">
+            {categoryData.map((c) => (
+              <Link
+                key={`cat-link-${c.cat}`}
+                to={buildPath(buildOttCategoryPath(lang, c.cat))}
+                className="group flex items-center justify-between gap-3 p-4 rounded-xl border border-white/8 bg-white/[0.02] hover:border-primary/40 hover:bg-white/[0.04] transition-colors"
+              >
+                <div>
+                  <div className="text-sm font-medium text-white/85 group-hover:text-white transition-colors">{OTT_CATEGORY_LABELS[c.cat][lang]}</div>
+                  <div className="text-xs text-white/35 mt-0.5">{c.products.length} {tr('Modelle im Detail', 'models in detail', 'modelů v detailu')}</div>
+                </div>
+                <ArrowUpRight className="w-4 h-4 text-white/25 group-hover:text-primary transition-colors shrink-0" />
+              </Link>
+            ))}
+          </div>
+        </div>
 
         {/* ====== 3. SECONDARY INFO ====== */}
         <div className="border-t border-white/5">

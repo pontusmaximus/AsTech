@@ -3,6 +3,7 @@ import { ArrowUp, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { trackEvent } from '../lib/analytics';
+import { buildOttCategoryPath } from '../data/ottProducts';
 
 const Footer = () => {
   const { lang, t, buildPath } = useLanguage();
@@ -141,6 +142,11 @@ const Footer = () => {
               <li>
                 <Link to={buildPath('/ott')} className="text-white/55 text-sm hover:text-white transition-colors">
                   {tr('OTT Kantenleimer', 'OTT Edgebanders', 'Olepovačky hran OTT')}
+                </Link>
+              </li>
+              <li>
+                <Link to={buildPath(buildOttCategoryPath(lang, 'edgebanding'))} className="text-white/55 text-sm hover:text-white transition-colors">
+                  {tr('Kantenanleimmaschinen', 'Edgebanding machines', 'Olepovačky hran')}
                 </Link>
               </li>
               <li>

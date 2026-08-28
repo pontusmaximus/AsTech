@@ -12,7 +12,9 @@ import {
   INDEXABLE_LANGUAGES,
   languageToHreflang,
 } from '../src/lib/language';
-import { OTT_PRODUCTS, buildOttProductPath } from '../src/data/ottProducts';
+import { OTT_PRODUCTS, buildOttProductPath, buildOttCategoryPath } from '../src/data/ottProducts';
+import type { OttCategory } from '../src/data/ottProducts';
+import { OTT_CATEGORY_META } from '../src/data/ottCategoryMeta';
 import { MAYER_PRODUCTS, buildMayerProductPath } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, buildBarbaricProductPath } from '../src/data/barbaricProducts';
 import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannomatProducts';
@@ -69,6 +71,32 @@ Object.entries(SEO_ROUTES).forEach(([routeKey, config]) => {
       url: `${CANONICAL_DOMAIN}${localizedPath}`,
       canonicalSlug: config.slug,
       lastmod: lastmod.get(staticKey(routeKey as SeoRouteKey)),
+      alternates,
+      defaultUrl,
+    });
+  });
+});
+
+// OTT category overview pages (/ott/{localized-category}).
+// lastmod: das juengste Produkt der Kategorie — die Uebersicht aendert sich,
+// wenn sich ihre Produkte aendern.
+(Object.keys(OTT_CATEGORY_META) as OttCategory[]).forEach((category) => {
+  const productDates = OTT_PRODUCTS.filter((p) => p.category === category)
+    .map((p) => lastmod.get(productKey('ott', p.slug)))
+    .filter((d): d is string => Boolean(d));
+  const categoryLastmod = productDates.length > 0 ? productDates.sort().at(-1)! : lastmod.get(staticKey('ott'));
+  INDEXABLE_LANGUAGES.forEach((lang) => {
+    const categoryPath = buildOttCategoryPath(lang, category);
+    const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
+      lang: altLang,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(altLang, buildOttCategoryPath(altLang, category))}`,
+    }));
+    const defaultUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildOttCategoryPath(HREFLANG_DEFAULT, category))}`;
+    entries.push({
+      lang,
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, categoryPath)}`,
+      canonicalSlug: `/ott-category/${category}`,
+      lastmod: categoryLastmod,
       alternates,
       defaultUrl,
     });
