@@ -25,9 +25,9 @@ Widerspruch, der im günstigsten Fall ignoriert und im ungünstigsten als Duplik
 
 | Ebene | Sprache | vorhanden | fehlt | Abdeckung |
 |---|---|---:|---:|---:|
-| A · Datenmodule (`MultiLangText`) | SK | 1254 | 752 | **62.5 %** |
+| A · Datenmodule (`MultiLangText`) | SK | 1314 | 692 | **65.5 %** |
 | A · Datenmodule (`MultiLangText`) | HU | 1891 | 115 | **94.3 %** |
-| B · Seitentexte (`tr()`) | SK | 39 | 684 | **5.4 %** |
+| B · Seitentexte (`tr()`) | SK | 41 | 682 | **5.7 %** |
 | B · Seitentexte (`tr()`) | HU | 731 | 0 | **100.0 %** |
 
 ## Eigener Befund: `tr()`-Aufrufe mit dynamischem Text
@@ -431,9 +431,9 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 384: `Nechte se nezávazně poradit – zanalyzujeme váš materiálový tok a doporučíme vhodný systém BARBARIC.`
 - Zeile 397: `Systémy BARBARIC`
 
-## `src/pages/OttPage.tsx` (40)
+## `src/pages/OttPage.tsx` (38)
 
-### SK — 40 fehlend
+### SK — 38 fehlend
 
 - Zeile 38: `Co je olepovačka hran OTT?`
 - Zeile 39: `Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse.`
@@ -445,9 +445,7 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 63: `Ano. Asamer nabízí nové i technicky prověřené použité olepovačky hran OTT včetně servisu a montáže v ČR, na Slovensku a v Maďarsku.`
 - Zeile 85: `OTT olepovačky hran`
 - Zeile 101: `Nové standardy pro PUR/EVA`
-- Zeile 112: `Německo · Olepování hran`
-- Zeile 114: `Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse. OTT je německý výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.`
-- Zeile 123: `Made in Germany`
+- Zeile 114: `Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge HyFuse. OTT je rakouský výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.`
 - Zeile 128: `Exkluzivní prodejce`
 - Zeile 137: `Rozhraní`
 - Zeile 195: `Proč OTT přes Asamer?`
@@ -770,8 +768,8 @@ pro každého`
 - Zeile 24: `Zakázková řezací řešení`
 - Zeile 55: `Mayer formátovací pily`
 - Zeile 70: `Nárezové centrum`
-- Zeile 81: `Rakousko · Felder Group · Formátovací pily`
 - Zeile 83: `Mayer (Felder Group) vyrábí horizontální formátovací pily s tlačným trámem pro zpracování dřeva, plastů a kovů. Řada Kappa Automatic (80–140) se specializuje na dřevo a deskové materiály, Advanced Line (100–250) řeže hliník, neželezné kovy a plasty. Asamer je autorizovaný prodejce Mayer pro CZ, SK a HU s lokálním servisem a skladem náhradních dílů.`
+- Zeile 89: `Made in Germany`
 - Zeile 92: `Na místě`
 - Zeile 92: `Servis a náhradní díly`
 - Zeile 140: `Vakuové podávání, sklady a stoly jako doplněk`
@@ -785,12 +783,12 @@ pro každého`
 - Zeile 51: `Registrace Inovační dny 2026`
 - Zeile 55: `Technologie se zkušeností.`
 - Zeile 56: `Řešení s budoucností.`
-- Zeile 137: `Úvodní slideshow`
-- Zeile 265: `Barbaric · Vakuová manipulace se dřevem`
-- Zeile 277: `Myslete na zítřek`
-- Zeile 282: `Jediný člověk snadno přesune velké, těžké desky – ergonomicky, bezpečně a rychle. Ať u okrajovačky, pily nebo jiných strojů: chraňte své odborníky dlouhodobě.`
-- Zeile 311: `Požádat o konzultaci`
-- Zeile 335: `Snímek`
+- Zeile 142: `Úvodní slideshow`
+- Zeile 274: `Barbaric · Vakuová manipulace se dřevem`
+- Zeile 286: `Myslete na zítřek`
+- Zeile 291: `Jediný člověk snadno přesune velké, těžké desky – ergonomicky, bezpečně a rychle. Ať u okrajovačky, pily nebo jiných strojů: chraňte své odborníky dlouhodobě.`
+- Zeile 320: `Požádat o konzultaci`
+- Zeile 344: `Snímek`
 
 ## `src/pages/ContactPage.tsx` (7)
 
@@ -1673,73 +1671,6 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `[4].items[1].answer` | Yes, every used machine from Asamer is technically inspected and refurbished if needed before sale. Depending on condition and scope of refurbishment we provide … |
 | `[4].items[2].question` | Does Asamer deliver to Hungary and Slovakia? |
 | `[4].items[2].answer` | Yes, Asamer delivers across the entire CZ, SK and HU region. We are the exclusive distribution partner for OTT edgebanding machines. Mayer, BARBARIC and Gannoma … |
-
-## ottSeoContent · Produkte (60)
-
-### SK — 60 fehlend
-
-| Pfad im Modul | ausgelieferter Text |
-|---|---|
-| `combimelt.longDescription` | OTT CombiMelt je kompletni servisni stanice pro zpracovani EVA a PUR lepidel na olepovacich strojich na hrany. Jako externi tavici system jej lze pripojit ke vs … |
-| `combimelt.applicationSections[0].heading` | Dovybaveni PUR pro stavajici stroje OTT |
-| `combimelt.applicationSections[0].body` | CombiMelt lze dovybavit na vsechny olepovacky hran OTT. Provozy, ktere dosud pracovaly pouze s EVA, mohou sve moznosti rozsirit o PUR lepeni, aniz by musely kup … |
-| `combimelt.applicationSections[1].heading` | Vodetesne spoje pro kuchyne a vlhke prostory |
-| `combimelt.applicationSections[1].body` | PUR lepidlo tvrdne reakci se vzdusnou vlhkosti a vytvari trvale vodetesny spoj. U kuchynskeho nabytku a nabytku do vlhkych prostor je PUR lepeni dnes standardem … |
-| `combimelt.buyingAdvice` | CombiMelt je spravna volba, pokud chcete rozsirit svou stavajici olepovacku hran OTT o schopnost PUR, nebo pokud konfigurujete novy stroj s maximalnim prostorem … |
-| `combimelt.faq[0].question` | Lze CombiMelt pripojit k jakekoli olepovacce hran OTT? |
-| `combimelt.faq[0].answer` | Ano, CombiMelt je navrzeny jako externi tavici system pro vsechny olepovacky hran OTT. Lze jej objednat s novymi stroji nebo dovybavit na stavajici. |
-| `combimelt.faq[1].question` | Jaka je vyhoda PUR oproti EVA? |
-| `combimelt.faq[1].answer` | PUR lepidlo vytvari vodetesne, teplotne odolne a prakticky neviditelne lepene spoje. Na rozdil od EVA PUR pri vlhkosti nenaboba a zustava stabilni po leta. PUR  … |
-| `combimelt.faq[2].question` | Jak dlouho trva prepnuti mezi EVA a PUR? |
-| `combimelt.faq[2].answer` | Diky systemu rychle vymeny se dvema oddelenymi nadobami trva prepnuti mezi EVA a PUR pouze nekolik minut. Narocne cisteni nebo proplachovaci procesy jsou do zna … |
-| `bluedge.longDescription` | OTT bluEdge featuring HyFuse je technologie nulove spary od OTT, ktera posouva olepovani hran na zcela novou uroven kvality. Pri tomto postupu se nepouziva zadn … |
-| `bluedge.applicationSections[0].heading` | Premiovy vzhled nabytku s neviditelnou sparou |
-| `bluedge.applicationSections[0].body` | Technologie nulove spary bluEdge vytvari zcela neviditelne spojeni mezi hranou a deskou. Zadny film lepidla, zadna odchylka barvy, zadna viditelna delici linie. … |
-| `bluedge.applicationSections[1].heading` | Dodatecne montovatelna na vsechny modely OTT |
-| `bluedge.applicationSections[1].body` | Laserovou jednotku HyFuse lze integrovat do jakekoli olepovacky hran OTT - od vstupniho modelu Pacific+ az po vlajkovou lod TopEdge. Stavajici provozy tak mohou … |
-| `bluedge.buyingAdvice` | bluEdge featuring HyFuse je volba pro provozy, ktere chteji svym zakaznikum nabidnout premiovou kvalitu hran bez viditelne spary. Technologii lze integrovat jak … |
-| `bluedge.faq[0].question` | Jaky je rozdil mezi bluEdge a PUR lepenim? |
-| `bluedge.faq[0].answer` | U PUR se pouziva lepidlo, ktere vytvari tenkou, ale viditelnou sparu. U bluEdge je funkcni vrstva hrany aktivovana laserem a primo spojena s deskou - zcela bez  … |
-| `bluedge.faq[1].question` | Lze bluEdge dovybavit i na starsi stroje OTT? |
-| `bluedge.faq[1].answer` | Ano, laserova jednotka HyFuse je k dispozici jako moznost dovybaveni pro vsechny olepovacky hran OTT. Asamer overi kompatibilitu a provede dovybaveni primo na m … |
-| `bluedge.faq[2].question` | Ktere hranove materialy jsou kompatibilni s bluEdge? |
-| `bluedge.faq[2].answer` | bluEdge funguje s hranovymi materialy, ktere maji laserove reaktivni funkcni vrstvu. Bezni vyrobci hran jako Rehau, Doellken a Ostermann nabizeji odpovidajici h … |
-| `transcompact.longDescription` | OTT TRANScompact je kompaktni vratny dopravnik s integrovanou funkci otaceni, vyvinuty specialne pro mensi vyrobni linky a dilenske prostory s omezenym mistem.  … |
-| `transcompact.applicationSections[0].heading` | Jednooperatorsky provoz pro male dilny |
-| `transcompact.applicationSections[0].body` | TRANScompact umoznuje provoz olepovacky hran s jednim operatorem. Obrobek je automaticky vracen, takze neni potreba druheho zamestnance pro odebrani dilu. Funkc … |
-| `transcompact.applicationSections[1].heading` | Prostorove usporne reseni pro Pacific+ a Tornado+ |
-| `transcompact.applicationSections[1].body` | TRANScompact byl specialne navrzeny jako doplnek ke kompaktnim modelum OTT Pacific+ a Tornado+. Dohromady tvori prostorove uspornou vyrobni bunku, ktera efektiv … |
-| `transcompact.buyingAdvice` | Zvolte TRANScompact, pokud chcete doplnit Pacific+ nebo Tornado+ kompaktnim, prostorove uspornym vratnym systemem. Pro vyssi taktovaci frekvence nebo vetsi stro … |
-| `transcompact.faq[0].question` | Pro ktere stroje OTT je TRANScompact vhodny? |
-| `transcompact.faq[0].answer` | TRANScompact je obzvlaste vhodny jako doplnek k Pacific+ a Tornado+. V zasade ho lze kombinovat i s dalsimi modely OTT, pokud je prostor omezeny. |
-| `transcompact.faq[1].question` | Muze TRANScompact otacet obrobky? |
-| `transcompact.faq[1].answer` | Ano, TRANScompact disponuje integrovanou funkci otaceni. Obrobek tak muze byt automaticky otocen pro zpracovani dalsi hrany, aniz by operator musel rucne zasaho … |
-| `transcompact.faq[2].question` | Jaky je rozdil mezi TRANScompact a TRANSlift? |
-| `transcompact.faq[2].answer` | TRANScompact je horizontalni vratny system s otacenim pro kompaktni dilny. TRANSlift prepravuje obrobky vertikalne, cimz setri podlahovou plochu, ale vyzaduje v … |
-| `translift.longDescription` | OTT TRANSlift je zvedaci vratny system, ktery prepravuje obrobky vertikalne a tim setri cennou podlahovou plochu. Namisto horizontalniho vraceni obrobku TRANSli … |
-| `translift.applicationSections[0].heading` | Optimalizace prostoru diky vertikalnimu vraceni |
-| `translift.applicationSections[0].body` | TRANSlift vyuziva prostor nad olepovackou hran pro prepravu obrobku. Tim se uvolni podlahova plocha vedle stroje pro jine ucely. Zejmena ve vyrobnich halach s o … |
-| `translift.applicationSections[1].heading` | Pro prumyslove olepovaci linky |
-| `translift.applicationSections[1].body` | Jako vratny system pro profesionalni a vlajkove modely Storm+, StrongEdge a TopEdge je TRANSlift navrzeny pro prumyslovy nepretrzity provoz s vysokymi taktovaci … |
-| `translift.buyingAdvice` | Zvolte TRANSlift, pokud chcete setrit podlahovou plochu a mate dostatecnou vysku stropu. Je to doporucene reseni pro Storm+, StrongEdge a TopEdge. Pro kompaktni … |
-| `translift.faq[0].question` | Jakou vysku stropu vyzaduje TRANSlift? |
-| `translift.faq[0].answer` | Potrebna vyska stropu zavisi na vysce stroje a formatu obrobku. Asamer vam poradi pri planovani dispozice a overi prostorove pozadavky ve vasi vyrobni hale. |
-| `translift.faq[1].question` | Lze TRANSlift pouzivat i s mensimi stroji? |
-| `translift.faq[1].answer` | V zasade ano, ale pro kompaktni modely Pacific+ a Tornado+ doporucujeme TRANScompact jako ekonomictejsi reseni. TRANSlift je primarne navrzeny pro Storm+, Stron … |
-| `translift.faq[2].question` | Opravdu TRANSlift setri podlahovou plochu? |
-| `translift.faq[2].answer` | Ano, protoze obrobky jsou vraceny vertikalne nad strojem, odpada horizontalni vratna draha vedle stroje. V zavislosti na dispozici haly muze TRANSlift snizit po … |
-| `transedge.longDescription` | OTT TRANSedge je specializovany vratny system vyvinuty cileně pro nasazeni v olepovacich linkach s vysokou taktovaci frekvenci. Poskytuje automaticky navrat obr … |
-| `transedge.applicationSections[0].heading` | Optimalizovany pro linky Storm+ a TopEdge |
-| `transedge.applicationSections[0].body` | TRANSedge je navrzeny jako specializovany vratny system pro vysokovykonne modely OTT Storm+ a TopEdge. Prima synchronizace s rizenim stroje umoznuje nejvyssi ta … |
-| `transedge.applicationSections[1].heading` | Jednooperatorsky provoz pri maximalnim vykonu |
-| `transedge.applicationSections[1].body` | Diky plne automatickemu navratu obrobku muze celou olepovaci linku provozovat jediny operator. TRANSedge zajisuje prepravu, polohovani a v pripade potreby i ota … |
-| `transedge.buyingAdvice` | Zvolte TRANSedge, pokud chcete provozovat linku Storm+ nebo TopEdge s maximalnim vykonem a vysokou taktovaci frekvenci. Ve srovnani s TRANSlift nabizi TRANSedge … |
-| `transedge.faq[0].question` | Cim se TRANSedge lisi od TRANSlift? |
-| `transedge.faq[0].answer` | TRANSedge je specialne optimalizovan pro olepovaci linky a primo synchronizovan s rizením stroje. TRANSlift je univerzalnejsi zvedaci vratny system, ktery lze p … |
-| `transedge.faq[1].question` | Lze TRANSedge pouzivat i s FlexEdge? |
-| `transedge.faq[1].answer` | Ano, TRANSedge lze v zasade kombinovat s FlexEdge. Doporucena kombinace je vsak Storm+ nebo TopEdge s TRANSedge pro maximalni vykon. Pro FlexEdge primarne dopor … |
-| `transedge.faq[2].question` | Jaka je maximalni taktovaci frekvence TRANSedge? |
-| `transedge.faq[2].answer` | Taktovaci frekvence TRANSedge se ridi pripojenou olepovackou hran a formatem obrobku. Pri TopEdge s rychlosti posuvu 22 m/min je taktovaci frekvence urcena rych … |
 
 ## edgebanderGuide (49)
 
