@@ -27,8 +27,8 @@ Widerspruch, der im günstigsten Fall ignoriert und im ungünstigsten als Duplik
 |---|---|---:|---:|---:|
 | A · Datenmodule (`MultiLangText`) | SK | 1314 | 692 | **65.5 %** |
 | A · Datenmodule (`MultiLangText`) | HU | 1891 | 115 | **94.3 %** |
-| B · Seitentexte (`tr()`) | SK | 40 | 683 | **5.5 %** |
-| B · Seitentexte (`tr()`) | HU | 731 | 0 | **100.0 %** |
+| B · Seitentexte (`tr()`) | SK | 41 | 700 | **5.5 %** |
+| B · Seitentexte (`tr()`) | HU | 748 | 0 | **100.0 %** |
 
 ## Eigener Befund: `tr()`-Aufrufe mit dynamischem Text
 
@@ -48,8 +48,8 @@ dauerhaft im Fallback, egal wie vollständig die Wörterbücher werden.
 | `src/pages/MayerProductPage.tsx` | 133 | `tr( `Die Mayer ${product.name} ist eine ${categoryLabel} für ${product.materials.includes('aluminium')` |
 | `src/pages/MayerProductPage.tsx` | 209 | `tr( `Unser hauseigenes Software-Team verbindet Ihre Mayer ${product.name} nahtlos mit Ihrem ERP-, MES-` |
 | `src/pages/OttProductPage.tsx` | 61 | `tr(`Anfrage OTT ${product.name}`, `Inquiry OTT ${product.name}`, `Poptávka OTT ${product.name}`)` |
-| `src/pages/OttProductPage.tsx` | 130 | `tr( `Die OTT ${product.name} ist eine ${categoryLabel} für ${product.badge === 'EINSTIEG' ? 'kleine un` |
-| `src/pages/OttProductPage.tsx` | 221 | `tr( `Unser Software-Team verbindet die ${product.name} via OPC-UA direkt mit Ihrem ERP/MES – keine` |
+| `src/pages/OttProductPage.tsx` | 134 | `tr( `Die OTT ${product.name} ist eine ${categoryLabel} für ${product.badge === 'EINSTIEG' ? 'kleine un` |
+| `src/pages/OttProductPage.tsx` | 225 | `tr( `Unser Software-Team verbindet die ${product.name} via OPC-UA direkt mit Ihrem ERP/MES – keine` |
 
 ---
 
@@ -331,57 +331,56 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 465: `Poptat servis`
 - Zeile 478: `Informace o výrobci`
 
-## `src/pages/GuideEdgebanderPage.tsx` (47)
+## `src/pages/GuideEdgebanderPage.tsx` (46)
 
-### SK — 47 fehlend
+### SK — 46 fehlend
 
-- Zeile 37: `Konzultace olepovačka hran`
-- Zeile 47: `Malá truhlárna`
-- Zeile 52: `VSTUP`
-- Zeile 56: `Malý–Střední`
-- Zeile 61: `STŘED`
-- Zeile 65: `Střední provoz`
-- Zeile 70: `NOVINKA`
-- Zeile 74: `Střední–Velký`
-- Zeile 79: `PROFI`
-- Zeile 83: `Průmysl`
-- Zeile 97: `VLAJKOVÁ LOĎ`
-- Zeile 101: `Výroba dveří`
-- Zeile 106: `SPECIÁL`
-- Zeile 118: `Průvodce`
-- Zeile 119: `Olepovačka hran – výběr`
-- Zeile 126: `Jakou olepovačku hran koupit`
-- Zeile 142: `Jakou olepovačku hran koupit? Průvodce výběrem 2026`
-- Zeile 159: `Čtyři kritéria pro rozhodnutí`
-- Zeile 177: `Malá truhlárna (1–5 zaměstnanců)`
-- Zeile 184: `U malých dílen s 1–5 zaměstnanci je na prvním místě kompaktnost a univerzálnost. Denní průchod se typicky pohybuje mezi 20–80 obrobky, rozmanitost materiálů je vysoká (masivní dřevo, melamin, plast). Stroj musí umožňovat rychlou výměnu hran a pracovat na omezeném prostoru.`
-- Zeile 192: `Naše doporučení: OTT Pacific+`
-- Zeile 195: `S délkou pouhých 5,7 m se vejde do každé dílny. Posuv 18 m/min včetně opracování rohů – nepotřebujete samostatný stroj na zaoblení rohů. Tloušťky hran 0,3–15 mm pokrývají všechny standardní aplikace. S CombiMelt je Pacific+ navíc rozšířitelná o PUR, takže při rostoucích požadavcích nemusíte měnit stroj.`
-- Zeile 207: `Zobrazit Pacific+ na stránce OTT`
-- Zeile 220: `Střední provoz (5–20 zaměstnanců)`
-- Zeile 227: `Střední provozy zpracovávají 80–300 obrobků denně a potřebují vyšší rychlosti posuvu a flexibilitu. Požadavky na kvalitu hran rostou – PUR lepení je stále více vyžadováno trhem, zejména u kuchyňského nábytku.`
-- Zeile 235: `Naše doporučení: OTT FlexEdge nebo Storm+`
-- Zeile 238: `FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 12–20 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost technologie nulové spáry bluEdge featuring HyFuse pro hrany s nulovými spárami.`
-- Zeile 250: `Zobrazit FlexEdge a Storm+ na stránce OTT`
-- Zeile 263: `Průmyslový nepřetržitý provoz (20+ zaměstnanců)`
-- Zeile 270: `Průmyslové provozy s vícesměnným provozem zpracovávají 300+ obrobků na směnu. Rozhoduje spolehlivost, průchodnost a nejvyšší kvalita hran. PUR a technologie nulové spáry jsou standardem, automatická výměna hran a napojení na nadřazené systémy jsou nutností.`
-- Zeile 278: `Naše doporučení: OTT StrongEdge nebo TopEdge`
-- Zeile 281: `StrongEdge nabízí délku 7,7 m a posuv 16–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge featuring HyFuse a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.`
-- Zeile 293: `Zobrazit StrongEdge a TopEdge na stránce OTT`
-- Zeile 306: `Speciální případ: Výroba dveří`
-- Zeile 313: `Výrobci dveří mají specifické požadavky: těžké obrobky, široké hrany a často nepřetržitá výroba s malým počtem změn formátu. OTT Door Edition je speciálně navržena pro tuto aplikaci – s upraveným vedením obrobků, zesíleným posuvem a optimalizovanou přítlačnou technikou pro masivní dveřní prvky.`
-- Zeile 321: `Pokud se zaměřujete na výrobu dveří, doporučujeme přímou konzultaci – Door Edition se individuálně konfiguruje podle vašeho výrobního profilu.`
-- Zeile 336: `Srovnávací přehled`
-- Zeile 343: `Model`
-- Zeile 346: `Cílová skupina`
-- Zeile 349: `Délka`
-- Zeile 352: `Posuv`
-- Zeile 379: `✓ = Standard · – = Volitelně · ✕ = nedostupné. Všechny údaje bez záruky.`
-- Zeile 402: `Zobrazit ověřené použité stroje`
-- Zeile 423: `Detailní průvodce PUR vs EVA`
-- Zeile 472: `Který stroj se hodí pro váš provoz?`
-- Zeile 479: `Poradíme vám osobně – s ohledem na průchodnost, prostor a rozpočet.`
-- Zeile 491: `Všechny olepovačky hran OTT`
+- Zeile 38: `Konzultace olepovačka hran`
+- Zeile 48: `Malá truhlárna`
+- Zeile 53: `VSTUP`
+- Zeile 57: `Malý–Střední`
+- Zeile 62: `STŘED`
+- Zeile 66: `Střední provoz`
+- Zeile 71: `NOVINKA`
+- Zeile 75: `Střední–Velký`
+- Zeile 80: `PROFI`
+- Zeile 84: `Průmysl`
+- Zeile 98: `VLAJKOVÁ LOĎ`
+- Zeile 102: `Výroba dveří`
+- Zeile 107: `SPECIÁL`
+- Zeile 119: `Průvodce`
+- Zeile 120: `Olepovačka hran – výběr`
+- Zeile 127: `Jakou olepovačku hran koupit`
+- Zeile 143: `Jakou olepovačku hran koupit? Průvodce výběrem 2026`
+- Zeile 160: `Čtyři kritéria pro rozhodnutí`
+- Zeile 178: `Malá truhlárna (1–5 zaměstnanců)`
+- Zeile 185: `U malých dílen s 1–5 zaměstnanci je na prvním místě kompaktnost a univerzálnost. Denní průchod se typicky pohybuje mezi 20–80 obrobky, rozmanitost materiálů je vysoká (masivní dřevo, melamin, plast). Stroj musí umožňovat rychlou výměnu hran a pracovat na omezeném prostoru.`
+- Zeile 193: `Naše doporučení: OTT Pacific+`
+- Zeile 196: `S délkou pouhých 5,7 m se vejde do každé dílny. Posuv 18 m/min včetně opracování rohů – nepotřebujete samostatný stroj na zaoblení rohů. Tloušťky hran 0,3–15 mm pokrývají všechny standardní aplikace. S CombiMelt je Pacific+ navíc rozšířitelná o PUR, takže při rostoucích požadavcích nemusíte měnit stroj.`
+- Zeile 208: `Zobrazit Pacific+ na stránce OTT`
+- Zeile 221: `Střední provoz (5–20 zaměstnanců)`
+- Zeile 228: `Střední provozy zpracovávají 80–300 obrobků denně a potřebují vyšší rychlosti posuvu a flexibilitu. Požadavky na kvalitu hran rostou – PUR lepení je stále více vyžadováno trhem, zejména u kuchyňského nábytku.`
+- Zeile 236: `Naše doporučení: OTT FlexEdge nebo Storm+`
+- Zeile 239: `FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 12–20 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost technologie nulové spáry bluEdge featuring HyFuse pro hrany s nulovými spárami.`
+- Zeile 251: `Zobrazit FlexEdge a Storm+ na stránce OTT`
+- Zeile 264: `Průmyslový nepřetržitý provoz (20+ zaměstnanců)`
+- Zeile 271: `Průmyslové provozy s vícesměnným provozem zpracovávají 300+ obrobků na směnu. Rozhoduje spolehlivost, průchodnost a nejvyšší kvalita hran. PUR a technologie nulové spáry jsou standardem, automatická výměna hran a napojení na nadřazené systémy jsou nutností.`
+- Zeile 279: `Naše doporučení: OTT StrongEdge nebo TopEdge`
+- Zeile 282: `StrongEdge nabízí délku 7,7 m a posuv 16–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge featuring HyFuse a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.`
+- Zeile 294: `Zobrazit StrongEdge a TopEdge na stránce OTT`
+- Zeile 307: `Speciální případ: Výroba dveří`
+- Zeile 314: `Výrobci dveří mají specifické požadavky: těžké obrobky, široké hrany a často nepřetržitá výroba s malým počtem změn formátu. OTT Door Edition je speciálně navržena pro tuto aplikaci – s upraveným vedením obrobků, zesíleným posuvem a optimalizovanou přítlačnou technikou pro masivní dveřní prvky.`
+- Zeile 322: `Pokud se zaměřujete na výrobu dveří, doporučujeme přímou konzultaci – Door Edition se individuálně konfiguruje podle vašeho výrobního profilu.`
+- Zeile 337: `Srovnávací přehled`
+- Zeile 347: `Cílová skupina`
+- Zeile 350: `Délka`
+- Zeile 353: `Posuv`
+- Zeile 380: `✓ = Standard · – = Volitelně · ✕ = nedostupné. Všechny údaje bez záruky.`
+- Zeile 403: `Zobrazit ověřené použité stroje`
+- Zeile 424: `Detailní průvodce PUR vs EVA`
+- Zeile 473: `Který stroj se hodí pro váš provoz?`
+- Zeile 480: `Poradíme vám osobně – s ohledem na průchodnost, prostor a rozpočet.`
+- Zeile 492: `Všechny olepovačky hran OTT`
 
 ## `src/pages/GuideWarehouseAutomationPage.tsx` (43)
 
@@ -431,48 +430,50 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 384: `Nechte se nezávazně poradit – zanalyzujeme váš materiálový tok a doporučíme vhodný systém BARBARIC.`
 - Zeile 397: `Systémy BARBARIC`
 
-## `src/pages/OttPage.tsx` (38)
+## `src/pages/OttPage.tsx` (40)
 
-### SK — 38 fehlend
+### SK — 40 fehlend
 
-- Zeile 38: `Co je olepovačka hran OTT?`
-- Zeile 39: `Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse.`
-- Zeile 46: `Kolik stojí olepovačka hran OTT?`
-- Zeile 47: `Cena olepovačky hran OTT závisí na modelu, výbavě a stupni automatizace. Asamer připraví nezávaznou nabídku na míru a poradí s financováním i dotacemi až 50 %.`
-- Zeile 54: `Jaký je rozdíl mezi lepidlem PUR a EVA?`
-- Zeile 55: `EVA je univerzální tavné lepidlo, PUR vytváří voděodolný spoj bez viditelné spáry. Systém OTT CombiMelt zvládá oba typy lepidla.`
-- Zeile 62: `Nabízíte i použité olepovačky hran OTT?`
-- Zeile 63: `Ano. Asamer nabízí nové i technicky prověřené použité olepovačky hran OTT včetně servisu a montáže v ČR, na Slovensku a v Maďarsku.`
-- Zeile 85: `OTT olepovačky hran`
-- Zeile 101: `Nové standardy pro PUR/EVA`
-- Zeile 114: `Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse. OTT je rakouský výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.`
-- Zeile 128: `Exkluzivní prodejce`
-- Zeile 137: `Rozhraní`
-- Zeile 195: `Proč OTT přes Asamer?`
-- Zeile 198: `Vlastnost`
-- Zeile 200: `Konkurence`
-- Zeile 202: `často příplatek`
-- Zeile 203: `PUR`
-- Zeile 203: `dle výrobce`
-- Zeile 204: `ERP`
-- Zeile 204: `často placená`
-- Zeile 205: `Servis CZ/SK/HU`
-- Zeile 205: `na místě`
-- Zeile 205: `často centrální`
-- Zeile 219: `Technologie`
-- Zeile 225: `Patent`
-- Zeile 227: `Top-driven roller · EVA + PUR · méně odpadu · servisní stanice`
-- Zeile 235: `Vodíkový plamen · bez spáry · montovatelná`
-- Zeile 242: `Proč koupit u Asamer?`
-- Zeile 245: `OPC-UA přímo do vašeho ERP/MES – bez vendor lock-in`
-- Zeile 246: `Exkluzivní prodejce CZ/SK/HU`
-- Zeile 246: `Přímý kontakt – bez koncernových oklik`
-- Zeile 247: `Servis a montáž`
-- Zeile 247: `Technici na místě v CZ/SK/HU`
-- Zeile 248: `Rodinný podnik od roku 1963 v Lambachu`
-- Zeile 263: `Časté dotazy k olepovačkám hran OTT`
-- Zeile 279: `OTT v akci`
-- Zeile 291: `Poradenství k OTT?`
+- Zeile 37: `Co je olepovačka hran OTT?`
+- Zeile 38: `Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse.`
+- Zeile 45: `Kolik stojí olepovačka hran OTT?`
+- Zeile 46: `Cena olepovačky hran OTT závisí na modelu, výbavě a stupni automatizace. Asamer připraví nezávaznou nabídku na míru a poradí s financováním i dotacemi až 50 %.`
+- Zeile 53: `Jaký je rozdíl mezi lepidlem PUR a EVA?`
+- Zeile 54: `EVA je univerzální tavné lepidlo, PUR vytváří voděodolný spoj bez viditelné spáry. Systém OTT CombiMelt zvládá oba typy lepidla.`
+- Zeile 61: `Nabízíte i použité olepovačky hran OTT?`
+- Zeile 62: `Ano. Asamer nabízí nové i technicky prověřené použité olepovačky hran OTT včetně servisu a montáže v ČR, na Slovensku a v Maďarsku.`
+- Zeile 84: `OTT olepovačky hran`
+- Zeile 100: `Nové standardy pro PUR/EVA`
+- Zeile 113: `Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse. OTT je rakouský výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.`
+- Zeile 127: `Exkluzivní prodejce`
+- Zeile 136: `Rozhraní`
+- Zeile 168: `Přehled kategorie`
+- Zeile 205: `modelů v detailu`
+- Zeile 219: `Proč OTT přes Asamer?`
+- Zeile 222: `Vlastnost`
+- Zeile 224: `Konkurence`
+- Zeile 226: `často příplatek`
+- Zeile 227: `PUR`
+- Zeile 227: `dle výrobce`
+- Zeile 228: `ERP`
+- Zeile 228: `často placená`
+- Zeile 229: `Servis CZ/SK/HU`
+- Zeile 229: `na místě`
+- Zeile 229: `často centrální`
+- Zeile 243: `Technologie`
+- Zeile 249: `Patent`
+- Zeile 251: `Top-driven roller · EVA + PUR · méně odpadu · servisní stanice`
+- Zeile 259: `Vodíkový plamen · bez spáry · montovatelná`
+- Zeile 266: `Proč koupit u Asamer?`
+- Zeile 269: `OPC-UA přímo do vašeho ERP/MES – bez vendor lock-in`
+- Zeile 270: `Exkluzivní prodejce CZ/SK/HU`
+- Zeile 270: `Přímý kontakt – bez koncernových oklik`
+- Zeile 271: `Servis a montáž`
+- Zeile 271: `Technici na místě v CZ/SK/HU`
+- Zeile 272: `Rodinný podnik od roku 1963 v Lambachu`
+- Zeile 287: `Časté dotazy k olepovačkám hran OTT`
+- Zeile 303: `OTT v akci`
+- Zeile 315: `Poradenství k OTT?`
 
 ## `src/pages/GuideVacuumLifterPage.tsx` (30)
 
@@ -635,6 +636,31 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 219: `Stížnosti můžete podat u rakouského úřadu pro ochranu osobních údajů (dsb.gv.at) nebo u českého Úřadu pro ochranu osobních údajů (uoou.cz).`
 - Zeile 228: `Viz také naše`
 
+## `src/pages/CategoryPage.tsx` (20)
+
+### SK — 20 fehlend
+
+- Zeile 100: `Průvodce: výběr olepovačky hran`
+- Zeile 101: `Který stroj se hodí do vašeho provozu?`
+- Zeile 108: `Průvodce: PUR vs. EVA`
+- Zeile 109: `Srovnání lepidel pro olepování hran.`
+- Zeile 118: `Průvodce: dřevo nebo hliník`
+- Zeile 119: `Srovnání Kappa a Advanced Line.`
+- Zeile 127: `Průvodce: vakuové zvedáky`
+- Zeile 128: `Jeden místo tří.`
+- Zeile 136: `Průvodce: automatizace skladu`
+- Zeile 137: `Kdy se vyplatí?`
+- Zeile 145: `Použité stroje`
+- Zeile 146: `Prověřené použité stroje se servisem.`
+- Zeile 153: `Financování a dotace`
+- Zeile 154: `Leasing a dotace až 50 %.`
+- Zeile 182: `Poptávka`
+- Zeile 241: `Srovnání modelů`
+- Zeile 247: `Model`
+- Zeile 279: `Další informace`
+- Zeile 300: `Další kategorie`
+- Zeile 327: `Který stroj se hodí do vaší výroby?`
+
 ## `src/pages/TermsPage.tsx` (18)
 
 ### SK — 18 fehlend
@@ -743,23 +769,6 @@ pro každého`
 - Zeile 323: `Jeden cíl: férové financování vaší investice`
 - Zeile 405: `Přejít na stránku servisu`
 
-## `src/pages/UsedMachineDetailPage.tsx` (12)
-
-### SK — 12 fehlend
-
-- Zeile 75: `Poptávka na použitý stroj`
-- Zeile 82: `Použité stroje`
-- Zeile 128: `Použitý stroj`
-- Zeile 155: `Všechny použité stroje`
-- Zeile 199: `Prodáno`
-- Zeile 200: `K dispozici`
-- Zeile 203: `Stav`
-- Zeile 210: `Cena`
-- Zeile 225: `na vyžádání`
-- Zeile 358: `Zájem o podobné stroje?`
-- Zeile 363: `Ozveme se s aktuálně dostupnými nabídkami.`
-- Zeile 364: `Včetně technické kontroly, dopravy a instalace.`
-
 ## `src/pages/MayerPage.tsx` (11)
 
 ### SK — 11 fehlend
@@ -775,6 +784,22 @@ pro každého`
 - Zeile 92: `Servis a náhradní díly`
 - Zeile 140: `Vakuové podávání, sklady a stoly jako doplněk`
 - Zeile 150: `Máte zájem o pily Mayer?`
+
+## `src/pages/UsedMachineDetailPage.tsx` (11)
+
+### SK — 11 fehlend
+
+- Zeile 75: `Poptávka na použitý stroj`
+- Zeile 128: `Použitý stroj`
+- Zeile 155: `Všechny použité stroje`
+- Zeile 199: `Prodáno`
+- Zeile 200: `K dispozici`
+- Zeile 203: `Stav`
+- Zeile 210: `Cena`
+- Zeile 225: `na vyžádání`
+- Zeile 358: `Zájem o podobné stroje?`
+- Zeile 363: `Ozveme se s aktuálně dostupnými nabídkami.`
+- Zeile 364: `Včetně technické kontroly, dopravy a instalace.`
 
 ## `src/components/home/HeroSlideshow.tsx` (10)
 
@@ -831,13 +856,13 @@ pro každého`
 
 ### SK — 7 fehlend
 
-- Zeile 84: `Tloušťka hrany`
-- Zeile 85: `Tloušťka obrobku`
-- Zeile 115: `Všechny produkty OTT`
-- Zeile 185: `Vybavení`
-- Zeile 205: `Popis`
-- Zeile 240: `Vhodná systémová řešení`
-- Zeile 268: `Poradenství, nabídka a montáž z jednoho zdroje.`
+- Zeile 86: `Tloušťka hrany`
+- Zeile 87: `Tloušťka obrobku`
+- Zeile 119: `Všechny produkty OTT`
+- Zeile 189: `Vybavení`
+- Zeile 209: `Popis`
+- Zeile 244: `Vhodná systémová řešení`
+- Zeile 272: `Poradenství, nabídka a montáž z jednoho zdroje.`
 
 ## `src/pages/UsedMachinesPage.tsx` (7)
 
@@ -870,20 +895,12 @@ pro každého`
 - Zeile 75: `Oblasti nasazení`
 - Zeile 99: `Nákupní poradce`
 
-## `src/pages/CategoryPage.tsx` (3)
-
-### SK — 3 fehlend
-
-- Zeile 95: `Poptávka`
-- Zeile 150: `Další kategorie`
-- Zeile 177: `Který stroj se hodí do vaší výroby?`
-
 ## `src/sections/Footer.tsx` (2)
 
 ### SK — 2 fehlend
 
-- Zeile 94: `Přímý kontakt`
-- Zeile 153: `Gannomat kolkování`
+- Zeile 95: `Přímý kontakt`
+- Zeile 159: `Gannomat kolkování`
 
 ## `src/components/seo/CategorySeoBlock.tsx` (1)
 

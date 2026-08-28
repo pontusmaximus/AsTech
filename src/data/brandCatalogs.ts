@@ -77,8 +77,13 @@ export interface CatalogProduct {
  * definiert, bekommt keinen Vergleich statt einer halbleeren Tabelle.
  */
 export interface ComparisonColumn {
-  /** Woerterbuch-Schluessel fuer die Spaltenueberschrift: tr(de, en, cz). */
-  header: [de: string, en: string, cz: string];
+  /**
+   * Spaltenueberschrift je Sprache — bewusst als vollstaendiges Objekt statt
+   * ueber `tr()`. Ein `tr()` mit variablen Argumenten trifft nie einen
+   * Woerterbucheintrag und bliebe auf SK und HU dauerhaft im englischen
+   * Fallback (siehe docs/seo/03-sprachversionen.md).
+   */
+  header: Record<Language, string>;
   value: (product: CatalogProduct) => string | undefined;
 }
 
@@ -131,9 +136,9 @@ const CATALOGS: Record<BrandSlug, BrandCatalog> = {
     productPath: (l, p) => buildOttProductPath(l, p as never),
     categorySeo: (c) => OTT_CATEGORY_SEO[c as never],
     comparison: [
-      { header: ['Laenge', 'Length', 'Delka'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.length },
-      { header: ['Vorschub', 'Feed', 'Posuv'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.feedSpeed },
-      { header: ['Kantenstaerke', 'Edge thickness', 'Tloustka hrany'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.edgeThickness },
+      { header: { de: 'Länge', en: 'Length', cz: 'Délka', sk: 'Dĺžka', hu: 'Hossz' }, value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.length },
+      { header: { de: 'Vorschub', en: 'Feed', cz: 'Posuv', sk: 'Posuv', hu: 'Előtolás' }, value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.feedSpeed },
+      { header: { de: 'Kantenstärke', en: 'Edge thickness', cz: 'Tloušťka hrany', sk: 'Hrúbka hrany', hu: 'Szalagvastagság' }, value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.edgeThickness },
     ],
   },
   mayer: {
@@ -149,9 +154,9 @@ const CATALOGS: Record<BrandSlug, BrandCatalog> = {
     productPath: (l, p) => buildMayerProductPath(l, p as never),
     categorySeo: (c) => MAYER_CATEGORY_SEO[c as never],
     comparison: [
-      { header: ['Schnittlaenge', 'Cutting length', 'Delka rezu'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.cuttingLength },
-      { header: ['Schnitthoehe', 'Cutting height', 'Vyska rezu'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.cuttingHeight },
-      { header: ['Vorschub', 'Feed', 'Posuv'], value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.feedSpeed },
+      { header: { de: 'Schnittlänge', en: 'Cutting length', cz: 'Délka řezu', sk: 'Dĺžka rezu', hu: 'Vágási hossz' }, value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.cuttingLength },
+      { header: { de: 'Schnitthöhe', en: 'Cutting height', cz: 'Výška řezu', sk: 'Výška rezu', hu: 'Vágási magasság' }, value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.cuttingHeight },
+      { header: { de: 'Vorschub', en: 'Feed', cz: 'Posuv', sk: 'Posuv', hu: 'Előtolás' }, value: (p) => (p as unknown as { specs?: Record<string, string | undefined> }).specs?.feedSpeed },
     ],
   },
   barbaric: {

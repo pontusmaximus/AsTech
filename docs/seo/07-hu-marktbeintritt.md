@@ -222,6 +222,7 @@ Titles/Descriptions und der terminologische Teil von Phase C.
 | Titles/Descriptions | 12 Seiten mit den recherchierten HU-Werten aus Blatt 4 (10 SEO-Routen + SSK/SSY). |
 | Terminologie | 10 falsche HU-Einträge korrigiert, 8 ergänzt. HU-Seitentext-Abdeckung 5,4 % → 6,6 %. |
 | Tschechische Förderseite | `/hu/utmutato/tamogatasok-csehorszag-2026` → 301 auf `/hu/finanszirozas`. Dafür kann eine Route jetzt Sprachen ausschließen (`excludeLangs`). |
+| **Phase A, Zusammenführung** | `main` (deed297) hat parallel eigene OTT-Kategorieseiten gebaut. Auf Freigabe zusammengeführt: die markenübergreifende `CategoryPage` bleibt, `ottCategoryMeta.ts` aus `main` hängt als Textquelle darüber. Reihenfolge: recherchierter Wert (Blatt 4) → redaktioneller Text → Formel. `OttCategoryPage.tsx` entfällt. Modellvergleich und Ratgeber-Links portiert, Vergleichsspalten je Marke in `brandCatalogs.ts`. |
 | **Phase C** — HU-Seitentexte | Alle **683** fehlenden Schlüssel in `pageHuTranslations` ergänzt. Abdeckung 6,6 % → **100 %**. Maschinell übersetzt, an Blatt 6 ausgerichtet — Lektorat steht aus. |
 
 ### Akzeptanzkriterien

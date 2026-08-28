@@ -246,8 +246,8 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
                     <tr className="bg-white/[0.04] text-white/50 text-left">
                       <th className="px-4 py-3 font-normal">{tr('Modell', 'Model', 'Model')}</th>
                       {catalog.comparison.map((c) => (
-                        <th key={c.header[1]} className="px-4 py-3 font-normal whitespace-nowrap">
-                          {tr(c.header[0], c.header[1], c.header[2])}
+                        <th key={c.header.en} className="px-4 py-3 font-normal whitespace-nowrap">
+                          {c.header[lang]}
                         </th>
                       ))}
                     </tr>
@@ -264,7 +264,7 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
                           </Link>
                         </td>
                         {row.cells.map((cell, i) => (
-                          <td key={catalog.comparison[i].header[1]} className="px-4 py-3 text-white/50 whitespace-nowrap">
+                          <td key={catalog.comparison[i].header.en} className="px-4 py-3 text-white/50 whitespace-nowrap">
                             {cell ?? '–'}
                           </td>
                         ))}
