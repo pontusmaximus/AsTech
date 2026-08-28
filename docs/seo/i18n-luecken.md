@@ -25,7 +25,7 @@ Widerspruch, der im günstigsten Fall ignoriert und im ungünstigsten als Duplik
 
 | Ebene | Sprache | vorhanden | fehlt | Abdeckung |
 |---|---|---:|---:|---:|
-| A · Datenmodule (`MultiLangText`) | SK | 1518 | 488 | **75.7 %** |
+| A · Datenmodule (`MultiLangText`) | SK | 1704 | 302 | **84.9 %** |
 | A · Datenmodule (`MultiLangText`) | HU | 1891 | 115 | **94.3 %** |
 | B · Seitentexte (`tr()`) | SK | 735 | 0 | **100.0 %** |
 | B · Seitentexte (`tr()`) | HU | 742 | 0 | **100.0 %** |
@@ -274,164 +274,9 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `spectrum.faq[0].question` | Jaké velikosti kování a kolíků se zpracovávají? |
 | … | 9 weitere |
 
-## barbaricSeoContent · Kategorien (143)
+## gannomatSeoContent · Kategorien (93)
 
-### SK — 113 fehlend
-
-| Pfad im Modul | ausgelieferter Text |
-|---|---|
-| `storage.introExpanded` | Barbaric sklady desek automatizují skladování desek v dřevozpracujícím a nábytkářském průmyslu. Princip: místo manuálního stohování, hledání a přenášení desek k … |
-| `storage.sections[0].heading` | Chaotické vs. třídění dle druhu |
-| `storage.sections[0].body` | Chaotické skladování využívá plochy až o 30 % lépe než třídění dle druhu: každá deska dostane při zaskladnění digitální místo nezávislé na dekoru nebo čísle pol … |
-| `storage.sections[1].heading` | Integrace ERP a tok materiálu |
-| `storage.sections[1].body` | Barbaric sklady desek se bezproblémově integrují s SAP, Navision, proAlpha nebo individuálními ERP systémy přes OPC-UA, REST API nebo XML výměnu. Pořadí zakázek … |
-| `storage.sections[2].heading` | Který model CSF je vhodný? |
-| `storage.sections[2].body` | CSF Professional: kompaktní, ekonomický, pro truhlárny a středně velké provozy. CSF Industrial: vysoce výkonný, integrovaný s ERP, pro průmyslové nepřetržité pr … |
-| `storage.faq[0].question` | Kolik stojí automatický sklad desek? |
-| `storage.faq[0].answer` | Cena silně závisí na rozvržení, skladové kapacitě a napojení. Typické investiční rozmezí je mezi 150.000 a 500.000 EUR pro CSF Professional, vyšší pro Industria … |
-| `storage.faq[1].question` | Jak dlouho trvá instalace? |
-| `storage.faq[1].answer` | Podle velikosti: CSF Professional obvykle 2–4 týdny, CSF Industrial 6–12 týdnů. Přestavba výroby se provádí ve fázích, takže běžný provoz je narušen jen minimál … |
-| `storage.faq[2].question` | Jaká je údržba? |
-| `storage.faq[2].answer` | Barbaric sklady desek vyžadují málo údržby. Typická zátěž: pololetní kontrola (kolejnice, přísavky, řízení) a roční bezpečnostní kontrola. Asamer nabízí servisn … |
-| `feeding.introExpanded` | Barbaric podávací systémy automaticky dodávají formátovacím pilám správný deskový materiál ve správný čas. Místo aby obsluha ručně nosila každou desku k pile a  … |
-| `feeding.sections[0].heading` | Kombinace se skladem desek |
-| `feeding.sections[0].body` | Podávací systémy pracují nejekonomičtěji v kombinaci se skladem desek Barbaric (řada CSF). Sklad drží zásobu desek, podávací systém realizuje tříděnou dodávku k … |
-| `feeding.sections[1].heading` | Zvýšení průchodnosti automatickým podáváním |
-| `feeding.sections[1].body` | Ruční zakládání formátovací pily trvá podle formátu desky 30–90 sekund — dobu, kdy pila stojí. S podávacím systémem se tento čas zkrátí na několik sekund, čistá … |
-| `feeding.faq[0].question` | Jaké formátovací pily lze připojit? |
-| `feeding.faq[0].answer` | Všichni významní výrobci: Mayer Kappa, Holzma HPP/HPS, Schelling FM/FH, Biesse Selco, SCM Sigma. U stávajících strojů Asamer zkontroluje rozhraní předem. |
-| `feeding.faq[1].question` | Jaké formáty desek jsou podporovány? |
-| `feeding.faq[1].answer` | Standardní formáty do 2,5 × 5,6 m pokrývají všechny podávací systémy Barbaric. Nadměrné formáty vyžadují speciální návrhy. |
-| `feeding.faq[2].question` | Vyplatí se podávací systém bez skladu desek? |
-| `feeding.faq[2].answer` | Ano, pokud máte stávající mezisklad s dodávkou kamionem a odběrem obsluhou. Podávací systém pak zásobuje pilu z meziskladu. Ekonomické to je od středních denníc … |
-| `nesting.introExpanded` | Barbaric nesting pickery automaticky odebírají hotové vyřezané díly z nesting CNC, třídí je a stohují podle zakázek. Tím se nesting buňka stává plně automaticko … |
-| `nesting.sections[0].heading` | Nesting picker vs. manuální odběr dílů |
-| `nesting.sections[0].body` | Manuální odběr dílů z nesting CNC stojí 2–5 minut na cyklus desky — plus chyby při třídění. Nesting picker provede úlohu za sekundy, třídí bezchybně a uvolní op … |
-| `nesting.sections[1].heading` | Kamerový systém a přenos dat CNC |
-| `nesting.sections[1].body` | Barbaric nesting pickery rozpoznávají díly dvěma způsoby: kamerovým systémem (zpracování obrazu rozpozná obrys a polohu) nebo přímým přenosem dat z nesting CNC  … |
-| `nesting.faq[0].question` | Jaké velikosti dílů lze pickovat? |
-| `nesting.faq[0].answer` | Standardní rozsah 80 × 80 mm až 2500 × 1500 mm. Menší díly jsou možné se speciálními aplikacemi. |
-| `nesting.faq[1].question` | Kolik zakázek paralelně? |
-| `nesting.faq[1].answer` | Obvykle 10–20 paralelních zakázek, s pufrem výrazně více. |
-| `nesting.faq[2].question` | Lze to dovybavit ke stávajícímu CNC? |
-| `nesting.faq[2].answer` | Ano — Barbaric nesting pickery lze dovybavit u běžných výrobců CNC (Homag, Biesse, SCM, IMA). Asamer zkontroluje rozhraní v předběžném plánování. |
-| `return.introExpanded` | Barbaric návratové systémy (RTS) automaticky přepravují hotové obrobky zpět k obsluze stroje. Typická aplikace: olepovačky hran, kde by obsluha musela po každém … |
-| `return.sections[0].heading` | Kdy se vyplatí RTS? |
-| `return.sections[0].body` | Od středního denního průtoku 100–200 dílů se RTS vyplatí za 12–24 měsíců díky odlehčení personálu. Zásadní je, aby uvolněný pracovník převzal produktivní násled … |
-| `return.sections[1].heading` | RTS Compact vs. Professional vs. Industrial |
-| `return.sections[1].body` | RTS Compact (úsporné, vstup) — RTS Professional (střední průtok, flexibilní) — RTS Industrial (vysoký výkon, nepřetržitý provoz). Systémy Teilehandling doplňují … |
-| `return.faq[0].question` | Hodí se RTS k mé olepovačce? |
-| `return.faq[0].answer` | Ano — systémy RTS jsou kompatibilní se všemi běžnými olepovačkami hran. Asamer ověří rozhraní předem. |
-| `return.faq[1].question` | Jaký je prostorový nárok RTS? |
-| `return.faq[1].answer` | Typický prostorový nárok: 2–3 m délky návratu plus délka stroje. S uspořádáním do L nebo U lze stopu optimalizovat. |
-| `return.faq[2].question` | Jsou k dispozici servisní smlouvy? |
-| `return.faq[2].answer` | Ano — Asamer nabízí servisní smlouvy s roční inspekcí a definovanými reakčními časy. |
-| `buffer.introExpanded` | Barbaric pufrovací dopravníky (TMP) oddělují navazující zpracovatelské stanice a umožňují souvislý tok materiálu i při různých dobách taktu. Mezi formátovací pi … |
-| `buffer.sections[0].heading` | Kdy potřebujete pufrovací dopravník? |
-| `buffer.sections[0].body` | Jakmile mají dvě zpracovatelské stanice různé doby taktu, vznikají prostoje: rychlejší stanice čeká, pomalejší se zasekává. TMP pufruje obrobky mezi stanicemi a … |
-| `buffer.faq[0].question` | Kolik obrobků může TMP pufrovat? |
-| `buffer.faq[0].answer` | Podle délky 5–50 obrobků. Návrh závisí na rozdílu doby taktu a požadované toleranci výpadku. |
-| `buffer.faq[1].question` | Má smysl TMP u každé kombinace strojů? |
-| `buffer.faq[1].answer` | Při téměř stejných dobách taktu spíše ne. Jakmile rozdíl doby taktu překročí 20 % nebo má jedna stanice časté prostoje, má pufr ekonomický smysl. |
-| `buffer.faq[2].question` | Lze TMP kombinovat se stávající linkou? |
-| `buffer.faq[2].answer` | Ano — Barbaric pufrovací dopravníky jsou modulární a lze je integrovat do stávajících linek. Asamer projektuje rozhraní. |
-| `door.introExpanded` | Barbaric systémy manipulace s dveřmi (DRX, CSF Industrial pro dveře, LPS) automatizují speciální manipulaci s bytovými, pokojovými a průmyslovými dveřmi ve výro … |
-| `door.sections[0].heading` | Vakuová manipulace pro jednotlivé dveře |
-| `door.sections[0].body` | Vakuový zvedák DRX bezpečně a šetrně k povrchu manipuluje s jednotlivými dveřmi. Ideální pro truhlářství nebo menší výrobce dveří, kteří nepotřebují plně automa … |
-| `door.sections[1].heading` | Automatický sklad dveří |
-| `door.sections[1].body` | CSF Industrial pro dveře je plně automatický sklad speciálně pro dveřní prvky s automatickým zaskladněním a vyskladněním, komisionováním a integrací ERP. Nezbyt … |
-| `door.faq[0].question` | Jaké velikosti dveří se zpracovávají? |
-| `door.faq[0].answer` | Standardní velikosti do 2,2 × 1,2 m. Nadměrné formáty po dohodě. |
-| `door.faq[1].question` | Zpracovávají se dveře s kováním? |
-| `door.faq[1].answer` | Ano — vakuové úchopy jsou navrženy tak, aby uchopily plochy bez kování. Skladování je šetrné ke kování. |
-| `door.faq[2].question` | Jsou k dispozici etiketovací řešení? |
-| `door.faq[2].answer` | Ano — LPS je automatický etiketovací systém pro dveře s čárovým kódem nebo RFID tagem. |
-| `labeling.introExpanded` | Barbaric etiketovací systémy (LPS) automaticky nanášejí čárové kódy, QR kódy nebo RFID tagy na obrobky — pro nepřerušenou sledovatelnost a bezchybné přiřazení z … |
-| `labeling.sections[0].heading` | Proč digitální etiketování? |
-| `labeling.sections[0].body` | Ruční etiketování je časově náročné a chybové. Při výrobě dávky 1 s mnoha různými díly jsou záměny prakticky nevyhnutelné. Automatické etiketování zcela odstraň … |
-| `labeling.faq[0].question` | Čárový kód nebo RFID? |
-| `labeling.faq[0].answer` | Čárový kód je levnější a stačí pro většinu aplikací. RFID se vyplatí, když musí být etikety chráněny přes mnoho povrchových úprav (lakování, olepování hran). |
-| `labeling.faq[1].question` | Integrace s ERP? |
-| `labeling.faq[1].answer` | LPS se propojuje s SAP, Navision nebo individuálními ERP systémy. ID každého dílu se tam generuje a propojuje s daty zakázek. |
-| `labeling.faq[2].question` | Jaký tiskový výkon? |
-| `labeling.faq[2].answer` | Až 1.000 etiket za hodinu v závislosti na výměně obrobku a formátu etikety. |
-| `vacuum-lifters.introExpanded` | Barbaric vakuové zvedáky (řada UWL) umožňují ergonomickou, bezpečnou a přesnou manipulaci s velkými a těžkými deskami, dveřmi nebo pracovními deskami. Místo ruč … |
-| `vacuum-lifters.sections[0].heading` | Ergonomie a bezpečnost práce |
-| `vacuum-lifters.sections[0].body` | Zatížení zad opakovaným zvedáním je jedním z nejčastějších důvodů pracovní neschopnosti v dřevařském průmyslu. Vakuové zvedáky tento rizikový faktor zcela odstr … |
-| `vacuum-lifters.sections[1].heading` | Který UWL je správný? |
-| `vacuum-lifters.sections[1].body` | UWL-1: vstup, menší zatížení. UWL-3: standardní model pro většinu aplikací se dřevem. UWL-3S: speciální provedení pro tenké nebo porézní desky. UWL-3J: rychlejš … |
-| `vacuum-lifters.faq[0].question` | Lze zvedat i zakřivené povrchy? |
-| `vacuum-lifters.faq[0].answer` | Standardní přísavky jsou navrženy pro rovné plochy. Pro zakřivené povrchy jsou k dispozici speciální provedení s přizpůsobenými přísavkami. |
-| `vacuum-lifters.faq[1].question` | Potřebujeme stlačený vzduch? |
-| `vacuum-lifters.faq[1].answer` | Většina UWL pracuje s integrovaným vakuovým čerpadlem — žádný externí stlačený vzduch není nutný. Speciální provedení s externím čerpadlem jsou k dispozici pro  … |
-| `vacuum-lifters.faq[2].question` | Jak často se musí kontrolovat? |
-| `vacuum-lifters.faq[2].answer` | Roční bezpečnostní kontrola dle DGUV je povinná. Asamer nabízí tuto kontrolu v servisním balíčku. |
-| `vacuum-special.introExpanded` | Barbaric speciální vakuové zvedáky (řada SWL, NGR) se nasazují tam, kde standardní přísavky nestačí: pro fošny (Plank-Lifter), citlivé povrchy (jehlový úchop),  … |
-| `vacuum-special.sections[0].heading` | Kdy se vyplatí speciální vakuová technika? |
-| `vacuum-special.sections[0].body` | Jakmile standardní vakuová technika selhává kvůli geometrii obrobku nebo povrchu — například u zakřivených ploch, extrémně tenkých desek, porézního materiálu ne … |
-| `vacuum-special.faq[0].question` | Existuje speciální řešení pro naši geometrii? |
-| `vacuum-special.faq[0].answer` | Asamer a Barbaric rádi posoudí proveditelnost a ekonomiku. Pošlete nám fotografii nebo nákres vašeho obrobku. |
-| `vacuum-special.faq[1].question` | Jak dlouho trvá vývoj speciálního řešení? |
-| `vacuum-special.faq[1].answer` | Obvykle 8–16 týdnů od konceptu po dodání — v závislosti na složitosti. |
-| `vacuum-special.faq[2].question` | Lze dovybavit standardní vakuový zvedák? |
-| `vacuum-special.faq[2].answer` | V mnoha případech ano — Asamer kontroluje možnost dovybavení stávajících UWL speciálními přísavkami nebo jehlovými úchopy. |
-| `vacuum-traverses.introExpanded` | Barbaric vakuové traverzy jsou dlouhé úchopové systémy pro manipulaci s velkoformátovými, dlouhými nebo lehkými obrobky — například tenkými deskami, dveřmi, ple … |
-| `vacuum-traverses.sections[0].heading` | Traverza pro tenké desky vs. standardní zvedák |
-| `vacuum-traverses.sections[0].body` | Tenké desky (< 10 mm) se při klasickém zvedání středovým úchopem prohýbají a trhají na okrajích. Traverza pro tenké desky rozkládá zatížení po celé ploše, takže … |
-| `vacuum-traverses.faq[0].question` | Jaké délky obrobků jsou možné? |
-| `vacuum-traverses.faq[0].answer` | Standardní traverzy do 3 m, speciální provedení do 6 m. |
-| `vacuum-traverses.faq[1].question` | Pro jaké tloušťky desek je vhodná traverza pro tenké desky? |
-| `vacuum-traverses.faq[1].answer` | Obvykle od 2 mm do 15 mm. Pro HPL nebo fólie jsou nutné speciální povrchy přísavek. |
-| `vacuum-traverses.faq[2].question` | Existuje i plechová traverza? |
-| `vacuum-traverses.faq[2].answer` | Ano — traverza plech-plexisklo pro kovy a ploché plastové materiály. |
-| `vacuum-cranes.introExpanded` | Barbaric vakuové jeřáby jsou stacionární nebo plošné manipulační systémy, pokud jsou potřebné pravidelné pohyby desek po definovaných trasách — ale bez plně aut … |
-| `vacuum-cranes.sections[0].heading` | SSK vs. SSY vs. sloupcový most |
-| `vacuum-cranes.sections[0].body` | SSK sloupový otočný jeřáb: pevná pozice, půlkruh pokrytí — ideální pro jedno pracoviště. SSY kolejnicový systém: lineární dráha — ideální pro linky nebo průchoz … |
-| `vacuum-cranes.faq[0].question` | Je vakuový jeřáb levnější než sklad desek? |
-| `vacuum-cranes.faq[0].answer` | Výrazně levnější — SSK začíná na zlomku nákladů automatického skladu. Ekonomicky smysluplné, když se manuální manipulace nahradí ovládáním jeřábu, ne automatiza … |
-| `vacuum-cranes.faq[1].question` | Potřebujeme základ? |
-| `vacuum-cranes.faq[1].answer` | SSK a sloupcový most vyžadují základy; SSY se montuje na stávající stropní konstrukci. Asamer koordinuje stavební práce. |
-| `vacuum-cranes.faq[2].question` | Automaticky nebo ručně? |
-| `vacuum-cranes.faq[2].answer` | Obojí možné. Menší jeřáby se obvykle ovládají ručně, větší mohou jezdit automaticky (řízení PLC, světelné závory, napojení na ERP). |
-
-### HU — 30 fehlend
-
-| Pfad im Modul | ausgelieferter Text |
-|---|---|
-| `buffer.sections[0].heading` | When do you need a buffer conveyor? |
-| `buffer.faq[0].question` | How many workpieces can a TMP buffer? |
-| `buffer.faq[1].question` | Does a TMP make sense for every machine combination? |
-| `buffer.faq[2].question` | Can the TMP be combined with an existing line? |
-| `door.sections[0].heading` | Vacuum handling for individual doors |
-| `door.sections[1].heading` | Automatic door storage |
-| `door.faq[0].question` | What door sizes are processed? |
-| `door.faq[1].question` | Are doors with fittings processed? |
-| `door.faq[2].question` | Are there labelling solutions? |
-| `labeling.sections[0].heading` | Why digital labelling? |
-| `labeling.faq[0].question` | Barcode or RFID? |
-| `labeling.faq[1].question` | ERP integration? |
-| `labeling.faq[2].question` | What printing performance? |
-| `vacuum-lifters.sections[0].heading` | Ergonomics and occupational safety |
-| `vacuum-lifters.sections[1].heading` | Which UWL is the right one? |
-| `vacuum-lifters.faq[0].question` | Can curved surfaces also be lifted? |
-| `vacuum-lifters.faq[1].question` | Do we need compressed air? |
-| `vacuum-lifters.faq[2].question` | How often must they be inspected? |
-| `vacuum-special.sections[0].heading` | When is special vacuum technology worthwhile? |
-| `vacuum-special.faq[0].question` | Is there a special solution for our geometry? |
-| `vacuum-special.faq[1].question` | How long does development of a special solution take? |
-| `vacuum-special.faq[2].question` | Can a standard vacuum lifter be retrofitted? |
-| `vacuum-traverses.sections[0].heading` | Thin panel traverse vs. standard lifter |
-| `vacuum-traverses.faq[0].question` | What workpiece lengths are possible? |
-| `vacuum-traverses.faq[1].question` | What panel thicknesses is the thin panel traverse suitable for? |
-| `vacuum-traverses.faq[2].question` | Is there a sheet metal traverse? |
-| `vacuum-cranes.sections[0].heading` | SSK vs. SSY vs. truss bridge |
-| `vacuum-cranes.faq[0].question` | Is a vacuum crane cheaper than a panel storage? |
-| `vacuum-cranes.faq[1].question` | Do we need a foundation? |
-| `vacuum-cranes.faq[2].question` | Automatic or manual? |
-
-## gannomatSeoContent · Kategorien (94)
-
-### SK — 94 fehlend
+### SK — 93 fehlend
 
 | Pfad im Modul | ausgelieferter Text |
 |---|---|
@@ -453,7 +298,6 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `insertion_door.faq[0].answer` | Ano — řada HD je navržena pro evropské standardy (Eurodrážka, Eurokolejnice). |
 | `insertion_door.faq[1].question` | Lze Selekta HD zapojit do výrobní linky? |
 | `insertion_door.faq[1].answer` | Ano — se vstupním, výstupním dopravníkem a pufrem. Asamer linku projektuje. |
-| `insertion_door.faq[2].question` | Jaká je údržba? |
 | `insertion_door.faq[2].answer` | Interval údržby 6 měsíců, roční hlavní kontrola. Servisní smlouva doporučena. |
 | `machining.introExpanded` | Gannomat CNC obráběcí centra — především ProTec Profit — spojují frézování, vrtání a zarážení kolíků v jednom stroji s jediným upnutím. Je to klíč ke složitým d … |
 | `machining.sections[0].heading` | CNC obráběcí centrum vs. jednotlivé stroje |
@@ -529,85 +373,6 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `cornerhinge.faq[1].answer` | 26 mm a 35 mm standard, jiné na vyžádání. |
 | `cornerhinge.faq[2].question` | Automatické polohování? |
 | `cornerhinge.faq[2].answer` | Mechanické dorazy, CNC u speciálních modelů. |
-
-## barbaricSeoContent · Produkte (72)
-
-### SK — 72 fehlend
-
-| Pfad im Modul | ausgelieferter Text |
-|---|---|
-| `csf-professional.longDescription` | Barbaric CSF Professional je plně automatický sklad desek pro truhlářství, výrobce nábytku a středně velké zpracovatele dřeva. Zajišťuje celkové řízení deskovéh … |
-| `csf-professional.applicationSections[0].heading` | Pro truhlárny s omezenou plochou haly |
-| `csf-professional.applicationSections[0].body` | Boční vzdálenost pouhých 100 mm umožňuje umístění přímo u stěn a v úzkých halových úsecích. Tím je CSF Professional vhodný i pro stávající budovy, kde rozšíření … |
-| `csf-professional.applicationSections[1].heading` | Pro pickovací provoz bez pily |
-| `csf-professional.applicationSections[1].body` | CSF Professional funguje jako čistě pickovací sklad i bez napojené formátovací pily. Desky se vyjímají ze skladu a připravují k expedici — ideální pro obchodník … |
-| `csf-professional.buyingAdvice` | Zvolte CSF Professional, pokud hledáte kompaktní a ekonomický sklad desek pro řemesla nebo středně velké provozy. Pro průmyslový nepřetržitý provoz s dobou cykl … |
-| `csf-professional.faq[0].question` | Jaké plochy a kapacity jsou možné? |
-| `csf-professional.faq[0].answer` | CSF Professional je modulárně škálovatelný. Typické rozměry haly se pohybují od 8 × 15 m do 15 × 40 m, počet skladových míst závisí na formátu desek a výšce sto … |
-| `csf-professional.faq[1].question` | Jak se sklad napojí na naši pilu? |
-| `csf-professional.faq[1].answer` | Napojení se realizuje předávací stanicí s nájezdovými válečky nebo příčným stolem. U pil Mayer, Schelling nebo Holzma používáme standardizované protokoly; u sta … |
-| `csf-professional.faq[2].question` | Za jak dlouho se investice vrátí? |
-| `csf-professional.faq[2].answer` | Typická návratnost je jeden až dva roky. Hlavní úspory: odstranění manuální přepravy, méně pracovníků ve skladu, méně poškození desek a lepší přehled o materiál … |
-| `csf-industrial.longDescription` | Barbaric CSF Industrial je vysoce průmyslový sklad desek pro nepřetržitý provoz ve velkých nábytkářských závodech, dodavatelských provozech a zpracovatelích des … |
-| `csf-industrial.applicationSections[0].heading` | Pro průmyslovou výrobu nábytku |
-| `csf-industrial.applicationSections[0].body` | CSF Industrial zásobuje vícesměnné výrobní linky deskovým materiálem. Několik výdejních míst lze obsluhovat paralelně; priorizace probíhá podle ERP řízeného poř … |
-| `csf-industrial.applicationSections[1].heading` | Pro zpracovatele desek a zakázkové výrobce |
-| `csf-industrial.applicationSections[1].body` | Zakázkoví výrobci s různorodými deskovými položkami mají obzvlášť prospěch z principu chaotického skladování: každá deska dostane digitální místo nezávislé na d … |
-| `csf-industrial.buyingAdvice` | CSF Industrial je první volbou pro průmyslové nepřetržité provozy s vysokým obratem materiálu a ERP integrací. Pokud váš objem materiálu přesahuje několik tisíc … |
-| `csf-industrial.faq[0].question` | Kolik formátovacích pil může CSF Industrial zásobovat současně? |
-| `csf-industrial.faq[0].answer` | Podle rozvržení haly a požadavků na dobu taktu může CSF Industrial zásobovat dvě až čtyři formátovací pily paralelně. Napojení probíhá řetězovými nebo pásovými  … |
-| `csf-industrial.faq[1].question` | Je podporováno chaotické skladování? |
-| `csf-industrial.faq[1].answer` | Ano — chaotické skladování je základním principem CSF Industrial. Každá deska se při zaskladnění změří a získá digitální místo bez omezení druhu. Tím se zvyšuje … |
-| `csf-industrial.faq[2].question` | Jak se realizuje napojení na ERP? |
-| `csf-industrial.faq[2].answer` | Napojení na SAP, Navision, Infor nebo individuální ERP systémy se realizuje přes standardizovaná rozhraní (OPC-UA, REST API, XML výměna). Softwarový tým Asamer  … |
-| `lcv-performance.longDescription` | Barbaric LCV Performance je nesting picker, který odebírá hotové vyřezané díly z nesting CNC, separuje je a stohuje podle zakázek. Systém odstraňuje manuální od … |
-| `lcv-performance.applicationSections[0].heading` | Pro automatizované nesting buňky |
-| `lcv-performance.applicationSections[0].body` | V nesting buňce se deskový materiál řeže přímo na CNC na všechny potřebné díly. LCV Performance odebírá vyřezané díly ihned, takže CNC může začít další řezný pl … |
-| `lcv-performance.applicationSections[1].heading` | Pro výrobu dávky 1 |
-| `lcv-performance.applicationSections[1].body` | Při výrobě dávky 1 (každý díl unikát) je manuální třídění dílů obzvlášť chybové. LCV Performance automaticky přiřadí každý díl správné zakázce a stohuje podle z … |
-| `lcv-performance.buyingAdvice` | LCV Performance se vyplatí, jakmile provozujete nesting CNC v nepřetržitém režimu a musíte tam vázat alespoň jednu osobu pro odběr a třídění dílů. Návratnost ty … |
-| `lcv-performance.faq[0].question` | Jaké nesting CNC LCV Performance podporuje? |
-| `lcv-performance.faq[0].answer` | LCV Performance lze propojit s běžnými nesting CNC od Homag, Biesse, SCM, IMA nebo Felder. Přenos dat probíhá přes XML export nebo přímé PLC rozhraní. Asamer ov … |
-| `lcv-performance.faq[1].question` | Jak malé mohou být díly? |
-| `lcv-performance.faq[1].answer` | Typická minimální velikost pro odběr dílů je 80 × 80 mm. Menší díly lze realizovat přes speciální aplikace s přizpůsobenými přísavkovými úchopy — Asamer to koor … |
-| `lcv-performance.faq[2].question` | Kolik zakázek může LCV stohovat paralelně? |
-| `lcv-performance.faq[2].answer` | Podle konfigurace až 20 paralelních stohů zakázek. Pokud to nestačí, lze předřadit pufrovací dopravník, který odváží hotové stohy a vytváří místo pro další zaká … |
-| `rts-professional.longDescription` | Barbaric RTS Professional je návratový systém pro olepovačky hran, který automaticky vrací hotové obrobky k obsluze stroje. Místo aby se díly obnášely kolem str … |
-| `rts-professional.applicationSections[0].heading` | Pro jednoho pracovníka u olepovačky |
-| `rts-professional.applicationSections[0].body` | Bez návratu potřebuje olepovačka hran obvykle dva pracovníky — jeden zakládá, druhý odebírá. S RTS Professional se obrobek vrací automaticky, takže jeden pracov … |
-| `rts-professional.applicationSections[1].heading` | Pro střední série s málo přestaveními |
-| `rts-professional.applicationSections[1].body` | RTS Professional je ekonomický od středních denních průtoků několika set dílů. Při této velikosti provozu se automatizace rychle vyplatí díky odlehčení personál … |
-| `rts-professional.buyingAdvice` | Zvolte RTS Professional pro typické požadavky truhlářství a středně velkých provozů. Pro průmyslový nepřetržitý provoz s vysokými takty je vhodnější RTS Industr … |
-| `rts-professional.faq[0].question` | Hodí se RTS k mé stávající olepovačce? |
-| `rts-professional.faq[0].answer` | RTS Professional se hodí k olepovačkám hran různých výrobců (OTT, Homag, Felder, Biesse, SCM atd.). Rozhraní se navrhuje individuálně při projektování. Asamer o … |
-| `rts-professional.faq[1].question` | Jaké jsou prostorové nároky? |
-| `rts-professional.faq[1].answer` | Typicky 2–3 m délky návratu plus vlastní délka olepovačky hran. Při uspořádání do L nebo U lze prostorové nároky optimalizovat. Přesné rozměry vyplývají z rozvr … |
-| `rts-professional.faq[2].question` | Vyplatí se mi RTS? |
-| `rts-professional.faq[2].answer` | Při středním průtoku a dvousměnném provozu se RTS vrátí za 12–24 měsíců díky odlehčení personálu. Asamer rád spočítá ROI s vašimi výrobními čísly. |
-| `uwl-3.longDescription` | Barbaric UWL-3 je vakuový zvedák pro ergonomickou manipulaci s velkými deskovými materiály ve výrobě dřeva a nábytku. Bere desky, dveře nebo pracovní desky bezp … |
-| `uwl-3.applicationSections[0].heading` | Pro příjem zboží a skladovou logistiku |
-| `uwl-3.applicationSections[0].body` | Při vykládání nákladních vozidel nebo stohování deskového materiálu nahrazuje UWL-3 manuální zvedání bezpečným, kontrolovaným vakuovým úchopem. Velké formáty a  … |
-| `uwl-3.applicationSections[1].heading` | Pro zakládání formátovací pily a CNC |
-| `uwl-3.applicationSections[1].body` | U formátovací pily nebo CNC pracovního stolu zrychluje UWL-3 zakládání desek a zajišťuje přesné polohování. Obrobek lze umístit bez manuálního posouvání — zásad … |
-| `uwl-3.buyingAdvice` | UWL-3 je osvědčený standardní model — vhodný pro většinu truhlárenských a nábytkářských provozů s klasickou manipulací s deskami. Pro obzvlášť tenké nebo porézn … |
-| `uwl-3.faq[0].question` | Jaká břemena UWL-3 uzvedne? |
-| `uwl-3.faq[0].answer` | UWL-3 je dimenzován na typická zatížení desek do několika set kilogramů. Přesná nosnost závisí na povrchu desky a konfiguraci přísavkových úchopů. Asamer spočít … |
-| `uwl-3.faq[1].question` | Jak bezpečný je UWL-3 při výpadku proudu? |
-| `uwl-3.faq[1].answer` | UWL-3 drží vakuum po výpadku proudu několik minut přes pufr — dostatečně dlouho k bezpečnému odložení břemena. Navíc jsou k dispozici optická a akustická upozor … |
-| `uwl-3.faq[2].question` | Je nutná bezpečnostní kontrola? |
-| `uwl-3.faq[2].answer` | Ano — vakuové zvedáky podléhají v Německu/Rakousku/České republice každoroční bezpečnostní kontrole dle DGUV. Asamer nabízí tuto kontrolu jako součást údržbovéh … |
-| `ssk-saeulenschwenkkran.longDescription` | Barbaric SSK sloupový otočný jeřáb je stacionární vakuový jeřáb pro pravidelnou manipulaci s těžkými deskovými materiály ve výrobě dřeva a nábytku. Kombinuje ot … |
-| `ssk-saeulenschwenkkran.applicationSections[0].heading` | Pro truhlárny s různými formáty |
-| `ssk-saeulenschwenkkran.applicationSections[0].body` | V truhlářstvích pracujících s různými formáty desek je SSK ideálním řešením: každou desku lze pružně odebrat ze skladu a přenést na pracoviště. Pro pevné toky m … |
-| `ssk-saeulenschwenkkran.applicationSections[1].heading` | Pro pracoviště řezání a formátování |
-| `ssk-saeulenschwenkkran.applicationSections[1].body` | U formátovací pily, CNC nebo frézy polohuje SSK i velké formáty s milimetrovou přesností na pracovním stole. Tím odpadají zvedací operace, které při manuální ma … |
-| `ssk-saeulenschwenkkran.buyingAdvice` | Zvolte SSK, pokud na pevném pracovišti pravidelně manipulujete s velkými nebo těžkými deskami. Pro pokrytí celých hal jsou sloupcové mosty (2D/3D) nebo kolejnic … |
-| `ssk-saeulenschwenkkran.faq[0].question` | Jaký poloměr je možný? |
-| `ssk-saeulenschwenkkran.faq[0].answer` | Typické otočné poloměry jsou mezi 3 a 6 metry. Větší provedení jsou k dispozici na vyžádání, ale vyžadují odpovídajícím způsobem dimenzované základy. |
-| `ssk-saeulenschwenkkran.faq[1].question` | Potřebujeme speciální základ? |
-| `ssk-saeulenschwenkkran.faq[1].answer` | Ano — sloup jeřábu potřebuje železobetonový základ odpovídající nosnému a ohybovému namáhání. Asamer vypracuje projekt základu a koordinuje s vaším stavebním pr … |
-| `ssk-saeulenschwenkkran.faq[2].question` | Lze SSK otáčet elektricky? |
-| `ssk-saeulenschwenkkran.faq[2].answer` | Standardní SSK se otáčí ručně — břemeno je přitom odlehčeno. Elektromotorické otáčení je dostupné jako volba a doporučuje se u velmi velkých poloměrů nebo těžký … |
 
 ## edgebanderGuide (49)
 
@@ -707,3 +472,40 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `[4].items[1].answer` | Yes, every used machine from Asamer is technically inspected and refurbished if needed before sale. Depending on condition and scope of refurbishment we provide … |
 | `[4].items[2].question` | Does Asamer deliver to Hungary and Slovakia? |
 | `[4].items[2].answer` | Yes, Asamer delivers across the entire CZ, SK and HU region. We are the exclusive distribution partner for OTT edgebanding machines. Mayer, BARBARIC and Gannoma … |
+
+## barbaricSeoContent · Kategorien (30)
+
+### HU — 30 fehlend
+
+| Pfad im Modul | ausgelieferter Text |
+|---|---|
+| `buffer.sections[0].heading` | When do you need a buffer conveyor? |
+| `buffer.faq[0].question` | How many workpieces can a TMP buffer? |
+| `buffer.faq[1].question` | Does a TMP make sense for every machine combination? |
+| `buffer.faq[2].question` | Can the TMP be combined with an existing line? |
+| `door.sections[0].heading` | Vacuum handling for individual doors |
+| `door.sections[1].heading` | Automatic door storage |
+| `door.faq[0].question` | What door sizes are processed? |
+| `door.faq[1].question` | Are doors with fittings processed? |
+| `door.faq[2].question` | Are there labelling solutions? |
+| `labeling.sections[0].heading` | Why digital labelling? |
+| `labeling.faq[0].question` | Barcode or RFID? |
+| `labeling.faq[1].question` | ERP integration? |
+| `labeling.faq[2].question` | What printing performance? |
+| `vacuum-lifters.sections[0].heading` | Ergonomics and occupational safety |
+| `vacuum-lifters.sections[1].heading` | Which UWL is the right one? |
+| `vacuum-lifters.faq[0].question` | Can curved surfaces also be lifted? |
+| `vacuum-lifters.faq[1].question` | Do we need compressed air? |
+| `vacuum-lifters.faq[2].question` | How often must they be inspected? |
+| `vacuum-special.sections[0].heading` | When is special vacuum technology worthwhile? |
+| `vacuum-special.faq[0].question` | Is there a special solution for our geometry? |
+| `vacuum-special.faq[1].question` | How long does development of a special solution take? |
+| `vacuum-special.faq[2].question` | Can a standard vacuum lifter be retrofitted? |
+| `vacuum-traverses.sections[0].heading` | Thin panel traverse vs. standard lifter |
+| `vacuum-traverses.faq[0].question` | What workpiece lengths are possible? |
+| `vacuum-traverses.faq[1].question` | What panel thicknesses is the thin panel traverse suitable for? |
+| `vacuum-traverses.faq[2].question` | Is there a sheet metal traverse? |
+| `vacuum-cranes.sections[0].heading` | SSK vs. SSY vs. truss bridge |
+| `vacuum-cranes.faq[0].question` | Is a vacuum crane cheaper than a panel storage? |
+| `vacuum-cranes.faq[1].question` | Do we need a foundation? |
+| `vacuum-cranes.faq[2].question` | Automatic or manual? |

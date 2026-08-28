@@ -2734,7 +2734,8 @@ export const GANNOMAT_CATEGORY_SEO: Record<GannomatCategory, CategorySeoContent>
         },
       },
       {
-        question: { de: 'Wie hoch ist der Wartungsaufwand?', en: 'How high is the maintenance effort?', cz: 'Jaká je údržba?', hu: 'Milyen a karbantartási igény?' },
+        question: { de: 'Wie hoch ist der Wartungsaufwand?', en: 'How high is the maintenance effort?', cz: 'Jaká je údržba?',
+        sk: 'Aká je údržba?', hu: 'Milyen a karbantartási igény?' },
         answer: {
           de: 'Wartungsintervall 6 Monate, jährliche Hauptinspektion. Wartungsvertrag empfohlen.',
           en: 'Maintenance interval 6 months, annual main inspection. Maintenance contract recommended.',
