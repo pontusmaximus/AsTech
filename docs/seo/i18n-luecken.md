@@ -27,8 +27,8 @@ Widerspruch, der im günstigsten Fall ignoriert und im ungünstigsten als Duplik
 |---|---|---:|---:|---:|
 | A · Datenmodule (`MultiLangText`) | SK | 1314 | 692 | **65.5 %** |
 | A · Datenmodule (`MultiLangText`) | HU | 1891 | 115 | **94.3 %** |
-| B · Seitentexte (`tr()`) | SK | 41 | 700 | **5.5 %** |
-| B · Seitentexte (`tr()`) | HU | 748 | 0 | **100.0 %** |
+| B · Seitentexte (`tr()`) | SK | 41 | 694 | **5.6 %** |
+| B · Seitentexte (`tr()`) | HU | 742 | 0 | **100.0 %** |
 
 ## Eigener Befund: `tr()`-Aufrufe mit dynamischem Text
 
@@ -47,9 +47,9 @@ dauerhaft im Fallback, egal wie vollständig die Wörterbücher werden.
 | `src/pages/MayerProductPage.tsx` | 66 | `tr(`Anfrage Mayer ${product.name}`, `Inquiry Mayer ${product.name}`, `Poptávka Mayer ${product.name}`)` |
 | `src/pages/MayerProductPage.tsx` | 133 | `tr( `Die Mayer ${product.name} ist eine ${categoryLabel} für ${product.materials.includes('aluminium')` |
 | `src/pages/MayerProductPage.tsx` | 209 | `tr( `Unser hauseigenes Software-Team verbindet Ihre Mayer ${product.name} nahtlos mit Ihrem ERP-, MES-` |
-| `src/pages/OttProductPage.tsx` | 61 | `tr(`Anfrage OTT ${product.name}`, `Inquiry OTT ${product.name}`, `Poptávka OTT ${product.name}`)` |
-| `src/pages/OttProductPage.tsx` | 134 | `tr( `Die OTT ${product.name} ist eine ${categoryLabel} für ${product.badge === 'EINSTIEG' ? 'kleine un` |
-| `src/pages/OttProductPage.tsx` | 225 | `tr( `Unser Software-Team verbindet die ${product.name} via OPC-UA direkt mit Ihrem ERP/MES – keine` |
+| `src/pages/OttProductPage.tsx` | 91 | `tr(`Anfrage OTT ${product.name}`, `Inquiry OTT ${product.name}`, `Poptávka OTT ${product.name}`)` |
+| `src/pages/OttProductPage.tsx` | 173 | `tr( `Die OTT ${product.name} ist eine ${categoryLabel} für ${audience.de}${product.usp?.[lang] ? ` – $` |
+| `src/pages/OttProductPage.tsx` | 264 | `tr( `Unser Software-Team verbindet die ${product.name} via OPC-UA direkt mit Ihrem ERP/MES – keine` |
 
 ---
 
@@ -331,57 +331,6 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 465: `Poptat servis`
 - Zeile 478: `Informace o výrobci`
 
-## `src/pages/GuideEdgebanderPage.tsx` (46)
-
-### SK — 46 fehlend
-
-- Zeile 38: `Konzultace olepovačka hran`
-- Zeile 48: `Malá truhlárna`
-- Zeile 53: `VSTUP`
-- Zeile 57: `Malý–Střední`
-- Zeile 62: `STŘED`
-- Zeile 66: `Střední provoz`
-- Zeile 71: `NOVINKA`
-- Zeile 75: `Střední–Velký`
-- Zeile 80: `PROFI`
-- Zeile 84: `Průmysl`
-- Zeile 98: `VLAJKOVÁ LOĎ`
-- Zeile 102: `Výroba dveří`
-- Zeile 107: `SPECIÁL`
-- Zeile 119: `Průvodce`
-- Zeile 120: `Olepovačka hran – výběr`
-- Zeile 127: `Jakou olepovačku hran koupit`
-- Zeile 143: `Jakou olepovačku hran koupit? Průvodce výběrem 2026`
-- Zeile 160: `Čtyři kritéria pro rozhodnutí`
-- Zeile 178: `Malá truhlárna (1–5 zaměstnanců)`
-- Zeile 185: `U malých dílen s 1–5 zaměstnanci je na prvním místě kompaktnost a univerzálnost. Denní průchod se typicky pohybuje mezi 20–80 obrobky, rozmanitost materiálů je vysoká (masivní dřevo, melamin, plast). Stroj musí umožňovat rychlou výměnu hran a pracovat na omezeném prostoru.`
-- Zeile 193: `Naše doporučení: OTT Pacific+`
-- Zeile 196: `S délkou pouhých 5,7 m se vejde do každé dílny. Posuv 18 m/min včetně opracování rohů – nepotřebujete samostatný stroj na zaoblení rohů. Tloušťky hran 0,3–15 mm pokrývají všechny standardní aplikace. S CombiMelt je Pacific+ navíc rozšířitelná o PUR, takže při rostoucích požadavcích nemusíte měnit stroj.`
-- Zeile 208: `Zobrazit Pacific+ na stránce OTT`
-- Zeile 221: `Střední provoz (5–20 zaměstnanců)`
-- Zeile 228: `Střední provozy zpracovávají 80–300 obrobků denně a potřebují vyšší rychlosti posuvu a flexibilitu. Požadavky na kvalitu hran rostou – PUR lepení je stále více vyžadováno trhem, zejména u kuchyňského nábytku.`
-- Zeile 236: `Naše doporučení: OTT FlexEdge nebo Storm+`
-- Zeile 239: `FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 12–20 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost technologie nulové spáry bluEdge featuring HyFuse pro hrany s nulovými spárami.`
-- Zeile 251: `Zobrazit FlexEdge a Storm+ na stránce OTT`
-- Zeile 264: `Průmyslový nepřetržitý provoz (20+ zaměstnanců)`
-- Zeile 271: `Průmyslové provozy s vícesměnným provozem zpracovávají 300+ obrobků na směnu. Rozhoduje spolehlivost, průchodnost a nejvyšší kvalita hran. PUR a technologie nulové spáry jsou standardem, automatická výměna hran a napojení na nadřazené systémy jsou nutností.`
-- Zeile 279: `Naše doporučení: OTT StrongEdge nebo TopEdge`
-- Zeile 282: `StrongEdge nabízí délku 7,7 m a posuv 16–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge featuring HyFuse a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.`
-- Zeile 294: `Zobrazit StrongEdge a TopEdge na stránce OTT`
-- Zeile 307: `Speciální případ: Výroba dveří`
-- Zeile 314: `Výrobci dveří mají specifické požadavky: těžké obrobky, široké hrany a často nepřetržitá výroba s malým počtem změn formátu. OTT Door Edition je speciálně navržena pro tuto aplikaci – s upraveným vedením obrobků, zesíleným posuvem a optimalizovanou přítlačnou technikou pro masivní dveřní prvky.`
-- Zeile 322: `Pokud se zaměřujete na výrobu dveří, doporučujeme přímou konzultaci – Door Edition se individuálně konfiguruje podle vašeho výrobního profilu.`
-- Zeile 337: `Srovnávací přehled`
-- Zeile 347: `Cílová skupina`
-- Zeile 350: `Délka`
-- Zeile 353: `Posuv`
-- Zeile 380: `✓ = Standard · – = Volitelně · ✕ = nedostupné. Všechny údaje bez záruky.`
-- Zeile 403: `Zobrazit ověřené použité stroje`
-- Zeile 424: `Detailní průvodce PUR vs EVA`
-- Zeile 473: `Který stroj se hodí pro váš provoz?`
-- Zeile 480: `Poradíme vám osobně – s ohledem na průchodnost, prostor a rozpočet.`
-- Zeile 492: `Všechny olepovačky hran OTT`
-
 ## `src/pages/GuideWarehouseAutomationPage.tsx` (43)
 
 ### SK — 43 fehlend
@@ -430,6 +379,51 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 384: `Nechte se nezávazně poradit – zanalyzujeme váš materiálový tok a doporučíme vhodný systém BARBARIC.`
 - Zeile 397: `Systémy BARBARIC`
 
+## `src/pages/GuideEdgebanderPage.tsx` (40)
+
+### SK — 40 fehlend
+
+- Zeile 38: `Konzultace olepovačka hran`
+- Zeile 48: `Malá truhlárna`
+- Zeile 56: `Malý–Střední`
+- Zeile 64: `Střední provoz`
+- Zeile 72: `Střední–Velký`
+- Zeile 80: `Průmysl`
+- Zeile 96: `Výroba dveří`
+- Zeile 112: `Průvodce`
+- Zeile 113: `Olepovačka hran – výběr`
+- Zeile 120: `Jakou olepovačku hran koupit`
+- Zeile 136: `Jakou olepovačku hran koupit? Průvodce výběrem 2026`
+- Zeile 153: `Čtyři kritéria pro rozhodnutí`
+- Zeile 171: `Malá truhlárna (1–5 zaměstnanců)`
+- Zeile 178: `U malých dílen s 1–5 zaměstnanci je na prvním místě kompaktnost a univerzálnost. Denní průchod se typicky pohybuje mezi 20–80 obrobky, rozmanitost materiálů je vysoká (masivní dřevo, melamin, plast). Stroj musí umožňovat rychlou výměnu hran a pracovat na omezeném prostoru.`
+- Zeile 186: `Naše doporučení: OTT Pacific+`
+- Zeile 189: `S délkou pouhých 5,7 m se vejde do každé dílny. Posuv 18 m/min včetně opracování rohů – nepotřebujete samostatný stroj na zaoblení rohů. Tloušťky hran 0,3–15 mm pokrývají všechny standardní aplikace. S CombiMelt je Pacific+ navíc rozšířitelná o PUR, takže při rostoucích požadavcích nemusíte měnit stroj.`
+- Zeile 201: `Zobrazit Pacific+ na stránce OTT`
+- Zeile 214: `Střední provoz (5–20 zaměstnanců)`
+- Zeile 221: `Střední provozy zpracovávají 80–300 obrobků denně a potřebují vyšší rychlosti posuvu a flexibilitu. Požadavky na kvalitu hran rostou – PUR lepení je stále více vyžadováno trhem, zejména u kuchyňského nábytku.`
+- Zeile 229: `Naše doporučení: OTT FlexEdge nebo Storm+`
+- Zeile 232: `FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 20–22 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost technologie nulové spáry bluEdge featuring HyFuse pro hrany s nulovými spárami.`
+- Zeile 244: `Zobrazit FlexEdge a Storm+ na stránce OTT`
+- Zeile 257: `Průmyslový nepřetržitý provoz (20+ zaměstnanců)`
+- Zeile 264: `Průmyslové provozy s vícesměnným provozem zpracovávají 300+ obrobků na směnu. Rozhoduje spolehlivost, průchodnost a nejvyšší kvalita hran. PUR a technologie nulové spáry jsou standardem, automatická výměna hran a napojení na nadřazené systémy jsou nutností.`
+- Zeile 272: `Naše doporučení: OTT StrongEdge nebo TopEdge`
+- Zeile 275: `StrongEdge nabízí délku 7,7 m a posuv 22–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge featuring HyFuse a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.`
+- Zeile 287: `Zobrazit StrongEdge a TopEdge na stránce OTT`
+- Zeile 300: `Speciální případ: Výroba dveří`
+- Zeile 307: `Výrobci dveří mají specifické požadavky: těžké obrobky, široké hrany a často nepřetržitá výroba s malým počtem změn formátu. OTT Door Edition je speciálně navržena pro tuto aplikaci – s upraveným vedením obrobků, zesíleným posuvem a optimalizovanou přítlačnou technikou pro masivní dveřní prvky.`
+- Zeile 315: `Pokud se zaměřujete na výrobu dveří, doporučujeme přímou konzultaci – Door Edition se individuálně konfiguruje podle vašeho výrobního profilu.`
+- Zeile 330: `Srovnávací přehled`
+- Zeile 340: `Cílová skupina`
+- Zeile 343: `Délka`
+- Zeile 346: `Posuv`
+- Zeile 367: `✓ = Standard · – = Volitelně · ✕ = nedostupné. Všechny údaje bez záruky.`
+- Zeile 390: `Zobrazit ověřené použité stroje`
+- Zeile 411: `Detailní průvodce PUR vs EVA`
+- Zeile 460: `Který stroj se hodí pro váš provoz?`
+- Zeile 467: `Poradíme vám osobně – s ohledem na průchodnost, prostor a rozpočet.`
+- Zeile 479: `Všechny olepovačky hran OTT`
+
 ## `src/pages/OttPage.tsx` (40)
 
 ### SK — 40 fehlend
@@ -448,32 +442,32 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 127: `Exkluzivní prodejce`
 - Zeile 136: `Rozhraní`
 - Zeile 168: `Přehled kategorie`
-- Zeile 205: `modelů v detailu`
-- Zeile 219: `Proč OTT přes Asamer?`
-- Zeile 222: `Vlastnost`
-- Zeile 224: `Konkurence`
-- Zeile 226: `často příplatek`
-- Zeile 227: `PUR`
-- Zeile 227: `dle výrobce`
-- Zeile 228: `ERP`
-- Zeile 228: `často placená`
-- Zeile 229: `Servis CZ/SK/HU`
-- Zeile 229: `na místě`
-- Zeile 229: `často centrální`
-- Zeile 243: `Technologie`
-- Zeile 249: `Patent`
-- Zeile 251: `Top-driven roller · EVA + PUR · méně odpadu · servisní stanice`
-- Zeile 259: `Vodíkový plamen · bez spáry · montovatelná`
-- Zeile 266: `Proč koupit u Asamer?`
-- Zeile 269: `OPC-UA přímo do vašeho ERP/MES – bez vendor lock-in`
-- Zeile 270: `Exkluzivní prodejce CZ/SK/HU`
-- Zeile 270: `Přímý kontakt – bez koncernových oklik`
-- Zeile 271: `Servis a montáž`
-- Zeile 271: `Technici na místě v CZ/SK/HU`
-- Zeile 272: `Rodinný podnik od roku 1963 v Lambachu`
-- Zeile 287: `Časté dotazy k olepovačkám hran OTT`
-- Zeile 303: `OTT v akci`
-- Zeile 315: `Poradenství k OTT?`
+- Zeile 206: `modelů v detailu`
+- Zeile 220: `Proč OTT přes Asamer?`
+- Zeile 223: `Vlastnost`
+- Zeile 225: `Konkurence`
+- Zeile 227: `často příplatek`
+- Zeile 228: `PUR`
+- Zeile 228: `dle výrobce`
+- Zeile 229: `ERP`
+- Zeile 229: `často placená`
+- Zeile 230: `Servis CZ/SK/HU`
+- Zeile 230: `na místě`
+- Zeile 230: `často centrální`
+- Zeile 244: `Technologie`
+- Zeile 250: `Patent`
+- Zeile 252: `Top-driven roller · EVA + PUR · méně odpadu · servisní stanice`
+- Zeile 260: `Vodíkový plamen · bez spáry · montovatelná`
+- Zeile 267: `Proč koupit u Asamer?`
+- Zeile 270: `OPC-UA přímo do vašeho ERP/MES – bez vendor lock-in`
+- Zeile 271: `Exkluzivní prodejce CZ/SK/HU`
+- Zeile 271: `Přímý kontakt – bez koncernových oklik`
+- Zeile 272: `Servis a montáž`
+- Zeile 272: `Technici na místě v CZ/SK/HU`
+- Zeile 273: `Rodinný podnik od roku 1963 v Lambachu`
+- Zeile 288: `Časté dotazy k olepovačkám hran OTT`
+- Zeile 304: `OTT v akci`
+- Zeile 316: `Poradenství k OTT?`
 
 ## `src/pages/GuideVacuumLifterPage.tsx` (30)
 
@@ -655,11 +649,11 @@ HU über den **englischen** Quelltext nachgeschlagen. Ein neuer Eintrag in
 - Zeile 153: `Financování a dotace`
 - Zeile 154: `Leasing a dotace až 50 %.`
 - Zeile 182: `Poptávka`
-- Zeile 241: `Srovnání modelů`
-- Zeile 247: `Model`
-- Zeile 279: `Další informace`
-- Zeile 300: `Další kategorie`
-- Zeile 327: `Který stroj se hodí do vaší výroby?`
+- Zeile 250: `Srovnání modelů`
+- Zeile 256: `Model`
+- Zeile 288: `Další informace`
+- Zeile 309: `Další kategorie`
+- Zeile 336: `Který stroj se hodí do vaší výroby?`
 
 ## `src/pages/TermsPage.tsx` (18)
 
@@ -856,13 +850,13 @@ pro každého`
 
 ### SK — 7 fehlend
 
-- Zeile 86: `Tloušťka hrany`
-- Zeile 87: `Tloušťka obrobku`
-- Zeile 119: `Všechny produkty OTT`
-- Zeile 189: `Vybavení`
-- Zeile 209: `Popis`
-- Zeile 244: `Vhodná systémová řešení`
-- Zeile 272: `Poradenství, nabídka a montáž z jednoho zdroje.`
+- Zeile 117: `Tloušťka hrany`
+- Zeile 118: `Tloušťka obrobku`
+- Zeile 150: `Všechny produkty OTT`
+- Zeile 228: `Vybavení`
+- Zeile 248: `Popis`
+- Zeile 283: `Vhodná systémová řešení`
+- Zeile 311: `Poradenství, nabídka a montáž z jednoho zdroje.`
 
 ## `src/pages/UsedMachinesPage.tsx` (7)
 
@@ -994,7 +988,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `protec-profit.faq[1].answer` | Ano — standardní import DXF/DWG/STEP. Postprocesor se přizpůsobí vašemu konstrukčnímu softwaru. |
 | `protec-profit.faq[2].question` | Je stroj prachově přívětivý? |
 | `protec-profit.faq[2].answer` | Odsávání je standard — kompatibilní se všemi běžnými odsávacími zařízeními. |
-| `db-21-27-35.longDescription` | Gannomat DB 21-27-35 je klasický kolkovací vrtací stroj pro boky korpusu, záda a další díly nábytku se standardizovanými vzory otvorů. Označení 21-27-35 odkazuj … |
+| `db-21-27-35.longDescription` | Gannomat DB 21-27-35 je klasický kolíkovací vrtací stroj pro boky korpusu, záda a další díly nábytku se standardizovanými vzory otvorů. Označení 21-27-35 odkazu … |
 | `db-21-27-35.applicationSections[0].heading` | Pro standardní výrobu korpusu |
 | `db-21-27-35.applicationSections[0].body` | Ve standardní výrobě kuchyní nebo kancelářského nábytku je 32mm rastr otvorů průmyslovým standardem. Řada DB je optimalizována na tento rastr a dodává potřebné  … |
 | `db-21-27-35.buyingAdvice` | DB 21-27-35 je správnou volbou pro střední výrobu se standardními vzory otvorů. Pro vyšší průtok se vyplatí varianta WA s automatickým podáváním obrobku; při vy … |
@@ -1196,7 +1190,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `buffer.faq[1].answer` | Při téměř stejných dobách taktu spíše ne. Jakmile rozdíl doby taktu překročí 20 % nebo má jedna stanice časté prostoje, má pufr ekonomický smysl. |
 | `buffer.faq[2].question` | Lze TMP kombinovat se stávající linkou? |
 | `buffer.faq[2].answer` | Ano — Barbaric pufrovací dopravníky jsou modulární a lze je integrovat do stávajících linek. Asamer projektuje rozhraní. |
-| `door.introExpanded` | Barbaric systémy manipulace s dveřmi (DRX, CSF Industrial Türen, LPS) automatizují speciální manipulaci s bytovými, pokojovými a průmyslovými dveřmi ve výrobě.  … |
+| `door.introExpanded` | Barbaric systémy manipulace s dveřmi (DRX, CSF Industrial pro dveře, LPS) automatizují speciální manipulaci s bytovými, pokojovými a průmyslovými dveřmi ve výro … |
 | `door.sections[0].heading` | Vakuová manipulace pro jednotlivé dveře |
 | `door.sections[0].body` | Vakuový zvedák DRX bezpečně a šetrně k povrchu manipuluje s jednotlivými dveřmi. Ideální pro truhlářství nebo menší výrobce dveří, kteří nepotřebují plně automa … |
 | `door.sections[1].heading` | Automatický sklad dveří |
@@ -1491,9 +1485,9 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `carcass.faq[1].answer` | 30–120 sekund podle lepidla a velikosti korpusu. |
 | `carcass.faq[2].question` | Integrace do linky? |
 | `carcass.faq[2].answer` | Ano — se Selekta, dopravníkem a vybalovačem jako kompletní linka. |
-| `boring.introExpanded` | Gannomat kolkovací vrtací stroje (DB 21-27-35 a DB 21-27-35 WA) jsou klasické vícevřetenové vrtací stroje pro bočnice korpusu, záda a díly nábytku se standardní … |
-| `boring.sections[0].heading` | Kolkovací vrtací stroj vs. CNC stroj |
-| `boring.sections[0].body` | Kolkovací vrtací stroje jsou optimalizovány pro standardní vzory otvorů — rychlejší a levnější než CNC stroje. Při vysokém počtu variant nebo neobvyklých vrtací … |
+| `boring.introExpanded` | Gannomat kolíkovací vrtací stroje (DB 21-27-35 a DB 21-27-35 WA) jsou klasické vícevřetenové vrtací stroje pro bočnice korpusu, záda a díly nábytku se standardn … |
+| `boring.sections[0].heading` | Kolíkovací vrtací stroj vs. CNC stroj |
+| `boring.sections[0].body` | Kolíkovací vrtací stroje jsou optimalizovány pro standardní vzory otvorů — rychlejší a levnější než CNC stroje. Při vysokém počtu variant nebo neobvyklých vrtac … |
 | `boring.faq[0].question` | Co znamená WA? |
 | `boring.faq[0].answer` | Automatika obrobku — podávání a odběr probíhají automaticky dopravníkem. |
 | `boring.faq[1].question` | Hloubkové dorazy? |
@@ -1557,7 +1551,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `csf-professional.faq[2].answer` | Typická návratnost je jeden až dva roky. Hlavní úspory: odstranění manuální přepravy, méně pracovníků ve skladu, méně poškození desek a lepší přehled o materiál … |
 | `csf-industrial.longDescription` | Barbaric CSF Industrial je vysoce průmyslový sklad desek pro nepřetržitý provoz ve velkých nábytkářských závodech, dodavatelských provozech a zpracovatelích des … |
 | `csf-industrial.applicationSections[0].heading` | Pro průmyslovou výrobu nábytku |
-| `csf-industrial.applicationSections[0].body` | CSF Industrial zásobuje vícesmenné výrobní linky deskovým materiálem. Několik výdejních míst lze obsluhovat paralelně; priorizace probíhá podle ERP řízeného poř … |
+| `csf-industrial.applicationSections[0].body` | CSF Industrial zásobuje vícesměnné výrobní linky deskovým materiálem. Několik výdejních míst lze obsluhovat paralelně; priorizace probíhá podle ERP řízeného poř … |
 | `csf-industrial.applicationSections[1].heading` | Pro zpracovatele desek a zakázkové výrobce |
 | `csf-industrial.applicationSections[1].body` | Zakázkoví výrobci s různorodými deskovými položkami mají obzvlášť prospěch z principu chaotického skladování: každá deska dostane digitální místo nezávislé na d … |
 | `csf-industrial.buyingAdvice` | CSF Industrial je první volbou pro průmyslové nepřetržité provozy s vysokým obratem materiálu a ERP integrací. Pokud váš objem materiálu přesahuje několik tisíc … |
@@ -1590,14 +1584,14 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `rts-professional.faq[1].question` | Jaké jsou prostorové nároky? |
 | `rts-professional.faq[1].answer` | Typicky 2–3 m délky návratu plus vlastní délka olepovačky hran. Při uspořádání do L nebo U lze prostorové nároky optimalizovat. Přesné rozměry vyplývají z rozvr … |
 | `rts-professional.faq[2].question` | Vyplatí se mi RTS? |
-| `rts-professional.faq[2].answer` | Při středním průtoku a dvousmenném provozu se RTS vrátí za 12–24 měsíců díky odlehčení personálu. Asamer rád spočítá ROI s vašimi výrobními čísly. |
+| `rts-professional.faq[2].answer` | Při středním průtoku a dvousměnném provozu se RTS vrátí za 12–24 měsíců díky odlehčení personálu. Asamer rád spočítá ROI s vašimi výrobními čísly. |
 | `uwl-3.longDescription` | Barbaric UWL-3 je vakuový zvedák pro ergonomickou manipulaci s velkými deskovými materiály ve výrobě dřeva a nábytku. Bere desky, dveře nebo pracovní desky bezp … |
 | `uwl-3.applicationSections[0].heading` | Pro příjem zboží a skladovou logistiku |
 | `uwl-3.applicationSections[0].body` | Při vykládání nákladních vozidel nebo stohování deskového materiálu nahrazuje UWL-3 manuální zvedání bezpečným, kontrolovaným vakuovým úchopem. Velké formáty a  … |
 | `uwl-3.applicationSections[1].heading` | Pro zakládání formátovací pily a CNC |
 | `uwl-3.applicationSections[1].body` | U formátovací pily nebo CNC pracovního stolu zrychluje UWL-3 zakládání desek a zajišťuje přesné polohování. Obrobek lze umístit bez manuálního posouvání — zásad … |
 | `uwl-3.buyingAdvice` | UWL-3 je osvědčený standardní model — vhodný pro většinu truhlárenských a nábytkářských provozů s klasickou manipulací s deskami. Pro obzvlášť tenké nebo porézn … |
-| `uwl-3.faq[0].question` | Jaká břemena UWL-3 uzdvihne? |
+| `uwl-3.faq[0].question` | Jaká břemena UWL-3 uzvedne? |
 | `uwl-3.faq[0].answer` | UWL-3 je dimenzován na typická zatížení desek do několika set kilogramů. Přesná nosnost závisí na povrchu desky a konfiguraci přísavkových úchopů. Asamer spočít … |
 | `uwl-3.faq[1].question` | Jak bezpečný je UWL-3 při výpadku proudu? |
 | `uwl-3.faq[1].answer` | UWL-3 drží vakuum po výpadku proudu několik minut přes pufr — dostatečně dlouho k bezpečnému odložení břemena. Navíc jsou k dispozici optická a akustická upozor … |
@@ -1702,7 +1696,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `decisionCriteria[1].question` | 2. Which materials and edges will you process? |
 | `decisionCriteria[1].body` | The second criterion is materials: chipboard, MDF, solid wood, plastic, aluminium. For standard ABS and PVC edges up to 3 mm in dry environments, EVA glue is su … |
 | `decisionCriteria[2].question` | 3. What is your production volume? |
-| `decisionCriteria[2].body` | The third criterion is the number of shifts and operating hours. Single-shift operation works with feed speeds of 12–18 m/min. Multi-shift production with 300+  … |
+| `decisionCriteria[2].body` | The third criterion is the number of shifts and operating hours. Single-shift operation works with feed speeds of 18–20 m/min. Multi-shift production with 300+  … |
 | `decisionCriteria[3].question` | 4. What is your budget and TCO? |
 | `decisionCriteria[3].body` | The fourth criterion is total cost of ownership (TCO): purchase price, energy use, glue, maintenance, lifetime and resale value. OTT edgebanders typically last  … |
 | `usedVsNew.heading` | Used vs new edgebander |
@@ -1712,7 +1706,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `service.heading` | Service and availability in CZ, SK and HU |
 | `service.body` | Asamer has been the authorized OTT dealer for the Czech Republic, Slovakia and Hungary since 1991. Our scope: consulting, project planning, delivery, installati … |
 | `faq[0].question` | Which edgebander for a small joinery? |
-| `faq[0].answer` | For small joineries we recommend the OTT Pacific+ (5.7 m, 18 m/min) as a compact entry model or the OTT Tornado+ (6.2 m, 12–18 m/min) for greater flexibility wi … |
+| `faq[0].answer` | For small joineries we recommend the OTT Pacific+ (5.7 m, 18 m/min) as a compact entry model or the OTT Tornado+ (6.2 m, 18–20 m/min) for greater flexibility wi … |
 | `faq[1].question` | What is the difference between a PUR and an EVA edgebander? |
 | `faq[1].answer` | EVA is a thermoplastic glue: fast, cheap, fine for standard edges in dry environments. PUR (polyurethane) makes a waterproof, heat-resistant bond — mandatory fo … |
 | `faq[2].question` | Is it worth buying a used edgebander? |
@@ -1740,7 +1734,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `howTo[1].name` | Assess materials and edge types |
 | `howTo[1].text` | Identify edge thickness (0.3–25 mm) and material (ABS, PVC, solid wood). For wet environments choose PUR or bluEdge featuring HyFuse. |
 | `howTo[2].name` | Set the operating mode and shifts |
-| `howTo[2].text` | Single-shift: 12–18 m/min is enough. Multi-shift: 16–25 m/min, automatic magazines and OPC-UA for ERP integration. |
+| `howTo[2].text` | Single-shift: 18–20 m/min is enough. Multi-shift: 22–25 m/min, automatic magazines and OPC-UA for ERP integration. |
 | `howTo[3].name` | Calculate budget and TCO |
 | `howTo[3].text` | Include purchase price, glue, energy, maintenance and lifetime (15–25 years). On a smaller budget, consider a vetted used machine. |
 | `howTo[4].name` | Request a consultation with Asamer |
