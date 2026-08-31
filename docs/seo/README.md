@@ -82,8 +82,12 @@ Gesammelt aus allen Phasen — nichts davon lässt sich aus dem Repo erledigen.
 - Exporte `Seiten.csv` und die beiden Indexierungs-Kategorien bereitstellen — dann wird 1.3 vollständig
 
 **Inhalt**
-- Übersetzungen HU und SK beauftragen ([`i18n-luecken.md`](i18n-luecken.md)) — 1.371
-  Seitentext-Schlüssel, 867 Datenmodul-Einträge
+- **Lektorat** der maschinellen HU- und SK-Übersetzungen durch Muttersprachler — alle
+  Seitentexte (735 SK, 742 HU) und alle SK-Datenmodule sind übersetzt, aber von mir, nicht
+  von einem Fachübersetzer
+- Rest-Übersetzungen HU beauftragen ([`i18n-luecken.md`](i18n-luecken.md)) — 115
+  Datenmodul-Einträge (`edgebanderGuide` 49, `ratgeberFaqHub · FAQ` 36,
+  `barbaricSeoContent · Kategorien` 30)
 - Fachbegriffe für die 14 Produkte mit deutscher Bezeichnung, in allen fünf Sprachen
   ([`03-sprachversionen.md`](03-sprachversionen.md))
 - Entscheidung: Preise veröffentlichen (dann `offers` im Product-Schema) oder die

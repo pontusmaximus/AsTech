@@ -19,11 +19,11 @@ export interface ContentDates {
 }
 
 export const CONTENT_DATES: Partial<Record<SeoRouteKey, ContentDates>> = {
-  barbaric: { modified: '2026-08-29T00:03:48+02:00' },
+  barbaric: { modified: '2026-08-28T22:46:07+00:00' },
   contact: { modified: '2026-08-28T09:05:44+00:00' },
-  faq: { modified: '2026-08-28T09:05:44+00:00' },
+  faq: { modified: '2026-08-28T22:41:06+00:00' },
   financing: { modified: '2026-08-28T09:05:44+00:00' },
-  gannomat: { modified: '2026-08-28T19:23:55+02:00' },
+  gannomat: { modified: '2026-08-28T22:46:07+00:00' },
   guideEdgebander: { modified: '2026-08-28T23:44:42+02:00' },
   guideFundingCz: { modified: '2026-08-28T09:05:44+00:00' },
   guidePanelSawComparison: { modified: '2026-08-28T09:05:44+00:00' },
@@ -33,7 +33,7 @@ export const CONTENT_DATES: Partial<Record<SeoRouteKey, ContentDates>> = {
   home: { modified: '2026-08-28T09:05:44+00:00' },
   imaSchelling: { modified: '2026-08-28T09:05:44+00:00' },
   imprint: { modified: '2026-08-28T09:05:44+00:00' },
-  mayer: { modified: '2026-08-28T19:23:55+02:00' },
+  mayer: { modified: '2026-08-28T22:41:06+00:00' },
   ott: { modified: '2026-08-29T00:03:48+02:00' },
   privacy: { modified: '2026-08-28T09:05:44+00:00' },
   service: { modified: '2026-08-28T09:05:44+00:00' },
