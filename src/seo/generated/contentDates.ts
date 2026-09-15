@@ -23,7 +23,7 @@ export const CONTENT_DATES: Partial<Record<SeoRouteKey, ContentDates>> = {
   contact: { modified: '2026-08-28T09:05:44+00:00' },
   faq: { modified: '2026-08-28T22:41:06+00:00' },
   financing: { modified: '2026-08-28T09:05:44+00:00' },
-  gannomat: { modified: '2026-08-28T22:46:07+00:00' },
+  gannomat: { modified: '2026-08-28T22:56:18+00:00' },
   guideEdgebander: { modified: '2026-08-28T23:44:42+02:00' },
   guideFundingCz: { modified: '2026-08-28T09:05:44+00:00' },
   guidePanelSawComparison: { modified: '2026-08-28T09:05:44+00:00' },

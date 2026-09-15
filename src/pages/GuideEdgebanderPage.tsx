@@ -63,7 +63,7 @@ const GuideEdgebanderPage = () => {
       name: 'FlexEdge',
       target: tr('Mittelbetrieb', 'Mid-size', 'Střední provoz'),
       length: '7,1 m',
-      feed: '20–22 m/min',
+      feed: '20–25 m/min',
       pur: true,
       laser: false,
     },
@@ -71,7 +71,7 @@ const GuideEdgebanderPage = () => {
       name: 'Storm+',
       target: tr('Mittel–Groß', 'Mid–Large', 'Střední–Velký'),
       length: '–',
-      feed: '22–25 m/min',
+      feed: '20–25 m/min',
       pur: true,
       laser: 'option',
     },
@@ -79,7 +79,7 @@ const GuideEdgebanderPage = () => {
       name: 'StrongEdge',
       target: tr('Industrie', 'Industrial', 'Průmysl'),
       length: '7,7 m',
-      feed: '22–25 m/min',
+      feed: '20–25 m/min',
       pur: true,
       laser: 'option',
     },
@@ -87,7 +87,7 @@ const GuideEdgebanderPage = () => {
       name: 'TopEdge',
       target: tr('Industrie', 'Industrial', 'Průmysl'),
       length: '–',
-      feed: '22–25 m/min',
+      feed: '20–25 m/min',
       pur: true,
       laser: true,
     },
@@ -230,9 +230,9 @@ const GuideEdgebanderPage = () => {
                 </p>
                 <p className="text-white/70 text-sm leading-relaxed">
                   {tr(
-                    'Die FlexEdge ist die neueste OTT-Maschine und schließt die Lücke zwischen Tornado+ und Storm+. Mit 7,1 m Baulänge, 20–22 m/min Vorschub und Beckhoff 18,5″-Steuerung bietet sie OPC-UA-Konnektivität für ERP-Integration. Die Storm+ bietet zusätzlich die Option auf die Nullfugentechnologie bluEdge featuring HyFuse für Zero-Gap-Kanten.',
-                    'The FlexEdge is OTT\'s newest machine, bridging the gap between Tornado+ and Storm+. At 7.1 m length, 20–22 m/min feed and Beckhoff 18.5″ control it offers OPC-UA connectivity for ERP integration. The Storm+ additionally provides the option for the bluEdge featuring HyFuse zero glue line technology for zero-gap edges.',
-                    'FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 20–22 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost technologie nulové spáry bluEdge featuring HyFuse pro hrany s nulovými spárami.'
+                    'Die FlexEdge ist die neueste OTT-Maschine und schließt die Lücke zwischen Tornado+ und Storm+. Mit 7,1 m Baulänge, 20–25 m/min Vorschub und Beckhoff 18,5″-Steuerung bietet sie OPC-UA-Konnektivität für ERP-Integration. Die Storm+ bietet zusätzlich die Option auf die Nullfugentechnologie bluEdge featuring HyFuse für Zero-Gap-Kanten.',
+                    'The FlexEdge is OTT\'s newest machine, bridging the gap between Tornado+ and Storm+. At 7.1 m length, 20–25 m/min feed and Beckhoff 18.5″ control it offers OPC-UA connectivity for ERP integration. The Storm+ additionally provides the option for the bluEdge featuring HyFuse zero glue line technology for zero-gap edges.',
+                    'FlexEdge je nejnovější stroj OTT, který překlenuje mezeru mezi Tornado+ a Storm+. S délkou 7,1 m, posuvem 20–25 m/min a řídicím systémem Beckhoff 18,5″ nabízí OPC-UA konektivitu pro ERP integraci. Storm+ navíc poskytuje možnost technologie nulové spáry bluEdge featuring HyFuse pro hrany s nulovými spárami.'
                   )}
                 </p>
               </div>
@@ -273,9 +273,9 @@ const GuideEdgebanderPage = () => {
                 </p>
                 <p className="text-white/70 text-sm leading-relaxed">
                   {tr(
-                    'Die StrongEdge bietet 7,7 m Baulänge und 22–25 m/min Vorschub – ausgelegt auf industriellen Dauereinsatz. Die TopEdge als Flaggschiff vereint alle verfügbaren Technologien: EVA, PUR, bluEdge featuring HyFuse und vollautomatische Kantenmagazine. Beide Maschinen verfügen über Beckhoff OPC-UA-Steuerung für nahtlose Industry 4.0 Integration.',
-                    'The StrongEdge offers 7.7 m length and 22–25 m/min feed – built for industrial continuous operation. The TopEdge flagship combines all available technologies: EVA, PUR, bluEdge featuring HyFuse and fully automatic edge magazines. Both machines feature Beckhoff OPC-UA control for seamless Industry 4.0 integration.',
-                    'StrongEdge nabízí délku 7,7 m a posuv 22–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge featuring HyFuse a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.'
+                    'Die StrongEdge bietet 7,7 m Baulänge und 20–25 m/min Vorschub – ausgelegt auf industriellen Dauereinsatz. Die TopEdge als Flaggschiff vereint alle verfügbaren Technologien: EVA, PUR, bluEdge featuring HyFuse und vollautomatische Kantenmagazine. Beide Maschinen verfügen über Beckhoff OPC-UA-Steuerung für nahtlose Industry 4.0 Integration.',
+                    'The StrongEdge offers 7.7 m length and 20–25 m/min feed – built for industrial continuous operation. The TopEdge flagship combines all available technologies: EVA, PUR, bluEdge featuring HyFuse and fully automatic edge magazines. Both machines feature Beckhoff OPC-UA control for seamless Industry 4.0 integration.',
+                    'StrongEdge nabízí délku 7,7 m a posuv 20–25 m/min – navržena pro průmyslový nepřetržitý provoz. Vlajková loď TopEdge spojuje všechny dostupné technologie: EVA, PUR, bluEdge featuring HyFuse a plně automatické zásobníky hran. Oba stroje jsou vybaveny řídicím systémem Beckhoff OPC-UA pro bezproblémovou integraci Industry 4.0.'
                   )}
                 </p>
               </div>

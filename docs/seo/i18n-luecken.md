@@ -116,7 +116,7 @@ ist das, was heute stattdessen ausgeliefert wird — also die Vorlage.
 | `howTo[1].name` | Assess materials and edge types |
 | `howTo[1].text` | Identify edge thickness (0.3–25 mm) and material (ABS, PVC, solid wood). For wet environments choose PUR or bluEdge featuring HyFuse. |
 | `howTo[2].name` | Set the operating mode and shifts |
-| `howTo[2].text` | Single-shift: 18–20 m/min is enough. Multi-shift: 22–25 m/min, automatic magazines and OPC-UA for ERP integration. |
+| `howTo[2].text` | Single-shift: 18–20 m/min is enough. Multi-shift: 20–25 m/min, automatic magazines and OPC-UA for ERP integration. |
 | `howTo[3].name` | Calculate budget and TCO |
 | `howTo[3].text` | Include purchase price, glue, energy, maintenance and lifetime (15–25 years). On a smaller budget, consider a vetted used machine. |
 | `howTo[4].name` | Request a consultation with Asamer |
