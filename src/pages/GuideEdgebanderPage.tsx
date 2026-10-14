@@ -295,7 +295,7 @@ const GuideEdgebanderPage = () => {
                 {mlGuide(EDGEBANDER_GUIDE.usedVsNew.body, lang)}
               </p>
               <Link
-                to={buildPath('/pouzite-stroje')}
+                to={buildPath('/pouzite-stroje/olepovacky-hran')}
                 className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:underline"
               >
                 {tr('Geprüfte Gebrauchtmaschinen ansehen', 'View vetted used machines', 'Zobrazit ověřené použité stroje')}

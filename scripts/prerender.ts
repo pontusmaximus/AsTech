@@ -57,7 +57,7 @@ import { OTT_PRODUCTS, buildOttProductPath } from '../src/data/ottProducts';
 import { MAYER_PRODUCTS, buildMayerProductPath } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, buildBarbaricProductPath } from '../src/data/barbaricProducts';
 import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannomatProducts';
-import { USED_MACHINES } from '../src/data/usedMachines';
+import { USED_MACHINES, USED_CATEGORY_PAGES } from '../src/data/usedMachines';
 import { localizeSlug } from '../src/lib/slugs';
 import type { Language } from '../src/i18n';
 
@@ -121,6 +121,20 @@ for (const catalog of productCatalogs) {
 }
 
 // 6. Gebrauchtmaschinen-Detailseiten
+//
+// Die Gebrauchtmaschinen-Seiten je Gattung (/pouzite-stroje/olepovacky-hran)
+// teilen sich den Pfad mit den Detailseiten (/pouzite-stroje/{slug}). Hiesse
+// eine Maschine wie eine solche Seite, ueberschriebe die eine Datei die andere.
+for (const pageSlug of Object.values(USED_CATEGORY_PAGES)) {
+  for (const lang of SUPPORTED_LANGUAGES) {
+    const segment = localizeSlug(pageSlug, lang).split('/').pop();
+    const clash = USED_MACHINES.find((m) => m.slug === segment);
+    if (clash) {
+      console.error(`Gebrauchtmaschine "${clash.slug}" kollidiert mit der Seite ${localizeSlug(pageSlug, lang)} (${lang}).`);
+      process.exit(1);
+    }
+  }
+}
 for (const machine of USED_MACHINES) {
   for (const lang of SUPPORTED_LANGUAGES) {
     addPage(buildLocalizedPath(lang, `${localizeSlug('/pouzite-stroje', lang)}/${machine.slug}`), lang);

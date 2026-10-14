@@ -15,6 +15,7 @@ import { buildMailto } from '../lib/email';
 import { getBrandCatalog, buildCategoryPath } from '../data/brandCatalogs';
 import type { BrandSlug, CategoryRef } from '../data/brandCatalogs';
 import { getCategoryMeta, getCategoryHeading, getCategoryLead, getCategoryEyebrow } from '../seo/categoryMeta';
+import { OTT_EDGEBANDING_ABS } from '../data/seo/ottEdgebandingAbs';
 
 /**
  * Kategorieseite einer Marke — `/{lang}/{marke}/{kategorie}`.
@@ -82,6 +83,9 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
 
   const localPath = (slug: string) => buildLocalizedPath(lang, localizeSlug(slug, lang));
 
+  // ABS-Abschnitt nur auf der OTT-Kategorie Kantenanleimmaschinen, nur CZ/SK.
+  const absSection = brand === 'ott' && category === 'edgebanding' ? OTT_EDGEBANDING_ABS[lang] : undefined;
+
   // Eine Route kann Sprachen ausschliessen (`excludeLangs`). Wird sie hier
   // trotzdem verlinkt, zeigt die Kachel auf eine 301 — deshalb der Filter,
   // abgeleitet aus SEO_ROUTES statt aus einer zweiten Liste.
@@ -142,9 +146,9 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
     ...(brand === 'ott' && category === 'edgebanding'
       ? [{
           icon: Recycle,
-          slug: '/pouzite-stroje',
-          to: localPath('/pouzite-stroje'),
-          title: tr('Gebrauchte Maschinen', 'Used machines', 'Použité stroje'),
+          slug: '/pouzite-stroje/olepovacky-hran',
+          to: localPath('/pouzite-stroje/olepovacky-hran'),
+          title: tr('Gebrauchte Kantenanleimmaschinen', 'Used edgebanding machines', 'Použité olepovačky hran'),
           text: tr('Geprüfte Gebrauchtmaschinen mit Service.', 'Inspected used machines with service.', 'Prověřené použité stroje se servisem.'),
         }]
       : []),
@@ -289,6 +293,17 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
             </section>
           )}
 
+          {absSection && (
+            <section className="mb-12 max-w-3xl">
+              <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-5">{absSection.heading}</h2>
+              <div className="space-y-4 text-white/70 text-[15px] leading-[1.75]">
+                {absSection.paragraphs.map((para) => (
+                  <p key={para.slice(0, 40)}>{para}</p>
+                ))}
+              </div>
+            </section>
+          )}
+
           <nav aria-label={tr('Weiterführend', 'Further reading', 'Další informace')} className="mb-12">
             <p className="text-[11px] uppercase tracking-widest text-white/35 mb-4">
               {tr('Weiterführend', 'Further reading', 'Další informace')}
@@ -330,7 +345,7 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
           </nav>
         </div>
 
-        {seoContent && <CategorySeoBlock content={seoContent} lang={lang} tr={tr} />}
+        {seoContent && <CategorySeoBlock content={seoContent} lang={lang} tr={tr} extraFaq={absSection?.faq} />}
 
         <div className="border-t border-white/5">
           <div className="container-wide py-12">

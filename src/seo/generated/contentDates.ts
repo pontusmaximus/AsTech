@@ -39,5 +39,6 @@ export const CONTENT_DATES: Partial<Record<SeoRouteKey, ContentDates>> = {
   service: { published: '2026-02-24T00:58:29-08:00', modified: '2026-10-15T00:03:25+02:00' },
   solutions: { published: '2026-02-24T00:58:29-08:00', modified: '2026-10-15T00:03:25+02:00' },
   terms: { published: '2026-04-14T23:01:04+02:00', modified: '2026-10-15T00:03:25+02:00' },
+  usedEdgebanders: { published: '2026-04-16T09:44:08+02:00', modified: '2026-10-15T00:03:25+02:00' },
   usedMachines: { published: '2026-02-27T13:27:35-08:00', modified: '2026-10-15T00:03:25+02:00' },
 };

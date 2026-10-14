@@ -35,6 +35,17 @@ export const SLUG_TRANSLATIONS: Record<string, Record<Language, string>> = {
     sk: '/pouzite-stroje',
     hu: '/hasznalt-gepek',
   },
+  // Gebrauchte Kantenanleimmaschinen (Okt. 2026). Statisches Segment unter der
+  // Gebrauchtmaschinen-Uebersicht; der Router zieht es der Detailroute
+  // `…/:slug` vor. Kein Maschinen-Slug darf so heissen — prueft
+  // scripts/prerender.ts.
+  '/pouzite-stroje/olepovacky-hran': {
+    de: '/gebrauchtmaschinen/kantenanleimmaschinen',
+    en: '/used-machines/edgebanding-machines',
+    cz: '/pouzite-stroje/olepovacky-hran',
+    sk: '/pouzite-stroje/olepovacky-hran',
+    hu: '/hasznalt-gepek/elzarogepek',
+  },
   '/kontakt': {
     de: '/kontakt',
     en: '/contact',

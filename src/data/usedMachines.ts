@@ -8,9 +8,13 @@ import type { MultiLangText, SeoFaqItem } from './seo/types';
 
 export type UsedMachineStatus = 'available' | 'sold';
 
+/** Maschinengattung. Bestimmt, auf welche Gebrauchtmaschinen-Seite eine Maschine gehoert. */
+export type UsedMachineCategory = 'edgebanding' | 'panel-saw' | 'drying';
+
 export interface UsedMachine {
   /** URL slug (always lowercase, hyphens, no diacritics). Used as part of detail URL. */
   slug: string;
+  category: UsedMachineCategory;
   manufacturer: string;
   name: string;
   year?: number;
@@ -44,6 +48,7 @@ export interface UsedMachine {
 export const USED_MACHINES: UsedMachine[] = [
   {
     slug: 'ott-tornado-top',
+    category: 'edgebanding',
     manufacturer: 'OTT',
     name: 'Tornado Top',
     year: 2011,
@@ -115,6 +120,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'schelling-fh4-330-220-automatic',
+    category: 'panel-saw',
     manufacturer: 'SCHELLING',
     name: 'FH 4 330 220 automatic',
     year: 2015,
@@ -177,6 +183,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'gabbiani-pt',
+    category: 'panel-saw',
     manufacturer: 'Gabbiani',
     name: 'PT',
     year: 2021,
@@ -225,6 +232,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'scm-stefani-md',
+    category: 'edgebanding',
     manufacturer: 'SCM Stefani',
     name: 'MD',
     year: 2022,
@@ -285,6 +293,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'scm-stefani-kd',
+    category: 'edgebanding',
     manufacturer: 'SCM Stefani',
     name: 'KD',
     year: 2024,
@@ -348,6 +357,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'holz-her-sprint-1329',
+    category: 'edgebanding',
     manufacturer: 'HOLZ-HER',
     name: 'SPRINT 1329 multi',
     year: 2020,
@@ -428,6 +438,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'muehlbock-trocknungskammern-typ-1002',
+    category: 'drying',
     manufacturer: 'Mühlbock',
     name: 'Trocknungskammern Typ 1002',
     condition: { de: 'gebraucht', en: 'used', cz: 'použité', sk: 'použité', hu: 'használt' },
@@ -525,3 +536,24 @@ export const getUsedMachineBySlug = (slug: string | undefined): UsedMachine | un
   slug ? machinesBySlug.get(slug) : undefined;
 
 export const ALL_USED_MACHINE_SLUGS = USED_MACHINES.map((m) => m.slug);
+
+/* ------------------------------------------------------------------ */
+/*  Gebrauchtmaschinen-Seiten je Kategorie                             */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Kategorien mit eigener Gebrauchtmaschinen-Seite, als kanonischer Slug (wie
+ * die Schluessel in `SLUG_TRANSLATIONS`). Kategorien ohne Eintrag gehoeren auf
+ * die Uebersicht /pouzite-stroje.
+ */
+export const USED_CATEGORY_PAGES: Partial<Record<UsedMachineCategory, string>> = {
+  edgebanding: '/pouzite-stroje/olepovacky-hran',
+};
+
+/** Kanonischer Slug der Gebrauchtmaschinen-Seite, auf die eine Kategorie gehoert. */
+export const usedCategoryPageSlug = (category: UsedMachineCategory): string =>
+  USED_CATEGORY_PAGES[category] ?? '/pouzite-stroje';
+
+export const getUsedMachinesByCategory = (category: UsedMachineCategory): UsedMachine[] =>
+  USED_MACHINES.filter((m) => m.category === category);
+

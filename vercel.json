@@ -190,6 +190,11 @@
       "permanent": true
     },
     {
+      "source": "/gebrauchtmaschinen/kantenanleimmaschinen",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
       "source": "/guide/choose-edgebander",
       "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
       "permanent": true
@@ -222,6 +227,11 @@
     {
       "source": "/hasznalt-gepek",
       "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/hasznalt-gepek/elzarogepek",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
       "permanent": true
     },
     {
@@ -282,6 +292,11 @@
     {
       "source": "/pouzite-stroje",
       "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/pouzite-stroje/olepovacky-hran",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
       "permanent": true
     },
     {
@@ -415,6 +430,11 @@
       "permanent": true
     },
     {
+      "source": "/used-machines/edgebanding-machines",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
       "source": "/utmutato/elzarogep-valasztas",
       "destination": "https://asamer.cz/cz/pruvodce/vyber-olepovacky-hran",
       "permanent": true
@@ -542,6 +562,81 @@
     {
       "source": "/hu/:wrong(gebrauchtmaschinen|used-machines|pouzite-stroje)",
       "destination": "https://asamer.cz/hu/hasznalt-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/de/used-machines/edgebanding-machines",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen/kantenanleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/pouzite-stroje/olepovacky-hran",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen/kantenanleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/hasznalt-gepek/elzarogepek",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen/kantenanleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/en/gebrauchtmaschinen/kantenanleimmaschinen",
+      "destination": "https://asamer.cz/en/used-machines/edgebanding-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/pouzite-stroje/olepovacky-hran",
+      "destination": "https://asamer.cz/en/used-machines/edgebanding-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/hasznalt-gepek/elzarogepek",
+      "destination": "https://asamer.cz/en/used-machines/edgebanding-machines",
+      "permanent": true
+    },
+    {
+      "source": "/cz/gebrauchtmaschinen/kantenanleimmaschinen",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/cz/used-machines/edgebanding-machines",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/cz/hasznalt-gepek/elzarogepek",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/gebrauchtmaschinen/kantenanleimmaschinen",
+      "destination": "https://asamer.cz/sk/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/used-machines/edgebanding-machines",
+      "destination": "https://asamer.cz/sk/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/hasznalt-gepek/elzarogepek",
+      "destination": "https://asamer.cz/sk/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/hu/gebrauchtmaschinen/kantenanleimmaschinen",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek/elzarogepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/used-machines/edgebanding-machines",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek/elzarogepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/pouzite-stroje/olepovacky-hran",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek/elzarogepek",
       "permanent": true
     },
     {

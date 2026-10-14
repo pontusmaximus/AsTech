@@ -988,6 +988,20 @@ export const pageSkTranslations: Record<string, string> = {
   "Délku, posuv a tloušťku hrany všech modelů porovnáváme v tabulce na přehledové stránce:": "Dĺžku, posuv a hrúbku hrany všetkých modelov porovnávame v tabuľke na prehľadovej stránke:",
   "olepovačky hran OTT": "olepovačky hrán OTT",
   "Průvodce: jakou olepovačku vybrat": "Sprievodca: akú olepovačku vybrať",
+  // Okt. 2026 — Gebrauchte Kantenanleimmaschinen (/pouzite-stroje/olepovacky-hran)
+  "Použité olepovačky hran": "Použité olepovačky hrán",
+  "Prověřené použité olepovačky hran ze skladu Asamer – technicky zkontrolované před předáním, na přání s montáží a financováním v ČR, SR a Maďarsku.": "Preverené použité olepovačky hrán zo skladu Asamer – technicky skontrolované pred odovzdaním, na želanie s montážou a financovaním v ČR, SR a Maďarsku.",
+  "Aktuálně v nabídce": "Aktuálne v ponuke",
+  "Rok výroby": "Rok výroby",
+  "Poptávka použité olepovačky hran": "Dopyt na použitú olepovačku hrán",
+  "Kontrola a servis": "Kontrola a servis",
+  "Každý stroj je před předáním technicky zkontrolován a uveden s jasně popsaným stavem.": "Každý stroj je pred odovzdaním technicky skontrolovaný a uvedený s jasne opísaným stavom.",
+  "Na přání Asamer zajistí dopravu, montáž a zaškolení obsluhy – s techniky z Lambachu a Brna.": "Na želanie Asamer zabezpečí dopravu, montáž a zaškolenie obsluhy – s technikmi z Lambachu a Brna.",
+  "Raiffeisen Leasing financuje nové i použité stroje; každý použitý stroj z nabídky Asamer je před schválením financování technicky prověřen.": "Raiffeisen Leasing financuje nové aj použité stroje; každý použitý stroj z ponuky Asamer je pred schválením financovania technicky preverený.",
+  "Nové olepovačky hran OTT": "Nové olepovačky hrán OTT",
+  "Sedm modelů od Pacific+ po TopEdge.": "Sedem modelov od Pacific+ po TopEdge.",
+  "Formátovací pily, sušárny a další.": "Formátovacie píly, sušiarne a ďalšie.",
+  "Nenašli jste vhodný stroj?": "Nenašli ste vhodný stroj?",
 };
 
 export const pageHuTranslations: Record<string, string> = {
@@ -1974,6 +1988,19 @@ export const pageHuTranslations: Record<string, string> = {
   "TRANScompact, TRANSlift and TRANSedge return workpieces – one operator runs the entire cell.": "A TRANScompact, TRANSlift és TRANSedge visszajuttatja a munkadarabokat – a teljes cellát egyetlen kezelő működteti.",
   "Length, feed speed and edge thickness of every model are compared in one table on the overview page:": "Az összes modell hosszát, előtolását és élvastagságát egy táblázatban hasonlítjuk össze az áttekintő oldalon:",
   "OTT edgebanding machines": "OTT élzárógépek",
+  // Okt. 2026 — Gebrauchte Kantenanleimmaschinen (/pouzite-stroje/olepovacky-hran)
+  "Used edgebanding machines": "Használt élzárógépek",
+  "Inspected used edgebanding machines from Asamer stock – technically checked before handover, with installation and financing on request in CZ, SK and HU.": "Átvizsgált használt élzárógépek az Asamer készletéből – átadás előtt műszakilag ellenőrizve, kérésre telepítéssel és finanszírozással Csehországban, Szlovákiában és Magyarországon.",
+  "Currently available": "Jelenleg a kínálatban",
+  "Inquiry used edgebanding machine": "Ajánlatkérés használt élzárógépre",
+  "Inspection and service": "Átvizsgálás és szerviz",
+  "Every machine is technically inspected before handover and listed with a clearly stated condition.": "Minden gépet átadás előtt műszakilag ellenőrzünk, és egyértelműen megadott állapottal tüntetünk fel.",
+  "On request, Asamer organises transport, installation and operator training – with technicians from Lambach and Brno.": "Kérésre az Asamer megszervezi a szállítást, a telepítést és a kezelők betanítását – lambachi és brnói szakemberekkel.",
+  "Raiffeisen Leasing finances new and used machines; every used machine from Asamer is technically inspected before financing approval.": "A Raiffeisen Leasing új és használt gépeket egyaránt finanszíroz; az Asamer minden használt gépe műszaki átvizsgáláson esik át a finanszírozás jóváhagyása előtt.",
+  "New OTT edgebanding machines": "Új OTT élzárógépek",
+  "Seven models from Pacific+ to TopEdge.": "Hét modell a Pacific+-tól a TopEdge-ig.",
+  "Panel saws, drying kilns and more.": "Táblafelosztó fűrészek, szárítókamrák és egyebek.",
+  "Nothing suitable?": "Nem talált megfelelőt?",
 };
 
 /**

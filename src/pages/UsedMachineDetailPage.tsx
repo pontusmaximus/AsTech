@@ -10,7 +10,7 @@ import { breadcrumbSchema, faqPageSchema, productSchema } from '../seo/structure
 import SeoHead from '../seo/SeoHead';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { localizeSlug } from '../lib/slugs';
-import { getUsedMachineBySlug } from '../data/usedMachines';
+import { getUsedMachineBySlug, usedCategoryPageSlug } from '../data/usedMachines';
 import type { UsedMachine } from '../data/usedMachines';
 import type { MultiLangText } from '../data/seo/types';
 import type { Language } from '../i18n';
@@ -77,9 +77,19 @@ const Detail = ({ machine, lang, tr, buildPath, openFaq, setOpenFaq }: DetailPro
 
   const detailUrl = `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, detailPath)}`;
 
+  // Zwischenebene, wenn die Gattung eine eigene Gebrauchtmaschinen-Seite hat
+  // (bisher nur Kantenanleimmaschinen).
+  const groupPage = machine.category === 'edgebanding'
+    ? {
+        slug: usedCategoryPageSlug(machine.category),
+        label: tr('Gebrauchte Kantenanleimmaschinen', 'Used edgebanding machines', 'Použité olepovačky hran'),
+      }
+    : null;
+
   const crumbs = breadcrumbSchema([
     { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
     { name: tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, categoryPath)}` },
+    ...(groupPage ? [{ name: groupPage.label, url: `${CANONICAL_DOMAIN}${buildPath(groupPage.slug)}` }] : []),
     { name: `${machine.manufacturer} ${machine.name}`, url: detailUrl },
   ]);
 
@@ -147,6 +157,14 @@ const Detail = ({ machine, lang, tr, buildPath, openFaq, setOpenFaq }: DetailPro
               {tr('Gebrauchtmaschinen', 'Used machines', 'Použité stroje')}
             </Link>
             <span>/</span>
+            {groupPage && (
+              <>
+                <Link to={buildPath(groupPage.slug)} className="hover:text-white/60 transition-colors">
+                  {groupPage.label}
+                </Link>
+                <span>/</span>
+              </>
+            )}
             <span className="text-white/50">{machine.manufacturer} {machine.name}</span>
           </nav>
 

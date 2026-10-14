@@ -58,6 +58,7 @@ const STATIC_SOURCES: Record<SeoRouteKey, string[]> = {
   solutions: [ROUTE_META, 'src/pages/SolutionsPage.tsx'],
   service: [ROUTE_META, 'src/pages/ServicePage.tsx'],
   usedMachines: [ROUTE_META, 'src/pages/UsedMachinesPage.tsx', 'src/data/usedMachines.ts'],
+  usedEdgebanders: [ROUTE_META, 'src/pages/UsedEdgebandersPage.tsx', 'src/data/usedMachines.ts'],
   contact: [ROUTE_META, 'src/pages/ContactPage.tsx'],
   imprint: [ROUTE_META, 'src/pages/ImprintPage.tsx'],
   privacy: [ROUTE_META, 'src/pages/PrivacyPolicyPage.tsx'],
