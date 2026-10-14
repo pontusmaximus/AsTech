@@ -976,6 +976,18 @@ export const pageSkTranslations: Record<string, string> = {
   "Jazyková verze:": "Jazyková verzia:",
   "závazné": "záväzné",
   "Nezávazný překlad pouze pro informaci. Právně závazné je výhradně německé znění — smluvním jazykem je němčina.": "Nezáväzný preklad iba na informáciu. Právne záväzné je výlučne nemecké znenie — zmluvným jazykom je nemčina.",
+  // Okt. 2026 — OTT-Hub als Markenseite, Kategorieseite als einzige Zielseite (Kannibalisierung)
+  "OTT Paul": "OTT Paul",
+  "OTT Paul – technologie olepování hran z Rakouska": "OTT Paul – technológia olepovania hrán z Rakúska",
+  "OTT Paul je rakouská rodinná firma z Lambachu s historií od roku 1963. OTT vyrábí stroje pro olepování hran nábytkových a deskových dílů – od kompaktní Pacific+ až po průmyslovou TopEdge –, k tomu lepicí technologie CombiMelt a bluEdge featuring HyFuse a vratné systémy TRANScompact, TRANSlift a TRANSedge. Asamer je exkluzivní distribuční partner OTT pro Českou republiku, Slovensko a Maďarsko s lokálním servisem, financováním a softwarovou integrací přes otevřené rozhraní OPC-UA.": "OTT Paul je rakúska rodinná firma z Lambachu s históriou od roku 1963. OTT vyrába stroje na olepovanie hrán nábytkových a doskových dielcov – od kompaktnej Pacific+ až po priemyselnú TopEdge –, k tomu lepiace technológie CombiMelt a bluEdge featuring HyFuse a vratné systémy TRANScompact, TRANSlift a TRANSedge. Asamer je exkluzívny distribučný partner OTT pre Českú republiku, Slovensko a Maďarsko s lokálnym servisom, financovaním a softvérovou integráciou cez otvorené rozhranie OPC-UA.",
+  "Sortiment OTT": "Sortiment OTT",
+  "Produktové oblasti OTT": "Produktové oblasti OTT",
+  "Sedm modelů pro truhlárny i průmysl: posuv 18–25 m/min, hrany 0,3–25 mm, lepidla EVA i PUR.": "Sedem modelov pre stolárstva aj priemysel: posuv 18 – 25 m/min, hrany 0,3 – 25 mm, lepidlá EVA aj PUR.",
+  "CombiMelt zpracuje EVA i PUR, bluEdge featuring HyFuse vytvoří nulovou spáru bez lepidla.": "CombiMelt spracuje EVA aj PUR, bluEdge featuring HyFuse vytvorí nulovú škáru bez lepidla.",
+  "TRANScompact, TRANSlift a TRANSedge vracejí dílce zpět – celou buňku obslouží jeden pracovník.": "TRANScompact, TRANSlift a TRANSedge vracajú dielce späť – celú bunku obslúži jeden pracovník.",
+  "Délku, posuv a tloušťku hrany všech modelů porovnáváme v tabulce na přehledové stránce:": "Dĺžku, posuv a hrúbku hrany všetkých modelov porovnávame v tabuľke na prehľadovej stránke:",
+  "olepovačky hran OTT": "olepovačky hrán OTT",
+  "Průvodce: jakou olepovačku vybrat": "Sprievodca: akú olepovačku vybrať",
 };
 
 export const pageHuTranslations: Record<string, string> = {
@@ -1951,6 +1963,17 @@ export const pageHuTranslations: Record<string, string> = {
   "Language version:": "Nyelvi változat:",
   "binding": "kötelező érvényű",
   "Non-binding translation for information only. Only the German version is legally binding — the contract language is German.": "Nem kötelező érvényű, kizárólag tájékoztató jellegű fordítás. Jogilag kizárólag a német nyelvű változat kötelező — a szerződés nyelve a német.",
+  // Okt. 2026 — OTT-Hub als Markenseite, Kategorieseite als einzige Zielseite (Kannibalisierung)
+  "OTT Paul": "OTT Paul",
+  "OTT Paul – Edge Technology from Austria": "OTT Paul – élzárási technológia Ausztriából",
+  "OTT Paul is an Austrian family business from Lambach with a history dating back to 1963. OTT builds machines for edging furniture and board parts – from the compact Pacific+ to the industrial TopEdge – along with the CombiMelt and bluEdge featuring HyFuse gluing technologies and the TRANScompact, TRANSlift and TRANSedge return systems. Asamer is the exclusive OTT distribution partner for the Czech Republic, Slovakia and Hungary – with local service, financing and software integration via the open OPC-UA interface.": "Az OTT Paul lambachi osztrák családi vállalkozás, amelynek története 1963-ig nyúlik vissza. Az OTT bútor- és lapelemek élzárására szolgáló gépeket gyárt – a kompakt Pacific+-tól az ipari TopEdge-ig –, emellett a CombiMelt és a bluEdge featuring HyFuse ragasztási technológiákat, valamint a TRANScompact, TRANSlift és TRANSedge visszafutó rendszereket. Az Asamer az OTT kizárólagos forgalmazási partnere Csehországban, Szlovákiában és Magyarországon – helyi szervizzel, finanszírozással és szoftveres integrációval a nyitott OPC-UA interfészen keresztül.",
+  "The OTT range": "Az OTT kínálata",
+  "OTT product areas": "Az OTT termékterületei",
+  "Seven models for joinery and industry: feed 18–25 m/min, edges 0.3–25 mm, EVA and PUR.": "Hét modell asztalosüzemeknek és iparnak: 18–25 m/perc előtolás, 0,3–25 mm-es élek, EVA és PUR.",
+  "CombiMelt processes EVA and PUR; bluEdge featuring HyFuse creates a zero glue line without adhesive.": "A CombiMelt EVA- és PUR-ragasztót is feldolgoz, a bluEdge featuring HyFuse ragasztó nélküli nullfugát hoz létre.",
+  "TRANScompact, TRANSlift and TRANSedge return workpieces – one operator runs the entire cell.": "A TRANScompact, TRANSlift és TRANSedge visszajuttatja a munkadarabokat – a teljes cellát egyetlen kezelő működteti.",
+  "Length, feed speed and edge thickness of every model are compared in one table on the overview page:": "Az összes modell hosszát, előtolását és élvastagságát egy táblázatban hasonlítjuk össze az áttekintő oldalon:",
+  "OTT edgebanding machines": "OTT élzárógépek",
 };
 
 /**

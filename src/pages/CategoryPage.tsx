@@ -97,7 +97,9 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
                 icon: BookOpen,
                 slug: '/ratgeber/kantenanleimmaschine-waehlen',
           to: localPath('/ratgeber/kantenanleimmaschine-waehlen'),
-                title: tr('Ratgeber: Kantenanleimmaschine wählen', 'Guide: choosing an edgebander', 'Průvodce: výběr olepovačky hran'),
+                // Ankertext ohne „olepovačky hran": Links mit dem Kategoriebegriff
+                // zeigen ausschliesslich auf die Kategorieseite.
+                title: tr('Ratgeber: Kantenanleimmaschine wählen', 'Guide: choosing an edgebander', 'Průvodce: jakou olepovačku vybrat'),
                 text: tr('Welche Maschine passt zu Ihrem Betrieb?', 'Which machine fits your operation?', 'Který stroj se hodí do vašeho provozu?'),
               }]
             : []),
@@ -235,7 +237,9 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
                   imageAlt={`${product.name} ${catalog.label}`}
                   kpiValue={kpiValue}
                   kpiLabel={kpiValue ? kpi.header[lang] : undefined}
-                  categoryLabel={heading}
+                  // Kein Kategorie-Label auf der Karte: es stand siebenmal
+                  // wortgleich mit der H1 auf der Seite („Olepovačky hran OTT").
+                  // Der Modellname reicht.
                   name={`${product.name} ${catalog.label}`}
                   bullets={[product.tagline[lang]]}
                   detailLabel={tr('Details ansehen', 'View details', 'Zobrazit detail')}

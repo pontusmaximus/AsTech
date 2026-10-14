@@ -1,21 +1,27 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Flame, Droplets, Monitor, Wrench, Flag, Check, X, AlertTriangle, MapPin, Factory, Handshake, Network } from 'lucide-react';
-import ProductCard from '../components/manufacturer/ProductCard';
+import { ArrowUpRight, Monitor, Wrench, Flag, Check, X, AlertTriangle, MapPin, Factory, Handshake, Network, Banknote } from 'lucide-react';
 import gsap from 'gsap';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import HeroSection from '../components/manufacturer/HeroSection';
-import CategorySidebar from '../components/manufacturer/CategorySidebar';
-import CategorySection from '../components/manufacturer/CategorySection';
 import ManufacturerIntro from '../components/manufacturer/ManufacturerIntro';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
-import { breadcrumbSchema, itemListSchema, faqPageSchema } from '../seo/structuredData';
+import { breadcrumbSchema, itemListSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
-import { getOttProductsByCategory, buildOttProductPath, buildOttCategoryPath, OTT_CATEGORY_LABELS } from '../data/ottProducts';
+import { getOttProductsByCategory, buildOttCategoryPath, OTT_CATEGORY_LABELS } from '../data/ottProducts';
 import type { OttCategory } from '../data/ottProducts';
 
+/**
+ * Marken-Hub OTT — die Antwort auf „OTT", „OTT Paul", „OTT prodejce".
+ *
+ * Bewusst *keine* Kategorieseite: Modelluebersicht, Klebstoff-Block und FAQ zu
+ * den Kantenanleimmaschinen wohnen auf /{lang}/ott/{kategorie}. Bis Oktober 2026
+ * stand all das auch hier, und Hub, Kategorieseite und Ratgeber zielten mit je
+ * 22–25 Nennungen auf dasselbe Keyword. Hier steht der Kategoriebegriff nur noch
+ * als Kachel, die auf die Kategorieseite verlinkt.
+ */
 const OttPage = () => {
   const { lang, buildPath } = useLanguage();
   const locale = lang === 'de' || lang === 'en' || lang === 'cz' || lang === 'sk' || lang === 'hu' ? lang : 'en';
@@ -32,41 +38,6 @@ const OttPage = () => {
   ]);
   const inquiryMail = buildMailto('office@asamer.net', tr('Anfrage OTT', 'Inquiry OTT', 'Poptávka OTT'));
 
-  const faqs = [
-    {
-      question: tr('Was ist eine OTT Kantenanleimmaschine?', 'What is an OTT edgebanding machine?', 'Co je olepovačka hran OTT?'),
-      answer: tr(
-        'Eine OTT Kantenanleimmaschine trägt Kantenmaterial auf Möbel- und Plattenteile auf und besäumt es bündig. OTT bietet Modelle von der kompakten Pacific+ bis zur industriellen TopEdge mit PUR, EVA und der Nullfugentechnologie bluEdge featuring HyFuse.',
-        'An OTT edgebanding machine applies and flush-trims edge material on furniture and board parts. OTT offers models from the compact Pacific+ to the industrial TopEdge with PUR, EVA and the bluEdge featuring HyFuse zero glue line technology.',
-        'Olepovačka hran OTT nanáší a začišťuje hranový materiál na nábytkové a deskové díly. OTT nabízí modely od kompaktní Pacific+ až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse.',
-      ),
-    },
-    {
-      question: tr('Was kostet eine OTT Kantenanleimmaschine?', 'How much does an OTT edgebanding machine cost?', 'Kolik stojí olepovačka hran OTT?'),
-      answer: tr(
-        'Der Preis hängt von Modell, Ausstattung und Automatisierungsgrad ab. Asamer erstellt ein unverbindliches Angebot nach Maß und berät zu Finanzierung und Förderungen von bis zu 50 %.',
-        'The price depends on model, configuration and level of automation. Asamer prepares a tailored, no-obligation quote and advises on financing and grants of up to 50%.',
-        'Cena olepovačky hran OTT závisí na modelu, výbavě a stupni automatizace. Asamer připraví nezávaznou nabídku na míru a poradí s financováním i dotacemi až 50 %.',
-      ),
-    },
-    {
-      question: tr('Was ist der Unterschied zwischen PUR und EVA?', 'What is the difference between PUR and EVA glue?', 'Jaký je rozdíl mezi lepidlem PUR a EVA?'),
-      answer: tr(
-        'EVA ist ein universeller Schmelzklebstoff, PUR erzeugt eine wasserfeste Verbindung ohne sichtbare Fuge. Das OTT CombiMelt-System verarbeitet beide Klebstofftypen.',
-        'EVA is a universal hot-melt adhesive; PUR creates a waterproof joint with no visible glue line. The OTT CombiMelt system processes both adhesive types.',
-        'EVA je univerzální tavné lepidlo, PUR vytváří voděodolný spoj bez viditelné spáry. Systém OTT CombiMelt zvládá oba typy lepidla.',
-      ),
-    },
-    {
-      question: tr('Bietet Asamer auch gebrauchte OTT Kantenanleimmaschinen?', 'Does Asamer also offer used OTT edgebanding machines?', 'Nabízíte i použité olepovačky hran OTT?'),
-      answer: tr(
-        'Ja. Asamer bietet neue und technisch geprüfte gebrauchte OTT Kantenanleimmaschinen inklusive Service und Montage in CZ, SK und HU.',
-        'Yes. Asamer offers new and technically inspected used OTT edgebanding machines including service and installation in CZ, SK and HU.',
-        'Ano. Asamer nabízí nové i technicky prověřené použité olepovačky hran OTT včetně servisu a montáže v ČR, na Slovensku a v Maďarsku.',
-      ),
-    },
-  ];
-
   useEffect(() => {
     window.scrollTo(0, 0);
     const ctx = gsap.context(() => {
@@ -75,24 +46,52 @@ const OttPage = () => {
     return () => ctx.revert();
   }, []);
 
-  const categories: OttCategory[] = ['edgebanding', 'gluing', 'return'];
-  const categoryData = categories.map((cat) => ({ cat, products: getOttProductsByCategory(cat) })).filter((c) => c.products.length > 0);
-  const sidebarItems = categoryData.map((c) => ({ id: c.cat, label: OTT_CATEGORY_LABELS[c.cat][lang], productCount: c.products.length }));
+  // Kurzbeschreibung je Produktbereich. Bewusst ohne den Kategoriebegriff —
+  // der steht nur im Kachel-Titel, der auf die Kategorieseite verlinkt.
+  const categoryTeaser: Record<OttCategory, string> = {
+    edgebanding: tr(
+      'Sieben Modelle für Tischlerei und Industrie: Vorschub 18–25 m/min, Kanten 0,3–25 mm, EVA und PUR.',
+      'Seven models for joinery and industry: feed 18–25 m/min, edges 0.3–25 mm, EVA and PUR.',
+      'Sedm modelů pro truhlárny i průmysl: posuv 18–25 m/min, hrany 0,3–25 mm, lepidla EVA i PUR.',
+    ),
+    gluing: tr(
+      'CombiMelt verarbeitet EVA und PUR, bluEdge featuring HyFuse erzeugt die Nullfuge ohne Klebstoff.',
+      'CombiMelt processes EVA and PUR; bluEdge featuring HyFuse creates a zero glue line without adhesive.',
+      'CombiMelt zpracuje EVA i PUR, bluEdge featuring HyFuse vytvoří nulovou spáru bez lepidla.',
+    ),
+    return: tr(
+      'TRANScompact, TRANSlift und TRANSedge führen Werkstücke zurück – ein Bediener fährt die ganze Zelle.',
+      'TRANScompact, TRANSlift and TRANSedge return workpieces – one operator runs the entire cell.',
+      'TRANScompact, TRANSlift a TRANSedge vracejí dílce zpět – celou buňku obslouží jeden pracovník.',
+    ),
+  };
 
-  const allProducts = categoryData.flatMap((c) => c.products);
-  const productList = itemListSchema(
-    tr('OTT Kantenanleimmaschinen', 'OTT Edgebanding Machines', 'OTT olepovačky hran'),
-    allProducts.map((p) => ({
-      name: `${p.name} OTT`,
-      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildOttProductPath(lang, p))}`,
-      image: p.image,
-      description: p.seoDescription[lang],
+  const categories: OttCategory[] = ['edgebanding', 'gluing', 'return'];
+  const categoryData = categories
+    .map((cat) => ({ cat, products: getOttProductsByCategory(cat) }))
+    .filter((c) => c.products.length > 0);
+
+  // ItemList der drei Produktbereiche statt aller zwoelf Produkte: die
+  // Produktliste gehoert zur jeweiligen Kategorieseite.
+  const categoryList = itemListSchema(
+    tr('OTT Produktbereiche', 'OTT product areas', 'Produktové oblasti OTT'),
+    categoryData.map((c) => ({
+      name: OTT_CATEGORY_LABELS[c.cat][lang],
+      url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildOttCategoryPath(lang, c.cat))}`,
     })),
   );
 
+  const reasons = [
+    { icon: <Monitor className="w-4 h-4 text-blue-400" />, t: tr('Software-Integration', 'Software integration', 'Softwarová integrace'), d: tr('OPC-UA direkt in Ihr ERP/MES – kein Vendor-Lock-in', 'OPC-UA directly into your ERP/MES – no vendor lock-in', 'OPC-UA přímo do vašeho ERP/MES – bez vendor lock-in') },
+    { icon: <MapPin className="w-4 h-4 text-primary" />, t: tr('Exklusivhändler CZ/SK/HU', 'Exclusive dealer CZ/SK/HU', 'Exkluzivní prodejce CZ/SK/HU'), d: tr('Direkter Kontakt – kein Konzern-Umweg', 'Direct contact – no corporate detour', 'Přímý kontakt – bez koncernových oklik') },
+    { icon: <Wrench className="w-4 h-4 text-white/40" />, t: tr('Service & Montage', 'Service & installation', 'Servis a montáž'), d: tr('Techniker vor Ort in CZ/SK/HU', 'Technicians on-site in CZ/SK/HU', 'Technici na místě v CZ/SK/HU'), to: buildPath('/servis') },
+    { icon: <Banknote className="w-4 h-4 text-emerald-400" />, t: tr('Finanzierung & Förderung', 'Financing & grants', 'Financování a dotace'), d: tr('Leasing und Förderungen bis 50 %.', 'Leasing and grants up to 50%.', 'Leasing a dotace až 50 %.'), to: buildPath('/financovani') },
+    { icon: <Flag className="w-4 h-4 text-red-400" />, t: tr('Made in Austria', 'Made in Austria', 'Made in Austria'), d: tr('Familienbetrieb seit 1963 in Lambach', 'Family business since 1963 in Lambach', 'Rodinný podnik od roku 1963 v Lambachu') },
+  ];
+
   return (
     <>
-      <SeoHead routeKey="ott" structuredData={[breadcrumbs, productList, faqPageSchema(faqs)]} />
+      <SeoHead routeKey="ott" structuredData={[breadcrumbs, categoryList]} />
       <div className="bg-dark min-h-screen">
 
         {/* ====== 1. HERO ====== */}
@@ -106,14 +105,14 @@ const OttPage = () => {
           bgVideoEnd={40}
         />
 
-        {/* ====== 1b. INTRO / DEFINITION-LEAD ====== */}
+        {/* ====== 1b. INTRO — kurz zu OTT Paul ====== */}
         <ManufacturerIntro
           eyebrow={tr('Österreich · Kantenanleimtechnologie', 'Austria · Edgebanding technology', 'Rakousko · Olepování hran')}
-          title={tr('OTT Kantenanleimmaschinen', 'OTT Edgebanding Machines', 'OTT olepovačky hran')}
+          title={tr('OTT Paul – Kantentechnik aus Österreich', 'OTT Paul – Edge Technology from Austria', 'OTT Paul – technologie olepování hran z Rakouska')}
           lead={tr(
-            'OTT Kantenanleimmaschinen zählen zur Spitze beim Bekanten von Möbel- und Plattenteilen – von der kompakten Pacific+ (18 m/min) bis zur industriellen TopEdge mit PUR, EVA und der Nullfugentechnologie bluEdge featuring HyFuse. OTT ist ein österreichischer Hersteller von Kantenanleimmaschinen für die Holz- und Möbelindustrie. Asamer ist exklusiver OTT-Vertriebspartner für CZ, SK und HU mit lokalem Service und Softwareintegration über die offene OPC-UA-Schnittstelle.',
-            'OTT edgebanding machines are among the best for banding furniture and board panels – from the compact Pacific+ (18 m/min) to the industrial TopEdge with PUR, EVA and the bluEdge featuring HyFuse zero glue line technology. OTT is an Austrian manufacturer of edgebanding machines for the wood and furniture industry. Asamer is the exclusive OTT distribution partner for CZ, SK and HU with local service and software integration via the open OPC-UA interface.',
-            'Olepovačka hran OTT patří ke špičce v olepování nábytkových a deskových dílů – od kompaktní Pacific+ (18 m/min) až po průmyslovou TopEdge s technologiemi PUR, EVA a bluEdge featuring HyFuse. OTT je rakouský výrobce olepovaček hran pro dřevařský a nábytkářský průmysl. Asamer je exkluzivní distribuční partner OTT pro ČR, SK a Maďarsko s lokálním servisem a softwarovou integrací přes otevřené rozhraní OPC-UA.',
+            'OTT Paul ist ein österreichischer Familienbetrieb aus Lambach mit Geschichte seit 1963. OTT baut Maschinen zum Bekanten von Möbel- und Plattenteilen – von der kompakten Pacific+ bis zur industriellen TopEdge –, dazu die Klebetechnologien CombiMelt und bluEdge featuring HyFuse sowie die Rückführsysteme TRANScompact, TRANSlift und TRANSedge. Asamer ist exklusiver OTT-Vertriebspartner für Tschechien, die Slowakei und Ungarn – mit lokalem Service, Finanzierung und Softwareintegration über die offene OPC-UA-Schnittstelle.',
+            'OTT Paul is an Austrian family business from Lambach with a history dating back to 1963. OTT builds machines for edging furniture and board parts – from the compact Pacific+ to the industrial TopEdge – along with the CombiMelt and bluEdge featuring HyFuse gluing technologies and the TRANScompact, TRANSlift and TRANSedge return systems. Asamer is the exclusive OTT distribution partner for the Czech Republic, Slovakia and Hungary – with local service, financing and software integration via the open OPC-UA interface.',
+            'OTT Paul je rakouská rodinná firma z Lambachu s historií od roku 1963. OTT vyrábí stroje pro olepování hran nábytkových a deskových dílů – od kompaktní Pacific+ až po průmyslovou TopEdge –, k tomu lepicí technologie CombiMelt a bluEdge featuring HyFuse a vratné systémy TRANScompact, TRANSlift a TRANSedge. Asamer je exkluzivní distribuční partner OTT pro Českou republiku, Slovensko a Maďarsko s lokálním servisem, financováním a softwarovou integrací přes otevřené rozhraní OPC-UA.',
           )}
           facts={[
             {
@@ -139,79 +138,32 @@ const OttPage = () => {
           ]}
         />
 
-        {/* ====== 2. SIDEBAR + PRODUCT GRID ====== */}
-        <div className="container-wide py-12">
-          <div className="flex gap-10">
-            {/* Left sidebar */}
-            <CategorySidebar categories={sidebarItems} brandColor="primary" />
-
-            {/* Right main content */}
-            <div className="flex-1 min-w-0">
-              {/* Mobile category pills (visible below lg) */}
-              <div className="lg:hidden flex gap-2 overflow-x-auto pb-4 mb-6 scrollbar-hide">
-                {sidebarItems.map((cat) => (
-                  <button key={cat.id} type="button" onClick={() => document.getElementById(`cat-${cat.id}`)?.scrollIntoView({ behavior: 'smooth' })} className="whitespace-nowrap px-3 py-1.5 rounded-full text-sm border border-white/10 bg-white/[0.04] text-white/50 hover:text-white transition-colors shrink-0">
-                    {cat.label} <span className="text-xs opacity-50">{cat.productCount}</span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Product categories */}
-              {categoryData.map((c) => (
-                <CategorySection
-                  key={c.cat}
-                  id={c.cat}
-                  label={OTT_CATEGORY_LABELS[c.cat][lang]}
-                  productCount={c.products.length}
-                  moreLink={{
-                    to: buildPath(buildOttCategoryPath(lang, c.cat)),
-                    label: tr('Kategorie-Übersicht', 'Category overview', 'Přehled kategorie'),
-                  }}
-                >
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {c.products.map((product) => (
-                      <ProductCard
-                        key={product.slug}
-                        to={buildPath(buildOttProductPath(lang, product))}
-                        image={product.image}
-                        imageAlt={`${product.name} OTT`}
-                        kpiValue={product.specs.feedSpeed}
-                        kpiLabel={tr('Vorschub', 'Feed speed', 'Posuv')}
-                        categoryLabel={OTT_CATEGORY_LABELS[c.cat][lang]}
-                        name={`${product.name} OTT`}
-                        bullets={product.usp ? [product.usp[lang], product.tagline[lang]] : undefined}
-                        detailLabel={tr('Details ansehen', 'View details', 'Zobrazit detail')}
-                      />
-                    ))}
-                  </div>
-                </CategorySection>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* ====== 2b. Kategorie-Übersichtsseiten ======
-            Die ausführlichen Kategorie-SEO-Inhalte wohnen auf den eigenen
-            Kategorieseiten (/ott/{kategorie}) — hier nur die Wegweiser. */}
-        <div className="container-wide pb-4">
-          <div className="grid sm:grid-cols-3 gap-3 max-w-4xl">
+        {/* ====== 2. PRODUKTBEREICHE — drei Kacheln auf die Kategorieseiten ====== */}
+        <section className="container-wide pb-12">
+          <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-6">
+            {tr('Das OTT-Programm', 'The OTT range', 'Sortiment OTT')}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4 max-w-5xl">
             {categoryData.map((c) => (
               <Link
-                key={`cat-link-${c.cat}`}
+                key={`cat-${c.cat}`}
                 to={buildPath(buildOttCategoryPath(lang, c.cat))}
-                className="group flex items-center justify-between gap-3 p-4 rounded-xl border border-white/8 bg-white/[0.02] hover:border-primary/40 hover:bg-white/[0.04] transition-colors"
+                className="group flex flex-col p-5 rounded-xl border border-white/10 bg-white/[0.02] hover:border-primary/40 hover:bg-white/[0.04] transition-colors"
               >
-                <div>
-                  <div className="text-sm font-medium text-white/85 group-hover:text-white transition-colors">{OTT_CATEGORY_LABELS[c.cat][lang]}</div>
-                  <div className="text-xs text-white/35 mt-0.5">{c.products.length} {tr('Modelle im Detail', 'models in detail', 'modelů v detailu')}</div>
-                </div>
-                <ArrowUpRight className="w-4 h-4 text-white/25 group-hover:text-primary transition-colors shrink-0" />
+                <span className="flex items-center justify-between gap-3 mb-2">
+                  <span className="text-base font-medium text-white group-hover:text-primary/90 transition-colors">
+                    {OTT_CATEGORY_LABELS[c.cat][lang]}
+                  </span>
+                  <ArrowUpRight className="w-4 h-4 text-white/25 group-hover:text-primary transition-colors shrink-0" />
+                </span>
+                <span className="text-sm text-white/60 leading-relaxed mb-3">{categoryTeaser[c.cat]}</span>
+                <span className="mt-auto text-xs text-white/35">{c.products.map((p) => p.name).join(' · ')}</span>
               </Link>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* ====== 3. SECONDARY INFO ====== */}
+        {/* ====== 3. WARUM ASAMER ====== */}
         <div className="border-t border-white/5">
           <div className="container-wide py-12">
 
@@ -239,63 +191,27 @@ const OttPage = () => {
               </div>
             </section>
 
-            {/* Technology cards */}
-            <section className="mb-10">
-              <h2 className="text-sm font-display text-white/40 mb-4">{tr('Technologie', 'Technology', 'Technologie')}</h2>
-              <div className="grid md:grid-cols-2 gap-3 max-w-2xl">
-                <div className="p-4 rounded-xl border border-orange-500/15 bg-orange-500/5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Flame className="w-4 h-4 text-orange-500" />
-                    <span className="text-sm font-medium text-white">CombiMelt PUR</span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-orange-500/15 text-orange-400">{tr('Patentiert', 'Patented', 'Patent')}</span>
-                  </div>
-                  <p className="text-white/35 text-xs">{tr('Top-Driven-Roller · EVA + PUR · weniger Verschwendung · Servicestation', 'Top-driven roller · EVA + PUR · less waste · service station', 'Top-driven roller · EVA + PUR · méně odpadu · servisní stanice')}</p>
-                </div>
-                <div className="p-4 rounded-xl border border-blue-500/15 bg-blue-500/5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Droplets className="w-4 h-4 text-blue-500" />
-                    <span className="text-sm font-medium text-white">bluEdge HyFuse</span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-400">Zero-Gap</span>
-                  </div>
-                  <p className="text-white/35 text-xs">{tr('Wasserstoff-Flamme · keine Klebefuge · nachrüstbar', 'Hydrogen flame · no glue joint · retrofittable', 'Vodíkový plamen · bez spáry · montovatelná')}</p>
-                </div>
-              </div>
-            </section>
-
-            {/* Why buy from Asamer */}
+            {/* Why buy from Asamer — Service und Finanzierung verlinkt */}
             <section className="mb-10">
               <h2 className="text-sm font-display text-white/40 mb-4">{tr('Warum bei Asamer kaufen?', 'Why buy from Asamer?', 'Proč koupit u Asamer?')}</h2>
               <div className="grid sm:grid-cols-2 gap-3 max-w-2xl">
-                {[
-                  { icon: <Monitor className="w-4 h-4 text-blue-400" />, t: tr('Software-Integration', 'Software integration', 'Softwarová integrace'), d: tr('OPC-UA direkt in Ihr ERP/MES – kein Vendor-Lock-in', 'OPC-UA directly into your ERP/MES – no vendor lock-in', 'OPC-UA přímo do vašeho ERP/MES – bez vendor lock-in') },
-                  { icon: <MapPin className="w-4 h-4 text-primary" />, t: tr('Exklusivhändler CZ/SK/HU', 'Exclusive dealer CZ/SK/HU', 'Exkluzivní prodejce CZ/SK/HU'), d: tr('Direkter Kontakt – kein Konzern-Umweg', 'Direct contact – no corporate detour', 'Přímý kontakt – bez koncernových oklik') },
-                  { icon: <Wrench className="w-4 h-4 text-white/40" />, t: tr('Service & Montage', 'Service & installation', 'Servis a montáž'), d: tr('Techniker vor Ort in CZ/SK/HU', 'Technicians on-site in CZ/SK/HU', 'Technici na místě v CZ/SK/HU') },
-                  { icon: <Flag className="w-4 h-4 text-red-400" />, t: tr('Made in Austria', 'Made in Austria', 'Made in Austria'), d: tr('Familienbetrieb seit 1963 in Lambach', 'Family business since 1963 in Lambach', 'Rodinný podnik od roku 1963 v Lambachu') },
-                ].map((item) => (
-                  <div key={item.t} className="flex items-start gap-3 p-3 rounded-lg border border-white/5 bg-white/[0.01]">
-                    <div className="mt-0.5 shrink-0">{item.icon}</div>
-                    <div>
-                      <div className="text-xs font-medium text-white">{item.t}</div>
-                      <div className="text-xs text-white/30">{item.d}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* FAQ */}
-            <section className="mb-10">
-              <h2 className="text-sm font-display text-white/40 mb-4">{tr('Häufige Fragen zu OTT Kantenanleimmaschinen', 'FAQ on OTT edgebanding machines', 'Časté dotazy k olepovačkám hran OTT')}</h2>
-              <div className="max-w-2xl divide-y divide-white/5 rounded-xl border border-white/10">
-                {faqs.map((faq) => (
-                  <details key={faq.question} className="group p-4">
-                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium text-white/80 [&::-webkit-details-marker]:hidden">
-                      {faq.question}
-                      <span className="shrink-0 text-white/30 transition-transform group-open:rotate-45">+</span>
-                    </summary>
-                    <p className="mt-3 text-sm leading-relaxed text-white/40">{faq.answer}</p>
-                  </details>
-                ))}
+                {reasons.map((item) => {
+                  const body = (
+                    <>
+                      <div className="mt-0.5 shrink-0">{item.icon}</div>
+                      <div>
+                        <div className="text-xs font-medium text-white">{item.t}</div>
+                        <div className="text-xs text-white/30">{item.d}</div>
+                      </div>
+                    </>
+                  );
+                  const className = 'flex items-start gap-3 p-3 rounded-lg border border-white/5 bg-white/[0.01]';
+                  return item.to ? (
+                    <Link key={item.t} to={item.to} className={`${className} hover:border-primary/30 transition-colors`}>{body}</Link>
+                  ) : (
+                    <div key={item.t} className={className}>{body}</div>
+                  );
+                })}
               </div>
             </section>
 

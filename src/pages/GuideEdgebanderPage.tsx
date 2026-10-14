@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ArrowRight, Check, X, Minus } from 'lucide-react';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
@@ -7,7 +7,7 @@ import SeoHead from '../seo/SeoHead';
 import { breadcrumbSchema, faqPageSchema, howToSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { EDGEBANDER_GUIDE } from '../data/guides/edgebanderGuide';
-import { buildOttCategoryPath } from '../data/ottProducts';
+import { buildOttCategoryPath, buildOttProductPathRaw } from '../data/ottProducts';
 import type { MultiLangText } from '../data/seo/types';
 import type { Language } from '../i18n';
 
@@ -42,70 +42,10 @@ const GuideEdgebanderPage = () => {
     )
   );
 
-  const models = [
-    {
-      name: 'Pacific+',
-      target: tr('Kleine Tischlerei', 'Small joinery', 'Malá truhlárna'),
-      length: '5,7 m',
-      feed: '18 m/min',
-      pur: 'option',
-      laser: false,
-    },
-    {
-      name: 'Tornado+',
-      target: tr('Klein–Mittel', 'Small–Mid', 'Malý–Střední'),
-      length: '6,2 m',
-      feed: '18–20 m/min',
-      pur: 'option',
-      laser: false,
-    },
-    {
-      name: 'FlexEdge',
-      target: tr('Mittelbetrieb', 'Mid-size', 'Střední provoz'),
-      length: '7,1 m',
-      feed: '20–25 m/min',
-      pur: true,
-      laser: false,
-    },
-    {
-      name: 'Storm+',
-      target: tr('Mittel–Groß', 'Mid–Large', 'Střední–Velký'),
-      length: '–',
-      feed: '20–25 m/min',
-      pur: true,
-      laser: 'option',
-    },
-    {
-      name: 'StrongEdge',
-      target: tr('Industrie', 'Industrial', 'Průmysl'),
-      length: '7,7 m',
-      feed: '20–25 m/min',
-      pur: true,
-      laser: 'option',
-    },
-    {
-      name: 'TopEdge',
-      target: tr('Industrie', 'Industrial', 'Průmysl'),
-      length: '–',
-      feed: '20–25 m/min',
-      pur: true,
-      laser: true,
-    },
-    {
-      name: 'Door Edition',
-      target: tr('Türenfertigung', 'Door mfg.', 'Výroba dveří'),
-      length: '–',
-      feed: '–',
-      pur: true,
-      laser: 'option',
-    },
-  ];
-
-  const renderFlag = (value: boolean | string) => {
-    if (value === true) return <Check className="w-4 h-4 text-green-400" />;
-    if (value === 'option') return <Minus className="w-4 h-4 text-yellow-400" />;
-    return <X className="w-4 h-4 text-white/30" />;
-  };
+  // Modell-Links: Einzelmodell → Produktseite, Modellpaar → Kategorieseite.
+  // Vorher zeigten alle drei auf den Marken-Hub /ott.
+  const categoryPath = buildPath(buildOttCategoryPath(lang, 'edgebanding'));
+  const productPath = (slug: string) => buildPath(buildOttProductPathRaw(lang, 'edgebanding', slug));
 
   const breadcrumbs = breadcrumbSchema([
     { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
@@ -195,7 +135,7 @@ const GuideEdgebanderPage = () => {
               </div>
               <div className="mt-5">
                 <Link
-                  to={buildPath('/ott')}
+                  to={productPath('pacific-plus')}
                   className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:underline"
                 >
                   {tr('Pacific+ auf der OTT-Seite ansehen', 'View Pacific+ on the OTT page', 'Zobrazit Pacific+ na stránce OTT')}
@@ -238,7 +178,7 @@ const GuideEdgebanderPage = () => {
               </div>
               <div className="mt-5">
                 <Link
-                  to={buildPath('/ott')}
+                  to={categoryPath}
                   className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:underline"
                 >
                   {tr('FlexEdge & Storm+ auf der OTT-Seite ansehen', 'View FlexEdge & Storm+ on the OTT page', 'Zobrazit FlexEdge a Storm+ na stránce OTT')}
@@ -281,7 +221,7 @@ const GuideEdgebanderPage = () => {
               </div>
               <div className="mt-5">
                 <Link
-                  to={buildPath('/ott')}
+                  to={categoryPath}
                   className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:underline"
                 >
                   {tr('StrongEdge & TopEdge auf der OTT-Seite ansehen', 'View StrongEdge & TopEdge on the OTT page', 'Zobrazit StrongEdge a TopEdge na stránce OTT')}
@@ -323,52 +263,23 @@ const GuideEdgebanderPage = () => {
           </div>
         </section>
 
-        {/* Comparison Table */}
+        {/* Modellvergleich: steht als Tabelle auf der Kategorieseite. Hier
+            nur der Verweis — eine zweite Tabelle machte den Ratgeber zur
+            Konkurrenz der Kategorieseite um dasselbe Keyword. */}
         <section className="pb-12">
           <div className="container-wide">
-            <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-6">
-              {tr('Vergleichsübersicht', 'Comparison Overview', 'Srovnávací přehled')}
+            <h2 className="text-2xl md:text-3xl font-display font-light text-white mb-5">
+              {tr('Modelle im Vergleich', 'Model comparison', 'Srovnání modelů')}
             </h2>
-            <div className="rounded-2xl border border-white/10 bg-dark-card overflow-x-auto">
-              <table className="w-full text-xs sm:text-sm">
-                <thead>
-                  <tr className="border-b border-white/10">
-                    <th className="text-left text-white/50 font-medium px-4 py-3 whitespace-nowrap">
-                      {tr('Modell', 'Model', 'Model')}
-                    </th>
-                    <th className="text-left text-white/50 font-medium px-4 py-3 whitespace-nowrap">
-                      {tr('Zielgruppe', 'Target', 'Cílová skupina')}
-                    </th>
-                    <th className="text-left text-white/50 font-medium px-4 py-3 whitespace-nowrap">
-                      {tr('Baulänge', 'Length', 'Délka')}
-                    </th>
-                    <th className="text-left text-white/50 font-medium px-4 py-3 whitespace-nowrap">
-                      {tr('Vorschub', 'Feed', 'Posuv')}
-                    </th>
-                    <th className="text-center text-white/50 font-medium px-4 py-3">PUR</th>
-                    <th className="text-center text-white/50 font-medium px-4 py-3">bluEdge HyFuse</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {models.map((m) => (
-                    <tr key={m.name} className="border-b border-white/5 last:border-b-0">
-                      <td className="px-4 py-3 text-white font-medium whitespace-nowrap">{m.name}</td>
-                      <td className="px-4 py-3 text-white/70 whitespace-nowrap">{m.target}</td>
-                      <td className="px-4 py-3 text-white/70 whitespace-nowrap">{m.length}</td>
-                      <td className="px-4 py-3 text-white/70 whitespace-nowrap">{m.feed}</td>
-                      <td className="px-4 py-3 text-center">{renderFlag(m.pur)}</td>
-                      <td className="px-4 py-3 text-center">{renderFlag(m.laser)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-white/40 text-xs mt-3">
+            <p className="text-white/70 text-sm leading-relaxed max-w-3xl">
               {tr(
-                '✓ = Serie · – = Option · ✕ = nicht verfügbar. Alle Angaben ohne Gewähr.',
-                '✓ = Standard · – = Option · ✕ = not available. All specifications without guarantee.',
-                '✓ = Standard · – = Volitelně · ✕ = nedostupné. Všechny údaje bez záruky.'
-              )}
+                'Baulänge, Vorschub und Kantenstärke aller Modelle stehen in der Vergleichstabelle auf der Übersichtsseite:',
+                'Length, feed speed and edge thickness of every model are compared in one table on the overview page:',
+                'Délku, posuv a tloušťku hrany všech modelů porovnáváme v tabulce na přehledové stránce:'
+              )}{' '}
+              <Link to={categoryPath} className="text-primary font-medium hover:underline">
+                {tr('OTT Kantenanleimmaschinen', 'OTT edgebanding machines', 'olepovačky hran OTT')}
+              </Link>
             </p>
           </div>
         </section>
@@ -473,7 +384,7 @@ const GuideEdgebanderPage = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  to={buildPath(buildOttCategoryPath(lang, 'edgebanding'))}
+                  to={categoryPath}
                   className="btn-primary-dark sm:whitespace-nowrap justify-center"
                 >
                   {tr('Alle OTT-Kantenanleimmaschinen', 'All OTT edgebanders', 'Všechny olepovačky hran OTT')}

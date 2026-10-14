@@ -21,11 +21,15 @@ export interface OttCategoryMeta {
 
 export const OTT_CATEGORY_META: Record<OttCategory, OttCategoryMeta> = {
   edgebanding: {
+    // Einzige Zielseite fuer „olepovačky hran" & Co. Die Modellzahl und die
+    // Spanne Pacific+ … TopEdge entsprechen OTT_PRODUCTS (category 'edgebanding');
+    // kommt ein Modell dazu, gehoert der Title mit angepasst.
+    // HU kommt aus CATEGORY_META_OVERRIDES (Keyword-Recherche) und schlaegt diesen Wert.
     seoTitle: {
-      de: 'Kantenanleimmaschinen – OTT Maschinen kaufen | Asamer',
-      en: 'Edgebanding Machines – Industrial OTT Range | Asamer',
-      cz: 'Olepovačky hran – průmyslové stroje OTT | Asamer',
-      sk: 'Olepovačky hrán – priemyselné stroje OTT | Asamer',
+      de: 'Kantenanleimmaschinen OTT – 7 Modelle von Pacific+ bis TopEdge',
+      en: 'OTT Edgebanding Machines – 7 Models, Pacific+ to TopEdge',
+      cz: 'Olepovačky hran OTT – 7 modelů od Pacific+ po TopEdge | Asamer',
+      sk: 'Olepovačky hrán OTT – 7 modelov od Pacific+ po TopEdge | Asamer',
       hu: 'Élzárógépek – ipari OTT gépek | Asamer',
     },
     seoDescription: {
