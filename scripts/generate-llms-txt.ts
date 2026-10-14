@@ -14,9 +14,11 @@
  *   - Standorte, Kontakt: `localBusinessSchemas()`
  *   - Seiten, Titel: SEO_ROUTES, Markenkataloge
  *
- * Englischer Text mit Links auf die englische und die tschechische Fassung:
- * Tschechisch ist die Hauptsprache (x-default), Englisch die Sprache, in der
- * die meisten Assistenten ihre Quellen zusammenfassen.
+ * Englischer Text mit Links auf die englische Fassung und die Fassungen der
+ * drei Maerkte (CZ, SK, HU): Tschechisch ist die Hauptsprache (x-default),
+ * Englisch die Sprache, in der die meisten Assistenten ihre Quellen
+ * zusammenfassen, und eine Antwort auf Slowakisch oder Ungarisch soll auf die
+ * passende Fassung zeigen koennen.
  *
  * Auslieferung als `text/plain; charset=utf-8` — Header in vercel.json
  * (scripts/generate-vercel-config.ts).
@@ -31,6 +33,7 @@ import { BRAND_SLUGS, buildCategoryPath, getBrandCatalog } from '../src/data/bra
 import { getCategoryHeading } from '../src/seo/categoryMeta';
 import { buildCanonicalUrl } from '../src/lib/language';
 import { organizationSchema, localBusinessSchemas } from '../src/seo/structuredData';
+import type { Language } from '../src/i18n';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const outPath = join(__dirname, '..', 'public', 'llms.txt');
@@ -38,15 +41,26 @@ const outPath = join(__dirname, '..', 'public', 'llms.txt');
 /** Titel ohne Markenanhang („… | Asamer"). */
 const clean = (title: string) => title.replace(/\s*\|\s*Asamer.*$/, '').trim();
 
-const routeUrl = (key: SeoRouteKey, lang: 'en' | 'cz') => buildCanonicalUrl(lang, getSlugForLang(SEO_ROUTES[key], lang));
+const routeUrl = (key: SeoRouteKey, lang: Language) => buildCanonicalUrl(lang, getSlugForLang(SEO_ROUTES[key], lang));
 
-/** Eine Zeile: englischer Titel und Link, dahinter die tschechische Fassung. */
+/**
+ * Fassungen in den Marktsprachen hinter dem englischen Link: CZ, SK, HU.
+ * Deutsch steht nur per hreflang auf den Seiten — kein Zielmarkt.
+ */
+const MARKET_LANGS: Language[] = ['cz', 'sk', 'hu'];
+const marketLinks = (urlFor: (lang: Language) => string | null): string =>
+  MARKET_LANGS.map((l) => {
+    const url = urlFor(l);
+    return url ? ` · ${l.toUpperCase()}: ${url}` : '';
+  }).join('');
+
+/** Eine Zeile: englischer Titel und Link, dahinter die Fassungen fuer CZ, SK und HU. */
 const routeLine = (key: SeoRouteKey, note?: string): string => {
   const config = SEO_ROUTES[key];
-  const lang = isRouteAvailable(config, 'en') ? 'en' : 'cz';
+  const lang: Language = isRouteAvailable(config, 'en') ? 'en' : 'cz';
   const title = clean(config.meta[lang].title);
-  const cz = isRouteAvailable(config, 'cz') && lang !== 'cz' ? ` · CZ: ${routeUrl(key, 'cz')}` : '';
-  return `- [${title}](${routeUrl(key, lang)})${note ? `: ${note}` : ''}${cz}`;
+  const others = marketLinks((l) => (l !== lang && isRouteAvailable(config, l) ? routeUrl(key, l) : null));
+  return `- [${title}](${routeUrl(key, lang)})${note ? `: ${note}` : ''}${others}`;
 };
 
 const org = organizationSchema();
@@ -68,7 +82,7 @@ const categoryLines = BRAND_SLUGS.flatMap((brand) => {
     const heading = getCategoryHeading(ref, 'en');
     // OTT-Ueberschriften tragen die Marke schon, die anderen nicht.
     const title = heading.toLowerCase().includes(catalog.label.toLowerCase()) ? heading : `${catalog.label}: ${heading}`;
-    return `- [${title}](${buildCanonicalUrl('en', buildCategoryPath(ref, 'en'))}) · CZ: ${buildCanonicalUrl('cz', buildCategoryPath(ref, 'cz'))}`;
+    return `- [${title}](${buildCanonicalUrl('en', buildCategoryPath(ref, 'en'))})${marketLinks((l) => buildCanonicalUrl(l, buildCategoryPath(ref, l)))}`;
   });
 });
 
@@ -86,7 +100,7 @@ const text = `# Asamer Technologie
 
 > ${org.name} (${lambach.address.addressLocality}, Austria) and ${brno.name} (${brno.address.addressLocality}, Czech Republic) sell, install and service woodworking machinery in the Czech Republic, Slovakia and Hungary and arrange its financing. Asamer is the exclusive distribution partner for ${brands[0]} and an authorized dealer for ${brands.slice(1, -1).join(', ')} and ${brands.at(-1)} in these three countries. Used machines are inspected before handover; financing via leasing and grants is arranged on request.
 
-The website exists in Czech (default), Slovak, Hungarian, German and English; language versions of each page are linked via hreflang. Contact: ${lambach.email}, ${brno.telephone} (CZ), ${lambach.telephone} (AT).
+The website exists in Czech (default), Slovak, Hungarian, German and English. Each entry below links the English page followed by the Czech (CZ), Slovak (SK) and Hungarian (HU) versions; all language versions are also linked via hreflang. Contact: ${lambach.email}, ${brno.telephone} (CZ), ${lambach.telephone} (AT).
 
 ## Brands
 

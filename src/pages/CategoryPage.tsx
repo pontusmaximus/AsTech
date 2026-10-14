@@ -83,7 +83,7 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
 
   const localPath = (slug: string) => buildLocalizedPath(lang, localizeSlug(slug, lang));
 
-  // ABS-Abschnitt nur auf der OTT-Kategorie Kantenanleimmaschinen, nur CZ/SK.
+  // ABS-Abschnitt nur auf der OTT-Kategorie Kantenanleimmaschinen, nur CZ/SK/HU.
   const absSection = brand === 'ott' && category === 'edgebanding' ? OTT_EDGEBANDING_ABS[lang] : undefined;
 
   // Eine Route kann Sprachen ausschliessen (`excludeLangs`). Wird sie hier

@@ -8,112 +8,112 @@
   "generatedFrom": "sha1 je Seite ueber Daten-JSON und Seitenkomponenten; Datum bei Aenderung aus Git bzw. Build",
   "entries": {
     "category:barbaric:buffer": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "6f050ea4a77b564c"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "9aca8b4a3a14600e"
     },
     "category:barbaric:door": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "75cee564e93d15f5"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "150493d07132f3d3"
     },
     "category:barbaric:feeding": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "b789a4e4868761a6"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "54b17f06e873c917"
     },
     "category:barbaric:labeling": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "2da578eb1c5b468f"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "70da702e473b1095"
     },
     "category:barbaric:nesting": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "e80b461d034a27ae"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "d09a0ae997f96ffa"
     },
     "category:barbaric:return": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "07ed3ab449a54de1"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "f8d87ab3355a56ff"
     },
     "category:barbaric:storage": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "97cf8843865566e9"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "4b91c4ec9a9b892b"
     },
     "category:barbaric:vacuum-cranes": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "915671a618291ea0"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "8dbd773167b1eb9c"
     },
     "category:barbaric:vacuum-lifters": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "b5d9f128a84bb0a5"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "9885f7c895854eae"
     },
     "category:barbaric:vacuum-special": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "c95af22a681d1c67"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "265ba6b42ff7d169"
     },
     "category:barbaric:vacuum-traverses": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "2e41691725c662df"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "d3014b60bb95c671"
     },
     "category:gannomat:boring": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "46d1e04baabf60ca"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "324d023dd722f3ad"
     },
     "category:gannomat:carcass": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "9030dfa49cee866a"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "3f2b44fef1ae1e68"
     },
     "category:gannomat:cornerhinge": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "87ade14dadccf3b3"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "753c713f1ed845ed"
     },
     "category:gannomat:fitting": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "d2cce8820dadddb6"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "e6da3933d656ece3"
     },
     "category:gannomat:frame": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "81c4f1863f67a5b3"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "cae315eb2cf0c42d"
     },
     "category:gannomat:gluing": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "672f6e01a11132a3"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "6981a5772ab5739e"
     },
     "category:gannomat:insertion": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "75552ff857679fc1"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "0582588febbe8419"
     },
     "category:gannomat:insertion_door": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "81ac11eb172ff8d7"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "684a052d66823773"
     },
     "category:gannomat:machining": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "9c6b5b7ff3308d90"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "8b7759c27cefdca0"
     },
     "category:gannomat:rowboring": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "be5ad61e7de40c98"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "e2686650ffe1aa47"
     },
     "category:mayer:advanced": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "da48ca9242b63433"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "54695eae27d96fcd"
     },
     "category:mayer:industrial": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "ced74e219959568b"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "f319514ee4df9c72"
     },
     "category:mayer:kappa": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "12a9b0e6ef8396c5"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "be232f75a1e1c232"
     },
     "category:ott:edgebanding": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "83716467133245c7"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "4b2e3779b4b8b209"
     },
     "category:ott:gluing": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "3692c0902ec4c33e"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "157f553de96c47fc"
     },
     "category:ott:return": {
-      "lastmod": "2026-10-14T22:19:56Z",
-      "hash": "d0a56da0a7fde395"
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "6cca510a67138f23"
     },
     "product:barbaric:blech-plexiglas-traverse": {
       "lastmod": "2026-09-15T11:14:41Z",
