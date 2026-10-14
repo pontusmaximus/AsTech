@@ -61,7 +61,7 @@ const STATIC_SOURCES: Record<SeoRouteKey, string[]> = {
   contact: [ROUTE_META, 'src/pages/ContactPage.tsx'],
   imprint: [ROUTE_META, 'src/pages/ImprintPage.tsx'],
   privacy: [ROUTE_META, 'src/pages/PrivacyPolicyPage.tsx'],
-  terms: [ROUTE_META, 'src/pages/TermsPage.tsx'],
+  terms: [ROUTE_META, 'src/pages/TermsPage.tsx', 'src/data/termsOfSale.ts'],
   faq: [ROUTE_META, 'src/pages/FaqPage.tsx', 'src/data/hub/ratgeberFaqHub.ts'],
   guidePurVsEva: [ROUTE_META, 'src/pages/GuidePurVsEvaPage.tsx'],
   guideEdgebander: [ROUTE_META, 'src/pages/GuideEdgebanderPage.tsx', 'src/data/guides/edgebanderGuide.ts'],

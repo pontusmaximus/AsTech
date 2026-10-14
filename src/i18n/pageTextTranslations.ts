@@ -973,7 +973,9 @@ export const pageSkTranslations: Record<string, string> = {
   "Všeobecné prodejní a dodací podmínky společnosti Asamer Technologie GmbH, A-4650 Lambach, pro všechny nabídky, dodávky a služby.": "Všeobecné predajné a dodacie podmienky spoločnosti Asamer Technologie GmbH, A-4650 Lambach, pre všetky ponuky, dodávky a služby.",
   "Znění ze dne": "Znenie zo dňa",
   "Stáhnout PDF": "Stiahnuť PDF",
-  "Tyto podmínky jsou k dispozici pouze v němčině. Právně závazné je německé znění — smluvním jazykem je němčina.": "Tieto podmienky sú k dispozícii iba v nemčine. Právne záväzné je nemecké znenie — zmluvným jazykom je nemčina.",
+  "Jazyková verze:": "Jazyková verzia:",
+  "závazné": "záväzné",
+  "Nezávazný překlad pouze pro informaci. Právně závazné je výhradně německé znění — smluvním jazykem je němčina.": "Nezáväzný preklad iba na informáciu. Právne záväzné je výlučne nemecké znenie — zmluvným jazykom je nemčina.",
 };
 
 export const pageHuTranslations: Record<string, string> = {
@@ -1946,7 +1948,9 @@ export const pageHuTranslations: Record<string, string> = {
   "General terms of sale and delivery of Asamer Technologie GmbH, A-4650 Lambach, for all offers, deliveries and services.": "Az Asamer Technologie GmbH (A-4650 Lambach) általános értékesítési és szállítási feltételei minden ajánlatra, szállításra és szolgáltatásra.",
   "Version dated": "Változat dátuma:",
   "Download PDF": "PDF letöltése",
-  "These terms are only available in German. The German version is legally binding — the contract language is German.": "Ezek a feltételek csak német nyelven érhetők el. A német nyelvű változat jogilag kötelező érvényű — a szerződés nyelve a német.",
+  "Language version:": "Nyelvi változat:",
+  "binding": "kötelező érvényű",
+  "Non-binding translation for information only. Only the German version is legally binding — the contract language is German.": "Nem kötelező érvényű, kizárólag tájékoztató jellegű fordítás. Jogilag kizárólag a német nyelvű változat kötelező — a szerződés nyelve a német.",
 };
 
 /**

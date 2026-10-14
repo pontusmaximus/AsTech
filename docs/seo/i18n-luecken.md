@@ -27,8 +27,8 @@ Widerspruch, der im günstigsten Fall ignoriert und im ungünstigsten als Duplik
 |---|---|---:|---:|---:|
 | A · Datenmodule (`MultiLangText`) | SK | 2006 | 0 | **100.0 %** |
 | A · Datenmodule (`MultiLangText`) | HU | 1891 | 115 | **94.3 %** |
-| B · Seitentexte (`tr()`) | SK | 722 | 0 | **100.0 %** |
-| B · Seitentexte (`tr()`) | HU | 729 | 0 | **100.0 %** |
+| B · Seitentexte (`tr()`) | SK | 724 | 0 | **100.0 %** |
+| B · Seitentexte (`tr()`) | HU | 731 | 0 | **100.0 %** |
 
 ## Eigener Befund: `tr()`-Aufrufe mit dynamischem Text
 
