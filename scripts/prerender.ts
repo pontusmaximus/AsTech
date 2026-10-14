@@ -21,14 +21,22 @@
  * der Prerenderer nicht kennt: die Fehlerklasse ist geschlossen statt einzeln
  * abgearbeitet.
  *
- * ## Warum der Head trotzdem hier entsteht
+ * ## Head: eine Quelle, kein Nachbau (Oktober 2026)
  *
- * react-helmet-async 3 fuellt unter React 19 im Streaming-Rendering seinen
- * Server-Context nicht — was in `<Helmet>` steht, taucht im SSR-Output nicht
- * auf. Die Meta-Tags werden deshalb weiterhin hier erzeugt, aus denselben
- * Datenquellen, aus denen auch `SeoHead` liest (`SEO_ROUTES`, Produktdaten,
- * `src/lib/language.ts`). Der SEO-Audit prueft das Ergebnis gegen die
- * Invarianten aus Masterplan 7.1.
+ * Bis hierher baute dieses Skript Title, Description, Canonical, hreflang und
+ * Open Graph ein zweites Mal aus denselben Daten wie `SeoHead` — und React 19
+ * lieferte die Helmet-Tags zusaetzlich am Anfang von `#root` aus. Jede Seite
+ * trug damit zwei `<title>`, zwei Canonicals, zwei Descriptions.
+ *
+ * Jetzt ist `SeoHead` die einzige Quelle. React stellt die hochgezogenen
+ * Elemente (`<title>`, `<meta>`, `<link>`) an den Anfang der Ausgabe, wenn kein
+ * `<html>` im Baum steht; `splitHoisted()` nimmt sie dort ab und setzt sie in
+ * den `<head>`. Markiert mit `data-rh="true"`, damit `src/main.tsx` sie vor dem
+ * Mount entfernt — React haengt sie im Browser selbst wieder ein.
+ *
+ * `checkPage()` haelt beides fest und bricht den Build ab, wenn es nicht
+ * stimmt: genau ein Title, Canonical, Description, Robots, ein hreflang je
+ * Sprache; die H1 vor dem Footer; kein Cookie-Text vor der H1.
  *
  * Das JSON-LD rendert `SeoHead` bewusst ausserhalb von Helmet und kommt
  * deshalb mit dem SSR-Body mit.
@@ -37,17 +45,12 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SEO_ROUTES, getSlugForLang, isRouteAvailable, DEFAULT_OG_IMAGE } from '../src/seo/routes';
-import { ALL_CATEGORY_REFS, buildCategoryPath, getBrandCatalog } from '../src/data/brandCatalogs';
-import { getCategoryMeta } from '../src/seo/categoryMeta';
+import { SEO_ROUTES, getSlugForLang, isRouteAvailable } from '../src/seo/routes';
+import { ALL_CATEGORY_REFS, buildCategoryPath } from '../src/data/brandCatalogs';
 import {
   buildLocalizedPath,
-  buildCanonicalUrl,
   CANONICAL_DOMAIN,
   SUPPORTED_LANGUAGES,
-  INDEXABLE_LANGUAGES,
-  NON_INDEXABLE_LANGUAGES,
-  HREFLANG_DEFAULT,
   languageToHreflang,
 } from '../src/lib/language';
 import { OTT_PRODUCTS, buildOttProductPath } from '../src/data/ottProducts';
@@ -71,41 +74,17 @@ const { render } = (await import(ssrEntry)) as {
 /*  Seitenliste                                                        */
 /* ------------------------------------------------------------------ */
 
+/**
+ * Pfad und Sprache je Seite. Titel, Description, Canonical und hreflang kommen
+ * nicht mehr von hier, sondern aus dem gerenderten `SeoHead` (siehe oben).
+ */
 interface PageMeta {
   path: string;
   lang: Language;
-  title: string;
-  description: string;
-  canonical: string;
-  alternates: { hreflang: string; href: string }[];
-  xDefaultHref: string;
-  /** Absolute OG/Twitter-Bild-URL. */
-  image: string;
-  /** Bildmasse, nur wenn bekannt (gebrandetes 1200x630). */
-  imageDims?: { w: number; h: number };
-}
-
-const escHtml = (s: string) =>
-  s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-/** OG-Bild-URL absolut machen (externe URLs unveraendert, lokale Pfade mit Domain). */
-const absImg = (src?: string) => (!src ? DEFAULT_OG_IMAGE : src.startsWith('http') ? src : `${CANONICAL_DOMAIN}${src}`);
-
-/**
- * Nur indexierbare Sprachen als hreflang-Alternates. Steht `NON_INDEXABLE_LANGUAGES`
- * wieder auf einem Wert, faellt die betroffene Sprache hier automatisch heraus.
- */
-function makeAlternates(
-  buildPath: (lang: Language) => string,
-  isAvailable: (lang: Language) => boolean = () => true,
-) {
-  return INDEXABLE_LANGUAGES.filter(isAvailable).map((al) => ({
-    hreflang: languageToHreflang(al),
-    href: `${CANONICAL_DOMAIN}${buildPath(al)}`,
-  }));
 }
 
 const pages: PageMeta[] = [];
+const addPage = (path: string, lang: Language) => pages.push({ path, lang });
 
 // 1. Statische Seiten aus SEO_ROUTES
 for (const config of Object.values(SEO_ROUTES)) {
@@ -114,43 +93,14 @@ for (const config of Object.values(SEO_ROUTES)) {
     // Seite, die per 301 gar nicht erreichbar ist -- und der 404-Sicherheits-
     // nachweis haette sie als "vorhanden" gezaehlt.
     if (!isRouteAvailable(config, lang)) continue;
-    const path = buildLocalizedPath(lang, getSlugForLang(config, lang));
-    const meta = config.meta[lang];
-    pages.push({
-      path,
-      lang,
-      title: meta.title,
-      description: meta.description,
-      canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates: makeAlternates(
-        (al) => buildLocalizedPath(al, getSlugForLang(config, al)),
-        (al) => isRouteAvailable(config, al),
-      ),
-      xDefaultHref: buildCanonicalUrl(HREFLANG_DEFAULT, getSlugForLang(config, HREFLANG_DEFAULT)),
-      image: DEFAULT_OG_IMAGE,
-      imageDims: { w: 1200, h: 630 },
-    });
+    addPage(buildLocalizedPath(lang, getSlugForLang(config, lang)), lang);
   }
 }
 
 // 1b. Kategorieseiten je Marke
 for (const ref of ALL_CATEGORY_REFS) {
   for (const lang of SUPPORTED_LANGUAGES) {
-    const build = (al: Language) => buildLocalizedPath(al, buildCategoryPath(ref, al));
-    const path = build(lang);
-    const meta = getCategoryMeta(ref, lang);
-    const firstProduct = getBrandCatalog(ref.brand).productsIn(ref.category)[0];
-    pages.push({
-      path,
-      lang,
-      title: meta.title,
-      description: meta.description,
-      canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates: makeAlternates(build),
-      xDefaultHref: `${CANONICAL_DOMAIN}${build(HREFLANG_DEFAULT)}`,
-      image: firstProduct ? absImg(firstProduct.image) : DEFAULT_OG_IMAGE,
-      imageDims: { w: 1200, h: 630 },
-    });
+    addPage(buildLocalizedPath(lang, buildCategoryPath(ref, lang)), lang);
   }
 }
 
@@ -165,54 +115,15 @@ const productCatalogs = [
 for (const catalog of productCatalogs) {
   for (const product of catalog.products) {
     for (const lang of SUPPORTED_LANGUAGES) {
-      const build = (al: Language) => buildLocalizedPath(al, catalog.buildPath(al, product as never));
-      const path = build(lang);
-      pages.push({
-        path,
-        lang,
-        title: product.seoTitle[lang],
-        description: product.seoDescription[lang],
-        canonical: `${CANONICAL_DOMAIN}${path}`,
-        alternates: makeAlternates(build),
-        xDefaultHref: `${CANONICAL_DOMAIN}${build(HREFLANG_DEFAULT)}`,
-        image: absImg(product.image),
-      });
+      addPage(buildLocalizedPath(lang, catalog.buildPath(lang, product as never)), lang);
     }
   }
 }
 
 // 6. Gebrauchtmaschinen-Detailseiten
-const machineLabel: Record<Language, string> = {
-  de: 'Gebrauchtmaschine',
-  en: 'Used machine',
-  cz: 'Použitý stroj',
-  sk: 'Použitý stroj',
-  hu: 'Használt gép',
-};
-
-/** Sprach-Resolver mit denselben Fallbacks wie `ml()` in der App (sk -> cz, hu -> en). */
-const mlText = (obj: { de: string; en: string; cz: string; sk?: string; hu?: string }, lang: Language): string => {
-  if (lang === 'sk') return obj.sk ?? obj.cz;
-  if (lang === 'hu') return obj.hu ?? obj.en;
-  if (lang === 'de') return obj.de;
-  if (lang === 'cz') return obj.cz;
-  return obj.en;
-};
-
 for (const machine of USED_MACHINES) {
   for (const lang of SUPPORTED_LANGUAGES) {
-    const build = (al: Language) => buildLocalizedPath(al, `${localizeSlug('/pouzite-stroje', al)}/${machine.slug}`);
-    const path = build(lang);
-    pages.push({
-      path,
-      lang,
-      title: `${machine.manufacturer} ${machine.name} – ${machineLabel[lang]} | Asamer`,
-      description: mlText(machine.shortDescription, lang),
-      canonical: `${CANONICAL_DOMAIN}${path}`,
-      alternates: makeAlternates(build),
-      xDefaultHref: `${CANONICAL_DOMAIN}${build(HREFLANG_DEFAULT)}`,
-      image: absImg(Array.isArray(machine.images) ? machine.images[0] : machine.images),
-    });
+    addPage(buildLocalizedPath(lang, `${localizeSlug('/pouzite-stroje', lang)}/${machine.slug}`), lang);
   }
 }
 
@@ -259,41 +170,64 @@ if (missingFile.length > 0 || missingSitemap.length > 0) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Head bauen                                                         */
+/*  Head aus der SSR-Ausgabe                                           */
 /* ------------------------------------------------------------------ */
 
-function buildHead(page: PageMeta): string {
-  const hreflangTags = page.alternates
-    .map((a) => `<link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" data-rh="true"/>`)
-    .join('\n    ');
-  const robotsContent = NON_INDEXABLE_LANGUAGES.includes(page.lang) ? 'noindex,follow' : 'index,follow';
-  const ogImageType = page.image.endsWith('.png') ? 'image/png' : 'image/jpeg';
-  const ogImageDims = page.imageDims
-    ? `\n    <meta property="og:image:width" content="${page.imageDims.w}" data-rh="true"/>` +
-      `\n    <meta property="og:image:height" content="${page.imageDims.h}" data-rh="true"/>`
-    : '';
+/**
+ * Ein Element, das React 19 ohne `<html>` im Baum an den Anfang der Ausgabe
+ * stellt. React maskiert `<` und `>` in Attributwerten, ein `>` beendet also
+ * verlaesslich den Tag.
+ */
+const HOISTED = /^\s*(<title\b[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*>|<link\b[^>]*>)/;
 
-  return `
-    <title data-rh="true">${escHtml(page.title)}</title>
-    <meta name="description" content="${escHtml(page.description)}" data-rh="true"/>
-    <meta name="robots" content="${robotsContent}" data-rh="true"/>
-    <link rel="canonical" href="${page.canonical}" data-rh="true"/>
-    ${hreflangTags}
-    <link rel="alternate" hreflang="x-default" href="${page.xDefaultHref}" data-rh="true"/>
-    <meta property="og:type" content="website" data-rh="true"/>
-    <meta property="og:title" content="${escHtml(page.title)}" data-rh="true"/>
-    <meta property="og:description" content="${escHtml(page.description)}" data-rh="true"/>
-    <meta property="og:url" content="${page.canonical}" data-rh="true"/>
-    <meta property="og:site_name" content="Asamer Technologie" data-rh="true"/>
-    <meta property="og:image" content="${page.image}" data-rh="true"/>
-    <meta property="og:image:secure_url" content="${page.image}" data-rh="true"/>
-    <meta property="og:image:type" content="${ogImageType}" data-rh="true"/>
-    <meta property="og:image:alt" content="${escHtml(page.title)}" data-rh="true"/>${ogImageDims}
-    <meta property="og:locale" content="${languageToHreflang(page.lang)}" data-rh="true"/>
-    <meta name="twitter:card" content="summary_large_image" data-rh="true"/>
-    <meta name="twitter:title" content="${escHtml(page.title)}" data-rh="true"/>
-    <meta name="twitter:description" content="${escHtml(page.description)}" data-rh="true"/>
-    <meta name="twitter:image" content="${page.image}" data-rh="true"/>`;
+/** Zerlegt die SSR-Ausgabe in hochgezogene Head-Elemente und den eigentlichen Body. */
+function splitHoisted(html: string): { head: string[]; body: string } {
+  const head: string[] = [];
+  let body = html;
+  for (let m = HOISTED.exec(body); m; m = HOISTED.exec(body)) {
+    head.push(m[1]);
+    body = body.slice(m[0].length);
+  }
+  return { head, body };
+}
+
+/**
+ * Fuer den `<head>` aufbereiten: `data-rh="true"` (src/main.tsx entfernt diese
+ * Tags vor dem Mount, React setzt sie dann selbst) und `hreflang` in der
+ * ueblichen Kleinschreibung — React schreibt das Attribut als `hrefLang`.
+ */
+const toHeadTag = (tag: string): string =>
+  tag
+    .replace(/\shrefLang=/, ' hreflang=')
+    .replace(/^<title\b/, '<title data-rh="true"')
+    .replace(/^(<(?:meta|link)\b[^>]*?)\s*(\/?)>$/, '$1 data-rh="true"$2>');
+
+/** Die Invarianten aus Aufgabe 2 — bricht den Build ab, statt sie still zu verletzen. */
+function checkPage(path: string, html: string): string[] {
+  const problems: string[] = [];
+  const count = (re: RegExp) => (html.match(re) ?? []).length;
+  const once = (label: string, re: RegExp) => {
+    const n = count(re);
+    if (n !== 1) problems.push(`${n}× ${label} (genau 1 erwartet)`);
+  };
+  once('<title>', /<title\b/g);
+  once('canonical', /rel="canonical"/g);
+  once('meta description', /<meta name="description"/g);
+  once('meta robots', /<meta name="robots"/g);
+
+  const langs = [...html.matchAll(/hreflang="([^"]+)"/gi)].map((m) => m[1].toLowerCase());
+  for (const l of new Set(langs)) {
+    const n = langs.filter((x) => x === l).length;
+    if (n !== 1) problems.push(`${n}× hreflang="${l}"`);
+  }
+
+  const h1 = html.indexOf('<h1');
+  const footer = html.indexOf('<footer');
+  if (h1 < 0) problems.push('keine <h1>');
+  else if (footer >= 0 && h1 > footer) problems.push('<h1> steht hinter <footer>');
+  if (h1 >= 0 && /cookie/i.test(html.slice(html.indexOf('<body'), h1))) problems.push('Cookie-Text vor der <h1>');
+  if (/<template id="B:|hidden id="S:/.test(html)) problems.push('Suspense-Fallback im HTML');
+  return problems.map((p) => `${path}: ${p}`);
 }
 
 /* ------------------------------------------------------------------ */
@@ -324,6 +258,7 @@ const CONCURRENCY = 8;
 let written = 0;
 const thin: { path: string; words: number }[] = [];
 const failed: { path: string; error: string }[] = [];
+const invalid: string[] = [];
 
 async function renderPage(page: PageMeta): Promise<void> {
   let body: string;
@@ -341,11 +276,20 @@ async function renderPage(page: PageMeta): Promise<void> {
   const words = wordCount(body);
   if (words < MIN_WORDS) thin.push({ path: page.path, words });
 
+  const { head, body: content } = splitHoisted(body);
+
   let html = template.replace('<html lang="cs">', `<html lang="${languageToHreflang(page.lang)}">`);
-  html = html.replace(/<title>Asamer Technologie GmbH<\/title>/, '');
-  html = html.replace(/<meta name="description" content="Asamer Technologie .+?" \/>/, '');
-  html = html.replace('</head>', `${buildHead(page)}\n  </head>`);
-  html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
+  // Platzhalter der Vorlage (fuer Dev-Server und SPA-Fallback) entfernen.
+  html = html.replace(/\s*<title[^>]*>Asamer Technologie GmbH<\/title>/, '');
+  html = html.replace(/\s*<meta name="description" content="Asamer Technologie [^"]*"[^>]*\/>/, '');
+  // Gleich hinter charset: Title und Description stehen damit ganz oben.
+  html = html.replace(
+    '<meta charset="UTF-8" />',
+    `<meta charset="UTF-8" />\n    ${head.map(toHeadTag).join('\n    ')}`,
+  );
+  html = html.replace('<div id="root"></div>', `<div id="root">${content}</div>`);
+
+  invalid.push(...checkPage(page.path, html));
 
   const filePath = join(distDir, page.path, 'index.html');
   mkdirSync(dirname(filePath), { recursive: true });
@@ -383,6 +327,12 @@ if (failed.length > 0) {
   for (const f of failed.slice(0, 20)) {
     console.error(`    ${f.path}: ${f.error}`);
   }
+  process.exit(1);
+}
+
+if (invalid.length > 0) {
+  console.error(`  ${invalid.length} Verstoesse gegen die HTML-Invarianten:`);
+  for (const line of invalid.slice(0, 30)) console.error(`    ${line}`);
   process.exit(1);
 }
 

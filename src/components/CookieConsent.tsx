@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
@@ -47,6 +47,9 @@ const ConsentToggle = ({ title, description, checked, disabled, onChange }: Cons
   </div>
 );
 
+/** Kein externer Zustand — `useSyncExternalStore` dient nur zur Unterscheidung Server/Browser. */
+const subscribeNoop = () => () => {};
+
 const CookieConsent = () => {
   const { lang, buildPath } = useLanguage();
   const locale =
@@ -62,6 +65,16 @@ const CookieConsent = () => {
     }
     return en;
   };
+
+  /*
+   * Erst nach dem Mount im Browser rendern, nie im Prerender.
+   *
+   * Ohne diese Sperre stand der Banner-Text in jeder ausgelieferten Datei —
+   * und weil der Seiteninhalt hinter dem Footer folgte, sogar vor der H1. Fuer
+   * Crawler ohne JavaScript ist er reiner Fremdtext; der Besucher sieht ihn
+   * ohnehin erst, wenn das Skript laeuft und die Einwilligung pruefen kann.
+   */
+  const mounted = useSyncExternalStore(subscribeNoop, () => true, () => false);
 
   const initialConsent = useMemo(() => readCookieConsent(), []);
   const [consentSet, setConsentSet] = useState(Boolean(initialConsent));
@@ -128,6 +141,8 @@ const CookieConsent = () => {
       'settings'
     );
   };
+
+  if (!mounted) return null;
 
   return (
     <>

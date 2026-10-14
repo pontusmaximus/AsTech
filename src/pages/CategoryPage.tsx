@@ -187,7 +187,7 @@ const CategoryPage = ({ brand }: { brand: BrandSlug }) => {
   return (
     <>
       <SeoHead
-        overrides={{ title: meta.title, description: meta.description, slug: categoryPath }}
+        overrides={{ title: meta.title, description: meta.description, slug: categoryPath, image: products[0]?.image }}
         buildAlternateSlug={(al) => buildCategoryPath(ref, al)}
         structuredData={[breadcrumbs, productList]}
       />

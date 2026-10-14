@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../App';
-import { buildCanonicalUrl, DEFAULT_LANGUAGE, HREFLANG_DEFAULT, INDEXABLE_LANGUAGES, languageToHreflang, NON_INDEXABLE_LANGUAGES } from '../lib/language';
+import { buildCanonicalUrl, CANONICAL_DOMAIN, DEFAULT_LANGUAGE, HREFLANG_DEFAULT, INDEXABLE_LANGUAGES, languageToHreflang, NON_INDEXABLE_LANGUAGES } from '../lib/language';
 import { DEFAULT_OG_IMAGE, getFallbackMeta, getSlugForLang, isRouteAvailable, SEO_ROUTES } from './routes';
 import { articleSchema, organizationSchema, websiteSchema, localBusinessSchemas } from './structuredData';
 import { CONTENT_DATES } from './generated/contentDates';
@@ -46,7 +46,12 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
   const metaForLang = routeConfig?.meta[lang] ?? getFallbackMeta(lang) ?? getFallbackMeta(DEFAULT_LANGUAGE);
   const title = overrides.title ?? metaForLang.title;
   const description = overrides.description ?? metaForLang.description;
-  const image = overrides.image ?? DEFAULT_OG_IMAGE;
+  // Absolut, wie es Open Graph verlangt — Gebrauchtmaschinen und Gannomat
+  // liefern lokale Pfade. Die Masse 1200x630 gelten nur fuer das eigene
+  // OG-Standardbild; fuer Herstellerbilder sind sie unbekannt und entfallen.
+  const rawImage = overrides.image ?? DEFAULT_OG_IMAGE;
+  const image = rawImage.startsWith('http') ? rawImage : `${CANONICAL_DOMAIN}${rawImage.startsWith('/') ? '' : '/'}${rawImage}`;
+  const isDefaultImage = image === DEFAULT_OG_IMAGE;
   const canonical = buildCanonicalUrl(lang, slug);
   const effectiveRobots = NON_INDEXABLE_LANGUAGES.includes(lang) ? 'noindex,follow' : robots;
 
@@ -120,8 +125,8 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={image} />
       <meta property="og:image:alt" content={title} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      {isDefaultImage && <meta property="og:image:width" content="1200" />}
+      {isDefaultImage && <meta property="og:image:height" content="630" />}
       <meta property="og:locale" content={languageToHreflang(lang)} />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -135,11 +140,10 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
       {/*
         JSON-LD bewusst *ausserhalb* von Helmet.
 
-        Grund: react-helmet-async 3 fuellt unter React 19 mit
-        `renderToPipeableStream` seinen Server-Context nicht — was in Helmet
-        landet, taucht im prerenderten HTML nicht auf. Ausserhalb gerendert
-        steht es im SSR-Output und damit in der ausgelieferten Datei.
-        JSON-LD im Body ist fuer Google gleichwertig zu JSON-LD im Head.
+        Die Helmet-Tags oben zieht React 19 an den Anfang der SSR-Ausgabe,
+        `scripts/prerender.ts` verschiebt sie von dort in den <head>. Ein
+        <script> wuerde React nicht hochziehen — es bleibt hier im Body, was
+        fuer Google gleichwertig zu JSON-LD im Head ist.
       */}
       {schemas.filter(Boolean).map((schema, index) => (
         <script

@@ -12,8 +12,10 @@ import App from './App.tsx'
  * doppelt im Dokument — zwei <title>, zwei Canonicals, zwoelf statt sechs
  * hreflang-Links.
  *
- * `data-rh="true"` setzt ausschliesslich scripts/prerender.ts; Helmet selbst
- * markiert seine Tags unter React 19 nicht mehr so.
+ * `data-rh="true"` setzen scripts/prerender.ts (die aus SeoHead uebernommenen
+ * Head-Tags) und index.html (Platzhalter-Title und -Description fuer Dev-Server
+ * und SPA-Fallback); Helmet selbst markiert seine Tags unter React 19 nicht
+ * mehr so.
  */
 for (const tag of document.head.querySelectorAll('[data-rh="true"]')) {
   tag.remove()
