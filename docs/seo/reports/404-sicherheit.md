@@ -1,8 +1,10 @@
 # 404-Sicherheitsprüfung für Phase 1.1
 
-Erzeugt von `scripts/check-404-safety.ts` · 3304 routerseitig erreichbare Pfade geprüft.
+Erzeugt von `scripts/check-404-safety.ts` · 3369 routerseitig erreichbare Pfade geprüft.
 
 Catch-all-Rewrite in `vercel.json`: **entfernt**
+
+739 URLs aus der Sitemap von `origin/main` mitgeprueft.
 
 **0 Lücken.**
 
@@ -15,3 +17,5 @@ Catch-all-Rewrite in `vercel.json`: **entfernt**
 | produkt-kategorie-variante | 2165 | 465 | 1700 | 0 |
 | kategorieseite-slug-variante | 615 | 135 | 480 | 0 |
 | gebrauchtmaschine-slug-variante | 140 | 35 | 105 | 0 |
+| verkaufte-gebrauchtmaschine | 40 | 0 | 40 | 0 |
+| fruehere-sitemap-url | 25 | 25 | 0 | 0 |

@@ -2,7 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "trailingSlash": false,
   "redirects": [
     {
       "source": "/:l1(de|en|cz|sk|hu)/:l2(de|en|cz|sk|hu)/:l3(de|en|cz|sk|hu)/:rest*",
@@ -25,7 +24,17 @@
       "permanent": true
     },
     {
+      "source": "/finanzierung/",
+      "destination": "https://asamer.cz/cz/financovani",
+      "permanent": true
+    },
+    {
       "source": "/loesungen",
+      "destination": "https://asamer.cz/cz/reseni",
+      "permanent": true
+    },
+    {
+      "source": "/loesungen/",
       "destination": "https://asamer.cz/cz/reseni",
       "permanent": true
     },
@@ -35,17 +44,37 @@
       "permanent": true
     },
     {
+      "source": "/service/",
+      "destination": "https://asamer.cz/cz/servis",
+      "permanent": true
+    },
+    {
       "source": "/impressum",
       "destination": "https://asamer.cz/cz/imprint",
       "permanent": true
     },
     {
+      "source": "/impressum/",
+      "destination": "https://asamer.cz/cz/imprint",
+      "permanent": true
+    },
+    {
       "source": "/products/olepovacky-ott/:slug*",
-      "destination": "https://asamer.cz/cz/ott",
+      "destination": "https://asamer.cz/cz/ott/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/products/olepovacky-ott/:slug*/",
+      "destination": "https://asamer.cz/cz/ott/olepovacky-hran",
       "permanent": true
     },
     {
       "source": "/products/kolikovaci-stroje-gannomat/:slug*",
+      "destination": "https://asamer.cz/cz/gannomat",
+      "permanent": true
+    },
+    {
+      "source": "/products/kolikovaci-stroje-gannomat/:slug*/",
       "destination": "https://asamer.cz/cz/gannomat",
       "permanent": true
     },
@@ -55,7 +84,17 @@
       "permanent": true
     },
     {
+      "source": "/products/korpusove-lisy-gannomat/:slug*/",
+      "destination": "https://asamer.cz/cz/gannomat",
+      "permanent": true
+    },
+    {
       "source": "/products/manipulatory-barbaric/:slug*",
+      "destination": "https://asamer.cz/cz/barbaric",
+      "permanent": true
+    },
+    {
+      "source": "/products/manipulatory-barbaric/:slug*/",
       "destination": "https://asamer.cz/cz/barbaric",
       "permanent": true
     },
@@ -65,7 +104,17 @@
       "permanent": true
     },
     {
+      "source": "/products/pily-schelling/:slug*/",
+      "destination": "https://asamer.cz/cz/ima-schelling",
+      "permanent": true
+    },
+    {
       "source": "/products/tech-uzly-a-linky-ima-schelling/:slug*",
+      "destination": "https://asamer.cz/cz/ima-schelling",
+      "permanent": true
+    },
+    {
+      "source": "/products/tech-uzly-a-linky-ima-schelling/:slug*/",
       "destination": "https://asamer.cz/cz/ima-schelling",
       "permanent": true
     },
@@ -75,7 +124,17 @@
       "permanent": true
     },
     {
+      "source": "/products/pily-altendorf/:slug*/",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
       "source": "/products/pily-streibeg/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/pily-streibeg/:slug*/",
       "destination": "https://asamer.cz/cz/pouzite-stroje",
       "permanent": true
     },
@@ -85,7 +144,17 @@
       "permanent": true
     },
     {
+      "source": "/products/susarny-dreva/:slug*/",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
       "source": "/products/sesivacky-dyh-kuper/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/sesivacky-dyh-kuper/:slug*/",
       "destination": "https://asamer.cz/cz/pouzite-stroje",
       "permanent": true
     },
@@ -95,7 +164,17 @@
       "permanent": true
     },
     {
+      "source": "/products/dyhovaci-lisy-langzauner/:slug*/",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
       "source": "/products/:slug*",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/products/:slug*/",
       "destination": "https://asamer.cz/cz/pouzite-stroje",
       "permanent": true
     },
@@ -105,7 +184,17 @@
       "permanent": true
     },
     {
+      "source": "/second-hand/:slug*/",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
       "source": "/servis/:slug*",
+      "destination": "https://asamer.cz/cz/servis",
+      "permanent": true
+    },
+    {
+      "source": "/servis/:slug*/",
       "destination": "https://asamer.cz/cz/servis",
       "permanent": true
     },
@@ -115,12 +204,37 @@
       "permanent": true
     },
     {
+      "source": "/about/:slug*/",
+      "destination": "https://asamer.cz/cz/kontakt",
+      "permanent": true
+    },
+    {
       "source": "/xylexpo-2024/:slug*",
       "destination": "https://asamer.cz/cz",
       "permanent": true
     },
     {
+      "source": "/xylexpo-2024/:slug*/",
+      "destination": "https://asamer.cz/cz",
+      "permanent": true
+    },
+    {
       "source": "/ligna-2024/:slug*",
+      "destination": "https://asamer.cz/cz",
+      "permanent": true
+    },
+    {
+      "source": "/ligna-2024/:slug*/",
+      "destination": "https://asamer.cz/cz",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "destination": "https://asamer.cz/cz",
+      "permanent": true
+    },
+    {
+      "source": "/index.php/",
       "destination": "https://asamer.cz/cz",
       "permanent": true
     },
@@ -2945,6 +3059,106 @@
       "permanent": true
     },
     {
+      "source": "/de/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/holz-her-1308xl-power",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen/kantenanleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/holz-her-1308xl-power/",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen/kantenanleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/en/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/holz-her-1308xl-power",
+      "destination": "https://asamer.cz/en/used-machines/edgebanding-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/holz-her-1308xl-power/",
+      "destination": "https://asamer.cz/en/used-machines/edgebanding-machines",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/holz-her-1308xl-power",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/holz-her-1308xl-power/",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/holz-her-1308xl-power",
+      "destination": "https://asamer.cz/sk/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/holz-her-1308xl-power/",
+      "destination": "https://asamer.cz/sk/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/holz-her-1308xl-power",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek/elzarogepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/holz-her-1308xl-power/",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek/elzarogepek",
+      "permanent": true
+    },
+    {
+      "source": "/de/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/scm-stefani-solution-md",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen/kantenanleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/scm-stefani-solution-md/",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen/kantenanleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/en/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/scm-stefani-solution-md",
+      "destination": "https://asamer.cz/en/used-machines/edgebanding-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/scm-stefani-solution-md/",
+      "destination": "https://asamer.cz/en/used-machines/edgebanding-machines",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/scm-stefani-solution-md",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/scm-stefani-solution-md/",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/scm-stefani-solution-md",
+      "destination": "https://asamer.cz/sk/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/scm-stefani-solution-md/",
+      "destination": "https://asamer.cz/sk/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/scm-stefani-solution-md",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek/elzarogepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/scm-stefani-solution-md/",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek/elzarogepek",
+      "permanent": true
+    },
+    {
       "source": "/de/:wrong(used-machines|pouzite-stroje|hasznalt-gepek)/:slug",
       "destination": "https://asamer.cz/de/gebrauchtmaschinen/:slug",
       "permanent": true
@@ -2978,6 +3192,11 @@
         }
       ],
       "destination": "https://asamer.cz/:path",
+      "permanent": true
+    },
+    {
+      "source": "/:path(.*)/",
+      "destination": "/:path",
       "permanent": true
     }
   ]

@@ -5,7 +5,10 @@
     "NICHT hierher gehoeren: Sprach-Slug-Varianten, Kategorie-Slug-Varianten, doppelte Sprachpraefixe und",
     "sprachlose Legacy-Slugs — die erzeugt scripts/generate-vercel-config.ts aus src/lib/slugs.ts und den",
     "Produktdaten, damit sie nicht auseinanderlaufen koennen.",
-    "Reihenfolge zaehlt: Vercel nimmt die erste passende Regel. Host-Regeln (:path(.*)) stehen deshalb zuletzt."
+    "Reihenfolge zaehlt: Vercel nimmt die erste passende Regel. Host-Regeln (:path(.*)) stehen deshalb zuletzt.",
+    "Abschliessender Schraegstrich: jede Regel hier bekommt in generate-vercel-config.ts automatisch einen Zwilling",
+    "mit `/` am Ende (eine Weiterleitung statt zwei). Nicht von Hand doppeln.",
+    "Verkaufte Gebrauchtmaschinen gehoeren NICHT hierher, sondern nach src/data/usedMachines.ts → RETIRED_USED_MACHINES."
   ],
   "redirects": [
     {
@@ -30,7 +33,7 @@
     },
     {
       "source": "/products/olepovacky-ott/:slug*",
-      "destination": "https://asamer.cz/cz/ott",
+      "destination": "https://asamer.cz/cz/ott/olepovacky-hran",
       "permanent": true
     },
     {
@@ -110,6 +113,11 @@
     },
     {
       "source": "/ligna-2024/:slug*",
+      "destination": "https://asamer.cz/cz",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
       "destination": "https://asamer.cz/cz",
       "permanent": true
     },

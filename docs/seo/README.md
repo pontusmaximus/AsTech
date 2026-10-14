@@ -61,13 +61,36 @@ npm run seo:404-safety           # 2.669 routerseitig erreichbare Pfade, 0 Lück
 npm run seo:i18n                 # Übersetzungslücken SK/HU
 npm run seo:gsc                  # Search-Console-Wochenreport (braucht Service-Account)
 npm run generate:vercel          # vercel.json aus config/redirects.manual.json + Slug-Daten
+npm run seo:redirect-hops        # Weiterleitungsketten offline prüfen (wie curl -sIL)
 ```
+
+## Gebrauchtmaschine verkauft — was tun?
+
+Feste Regel seit Oktober 2026: eine entfernte Gebrauchtmaschine liefert nie eine 404, sondern eine
+301 auf die Gebrauchtmaschinen-Seite ihrer Gattung (Kantenanleimer → `/…/pouzite-stroje/olepovacky-hran`,
+alles andere → `/…/pouzite-stroje`).
+
+1. Eintrag in `src/data/usedMachines.ts` aus `USED_MACHINES` löschen.
+2. Slug und `category` in `RETIRED_USED_MACHINES` (gleiche Datei) eintragen.
+3. `npm run generate:vercel` und `vercel.json` mitcommitten.
+
+Wer Schritt 2 vergisst, scheitert in CI an `npm run seo:404-safety -- --fail`: jede URL aus der
+Sitemap von `origin/main`, die weder Datei noch Weiterleitung hat, ist dort eine Lücke.
+Einmalige Altlasten von Fremd-URLs (WordPress, Messen) gehören weiter nach
+`config/redirects.manual.json`; der Schrägstrich-Zwilling jeder Regel entsteht automatisch.
+
+`npm run seo:redirect-hops` simuliert `curl -sIL` gegen `vercel.json` und `dist/` (eine
+Weiterleitung, dann 200). Was die Simulation nicht sieht: die Vercel-Firewall und
+Domain-Weiterleitungen.
 
 ## Offene Aufgaben für Max
 
 Gesammelt aus allen Phasen — nichts davon lässt sich aus dem Repo erledigen.
 
 **Vercel**
+- Firewall: `/index.php` antwortet mit 403 (`x-vercel-mitigated: deny`), bevor die neue
+  301-Regel auf `/cz` greifen kann — Ausnahme für genau diesen Pfad in der Firewall-Regel setzen,
+  die `.php` blockt
 - *Protection Bypass for Automation* aktivieren und das Secret als
   `VERCEL_AUTOMATION_BYPASS_SECRET` im Repository hinterlegen — sonst überspringt der
   Preview-Audit jeden PR, weil Deployment Protection mit 302 antwortet
