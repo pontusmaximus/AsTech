@@ -66,6 +66,18 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Der Vercel-Build klont flach und datiert <lastmod> deshalb aus dem
+      # committeten Snapshot. Fehlt dort eine Inhaltsaenderung, bekaeme die Seite
+      # bei jedem Deploy das Datum des HEAD-Commits — also wieder ein wanderndes
+      # Build-Datum. Siehe scripts/content-lastmod.ts.
+      - name: Lastmod-Snapshot ist aktuell
+        run: |
+          if ! git diff --quiet -- config/content-lastmod.json; then
+            git --no-pager diff --stat -- config/content-lastmod.json
+            echo "::error::config/content-lastmod.json ist nicht aktuell — lokal 'npm run build' ausfuehren und die Datei mitcommitten."
+            exit 1
+          fi
+
       - name: Keine erreichbare Route wird zur 404
         run: npm run seo:404-safety -- --fail
 

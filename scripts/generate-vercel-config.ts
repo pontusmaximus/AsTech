@@ -428,6 +428,16 @@ const config = {
    * Die Abdeckung wird von `scripts/check-404-safety.ts` nachgewiesen.
    */
   redirects: rules,
+  /**
+   * llms.txt ausdruecklich als UTF-8-Text (scripts/generate-llms-txt.ts). Ohne
+   * charset raten manche Clients Latin-1, und „Použité" kommt verstuemmelt an.
+   */
+  headers: [
+    {
+      source: '/llms.txt',
+      headers: [{ key: 'Content-Type', value: 'text/plain; charset=utf-8' }],
+    },
+  ],
 };
 
 const outPath = join(repoRoot, 'vercel.json');

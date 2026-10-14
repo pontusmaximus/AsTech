@@ -78,6 +78,16 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
   if (routeKey === 'home') schemas.push(organizationSchema(), websiteSchema(), ...localBusinessSchemas());
   if (routeKey === 'contact') schemas.push(...localBusinessSchemas());
 
+  // Start- und Kontaktseite reichen dieselben Entitaeten zusaetzlich selbst
+  // herein — ohne diesen Filter stand jede LocalBusiness doppelt im HTML.
+  const seen = new Set<string>();
+  const uniqueSchemas = schemas.filter(Boolean).filter((schema) => {
+    const id = typeof schema['@id'] === 'string' ? schema['@id'] : JSON.stringify(schema);
+    if (seen.has(id)) return false;
+    seen.add(id);
+    return true;
+  });
+
   return (
     <>
     <Helmet prioritizeSeoTags>
@@ -145,7 +155,7 @@ const SeoHead = ({ routeKey, overrides = {}, buildAlternateSlug, ogType = 'websi
         <script> wuerde React nicht hochziehen — es bleibt hier im Body, was
         fuer Google gleichwertig zu JSON-LD im Head ist.
       */}
-      {schemas.filter(Boolean).map((schema, index) => (
+      {uniqueSchemas.map((schema, index) => (
         <script
           key={`ld-${index}`}
           type="application/ld+json"

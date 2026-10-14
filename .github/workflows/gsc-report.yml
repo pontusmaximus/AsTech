@@ -11,8 +11,8 @@
 # nicht monatelang unbemerkt bleibt.
 #
 # Ausdrücklich NICHT verwendet: die Indexing API. Sie ist offiziell nur für
-# JobPosting und BroadcastEvent freigegeben. Und IndexNow ist ein Bing-Protokoll,
-# das Google nicht unterstützt.
+# JobPosting und BroadcastEvent freigegeben. IndexNow unterstützt Google nicht;
+# es läuft getrennt davon für Bing, Seznam und Yandex (indexnow.yml).
 
 name: Search-Console-Report
 

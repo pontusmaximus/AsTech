@@ -4,6 +4,13 @@ import organizationProfiles from '../../config/organization-profiles.json';
 const LOGO_URL = `${CANONICAL_DOMAIN}/brand/png/horizontal/asamer-logo-horizontal.png`;
 const ORG_ID = `${CANONICAL_DOMAIN}/#organization`;
 
+/** CZ, SK und HU — die Maerkte, fuer die Asamer Vertriebspartner ist. */
+const CORE_MARKETS = [
+  { '@type': 'Country', name: 'Czech Republic', sameAs: 'https://en.wikipedia.org/wiki/Czech_Republic' },
+  { '@type': 'Country', name: 'Slovakia', sameAs: 'https://en.wikipedia.org/wiki/Slovakia' },
+  { '@type': 'Country', name: 'Hungary', sameAs: 'https://en.wikipedia.org/wiki/Hungary' },
+];
+
 export const organizationSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -19,6 +26,7 @@ export const organizationSchema = () => ({
    * Gepflegt in `config/organization-profiles.json` — dort steht auch, welche
    * Profile noch fehlen. Bewusst ausgelagert, damit eine gepruefte URL ohne
    * Code-Aenderung nachgetragen werden kann.
+   * TODO(Max): Firmenbuch und Haendlerprofile der Hersteller nachtragen (Liste in der JSON-Datei).
    */
   sameAs: organizationProfiles.sameAs,
   /**
@@ -41,11 +49,7 @@ export const organizationSchema = () => ({
     postalCode: '4650',
     addressCountry: 'AT',
   },
-  areaServed: [
-    { '@type': 'Country', name: 'Czech Republic', sameAs: 'https://en.wikipedia.org/wiki/Czech_Republic' },
-    { '@type': 'Country', name: 'Slovakia', sameAs: 'https://en.wikipedia.org/wiki/Slovakia' },
-    { '@type': 'Country', name: 'Hungary', sameAs: 'https://en.wikipedia.org/wiki/Hungary' },
-  ],
+  areaServed: CORE_MARKETS,
   brand: [
     { '@type': 'Brand', name: 'OTT' },
     { '@type': 'Brand', name: 'Mayer' },
@@ -82,6 +86,9 @@ export const organizationSchema = () => ({
   ],
 });
 
+/** `sameAs` nur ausgeben, wenn es mindestens eine gepruefte URL gibt. */
+const sameAsOf = (urls: string[] | undefined) => (urls && urls.length > 0 ? { sameAs: urls } : {});
+
 export const localBusinessSchemas = () => [
   {
     '@context': 'https://schema.org',
@@ -108,10 +115,15 @@ export const localBusinessSchemas = () => [
       opens: '08:00',
       closes: '17:00',
     },
+    // CZ, SK, HU wie beim Vertriebs-Kontaktpunkt der Organization (Telefon AT);
+    // AT und DE standen hier schon vorher.
     areaServed: [
+      ...CORE_MARKETS,
       { '@type': 'Country', name: 'Austria' },
       { '@type': 'Country', name: 'Germany' },
     ],
+    // TODO(Max): Google-Unternehmensprofil Lambach — config/organization-profiles.json → localBusiness.lambach
+    ...sameAsOf(organizationProfiles.localBusiness?.lambach),
   },
   {
     '@context': 'https://schema.org',
@@ -147,11 +159,9 @@ export const localBusinessSchemas = () => [
       opens: '08:00',
       closes: '17:00',
     },
-    areaServed: [
-      { '@type': 'Country', name: 'Czech Republic' },
-      { '@type': 'Country', name: 'Slovakia' },
-      { '@type': 'Country', name: 'Hungary' },
-    ],
+    areaServed: CORE_MARKETS,
+    // TODO(Max): ARES/justice.cz und Google-Unternehmensprofil Brno — config/organization-profiles.json → localBusiness.brno
+    ...sameAsOf(organizationProfiles.localBusiness?.brno),
   },
 ];
 

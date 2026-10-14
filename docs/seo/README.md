@@ -64,6 +64,15 @@ npm run generate:vercel          # vercel.json aus config/redirects.manual.json 
 npm run seo:redirect-hops        # Weiterleitungsketten offline prüfen (wie curl -sIL)
 ```
 
+## KI-Lesbarkeit und Auffindbarkeit (Oktober 2026)
+
+| Baustein | Wo | Was |
+|---|---|---|
+| `/llms.txt` | `scripts/generate-llms-txt.ts` → `public/llms.txt` | Firmenabsatz (vertretene Marken, CZ/SK/HU) und Links auf Marken-Hubs, Kategorien, Ratgeber, Kontakt. Wird bei jedem Build aus den Daten erzeugt; `text/plain; charset=utf-8` per Header in `vercel.json`. |
+| `<lastmod>` | `scripts/content-lastmod.ts`, Snapshot `config/content-lastmod.json` | Datum der letzten Inhaltsänderung je Seite über einen Fingerprint (Daten-JSON + Seitenkomponenten). Unabhängig von Vercels flachem Klon; eine Änderung an einer Route in `routes.ts` datiert nur diese Route neu. CI prüft, dass der Snapshot committet ist. |
+| IndexNow | `scripts/indexnow.ts`, `.github/workflows/indexnow.yml`, Schlüssel `config/indexnow.json` + `public/<key>.txt` | Nach jedem erfolgreichen Produktions-Deploy: Sitemap-Diff zum vorherigen Produktions-Deploy an api.indexnow.org (Bing, Seznam, Yandex). Trockenlauf: `npm run seo:indexnow -- --from main --to HEAD`. |
+| HTML-Reihenfolge | `src/entry-server.tsx`, `scripts/prerender.ts` | `<main>` mit H1 direkt nach der Navigation, kein Cookie-Banner im HTML, Head-Tags genau einmal — Build bricht sonst ab. |
+
 ## Gebrauchtmaschine verkauft — was tun?
 
 Feste Regel seit Oktober 2026: eine entfernte Gebrauchtmaschine liefert nie eine 404, sondern eine

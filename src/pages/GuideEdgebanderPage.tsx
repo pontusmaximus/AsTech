@@ -49,8 +49,8 @@ const GuideEdgebanderPage = () => {
 
   const breadcrumbs = breadcrumbSchema([
     { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
-    { name: tr('Ratgeber', 'Guides', 'Průvodce'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
-    { name: tr('Kantenanleimmaschine kaufen', 'Buy edgebander', 'Olepovačka hran – výběr'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildPath('/ratgeber/kantenanleimmaschine-waehlen'))}` },
+    { name: tr('Ratgeber', 'Guides', 'Průvodce'), url: `${CANONICAL_DOMAIN}${buildPath('/faq')}` },
+    { name: tr('Kantenanleimmaschine kaufen', 'Buy edgebander', 'Olepovačka hran – výběr'), url: `${CANONICAL_DOMAIN}${buildPath('/ratgeber/kantenanleimmaschine-waehlen')}` },
   ]);
   const faqLd = faqPageSchema(EDGEBANDER_GUIDE.faq.map((f) => ({
     question: mlGuide(f.question, lang),

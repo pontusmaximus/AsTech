@@ -3,7 +3,21 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SEO_ROUTES, getSlugForLang, isRouteAvailable } from '../src/seo/routes';
 import type { SeoRouteKey } from '../src/seo/routes';
-import { buildLastmodTable, staticKey, productKey, usedMachineKey } from './content-lastmod';
+import {
+  buildLastmodTable,
+  staticKey,
+  productKey,
+  categoryKey,
+  usedMachineKey,
+  STATIC_SOURCES,
+  PRODUCT_TEMPLATES,
+  BRAND_DATA,
+  CATEGORY_TEMPLATE,
+  CATEGORY_DATA,
+  USED_MACHINE_TEMPLATE,
+  USED_MACHINE_DATA,
+} from './content-lastmod';
+import type { LastmodItem } from './content-lastmod';
 import {
   buildLocalizedPath,
   CANONICAL_DOMAIN,
@@ -19,6 +33,12 @@ import { GANNOMAT_PRODUCTS, buildGannomatProductPath } from '../src/data/gannoma
 import { USED_MACHINES } from '../src/data/usedMachines';
 import { localizeSlug } from '../src/lib/slugs';
 import { ALL_CATEGORY_REFS, buildCategoryPath, getBrandCatalog } from '../src/data/brandCatalogs';
+import { getCategoryMeta, getCategoryHeading, getCategoryLead, getCategoryEyebrow } from '../src/seo/categoryMeta';
+import { OTT_PRODUCT_SEO } from '../src/data/seo/ottSeoContent';
+import { MAYER_PRODUCT_SEO } from '../src/data/seo/mayerSeoContent';
+import { BARBARIC_PRODUCT_SEO } from '../src/data/seo/barbaricSeoContent';
+import { GANNOMAT_PRODUCT_SEO } from '../src/data/seo/gannomatSeoContent';
+import { OTT_EDGEBANDING_ABS } from '../src/data/seo/ottEdgebandingAbs';
 import type { Language } from '../src/i18n';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -28,19 +48,61 @@ const sitemapPath = join(publicDir, 'sitemap.xml');
 
 /**
  * Echtes Aenderungsdatum je Seite statt Build-Zeitstempel (Masterplan 1.5).
- * Ein `lastmod`, das fuer alle 605 URLs gleich ist und sich bei jedem Deploy
- * aendert, wertet Google nicht aus.
+ * Je Seite ein Fingerprint aus ihren eigenen Daten und Seitenkomponenten —
+ * Einzelheiten in scripts/content-lastmod.ts.
  */
-const lastmod = buildLastmodTable({
-  routeKeys: Object.keys(SEO_ROUTES) as SeoRouteKey[],
-  products: [
-    ...OTT_PRODUCTS.map((p) => ({ brand: 'ott', slug: p.slug })),
-    ...MAYER_PRODUCTS.map((p) => ({ brand: 'mayer', slug: p.slug })),
-    ...BARBARIC_PRODUCTS.map((p) => ({ brand: 'barbaric', slug: p.slug })),
-    ...GANNOMAT_PRODUCTS.map((p) => ({ brand: 'gannomat', slug: p.slug })),
-  ],
-  usedMachineSlugs: USED_MACHINES.map((m) => m.slug),
-});
+const json = (value: unknown) => JSON.stringify(value);
+
+const productCatalogs = [
+  { brand: 'ott', products: OTT_PRODUCTS, seo: OTT_PRODUCT_SEO as Record<string, unknown> },
+  { brand: 'mayer', products: MAYER_PRODUCTS, seo: MAYER_PRODUCT_SEO as Record<string, unknown> },
+  { brand: 'barbaric', products: BARBARIC_PRODUCTS, seo: BARBARIC_PRODUCT_SEO as Record<string, unknown> },
+  { brand: 'gannomat', products: GANNOMAT_PRODUCTS, seo: GANNOMAT_PRODUCT_SEO as Record<string, unknown> },
+];
+
+const lastmodItems: LastmodItem[] = [
+  ...(Object.keys(SEO_ROUTES) as SeoRouteKey[]).map((key) => ({
+    key: staticKey(key),
+    material: json(SEO_ROUTES[key]),
+    files: STATIC_SOURCES[key],
+    routeKey: key,
+  })),
+  ...ALL_CATEGORY_REFS.map((ref) => {
+    const catalog = getBrandCatalog(ref.brand);
+    return {
+      key: categoryKey(ref.brand, ref.category),
+      material: json({
+        products: catalog.productsIn(ref.category),
+        seo: catalog.categorySeo(ref.category),
+        meta: INDEXABLE_LANGUAGES.map((l) => [
+          getCategoryMeta(ref, l),
+          getCategoryHeading(ref, l),
+          getCategoryLead(ref, l),
+          getCategoryEyebrow(ref, l),
+        ]),
+        abs: ref.brand === 'ott' && ref.category === 'edgebanding' ? OTT_EDGEBANDING_ABS : undefined,
+      }),
+      files: CATEGORY_TEMPLATE,
+      dataFiles: [...BRAND_DATA[ref.brand], ...CATEGORY_DATA],
+    };
+  }),
+  ...productCatalogs.flatMap(({ brand, products, seo }) =>
+    products.map((p) => ({
+      key: productKey(brand, p.slug),
+      material: json({ product: p, seo: seo[p.slug] }),
+      files: [PRODUCT_TEMPLATES[brand]],
+      dataFiles: BRAND_DATA[brand],
+    })),
+  ),
+  ...USED_MACHINES.map((m) => ({
+    key: usedMachineKey(m.slug),
+    material: json(m),
+    files: USED_MACHINE_TEMPLATE,
+    dataFiles: USED_MACHINE_DATA,
+  })),
+];
+
+const lastmod = buildLastmodTable(lastmodItems);
 
 /** Rueckfallwert, falls fuer eine Seite kein Datum ermittelbar war. */
 const FALLBACK_LASTMOD = new Date().toISOString();
@@ -81,12 +143,8 @@ Object.entries(SEO_ROUTES).forEach(([routeKey, config]) => {
 
 // Kategorieseiten je Marke
 ALL_CATEGORY_REFS.forEach((ref) => {
-  const productDates = getBrandCatalog(ref.brand)
-    .productsIn(ref.category)
-    .map((p) => lastmod.get(productKey(ref.brand, p.slug)))
-    .filter((d): d is string => Boolean(d));
-  const categoryLastmod =
-    productDates.length > 0 ? productDates.sort().at(-1)! : lastmod.get(staticKey(ref.brand as SeoRouteKey));
+  // Eigener Fingerprint: Produkte der Kategorie, Kategorietexte und -metadaten.
+  const categoryLastmod = lastmod.get(categoryKey(ref.brand, ref.category));
   INDEXABLE_LANGUAGES.forEach((lang) => {
     const alternates = INDEXABLE_LANGUAGES.map((altLang) => ({
       lang: altLang,
@@ -96,8 +154,6 @@ ALL_CATEGORY_REFS.forEach((ref) => {
       lang,
       url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildCategoryPath(ref, lang))}`,
       canonicalSlug: `/${ref.brand}/${ref.category}`,
-      // Eine Kategorieseite aendert sich, wenn sich ihre Produkte aendern —
-      // deshalb das juengste Produktdatum der Kategorie, nicht das der Marke.
       lastmod: categoryLastmod,
       alternates,
       defaultUrl: `${CANONICAL_DOMAIN}${buildLocalizedPath(HREFLANG_DEFAULT, buildCategoryPath(ref, HREFLANG_DEFAULT))}`,
@@ -249,7 +305,8 @@ writeFileSync(sitemapPath, xml.trim() + '\n', 'utf8');
 
 console.log(
   `Sitemap generated with ${entries.length} entries at ${sitemapPath} ` +
-    `(lastmod aus ${lastmod.source}, ${lastmod.distinctDates} unterschiedliche Datumswerte)`,
+    `(${lastmod.changed.length} Seiten mit geaendertem Inhalt, datiert per ${lastmod.dating}; ` +
+    `${lastmod.distinctDates} unterschiedliche Datumswerte)`,
 );
 const undated = entries.filter((e) => !e.lastmod).length;
 if (undated > 0) {

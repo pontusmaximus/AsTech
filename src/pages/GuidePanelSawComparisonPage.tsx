@@ -161,10 +161,10 @@ const GuidePanelSawComparisonPage = () => {
           faqPageSchema(faqEntries),
           breadcrumbSchema([
             { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
-            { name: tr('Ratgeber', 'Guides', 'Průvodce'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+            { name: tr('Ratgeber', 'Guides', 'Průvodce'), url: `${CANONICAL_DOMAIN}${buildPath('/faq')}` },
             {
               name: tr('Formatsäge Alu vs Holz', 'Panel saw aluminium vs wood', 'Formátovací pila hliník vs dřevo'),
-              url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildPath('/ratgeber/formatsaege-aluminium-vs-holz'))}`,
+              url: `${CANONICAL_DOMAIN}${buildPath('/ratgeber/formatsaege-aluminium-vs-holz')}`,
             },
           ]),
         ]}
