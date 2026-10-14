@@ -970,6 +970,10 @@ export const pageSkTranslations: Record<string, string> = {
   "Škálovatelné pro pozdější kroky automatizace": "Škálovateľné pre neskoršie kroky automatizácie",
   "Žádná": "Žiadna",
   "✓ = Standard · – = Volitelně · ✕ = nedostupné. Všechny údaje bez záruky.": "✓ = štandard · – = voliteľne · ✕ = nedostupné. Všetky údaje bez záruky.",
+  "Všeobecné prodejní a dodací podmínky společnosti Asamer Technologie GmbH, A-4650 Lambach, pro všechny nabídky, dodávky a služby.": "Všeobecné predajné a dodacie podmienky spoločnosti Asamer Technologie GmbH, A-4650 Lambach, pre všetky ponuky, dodávky a služby.",
+  "Znění ze dne": "Znenie zo dňa",
+  "Stáhnout PDF": "Stiahnuť PDF",
+  "Tyto podmínky jsou k dispozici pouze v němčině. Právně závazné je německé znění — smluvním jazykem je němčina.": "Tieto podmienky sú k dispozícii iba v nemčine. Právne záväzné je nemecké znenie — zmluvným jazykom je nemčina.",
 };
 
 export const pageHuTranslations: Record<string, string> = {
@@ -1939,6 +1943,10 @@ export const pageHuTranslations: Record<string, string> = {
   "Your Rights": "Az Ön jogai",
   "Zero-joint technology": "Nullfugás technológia",
   "✓ = Standard · – = Option · ✕ = not available. All specifications without guarantee.": "✓ = alapfelszereltség · – = opció · ✕ = nem elérhető. Minden adat tájékoztató jellegű.",
+  "General terms of sale and delivery of Asamer Technologie GmbH, A-4650 Lambach, for all offers, deliveries and services.": "Az Asamer Technologie GmbH (A-4650 Lambach) általános értékesítési és szállítási feltételei minden ajánlatra, szállításra és szolgáltatásra.",
+  "Version dated": "Változat dátuma:",
+  "Download PDF": "PDF letöltése",
+  "These terms are only available in German. The German version is legally binding — the contract language is German.": "Ezek a feltételek csak német nyelven érhetők el. A német nyelvű változat jogilag kötelező érvényű — a szerződés nyelve a német.",
 };
 
 /**

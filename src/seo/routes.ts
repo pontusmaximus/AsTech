@@ -573,31 +573,31 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       de: {
         title: 'AGB – Allgemeine Geschäftsbedingungen | Asamer Technologie',
         description:
-          'Allgemeine Geschäftsbedingungen der Asamer Technologie GmbH und ASAMER s.r.o. für den Verkauf, die Installation und den Service industrieller Maschinen.',
-        keywords: ['AGB', 'Geschäftsbedingungen', 'Asamer', 'Vertragsbedingungen'],
+          'Verkaufs- und Lieferbedingungen der Asamer Technologie GmbH, Lambach: Angebote, Lieferzeit, Zahlung, Eigentumsvorbehalt, Gewährleistung, Haftung, Gerichtsstand.',
+        keywords: ['AGB', 'Geschäftsbedingungen', 'Verkaufsbedingungen', 'Lieferbedingungen', 'Asamer'],
       },
       en: {
         title: 'Terms & Conditions | Asamer Technology',
         description:
-          'General terms and conditions of Asamer Technologie GmbH and ASAMER s.r.o. for the sale, installation and service of industrial machinery.',
+          'Terms of sale and delivery of Asamer Technologie GmbH, Lambach: offers, delivery times, payment, retention of title, warranty, liability and jurisdiction.',
         keywords: ['Terms', 'Conditions', 'Asamer', 'Legal'],
       },
       cz: {
         title: 'Obchodní podmínky | Asamer Technologie',
         description:
-          'Obchodní podmínky společností Asamer Technologie GmbH a ASAMER s.r.o. pro prodej, instalaci a servis průmyslových strojů.',
+          'Prodejní a dodací podmínky Asamer Technologie GmbH, Lambach: nabídky, dodací lhůty, platby, výhrada vlastnictví, záruka, odpovědnost a příslušnost soudu.',
         keywords: ['Obchodní podmínky', 'Asamer', 'Smluvní podmínky'],
       },
       sk: {
         title: 'Obchodné podmienky | Asamer Technologie',
         description:
-          'Obchodné podmienky spoločností Asamer Technologie GmbH a ASAMER s.r.o. pre predaj, inštaláciu a servis priemyselných strojov.',
+          'Predajné a dodacie podmienky Asamer Technologie GmbH, Lambach: ponuky, dodacie lehoty, platby, výhrada vlastníctva, záruka, zodpovednosť a súdna príslušnosť.',
         keywords: ['Obchodné podmienky', 'Asamer', 'Zmluvné podmienky'],
       },
       hu: {
         title: 'Általános szerződési feltételek | Asamer Technologie',
         description:
-          'Az Asamer Technologie GmbH és az ASAMER s.r.o. általános szerződési feltételei ipari gépek értékesítéséhez, telepítéséhez és szervizéhez.',
+          'Az Asamer Technologie GmbH értékesítési és szállítási feltételei: ajánlatok, szállítási határidők, fizetés, tulajdonjog-fenntartás, szavatosság, felelősség.',
         keywords: ['ÁSZF', 'Szerződési feltételek', 'Asamer'],
       },
     }),
