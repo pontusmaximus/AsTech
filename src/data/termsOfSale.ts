@@ -1,6 +1,8 @@
 /**
- * Verkaufs- und Lieferbedingungen der Asamer Technologie GmbH, Fassung vom 15.03.2019
- * (Quelle: "AGBs OGS 2019 deutsch.pdf", liegt unter public/downloads/).
+ * Verkaufs- und Lieferbedingungen der Asamer Technologie GmbH, Fassung vom 01.07.2023.
+ * Basis ist die Fassung vom 15.03.2019 ("AGBs OGS 2019 deutsch.pdf"); Ziffer 7 b) ist an die
+ * tschechische Fassung „Podmínky prodeje a dodání" vom 1. 7. 2023 angeglichen (2/3 bei
+ * Versandbereitschaft statt 1/3 + Rest nach einem Monat). Beide PDFs liegen unter public/downloads/.
  *
  * Rechtsverbindlich ist ausschließlich der deutsche Wortlaut (Ziffer 13: Vertragssprache
  * Deutsch) — er ist 1:1 aus dem PDF übernommen, alte Rechtschreibung inklusive.
@@ -22,8 +24,13 @@ export type TermsSection = {
   clauses: TermsClause[];
 };
 
-export const TERMS_VERSION_DATE = '15.03.2019';
-export const TERMS_PDF_PATH = '/downloads/asamer-verkaufs-und-lieferbedingungen-2019.pdf';
+export const TERMS_VERSION_DATE = '01.07.2023';
+
+/** Verbindliche deutsche Fassung und tschechische Fassung als PDF. */
+export const TERMS_PDF_PATHS: Partial<Record<TermsVersion, string>> = {
+  de: '/downloads/asamer-verkaufs-und-lieferbedingungen-2023.pdf',
+  cz: '/downloads/asamer-podminky-prodeje-a-dodani-2023.pdf',
+};
 
 const t = (de: string, en: string, cz: string): TermsText => ({ de, en, cz });
 
@@ -258,9 +265,9 @@ export const TERMS_OF_SALE: TermsSection[] = [
         label: 'b)',
         paragraphs: [
           t(
-            'Mangels besonderer Vereinbarung ist die Zahlung bar ohne jeden Abzug frei Zahlstelle des Lieferers zu leisten und zwar\n1/3 Anzahlung nach Eingang der Auftragsbestätigung,\n1/3 sobald dem Besteller mitgeteilt ist, daß die Hauptteile versandbereit sind, der Restbetrag innerhalb eines weiteren Monats.',
-            'Unless otherwise specifically agreed, payment shall be made in cash without any deduction, free to the Supplier’s paying office, as follows:\n1/3 down payment upon receipt of the order confirmation,\n1/3 as soon as the Purchaser has been notified that the main parts are ready for dispatch, the remaining balance within a further month.',
-            'Není-li zvlášť sjednáno jinak, je platba splatná v hotovosti bez jakýchkoli srážek na platební místo dodavatele, a to:\n1/3 jako záloha po obdržení potvrzení objednávky,\n1/3 jakmile bylo objednateli oznámeno, že hlavní díly jsou připraveny k expedici, zbývající částka během dalšího měsíce.',
+            'Mangels besonderer Vereinbarung ist die Zahlung bar ohne jeden Abzug frei Zahlstelle des Lieferers zu leisten und zwar\n1/3 Anzahlung nach Eingang der Auftragsbestätigung,\n2/3 sofort, sobald dem Besteller mitgeteilt ist, daß die Hauptteile versandbereit sind.',
+            'Unless otherwise specifically agreed, payment shall be made in cash without any deduction, free to the Supplier’s paying office, as follows:\n1/3 down payment upon receipt of the order confirmation,\n2/3 immediately as soon as the Purchaser has been notified that the main parts are ready for dispatch.',
+            'Není-li zvlášť sjednáno jinak, je platba splatná v hotovosti bez jakýchkoli srážek na platební místo dodavatele, a to:\n1/3 jako záloha po obdržení potvrzení objednávky,\n2/3 ihned, jakmile bylo objednateli oznámeno, že hlavní díly jsou připraveny k expedici.',
           ),
         ],
       },

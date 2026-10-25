@@ -239,6 +239,16 @@
       "permanent": true
     },
     {
+      "source": "/downloads/asamer-verkaufs-und-lieferbedingungen-2019.pdf",
+      "destination": "https://asamer.cz/downloads/asamer-verkaufs-und-lieferbedingungen-2023.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/downloads/asamer-verkaufs-und-lieferbedingungen-2019.pdf/",
+      "destination": "https://asamer.cz/downloads/asamer-verkaufs-und-lieferbedingungen-2023.pdf",
+      "permanent": true
+    },
+    {
       "source": "/adatvedelem",
       "destination": "https://asamer.cz/cz/ochrana-osobnich-udaju",
       "permanent": true

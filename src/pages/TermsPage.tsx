@@ -6,7 +6,7 @@ import SeoHead from '../seo/SeoHead';
 import { organizationSchema } from '../seo/structuredData';
 import {
   TERMS_OF_SALE,
-  TERMS_PDF_PATH,
+  TERMS_PDF_PATHS,
   TERMS_VERSION_DATE,
   type TermsVersion,
 } from '../data/termsOfSale';
@@ -16,6 +16,12 @@ const VERSION_OPTIONS: { version: TermsVersion; label: string; htmlLang: string 
   { version: 'en', label: 'English', htmlLang: 'en' },
   { version: 'cz', label: 'Čeština', htmlLang: 'cs' },
 ];
+
+// PDF-Downloads in der Reihenfolge des Sprachumschalters, nur für Fassungen mit PDF.
+const PDF_DOWNLOADS = VERSION_OPTIONS.flatMap((option) => {
+  const href = TERMS_PDF_PATHS[option.version];
+  return href ? [{ ...option, href }] : [];
+});
 
 // SK liest die tschechische, HU die englische Lesefassung (gleiche Fallbacks wie bei translatePageText).
 const DEFAULT_VERSION: Record<string, TermsVersion> = { de: 'de', en: 'en', cz: 'cz', sk: 'cz', hu: 'en' };
@@ -64,15 +70,20 @@ const TermsPage = () => {
                 <p className="text-white/40 text-sm">
                   {tr('Fassung vom', 'Version dated', 'Znění ze dne')} {TERMS_VERSION_DATE}
                 </p>
-                <a
-                  href={TERMS_PDF_PATH}
-                  target="_blank"
-                  rel="noopener"
-                  className="inline-flex items-center gap-2 text-sm text-primary hover:text-white transition-colors"
-                >
-                  <FileDown className="w-4 h-4" />
-                  {tr('PDF herunterladen', 'Download PDF', 'Stáhnout PDF')}
-                </a>
+                {PDF_DOWNLOADS.map((pdf) => (
+                  <a
+                    key={pdf.version}
+                    href={pdf.href}
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center gap-2 text-sm text-primary hover:text-white transition-colors"
+                  >
+                    <FileDown className="w-4 h-4" />
+                    {tr('PDF herunterladen', 'Download PDF', 'Stáhnout PDF')}
+                    <span className="text-white/40">·</span>
+                    <span lang={pdf.htmlLang}>{pdf.label}</span>
+                  </a>
+                ))}
               </div>
 
               <div className="flex flex-wrap items-center gap-3 mt-6">
