@@ -1,11 +1,13 @@
 /**
  * Verkaufs- und Lieferbedingungen der Asamer Technologie GmbH, Fassung vom 01.07.2023.
- * Basis ist die Fassung vom 15.03.2019 ("AGBs OGS 2019 deutsch.pdf"); Ziffer 7 b) ist an die
- * tschechische Fassung „Podmínky prodeje a dodání" vom 1. 7. 2023 angeglichen (2/3 bei
- * Versandbereitschaft statt 1/3 + Rest nach einem Monat). Beide PDFs liegen unter public/downloads/.
+ * Basis ist die Fassung vom 15.03.2019 ("AGBs OGS 2019 deutsch.pdf"); an die tschechische Fassung
+ * „Podmínky prodeje a dodání" vom 1. 7. 2023 angeglichen sind Ziffer 3 c) (höhere Gewalt mit
+ * Ereigniskatalog), 7 b) (2/3 bei Versandbereitschaft statt 1/3 + Rest nach einem Monat) und
+ * 14 (Haftungsgrenze € 1.000,00 statt € 500,00). Beide PDFs liegen unter public/downloads/.
  *
  * Rechtsverbindlich ist ausschließlich der deutsche Wortlaut (Ziffer 13: Vertragssprache
- * Deutsch) — er ist 1:1 aus dem PDF übernommen, alte Rechtschreibung inklusive.
+ * Deutsch) — er ist bis auf die angeglichenen Ziffern 1:1 aus dem PDF übernommen, alte
+ * Rechtschreibung inklusive.
  * `en` und `cz` sind unverbindliche Lesefassungen.
  */
 
@@ -113,14 +115,14 @@ export const TERMS_OF_SALE: TermsSection[] = [
         label: 'c)',
         paragraphs: [
           t(
-            'Die Lieferfrist verlängert sich angemessen bei Eintritt unvorhergesehener Hindernisse, die außerhalb des Willens des Lieferers liegen – gleichviel ob im Werk des Lieferers oder bei seinen Unterlieferern eingetreten – zum Beispiel Betriebsstörungen, Ausschusswerden, Verzögerungen in der Anlieferung wesentlicher Roh- und Baustoffe, Ausfall eines in einer Schlüsselposition tätigen Mitarbeiters, Streik und Aussperrung soweit solche Hindernisse nachweislich auf die Fertigstellung oder Ablieferung des Liefergegenstandes von erheblichem Einfluß sind.',
-            'The delivery period shall be extended appropriately in the event of unforeseen obstacles beyond the Supplier’s control – irrespective of whether they occur at the Supplier’s works or at its subcontractors – for example operational disruptions, production rejects, delays in the delivery of essential raw and building materials, the absence of an employee in a key position, strikes and lockouts, insofar as such obstacles demonstrably have a significant influence on the completion or delivery of the delivery item.',
-            'Dodací lhůta se přiměřeně prodlužuje při vzniku nepředvídaných překážek, které leží mimo vůli dodavatele – bez ohledu na to, zda nastaly v závodě dodavatele nebo u jeho subdodavatelů – například provozní poruchy, vznik zmetků, zpoždění v dodávkách podstatných surovin a stavebních materiálů, výpadek pracovníka na klíčové pozici, stávka a výluka, pokud tyto překážky prokazatelně podstatně ovlivňují dokončení nebo dodání předmětu dodávky.',
+            'Die Lieferfrist verlängert sich angemessen bei Eintritt unvorhergesehener Hindernisse (höhere Gewalt), die außerhalb des Willens und der zumutbaren Kontrolle des Lieferers liegen und deren Folgen der Lieferer nicht abwenden oder überwinden kann – gleichviel ob beim Lieferer oder bei seinen Unterlieferern eingetreten. Bei folgenden Ereignissen wird höhere Gewalt jedenfalls bis zum Beweis des Gegenteils vermutet: Krieg (erklärt oder nicht erklärt), Bürgerkrieg, Unruhen, Terrorakte, Sabotage, Handelsbeschränkungen, Embargo, Sanktionen, Epidemien, Befolgung von Gesetzen oder behördlichen Anordnungen, extreme Naturereignisse, Naturkatastrophen, länger andauernder Ausfall von Informationssystemen oder der Stromversorgung, Brand, Zerstörung von Anlagen, Verzögerungen in der Anlieferung wesentlicher Roh- und Baustoffe, Ausfall eines in einer Schlüsselposition tätigen Mitarbeiters, Arbeitskämpfe wie Streik und Aussperrung, soweit solche Hindernisse nachweislich auf die Fertigstellung oder Ablieferung des Liefergegenstandes von erheblichem Einfluß sind.',
+            'The delivery period shall be extended appropriately in the event of unforeseen obstacles (force majeure) that are beyond the Supplier’s will and reasonable control and whose consequences the Supplier cannot avert or overcome – irrespective of whether they occur at the Supplier or at its subcontractors. In the event of the following occurrences, force majeure is presumed in any case until proven otherwise: war (declared or undeclared), civil war, riots, acts of terrorism, sabotage, trade restrictions, embargo, sanctions, epidemics, compliance with laws or official orders, extreme natural events, natural disasters, prolonged failure of information systems or power supply, fire, destruction of facilities, delays in the delivery of essential raw and building materials, the absence of an employee in a key position, industrial action such as strikes and lockouts, insofar as such obstacles demonstrably have a significant influence on the completion or delivery of the delivery item.',
+            'Dodací lhůta se přiměřeně prodlouží v případě nepředvídatelných překážek (vyšší moc), které jsou mimo vůli a přiměřenou kontrolu dodavatele a jejichž důsledky nemůže dodavatel odvrátit nebo překonat – bez ohledu na to, zda se vyskytnou u dodavatele nebo u jeho subdodavatelů. V případě následujících událostí platí domněnka vyšší moci v každém případě, dokud se neprokáže opak: válka (vyhlášená nebo nevyhlášená), občanská válka, nepokoje, teroristické činy, sabotáže, obchodní omezení, embargo, sankce, epidemie, dodržování zákonů nebo úředních příkazů, extrémní přírodní událost, přírodní katastrofa, dlouhodobý výpadek informačních systémů nebo napájení, požár, zničení zařízení, zpoždění v dodávkách základních surovin a stavebních materiálů, nepřítomnost klíčového zaměstnance, pracovní nepokoje, jako jsou stávky a výluky, pokud lze prokázat, že tyto překážky mají významný vliv na dokončení nebo dodání předmětu dodávky.',
           ),
           t(
-            'Die vorbezeichneten Umstände sind auch dann vom Lieferer nicht zu vertreten, wenn sie während eines bereits vorliegenden Verzugs entstehen. Beginn und Ende derartiger Hindernisse wird in wichtigen Fällen der Lieferer dem Besteller baldmöglichst mitteilen.',
-            'The Supplier is not responsible for the aforementioned circumstances even if they arise during an existing delay. In important cases, the Supplier will notify the Purchaser of the beginning and end of such obstacles as soon as possible.',
-            'Dodavatel neodpovídá za výše uvedené okolnosti ani tehdy, pokud nastanou během již existujícího prodlení. Začátek a konec takových překážek dodavatel v důležitých případech co nejdříve oznámí objednateli.',
+            'Die vorbezeichneten Umstände berechtigen den Besteller nicht zur Geltendmachung von Schadenersatz oder Vertragsstrafen und sind auch dann vom Lieferer nicht zu vertreten, wenn sie während eines bereits vorliegenden Verzugs entstehen. Beginn und Ende derartiger Hindernisse wird in wichtigen Fällen der Lieferer dem Besteller baldmöglichst mitteilen. Der Lieferer wird alle zumutbaren Maßnahmen ergreifen, um die Auswirkungen eingetretener unvorhergesehener Hindernisse zu begrenzen.',
+            'The aforementioned circumstances do not entitle the Purchaser to claim damages or contractual penalties, and the Supplier is not responsible for them even if they arise during an existing delay. In important cases, the Supplier will notify the Purchaser of the beginning and end of such obstacles as soon as possible. The Supplier will take all reasonable measures to limit the effects of unforeseen obstacles that have occurred.',
+            'Výše uvedené okolnosti neopravňují objednatele k uplatnění nároku na náhradu škody nebo smluvní pokuty a dodavatel za ně neodpovídá ani v případě, že nastanou v průběhu již existujícího prodlení. V důležitých případech je dodavatel povinen informovat objednatele o začátku a konci těchto překážek co nejdříve. Dodavatel je povinen přijmout veškerá přiměřená opatření k omezení účinků vzniklých nepředvídaných překážek.',
           ),
         ],
       },
@@ -671,9 +673,9 @@ export const TERMS_OF_SALE: TermsSection[] = [
             'Zavinění dodavatele musí ve všech případech prokázat objednatel.',
           ),
           t(
-            'Die Haftung des Lieferers ist pro Schadensfall mit € 500,00 begrenzt.',
-            'The Supplier’s liability is limited to € 500.00 per claim.',
-            'Odpovědnost dodavatele je omezena částkou 500,00 € na jednu škodní událost.',
+            'Die Haftung des Lieferers ist pro Schadensfall mit € 1.000,00 begrenzt.',
+            'The Supplier’s liability is limited to € 1,000.00 per claim.',
+            'Odpovědnost dodavatele je omezena částkou 1 000,00 € na jednu škodní událost.',
           ),
           t(
             'Für mittelbare Schäden, entgangenen Gewinn oder Vertragseinbußen, Zinsverluste, unterbliebene Einsparungen, Folge- und Vermögensschäden, Schäden aus Ansprüchen Dritter, Schäden durch Betriebsunterbrechungen, Nutzungsausfall, Verlusten von Daten und Programmen und deren Wiederherstellung haftet der Lieferer nicht.',
