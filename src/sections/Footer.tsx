@@ -140,8 +140,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                {/* Markenname als Anker: der Kategoriebegriff gehoert zum Link
+                    direkt darunter, der auf die Kategorieseite zeigt. */}
                 <Link to={buildPath('/ott')} className="text-white/55 text-sm hover:text-white transition-colors">
-                  {tr('OTT Kantenleimer', 'OTT Edgebanders', 'Olepovačky hran OTT')}
+                  {tr('OTT Paul', 'OTT Paul', 'OTT Paul')}
                 </Link>
               </li>
               <li>

@@ -1,10 +1,13 @@
 /**
- * Erzeugt `src/seo/generated/contentDates.ts` aus der Git-Historie.
+ * Erzeugt `src/seo/generated/contentDates.ts`.
  *
  * Die Ratgeberseiten brauchen fuer ihr `Article`-Schema `datePublished` und
- * `dateModified` (Masterplan 4.2 Punkt 3). Beides steht in Git — aber nur der
- * Build hat Zugriff darauf, die React-Seiten im Browser nicht. Deshalb wird das
- * Ergebnis als typisiertes Modul in den Quellbaum geschrieben und mitcommittet.
+ * `dateModified` (Masterplan 4.2 Punkt 3). `published` kommt aus der
+ * Git-Historie, `modified` ist seit Oktober 2026 dasselbe Datum wie `<lastmod>`
+ * in der Sitemap (Snapshot aus scripts/content-lastmod.ts, den
+ * `generate:sitemap` unmittelbar vorher schreibt). Nur der Build hat Zugriff
+ * darauf, die React-Seiten im Browser nicht — deshalb wird das Ergebnis als
+ * typisiertes Modul in den Quellbaum geschrieben und mitcommittet.
  *
  * Laeuft als Teil von `npm run build` vor `tsc -b`.
  * Faellt die Historie aus (flacher Klon), bleibt das bestehende Modul stehen —

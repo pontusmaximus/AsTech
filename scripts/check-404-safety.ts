@@ -17,6 +17,7 @@
  *   npx tsx scripts/check-404-safety.ts --fail     # Exit 1, wenn Lücken bestehen
  */
 
+import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -27,7 +28,8 @@ import { MAYER_PRODUCTS, MAYER_CATEGORY_SLUG_VARIANTS, getMayerCategorySlug } fr
 import { BARBARIC_PRODUCTS, BARBARIC_CATEGORY_SLUG_VARIANTS, getBarbaricCategorySlug } from '../src/data/barbaricProducts';
 import { GANNOMAT_PRODUCTS, GANNOMAT_CATEGORY_SLUG_VARIANTS, getGannomatCategorySlug } from '../src/data/gannomatProducts';
 import { ALL_CATEGORY_REFS, buildCategoryPath, getBrandCatalog } from '../src/data/brandCatalogs';
-import { USED_MACHINES } from '../src/data/usedMachines';
+import { USED_MACHINES, RETIRED_USED_MACHINES, usedCategoryPageSlug } from '../src/data/usedMachines';
+import { CANONICAL_DOMAIN } from '../src/lib/language';
 import { loadVercelConfig, VercelRouter } from './seo-vercel-routes';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -58,7 +60,9 @@ type Origin =
   | 'seiten-slug-variante'
   | 'produkt-kategorie-variante'
   | 'kategorieseite-slug-variante'
-  | 'gebrauchtmaschine-slug-variante';
+  | 'gebrauchtmaschine-slug-variante'
+  | 'verkaufte-gebrauchtmaschine'
+  | 'fruehere-sitemap-url';
 
 interface Candidate {
   path: string;
@@ -162,6 +166,42 @@ for (const machine of USED_MACHINES) {
   }
 }
 
+/* --- 7. Verkaufte Gebrauchtmaschinen ------------------------------- */
+// Feste Regel seit Oktober 2026: eine entfernte Maschine leitet auf die
+// Gebrauchtmaschinen-Seite ihrer Gattung weiter (src/data/usedMachines.ts).
+for (const retired of RETIRED_USED_MACHINES) {
+  for (const lang of SUPPORTED_LANGUAGES) {
+    for (const variant of usedVariants) {
+      push(
+        buildLocalizedPath(lang, `/${variant}/${retired.slug}`),
+        'verkaufte-gebrauchtmaschine',
+        buildLocalizedPath(lang, localizeSlug(usedCategoryPageSlug(retired.category), lang)),
+      );
+    }
+  }
+}
+
+/* --- 8. URLs der bisherigen Sitemap --------------------------------- */
+// Was gestern in der Sitemap stand, hat Google im Index. Faellt eine solche
+// URL heraus — verkaufte Maschine, umbenannter Slug —, muss sie auf eine
+// Weiterleitung treffen. Vergleichsstand: origin/main (in CI per
+// fetch-depth 0 vorhanden), ueberschreibbar mit SITEMAP_BASE_REF.
+const baseRef = process.env.SITEMAP_BASE_REF ?? 'origin/main';
+let baseSitemapNote = '';
+try {
+  const xml = execFileSync('git', ['show', `${baseRef}:public/sitemap.xml`], {
+    cwd: repoRoot,
+    encoding: 'utf-8',
+    stdio: ['ignore', 'pipe', 'ignore'],
+    maxBuffer: 64 * 1024 * 1024,
+  });
+  const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(CANONICAL_DOMAIN, ''));
+  for (const loc of locs) push(loc, 'fruehere-sitemap-url', loc);
+  baseSitemapNote = `${locs.length} URLs aus der Sitemap von \`${baseRef}\` mitgeprueft.`;
+} catch {
+  baseSitemapNote = `Sitemap von \`${baseRef}\` nicht lesbar — Pruefung 8 uebersprungen.`;
+}
+
 /* --- Auswertung ------------------------------------------------------ */
 
 const fileFor = (p: string) => (p === '/' ? join(distDir, 'index.html') : join(distDir, p, 'index.html'));
@@ -188,6 +228,8 @@ lines.push('');
 lines.push(`Erzeugt von \`scripts/check-404-safety.ts\` · ${verdicts.length} routerseitig erreichbare Pfade geprüft.`);
 lines.push('');
 lines.push(`Catch-all-Rewrite in \`vercel.json\`: **${router.hasCatchAllRewrite() ? 'vorhanden' : 'entfernt'}**`);
+lines.push('');
+lines.push(baseSitemapNote);
 lines.push('');
 lines.push(`**${gaps.length} Lücken.**`);
 lines.push('');
@@ -219,6 +261,7 @@ for (const [origin, list] of byOrigin) {
   const g = list.filter((v) => v.kind === 'LUECKE').length;
   console.log(`  ${g > 0 ? '✗' : '✓'} ${origin.padEnd(32)} ${String(list.length).padStart(4)} Pfade, ${g} Lücken`);
 }
+console.log(`  ${baseSitemapNote}`);
 console.log(`Report: ${out}`);
 
 if (process.argv.includes('--fail') && gaps.length > 0) process.exit(1);

@@ -31,6 +31,7 @@ import { OTT_PRODUCTS, OTT_CATEGORY_SLUG_VARIANTS, getOttCategorySlug } from '..
 import { MAYER_PRODUCTS, MAYER_CATEGORY_SLUG_VARIANTS, getMayerCategorySlug } from '../src/data/mayerProducts';
 import { BARBARIC_PRODUCTS, BARBARIC_CATEGORY_SLUG_VARIANTS, getBarbaricCategorySlug } from '../src/data/barbaricProducts';
 import { GANNOMAT_PRODUCTS, GANNOMAT_CATEGORY_SLUG_VARIANTS, getGannomatCategorySlug } from '../src/data/gannomatProducts';
+import { USED_MACHINES, RETIRED_USED_MACHINES, usedCategoryPageSlug } from '../src/data/usedMachines';
 import type { Language } from '../src/i18n';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -52,6 +53,19 @@ const addRule = (r: Redirect) => {
   if (sources.has(r.source)) return;
   sources.add(r.source);
   rules.push(r);
+};
+
+/**
+ * Regel plus Zwilling mit abschliessendem Schraegstrich.
+ *
+ * Fuer URLs, die von aussen kommen — alte WordPress-Pfade, verkaufte
+ * Maschinen —, und dort oft mit `/` am Ende verlinkt sind. Ohne Zwilling
+ * greift erst die allgemeine Schraegstrich-Regel am Ende (Abschnitt 9) und
+ * danach diese: zwei Spruenge statt einem.
+ */
+const addRuleWithSlash = (r: Redirect) => {
+  addRule(r);
+  if (!r.source.endsWith('/')) addRule({ ...r, source: `${r.source}/` });
 };
 
 /* ------------------------------------------------------------------ */
@@ -94,7 +108,7 @@ const manual = manualFile.redirects;
 const hostRules = manual.filter((r) => (r.has ?? []).some((h) => h.type === 'host'));
 for (const r of manual) {
   if (hostRules.includes(r)) continue;
-  addRule(r);
+  addRuleWithSlash(r);
 }
 
 /* ------------------------------------------------------------------ */
@@ -300,6 +314,32 @@ for (const retired of RETIRED_CATEGORY_SLUGS) {
 }
 
 /* ------------------------------------------------------------------ */
+/*  7a. Verkaufte Gebrauchtmaschinen                                   */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Eine entfernte Maschine bekommt je Sprache eine 301 auf die
+ * Gebrauchtmaschinen-Seite ihrer Gattung (src/data/usedMachines.ts,
+ * RETIRED_USED_MACHINES). Die Uebersichts-Slugs aller Sprachen stehen in der
+ * Alternation, damit auch `/de/pouzite-stroje/{slug}` in einem Sprung am Ziel
+ * ist — deshalb vor Abschnitt 7, der sonst zuerst den Uebersichts-Slug
+ * korrigieren wuerde.
+ */
+const usedOverviewVariants = getAllSlugVariants('/pouzite-stroje');
+for (const retired of RETIRED_USED_MACHINES) {
+  if (USED_MACHINES.some((m) => m.slug === retired.slug)) {
+    throw new Error(`"${retired.slug}" steht in USED_MACHINES und in RETIRED_USED_MACHINES — eins von beiden entfernen.`);
+  }
+  for (const lang of SUPPORTED_LANGUAGES) {
+    addRuleWithSlash({
+      source: `/${lang}/:overview(${usedOverviewVariants.map(escapeAlt).join('|')})/${escapeAlt(retired.slug)}`,
+      destination: abs(`/${lang}${localizeSlug(usedCategoryPageSlug(retired.category), lang)}`),
+      permanent: true,
+    });
+  }
+}
+
+/* ------------------------------------------------------------------ */
 /*  7. Gebrauchtmaschinen-Detail unter fremdem Uebersichts-Slug        */
 /* ------------------------------------------------------------------ */
 
@@ -316,6 +356,21 @@ for (const lang of SUPPORTED_LANGUAGES) {
 /* ------------------------------------------------------------------ */
 
 for (const r of hostRules) addRule(r);
+
+/* ------------------------------------------------------------------ */
+/*  9. Abschliessender Schraegstrich — als letzte Regel                */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Ersetzt `trailingSlash: false` (Oktober 2026).
+ *
+ * Vercel wertet `trailingSlash` *vor* den `redirects` aus. `/products/olepovacky-ott/`
+ * lief deshalb erst per 308 auf `/products/olepovacky-ott` und dann per 301 ans
+ * Ziel — zwei Spruenge. Als gewoehnliche Regel am Ende kommen die
+ * spezifischen Regeln samt Schraegstrich-Zwilling zuerst dran; alles uebrige
+ * verliert den Schraegstrich wie bisher mit einem 308.
+ */
+addRule({ source: '/:path(.*)/', destination: '/:path', permanent: true });
 
 /* ------------------------------------------------------------------ */
 /*  Schreiben                                                          */
@@ -365,13 +420,24 @@ const config = {
   $schema: 'https://openapi.vercel.sh/vercel.json',
   buildCommand: 'npm run build',
   outputDirectory: 'dist',
-  trailingSlash: false,
+  // Kein `trailingSlash`: der Schraegstrich wird als letzte Redirect-Regel
+  // behandelt (Abschnitt 9), sonst kostet jede Altlasten-URL mit `/` zwei Spruenge.
   /**
    * Kein Catch-all-Rewrite mehr (Masterplan 1.1). Vercel liefert fuer Pfade
    * ohne Datei und ohne Redirect jetzt `404.html` mit Statuscode 404 aus.
    * Die Abdeckung wird von `scripts/check-404-safety.ts` nachgewiesen.
    */
   redirects: rules,
+  /**
+   * llms.txt ausdruecklich als UTF-8-Text (scripts/generate-llms-txt.ts). Ohne
+   * charset raten manche Clients Latin-1, und „Použité" kommt verstuemmelt an.
+   */
+  headers: [
+    {
+      source: '/llms.txt',
+      headers: [{ key: 'Content-Type', value: 'text/plain; charset=utf-8' }],
+    },
+  ],
 };
 
 const outPath = join(repoRoot, 'vercel.json');

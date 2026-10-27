@@ -15,6 +15,7 @@ export type SeoRouteKey =
   | 'solutions'
   | 'service'
   | 'usedMachines'
+  | 'usedEdgebanders'
   | 'contact'
   | 'imprint'
   | 'privacy'
@@ -170,39 +171,46 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       },
     }),
   },
+  /*
+   * Marken-Hub: zielt auf „OTT", „OTT Paul", „OTT prodejce" — bewusst ohne den
+   * Kategoriebegriff (olepovačky hran / Kantenanleimmaschinen / edgebanding
+   * machines / élzárógépek) in Title und Description. Dafuer gibt es genau eine
+   * Zielseite, die Kategorieseite /{lang}/ott/{kategorie} (src/data/ottCategoryMeta.ts).
+   * Vorher zielten Hub, Kategorieseite und Ratgeber auf dasselbe Keyword.
+   */
   ott: {
     slug: '/ott',
     image: 'https://www.ottpaul.com/fileadmin/_processed_/c/7/csm_pacific-plus_4a95031bd4.png',
     meta: createMeta({
       de: {
-        title: 'OTT Kantenanleimmaschinen – Händler für CZ, SK, HU | Asamer',
+        title: 'OTT Paul – autorisierter Händler für CZ, SK und HU | Asamer',
         description:
-          'OTT Kantenanleimmaschinen – Asamer autorisierter Händler für CZ, SK & HU. PUR & bluEdge featuring HyFuse. Beckhoff OPC-UA Schnittstelle für Software-Integration.',
-        keywords: ['OTT', 'Kantenanleimmaschine', 'PUR', 'bluEdge', 'HyFuse', 'Nullfuge', 'Beckhoff', 'OPC-UA'],
+          'OTT Paul aus Österreich: Kantentechnik, Klebetechnologie CombiMelt und bluEdge sowie Rückführsysteme. Asamer ist autorisierter OTT-Händler für CZ, SK und HU.',
+        keywords: ['OTT', 'OTT Paul', 'OTT Händler', 'Asamer', 'CombiMelt', 'bluEdge', 'HyFuse', 'OPC-UA'],
       },
       en: {
-        title: 'OTT Edgebanding Machines – Dealer CZ, SK, HU | Asamer',
+        title: 'OTT Paul – Authorized Dealer for CZ, SK and HU | Asamer',
         description:
-          'OTT edgebanding machines – Asamer authorized dealer for CZ, SK & HU. PUR & bluEdge featuring HyFuse technology. Open Beckhoff OPC-UA interface for integration.',
-        keywords: ['OTT', 'Edgebander', 'PUR', 'bluEdge', 'HyFuse', 'zero glue line', 'Beckhoff', 'OPC-UA'],
+          'OTT Paul from Austria: edge banding technology, CombiMelt and bluEdge gluing systems and return conveyors. Asamer is the authorized OTT dealer for CZ, SK and HU.',
+        keywords: ['OTT', 'OTT Paul', 'OTT dealer', 'Asamer', 'CombiMelt', 'bluEdge', 'HyFuse', 'OPC-UA'],
       },
       cz: {
-        title: 'OTT olepovačky hran – autorizovaný prodejce | Asamer',
+        title: 'OTT Paul – autorizovaný prodejce pro ČR, SR a Maďarsko | Asamer',
         description:
-          'OTT olepovačky hran – Asamer autorizovaný prodejce pro CZ, SK a HU. Technologie PUR a bluEdge featuring HyFuse. Otevřené rozhraní Beckhoff OPC-UA.',
-        keywords: ['OTT', 'Olepovačka hran', 'PUR', 'bluEdge', 'HyFuse', 'nulová spára', 'Beckhoff', 'OPC-UA'],
+          'OTT Paul z Rakouska: stroje pro olepování hran, lepicí technologie CombiMelt a bluEdge a vratné systémy. Asamer je autorizovaný prodejce OTT pro ČR, SR a Maďarsko.',
+        keywords: ['OTT', 'OTT Paul', 'OTT prodejce', 'Asamer', 'CombiMelt', 'bluEdge', 'HyFuse', 'OPC-UA'],
       },
       sk: {
-        title: 'OTT olepovačky hrán – autorizovaný predajca | Asamer',
+        title: 'OTT Paul – autorizovaný predajca pre ČR, SR a Maďarsko | Asamer',
         description:
-          'OTT olepovačky hrán – Asamer autorizovaný predajca pre CZ, SK a HU. Technológia PUR a bluEdge featuring HyFuse. Otvorené rozhranie Beckhoff OPC-UA.',
-        keywords: ['OTT', 'Olepovačka hrán', 'PUR', 'bluEdge', 'HyFuse', 'nulová škára', 'Beckhoff', 'OPC-UA'],
+          'OTT Paul z Rakúska: stroje na olepovanie hrán, lepiaca technológia CombiMelt a bluEdge a vratné systémy. Asamer je autorizovaný predajca OTT pre ČR, SR a Maďarsko.',
+        keywords: ['OTT', 'OTT Paul', 'OTT predajca', 'Asamer', 'CombiMelt', 'bluEdge', 'HyFuse', 'OPC-UA'],
       },
       hu: {
-        title: 'Ipari élzárógépek – OTT, magyarországi forgalmazó | Asamer',
+        title: 'OTT Paul – hivatalos magyarországi forgalmazó | Asamer',
         description:
-          'OTT ipari élzárógépek asztalosüzemtől nagyüzemig: PUR és EVA ragasztás, nullfuga, automata visszaforgatás. Asamer – hivatalos forgalmazó CZ, SK és HU.',
-        keywords: ['OTT', 'Élzárógép', 'PUR', 'bluEdge', 'HyFuse', 'nullfuga', 'Beckhoff', 'OPC-UA'],
+          'Az osztrák OTT Paul élzárási technológiája, CombiMelt és bluEdge ragasztórendszerei és visszafutó szalagjai. Az Asamer az OTT hivatalos forgalmazója CZ, SK, HU.',
+        keywords: ['OTT', 'OTT Paul', 'OTT forgalmazó', 'Asamer', 'CombiMelt', 'bluEdge', 'HyFuse', 'OPC-UA'],
       },
     }),
   },
@@ -455,6 +463,48 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
         description:
           'Használt élzárógépek, táblafelosztók és szárítókamrák osztrák üzemekből: állapotfelmérés, szállítás, beüzemelés és garancia egy kézből.',
         keywords: ['Használt gépek', 'Felújított', 'Famegmunkálás', 'Asamer'],
+      },
+    }),
+  },
+  /*
+   * Gebrauchte Kantenanleimmaschinen — Nachfrage ohne passende Seite
+   * („použité olepovačky hran", GSC Jul–Okt 2026: Pos. 16,7). Die Marken im
+   * Title entsprechen dem Bestand in src/data/usedMachines.ts (Kategorie
+   * 'edgebanding'); aendert sich der Bestand, gehoert der Title angepasst.
+   */
+  usedEdgebanders: {
+    slug: '/pouzite-stroje/olepovacky-hran',
+    slugByLang: SLUG_TRANSLATIONS['/pouzite-stroje/olepovacky-hran'],
+    meta: createMeta({
+      de: {
+        title: 'Gebrauchte Kantenanleimmaschinen – OTT, Holz-Her, SCM Stefani',
+        description:
+          'Gebrauchte Kantenanleimmaschinen von OTT, Holz-Her und SCM Stefani – technisch geprüft, mit Montage und Finanzierung von Asamer für CZ, SK und HU.',
+        keywords: ['gebrauchte Kantenanleimmaschine', 'Kantenanleimmaschine gebraucht', 'OTT', 'Holz-Her', 'SCM Stefani'],
+      },
+      en: {
+        title: 'Used Edgebanding Machines – OTT, Holz-Her, SCM Stefani | Asamer',
+        description:
+          'Used edgebanding machines from OTT, Holz-Her and SCM Stefani – technically inspected, with installation and financing from Asamer for CZ, SK and HU.',
+        keywords: ['used edgebander', 'used edgebanding machine', 'OTT', 'Holz-Her', 'SCM Stefani'],
+      },
+      cz: {
+        title: 'Použité olepovačky hran – OTT, Holz-Her, SCM Stefani | Asamer',
+        description:
+          'Použité olepovačky hran OTT, Holz-Her a SCM Stefani – technicky prověřené, s montáží a financováním od Asamer pro ČR, SR a Maďarsko.',
+        keywords: ['použité olepovačky hran', 'použitá olepovačka hran', 'OTT', 'Holz-Her', 'SCM Stefani'],
+      },
+      sk: {
+        title: 'Použité olepovačky hrán – OTT, Holz-Her, SCM Stefani | Asamer',
+        description:
+          'Použité olepovačky hrán OTT, Holz-Her a SCM Stefani – technicky preverené, s montážou a financovaním od Asamer pre SR, ČR a Maďarsko.',
+        keywords: ['použité olepovačky hrán', 'použitá olepovačka hrán', 'OTT', 'Holz-Her', 'SCM Stefani'],
+      },
+      hu: {
+        title: 'Használt élzárógépek – OTT, Holz-Her, SCM Stefani | Asamer',
+        description:
+          'Használt OTT, Holz-Her és SCM Stefani élzárógépek – műszakilag átvizsgálva, telepítéssel és finanszírozással az Asamertől CZ, SK és HU területén.',
+        keywords: ['használt élzárógép', 'használt élzáró gép', 'OTT', 'Holz-Her', 'SCM Stefani'],
       },
     }),
   },

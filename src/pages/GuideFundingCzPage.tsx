@@ -100,10 +100,10 @@ const GuideFundingCzPage = () => {
           faqPageSchema(faqEntries),
           breadcrumbSchema([
             { name: tr('Startseite', 'Home', 'Domů'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
-            { name: tr('Ratgeber', 'Guides', 'Průvodce'), url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, '/')}` },
+            { name: tr('Ratgeber', 'Guides', 'Průvodce'), url: `${CANONICAL_DOMAIN}${buildPath('/faq')}` },
             {
               name: tr('Förderung Holzbearbeitung CZ 2026', 'Woodworking funding CZ 2026', 'Dotace dřevoobrábění CZ 2026'),
-              url: `${CANONICAL_DOMAIN}${buildLocalizedPath(lang, buildPath('/ratgeber/foerderung-holzbearbeitung-cz-2026'))}`,
+              url: `${CANONICAL_DOMAIN}${buildPath('/ratgeber/foerderung-holzbearbeitung-cz-2026')}`,
             },
           ]),
         ]}

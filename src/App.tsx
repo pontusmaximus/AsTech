@@ -27,6 +27,7 @@ const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
 const UsedMachinesPage = lazy(() => import('./pages/UsedMachinesPage'));
 const UsedMachineDetailPage = lazy(() => import('./pages/UsedMachineDetailPage'));
+const UsedEdgebandersPage = lazy(() => import('./pages/UsedEdgebandersPage'));
 const OttProductPage = lazy(() => import('./pages/OttProductPage'));
 const MayerProductPage = lazy(() => import('./pages/MayerProductPage'));
 const BarbaricProductPage = lazy(() => import('./pages/BarbaricProductPage'));
@@ -215,6 +216,10 @@ export const AppRoutes = () => {
         ))}
         {getAllSlugVariants('/servis').map((s) => (
           <Route key={s} path={s} element={<LocalizedRoute page={<ServicePage />} czSlug="/servis" />} />
+        ))}
+        {/* Statisches Segment — der Router zieht es der Detailroute `…/:slug` vor. */}
+        {getAllSlugVariants('/pouzite-stroje/olepovacky-hran').map((s) => (
+          <Route key={s} path={s} element={<LocalizedRoute page={<UsedEdgebandersPage />} czSlug="/pouzite-stroje/olepovacky-hran" />} />
         ))}
         {getAllSlugVariants('/pouzite-stroje').map((s) => (
           <Route key={`${s}-detail`} path={`${s}/:slug`} element={<UsedMachineDetailPage />} />

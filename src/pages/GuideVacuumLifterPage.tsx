@@ -4,6 +4,7 @@ import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
+import { buildOttCategoryPath } from '../data/ottProducts';
 import { breadcrumbSchema, faqPageSchema } from '../seo/structuredData';
 import { buildLocalizedPath, CANONICAL_DOMAIN } from '../lib/language';
 import { localizeSlug } from '../lib/slugs';
@@ -157,7 +158,7 @@ const GuideVacuumLifterPage = () => {
                     'Jeden člověk zvedne desku ze stohu, naklopí ji o 90° pro podání a převezme hotovou desku při vrácení – bez druhého člověka, který obchází stroj s obrobkem.'
                   )}
                 </p>
-                <Link to={buildPath('/ott')} className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:underline">
+                <Link to={buildPath(buildOttCategoryPath(lang, 'edgebanding'))} className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:underline">
                   {tr('OTT Kantenanleimmaschinen', 'OTT edge banders', 'Olepovačky hran OTT')}
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>

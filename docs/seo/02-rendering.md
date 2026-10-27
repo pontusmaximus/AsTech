@@ -336,3 +336,33 @@ Vier Befunde bleiben, alle in Navigation und Footer:
 Hier bewusst **nicht** angefasst: Kontrast und Zielgrößen sind Design-Entscheidungen, und
 Barrierefreiheit steht im SEO-Masterplan nicht auf der Liste. Der Lighthouse-Lauf misst sie ab
 sofort bei jedem Pull Request mit — als Grundlage für eine eigene Runde, wenn sie gewünscht ist.
+
+## Nachtrag Oktober 2026: Inhalt vor dem Footer, Head nur noch aus `SeoHead`
+
+Zwei Befunde aus der Analyse der KI-Sichtbarkeit (14.10.2026), beide im ausgelieferten HTML:
+
+**1. Der Seiteninhalt stand hinter Footer und Cookie-Banner.** `renderToReadableStream` schreibt
+für jede Suspense-Grenze — jede Seite ist über `React.lazy` eine — erst den Fallback (Lade-Skelett)
+an die Stelle des Inhalts und hängt den Inhalt als `<div hidden id="S:0">` ans Dokumentende; ein
+Inline-Skript (`$RC`) tauscht ihn im Browser nach vorn. Das passiert auch nach `await allReady`,
+weil React fertige Grenzen über `progressiveChunkSize` (12.800 Byte) trotzdem auslagert. Auf
+`/cz/ott/olepovacky-hran` begann der Hauptinhalt bei Byte 21.390 von 52 KB. KI-Crawler führen kein
+JavaScript aus und lesen von oben nach unten.
+
+Lösung: `prerender()` aus `react-dom/static` mit `progressiveChunkSize: Number.MAX_SAFE_INTEGER`
+(`src/entry-server.tsx`). Der Cookie-Banner rendert erst im Browser (`CookieConsent`,
+`useSyncExternalStore` mit Server-Snapshot `false`).
+
+**2. Jeder Head-Tag stand doppelt in der Datei.** `scripts/prerender.ts` baute Title, Canonical,
+hreflang und Open Graph aus denselben Daten nach, und React 19 stellte die Helmet-Tags zusätzlich
+an den Anfang von `#root`. Der Nachtrag oben hatte nur die Verdopplung *nach dem Hydrieren*
+behoben, nicht die in der Datei.
+
+Lösung: `buildHead()` entfernt. Der Prerender nimmt die von React hochgezogenen Elemente vom Anfang
+der SSR-Ausgabe (`splitHoisted()`) und setzt sie direkt hinter `<meta charset>` — `SeoHead` ist
+die einzige Quelle. `checkPage()` bricht den Build ab, wenn eine Seite nicht genau einen Title,
+Canonical, eine Description, ein Robots und je Sprache ein hreflang hat, wenn die H1 hinter dem
+Footer steht oder Cookie-Text vor der H1.
+
+Messeffekt im Audit: `body-words` steigt von 5 auf 7 — die rund 40 Wörter des Cookie-Banners
+zählten bisher als Inhalt. Betroffen sind zwei Gebrauchtmaschinen-Seiten (Gabbiani PT, SK/HU).

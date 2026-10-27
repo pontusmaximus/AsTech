@@ -1,22 +1,31 @@
 {
   "$comment": [
-    "sameAs-Profile fuer das Organization-Schema (Masterplan 4.2 Punkt 2 und 4.3).",
+    "sameAs-Profile fuer das Organization- und LocalBusiness-Schema (Masterplan 4.2 Punkt 2 und 4.3).",
     "Hier gehoeren ausschliesslich URLs hinein, die tatsaechlich existieren und auf die Asamer",
     "Technologie GmbH bzw. ASAMER spol. s r.o. verweisen. Eine erfundene oder geratene URL ist",
     "schaedlicher als ein fehlender Eintrag: Google nutzt sameAs zur Entitaetszuordnung, und ein",
     "toter Link stuetzt die Zuordnung nicht, sondern schwaecht sie.",
     "",
-    "Noch offen — Eintraege ergaenzen, sobald die URL geprueft ist (siehe docs/seo/04-strukturierte-daten.md):",
-    "  - Tschechisches Handelsregister (justice.cz / ARES), IČO 60699761",
-    "  - Oesterreichisches Firmenbuch, FN 481620 s, Landesgericht Wels",
-    "  - Haendlerprofil bei OTT (Paul OTT GmbH)",
-    "  - Haendlerprofil bei Mayer (Mayer Maschinenbau GmbH)",
-    "  - Haendlerprofil bei BARBARIC",
-    "  - Haendlerprofil bei Gannomat",
-    "  - Haendlerprofil bei IMA Schelling",
-    "  - Google-Unternehmensprofil des CZ-Standorts, sobald angelegt und verifiziert"
+    "sameAs            → Organization (Asamer Technologie GmbH, auf allen Startseiten)",
+    "localBusiness.*   → LocalBusiness je Standort (Startseiten und Kontakt); leere Liste = kein sameAs",
+    "",
+    "TODO(Max): geprüfte Profil-URLs eintragen (siehe docs/seo/04-strukturierte-daten.md):",
+    "  - sameAs: Oesterreichisches Firmenbuch, FN 481620 s, Landesgericht Wels",
+    "  - sameAs: Haendlerprofil bei OTT (Paul OTT GmbH)",
+    "  - sameAs: Haendlerprofil bei Mayer (Mayer Maschinenbau GmbH)",
+    "  - sameAs: Haendlerprofil bei BARBARIC",
+    "  - sameAs: Haendlerprofil bei Gannomat",
+    "  - sameAs: IMA Schelling NUR falls dort ein Service-Partner-Profil existiert — Asamer ist dort",
+    "            kein Haendler (siehe ImaSchellingPage-FAQ), also nie als Haendlerprofil fuehren",
+    "  - localBusiness.brno: Tschechisches Handelsregister (justice.cz / ARES), IČO 60699761",
+    "  - localBusiness.brno: Google-Unternehmensprofil des CZ-Standorts, sobald angelegt und verifiziert",
+    "  - localBusiness.lambach: Google-Unternehmensprofil Lambach, falls vorhanden"
   ],
   "sameAs": [
     "https://www.linkedin.com/company/asamer-technologie"
-  ]
+  ],
+  "localBusiness": {
+    "lambach": [],
+    "brno": []
+  }
 }

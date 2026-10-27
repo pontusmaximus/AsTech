@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, ArrowUpRight, CalendarDays } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../../App';
 import { translatePageText } from '../../i18n/pageTextTranslations';
 import { buildMailto } from '../../lib/email';
 import { trackEvent } from '../../lib/analytics';
 import { HERO_FUNDING } from '../../data/heroFunding';
 import { usePrefersReducedMotion } from '../../hooks/use-prefers-reduced-motion';
-import InnovationDaysLogo, { EventChevronMark } from './InnovationDaysLogo';
 
-const SLIDE_COUNT = 3;
+const SLIDE_COUNT = 2;
 const AUTO_MS = 7000;
 
 const OTT_IMAGE =
@@ -19,8 +18,7 @@ const VACUUM_IMAGE =
 /**
  * Startseiten-Hero als automatische Slideshow.
  * Slide 1: dunkler Hero (Technologie/Lösungen).
- * Slide 2: „Innovationstage 2026" – Event-Logo je Sprache + Anmeldung.
- * Slide 3: Barbaric-Vakuumheber – Vollbild-Hintergrundbild, helle Schrift-Zone.
+ * Slide 2: Barbaric-Vakuumheber – Vollbild-Hintergrundbild, helle Schrift-Zone.
  * Animation: horizontaler Swipe (Track) + Content-Fade/Rise + langsamer
  * Ken-Burns-Zoom auf den Bildern. Rein CSS (kein GSAP). Läuft immer automatisch;
  * bei prefers-reduced-motion ohne Bewegung (harter Schnitt, alles sichtbar).
@@ -46,10 +44,6 @@ const HeroSlideshow = () => {
     'office@asamer.net',
     tr('Beratung Vakuumheber Barbaric', 'Vacuum lifter consultation', 'Konzultace vakuový zvedák Barbaric')
   );
-  const eventInquiryMail = buildMailto(
-    'eli@asamer.net',
-    tr('Anmeldung Innovationstage 2026', 'Registration Innovation Days 2026', 'Registrace Inovační dny 2026')
-  );
 
   const heroLines = [
     tr('Technologie mit Erfahrung.', 'Technology with experience.', 'Technologie se zkušeností.'),
@@ -63,54 +57,6 @@ const HeroSlideshow = () => {
     cz: { line1: 'Podporujeme vaše pracovní procesy', accent: 'Barbaric', post: ' vakuovou manipulací.' },
     sk: { line1: 'Podporujeme vaše pracovné procesy', accent: 'Barbaric', post: ' vakuovou manipuláciou.' },
     hu: { line1: 'Támogatjuk az Ön munkafolyamatait', accent: 'Barbaric', post: ' vákuumos anyagmozgatással.' },
-  } as const)[lang];
-
-  const ev = ({
-    de: {
-      eyebrow: 'Asamer · Innovationstage 2026 bei OTT Paul',
-      headline: 'Willkommen zu unseren Innovationstagen.',
-      date: '30.09. – 01.10.2026',
-      body: 'Wir laden Sie herzlich zu den Innovationstagen 2026 bei OTT Paul ein. Lernen Sie die gesamte Produktion und den Betrieb der OTT Paul Kantenanleimmaschinen direkt im Werk kennen – Holz, Technik und Zukunft live vor Ort. Melden Sie sich hier bei uns an.',
-      cta: 'Jetzt anmelden',
-      teaserLabel: 'Einladung',
-      teaser: 'Innovationstage 2026 bei OTT Paul · 30.09. – 01.10.',
-    },
-    en: {
-      eyebrow: 'Asamer · Innovation Days 2026 at OTT Paul',
-      headline: 'Welcome to our Innovation Days.',
-      date: '30 Sep – 1 Oct 2026',
-      body: 'We warmly invite you to the Innovation Days 2026 at OTT Paul. Get to know the entire production and operation of OTT Paul edgebanding machines directly at the factory – wood, technology and the future live on site. Register with us here.',
-      cta: 'Register now',
-      teaserLabel: 'Invitation',
-      teaser: 'Innovation Days 2026 at OTT Paul · 30 Sep – 1 Oct',
-    },
-    cz: {
-      eyebrow: 'Asamer · Inovační dny 2026 u OTT Paul',
-      headline: 'Vítejte na našich Inovačních dnech.',
-      date: '30. 9. – 1. 10. 2026',
-      body: 'Srdečně vás zveme na Inovační dny 2026 u OTT Paul. Poznejte celou výrobu a provoz olepovaček hran OTT Paul přímo v závodě – dřevo, techniku a budoucnost naživo. Přihlaste se u nás zde.',
-      cta: 'Přihlásit se',
-      teaserLabel: 'Pozvánka',
-      teaser: 'Inovační dny 2026 u OTT Paul · 30. 9. – 1. 10.',
-    },
-    sk: {
-      eyebrow: 'Asamer · Inovačné dni 2026 u OTT Paul',
-      headline: 'Vitajte na našich Inovačných dňoch.',
-      date: '30. 9. – 1. 10. 2026',
-      body: 'Srdečne vás pozývame na Inovačné dni 2026 u OTT Paul. Spoznajte celú výrobu a prevádzku olepovačiek hrán OTT Paul priamo v závode – drevo, techniku a budúcnosť naživo. Prihláste sa u nás tu.',
-      cta: 'Prihlásiť sa',
-      teaserLabel: 'Pozvánka',
-      teaser: 'Inovačné dni 2026 u OTT Paul · 30. 9. – 1. 10.',
-    },
-    hu: {
-      eyebrow: 'Asamer · Innovációs Napok 2026 az OTT Paulnál',
-      headline: 'Üdvözöljük Innovációs Napjainkon.',
-      date: '2026. 09. 30. – 10. 01.',
-      body: 'Szeretettel meghívjuk Önt a 2026-os Innovációs Napokra az OTT Paulnál. Ismerje meg az OTT Paul élzárógépek teljes gyártását és üzemeltetését közvetlenül a gyárban – fa, technika és jövő élőben. Jelentkezzen nálunk itt.',
-      cta: 'Jelentkezem',
-      teaserLabel: 'Meghívó',
-      teaser: 'Innovációs Napok 2026 az OTT Paulnál · 2026. 09. 30. – 10. 01.',
-    },
   } as const)[lang];
 
   const [active, setActive] = useState(0);
@@ -186,89 +132,19 @@ const HeroSlideshow = () => {
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
-
-              {/* Teaser auf Slide 2 — Event-Chevron auf Gelb, springt direkt zur Einladung.
-                  `hero-event-dark`, weil die Karte auch im Light-Mode dunkel bleibt. */}
-              <button
-                type="button"
-                onClick={() => {
-                  setActive(1);
-                  trackEvent('hero_teaser_click', { placement: 'home_hero_innovationstage_teaser', lang });
-                }}
-                className="hero-event-dark group mt-7 sm:mt-9 inline-flex max-w-full items-stretch overflow-hidden rounded-xl border border-[#EFD500]/40 bg-[#0b1220]/75 text-left shadow-lg shadow-black/25 backdrop-blur-sm transition-colors hover:border-[#EFD500] hover:bg-[#0b1220]/90"
-              >
-                <span className="flex shrink-0 items-center bg-[#EFD500] px-3 sm:px-3.5">
-                  <EventChevronMark className="h-6 sm:h-7 w-auto text-[#1f2430]" />
-                </span>
-                <span className="flex items-center gap-3 sm:gap-4 px-3.5 sm:px-4 py-2 sm:py-2.5">
-                  <span className="block">
-                    <span className="block text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-[#EFD500]">
-                      {ev.teaserLabel}
-                    </span>
-                    <span className="block text-xs sm:text-sm leading-snug text-white">{ev.teaser}</span>
-                  </span>
-                  <ArrowRight className="w-4 h-4 shrink-0 text-[#EFD500] transition-transform group-hover:translate-x-0.5" />
-                </span>
-              </button>
             </div>
           </div>
         </div>
 
-        {/* ── Slide 2 — Innovationstage 2026 ── */}
-        <div className="relative w-full shrink-0 flex items-center">
-          <div className="absolute inset-0 overflow-hidden bg-[#0d1526]">
-            <div className="absolute inset-0 bg-[radial-gradient(130%_100%_at_12%_0%,#1c2942_0%,#101b30_55%,#070d18_100%)]" />
-            {/* gelber Lichtkegel in Event-Farbe */}
-            <div className="absolute -top-1/3 right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#EFD500]/10 blur-3xl" />
-            <div className="absolute inset-0 grid-pattern opacity-40" />
-          </div>
-
-          <div className={`hero-event-dark relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-6 sm:pb-10 md:pb-12 ${contentClass(1)}`}>
-            <div className="max-w-3xl">
-              <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-[#EFD500] font-medium mb-5">
-                {ev.eyebrow}
-              </span>
-
-              <InnovationDaysLogo lang={lang} className="mb-7 sm:mb-9" />
-
-              <h2 className="font-display font-bold text-[clamp(1.75rem,5vw,3.5rem)] leading-[1.08] tracking-[-0.02em] text-white mb-4 sm:mb-5">
-                {ev.headline}
-              </h2>
-              <p className="inline-flex items-center gap-2.5 rounded-full border border-[#EFD500]/40 bg-[#EFD500]/10 px-4 py-1.5 text-sm sm:text-base font-semibold tracking-wide text-[#EFD500] mb-4 sm:mb-5">
-                <CalendarDays className="w-4 h-4 shrink-0" aria-hidden="true" />
-                {ev.date}
-              </p>
-              <p className="text-base sm:text-lg text-white/70 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
-                {ev.body}
-              </p>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-                <a
-                  href={eventInquiryMail}
-                  className="btn-primary-dark"
-                  onClick={() =>
-                    trackEvent('hero_contact_click', {
-                      placement: 'home_hero_innovationstage',
-                      lang,
-                      target: 'eli@asamer.net',
-                    })
-                  }
-                >
-                  {ev.cta}
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* ── Slide 3 — Barbaric Vakuumheber, Vollbild-Hintergrundbild ── */}
+        {/* ── Slide 2 — Barbaric Vakuumheber, Vollbild-Hintergrundbild ── */}
         <div className="relative w-full shrink-0 flex items-center">
           <div className="absolute inset-0 overflow-hidden bg-[#eef1f6]">
-            <div className={kenBurns(2)} style={kenBurnsStyle(VACUUM_IMAGE)} />
+            <div className={kenBurns(1)} style={kenBurnsStyle(VACUUM_IMAGE)} />
             {/* Lesbarkeits-Verlauf: links deckend hell, rechts Bild sichtbar */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#eef1f6] via-[#eef1f6]/85 to-[#eef1f6]/25" />
           </div>
 
-          <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-10 ${contentClass(2)}`}>
+          <div className={`relative z-10 w-full container-wide pt-20 sm:pt-28 md:pt-32 pb-10 ${contentClass(1)}`}>
             <div className="max-w-2xl">
               <span className="inline-block text-xs sm:text-sm uppercase tracking-[0.2em] text-primary font-medium mb-5">
                 {tr('Barbaric · Vakuum-Handling für Holz', 'Barbaric · Vacuum handling for wood', 'Barbaric · Vakuová manipulace se dřevem')}

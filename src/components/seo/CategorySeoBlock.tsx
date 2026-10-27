@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import type { CategorySeoContent, MultiLangText } from '../../data/seo/types';
 import type { Language } from '../../i18n';
@@ -8,6 +7,12 @@ interface Props {
   content: CategorySeoContent;
   lang: Language;
   tr: (de: string, en: string, cz: string) => string;
+  /**
+   * Bereits lokalisierte Zusatzfragen (z. B. der ABS-Abschnitt auf CZ/SK).
+   * Landen im selben FAQ und im selben FAQPage-Schema — zwei FAQPage-Bloecke
+   * auf einer Seite wertet Google nicht aus.
+   */
+  extraFaq?: { question: string; answer: string }[];
 }
 
 const ml = (obj: MultiLangText, lang: Language): string => {
@@ -18,11 +23,12 @@ const ml = (obj: MultiLangText, lang: Language): string => {
   return obj.en;
 };
 
-const CategorySeoBlock = ({ content, lang, tr }: Props) => {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const faqSchema = content.faq.length > 0
-    ? faqPageSchema(content.faq.map((f) => ({ question: ml(f.question, lang), answer: ml(f.answer, lang) })))
-    : null;
+const CategorySeoBlock = ({ content, lang, tr, extraFaq = [] }: Props) => {
+  const faq = [
+    ...content.faq.map((f) => ({ question: ml(f.question, lang), answer: ml(f.answer, lang) })),
+    ...extraFaq,
+  ];
+  const faqSchema = faq.length > 0 ? faqPageSchema(faq) : null;
 
   return (
     <section className="container-wide py-14 border-t border-white/5">
@@ -61,7 +67,7 @@ const CategorySeoBlock = ({ content, lang, tr }: Props) => {
       )}
 
       {/* FAQ */}
-      {content.faq.length > 0 && (
+      {faq.length > 0 && (
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-5">
             <div className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary">
@@ -71,43 +77,31 @@ const CategorySeoBlock = ({ content, lang, tr }: Props) => {
               {tr('Häufige Fragen', 'FAQ', 'Časté dotazy')}
             </h2>
           </div>
+          {/*
+            <details> statt Zustand in React: die Antworten stehen damit im
+            prerenderten HTML. Vorher wurde eine Antwort erst nach dem Klick
+            gerendert — Crawler ohne JavaScript (und KI-Crawler lesen nur das
+            HTML) sahen die Fragen, aber keine einzige Antwort.
+          */}
           <div className="space-y-2.5">
-            {content.faq.map((item, i) => {
-              const isOpen = openFaq === i;
-              return (
-                <div
-                  key={i}
-                  className={`rounded-xl border transition-colors ${
-                    isOpen
-                      ? 'border-primary/30 bg-primary/[0.04]'
-                      : 'border-white/8 bg-white/[0.02] hover:border-white/15'
-                  }`}
-                >
-                  <button
-                    type="button"
-                    onClick={() => setOpenFaq(isOpen ? null : i)}
-                    className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
-                    aria-expanded={isOpen}
-                  >
-                    <span className="text-[15px] font-medium text-white/90">
-                      {ml(item.question, lang)}
-                    </span>
-                    <ChevronDown
-                      className={`w-4 h-4 text-white/40 shrink-0 transition-transform duration-200 ${
-                        isOpen ? 'rotate-180 text-primary' : ''
-                      }`}
-                    />
-                  </button>
-                  {isOpen && (
-                    <div className="px-5 pb-5">
-                      <p className="text-[14px] text-white/70 leading-[1.75]">
-                        {ml(item.answer, lang)}
-                      </p>
-                    </div>
-                  )}
+            {faq.map((item, i) => (
+              <details
+                key={i}
+                className="group rounded-xl border transition-colors border-white/8 bg-white/[0.02] hover:border-white/15 open:border-primary/30 open:bg-primary/[0.04]"
+              >
+                <summary className="w-full flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left [&::-webkit-details-marker]:hidden">
+                  <span className="text-[15px] font-medium text-white/90">
+                    {item.question}
+                  </span>
+                  <ChevronDown className="w-4 h-4 text-white/40 shrink-0 transition-transform duration-200 group-open:rotate-180 group-open:text-primary" />
+                </summary>
+                <div className="px-5 pb-5">
+                  <p className="text-[14px] text-white/70 leading-[1.75]">
+                    {item.answer}
+                  </p>
                 </div>
-              );
-            })}
+              </details>
+            ))}
           </div>
         </div>
       )}

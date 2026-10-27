@@ -144,10 +144,11 @@ export function compileSource(source: string): { re: RegExp; keys: string[] } {
 export class VercelRouter {
   private compiled: Compiled[];
   private rewrites: { re: RegExp; keys: string[]; destination: string }[];
-  readonly trailingSlash: boolean;
+  readonly trailingSlash: boolean | undefined;
 
   constructor(config: VercelConfig) {
-    this.trailingSlash = config.trailingSlash ?? false;
+    // `undefined` heisst bei Vercel: keine Schraegstrich-Normalisierung.
+    this.trailingSlash = config.trailingSlash;
     this.compiled = (config.redirects ?? []).map((rule) => {
       const { re, keys } = compileSource(rule.source);
       return { re, keys, rule };
@@ -182,6 +183,21 @@ export class VercelRouter {
       return { destination, rule };
     }
     return null;
+  }
+
+  /**
+   * Naechster Sprung so, wie Vercel ihn ausfuehrt: erst `trailingSlash`
+   * (Vercel stellt diese Regel *vor* die `redirects`), dann die erste passende
+   * Redirect-Regel. `null`, wenn der Pfad ohne Weiterleitung beantwortet wird.
+   */
+  nextHop(pathname: string, host?: string): { status: number; location: string } | null {
+    if (this.trailingSlash === false && pathname.length > 1 && pathname.endsWith('/')) {
+      return { status: 308, location: pathname.replace(/\/+$/, '') || '/' };
+    }
+    const hit = this.matchRedirect(pathname, host);
+    if (!hit) return null;
+    const status = hit.rule.statusCode ?? (hit.rule.permanent === false ? 307 : 308);
+    return { status, location: hit.destination };
   }
 
   hasCatchAllRewrite(): boolean {

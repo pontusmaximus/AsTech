@@ -4,6 +4,7 @@ import { useLanguage } from '../App';
 import { translatePageText } from '../i18n/pageTextTranslations';
 import { buildMailto } from '../lib/email';
 import SeoHead from '../seo/SeoHead';
+import { buildOttCategoryPath } from '../data/ottProducts';
 import { faqPageSchema } from '../seo/structuredData';
 
 const GuidePurVsEvaPage = () => {
@@ -485,7 +486,7 @@ const GuidePurVsEvaPage = () => {
               </div>
               <div className="mt-4">
                 <Link
-                  to={buildPath('/ott')}
+                  to={buildPath(buildOttCategoryPath(lang, 'edgebanding'))}
                   className="inline-flex items-center gap-2 text-primary text-sm font-medium hover:underline"
                 >
                   {tr('Alle OTT-Kantenanleimmaschinen ansehen', 'View all OTT edgebanders', 'Zobrazit olepovačky hran OTT')}
@@ -576,7 +577,7 @@ const GuidePurVsEvaPage = () => {
                   {tr('Beratung anfragen', 'Request consultation', 'Poptat poradenství')}
                   <ArrowRight className="w-5 h-5" />
                 </a>
-                <Link to={buildPath('/ott')} className="btn-outline-dark justify-center">
+                <Link to={buildPath(buildOttCategoryPath(lang, 'edgebanding'))} className="btn-outline-dark justify-center">
                   {tr('OTT-Kantenanleimmaschinen', 'OTT edgebanders', 'Olepovačky hran OTT')}
                   <ArrowRight className="w-5 h-5" />
                 </Link>

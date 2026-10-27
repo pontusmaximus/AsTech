@@ -1,6 +1,15 @@
 /**
  * Used (pre-owned) machines inventory for asamer.cz.
  * Each machine has its own detail page at /pouzite-stroje/:slug (and language variants).
+ *
+ * Verkaufte Maschine entfernen — feste Regel seit Oktober 2026:
+ *   1. Eintrag aus USED_MACHINES loeschen.
+ *   2. Slug und Kategorie in RETIRED_USED_MACHINES (unten) eintragen.
+ *   3. `npm run generate:vercel` — erzeugt fuer alle fuenf Sprachfassungen eine
+ *      301 auf die passende Gebrauchtmaschinen-Seite (USED_CATEGORY_PAGES, sonst
+ *      die Uebersicht /pouzite-stroje). Nie eine 404.
+ * Vergessen faellt auf: `npm run seo:404-safety -- --fail` (laeuft in CI) meldet
+ * jede URL der Sitemap von origin/main, die weder Datei noch Weiterleitung hat.
  */
 
 import type { Language } from '../i18n';
@@ -8,9 +17,17 @@ import type { MultiLangText, SeoFaqItem } from './seo/types';
 
 export type UsedMachineStatus = 'available' | 'sold';
 
+/**
+ * Maschinengattung. Bestimmt, auf welche Gebrauchtmaschinen-Seite eine
+ * Maschine gehoert — und wohin ihre URL per 301 zeigt, wenn sie verkauft und
+ * entfernt wird (siehe `RETIRED_USED_MACHINES` unten).
+ */
+export type UsedMachineCategory = 'edgebanding' | 'panel-saw' | 'drying';
+
 export interface UsedMachine {
   /** URL slug (always lowercase, hyphens, no diacritics). Used as part of detail URL. */
   slug: string;
+  category: UsedMachineCategory;
   manufacturer: string;
   name: string;
   year?: number;
@@ -44,6 +61,7 @@ export interface UsedMachine {
 export const USED_MACHINES: UsedMachine[] = [
   {
     slug: 'ott-tornado-top',
+    category: 'edgebanding',
     manufacturer: 'OTT',
     name: 'Tornado Top',
     year: 2011,
@@ -115,6 +133,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'schelling-fh4-330-220-automatic',
+    category: 'panel-saw',
     manufacturer: 'SCHELLING',
     name: 'FH 4 330 220 automatic',
     year: 2015,
@@ -177,6 +196,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'gabbiani-pt',
+    category: 'panel-saw',
     manufacturer: 'Gabbiani',
     name: 'PT',
     year: 2021,
@@ -225,6 +245,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'scm-stefani-md',
+    category: 'edgebanding',
     manufacturer: 'SCM Stefani',
     name: 'MD',
     year: 2022,
@@ -285,6 +306,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'scm-stefani-kd',
+    category: 'edgebanding',
     manufacturer: 'SCM Stefani',
     name: 'KD',
     year: 2024,
@@ -348,6 +370,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'holz-her-sprint-1329',
+    category: 'edgebanding',
     manufacturer: 'HOLZ-HER',
     name: 'SPRINT 1329 multi',
     year: 2020,
@@ -428,6 +451,7 @@ export const USED_MACHINES: UsedMachine[] = [
   },
   {
     slug: 'muehlbock-trocknungskammern-typ-1002',
+    category: 'drying',
     manufacturer: 'Mühlbock',
     name: 'Trocknungskammern Typ 1002',
     condition: { de: 'gebraucht', en: 'used', cz: 'použité', sk: 'použité', hu: 'használt' },
@@ -525,3 +549,47 @@ export const getUsedMachineBySlug = (slug: string | undefined): UsedMachine | un
   slug ? machinesBySlug.get(slug) : undefined;
 
 export const ALL_USED_MACHINE_SLUGS = USED_MACHINES.map((m) => m.slug);
+
+/* ------------------------------------------------------------------ */
+/*  Gebrauchtmaschinen-Seiten je Kategorie                             */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Kategorien mit eigener Gebrauchtmaschinen-Seite, als kanonischer Slug (wie
+ * die Schluessel in `SLUG_TRANSLATIONS`). Kategorien ohne Eintrag gehoeren auf
+ * die Uebersicht /pouzite-stroje.
+ */
+export const USED_CATEGORY_PAGES: Partial<Record<UsedMachineCategory, string>> = {
+  edgebanding: '/pouzite-stroje/olepovacky-hran',
+};
+
+/** Kanonischer Slug der Gebrauchtmaschinen-Seite, auf die eine Kategorie gehoert. */
+export const usedCategoryPageSlug = (category: UsedMachineCategory): string =>
+  USED_CATEGORY_PAGES[category] ?? '/pouzite-stroje';
+
+export const getUsedMachinesByCategory = (category: UsedMachineCategory): UsedMachine[] =>
+  USED_MACHINES.filter((m) => m.category === category);
+
+/* ------------------------------------------------------------------ */
+/*  Verkaufte und entfernte Maschinen                                  */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Maschinen, deren Detailseite es nicht mehr gibt. Jede bekommt in
+ * `scripts/generate-vercel-config.ts` eine 301 je Sprache auf
+ * `usedCategoryPageSlug(category)`. Eintraege bleiben stehen — die alten URLs
+ * haben Backlinks und stehen in Suchindizes.
+ */
+export interface RetiredUsedMachine {
+  slug: string;
+  category: UsedMachineCategory;
+  /** Wann entfernt — nur zur Nachvollziehbarkeit. */
+  removed: string;
+}
+
+export const RETIRED_USED_MACHINES: RetiredUsedMachine[] = [
+  // Beide lieferten bis Oktober 2026 eine 404 (Search Console, Befund 14.10.2026).
+  { slug: 'holz-her-1308xl-power', category: 'edgebanding', removed: 'vor 2026-10' },
+  { slug: 'scm-stefani-solution-md', category: 'edgebanding', removed: 'vor 2026-10' },
+];
+

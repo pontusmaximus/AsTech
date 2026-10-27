@@ -228,6 +228,13 @@ const UsedMachinesPage = () => {
                 'Vybrané stroje ze skladu. Každá nabídka je technicky ověřena a má jasně uvedený stav.'
               )}
             </p>
+            <Link
+              to={buildPath('/pouzite-stroje/olepovacky-hran')}
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 text-sm text-white/80 hover:text-white hover:border-primary/40 transition-colors"
+            >
+              {tr('Gebrauchte Kantenanleimmaschinen', 'Used edgebanding machines', 'Použité olepovačky hran')}
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>

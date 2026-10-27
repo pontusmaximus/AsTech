@@ -1,132 +1,607 @@
 {
   "$comment": [
-    "Automatisch erzeugt von scripts/content-lastmod.ts, wenn die Git-Historie brauchbare",
-    "Aenderungsdaten liefert. Wird von scripts/generate-sitemap.ts als <lastmod> benutzt, wenn",
-    "das im Build nicht der Fall ist (z. B. flacher Klon bei Vercel).",
-    "Nicht von Hand bearbeiten — nach einem lokalen Build mitcommitten."
+    "Automatisch erzeugt von scripts/content-lastmod.ts bei jedem Build — nicht von Hand bearbeiten.",
+    "Je Seite das Datum der letzten Inhaltsaenderung und ein Fingerprint des Inhalts. Solange der",
+    "Fingerprint gleich bleibt, bleibt das Datum — auch im flachen Klon bei Vercel.",
+    "Nach einem Build mit geaenderten Inhalten mitcommitten (CI prueft das)."
   ],
-  "generatedFrom": "git log -1 --format=%cI je beitragender Inhaltsdatei",
+  "generatedFrom": "sha1 je Seite ueber Daten-JSON und Seitenkomponenten; Datum bei Aenderung aus Git bzw. Build",
   "entries": {
-    "product:barbaric:blech-plexiglas-traverse": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:csf-industrial": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:csf-industrial-turen": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:csf-multilevel": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:csf-professional": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:drx": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:duennplattentraverse": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:fachwerksbruecke-2d": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:fachwerksbruecke-3d": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:lcv-performance": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:lps": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:ngr-needlegripper": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:nst": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:pbx": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:rts-compact": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:rts-industrial": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:rts-professional": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:rwl-racklifter": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:sonderanwendungen": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:ssk-saeulenschwenkkran": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:ssy-schienensystem": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:swl-griplifter": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:swl-planklifter": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:teilehandling": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:tmp": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:tuerentraverse": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:uwl-1": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:uwl-1s": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:uwl-3": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:uwl-3j": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:uwl-3s": "2026-08-28T22:46:07+00:00",
-    "product:barbaric:uwl-5": "2026-08-28T22:46:07+00:00",
-    "product:gannomat:basica": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:concept-easy": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:concept-eco": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:concept-primus": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:db-21-27-35": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:db-21-27-35-wa": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:elite": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:expert": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:express-807": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:express-s1": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:express-s1-cnc": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:express-s1-rta": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:express-s2": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:express-s2-rta": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:express-s3": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:express-s4": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:express-s5": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:index-dw-reihe-cnc": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:index-reihe-cnc": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:injecta": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:injecta-hd": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:junior-323": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:korpus-montagelinie": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:leimfix": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:lift": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:lift-jumper": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:master-325": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:mod-160": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:proline-50": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:protec-profit": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:red-baron-p": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:selekta": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:selekta-hd": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:spectrum": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:twin": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:vantage": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:variabel": "2026-08-28T22:56:18+00:00",
-    "product:gannomat:vector-cnc": "2026-08-28T22:56:18+00:00",
-    "product:mayer:advanced-line-100": "2026-08-28T22:41:06+00:00",
-    "product:mayer:advanced-line-130": "2026-08-28T22:41:06+00:00",
-    "product:mayer:advanced-line-160": "2026-08-28T22:41:06+00:00",
-    "product:mayer:advanced-line-160-turn": "2026-08-28T22:41:06+00:00",
-    "product:mayer:advanced-line-200": "2026-08-28T22:41:06+00:00",
-    "product:mayer:advanced-line-250": "2026-08-28T22:41:06+00:00",
-    "product:mayer:kappa-automatic-100": "2026-08-28T22:41:06+00:00",
-    "product:mayer:kappa-automatic-120": "2026-08-28T22:41:06+00:00",
-    "product:mayer:kappa-automatic-140": "2026-08-28T22:41:06+00:00",
-    "product:mayer:kappa-automatic-80": "2026-08-28T22:41:06+00:00",
-    "product:mayer:winkelanlagen": "2026-08-28T22:41:06+00:00",
-    "product:ott:bluedge": "2026-08-29T00:03:48+02:00",
-    "product:ott:combimelt": "2026-08-29T00:03:48+02:00",
-    "product:ott:door-edition": "2026-08-29T00:03:48+02:00",
-    "product:ott:flexedge": "2026-08-29T00:03:48+02:00",
-    "product:ott:pacific-plus": "2026-08-29T00:03:48+02:00",
-    "product:ott:storm-plus": "2026-08-29T00:03:48+02:00",
-    "product:ott:strongedge": "2026-08-29T00:03:48+02:00",
-    "product:ott:topedge": "2026-08-29T00:03:48+02:00",
-    "product:ott:tornado-plus": "2026-08-29T00:03:48+02:00",
-    "product:ott:transcompact": "2026-08-29T00:03:48+02:00",
-    "product:ott:transedge": "2026-08-29T00:03:48+02:00",
-    "product:ott:translift": "2026-08-29T00:03:48+02:00",
-    "static:barbaric": "2026-08-28T22:46:07+00:00",
-    "static:contact": "2026-08-28T09:05:44+00:00",
-    "static:faq": "2026-08-28T22:41:06+00:00",
-    "static:financing": "2026-08-28T09:05:44+00:00",
-    "static:gannomat": "2026-08-28T22:56:18+00:00",
-    "static:guideEdgebander": "2026-08-28T23:44:42+02:00",
-    "static:guideFundingCz": "2026-08-28T09:05:44+00:00",
-    "static:guidePanelSawComparison": "2026-08-28T09:05:44+00:00",
-    "static:guidePurVsEva": "2026-08-28T09:05:44+00:00",
-    "static:guideVacuumLifter": "2026-08-28T09:05:44+00:00",
-    "static:guideWarehouseAutomation": "2026-08-28T09:05:44+00:00",
-    "static:home": "2026-08-28T09:05:44+00:00",
-    "static:imaSchelling": "2026-08-28T09:05:44+00:00",
-    "static:imprint": "2026-08-28T09:05:44+00:00",
-    "static:mayer": "2026-08-28T22:41:06+00:00",
-    "static:ott": "2026-08-29T00:03:48+02:00",
-    "static:privacy": "2026-08-28T09:05:44+00:00",
-    "static:service": "2026-08-28T09:05:44+00:00",
-    "static:solutions": "2026-08-28T09:05:44+00:00",
-    "static:terms": "2026-08-28T09:05:44+00:00",
-    "static:usedMachines": "2026-08-28T09:05:44+00:00",
-    "used:gabbiani-pt": "2026-08-11T22:07:16+02:00",
-    "used:holz-her-sprint-1329": "2026-08-11T22:07:16+02:00",
-    "used:muehlbock-trocknungskammern-typ-1002": "2026-08-11T22:07:16+02:00",
-    "used:ott-tornado-top": "2026-08-11T22:07:16+02:00",
-    "used:schelling-fh4-330-220-automatic": "2026-08-11T22:07:16+02:00",
-    "used:scm-stefani-kd": "2026-08-11T22:07:16+02:00",
-    "used:scm-stefani-md": "2026-08-11T22:07:16+02:00"
+    "category:barbaric:buffer": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "9aca8b4a3a14600e"
+    },
+    "category:barbaric:door": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "150493d07132f3d3"
+    },
+    "category:barbaric:feeding": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "54b17f06e873c917"
+    },
+    "category:barbaric:labeling": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "70da702e473b1095"
+    },
+    "category:barbaric:nesting": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "d09a0ae997f96ffa"
+    },
+    "category:barbaric:return": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "f8d87ab3355a56ff"
+    },
+    "category:barbaric:storage": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "4b91c4ec9a9b892b"
+    },
+    "category:barbaric:vacuum-cranes": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "8dbd773167b1eb9c"
+    },
+    "category:barbaric:vacuum-lifters": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "9885f7c895854eae"
+    },
+    "category:barbaric:vacuum-special": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "265ba6b42ff7d169"
+    },
+    "category:barbaric:vacuum-traverses": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "d3014b60bb95c671"
+    },
+    "category:gannomat:boring": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "324d023dd722f3ad"
+    },
+    "category:gannomat:carcass": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "3f2b44fef1ae1e68"
+    },
+    "category:gannomat:cornerhinge": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "753c713f1ed845ed"
+    },
+    "category:gannomat:fitting": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "e6da3933d656ece3"
+    },
+    "category:gannomat:frame": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "cae315eb2cf0c42d"
+    },
+    "category:gannomat:gluing": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "6981a5772ab5739e"
+    },
+    "category:gannomat:insertion": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "0582588febbe8419"
+    },
+    "category:gannomat:insertion_door": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "684a052d66823773"
+    },
+    "category:gannomat:machining": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "8b7759c27cefdca0"
+    },
+    "category:gannomat:rowboring": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "e2686650ffe1aa47"
+    },
+    "category:mayer:advanced": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "54695eae27d96fcd"
+    },
+    "category:mayer:industrial": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "f319514ee4df9c72"
+    },
+    "category:mayer:kappa": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "be232f75a1e1c232"
+    },
+    "category:ott:edgebanding": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "4b2e3779b4b8b209"
+    },
+    "category:ott:gluing": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "157f553de96c47fc"
+    },
+    "category:ott:return": {
+      "lastmod": "2026-10-14T22:50:19Z",
+      "hash": "6cca510a67138f23"
+    },
+    "product:barbaric:blech-plexiglas-traverse": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "2f2085f2fe78baa5"
+    },
+    "product:barbaric:csf-industrial": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "6e452726d691c3f9"
+    },
+    "product:barbaric:csf-industrial-turen": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "dc12c36c479f9906"
+    },
+    "product:barbaric:csf-multilevel": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "e734d0481a72e583"
+    },
+    "product:barbaric:csf-professional": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "191deface32a14d8"
+    },
+    "product:barbaric:drx": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "96e41259bd1df731"
+    },
+    "product:barbaric:duennplattentraverse": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "fa9d889ec24355fd"
+    },
+    "product:barbaric:fachwerksbruecke-2d": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "a2449ccb0ef5faac"
+    },
+    "product:barbaric:fachwerksbruecke-3d": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "dc1cfa1979c127bd"
+    },
+    "product:barbaric:lcv-performance": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "821bd01ea67f9768"
+    },
+    "product:barbaric:lps": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "ea6c7344205a10b1"
+    },
+    "product:barbaric:ngr-needlegripper": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "75a90070543f75eb"
+    },
+    "product:barbaric:nst": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "fa815d644a98cbe6"
+    },
+    "product:barbaric:pbx": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "4e0738d24d060ae8"
+    },
+    "product:barbaric:rts-compact": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "69eaa2b27f34bccd"
+    },
+    "product:barbaric:rts-industrial": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "b48567f90b85ccf4"
+    },
+    "product:barbaric:rts-professional": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "8bbd50d616e968ef"
+    },
+    "product:barbaric:rwl-racklifter": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "4262273d21170db8"
+    },
+    "product:barbaric:sonderanwendungen": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "a442f4104397a71e"
+    },
+    "product:barbaric:ssk-saeulenschwenkkran": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "789ed38e9d796804"
+    },
+    "product:barbaric:ssy-schienensystem": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "f3af058ef1bf5dbe"
+    },
+    "product:barbaric:swl-griplifter": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "9ea0ea91d9c436f4"
+    },
+    "product:barbaric:swl-planklifter": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "323b1b17747c6137"
+    },
+    "product:barbaric:teilehandling": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "ef6ca52db5a43bdb"
+    },
+    "product:barbaric:tmp": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "c33dea82ccea8b6a"
+    },
+    "product:barbaric:tuerentraverse": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "82536af674fa73c1"
+    },
+    "product:barbaric:uwl-1": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "5d8ae54053c3c250"
+    },
+    "product:barbaric:uwl-1s": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "e6cc4d9b7fb81693"
+    },
+    "product:barbaric:uwl-3": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "5b6b354a37fd7348"
+    },
+    "product:barbaric:uwl-3j": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "e67bf51e88dad465"
+    },
+    "product:barbaric:uwl-3s": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "7c15391e862a919f"
+    },
+    "product:barbaric:uwl-5": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "a9fff5d21d32b449"
+    },
+    "product:gannomat:basica": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "9457fe16b1b58e0b"
+    },
+    "product:gannomat:concept-easy": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "1680d23ca6659008"
+    },
+    "product:gannomat:concept-eco": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "465b83daf36405bc"
+    },
+    "product:gannomat:concept-primus": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "5530a419bb012240"
+    },
+    "product:gannomat:db-21-27-35": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "6911efb681498964"
+    },
+    "product:gannomat:db-21-27-35-wa": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "b4b181ea9cb265c4"
+    },
+    "product:gannomat:elite": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "fe04445bf3c50e4b"
+    },
+    "product:gannomat:expert": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "020866c819f98d70"
+    },
+    "product:gannomat:express-807": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "262422693fd2659d"
+    },
+    "product:gannomat:express-s1": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "71d61bb434897c92"
+    },
+    "product:gannomat:express-s1-cnc": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "808937485d1ec057"
+    },
+    "product:gannomat:express-s1-rta": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "f15c551457713e30"
+    },
+    "product:gannomat:express-s2": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "8ff3c7a3a6dc08f2"
+    },
+    "product:gannomat:express-s2-rta": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "c332acaa0dfc7062"
+    },
+    "product:gannomat:express-s3": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "716e122b5803e948"
+    },
+    "product:gannomat:express-s4": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "2a66cea4e77b97e0"
+    },
+    "product:gannomat:express-s5": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "c96bc4cb5b64d833"
+    },
+    "product:gannomat:index-dw-reihe-cnc": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "ba7311f2038695c6"
+    },
+    "product:gannomat:index-reihe-cnc": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "2268386f14334460"
+    },
+    "product:gannomat:injecta": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "d3cb6873c547d1a7"
+    },
+    "product:gannomat:injecta-hd": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "5210a52df21ed3f2"
+    },
+    "product:gannomat:junior-323": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "126f9535af2ecef2"
+    },
+    "product:gannomat:korpus-montagelinie": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "21b94cbdd0c52a9a"
+    },
+    "product:gannomat:leimfix": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "a6e93267b750cd43"
+    },
+    "product:gannomat:lift": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "dbc6531a3f08f3f5"
+    },
+    "product:gannomat:lift-jumper": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "ae9a898d1d0554b7"
+    },
+    "product:gannomat:master-325": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "3a189832264f9836"
+    },
+    "product:gannomat:mod-160": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "c49f21dfb5b4f56c"
+    },
+    "product:gannomat:proline-50": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "d3f29204f12a9468"
+    },
+    "product:gannomat:protec-profit": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "cf740f3fc9fa0dd8"
+    },
+    "product:gannomat:red-baron-p": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "f8bca82b8daaa38e"
+    },
+    "product:gannomat:selekta": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "adeb9880ca702b7e"
+    },
+    "product:gannomat:selekta-hd": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "1253a57fedb7f4e5"
+    },
+    "product:gannomat:spectrum": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "b5d901ce8bd427b7"
+    },
+    "product:gannomat:twin": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "84018ef767cf6f5f"
+    },
+    "product:gannomat:vantage": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "6c1922dccc5f3ed1"
+    },
+    "product:gannomat:variabel": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "660b9cf7b5f5659d"
+    },
+    "product:gannomat:vector-cnc": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "e5fda6b377615c42"
+    },
+    "product:mayer:advanced-line-100": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "2e255b30a2318059"
+    },
+    "product:mayer:advanced-line-130": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "2f3db24eab6b3cda"
+    },
+    "product:mayer:advanced-line-160": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "60247db42411f14b"
+    },
+    "product:mayer:advanced-line-160-turn": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "a9256ad4e03fab08"
+    },
+    "product:mayer:advanced-line-200": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "ce3f21074d2cb256"
+    },
+    "product:mayer:advanced-line-250": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "e007d49185684356"
+    },
+    "product:mayer:kappa-automatic-100": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "3744cee4e122a2f9"
+    },
+    "product:mayer:kappa-automatic-120": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "f830a931629eac85"
+    },
+    "product:mayer:kappa-automatic-140": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "42c6d669f6e9384c"
+    },
+    "product:mayer:kappa-automatic-80": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "da36dae1a309ff71"
+    },
+    "product:mayer:winkelanlagen": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "90c5783fc1b081a4"
+    },
+    "product:ott:bluedge": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "044da9fcc8e546a2"
+    },
+    "product:ott:combimelt": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "fb414654e3eb0461"
+    },
+    "product:ott:door-edition": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "f9367a1b48d22642"
+    },
+    "product:ott:flexedge": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "99ea5d6e9a4ae0be"
+    },
+    "product:ott:pacific-plus": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "494917b1880dedaf"
+    },
+    "product:ott:storm-plus": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "6bd62a38e9db6ee3"
+    },
+    "product:ott:strongedge": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "ccea6ef0e183f7aa"
+    },
+    "product:ott:topedge": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "7dba58025a34eb81"
+    },
+    "product:ott:tornado-plus": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "0368fd9c203e36c3"
+    },
+    "product:ott:transcompact": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "bdd67eaee7fedb69"
+    },
+    "product:ott:transedge": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "66226f645443b71b"
+    },
+    "product:ott:translift": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "4073109f8de50b29"
+    },
+    "static:barbaric": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "b1d28b70d89ee611"
+    },
+    "static:contact": {
+      "lastmod": "2026-10-14T22:33:28Z",
+      "hash": "9cd4ba544d9aeb95"
+    },
+    "static:faq": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "a3a8ccd58bbea59c"
+    },
+    "static:financing": {
+      "lastmod": "2026-08-24T23:19:14Z",
+      "hash": "0dee953bfbb20b99"
+    },
+    "static:gannomat": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "75932dbd86839c59"
+    },
+    "static:guideEdgebander": {
+      "lastmod": "2026-10-14T22:29:15Z",
+      "hash": "744fb6619b0c791a"
+    },
+    "static:guideFundingCz": {
+      "lastmod": "2026-10-14T22:29:15Z",
+      "hash": "0137dcd7cd91a14f"
+    },
+    "static:guidePanelSawComparison": {
+      "lastmod": "2026-10-14T22:29:15Z",
+      "hash": "80510f73784a9ea4"
+    },
+    "static:guidePurVsEva": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "8f2d69500c3b88df"
+    },
+    "static:guideVacuumLifter": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "fbd471ed065b69a2"
+    },
+    "static:guideWarehouseAutomation": {
+      "lastmod": "2026-08-24T23:19:14Z",
+      "hash": "59c5c9acf1892989"
+    },
+    "static:home": {
+      "lastmod": "2026-10-25T22:26:55Z",
+      "hash": "2e49e9a3d35251c6"
+    },
+    "static:imaSchelling": {
+      "lastmod": "2026-08-24T23:19:14Z",
+      "hash": "d433a58e3eed5ea7"
+    },
+    "static:imprint": {
+      "lastmod": "2026-04-08T16:00:22Z",
+      "hash": "c909f2cbe2c9f847"
+    },
+    "static:mayer": {
+      "lastmod": "2026-09-15T11:14:41Z",
+      "hash": "2d30efd9abafe3e5"
+    },
+    "static:ott": {
+      "lastmod": "2026-10-14T22:03:25Z",
+      "hash": "9be4f07c45cc0658"
+    },
+    "static:privacy": {
+      "lastmod": "2026-04-14T21:01:04Z",
+      "hash": "65726593e5bdb7c7"
+    },
+    "static:service": {
+      "lastmod": "2026-08-24T23:19:14Z",
+      "hash": "60f49db6e3828d31"
+    },
+    "static:solutions": {
+      "lastmod": "2026-08-24T23:19:14Z",
+      "hash": "d20953ebd1619e7c"
+    },
+    "static:terms": {
+      "lastmod": "2026-10-27T07:01:33Z",
+      "hash": "d21553b6c4f6b49b"
+    },
+    "static:usedEdgebanders": {
+      "lastmod": "2026-10-14T22:24:20Z",
+      "hash": "4da9630812e597ec"
+    },
+    "static:usedMachines": {
+      "lastmod": "2026-10-14T22:24:20Z",
+      "hash": "94dbc51de2ca241a"
+    },
+    "used:gabbiani-pt": {
+      "lastmod": "2026-10-14T22:24:20Z",
+      "hash": "b16485e418eb48a2"
+    },
+    "used:holz-her-sprint-1329": {
+      "lastmod": "2026-10-14T22:24:20Z",
+      "hash": "ec0a802740a38154"
+    },
+    "used:muehlbock-trocknungskammern-typ-1002": {
+      "lastmod": "2026-10-14T22:24:20Z",
+      "hash": "392965ee0b0c0773"
+    },
+    "used:ott-tornado-top": {
+      "lastmod": "2026-10-14T22:24:20Z",
+      "hash": "7d39da59dd749461"
+    },
+    "used:schelling-fh4-330-220-automatic": {
+      "lastmod": "2026-10-14T22:24:20Z",
+      "hash": "3b0577722a4f9112"
+    },
+    "used:scm-stefani-kd": {
+      "lastmod": "2026-10-14T22:24:20Z",
+      "hash": "dfaa65543fc3d2f4"
+    },
+    "used:scm-stefani-md": {
+      "lastmod": "2026-10-14T22:24:20Z",
+      "hash": "540ec6ea7b55c4a8"
+    }
   }
 }

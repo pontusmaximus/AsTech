@@ -1,0 +1,46 @@
+# IndexNow nach jedem Produktions-Deploy.
+#
+# Vercel meldet jedes fertige Deployment als deployment_status. Laeuft nur fuer
+# die Produktionsumgebung und nur bei Erfolg — ein Preview zu melden hiesse,
+# Suchmaschinen auf Inhalte zu schicken, die live noch nicht stehen.
+#
+# Gemeldet wird, was sich gegenueber dem letzten erfolgreichen Produktions-Deploy
+# in der Sitemap geaendert hat (neu, neues <lastmod>, entfernt). Empfaenger:
+# api.indexnow.org → Bing, Seznam, Yandex u. a.; Google nimmt an IndexNow nicht teil.
+# Einzelheiten: scripts/indexnow.ts, Schluessel: config/indexnow.json.
+
+name: IndexNow
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+  deployments: read
+
+jobs:
+  indexnow:
+    # Vercel benennt die Umgebung "Production" (bei mehreren Projekten auch
+    # "Production – <projekt>").
+    if: github.event.deployment_status.state == 'success' && startsWith(github.event.deployment.environment, 'Production')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha }}
+          # Der Vergleichsstand ist ein frueherer Commit — volle Historie noetig.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Geaenderte URLs melden
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          DEPLOY_SHA: ${{ github.event.deployment.sha }}
+          DEPLOY_ENVIRONMENT: ${{ github.event.deployment.environment }}
+        run: npx tsx scripts/indexnow.ts --since-last-production --to live --submit

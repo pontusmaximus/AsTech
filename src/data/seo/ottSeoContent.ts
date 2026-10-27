@@ -1814,6 +1814,23 @@ Az OTT gépcsalád jellegzetessége a következetes utólagos felszerelési lehe
           hu: 'Az ár a modelltől és a felszereltségtől függ. Keresse az Asamert egyéni árajánlatért. Szívesen készítünk testreszabott konfigurációt az Ön igényeihez.',
         },
       },
+      // Vom Marken-Hub /ott hierher umgezogen (Okt. 2026) — stand nur dort.
+      {
+        question: {
+          de: 'Bietet Asamer auch gebrauchte OTT Kantenanleimmaschinen?',
+          en: 'Does Asamer also offer used OTT edgebanding machines?',
+          cz: 'Nabízíte i použité olepovačky hran OTT?',
+          sk: 'Ponúkate aj použité olepovačky hrán OTT?',
+          hu: 'Kínál az Asamer használt OTT élzárógépeket is?',
+        },
+        answer: {
+          de: 'Ja. Asamer bietet neue und technisch geprüfte gebrauchte OTT Kantenanleimmaschinen inklusive Service und Montage in CZ, SK und HU.',
+          en: 'Yes. Asamer offers new and technically inspected used OTT edgebanding machines including service and installation in CZ, SK and HU.',
+          cz: 'Ano. Asamer nabízí nové i technicky prověřené použité olepovačky hran OTT včetně servisu a montáže v ČR, na Slovensku a v Maďarsku.',
+          sk: 'Áno. Asamer ponúka nové aj technicky preverené použité olepovačky hrán OTT vrátane servisu a montáže v ČR, na Slovensku a v Maďarsku.',
+          hu: 'Igen. Az Asamer új és műszakilag átvizsgált használt OTT élzárógépeket egyaránt kínál, szervizzel és telepítéssel Csehországban, Szlovákiában és Magyarországon.',
+        },
+      },
     ],
   },
 
