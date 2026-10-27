@@ -1,7 +1,7 @@
 /**
- * Verkaufs- und Lieferbedingungen der Asamer Technologie GmbH, Fassung vom 01.07.2023.
+ * Verkaufs- und Lieferbedingungen der Asamer Technologie GmbH, Fassung vom 27.10.2026.
  * Basis ist die Fassung vom 15.03.2019 ("AGBs OGS 2019 deutsch.pdf"); an die tschechische Fassung
- * „Podmínky prodeje a dodání" vom 1. 7. 2023 angeglichen sind Ziffer 3 c) (höhere Gewalt mit
+ * „Podmínky prodeje a dodání" angeglichen sind Ziffer 3 c) (höhere Gewalt mit
  * Ereigniskatalog), 7 b) (2/3 bei Versandbereitschaft statt 1/3 + Rest nach einem Monat) und
  * 14 (Haftungsgrenze € 1.000,00 statt € 500,00). Beide PDFs liegen unter public/downloads/.
  *
@@ -26,12 +26,12 @@ export type TermsSection = {
   clauses: TermsClause[];
 };
 
-export const TERMS_VERSION_DATE = '01.07.2023';
+export const TERMS_VERSION_DATE = '27.10.2026';
 
 /** Verbindliche deutsche Fassung und tschechische Fassung als PDF. */
 export const TERMS_PDF_PATHS: Partial<Record<TermsVersion, string>> = {
-  de: '/downloads/asamer-verkaufs-und-lieferbedingungen-2023.pdf',
-  cz: '/downloads/asamer-podminky-prodeje-a-dodani-2023.pdf',
+  de: '/downloads/asamer-verkaufs-und-lieferbedingungen-2026.pdf',
+  cz: '/downloads/asamer-podminky-prodeje-a-dodani-2026.pdf',
 };
 
 const t = (de: string, en: string, cz: string): TermsText => ({ de, en, cz });
