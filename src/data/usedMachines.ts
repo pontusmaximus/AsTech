@@ -60,78 +60,6 @@ export interface UsedMachine {
 
 export const USED_MACHINES: UsedMachine[] = [
   {
-    slug: 'ott-tornado-top',
-    category: 'edgebanding',
-    manufacturer: 'OTT',
-    name: 'Tornado Top',
-    year: 2011,
-    condition: { de: 'gut', en: 'good', cz: 'dobrý', sk: 'dobrý', hu: 'jó' },
-    status: 'available',
-    images: [
-      '/images/used-machines/ott-tornado-top-1.jpg',
-      '/images/used-machines/ott-tornado-top-2.jpg',
-    ],
-    shortDescription: {
-      de: 'Kantenleimmaschine mit 330.000 lfm Laufleistung.',
-      en: 'Edgebanding machine with 330,000 lfm of usage.',
-      cz: 'Olepovačka hran s nájezdem 330 000 lfm.',
-      sk: 'Olepovačka hrán s nájazdom 330 000 lfm.',
-      hu: 'Élzárógép 330 000 lfm futásteljesítménnyel.',
-    },
-    longDescription: {
-      de: `Die OTT Tornado Top aus Baujahr 2011 ist eine industrielle Kantenanleimmaschine, die sich durch hohe Durchsatzleistung und Zuverlässigkeit im Dauerbetrieb auszeichnet. Mit einer dokumentierten Laufleistung von 330.000 laufenden Metern hat die Maschine nur einen Bruchteil ihrer Lebenszeit hinter sich — typische OTT-Maschinen erreichen problemlos 2–3 Millionen lfm. Die Tornado Top war zu ihrer Zeit das Flaggschiff für anspruchsvolle Tischlereien und mittelständische Möbelbetriebe. Sie verarbeitet Kantenstärken bis 3 mm und Plattenstärken im üblichen Möbelbereich. Die Maschine kommt aus einem gepflegten Besitz und wurde vor Auslieferung technisch geprüft. Für Betriebe, die eine wirtschaftliche Alternative zum Neukauf der aktuellen OTT-Pacific+ oder Storm+ suchen, ist diese Tornado Top eine solide Wahl mit deutlichem Preisvorteil.`,
-      en: `The OTT Tornado Top from 2011 is an industrial edgebanding machine known for high throughput and reliability in continuous operation. With documented usage of 330,000 linear metres, the machine has used only a fraction of its service life — typical OTT machines easily reach 2–3 million lfm. The Tornado Top was, in its time, the flagship for demanding joinery shops and mid-sized furniture operations. It processes edge thicknesses up to 3 mm and panel thicknesses in the usual furniture range. The machine comes from well-maintained ownership and has been technically inspected before release. For operations seeking an economical alternative to buying a new OTT Pacific+ or Storm+, this Tornado Top is a solid choice with significant price advantage.`,
-      cz: `OTT Tornado Top z roku 2011 je průmyslová olepovačka hran, která vyniká vysokou průchodností a spolehlivostí v nepřetržitém provozu. S doloženým nájezdem 330 000 metrů běhu má stroj za sebou jen zlomek své životnosti — typické stroje OTT snadno dosahují 2–3 milionů lfm. Tornado Top byla ve své době vlajkovou lodí pro náročné truhlárny a středně velké nábytkářské provozy. Zpracovává hrany do tloušťky 3 mm a desky v běžném nábytkářském rozmezí. Stroj pochází z pečlivě udržovaného vlastnictví a byl před vydáním technicky zkontrolován. Pro provozy hledající ekonomickou alternativu k nákupu nové OTT Pacific+ nebo Storm+ je tato Tornado Top solidní volba s výrazným cenovým zvýhodněním.`,
-      sk: `OTT Tornado Top z roku 2011 je priemyselná olepovačka hrán, ktorá vyniká vysokou priechodnosťou a spoľahlivosťou v nepretržitej prevádzke. S doloženým nájazdom 330 000 metrov behu má stroj za sebou len zlomok svojej životnosti — typické stroje OTT ľahko dosahujú 2–3 milióny lfm. Tornado Top bola vo svojej dobe vlajkovou loďou pre náročné stolárstva a stredne veľké nábytkárske prevádzky. Pre prevádzky hľadajúce ekonomickú alternatívu k nákupu novej OTT Pacific+ alebo Storm+ je táto Tornado Top solídna voľba s výrazným cenovým zvýhodnením.`,
-      hu: `Az OTT Tornado Top 2011-es évjáratú ipari élzárógép, amely magas áteresztőképességgel és folyamatos üzemi megbízhatóságával tűnik ki. A dokumentált 330 000 folyóméteres használat a gép élettartamának töredéke — a tipikus OTT gépek könnyedén elérik a 2–3 millió folyómétert. A Tornado Top a maga idejében az igényes asztalosüzemek és közepes méretű bútorgyártók zászlóshajója volt. Élvastagságokat 3 mm-ig és a szokásos bútoripari laptartományt dolgozza fel. A gép gondosan karbantartott tulajdonosi körből származik, és átadás előtt műszaki ellenőrzésen esett át. Azoknak az üzemeknek, akik gazdaságos alternatívát keresnek új OTT Pacific+ vagy Storm+ vásárlása helyett, ez a Tornado Top megbízható választás jelentős árkedvezménnyel.`,
-    },
-    specs: [
-      { label: { de: 'Baujahr', en: 'Year', cz: 'Rok výroby', sk: 'Rok výroby', hu: 'Évjárat' }, value: '2011' },
-      { label: { de: 'Laufleistung', en: 'Usage', cz: 'Nájezd', sk: 'Nájazd', hu: 'Futásteljesítmény' }, value: '330.000 lfm' },
-      { label: { de: 'Typ', en: 'Type', cz: 'Typ', sk: 'Typ', hu: 'Típus' }, value: 'Industrielle Kantenleimmaschine' },
-      { label: { de: 'Zustand', en: 'Condition', cz: 'Stav', sk: 'Stav', hu: 'Állapot' }, value: 'Gut / Good' },
-    ],
-    buyingAdvice: {
-      de: 'Empfehlenswert für Betriebe, die einen bewährten Industriestandard suchen und die Budget-Ersparnis gegenüber einer neuen Pacific+ bevorzugen. Asamer prüft die Maschine vor Übergabe technisch und stellt gegen Aufpreis eine Transport- und Montageorganisation bereit.',
-      en: 'Recommended for operations seeking a proven industrial standard and prioritising budget savings over a new Pacific+. Asamer technically inspects the machine before handover and can organise transport and installation for an additional fee.',
-      cz: 'Doporučujeme pro provozy hledající osvědčený průmyslový standard, kteří dávají přednost úspoře rozpočtu před nákupem nové Pacific+. Asamer stroj před předáním technicky zkontroluje a za příplatek zajistí dopravu a montáž.',
-      sk: 'Odporúčame pre prevádzky hľadajúce osvedčený priemyselný štandard, ktorí uprednostňujú úsporu rozpočtu pred kúpou novej Pacific+. Asamer stroj pred odovzdaním technicky skontroluje a za príplatok zabezpečí dopravu a montáž.',
-      hu: 'Ajánlott olyan üzemeknek, amelyek megbízható ipari megoldást keresnek, és a költségvetés-megtakarítást részesítik előnyben egy új Pacific+ vásárlásával szemben. Az Asamer átadás előtt műszakilag ellenőrzi a gépet, és felár ellenében biztosítja a szállítást és telepítést.',
-    },
-    faq: [
-      {
-        question: { de: 'Was bedeutet 330.000 lfm Laufleistung?', en: 'What does 330,000 lfm usage mean?', cz: 'Co znamená nájezd 330 000 lfm?', sk: 'Čo znamená nájazd 330 000 lfm?', hu: 'Mit jelent a 330 000 lfm futásteljesítmény?' },
-        answer: {
-          de: 'lfm steht für "laufende Meter" und bezeichnet die Summe aller Kanten, die der Maschine durchlaufen sind. 330.000 lfm entspricht etwa einer durchschnittlichen Tagesnutzung von 2–3 Jahren — für eine Maschine von 2011 ist das ein sehr niedriger Wert.',
-          en: 'lfm stands for "linear metres" and represents the sum of all edges that have passed through the machine. 330,000 lfm corresponds to about 2–3 years of average daily use — a very low figure for a machine from 2011.',
-          cz: 'lfm znamená "běžné metry" a označuje součet všech hran, které strojem prošly. 330 000 lfm odpovídá zhruba 2–3 letům průměrného denního používání — pro stroj z roku 2011 velmi nízká hodnota.',
-          sk: 'lfm znamená "bežné metre" a označuje súčet všetkých hrán, ktoré strojom prešli. 330 000 lfm zodpovedá zhruba 2–3 rokom priemerného denného používania — pre stroj z roku 2011 veľmi nízka hodnota.',
-          hu: 'Az lfm rövidítés a "folyóméter" jelentéssel bír, és az összes élt jelöli, ami a gépen áthaladt. 330 000 lfm körülbelül 2–3 év átlagos napi használatnak felel meg — egy 2011-es gép esetén nagyon alacsony érték.',
-        },
-      },
-      {
-        question: { de: 'Gibt es Gewährleistung?', en: 'Is there a warranty?', cz: 'Je poskytnuta záruka?', sk: 'Je poskytnutá záruka?', hu: 'Van garancia?' },
-        answer: {
-          de: 'Für Gebrauchtmaschinen bieten wir 3 Monate Gewährleistung auf Funktionalität. Details werden im Kaufvertrag festgelegt.',
-          en: 'For used machines we provide 3 months of functional warranty. Details are specified in the purchase contract.',
-          cz: 'U použitých strojů poskytujeme 3 měsíce záruky na funkčnost. Detaily jsou stanoveny v kupní smlouvě.',
-          sk: 'Pri použitých strojoch poskytujeme 3 mesiace záruky na funkčnosť. Detaily sú stanovené v kúpnej zmluve.',
-          hu: 'Használt gépekre 3 hónap működési garanciát biztosítunk. A részleteket az adásvételi szerződés rögzíti.',
-        },
-      },
-      {
-        question: { de: 'Können Sie Transport und Installation übernehmen?', en: 'Can you handle transport and installation?', cz: 'Můžete zajistit dopravu a instalaci?', sk: 'Môžete zabezpečiť dopravu a inštaláciu?', hu: 'Vállalják a szállítást és telepítést?' },
-        answer: {
-          de: 'Ja — gegen Aufpreis organisieren wir Transport nach CZ, SK oder HU und die Maschineninstallation vor Ort. Einweisung des Bedieners inklusive.',
-          en: 'Yes — for an additional fee we organise transport to CZ, SK or HU and on-site machine installation. Operator training included.',
-          cz: 'Ano — za příplatek zajistíme dopravu do ČR, SK nebo HU a instalaci stroje na místě. Zaškolení obsluhy v ceně.',
-          sk: 'Áno — za príplatok zabezpečíme dopravu do ČR, SK alebo HU a inštaláciu stroja na mieste. Zaškolenie obsluhy v cene.',
-          hu: 'Igen — felár ellenében vállaljuk a szállítást CZ, SK vagy HU területére és a gép helyszíni telepítését. Az üzemeltető betanítása az árban.',
-        },
-      },
-    ],
-  },
-  {
     slug: 'schelling-fh4-330-220-automatic',
     category: 'panel-saw',
     manufacturer: 'SCHELLING',
@@ -449,94 +377,6 @@ export const USED_MACHINES: UsedMachine[] = [
       },
     ],
   },
-  {
-    slug: 'muehlbock-trocknungskammern-typ-1002',
-    category: 'drying',
-    manufacturer: 'Mühlbock',
-    name: 'Trocknungskammern Typ 1002',
-    condition: { de: 'gebraucht', en: 'used', cz: 'použité', sk: 'použité', hu: 'használt' },
-    status: 'available',
-    imageFit: 'cover',
-    images: [
-      '/images/used-machines/muehlbock-trocknungskammern-typ-1002-1.jpg',
-      '/images/used-machines/muehlbock-trocknungskammern-typ-1002-2.jpg',
-      '/images/used-machines/muehlbock-trocknungskammern-typ-1002-3.jpg',
-      '/images/used-machines/muehlbock-trocknungskammern-typ-1002-4.jpg',
-    ],
-    shortDescription: {
-      de: '3 Trocknungskammern (2× 40 m³, 1× 30 m³), Baujahre 2005–2017, Warmwasserregelung.',
-      en: '3 drying chambers (2× 40 m³, 1× 30 m³), built 2005–2017, hot-water control.',
-      cz: '3 sušicí komory (2× 40 m³, 1× 30 m³), roky výroby 2005–2017, teplovodní regulace.',
-      sk: '3 sušiace komory (2× 40 m³, 1× 30 m³), roky výroby 2005–2017, teplovodná regulácia.',
-      hu: '3 szárítókamra (2× 40 m³, 1× 30 m³), gyártási évek 2005–2017, melegvizes szabályozás.',
-    },
-    longDescription: {
-      de: `Mühlbock zählt zu den führenden österreichischen Anbietern für Schnittholz-Trocknungstechnik und beliefert Sägewerke und Hobelwerke weltweit. Das hier angebotene Paket besteht aus drei Trocknungskammern der Baureihe Typ 1002 — der kompakten Kammergröße für mittelgroße Sägewerke und holzverarbeitende Betriebe. Konkret enthalten: zwei Kammern mit je 40 m³ Füllvolumen (Baujahre 2005 und 2006) sowie eine Kammer mit 30 m³ Füllvolumen aus dem Jahr 2017. Alle drei Kammern arbeiten mit Warmwasserregelung — typischerweise versorgt aus einer betriebseigenen Biomasse-Heizanlage, die mit den Restholzanteilen aus der Produktion gespeist wird. Die isolierten Aluminium-Wandelemente und die Dachventilatoren mit Klappensteuerung entsprechen dem Mühlbock-Standard für die Baureihe 1002. Die Kammern sind primär als Komplett-Paket verfügbar; eine Aufteilung auf einzelne Kammern ist nach Absprache möglich. Aufgrund der gestaffelten Baujahre 2005, 2006 und 2017 lässt sich das Paket auch sukzessive in einen bestehenden Betrieb integrieren. Diese Kombination aus bewährter Mühlbock-Technik, drei parallel nutzbaren Kammern für unterschiedliche Holzarten oder Schnittstärken und einem deutlich reduzierten Preis gegenüber Neuanlagen macht das Angebot wirtschaftlich interessant für Sägewerke, die ihre Trocknungskapazität ausbauen oder eine ältere Anlage ersetzen möchten.`,
-      en: `Mühlbock is among the leading Austrian manufacturers of sawn-timber drying technology, supplying sawmills and planing mills worldwide. The package on offer here comprises three drying chambers from the Type 1002 series — the compact chamber size for mid-sized sawmills and wood-processing operations. Specifically included: two chambers with 40 m³ load volume each (built 2005 and 2006) and one chamber with 30 m³ load volume from 2017. All three chambers run on hot-water control — typically supplied from an in-house biomass heating plant fed by residual material from production. The insulated aluminium wall elements and the roof fans with damper control correspond to the Mühlbock standard for the 1002 series. The chambers are primarily available as a complete package; splitting into individual chambers is possible on request. Due to the staggered build years 2005, 2006 and 2017, the package can also be integrated into an existing operation step by step. This combination of proven Mühlbock technology, three chambers usable in parallel for different wood species or board thicknesses, and a significantly reduced price compared with new installations makes the offer economically attractive for sawmills wishing to expand their drying capacity or replace an older installation.`,
-      cz: `Mühlbock patří mezi přední rakouské výrobce sušicí techniky pro řezivo a dodává své komory pilám a hoblárnám po celém světě. Zde nabízený balíček tvoří tři sušicí komory řady Typ 1002 — kompaktní velikost komory pro středně velké pily a dřevozpracující provozy. Konkrétně: dvě komory o náplni 40 m³ (roky výroby 2005 a 2006) a jedna komora o náplni 30 m³ z roku 2017. Všechny tři komory pracují s teplovodní regulací — typicky napojené na podnikovou biomasovou kotelnu, kterou napájejí zbytky ze samotné výroby. Izolované hliníkové stěnové prvky a střešní ventilátory s klapkovým ovládáním odpovídají standardu Mühlbock pro řadu 1002. Komory jsou primárně k dispozici jako kompletní balíček; rozdělení na jednotlivé komory je možné po dohodě. Díky odstupňovaným rokům výroby 2005, 2006 a 2017 lze balíček postupně integrovat i do stávajícího provozu. Kombinace osvědčené Mühlbock techniky, tří paralelně využitelných komor pro různé dřeviny či tloušťky a výrazně nižší ceny oproti nové instalaci dělá z nabídky ekonomicky zajímavou volbu pro pily, které chtějí rozšířit sušicí kapacitu nebo nahradit starší instalaci.`,
-      sk: `Mühlbock patrí medzi popredných rakúskych výrobcov sušiacej techniky pre rezivo a dodáva svoje komory pílam a hobliarňam po celom svete. Tu ponúkaný balík tvoria tri sušiace komory radu Typ 1002 — kompaktná veľkosť komory pre stredne veľké píly a drevospracujúce prevádzky. Konkrétne: dve komory s náplňou 40 m³ (roky výroby 2005 a 2006) a jedna komora s náplňou 30 m³ z roku 2017. Všetky tri komory pracujú s teplovodnou reguláciou — typicky napojené na podnikovú biomasovú kotolňu napájanú zvyškami z výroby. Izolované hliníkové stenové prvky a strešné ventilátory s klapkovým ovládaním zodpovedajú štandardu Mühlbock pre rad 1002. Komory sú primárne k dispozícii ako kompletný balík; rozdelenie na jednotlivé komory je možné po dohode. Vďaka odstupňovaným rokom výroby 2005, 2006 a 2017 sa balík dá postupne integrovať aj do existujúcej prevádzky.`,
-      hu: `A Mühlbock az osztrák fűrészáru-szárítástechnika vezető gyártói közé tartozik, és világszerte szállít kamrákat fűrészüzemek és gyalulóüzemek számára. Az itt kínált csomag három, az 1002-es típussorozat szárítókamráját tartalmazza — ez a kompakt kamraméret közepes méretű fűrészüzemek és faipari üzemek számára. Konkrétan: két, egyenként 40 m³ töltőtérfogatú kamra (2005-ös és 2006-os gyártási évvel) és egy 30 m³ töltőtérfogatú kamra 2017-ből. Mindhárom kamra melegvizes szabályozással működik — jellemzően egy üzemi biomassza-fűtésről táplálva, amelyet a gyártásból származó faanyag-maradékkal etetnek. A szigetelt alumínium falelemek és a csappantyúvezérelt tetőventilátorok a Mühlbock 1002 sorozatára jellemző szabványnak felelnek meg. A kamrák elsősorban teljes csomagként érhetők el; egyedi kamrákra bontás egyeztetés szerint lehetséges. A 2005, 2006 és 2017-es eltérő gyártási éveknek köszönhetően a csomag fokozatosan is integrálható egy meglévő üzembe.`,
-    },
-    specs: [
-      { label: { de: 'Typ', en: 'Type', cz: 'Typ', sk: 'Typ', hu: 'Típus' }, value: 'Mühlbock Typ 1002' },
-      { label: { de: 'Anzahl Kammern', en: 'Number of chambers', cz: 'Počet komor', sk: 'Počet komôr', hu: 'Kamrák száma' }, value: '3' },
-      { label: { de: 'Füllvolumen', en: 'Load volume', cz: 'Náplň', sk: 'Náplň', hu: 'Töltőtérfogat' }, value: '2 × 40 m³ + 1 × 30 m³ (≈ 110 m³)' },
-      { label: { de: 'Stapellänge', en: 'Stack length', cz: 'Délka stohu', sk: 'Dĺžka stohu', hu: 'Rakathossz' }, value: '2 × 6,7 m + 1 × 4,7 m' },
-      { label: { de: 'Baujahre', en: 'Build years', cz: 'Roky výroby', sk: 'Roky výroby', hu: 'Gyártási évek' }, value: '2005, 2006, 2017' },
-      { label: { de: 'Beheizung', en: 'Heating', cz: 'Vytápění', sk: 'Vykurovanie', hu: 'Fűtés' }, value: 'Warmwasserregelung / Hot-water control' },
-      { label: { de: 'Zustand', en: 'Condition', cz: 'Stav', sk: 'Stav', hu: 'Állapot' }, value: 'Gebraucht / Used' },
-      { label: { de: 'Standort', en: 'Location', cz: 'Lokalita', sk: 'Lokalita', hu: 'Helyszín' }, value: 'Auf Anfrage / On request' },
-    ],
-    buyingAdvice: {
-      de: 'Das Drei-Kammer-Paket eignet sich besonders für Sägewerke, die parallel unterschiedliche Holzarten oder Schnittstärken trocknen wollen oder ihre bestehende Trocknungskapazität sukzessive ausbauen. Bei einer betriebseigenen Biomasse-Heizung amortisiert sich die Anlage besonders schnell. Asamer organisiert auf Wunsch Demontage, Transport und Wiedermontage am Zielort.',
-      en: 'The three-chamber package is particularly suitable for sawmills wishing to dry different wood species or board thicknesses in parallel, or to expand their existing drying capacity step by step. With an in-house biomass heating plant, the system pays back especially quickly. On request, Asamer organises dismantling, transport and reassembly at the destination.',
-      cz: 'Třídílný balíček je vhodný zejména pro pily, které chtějí paralelně sušit různé dřeviny nebo tloušťky, případně postupně rozšiřovat stávající sušicí kapacitu. Při podnikové biomasové kotelně se zařízení obzvlášť rychle vyplatí. Asamer na přání zajistí demontáž, dopravu a opětovnou montáž v cílovém místě.',
-      sk: 'Trojkomorový balík je obzvlášť vhodný pre píly, ktoré chcú paralelne sušiť rôzne dreviny alebo hrúbky reziva, prípadne postupne rozširovať existujúcu sušiacu kapacitu. Pri podnikovej biomasovej kotolni sa zariadenie obzvlášť rýchlo vyplatí.',
-      hu: 'A háromkamrás csomag különösen alkalmas olyan fűrészüzemek számára, akik párhuzamosan szeretnének eltérő fafajtákat vagy vastagságokat szárítani, vagy meglévő szárítókapacitásukat lépésről lépésre bővíteni. Üzemi biomassza-fűtés esetén a rendszer különösen gyorsan megtérül. Az Asamer kérésre megszervezi a leszerelést, szállítást és újraszerelést a célhelyszínen.',
-    },
-    faq: [
-      {
-        question: { de: 'Werden alle drei Kammern als Paket verkauft?', en: 'Are all three chambers sold as a package?', cz: 'Prodávají se všechny tři komory jako balíček?', sk: 'Predávajú sa všetky tri komory ako balík?', hu: 'Mind a három kamra csomagban kerül eladásra?' },
-        answer: {
-          de: 'Primär als Paket — eine Aufteilung auf einzelne Kammern ist nach Absprache möglich. Sprechen Sie uns an, falls Sie nur eine oder zwei der Kammern benötigen.',
-          en: 'Primarily as a package — splitting into individual chambers is possible on request. Contact us if you only need one or two of the chambers.',
-          cz: 'Primárně jako balíček — rozdělení na jednotlivé komory je možné po dohodě. Kontaktujte nás, pokud potřebujete jen jednu nebo dvě komory.',
-          sk: 'Primárne ako balík — rozdelenie na jednotlivé komory je možné po dohode. Kontaktujte nás, ak potrebujete iba jednu alebo dve komory.',
-          hu: 'Elsősorban csomagban — egyedi kamrákra bontás egyeztetés szerint lehetséges. Vegye fel velünk a kapcsolatot, ha csak egy vagy két kamrára van szüksége.',
-        },
-      },
-      {
-        question: { de: 'Welche Heizquelle wird benötigt?', en: 'What heating source is required?', cz: 'Jaký zdroj tepla je potřebný?', sk: 'Aký zdroj tepla je potrebný?', hu: 'Milyen hőforrásra van szükség?' },
-        answer: {
-          de: 'Die Kammern arbeiten mit Warmwasserregelung — Sie benötigen also eine Heißwasserquelle (typischerweise Biomasse-Heizung, alternativ Gas-, Öl- oder Pellet-Kessel). Vorlauftemperaturen üblicherweise 80–95 °C.',
-          en: 'The chambers operate with hot-water control — so you need a hot-water source (typically a biomass heating plant, alternatively gas, oil or pellet boilers). Flow temperatures are usually 80–95 °C.',
-          cz: 'Komory pracují s teplovodní regulací — potřebujete tedy zdroj horké vody (typicky biomasová kotelna, alternativně plynový, olejový nebo peletový kotel). Vstupní teploty obvykle 80–95 °C.',
-          sk: 'Komory pracujú s teplovodnou reguláciou — potrebujete teda zdroj horúcej vody (typicky biomasová kotolňa, alternatívne plynový, olejový alebo peletový kotol). Vstupné teploty obvykle 80–95 °C.',
-          hu: 'A kamrák melegvizes szabályozással működnek — szükséges egy melegvíz-forrás (jellemzően biomassza-fűtés, alternatívaként gáz-, olaj- vagy pellet-kazán). Az előremenő hőmérséklet általában 80–95 °C.',
-        },
-      },
-      {
-        question: { de: 'Können Demontage und Transport organisiert werden?', en: 'Can dismantling and transport be organised?', cz: 'Lze zajistit demontáž a dopravu?', sk: 'Možno zabezpečiť demontáž a dopravu?', hu: 'Megszervezhető a leszerelés és szállítás?' },
-        answer: {
-          de: 'Ja — auf Anfrage organisieren wir Demontage am Standort des Vorbesitzers, Transport und Wiedermontage am Zielort. Bei Trocknungskammern ist zudem die Anbindung an die bestehende Wärmequelle und Steuerungstechnik mitzuplanen.',
-          en: 'Yes — on request we organise dismantling at the previous owner\'s site, transport and reassembly at the destination. For drying chambers, connection to the existing heat source and control technology must also be planned.',
-          cz: 'Ano — na vyžádání zajistíme demontáž v místě předchozího vlastníka, dopravu a opětovnou montáž na cílovém místě. U sušicích komor je nutné naplánovat i napojení na stávající zdroj tepla a řídicí techniku.',
-          sk: 'Áno — na požiadanie zabezpečíme demontáž v mieste predchádzajúceho vlastníka, dopravu a opätovnú montáž na cieľovom mieste.',
-          hu: 'Igen — kérésre megszervezzük a leszerelést a korábbi tulajdonos telephelyén, a szállítást és az újraszerelést a célhelyszínen. Szárítókamráknál a meglévő hőforrásra és vezérléstechnikára való rákötést is tervezni kell.',
-        },
-      },
-      {
-        question: { de: 'Was kostet ein Drei-Kammer-Paket dieser Größe?', en: 'What does a three-chamber package of this size cost?', cz: 'Kolik stojí třídílný balíček této velikosti?', sk: 'Koľko stojí trojkomorový balík tejto veľkosti?', hu: 'Mennyibe kerül ekkora háromkamrás csomag?' },
-        answer: {
-          de: 'Preis auf Anfrage. Maßgeblich sind Demontage- und Transportaufwand zum Zielort sowie ob alle drei Kammern oder nur einzelne übernommen werden. Eine vergleichbare neue 110-m³-Anlage liegt typischerweise im sechsstelligen Bereich.',
-          en: 'Price on request. The dismantling and transport effort to the destination, and whether all three chambers or only individual ones are taken over, are the deciding factors. A comparable new 110 m³ installation is typically in the six-figure range.',
-          cz: 'Cena na vyžádání. Rozhodující jsou náklady na demontáž a dopravu do cílového místa, jakož i to, zda jsou převzaty všechny tři komory nebo pouze jednotlivé. Srovnatelná nová 110 m³ instalace se typicky pohybuje v šesticiferné výši.',
-          sk: 'Cena na vyžiadanie. Rozhodujúce sú náklady na demontáž a dopravu do cieľového miesta, ako aj to, či sú prevzaté všetky tri komory alebo iba jednotlivé.',
-          hu: 'Ár kérésre. A leszerelés és szállítás költségei, valamint az, hogy mind a három kamrát vagy csak egyeseket vesz át, meghatározóak. Egy hasonló új 110 m³-es berendezés általában hatszámjegyű tartományban mozog.',
-        },
-      },
-    ],
-  },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -591,5 +431,8 @@ export const RETIRED_USED_MACHINES: RetiredUsedMachine[] = [
   // Beide lieferten bis Oktober 2026 eine 404 (Search Console, Befund 14.10.2026).
   { slug: 'holz-her-1308xl-power', category: 'edgebanding', removed: 'vor 2026-10' },
   { slug: 'scm-stefani-solution-md', category: 'edgebanding', removed: 'vor 2026-10' },
+  // Tornado Top verkauft, Mühlbock-Kammern aus dem Angebot genommen.
+  { slug: 'ott-tornado-top', category: 'edgebanding', removed: '2026-10-28' },
+  { slug: 'muehlbock-trocknungskammern-typ-1002', category: 'drying', removed: '2026-10-28' },
 ];
 

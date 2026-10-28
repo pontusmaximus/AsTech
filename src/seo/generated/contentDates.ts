@@ -30,7 +30,7 @@ export const CONTENT_DATES: Partial<Record<SeoRouteKey, ContentDates>> = {
   guidePurVsEva: { published: '2026-04-08T09:00:22-07:00', modified: '2026-10-14T22:03:25Z' },
   guideVacuumLifter: { published: '2026-06-22T15:30:28+02:00', modified: '2026-10-14T22:03:25Z' },
   guideWarehouseAutomation: { published: '2026-04-08T09:00:22-07:00', modified: '2026-08-24T23:19:14Z' },
-  home: { published: '2026-02-24T00:06:04-08:00', modified: '2026-10-25T22:26:55Z' },
+  home: { published: '2026-02-24T00:06:04-08:00', modified: '2026-10-28T12:03:45Z' },
   imaSchelling: { published: '2026-04-24T11:50:03+02:00', modified: '2026-08-24T23:19:14Z' },
   imprint: { published: '2026-02-24T00:58:29-08:00', modified: '2026-04-08T16:00:22Z' },
   mayer: { published: '2026-02-24T00:06:04-08:00', modified: '2026-09-15T11:14:41Z' },
@@ -39,6 +39,6 @@ export const CONTENT_DATES: Partial<Record<SeoRouteKey, ContentDates>> = {
   service: { published: '2026-02-24T00:58:29-08:00', modified: '2026-08-24T23:19:14Z' },
   solutions: { published: '2026-02-24T00:58:29-08:00', modified: '2026-08-24T23:19:14Z' },
   terms: { published: '2026-04-14T23:01:04+02:00', modified: '2026-10-27T07:01:33Z' },
-  usedEdgebanders: { published: '2026-04-16T09:44:08+02:00', modified: '2026-10-14T22:24:20Z' },
-  usedMachines: { published: '2026-02-27T13:27:35-08:00', modified: '2026-10-14T22:24:20Z' },
+  usedEdgebanders: { published: '2026-04-16T09:44:08+02:00', modified: '2026-10-28T12:03:45Z' },
+  usedMachines: { published: '2026-02-27T13:27:35-08:00', modified: '2026-10-28T12:03:45Z' },
 };

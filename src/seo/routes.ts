@@ -461,7 +461,7 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
       hu: {
         title: 'Használt faipari gépek Ausztriából – ellenőrzött | Asamer',
         description:
-          'Használt élzárógépek, táblafelosztók és szárítókamrák osztrák üzemekből: állapotfelmérés, szállítás, beüzemelés és garancia egy kézből.',
+          'Használt élzárógépek és táblafelosztók osztrák üzemekből: állapotfelmérés, szállítás, beüzemelés és garancia egy kézből.',
         keywords: ['Használt gépek', 'Felújított', 'Famegmunkálás', 'Asamer'],
       },
     }),
@@ -477,34 +477,34 @@ export const SEO_ROUTES: Record<SeoRouteKey, SeoRouteConfig> = {
     slugByLang: SLUG_TRANSLATIONS['/pouzite-stroje/olepovacky-hran'],
     meta: createMeta({
       de: {
-        title: 'Gebrauchte Kantenanleimmaschinen – OTT, Holz-Her, SCM Stefani',
+        title: 'Gebrauchte Kantenanleimmaschinen – Holz-Her, SCM Stefani',
         description:
-          'Gebrauchte Kantenanleimmaschinen von OTT, Holz-Her und SCM Stefani – technisch geprüft, mit Montage und Finanzierung von Asamer für CZ, SK und HU.',
-        keywords: ['gebrauchte Kantenanleimmaschine', 'Kantenanleimmaschine gebraucht', 'OTT', 'Holz-Her', 'SCM Stefani'],
+          'Gebrauchte Kantenanleimmaschinen von Holz-Her und SCM Stefani – technisch geprüft, mit Montage und Finanzierung von Asamer für CZ, SK und HU.',
+        keywords: ['gebrauchte Kantenanleimmaschine', 'Kantenanleimmaschine gebraucht', 'Holz-Her', 'SCM Stefani'],
       },
       en: {
-        title: 'Used Edgebanding Machines – OTT, Holz-Her, SCM Stefani | Asamer',
+        title: 'Used Edgebanding Machines – Holz-Her, SCM Stefani | Asamer',
         description:
-          'Used edgebanding machines from OTT, Holz-Her and SCM Stefani – technically inspected, with installation and financing from Asamer for CZ, SK and HU.',
-        keywords: ['used edgebander', 'used edgebanding machine', 'OTT', 'Holz-Her', 'SCM Stefani'],
+          'Used edgebanding machines from Holz-Her and SCM Stefani – technically inspected, with installation and financing from Asamer for CZ, SK and HU.',
+        keywords: ['used edgebander', 'used edgebanding machine', 'Holz-Her', 'SCM Stefani'],
       },
       cz: {
-        title: 'Použité olepovačky hran – OTT, Holz-Her, SCM Stefani | Asamer',
+        title: 'Použité olepovačky hran – Holz-Her, SCM Stefani | Asamer',
         description:
-          'Použité olepovačky hran OTT, Holz-Her a SCM Stefani – technicky prověřené, s montáží a financováním od Asamer pro ČR, SR a Maďarsko.',
-        keywords: ['použité olepovačky hran', 'použitá olepovačka hran', 'OTT', 'Holz-Her', 'SCM Stefani'],
+          'Použité olepovačky hran Holz-Her a SCM Stefani – technicky prověřené, s montáží a financováním od Asamer pro ČR, SR a Maďarsko.',
+        keywords: ['použité olepovačky hran', 'použitá olepovačka hran', 'Holz-Her', 'SCM Stefani'],
       },
       sk: {
-        title: 'Použité olepovačky hrán – OTT, Holz-Her, SCM Stefani | Asamer',
+        title: 'Použité olepovačky hrán – Holz-Her, SCM Stefani | Asamer',
         description:
-          'Použité olepovačky hrán OTT, Holz-Her a SCM Stefani – technicky preverené, s montážou a financovaním od Asamer pre SR, ČR a Maďarsko.',
-        keywords: ['použité olepovačky hrán', 'použitá olepovačka hrán', 'OTT', 'Holz-Her', 'SCM Stefani'],
+          'Použité olepovačky hrán Holz-Her a SCM Stefani – technicky preverené, s montážou a financovaním od Asamer pre SR, ČR a Maďarsko.',
+        keywords: ['použité olepovačky hrán', 'použitá olepovačka hrán', 'Holz-Her', 'SCM Stefani'],
       },
       hu: {
-        title: 'Használt élzárógépek – OTT, Holz-Her, SCM Stefani | Asamer',
+        title: 'Használt élzárógépek – Holz-Her, SCM Stefani | Asamer',
         description:
-          'Használt OTT, Holz-Her és SCM Stefani élzárógépek – műszakilag átvizsgálva, telepítéssel és finanszírozással az Asamertől CZ, SK és HU területén.',
-        keywords: ['használt élzárógép', 'használt élzáró gép', 'OTT', 'Holz-Her', 'SCM Stefani'],
+          'Használt Holz-Her és SCM Stefani élzárógépek – műszakilag átvizsgálva, telepítéssel és finanszírozással az Asamertől CZ, SK és HU területén.',
+        keywords: ['használt élzárógép', 'használt élzáró gép', 'Holz-Her', 'SCM Stefani'],
       },
     }),
   },

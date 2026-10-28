@@ -291,7 +291,7 @@ const UsedEdgebandersPage = () => {
               >
                 <Recycle className="w-4 h-4 text-white/40 mb-2" />
                 <p className="text-white/80 text-sm mb-1">{tr('Alle Gebrauchtmaschinen', 'All used machines', 'Všechny použité stroje')}</p>
-                <p className="text-white/40 text-xs leading-relaxed">{tr('Plattensägen, Trockenkammern und mehr.', 'Panel saws, drying kilns and more.', 'Formátovací pily, sušárny a další.')}</p>
+                <p className="text-white/40 text-xs leading-relaxed">{tr('Plattensägen und mehr.', 'Panel saws and more.', 'Formátovací pily a další.')}</p>
               </Link>
             </div>
           </nav>

@@ -43,7 +43,7 @@ The website exists in Czech (default), Slovak, Hungarian, German and English. Ea
 
 ## Used machines
 
-- [Used Edgebanding Machines – OTT, Holz-Her, SCM Stefani](https://asamer.cz/en/used-machines/edgebanding-machines): used edgebanding machines currently in stock · CZ: https://asamer.cz/cz/pouzite-stroje/olepovacky-hran · SK: https://asamer.cz/sk/pouzite-stroje/olepovacky-hran · HU: https://asamer.cz/hu/hasznalt-gepek/elzarogepek
+- [Used Edgebanding Machines – Holz-Her, SCM Stefani](https://asamer.cz/en/used-machines/edgebanding-machines): used edgebanding machines currently in stock · CZ: https://asamer.cz/cz/pouzite-stroje/olepovacky-hran · SK: https://asamer.cz/sk/pouzite-stroje/olepovacky-hran · HU: https://asamer.cz/hu/hasznalt-gepek/elzarogepek
 - [Used Machines & Refurbishment](https://asamer.cz/en/used-machines): all used machines currently in stock · CZ: https://asamer.cz/cz/pouzite-stroje · SK: https://asamer.cz/sk/pouzite-stroje · HU: https://asamer.cz/hu/hasznalt-gepek
 
 ## Guides

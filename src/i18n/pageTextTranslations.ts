@@ -999,7 +999,7 @@ export const pageSkTranslations: Record<string, string> = {
   "Raiffeisen Leasing financuje nové i použité stroje; každý použitý stroj z nabídky Asamer je před schválením financování technicky prověřen.": "Raiffeisen Leasing financuje nové aj použité stroje; každý použitý stroj z ponuky Asamer je pred schválením financovania technicky preverený.",
   "Nové olepovačky hran OTT": "Nové olepovačky hrán OTT",
   "Sedm modelů od Pacific+ po TopEdge.": "Sedem modelov od Pacific+ po TopEdge.",
-  "Formátovací pily, sušárny a další.": "Formátovacie píly, sušiarne a ďalšie.",
+  "Formátovací pily a další.": "Formátovacie píly a ďalšie.",
   "Nenašli jste vhodný stroj?": "Nenašli ste vhodný stroj?",
 };
 
@@ -1997,7 +1997,7 @@ export const pageHuTranslations: Record<string, string> = {
   "Raiffeisen Leasing finances new and used machines; every used machine from Asamer is technically inspected before financing approval.": "A Raiffeisen Leasing új és használt gépeket egyaránt finanszíroz; az Asamer minden használt gépe műszaki átvizsgáláson esik át a finanszírozás jóváhagyása előtt.",
   "New OTT edgebanding machines": "Új OTT élzárógépek",
   "Seven models from Pacific+ to TopEdge.": "Hét modell a Pacific+-tól a TopEdge-ig.",
-  "Panel saws, drying kilns and more.": "Táblafelosztó fűrészek, szárítókamrák és egyebek.",
+  "Panel saws and more.": "Táblafelosztó fűrészek és egyebek.",
   "Nothing suitable?": "Nem talált megfelelőt?",
 };
 

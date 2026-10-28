@@ -3169,6 +3169,106 @@
       "permanent": true
     },
     {
+      "source": "/de/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/ott-tornado-top",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen/kantenanleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/ott-tornado-top/",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen/kantenanleimmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/en/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/ott-tornado-top",
+      "destination": "https://asamer.cz/en/used-machines/edgebanding-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/ott-tornado-top/",
+      "destination": "https://asamer.cz/en/used-machines/edgebanding-machines",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/ott-tornado-top",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/ott-tornado-top/",
+      "destination": "https://asamer.cz/cz/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/ott-tornado-top",
+      "destination": "https://asamer.cz/sk/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/ott-tornado-top/",
+      "destination": "https://asamer.cz/sk/pouzite-stroje/olepovacky-hran",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/ott-tornado-top",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek/elzarogepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/ott-tornado-top/",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek/elzarogepek",
+      "permanent": true
+    },
+    {
+      "source": "/de/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/muehlbock-trocknungskammern-typ-1002",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/de/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/muehlbock-trocknungskammern-typ-1002/",
+      "destination": "https://asamer.cz/de/gebrauchtmaschinen",
+      "permanent": true
+    },
+    {
+      "source": "/en/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/muehlbock-trocknungskammern-typ-1002",
+      "destination": "https://asamer.cz/en/used-machines",
+      "permanent": true
+    },
+    {
+      "source": "/en/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/muehlbock-trocknungskammern-typ-1002/",
+      "destination": "https://asamer.cz/en/used-machines",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/muehlbock-trocknungskammern-typ-1002",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/cz/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/muehlbock-trocknungskammern-typ-1002/",
+      "destination": "https://asamer.cz/cz/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/muehlbock-trocknungskammern-typ-1002",
+      "destination": "https://asamer.cz/sk/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/sk/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/muehlbock-trocknungskammern-typ-1002/",
+      "destination": "https://asamer.cz/sk/pouzite-stroje",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/muehlbock-trocknungskammern-typ-1002",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek",
+      "permanent": true
+    },
+    {
+      "source": "/hu/:overview(gebrauchtmaschinen|used-machines|pouzite-stroje|hasznalt-gepek)/muehlbock-trocknungskammern-typ-1002/",
+      "destination": "https://asamer.cz/hu/hasznalt-gepek",
+      "permanent": true
+    },
+    {
       "source": "/de/:wrong(used-machines|pouzite-stroje|hasznalt-gepek)/:slug",
       "destination": "https://asamer.cz/de/gebrauchtmaschinen/:slug",
       "permanent": true

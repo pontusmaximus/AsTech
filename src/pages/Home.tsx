@@ -167,25 +167,6 @@ const Home = () => {
     { value: '99.9%', label: tr('Bestandsgenauigkeit', 'inventory accuracy', 'přesnost zásob') },
   ];
 
-  const financingOptions = [
-    {
-      title: tr('Finanzierung durch Förderung', 'Funding via grants', 'Financování prostřednictvím dotací'),
-      description: tr('Nutzen Sie unseren Förderkompass.', 'Use our funding compass.', 'Využijte náš dotační kompas.'),
-      linkLabel: tr('Zum Förderkompass', 'Go to funding compass', 'Přejít na dotační kompas'),
-      link: '/financovani',
-    },
-    {
-      title: tr('Finanzierung durch Leasing', 'Funding via leasing', 'Financování prostřednictvím leasingu'),
-      description: tr(
-        'Durch unseren Partner Raiffeisen Leasing garantieren wir Ihnen eine faire Finanzierung.',
-        'Through our partner Raiffeisen Leasing, we ensure fair financing for your project.',
-        'Díky našemu partnerovi Raiffeisen Leasing vám zajistíme férové financování.'
-      ),
-      linkLabel: tr('Mehr zu Leasing', 'More about leasing', 'Více o leasingu'),
-      link: '/financovani',
-    },
-  ];
-
   return (
     <>
       <SeoHead routeKey="home" structuredData={structuredData} />
@@ -257,79 +238,6 @@ const Home = () => {
                 </a>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section id="automation" className="section-large relative bg-dark-elevated">
-        <div className="absolute inset-0 grid-pattern opacity-30" />
-        <div className="container-wide relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="section-animate">
-              <div className="accent-line mb-6" />
-              <h2 className="text-section font-display font-light text-white mb-6">
-                {tr('Finanzierung', 'Financing', 'Financování')}
-              </h2>
-              <p className="text-subsection text-white/50 mb-10 leading-relaxed">
-                {tr(
-                  'Zwei klare Wege zur Investition in Ihre Produktion: Förderung oder Leasing.',
-                  'Two clear ways to finance your production investment: grants or leasing.',
-                  'Dvě jasné cesty pro investici do výroby: dotace nebo leasing.'
-                )}
-              </p>
-
-              <div className="space-y-4 mb-6">
-                {financingOptions.map((item, index) => (
-                  <div key={item.title} className="p-5 bg-dark-card rounded-xl border border-white/10">
-                    <div className="flex items-start gap-4">
-                      <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-primary text-sm font-medium">0{index + 1}</span>
-                      </div>
-                      <div>
-                        <h4 className="text-white font-medium mb-2">{item.title}</h4>
-                        <p className="text-white/60 text-sm leading-relaxed mb-2">{item.description}</p>
-                        <a
-                          href={item.link.startsWith('http') ? item.link : buildPath(item.link)}
-                          className="text-primary/90 text-xs hover:text-primary transition-colors"
-                        >
-                          {item.linkLabel}
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <a href={buildPath('/financovani')} className="btn-outline-dark inline-flex">
-                {tr('Zur Finanzierungsseite', 'Go to funding page', 'Přejít na stránku financování')}
-                <ArrowUpRight className="w-5 h-5" />
-              </a>
-            </div>
-
-            <div className="section-animate">
-              <div className="relative aspect-square rounded-2xl overflow-hidden bg-white border border-black/5">
-                <div className="w-full h-full flex items-center justify-center p-6 sm:p-8 md:p-10">
-                  <img
-                    src="https://www.raiffeisen-leasing.at/de/ueber-uns/_jcr_content/root/responsivegrid/contentcontainer_1102821433/contentbox/downloadlist.download.html/1/Raiffeisen-Leasing%20Logo%20_1faerbig_%20schwarz_weiss_.png"
-                    alt="Raiffeisen Leasing Logo"
-                    className="max-w-full max-h-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-3 sm:p-4 bg-black/55 backdrop-blur-md rounded-xl border border-white/20">
-                  <div className="text-center">
-                    <div className="text-xl sm:text-2xl font-display font-bold text-white">Förderung + Leasing</div>
-                    <div className="text-xs text-white/80">
-                      {tr(
-                        'Ein Ziel: faire Finanzierung Ihrer Investition',
-                        'One goal: fair financing for your investment',
-                        'Jeden cíl: férové financování vaší investice'
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
